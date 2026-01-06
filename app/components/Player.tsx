@@ -132,15 +132,15 @@ export default function Player() {
 
                         {/* Controls */}
                         <div className="flex items-center gap-3 pr-2">
-                            {/* Play/Pause */}
+                            {/* Play/Pause Button - More Prominent */}
                             <button
                                 onClick={(e) => { e.stopPropagation(); togglePlay(); }}
-                                className="h-8 w-8 flex items-center justify-center rounded-full text-white hover:scale-105 active:scale-95 transition-transform"
+                                className="h-10 w-10 flex items-center justify-center rounded-full bg-indigo-600 text-white hover:bg-indigo-700 hover:scale-105 active:scale-95 transition-all shadow-lg"
                             >
                                 {isPlaying ? (
-                                    <svg className="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z" /></svg>
+                                    <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z" /></svg>
                                 ) : (
-                                    <svg className="w-6 h-6 fill-current ml-0.5" viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg>
+                                    <svg className="w-5 h-5 fill-current ml-0.5" viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg>
                                 )}
                             </button>
                         </div>

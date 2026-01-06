@@ -119,7 +119,7 @@ export default function QuizRunnerPage({ params }: { params: Promise<{ id: strin
             </div>
 
             {/* Main Content */}
-            <main className="flex-1 flex flex-col max-w-2xl mx-auto w-full p-4 sm:p-6 pb-8">
+            <main className="flex-1 flex flex-col max-w-2xl mx-auto w-full p-4 sm:p-6 pb-24">
                 <div className="flex-1 flex flex-col justify-start pt-4">
                     <span className="text-emerald-500 font-bold text-sm tracking-wider mb-4 block">QUESTION {currentQuestionIndex + 1} OF {quiz.questions.length}</span>
                     <h2 className="text-xl sm:text-2xl font-bold leading-tight mb-4">

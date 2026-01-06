@@ -122,9 +122,33 @@ export default function QuizRunnerPage({ params }: { params: Promise<{ id: strin
             <main className="flex-1 flex flex-col max-w-2xl mx-auto w-full p-4 sm:p-6 pb-32">
                 <div className="flex-1 flex flex-col justify-start pt-4">
                     <span className="text-emerald-500 font-bold text-sm tracking-wider mb-4 block">QUESTION {currentQuestionIndex + 1} OF {quiz.questions.length}</span>
-                    <h2 className="text-xl sm:text-2xl font-bold leading-tight mb-6">
+                    <h2 className="text-xl sm:text-2xl font-bold leading-tight mb-4">
                         {currentQuestion.text}
                     </h2>
+
+                    {/* Hint Button */}
+                    {!isAnswered && (
+                        <div className="mb-6">
+                            {!showHint ? (
+                                <button
+                                    onClick={() => setShowHint(true)}
+                                    className="flex items-center gap-2 text-sm text-yellow-400/80 hover:text-yellow-400 transition-colors"
+                                >
+                                    <span className="text-base">💡</span>
+                                    <span className="font-medium">Show Hint</span>
+                                </button>
+                            ) : (
+                                <div className="p-4 rounded-xl bg-yellow-500/10 border border-yellow-500/20 animate-in slide-in-from-top-2 fade-in duration-300">
+                                    <div className="flex items-start gap-2">
+                                        <span className="text-lg flex-shrink-0">💡</span>
+                                        <p className="text-sm text-yellow-100/90 leading-relaxed">
+                                            {currentQuestion.explanation}
+                                        </p>
+                                    </div>
+                                </div>
+                            )}
+                        </div>
+                    )}
 
                     <div className="grid gap-3">
                         {currentQuestion.options.map((option, index) => {

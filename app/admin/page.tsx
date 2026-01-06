@@ -64,6 +64,24 @@ export default function AdminPage() {
                 {/* New section for navigation links */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
                     <Link
+                        href="/admin/quizzes"
+                        className="group flex flex-col items-center justify-center p-8 bg-[#16161C] rounded-3xl border border-white/5 hover:border-slate-500/50 hover:bg-[#1A1A22] transition-all"
+                    >
+                        <span className="text-4xl mb-4 group-hover:scale-110 transition-transform">📝</span>
+                        <h3 className="text-lg font-bold text-white group-hover:text-slate-400">Quizzes</h3>
+                        <p className="text-white/40 text-sm mt-2">Create & Edit</p>
+                    </Link>
+
+                    <Link
+                        href="/admin/flashcards"
+                        className="group flex flex-col items-center justify-center p-8 bg-[#16161C] rounded-3xl border border-white/5 hover:border-purple-500/50 hover:bg-[#1A1A22] transition-all"
+                    >
+                        <span className="text-4xl mb-4 group-hover:scale-110 transition-transform">🗂️</span>
+                        <h3 className="text-lg font-bold text-white group-hover:text-purple-400">Flashcards</h3>
+                        <p className="text-white/40 text-sm mt-2">Create & Edit</p>
+                    </Link>
+
+                    <Link
                         href="/admin/slides"
                         className="group flex flex-col items-center justify-center p-8 bg-[#16161C] rounded-3xl border border-white/5 hover:border-emerald-500/50 hover:bg-[#1A1A22] transition-all"
                     >
@@ -71,7 +89,7 @@ export default function AdminPage() {
                         <h3 className="text-lg font-bold text-white group-hover:text-emerald-400">Slide Decks</h3>
                         <p className="text-white/40 text-sm mt-2">Upload PDFs</p>
                     </Link>
-                    {/* Placeholder for another link if needed, or remove this div if only one link */}
+
                     <Link
                         href="/admin"
                         className="group flex flex-col items-center justify-center p-8 bg-[#16161C] rounded-3xl border border-white/5 hover:border-blue-500/50 hover:bg-[#1A1A22] transition-all"
@@ -80,6 +98,7 @@ export default function AdminPage() {
                         <h3 className="text-lg font-bold text-white group-hover:text-blue-400">Audio Episodes</h3>
                         <p className="text-white/40 text-sm mt-2">Manage MP3s</p>
                     </Link>
+
                     <Link
                         href="/admin/infographics"
                         className="group flex flex-col items-center justify-center p-8 bg-[#16161C] rounded-3xl border border-white/5 hover:border-pink-500/50 hover:bg-[#1A1A22] transition-all"
@@ -88,6 +107,7 @@ export default function AdminPage() {
                         <h3 className="text-lg font-bold text-white group-hover:text-pink-400">Infographics</h3>
                         <p className="text-white/40 text-sm mt-2">Upload Charts</p>
                     </Link>
+
                     <Link
                         href="/admin/mindmaps"
                         className="group flex flex-col items-center justify-center p-8 bg-[#16161C] rounded-3xl border border-white/5 hover:border-purple-500/50 hover:bg-[#1A1A22] transition-all"

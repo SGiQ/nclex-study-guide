@@ -1,8 +1,7 @@
 {
     "functions": {
-        "api/**/*.js": {
+        "app/api/**/*.ts": {
             "maxDuration": 60
         }
-    },
-    "outputDirectory": ".next"
+    }
 }

@@ -1,0 +1,377 @@
+[
+    {
+        "id": 2,
+        "title": "Coordinated Care",
+        "description": "Patient Rights, Ethics, Care Coordination, Legal Regulations",
+        "questionCount": 5,
+        "color": "from-blue-600 to-indigo-800",
+        "questions": [
+            {
+                "id": 1,
+                "text": "Which of the following acts protects client confidentiality?",
+                "options": [
+                    "ADA",
+                    "HIPAA",
+                    "EMTALA",
+                    "OSHA"
+                ],
+                "correctAnswer": 1,
+                "explanation": "HIPAA (Health Insurance Portability and Accountability Act) is the primary law protecting patient health information."
+            },
+            {
+                "id": 2,
+                "text": "A client refuses a life-saving procedure. The nurse validates this because of:",
+                "options": [
+                    "Beneficence",
+                    "Non-maleficence",
+                    "Autonomy",
+                    "Justice"
+                ],
+                "correctAnswer": 2,
+                "explanation": "Autonomy allows competent adults to refuse treatment, even if it may result in death."
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "title": "Safety & Infection Control",
+        "description": "Standard precautions, PPE usage, and client safety.",
+        "questionCount": 5,
+        "color": "from-emerald-600 to-teal-800",
+        "questions": [
+            {
+                "id": 1,
+                "text": "A nurse is caring for a client who requires contact precautions. Which of the following actions should the nurse take?",
+                "options": [
+                    "Wear a mask when entering the room.",
+                    " wear a gown and gloves when entering the room.",
+                    "Keep the door to the client's room closed at all times.",
+                    "Ensure the client wears a mask when family visits."
+                ],
+                "correctAnswer": 1,
+                "explanation": "Contact precautions require the use of a gown and gloves to prevent the spread of infection via direct contact. Masks are for droplet/airborne precautions."
+            },
+            {
+                "id": 2,
+                "text": "A client is prescribed a restraint. How often should the nurse release the restraint for assessment?",
+                "options": [
+                    "Every 30 minutes",
+                    "Every 1 hour",
+                    "Every 2 hours",
+                    "Every 4 hours"
+                ],
+                "correctAnswer": 2,
+                "explanation": "Restraints must be released at least every 2 hours (or per facility policy, typically 2h) to assess skin integrity and circulation."
+            },
+            {
+                "id": 3,
+                "text": "Which of the following is the most effective method for preventing the spread of infection?",
+                "options": [
+                    "Administering prophylactic antibiotics",
+                    "Performing hand hygiene",
+                    "Wearing sterile gloves for all procedures",
+                    "Isolating every client"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Hand hygiene is universally recognized as the single most effective method to prevent pathogen transmission."
+            },
+            {
+                "id": 4,
+                "text": "Correct order for doffing (removing) PPE?",
+                "options": [
+                    "Gloves, Goggles, Gown, Mask",
+                    "Gown, Gloves, Mask, Goggles",
+                    "Mask, Goggles, Gown, Gloves",
+                    "Gloves, Gown, Goggles, Mask"
+                ],
+                "correctAnswer": 0,
+                "explanation": "Gloves are most contaminated, then Goggles/Face Shield, Gown, and Mask last."
+            },
+            {
+                "id": 5,
+                "text": "R.A.C.E. stands for:",
+                "options": [
+                    "Run, Alarm, Call, Exit",
+                    "Rescue, Alarm, Contain, Extinguish",
+                    "Rescue, Assess, Contain, Evacuate",
+                    "Run, Alert, Check, Extinguish"
+                ],
+                "correctAnswer": 1,
+                "explanation": "R.A.C.E is the standard fire response: Rescue clients, Alarm, Contain fire, Extinguish (if safe)."
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "title": "Health Promotion & Maintenance",
+        "description": "Pediatrics, Growth & Development, Immunizations",
+        "questionCount": 5,
+        "color": "from-orange-500 to-amber-700",
+        "questions": [
+            {
+                "id": 1,
+                "text": "At what age should an infant double their birth weight?",
+                "options": [
+                    "4 months",
+                    "6 months",
+                    "10 months",
+                    "12 months"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Infants typically double their birth weight by 6 months and triple it by 1 year."
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "title": "Psychosocial Integrity",
+        "description": "Family Dynamics, Therapeutic Relationships, Mental Health",
+        "questionCount": 5,
+        "color": "from-purple-600 to-fuchsia-800",
+        "questions": [
+            {
+                "id": 1,
+                "text": "Which therapeutic communication technique is best for a grieving client?",
+                "options": [
+                    "Changing the subject",
+                    "Providing false reassurance",
+                    "Silence and active listening",
+                    "Giving advice"
+                ],
+                "correctAnswer": 2,
+                "explanation": "Silence and active listening allow the client to express feelings without judgment or pressure."
+            }
+        ]
+    },
+    {
+        "id": 6,
+        "title": "Basic Care and Comfort",
+        "description": "Rehabilitation, Wound Care, Nutrition",
+        "questionCount": 5,
+        "color": "from-pink-600 to-rose-800",
+        "questions": [
+            {
+                "id": 1,
+                "text": "To prevent pressure ulcers, the nurse should turn the client every:",
+                "options": [
+                    "1 hour",
+                    "2 hours",
+                    "4 hours",
+                    "Shift"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Turning every 2 hours is the standard of care to relieve pressure and preserve skin integrity."
+            }
+        ]
+    },
+    {
+        "id": 7,
+        "title": "Pharmacological Therapies Part 1",
+        "description": "Principles, CV, Resp, Endocrine Pharmacology",
+        "questionCount": 5,
+        "color": "from-blue-600 to-cyan-800",
+        "questions": [
+            {
+                "id": 1,
+                "text": "Nitroglycerin is given for chest pain. Which side effect is most common?",
+                "options": [
+                    "Hypertension",
+                    "Headache",
+                    "Bradycardia",
+                    "Constipation"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Headache is a common side effect due to the vasodilation effects of Nitroglycerin."
+            }
+        ]
+    },
+    {
+        "id": 8,
+        "title": "Pharmacological Therapies Part 2",
+        "description": "Neuro, GI, Psych, Geriatric Pharm",
+        "questionCount": 5,
+        "color": "from-indigo-600 to-violet-800",
+        "questions": [
+            {
+                "id": 1,
+                "text": "When administering Lithium, the nurse monitors for toxicity. Early signs include:",
+                "options": [
+                    "Fine hand tremors",
+                    "Coarse hand tremors",
+                    "Seizures",
+                    "Coma"
+                ],
+                "correctAnswer": 0,
+                "explanation": "Fine hand tremors can be a side effect, but WORSENING to coarse tremors, vomiting, and confusion indicates toxicity."
+            }
+        ]
+    },
+    {
+        "id": 9,
+        "title": "Reduction of Risk Part 1",
+        "description": "Diagnostics, Monitoring, CV Patho",
+        "questionCount": 5,
+        "color": "from-red-600 to-red-900",
+        "questions": [
+            {
+                "id": 1,
+                "text": "Placeholder Question",
+                "options": [
+                    "A",
+                    "B",
+                    "C",
+                    "D"
+                ],
+                "correctAnswer": 0,
+                "explanation": "Content to be added."
+            }
+        ]
+    },
+    {
+        "id": 10,
+        "title": "Physiological Adaptation Part 2",
+        "description": "Respiratory, Neuro, Endocrine Patho",
+        "questionCount": 5,
+        "color": "from-rose-600 to-pink-900",
+        "questions": [
+            {
+                "id": 1,
+                "text": "Placeholder for Resp/Neuro Patho",
+                "options": [
+                    "Option 1",
+                    "Option 2",
+                    "Option 3",
+                    "Option 4"
+                ],
+                "correctAnswer": 0,
+                "explanation": "Pending content."
+            }
+        ]
+    },
+    {
+        "id": 11,
+        "title": "Physiological Adaptation Part 3",
+        "description": "Immuno, Heme, GI Patho",
+        "questionCount": 5,
+        "color": "from-amber-600 to-orange-900",
+        "questions": [
+            {
+                "id": 1,
+                "text": "Placeholder for GI Patho",
+                "options": [
+                    "Option 1",
+                    "Option 2",
+                    "Option 3",
+                    "Option 4"
+                ],
+                "correctAnswer": 0,
+                "explanation": "Pending content."
+            }
+        ]
+    },
+    {
+        "id": 12,
+        "title": "Physiological Adaptation Part 4",
+        "description": "GU, Musculoskeletal, Integumentary",
+        "questionCount": 5,
+        "color": "from-green-600 to-emerald-900",
+        "questions": [
+            {
+                "id": 1,
+                "text": "Placeholder for GU/Musculo",
+                "options": [
+                    "Option 1",
+                    "Option 2",
+                    "Option 3",
+                    "Option 4"
+                ],
+                "correctAnswer": 0,
+                "explanation": "Pending content."
+            }
+        ]
+    },
+    {
+        "id": 13,
+        "title": "Physiological Adaptation Part 5",
+        "description": "ENT, Electrolytes, Acid-Base",
+        "questionCount": 5,
+        "color": "from-teal-600 to-cyan-900",
+        "questions": [
+            {
+                "id": 1,
+                "text": "Metabolic Alkalosis is caused by:",
+                "options": [
+                    "Vomiting",
+                    "Diarrhea",
+                    "Renal Failure",
+                    "COPD"
+                ],
+                "correctAnswer": 0,
+                "explanation": "Vomiting causes loss of stomach acid (H+), leading to alkalosis."
+            }
+        ]
+    },
+    {
+        "id": 14,
+        "title": "Physiological Adaptation Part 6",
+        "description": "Multi-system, OB Emergencies",
+        "questionCount": 5,
+        "color": "from-blue-600 to-indigo-900",
+        "questions": [
+            {
+                "id": 1,
+                "text": "First action for a prolapsed cord?",
+                "options": [
+                    "Trendelenburg position",
+                    "Push cord back in",
+                    "Cover with dry gauze",
+                    "Walk the patient"
+                ],
+                "correctAnswer": 0,
+                "explanation": "Relieve pressure on the cord by positioning hips higher than head (Trendelenburg or Knee-Chest)."
+            }
+        ]
+    },
+    {
+        "id": 15,
+        "title": "Practice Test #1",
+        "description": "Full Practice Exam 1",
+        "questionCount": 20,
+        "color": "from-violet-600 to-purple-900",
+        "questions": [
+            {
+                "id": 1,
+                "text": "Practice Test Question 1...",
+                "options": [
+                    "A",
+                    "B",
+                    "C",
+                    "D"
+                ],
+                "correctAnswer": 0,
+                "explanation": "Explanation."
+            }
+        ]
+    },
+    {
+        "id": 16,
+        "title": "Final Prep Review",
+        "description": "Test Anxiety & Final Concept Checks",
+        "questionCount": 10,
+        "color": "from-fuchsia-600 to-pink-900",
+        "questions": [
+            {
+                "id": 1,
+                "text": "Study strategy question...",
+                "options": [
+                    "A",
+                    "B",
+                    "C",
+                    "D"
+                ],
+                "correctAnswer": 0,
+                "explanation": "Explanation."
+            }
+        ]
+    }
+]

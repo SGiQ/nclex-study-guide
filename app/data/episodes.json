@@ -1,0 +1,178 @@
+[
+  {
+    "id": 1,
+    "title": "Test-Taking Strategies & Study Foundation",
+    "description": "Introduction, Test-Taking Strategies, Five-Week NCLEX-PN Study Plan",
+    "content": "Introduction & Review Video Directory\nSecret Keys #1-5\nTest-Taking Strategies\nFive-Week NCLEX-PN Study Plan",
+    "pages": "1-20",
+    "duration": 630,
+    "audioUrl": "/uploads/episode-1.mp3",
+    "category": "Foundation",
+    "order": 1
+  },
+  {
+    "id": 2,
+    "title": "Coordinated Care",
+    "description": "Patient Rights, Ethics, Care Coordination, Legal Regulations",
+    "content": "Patient Rights, Ethics, Care Coordination\nModels of Care & Health Care Delivery Systems\nLegal Process, Nursing Care Planning\nMedical Terminology & Transcription\nLegal Regulations, Nursing Research\nEvidence-Based Practice\nQuality Improvement & Risk Assessment\nBilling and Reimbursement Concepts",
+    "pages": "21-52",
+    "duration": 945,
+    "audioUrl": "/uploads/episode-2.mp3",
+    "category": "Foundation",
+    "order": 2
+  },
+  {
+    "id": 3,
+    "title": "Safety & Infection Control",
+    "description": "Patient Safety, Disaster Management, Hazardous Materials, Impaired Nurse",
+    "content": "Patient Safety and Injury Prevention in the Hospital\nDisaster Management and Emergency Response\nHandling and Administering Hazardous Materials\nInfection Control",
+    "pages": "53-65",
+    "duration": 820,
+    "audioUrl": "/uploads/episode-3.mp3",
+    "category": "Foundation",
+    "order": 3
+  },
+  {
+    "id": 4,
+    "title": "Health Promotion & Maintenance Part 1",
+    "description": "Pediatrics, Growth & Development, Immunizations, Newborn Care",
+    "content": "Data Collection\nPhysical Assessment & Order of Assessment\nPediatrics: Growth and Development\nPediatrics: Immunization Schedule\nPediatrics Highlights",
+    "pages": "66-88",
+    "duration": 1100,
+    "audioUrl": "/uploads/episode-4.mp3",
+    "category": "Health Promotion",
+    "order": 4
+  },
+  {
+    "id": 5,
+    "title": "Health Promotion & Maintenance Part 2",
+    "description": "Maternity, Antepartum, Intrapartum, Postpartum",
+    "content": "Maternity Nursing: Antepartum\nMaternity Nursing: Intrapartum\nMaternity Nursing: Postpartum\nMaternity Nursing: Newborn Care",
+    "pages": "89-115",
+    "duration": 1250,
+    "audioUrl": "/uploads/episode-5.mp3",
+    "category": "Health Promotion",
+    "order": 5
+  },
+  {
+    "id": 6,
+    "title": "Psychosocial Integrity",
+    "description": "Mental Health Concepts, Therapeutic Communication, Disorders",
+    "content": "Mental Health Concepts\nTherapeutic Communication\nDefense Mechanisms\nAnxiety Disorders\nMood Disorders\nPersonality Disorders\nSchizophrenia\nEating Disorders & Substance Abuse\nPsychopharmacology",
+    "pages": "116-145",
+    "duration": 980,
+    "audioUrl": "/uploads/episode-6.mp3",
+    "category": "Psychosocial",
+    "order": 6
+  },
+  {
+    "id": 7,
+    "title": "Basic Care and Comfort",
+    "description": "Mobility, Nutrition, Elimination, Pain Management",
+    "content": "Mobility & Immobility\nSkin Integrity & Wound Care\nNutrition & Diet Therapy\nElimination (Bowel & Bladder)\nPain Management\nComplementary & Alternative Therapies\nSleep & Rest",
+    "pages": "146-170",
+    "duration": 750,
+    "audioUrl": "/uploads/episode-7.mp3",
+    "category": "Basic Care",
+    "order": 7
+  },
+  {
+    "id": 8,
+    "title": "Pharmacological Therapies Part 1",
+    "description": "General Principles, Cardiac, Respiratory, Endocrine Meds",
+    "content": "Pharmacology Basics & Calculations\nCardiac Medications (Antihypertensives, Diuretics, Antianginals)\nRespiratory Medications (Bronchodilators, Steroids)\nEndocrine Medications (Insulin, Thyroid, Steroids)",
+    "pages": "171-195",
+    "duration": 1300,
+    "audioUrl": "/uploads/episode-8.mp3",
+    "category": "Pharmacology",
+    "order": 8
+  },
+  {
+    "id": 9,
+    "title": "Pharmacological Therapies Part 2",
+    "description": "Neuro, GI, Antibiotics, Psych Meds",
+    "content": "Neurological Medications (Anticonvulsants, Antiparkinsonian)\nGastrointestinal Medications\nAntibiotics & Anti-infectives\nPsychotropic Medications\nPain Medications (Opioids, NSAIDs)",
+    "pages": "196-220",
+    "duration": 1200,
+    "audioUrl": "/uploads/episode-9.mp3",
+    "category": "Pharmacology",
+    "order": 9
+  },
+  {
+    "id": 10,
+    "title": "Reduction of Risk Potential Part 1",
+    "description": "Diagnostics, Lab Values, Pathophysiology CV/Resp",
+    "content": "Diagnostic Tests & Procedures\nLaboratory Values & Interpretation\nPathophysiology: Cardiovascular System\nPathophysiology: Respiratory System",
+    "pages": "221-245",
+    "duration": 1150,
+    "audioUrl": "/uploads/episode-10.mp3",
+    "category": "Risk Reduction",
+    "order": 10
+  },
+  {
+    "id": 11,
+    "title": "Reduction of Risk Potential Part 2",
+    "description": "Pathophysiology GI, Neuro, Endocrine, Procedures",
+    "content": "Pathophysiology: Gastrointestinal System\nPathophysiology: Neurological System\nPathophysiology: Endocrine System\nPerioperative Nursing Care",
+    "pages": "246-270",
+    "duration": 1080,
+    "audioUrl": "/uploads/episode-11.mp3",
+    "category": "Risk Reduction",
+    "order": 11
+  },
+  {
+    "id": 12,
+    "title": "Physiological Adaptation Part 1",
+    "description": "Fluid & Electrolytes, Acid-Base, Emergencies",
+    "content": "Fluid & Electrolyte Imbalances\nAcid-Base Balance\nMedical Emergencies (Shock, CPR, Trauma)\nOncology Nursing",
+    "pages": "271-295",
+    "duration": 900,
+    "audioUrl": "/uploads/episode-12.mp3",
+    "category": "Physiological",
+    "order": 12
+  },
+  {
+    "id": 13,
+    "title": "Physiological Adaptation Part 2",
+    "description": "Renal, Musculoskeletal, Reproductive, Integumentary",
+    "content": "Pathophysiology: Renal System\nPathophysiology: Musculoskeletal System\nPathophysiology: Reproductive System\nPathophysiology: Integumentary System (Burns)",
+    "pages": "296-320",
+    "duration": 1020,
+    "audioUrl": "/uploads/episode-13.mp3",
+    "category": "Physiological",
+    "order": 13
+  },
+  {
+    "id": 14,
+    "title": "Physiological Adaptation Part 3",
+    "description": "Sensory, Hematology, Immunology, Infectious Diseases",
+    "content": "Pathophysiology: Sensory (Eye & Ear)\nPathophysiology: Hematology\nPathophysiology: Immunology\nInfectious Diseases",
+    "pages": "321-340",
+    "duration": 850,
+    "audioUrl": "/uploads/episode-14.mp3",
+    "category": "Physiological",
+    "order": 14
+  },
+  {
+    "id": 15,
+    "title": "Review & Final Tips",
+    "description": "Comprehensive Review, Final Tips, Q&A Strategy",
+    "content": "Comprehensive Review of Key Concepts\nPrioritization & Delegation Strategy\nFinal Tips for Test Day\nManaging Test Anxiety",
+    "pages": "341-350",
+    "duration": 600,
+    "audioUrl": "/uploads/episode-15.mp3",
+    "category": "Review",
+    "order": 15
+  },
+  {
+    "id": 16,
+    "title": "Bonus: Audio Mnemonics",
+    "description": "Key Mnemonics for Rapid Recall",
+    "content": "Pharmacology Mnemonics\nLab Value Mnemonics\nInfection Control Mnemonics",
+    "pages": "Bonus",
+    "duration": 480,
+    "audioUrl": "/uploads/episode-16.mp3",
+    "category": "Bonus",
+    "order": 16
+  }
+]

@@ -25,7 +25,7 @@ export default function EpisodeDetailPage({ params }: { params: Promise<{ id: st
     // Check for available content
     // Note: Assuming JSON structure is consistent (array of objects with episodeId)
     const hasFlashcards = flashcardsData.some((f) => f.episodeId === episodeId);
-    const hasQuiz = quizzesData.some((q) => q.episodeId === episodeId);
+    const hasQuiz = quizzesData.some((q) => q.id === episodeId);
 
     // For these, we cast to any or check structure if we haven't typed them yet. 
     // Assuming standard structure based on files seen.

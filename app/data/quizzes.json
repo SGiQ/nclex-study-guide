@@ -1,34 +1,310 @@
 [
     {
         "id": 2,
-        "title": "Coordinated Care",
-        "description": "Patient Rights, Ethics, Care Coordination, Legal Regulations",
-        "questionCount": 5,
+        "title": "Management Quiz",
+        "description": "Patient Rights, Ethics, Care Coordination, Legal Regulations, Leadership",
+        "questionCount": 25,
         "color": "from-blue-600 to-indigo-800",
         "questions": [
             {
                 "id": 1,
-                "text": "Which of the following acts protects client confidentiality?",
+                "text": "A nurse is creating a care plan for a patient and prioritizes addressing the patient's acute pain over their need for nutritional education. This prioritization is primarily based on which framework?",
                 "options": [
-                    "ADA",
-                    "HIPAA",
-                    "EMTALA",
-                    "OSHA"
+                    "The SBAR communication technique.",
+                    "The patient's insurance coverage limitations.",
+                    "The facility's clinical pathway for the diagnosis.",
+                    "Maslow's Hierarchy of Needs."
                 ],
-                "correctAnswer": 1,
-                "explanation": "HIPAA (Health Insurance Portability and Accountability Act) is the primary law protecting patient health information."
+                "correctAnswer": 3,
+                "explanation": "Consider a well-known psychological theory that ranks human needs in order of importance."
             },
             {
                 "id": 2,
-                "text": "A client refuses a life-saving procedure. The nurse validates this because of:",
+                "text": "A patient with decision-making capacity informs the nurse that they wish to refuse a recommended surgery. This decision is protected under which ethical principle?",
                 "options": [
+                    "Nonmaleficence",
                     "Beneficence",
-                    "Non-maleficence",
                     "Autonomy",
                     "Justice"
                 ],
                 "correctAnswer": 2,
-                "explanation": "Autonomy allows competent adults to refuse treatment, even if it may result in death."
+                "explanation": "This ethical principle emphasizes a person's right to self-governance and making their own choices."
+            },
+            {
+                "id": 3,
+                "text": "During a handoff report, a nurse states, 'The patient's blood pressure has been trending downward, and I am concerned about potential hypovolemia.' Which part of the SBAR technique does this statement represent?",
+                "options": [
+                    "Assessment",
+                    "Background",
+                    "Recommendation",
+                    "Situation"
+                ],
+                "correctAnswer": 0,
+                "explanation": "This part of the communication tool involves the caregiver's analysis of the situation."
+            },
+            {
+                "id": 4,
+                "text": "A hospital must decide which of two equally needy patients receives a single available organ for transplant. This scenario most directly involves the ethical principle of:",
+                "options": [
+                    "Fidelity",
+                    "Beneficence",
+                    "Justice",
+                    "Autonomy"
+                ],
+                "correctAnswer": 2,
+                "explanation": "Consider the ethical principle concerned with fairness and allocation of resources."
+            },
+            {
+                "id": 5,
+                "text": "A nurse manager who makes decisions independently and strictly enforces rules, leaving team members with little input, is demonstrating which leadership style?",
+                "options": [
+                    "Democratic",
+                    "Laissez-faire",
+                    "Autocratic",
+                    "Participatory"
+                ],
+                "correctAnswer": 2,
+                "explanation": "This leadership style is often compared to that of a military commander who expects orders to be followed."
+            },
+            {
+                "id": 6,
+                "text": "Which of the following is considered one of the 'Five Rights of Delegation' in nursing?",
+                "options": [
+                    "Right Time",
+                    "Right Person",
+                    "Right Cost",
+                    "Right Method"
+                ],
+                "correctAnswer": 1,
+                "explanation": "This principle of delegation focuses on ensuring the individual receiving the task is competent and qualified."
+            },
+            {
+                "id": 7,
+                "text": "A patient recovering from a stroke no longer requires hospitalization but is not yet able to perform daily activities independently at home. Which level of care is most appropriate for this patient?",
+                "options": [
+                    "Custodial care",
+                    "Sub-acute care",
+                    "Acute care",
+                    "Long-term care"
+                ],
+                "correctAnswer": 1,
+                "explanation": "This level of care serves as a bridge between the intensive environment of a hospital and returning home."
+            },
+            {
+                "id": 8,
+                "text": "What is the primary function of the Health Insurance Portability and Accountability Act (HIPAA)?",
+                "options": [
+                    "To set minimum safety standards in the workplace.",
+                    "To regulate the standards and quality of care in nursing homes.",
+                    "To protect the privacy of an individual's healthcare information.",
+                    "To ensure emergency treatment is provided regardless of ability to pay."
+                ],
+                "correctAnswer": 2,
+                "explanation": "This federal law is primarily associated with patient confidentiality."
+            },
+            {
+                "id": 9,
+                "text": "A grateful patient's family offers a nurse a valuable piece of jewelry. According to professional boundaries, what is the most appropriate action?",
+                "options": [
+                    "Politely decline, explaining that the care provided is part of the professional role.",
+                    "Suggest they make a donation to the hospital foundation instead.",
+                    "Accept the gift on behalf of the entire unit to be shared later.",
+                    "Accept the gift to avoid offending the family."
+                ],
+                "correctAnswer": 0,
+                "explanation": "Consider the need to maintain a professional relationship and avoid any appearance of obligation."
+            },
+            {
+                "id": 10,
+                "text": "The care delivery model where an interdisciplinary team, including nurses, therapists, and social workers, collaboratively provides care to a group of patients is known as:",
+                "options": [
+                    "Case Management Model",
+                    "Primary Nursing Model",
+                    "Family-Centered Model",
+                    "Medical Home Model"
+                ],
+                "correctAnswer": 0,
+                "explanation": "This model emphasizes teamwork and coordination across different healthcare professions for a group of patients."
+            },
+            {
+                "id": 11,
+                "text": "Which federal law requires hospitals to provide medical screening and stabilization to any patient presenting to an emergency department, regardless of their ability to pay?",
+                "options": [
+                    "PSDA (Patient Self-Determination Act)",
+                    "HIPAA",
+                    "OBRA (Omnibus Budget Reconciliation Act)",
+                    "EMTALA (Emergency Medical Treatment and Active Labor Act)"
+                ],
+                "correctAnswer": 3,
+                "explanation": "This law is often referred to as the anti-dumping law for emergency departments."
+            },
+            {
+                "id": 12,
+                "text": "In the context of research, what is the purpose of a control group?",
+                "options": [
+                    "To conduct a survey of the literature before the study begins.",
+                    "To receive the treatment or intervention being evaluated.",
+                    "To serve as a baseline for comparison by not receiving the treatment.",
+                    "To ensure the sample size is large enough for statistical significance."
+                ],
+                "correctAnswer": 2,
+                "explanation": "This group provides a point of reference to measure the effect of the intervention."
+            },
+            {
+                "id": 13,
+                "text": "A nurse who administers a fatal dose of medication due to a calculation error has committed which type of tort?",
+                "options": [
+                    "Intentional tort",
+                    "Quasi-intentional tort",
+                    "Unintentional tort (Negligence)",
+                    "Strict liability tort"
+                ],
+                "correctAnswer": 2,
+                "explanation": "This legal term applies when harm is caused by a failure to act with reasonable care, not by a deliberate act to cause harm."
+            },
+            {
+                "id": 14,
+                "text": "A 70-year-old individual needs coverage for prescription drugs. Which part of Medicare should they enroll in?",
+                "options": [
+                    "Part C",
+                    "Part A",
+                    "Part D",
+                    "Part B"
+                ],
+                "correctAnswer": 2,
+                "explanation": "Think about the letter of the Medicare program specifically designed for pharmaceuticals."
+            },
+            {
+                "id": 15,
+                "text": "A hospital uses a system to classify patients based on their diagnosis for the purpose of determining how much the hospital should be reimbursed by Medicare. This system is known as:",
+                "options": [
+                    "Diagnostic-Related Groups (DRGs)",
+                    "International Classification of Diseases (ICD)",
+                    "Current Procedural Terminology (CPT)",
+                    "Healthcare Common Procedure Coding System (HCPCS)"
+                ],
+                "correctAnswer": 0,
+                "explanation": "This billing system groups patients who share similar diagnoses and treatments."
+            },
+            {
+                "id": 16,
+                "text": "The process of collecting patient data through observation, interviews, and physical examination occurs during which step of the nursing process?",
+                "options": [
+                    "Diagnosis",
+                    "Implementation",
+                    "Assessment",
+                    "Planning"
+                ],
+                "correctAnswer": 2,
+                "explanation": "This is the first and foundational step in the systematic approach to patient care."
+            },
+            {
+                "id": 17,
+                "text": "A nurse is working with a patient and their family to incorporate their cultural and spiritual beliefs into the plan of care. This action primarily addresses which factor affecting care planning?",
+                "options": [
+                    "Utilizing clinical pathways",
+                    "Consideration of comorbidities",
+                    "Psychological factors",
+                    "Social and cultural factors"
+                ],
+                "correctAnswer": 3,
+                "explanation": "This aspect of care planning recognizes that a patient's background and belief systems significantly influence their health experiences."
+            },
+            {
+                "id": 18,
+                "text": "A nurse calls a physician to report a change in a patient's condition. The physician gives a new order over the phone. What is a critical step the nurse must take to ensure patient safety?",
+                "options": [
+                    "Tell the physician to enter the order in the computer immediately.",
+                    "Implement the order immediately to ensure timely care.",
+                    "Ask a colleague to listen to the order simultaneously.",
+                    "Write down the order, then read it back to the physician for confirmation."
+                ],
+                "correctAnswer": 3,
+                "explanation": "This safety procedure is designed to close the communication loop and prevent errors from misinterpretation."
+            },
+            {
+                "id": 19,
+                "text": "What is the main goal of conflict resolution in a healthcare team setting?",
+                "options": [
+                    "To temporarily suppress the disagreement to maintain a quiet work environment.",
+                    "To ensure the leader's initial opinion is adopted by the team.",
+                    "To identify which team member was at fault.",
+                    "To produce a positive outcome by opening dialogue and seeking a solution."
+                ],
+                "correctAnswer": 3,
+                "explanation": "The objective is not to win an argument, but to improve teamwork and care delivery."
+            },
+            {
+                "id": 20,
+                "text": "A case manager is coordinating a patient's discharge. This role primarily involves which activity?",
+                "options": [
+                    "Diagnosing the patient's primary medical condition.",
+                    "Performing direct, hands-on nursing tasks like wound care.",
+                    "Coordinating services and resources to fulfill the patient's healthcare needs.",
+                    "Prescribing medications needed for the patient after discharge."
+                ],
+                "correctAnswer": 2,
+                "explanation": "This professional acts as a central point of contact to ensure a smooth transition of care."
+            },
+            {
+                "id": 21,
+                "text": "The use of telehealth has expanded to provide care to patients remotely. Which of the following is a primary benefit of telehealth?",
+                "options": [
+                    "It guarantees complete privacy with no risk of data breaches.",
+                    "It lowers the overall cost of healthcare and increases patient access.",
+                    "It allows for hands-on physical assessments and procedures.",
+                    "It is most effective for managing acute, life-threatening emergencies."
+                ],
+                "correctAnswer": 1,
+                "explanation": "Consider the advantages of providing healthcare services without the patient needing to travel."
+            },
+            {
+                "id": 22,
+                "text": "Which type of research study is considered the 'gold standard' for testing the efficacy of a new treatment due to its design that minimizes bias?",
+                "options": [
+                    "Cross-sectional study",
+                    "Case-control study",
+                    "Randomized controlled trial (RCT)",
+                    "Cohort study"
+                ],
+                "correctAnswer": 2,
+                "explanation": "This study design involves randomly assigning participants to different groups to compare outcomes."
+            },
+            {
+                "id": 23,
+                "text": "A nurse is reviewing a patient's medical record. Which document would provide a chronological account of the patient's care, condition, and response to treatment?",
+                "options": [
+                    "Referral form",
+                    "Progress notes",
+                    "Discharge plan",
+                    "Advance directive"
+                ],
+                "correctAnswer": 1,
+                "explanation": "These entries are made regularly by doctors, nurses, and therapists to document the patient's journey."
+            },
+            {
+                "id": 24,
+                "text": "In evidence-based practice, what is the highest level of evidence?",
+                "options": [
+                    "Expert opinion and case studies.",
+                    "Evidence supported by suggestive clinical studies with a theoretical basis.",
+                    "Evidence from descriptive or comparative studies.",
+                    "Evidence from well-designed experimental studies like RCTs."
+                ],
+                "correctAnswer": 3,
+                "explanation": "This level of evidence comes from the most rigorous type of scientific study designed to eliminate bias."
+            },
+            {
+                "id": 25,
+                "text": "A nurse notices that several patients have developed pressure ulcers after being placed on a new type of mattress. The first step the nurse should take as part of the quality improvement process is to:",
+                "options": [
+                    "Implement a new wound care protocol immediately.",
+                    "Collect data on all patients with pressure ulcers in the hospital.",
+                    "Identify the situation as a potential problem that could benefit from change.",
+                    "Recommend changes to administrative policy."
+                ],
+                "correctAnswer": 2,
+                "explanation": "Think about the very first action one must take before attempting to solve any problem."
             }
         ]
     },

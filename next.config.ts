@@ -1,16 +1,14 @@
 import type { NextConfig } from "next";
 
-const withPWAInit = require("@ducanh2912/next-pwa").default;
+// Temporarily disabled PWA for dev server
+// const withPWAInit = require("@ducanh2912/next-pwa").default;
+// const withPWA = withPWAInit({
+//   dest: "public",
+//   disable: process.env.NODE_ENV === "development",
+//   register: true,
+//   skipWaiting: true,
+// });
 
-const withPWA = withPWAInit({
-  dest: "public",
-  disable: process.env.NODE_ENV === "development",
-  register: true,
-  skipWaiting: true,
-});
+const nextConfig: NextConfig = {};
 
-const nextConfig: NextConfig = {
-  /* config options here */
-};
-
-export default withPWA(nextConfig);
+export default nextConfig;

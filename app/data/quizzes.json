@@ -1,6 +1,7 @@
 [
     {
         "id": 2,
+        "episodeId": 2,
         "title": "Management Quiz",
         "description": "Patient Rights, Ethics, Care Coordination, Legal Regulations, Leadership",
         "questionCount": 25,
@@ -310,6 +311,7 @@
     },
     {
         "id": 3,
+        "episodeId": 3,
         "title": "Safety & Infection Control",
         "description": "Standard precautions, PPE usage, and client safety.",
         "questionCount": 5,
@@ -379,6 +381,7 @@
     },
     {
         "id": 4,
+        "episodeId": 4,
         "title": "Health Promotion & Maintenance",
         "description": "Pediatrics, Growth & Development, Immunizations",
         "questionCount": 5,
@@ -400,6 +403,7 @@
     },
     {
         "id": 5,
+        "episodeId": 6,
         "title": "Psychosocial Integrity",
         "description": "Family Dynamics, Therapeutic Relationships, Mental Health",
         "questionCount": 5,
@@ -421,6 +425,7 @@
     },
     {
         "id": 6,
+        "episodeId": 7,
         "title": "Basic Care and Comfort",
         "description": "Rehabilitation, Wound Care, Nutrition",
         "questionCount": 5,
@@ -442,6 +447,7 @@
     },
     {
         "id": 7,
+        "episodeId": 8,
         "title": "Pharmacological Therapies Part 1",
         "description": "Principles, CV, Resp, Endocrine Pharmacology",
         "questionCount": 5,
@@ -463,6 +469,7 @@
     },
     {
         "id": 8,
+        "episodeId": 9,
         "title": "Pharmacological Therapies Part 2",
         "description": "Neuro, GI, Psych, Geriatric Pharm",
         "questionCount": 5,
@@ -484,6 +491,7 @@
     },
     {
         "id": 9,
+        "episodeId": 10,
         "title": "Reduction of Risk Part 1",
         "description": "Diagnostics, Monitoring, CV Patho",
         "questionCount": 5,
@@ -505,6 +513,7 @@
     },
     {
         "id": 10,
+        "episodeId": 11,
         "title": "Physiological Adaptation Part 2",
         "description": "Respiratory, Neuro, Endocrine Patho",
         "questionCount": 5,
@@ -526,6 +535,7 @@
     },
     {
         "id": 11,
+        "episodeId": 12,
         "title": "Physiological Adaptation Part 3",
         "description": "Immuno, Heme, GI Patho",
         "questionCount": 5,
@@ -547,6 +557,7 @@
     },
     {
         "id": 12,
+        "episodeId": 13,
         "title": "Physiological Adaptation Part 4",
         "description": "GU, Musculoskeletal, Integumentary",
         "questionCount": 5,
@@ -568,6 +579,7 @@
     },
     {
         "id": 13,
+        "episodeId": 12,
         "title": "Physiological Adaptation Part 5",
         "description": "ENT, Electrolytes, Acid-Base",
         "questionCount": 5,
@@ -589,6 +601,7 @@
     },
     {
         "id": 14,
+        "episodeId": 14,
         "title": "Physiological Adaptation Part 6",
         "description": "Multi-system, OB Emergencies",
         "questionCount": 5,
@@ -610,6 +623,7 @@
     },
     {
         "id": 15,
+        "episodeId": null,
         "title": "Practice Test #1",
         "description": "Full Practice Exam 1",
         "questionCount": 20,
@@ -631,6 +645,7 @@
     },
     {
         "id": 16,
+        "episodeId": 15,
         "title": "Final Prep Review",
         "description": "Test Anxiety & Final Concept Checks",
         "questionCount": 10,

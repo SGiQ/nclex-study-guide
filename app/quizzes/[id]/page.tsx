@@ -119,7 +119,7 @@ export default function QuizRunnerPage({ params }: { params: Promise<{ id: strin
             </div>
 
             {/* Main Content */}
-            <main className="flex-1 flex flex-col max-w-2xl mx-auto w-full p-4 sm:p-6 pb-48">
+            <main className="flex-1 flex flex-col max-w-2xl mx-auto w-full p-4 sm:p-6 pb-8">
                 <div className="flex-1 flex flex-col justify-start pt-4">
                     <span className="text-emerald-500 font-bold text-sm tracking-wider mb-4 block">QUESTION {currentQuestionIndex + 1} OF {quiz.questions.length}</span>
                     <h2 className="text-xl sm:text-2xl font-bold leading-tight mb-4">
@@ -189,49 +189,47 @@ export default function QuizRunnerPage({ params }: { params: Promise<{ id: strin
                         })}
                     </div>
 
+                    {/* Action Buttons - Inline with content */}
+                    <div className="mt-6">
+                        {!isAnswered ? (
+                            <button
+                                onClick={checkAnswer}
+                                disabled={selectedOption === null}
+                                className="w-full py-4 rounded-xl bg-white text-black font-bold text-lg disabled:opacity-30 disabled:cursor-not-allowed hover:scale-[1.01] active:scale-[0.99] transition-all"
+                            >
+                                Check Answer
+                            </button>
+                        ) : (
+                            // Feedback Mode
+                            <div className="animate-in slide-in-from-bottom-5 fade-in duration-300">
+                                <div className={`p-4 rounded-xl mb-4 border ${selectedOption === currentQuestion.correctAnswer
+                                    ? 'bg-emerald-500/10 border-emerald-500/30'
+                                    : 'bg-red-500/10 border-red-500/30'
+                                    }`}>
+                                    <div className="flex items-center gap-2 mb-2">
+                                        {selectedOption === currentQuestion.correctAnswer ? (
+                                            <span className="text-emerald-400 font-bold">Correct! good job.</span>
+                                        ) : (
+                                            <span className="text-red-400 font-bold">Incorrect</span>
+                                        )}
+                                    </div>
+                                    <p className="text-sm text-white/80 leading-relaxed">
+                                        {currentQuestion.explanation}
+                                    </p>
+                                </div>
+
+                                <button
+                                    onClick={nextQuestion}
+                                    className="w-full py-4 rounded-xl bg-purple-600 text-white font-bold text-lg hover:bg-purple-500 active:bg-purple-700 transition-colors shadow-lg shadow-purple-900/20"
+                                >
+                                    {currentQuestionIndex < quiz.questions.length - 1 ? 'Next Question →' : 'Finish Quiz'}
+                                </button>
+                            </div>
+                        )}
+                    </div>
+
                 </div>
             </main>
-
-            {/* Footer / Action Area */}
-            <div className="p-4 sm:p-6 pb-safe border-t border-white/10 bg-[#0A0A0F] sticky bottom-0" style={{ paddingBottom: 'max(1rem, env(safe-area-inset-bottom))' }}>
-                <div className="max-w-2xl mx-auto">
-                    {!isAnswered ? (
-                        <button
-                            onClick={checkAnswer}
-                            disabled={selectedOption === null}
-                            className="w-full py-4 rounded-xl bg-white text-black font-bold text-lg disabled:opacity-30 disabled:cursor-not-allowed hover:scale-[1.01] active:scale-[0.99] transition-all"
-                        >
-                            Check Answer
-                        </button>
-                    ) : (
-                        // Feedback Mode
-                        <div className="animate-in slide-in-from-bottom-5 fade-in duration-300">
-                            <div className={`p-4 rounded-xl mb-4 border ${selectedOption === currentQuestion.correctAnswer
-                                ? 'bg-emerald-500/10 border-emerald-500/30'
-                                : 'bg-red-500/10 border-red-500/30'
-                                }`}>
-                                <div className="flex items-center gap-2 mb-2">
-                                    {selectedOption === currentQuestion.correctAnswer ? (
-                                        <span className="text-emerald-400 font-bold">Correct! good job.</span>
-                                    ) : (
-                                        <span className="text-red-400 font-bold">Incorrect</span>
-                                    )}
-                                </div>
-                                <p className="text-sm text-white/80 leading-relaxed">
-                                    {currentQuestion.explanation}
-                                </p>
-                            </div>
-
-                            <button
-                                onClick={nextQuestion}
-                                className="w-full py-4 rounded-xl bg-purple-600 text-white font-bold text-lg hover:bg-purple-500 active:bg-purple-700 transition-colors shadow-lg shadow-purple-900/20"
-                            >
-                                {currentQuestionIndex < quiz.questions.length - 1 ? 'Next Question →' : 'Finish Quiz'}
-                            </button>
-                        </div>
-                    )}
-                </div>
-            </div>
 
         </div>
     );

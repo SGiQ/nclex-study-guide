@@ -90,31 +90,30 @@ export default function QuizListPage() {
                                         </span>
                                     </div>
                                 )}
-                            </div>
 
-                            <h3 className="text-lg font-bold mb-2 leading-tight text-foreground group-hover:text-purple-400 transition-colors">
-                                {quiz.title}
-                            </h3>
-                            <p className="text-sm text-foreground/50 mb-6 flex-1">
-                                {quiz.description}
-                            </p>
+                                <h3 className="text-lg font-bold mb-2 leading-tight text-foreground group-hover:text-purple-400 transition-colors">
+                                    {quiz.title}
+                                </h3>
+                                <p className="text-sm text-foreground/50 mb-6 flex-1">
+                                    {quiz.description}
+                                </p>
 
-                            <div className="flex items-center gap-2 text-sm font-semibold text-purple-500 group-hover:text-purple-400">
-                                <span>{isCompleted ? 'Retake Quiz' : 'Start Quiz'}</span>
-                                <svg className="w-4 h-4 transition-transform group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                                    <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14M12 5l7 7-7 7" />
-                                </svg>
+                                <div className="flex items-center gap-2 text-sm font-semibold text-purple-500 group-hover:text-purple-400">
+                                    <span>{isCompleted ? 'Retake Quiz' : 'Start Quiz'}</span>
+                                    <svg className="w-4 h-4 transition-transform group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                                        <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14M12 5l7 7-7 7" />
+                                    </svg>
+                                </div>
                             </div>
-                        </div>
                         </Link>
-            );
+                    );
                 })}
-        </div>
+            </div>
 
-            {/* Coming Soon Section */ }
-    <div className="mt-12 p-6 rounded-2xl border border-dashed border-white/10 text-center">
-        <p className="text-white/40 text-sm">More categories coming soon...</p>
-    </div>
+            {/* Coming Soon Section */}
+            <div className="mt-12 p-6 rounded-2xl border border-dashed border-white/10 text-center">
+                <p className="text-white/40 text-sm">More categories coming soon...</p>
+            </div>
 
         </main >
         </div >

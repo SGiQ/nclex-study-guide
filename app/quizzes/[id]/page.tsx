@@ -119,7 +119,7 @@ export default function QuizRunnerPage({ params }: { params: Promise<{ id: strin
             </div>
 
             {/* Main Content */}
-            <main className="flex-1 flex flex-col max-w-2xl mx-auto w-full p-4 sm:p-6 pb-32">
+            <main className="flex-1 flex flex-col max-w-2xl mx-auto w-full p-4 sm:p-6 pb-48">
                 <div className="flex-1 flex flex-col justify-start pt-4">
                     <span className="text-emerald-500 font-bold text-sm tracking-wider mb-4 block">QUESTION {currentQuestionIndex + 1} OF {quiz.questions.length}</span>
                     <h2 className="text-xl sm:text-2xl font-bold leading-tight mb-4">
@@ -193,7 +193,7 @@ export default function QuizRunnerPage({ params }: { params: Promise<{ id: strin
             </main>
 
             {/* Footer / Action Area */}
-            <div className="p-4 sm:p-6 border-t border-white/10 bg-[#0A0A0F] sticky bottom-0">
+            <div className="p-4 sm:p-6 pb-safe border-t border-white/10 bg-[#0A0A0F] sticky bottom-0" style={{ paddingBottom: 'max(1rem, env(safe-area-inset-bottom))' }}>
                 <div className="max-w-2xl mx-auto">
                     {!isAnswered ? (
                         <button

@@ -16,7 +16,9 @@ export async function getBookContext(): Promise<string> {
         let pdf: any;
         try {
             console.log("[PDF Loader] Importing pdf-parse...");
-            pdf = require('pdf-parse');
+            const pdfModule = require('pdf-parse');
+            // Handle both CommonJS and ESM exports
+            pdf = pdfModule.default || pdfModule;
             console.log("[PDF Loader] pdf-parse imported successfully.");
         } catch (importError) {
             console.error("[PDF Loader] FAILED to import pdf-parse:", importError);

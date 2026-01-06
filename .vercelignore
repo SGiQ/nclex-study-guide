@@ -1,0 +1,3 @@
+# Don't include uploads in function bundles - they'll be served as static files
+public/uploads/**/*.mp3
+public/uploads/**/*.pdf

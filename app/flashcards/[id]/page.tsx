@@ -116,34 +116,34 @@ export default function FlashcardRunnerPage({ params }: { params: Promise<{ id: 
                 <div className="w-8"></div> {/* Spacer for centering */}
             </div>
 
-            {/* Main Content Area - Horizontal Layout with Side Buttons */}
-            <main className="flex-1 flex items-center justify-center p-6 relative perspective-1000 gap-4">
+            {/* Main Content Area - Optimized for Mobile */}
+            <main className="flex-1 flex items-center justify-center px-2 sm:px-6 py-4 relative perspective-1000">
+
+                {/* Card Counter - Fixed at Top */}
+                <div className="absolute top-4 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-0.5 bg-background/80 backdrop-blur px-3 py-1.5 rounded-full">
+                    <span className="text-[10px] font-bold text-foreground/40 uppercase tracking-widest">
+                        Card
+                    </span>
+                    <span className="text-base font-bold tabular-nums text-foreground">
+                        {currentIndex + 1} <span className="text-foreground/30">/</span> {totalCards}
+                    </span>
+                </div>
 
                 {/* Previous Button - Left Side */}
                 <button
                     onClick={prevCard}
                     disabled={currentIndex === 0}
-                    className="h-16 w-16 rounded-full bg-surface/10 hover:bg-surface/20 disabled:opacity-20 disabled:hover:bg-surface/10 transition-colors text-foreground shadow-lg flex items-center justify-center text-2xl z-10 shrink-0"
+                    className="h-12 w-12 sm:h-16 sm:w-16 rounded-full bg-surface/10 hover:bg-surface/20 disabled:opacity-20 disabled:hover:bg-surface/10 transition-colors text-foreground shadow-lg flex items-center justify-center text-xl sm:text-2xl z-10 shrink-0"
                     aria-label="Previous Card"
                 >
                     ←
                 </button>
 
                 {/* Card Container */}
-                <div className="flex-1 flex flex-col items-center max-w-md">
-                    {/* Card Counter - Above Card */}
-                    <div className="mb-4 flex flex-col items-center gap-1">
-                        <span className="text-xs font-bold text-foreground/40 uppercase tracking-widest">
-                            Card
-                        </span>
-                        <span className="text-xl font-bold tabular-nums text-foreground">
-                            {currentIndex + 1} <span className="text-foreground/30">/</span> {totalCards}
-                        </span>
-                    </div>
-
+                <div className="flex-1 flex flex-col items-center justify-center max-w-md mx-2 sm:mx-4">
                     {/* 3D Flip Card Container */}
                     <div
-                        className="relative w-full aspect-[3/4] sm:aspect-[4/3] cursor-pointer group"
+                        className="relative w-full aspect-[3/4] cursor-pointer group"
                         onClick={() => setIsFlipped(!isFlipped)}
                     >
                         <div
@@ -153,36 +153,36 @@ export default function FlashcardRunnerPage({ params }: { params: Promise<{ id: 
 
                             {/* FRONT */}
                             <div
-                                className="absolute inset-0 backface-hidden bg-card rounded-3xl border border-card-border p-8 flex flex-col items-center justify-center text-center shadow-2xl group-hover:border-card-border/70 transition-colors"
+                                className="absolute inset-0 backface-hidden bg-card rounded-2xl sm:rounded-3xl border border-card-border p-6 sm:p-8 flex flex-col items-center justify-center text-center shadow-2xl group-hover:border-card-border/70 transition-colors"
                             >
-                                <span className="text-xs uppercase font-bold text-blue-500 tracking-wider mb-6">Question</span>
-                                <h2 className="text-2xl sm:text-3xl font-bold leading-tight text-foreground">
+                                <span className="text-xs uppercase font-bold text-blue-500 tracking-wider mb-4 sm:mb-6">Question</span>
+                                <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-tight text-foreground px-2">
                                     {currentCard.front}
                                 </h2>
-                                <div className="absolute bottom-8 text-foreground/40 text-xs font-bold tracking-widest animate-pulse">
+                                <div className="absolute bottom-6 sm:bottom-8 text-foreground/40 text-[10px] sm:text-xs font-bold tracking-widest animate-pulse">
                                     CLICK OR SPACE FOR ANSWER
                                 </div>
                             </div>
 
                             {/* BACK */}
                             <div
-                                className="absolute inset-0 backface-hidden bg-card rounded-3xl border border-purple-500/30 p-8 flex flex-col items-center justify-center text-center shadow-2xl rotate-y-180"
+                                className="absolute inset-0 backface-hidden bg-card rounded-2xl sm:rounded-3xl border border-purple-500/30 p-6 sm:p-8 flex flex-col items-center justify-center text-center shadow-2xl rotate-y-180"
                             >
-                                <span className="text-xs uppercase font-bold text-purple-500 tracking-wider mb-6">Answer</span>
-                                <p className="text-xl sm:text-2xl font-medium text-foreground/90 leading-relaxed">
+                                <span className="text-xs uppercase font-bold text-purple-500 tracking-wider mb-4 sm:mb-6">Answer</span>
+                                <p className="text-lg sm:text-xl md:text-2xl font-medium text-foreground/90 leading-relaxed px-2">
                                     {currentCard.back}
                                 </p>
 
                                 {/* Actions on Back */}
-                                <div className="absolute bottom-8 flex gap-4" onClick={(e) => e.stopPropagation()}>
+                                <div className="absolute bottom-6 sm:bottom-8 flex gap-4" onClick={(e) => e.stopPropagation()}>
                                     <button
                                         onClick={(e) => {
                                             e.stopPropagation(); // Stop flip
                                             handleExplain();
                                         }}
-                                        className="px-4 py-2 rounded-full bg-indigo-500/10 text-indigo-500 hover:bg-indigo-500/20 text-sm font-bold flex items-center gap-2 transition-colors border border-indigo-500/10"
+                                        className="px-3 py-1.5 sm:px-4 sm:py-2 rounded-full bg-indigo-500/10 text-indigo-500 hover:bg-indigo-500/20 text-xs sm:text-sm font-bold flex items-center gap-2 transition-colors border border-indigo-500/10"
                                     >
-                                        <span className="text-lg">✨</span> Explain
+                                        <span className="text-base sm:text-lg">✨</span> Explain
                                     </button>
                                 </div>
                             </div>
@@ -195,7 +195,7 @@ export default function FlashcardRunnerPage({ params }: { params: Promise<{ id: 
                 <button
                     onClick={nextCard}
                     disabled={currentIndex === totalCards - 1}
-                    className="h-16 w-16 rounded-full bg-surface/10 hover:bg-surface/20 disabled:opacity-20 disabled:hover:bg-surface/10 transition-colors text-foreground shadow-lg flex items-center justify-center text-2xl z-10 shrink-0"
+                    className="h-12 w-12 sm:h-16 sm:w-16 rounded-full bg-surface/10 hover:bg-surface/20 disabled:opacity-20 disabled:hover:bg-surface/10 transition-colors text-foreground shadow-lg flex items-center justify-center text-xl sm:text-2xl z-10 shrink-0"
                     aria-label="Next Card"
                 >
                     →

@@ -50,7 +50,8 @@ export default function LandingPage() {
                 localStorage.setItem('user', JSON.stringify(user));
             }
 
-            router.push('/dashboard');
+            // Redirect to onboarding for new users
+            router.push('/onboarding');
         } catch (err) {
             setError('Failed to create account. Please try again.');
         } finally {

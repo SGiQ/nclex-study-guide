@@ -55,7 +55,7 @@ export default function ExamPage() {
                         correctAnswer: q.correctAnswer,
                         explanation: q.explanation,
                         category: quiz.title,
-                        episodeId: quiz.episodeId
+                        episodeId: quiz.episodeId ?? undefined
                     });
                 });
             });

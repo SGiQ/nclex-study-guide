@@ -80,15 +80,22 @@ ${bookContext}
 
         // 3. Format History
         // Gemini expects: { role: 'user' | 'model', parts: [{ text: '...' }] }
-        const history = messages.map((m: any) => ({
-            role: m.role === 'user' ? 'user' : 'model',
-            parts: [{ text: m.content }]
-        }));
+        // IMPORTANT: First message must be from 'user', not 'model'
+        const history = messages
+            .filter((m: any) => m.role !== 'assistant' || messages.indexOf(m) > 0) // Skip initial assistant greeting
+            .map((m: any) => ({
+                role: m.role === 'user' ? 'user' : 'model',
+                parts: [{ text: m.content }]
+            }));
 
-        const lastMessage = history.pop().parts[0].text;
+        // Get the last user message
+        const lastMessage = history.length > 0 ? history[history.length - 1].parts[0].text : '';
+
+        // Remove last message from history (will be sent separately)
+        const chatHistory = history.slice(0, -1);
 
         const chat = model.startChat({
-            history: history,
+            history: chatHistory,
         });
 
         const result = await chat.sendMessageStream(lastMessage);

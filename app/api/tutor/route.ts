@@ -1,13 +1,13 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { GoogleGenerativeAI } from '@google/generative-ai';
+import OpenAI from 'openai';
 import { getBookContext } from '@/utils/pdf-loader';
 
-const apiKey = process.env.GEMINI_API_KEY;
+const apiKey = process.env.OPENAI_API_KEY;
 
 export async function POST(req: NextRequest) {
     // If no API key, return mock response for demo purposes
     if (!apiKey) {
-        console.warn('GEMINI_API_KEY not set - using fallback responses');
+        console.warn('OPENAI_API_KEY not set - using fallback responses');
 
         try {
             const { messages } = await req.json();
@@ -25,7 +25,7 @@ export async function POST(req: NextRequest) {
             } else if (lastUserMessage.toLowerCase().includes('lab') || lastUserMessage.toLowerCase().includes('values')) {
                 response += "**Important Lab Values**:\n\n- **Potassium**: 3.5-5.0 mEq/L\n- **Sodium**: 135-145 mEq/L\n- **Glucose**: 70-110 mg/dL\n- **Hemoglobin**: 12-16 g/dL (female), 14-18 g/dL (male)\n\nRemember: **Critical values** require immediate action!";
             } else {
-                response += "I can help you with:\n\n- **NCLEX content** (Safety, Pharmacology, Med-Surg, etc.)\n- **Study strategies** and test-taking tips\n- **Lab values** and normal ranges\n- **Nursing procedures** and best practices\n\n**Note**: For full AI capabilities, please configure your GEMINI_API_KEY.\n\nWhat would you like to learn about?";
+                response += "I can help you with:\n\n- **NCLEX content** (Safety, Pharmacology, Med-Surg, etc.)\n- **Study strategies** and test-taking tips\n- **Lab values** and normal ranges\n- **Nursing procedures** and best practices\n\n**Note**: For full AI capabilities, please configure your OPENAI_API_KEY.\n\nWhat would you like to learn about?";
             }
 
             // Return as plain text stream
@@ -55,11 +55,15 @@ export async function POST(req: NextRequest) {
         const bookContext = await getBookContext();
         console.log(`Book context loaded. Length: ${bookContext.length} chars`);
 
-        // 2. Initialize Gemini Pro (Stable v1 model)
-        const genAI = new GoogleGenerativeAI(apiKey);
-        const model = genAI.getGenerativeModel({
-            model: 'gemini-pro',  // Stable v1 model
-            systemInstruction: `You are "TutorBot", an expert NCLEX-PN nursing tutor.
+        // 2. Initialize OpenAI
+        const openai = new OpenAI({
+            apiKey: apiKey,
+        });
+
+        // 3. Build system message with book context
+        const systemMessage = {
+            role: 'system' as const,
+            content: `You are "TutorBot", an expert NCLEX-PN nursing tutor.
 You have access to the ENTIRE Review Book text below.
 ALWAYS answer questions based on the provided book context first.
 If the book doesn't contain the answer, use your general nursing knowledge but mention "The book doesn't cover this specifically, but..."
@@ -68,7 +72,7 @@ Key Instructions:
 - Be encouraging and supportive.
 - Use simple, clear language.
 - Format answers with Markdown (bold keywords, bullet points).
-- If the user asks about a specific topic, try to reference which section (page range) it might be from based on the headers provided.
+- If the user asks about a specific topic, try to reference which section it might be from based on the headers provided.
 
 User Stats:
 ${JSON.stringify(userContext)}
@@ -76,43 +80,44 @@ ${JSON.stringify(userContext)}
 --- BOOK CONTEXT STARTS ---
 ${bookContext}
 --- BOOK CONTEXT ENDS ---`
-        });
+        };
 
-        // 3. Format History
-        // Gemini expects: { role: 'user' | 'model', parts: [{ text: '...' }] }
-        // IMPORTANT: First message must be from 'user', not 'model'
-        const history = messages
-            .filter((m: any) => m.role !== 'assistant' || messages.indexOf(m) > 0) // Skip initial assistant greeting
+        // 4. Format message history (skip initial assistant greeting)
+        const formattedMessages = messages
+            .filter((m: any, index: number) => !(m.role === 'assistant' && index === 0))
             .map((m: any) => ({
-                role: m.role === 'user' ? 'user' : 'model',
-                parts: [{ text: m.content }]
+                role: m.role === 'user' ? 'user' as const : 'assistant' as const,
+                content: m.content
             }));
 
-        // Get the last user message
-        const lastMessage = history.length > 0 ? history[history.length - 1].parts[0].text : '';
-
-        // Remove last message from history (will be sent separately)
-        const chatHistory = history.slice(0, -1);
-
-        const chat = model.startChat({
-            history: chatHistory,
+        // 5. Create streaming response
+        const stream = await openai.chat.completions.create({
+            model: 'gpt-4-turbo-preview',
+            messages: [systemMessage, ...formattedMessages],
+            stream: true,
+            temperature: 0.7,
+            max_tokens: 2000,
         });
 
-        const result = await chat.sendMessageStream(lastMessage);
-
-        // 4. Stream Response
-        const stream = new ReadableStream({
+        // 6. Stream response to client
+        const encoder = new TextEncoder();
+        const readableStream = new ReadableStream({
             async start(controller) {
-                const encoder = new TextEncoder();
-                for await (const chunk of result.stream) {
-                    const text = chunk.text();
-                    controller.enqueue(encoder.encode(text));
+                try {
+                    for await (const chunk of stream) {
+                        const text = chunk.choices[0]?.delta?.content || '';
+                        if (text) {
+                            controller.enqueue(encoder.encode(text));
+                        }
+                    }
+                    controller.close();
+                } catch (error) {
+                    controller.error(error);
                 }
-                controller.close();
             }
         });
 
-        return new NextResponse(stream, {
+        return new NextResponse(readableStream, {
             headers: { 'Content-Type': 'text/plain; charset=utf-8' },
         });
 

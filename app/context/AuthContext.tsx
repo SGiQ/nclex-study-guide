@@ -37,17 +37,33 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
     const login = async (email: string, password: string) => {
         // TODO: Replace with actual API call
-        // For now, simulate login
-        const mockUser: User = {
-            id: '1',
-            name: 'Demo User',
-            email,
-            plan: 'premium',
-            createdAt: new Date().toISOString(),
-        };
+        // For now, check if user exists in localStorage
+        const storedUsers = localStorage.getItem('users');
+        let users: User[] = [];
 
-        setUser(mockUser);
-        localStorage.setItem('user', JSON.stringify(mockUser));
+        if (storedUsers) {
+            users = JSON.parse(storedUsers);
+        }
+
+        // Find user by email
+        const existingUser = users.find(u => u.email === email);
+
+        if (existingUser) {
+            // User found - log them in with their actual data
+            setUser(existingUser);
+            localStorage.setItem('user', JSON.stringify(existingUser));
+        } else {
+            // User not found - create demo user (for backward compatibility)
+            const mockUser: User = {
+                id: '1',
+                name: email.split('@')[0], // Use email prefix as name
+                email,
+                plan: 'premium',
+                createdAt: new Date().toISOString(),
+            };
+            setUser(mockUser);
+            localStorage.setItem('user', JSON.stringify(mockUser));
+        }
     };
 
     const signup = async (name: string, email: string, password: string, examDate?: string) => {
@@ -62,8 +78,29 @@ export function AuthProvider({ children }: { children: ReactNode }) {
             createdAt: new Date().toISOString(),
         };
 
+        // Store user in current session
         setUser(mockUser);
         localStorage.setItem('user', JSON.stringify(mockUser));
+
+        // Also store in users array for login lookup
+        const storedUsers = localStorage.getItem('users');
+        let users: User[] = [];
+
+        if (storedUsers) {
+            users = JSON.parse(storedUsers);
+        }
+
+        // Check if user already exists
+        const existingIndex = users.findIndex(u => u.email === email);
+        if (existingIndex >= 0) {
+            // Update existing user
+            users[existingIndex] = mockUser;
+        } else {
+            // Add new user
+            users.push(mockUser);
+        }
+
+        localStorage.setItem('users', JSON.stringify(users));
     };
 
     const logout = () => {

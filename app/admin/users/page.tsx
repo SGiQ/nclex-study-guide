@@ -1,9 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { useAuth } from '@/app/context/AuthContext';
-import { useProgress } from '@/app/context/ProgressContext';
-import { useRouter } from 'next/navigation';
+import Link from 'next/link';
 
 interface UserWithProgress {
     id: string;
@@ -17,23 +15,15 @@ interface UserWithProgress {
 }
 
 export default function AdminUsersPage() {
-    const { user } = useAuth();
-    const router = useRouter();
     const [users, setUsers] = useState<UserWithProgress[]>([]);
     const [searchTerm, setSearchTerm] = useState('');
     const [filterPlan, setFilterPlan] = useState<string>('all');
     const [sortBy, setSortBy] = useState<'name' | 'created' | 'plan' | 'active'>('created');
 
     useEffect(() => {
-        // Redirect if not logged in
-        if (!user) {
-            router.push('/landing');
-            return;
-        }
-
         // Load users from localStorage
         loadUsers();
-    }, [user, router]);
+    }, []);
 
     const loadUsers = () => {
         try {
@@ -116,9 +106,17 @@ export default function AdminUsersPage() {
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 p-6">
             <div className="max-w-7xl mx-auto">
                 {/* Header */}
-                <div className="mb-8">
-                    <h1 className="text-4xl font-bold text-white mb-2">User Management</h1>
-                    <p className="text-gray-400">View and manage all registered users</p>
+                <div className="mb-8 flex items-center gap-4">
+                    <Link
+                        href="/admin"
+                        className="h-10 w-10 grid place-items-center rounded-full bg-white/5 hover:bg-white/10 text-white transition-colors"
+                    >
+                        ←
+                    </Link>
+                    <div>
+                        <h1 className="text-4xl font-bold text-white mb-2">User Management</h1>
+                        <p className="text-gray-400">View and manage all registered users</p>
+                    </div>
                 </div>
 
                 {/* Summary Cards */}

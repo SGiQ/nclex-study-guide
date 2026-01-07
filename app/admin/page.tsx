@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 
 interface Episode {
@@ -10,13 +11,22 @@ interface Episode {
 }
 
 export default function AdminPage() {
+    const router = useRouter();
     const [episodes, setEpisodes] = useState<Episode[]>([]);
     const [uploading, setUploading] = useState<number | null>(null);
     const [message, setMessage] = useState<{ text: string, type: 'success' | 'error' } | null>(null);
+    const [isAuthenticated, setIsAuthenticated] = useState(false);
 
     useEffect(() => {
-        fetchEpisodes();
-    }, []);
+        // Check authentication
+        const auth = localStorage.getItem('adminAuth');
+        if (auth !== 'true') {
+            router.push('/admin/login');
+        } else {
+            setIsAuthenticated(true);
+            fetchEpisodes();
+        }
+    }, [router]);
 
     const fetchEpisodes = () => {
         fetch('/api/episodes')
@@ -41,7 +51,7 @@ export default function AdminPage() {
             if (!res.ok) throw new Error('Upload failed');
 
             setMessage({ text: `Episode ${episodeId} updated successfully!`, type: 'success' });
-            fetchEpisodes(); // Refresh list to see new status
+            fetchEpisodes();
         } catch (error) {
             console.error(error);
             setMessage({ text: 'Upload failed. Please try again.', type: 'error' });
@@ -50,108 +60,151 @@ export default function AdminPage() {
         }
     };
 
-    return (
-        <div className="min-h-screen bg-gray-900 text-white p-8">
-            <div className="max-w-2xl mx-auto">
-                <h1 className="text-3xl font-bold mb-8">Audio Admin Dashboard</h1>
+    const handleLogout = () => {
+        localStorage.removeItem('adminAuth');
+        router.push('/admin/login');
+    };
 
+    if (!isAuthenticated) {
+        return (
+            <div className="min-h-screen bg-gray-900 flex items-center justify-center">
+                <div className="text-white">Loading...</div>
+            </div>
+        );
+    }
+
+    return (
+        <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900/20 to-black text-white">
+            {/* Header */}
+            <header className="bg-black/30 backdrop-blur-xl border-b border-white/10 sticky top-0 z-50">
+                <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+                    <div className="flex items-center gap-4">
+                        <div className="h-10 w-10 rounded-xl bg-gradient-to-br from-purple-500 to-indigo-600 flex items-center justify-center shadow-lg shadow-purple-500/50">
+                            <span className="text-xl">🔐</span>
+                        </div>
+                        <div>
+                            <h1 className="text-xl font-bold">Admin Dashboard</h1>
+                            <p className="text-xs text-white/60">NCLEX Study Guide</p>
+                        </div>
+                    </div>
+                    <div className="flex items-center gap-4">
+                        <Link
+                            href="/dashboard"
+                            className="text-sm text-white/60 hover:text-white transition-colors"
+                        >
+                            View App →
+                        </Link>
+                        <button
+                            onClick={handleLogout}
+                            className="px-4 py-2 bg-red-500/20 hover:bg-red-500/30 text-red-400 rounded-lg text-sm font-medium transition-colors border border-red-500/30"
+                        >
+                            Logout
+                        </button>
+                    </div>
+                </div>
+            </header>
+
+            <main className="max-w-7xl mx-auto px-6 py-8">
                 {message && (
-                    <div className={`p-4 rounded-lg mb-6 ${message.type === 'success' ? 'bg-green-500/20 text-green-200' : 'bg-red-500/20 text-red-200'}`}>
+                    <div className={`p-4 rounded-xl mb-6 border ${message.type === 'success' ? 'bg-green-500/10 border-green-500/30 text-green-400' : 'bg-red-500/10 border-red-500/30 text-red-400'}`}>
                         {message.text}
                     </div>
                 )}
 
-                {/* New section for navigation links */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
-                    <Link
-                        href="/admin/quizzes"
-                        className="group flex flex-col items-center justify-center p-8 bg-[#16161C] rounded-3xl border border-white/5 hover:border-slate-500/50 hover:bg-[#1A1A22] transition-all"
-                    >
-                        <span className="text-4xl mb-4 group-hover:scale-110 transition-transform">📝</span>
-                        <h3 className="text-lg font-bold text-white group-hover:text-slate-400">Quizzes</h3>
-                        <p className="text-white/40 text-sm mt-2">Create & Edit</p>
-                    </Link>
+                {/* Admin Tools Grid */}
+                <div className="mb-12">
+                    <h2 className="text-2xl font-bold mb-6">Content Management</h2>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                        <Link
+                            href="/admin/quizzes"
+                            className="group flex flex-col items-center justify-center p-8 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 hover:border-purple-500/50 hover:bg-white/10 transition-all"
+                        >
+                            <span className="text-5xl mb-4 group-hover:scale-110 transition-transform">📝</span>
+                            <h3 className="text-lg font-bold text-white group-hover:text-purple-400 transition-colors">Quizzes</h3>
+                            <p className="text-white/40 text-sm mt-2">Create & Edit Questions</p>
+                        </Link>
 
-                    <Link
-                        href="/admin/flashcards"
-                        className="group flex flex-col items-center justify-center p-8 bg-[#16161C] rounded-3xl border border-white/5 hover:border-purple-500/50 hover:bg-[#1A1A22] transition-all"
-                    >
-                        <span className="text-4xl mb-4 group-hover:scale-110 transition-transform">🗂️</span>
-                        <h3 className="text-lg font-bold text-white group-hover:text-purple-400">Flashcards</h3>
-                        <p className="text-white/40 text-sm mt-2">Create & Edit</p>
-                    </Link>
+                        <Link
+                            href="/admin/flashcards"
+                            className="group flex flex-col items-center justify-center p-8 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 hover:border-indigo-500/50 hover:bg-white/10 transition-all"
+                        >
+                            <span className="text-5xl mb-4 group-hover:scale-110 transition-transform">🗂️</span>
+                            <h3 className="text-lg font-bold text-white group-hover:text-indigo-400 transition-colors">Flashcards</h3>
+                            <p className="text-white/40 text-sm mt-2">Manage Study Cards</p>
+                        </Link>
 
-                    <Link
-                        href="/admin/slides"
-                        className="group flex flex-col items-center justify-center p-8 bg-[#16161C] rounded-3xl border border-white/5 hover:border-emerald-500/50 hover:bg-[#1A1A22] transition-all"
-                    >
-                        <span className="text-4xl mb-4 group-hover:scale-110 transition-transform">📊</span>
-                        <h3 className="text-lg font-bold text-white group-hover:text-emerald-400">Slide Decks</h3>
-                        <p className="text-white/40 text-sm mt-2">Upload PDFs</p>
-                    </Link>
+                        <Link
+                            href="/admin/slides"
+                            className="group flex flex-col items-center justify-center p-8 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 hover:border-emerald-500/50 hover:bg-white/10 transition-all"
+                        >
+                            <span className="text-5xl mb-4 group-hover:scale-110 transition-transform">📊</span>
+                            <h3 className="text-lg font-bold text-white group-hover:text-emerald-400 transition-colors">Slide Decks</h3>
+                            <p className="text-white/40 text-sm mt-2">Upload PDF Presentations</p>
+                        </Link>
 
-                    <Link
-                        href="/admin"
-                        className="group flex flex-col items-center justify-center p-8 bg-[#16161C] rounded-3xl border border-white/5 hover:border-blue-500/50 hover:bg-[#1A1A22] transition-all"
-                    >
-                        <span className="text-4xl mb-4 group-hover:scale-110 transition-transform">🎧</span>
-                        <h3 className="text-lg font-bold text-white group-hover:text-blue-400">Audio Episodes</h3>
-                        <p className="text-white/40 text-sm mt-2">Manage MP3s</p>
-                    </Link>
+                        <Link
+                            href="/admin/infographics"
+                            className="group flex flex-col items-center justify-center p-8 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 hover:border-pink-500/50 hover:bg-white/10 transition-all"
+                        >
+                            <span className="text-5xl mb-4 group-hover:scale-110 transition-transform">🖼️</span>
+                            <h3 className="text-lg font-bold text-white group-hover:text-pink-400 transition-colors">Infographics</h3>
+                            <p className="text-white/40 text-sm mt-2">Upload Visual Charts</p>
+                        </Link>
 
-                    <Link
-                        href="/admin/infographics"
-                        className="group flex flex-col items-center justify-center p-8 bg-[#16161C] rounded-3xl border border-white/5 hover:border-pink-500/50 hover:bg-[#1A1A22] transition-all"
-                    >
-                        <span className="text-4xl mb-4 group-hover:scale-110 transition-transform">🖼️</span>
-                        <h3 className="text-lg font-bold text-white group-hover:text-pink-400">Infographics</h3>
-                        <p className="text-white/40 text-sm mt-2">Upload Charts</p>
-                    </Link>
+                        <Link
+                            href="/admin/mindmaps"
+                            className="group flex flex-col items-center justify-center p-8 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 hover:border-cyan-500/50 hover:bg-white/10 transition-all"
+                        >
+                            <span className="text-5xl mb-4 group-hover:scale-110 transition-transform">🧠</span>
+                            <h3 className="text-lg font-bold text-white group-hover:text-cyan-400 transition-colors">Mind Maps</h3>
+                            <p className="text-white/40 text-sm mt-2">Upload Concept Maps</p>
+                        </Link>
 
-                    <Link
-                        href="/admin/mindmaps"
-                        className="group flex flex-col items-center justify-center p-8 bg-[#16161C] rounded-3xl border border-white/5 hover:border-purple-500/50 hover:bg-[#1A1A22] transition-all"
-                    >
-                        <span className="text-4xl mb-4 group-hover:scale-110 transition-transform">🧠</span>
-                        <h3 className="text-lg font-bold text-white group-hover:text-purple-400">Mind Maps</h3>
-                        <p className="text-white/40 text-sm mt-2">Upload PNGs</p>
-                    </Link>
+                        <div className="group flex flex-col items-center justify-center p-8 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 hover:border-blue-500/50 hover:bg-white/10 transition-all">
+                            <span className="text-5xl mb-4 group-hover:scale-110 transition-transform">🎧</span>
+                            <h3 className="text-lg font-bold text-white group-hover:text-blue-400 transition-colors">Audio Episodes</h3>
+                            <p className="text-white/40 text-sm mt-2">Manage Below ↓</p>
+                        </div>
+                    </div>
                 </div>
 
-                <h2 className="text-2xl font-bold mb-6">Manage Audio Episodes</h2>
-                <div className="space-y-4">
-                    {episodes.map((episode) => (
-                        <div key={episode.id} className="bg-gray-800 p-4 rounded-xl flex items-center justify-between">
-                            <div>
-                                <h3 className="font-semibold text-lg">{episode.title}</h3>
-                                <div className="flex items-center gap-2 mt-1">
-                                    <span className={`text-xs px-2 py-0.5 rounded ${episode.audioUrl && !episode.audioUrl.startsWith('http') ? 'bg-green-500/20 text-green-300' : 'bg-yellow-500/20 text-yellow-300'}`}>
-                                        {episode.audioUrl && !episode.audioUrl.startsWith('http') ? '✅ Local Audio' : '⚠️ Missing / Remote'}
-                                    </span>
-                                    <span className="text-xs text-gray-500">ID: {episode.id}</span>
+                {/* Audio Episodes Section */}
+                <div>
+                    <h2 className="text-2xl font-bold mb-6">Audio Episodes Manager</h2>
+                    <div className="space-y-3">
+                        {episodes.map((episode) => (
+                            <div key={episode.id} className="bg-white/5 backdrop-blur-sm border border-white/10 p-5 rounded-xl flex items-center justify-between hover:bg-white/10 transition-all">
+                                <div>
+                                    <h3 className="font-semibold text-lg">{episode.title}</h3>
+                                    <div className="flex items-center gap-2 mt-1">
+                                        <span className={`text-xs px-2 py-1 rounded-md font-medium ${episode.audioUrl && !episode.audioUrl.startsWith('http') ? 'bg-green-500/20 text-green-300 border border-green-500/30' : 'bg-yellow-500/20 text-yellow-300 border border-yellow-500/30'}`}>
+                                            {episode.audioUrl && !episode.audioUrl.startsWith('http') ? '✅ Local Audio' : '⚠️ Missing / Remote'}
+                                        </span>
+                                        <span className="text-xs text-white/40">Episode {episode.id}</span>
+                                    </div>
+                                </div>
+
+                                <div className="flex items-center gap-4">
+                                    <label className={`cursor-pointer px-5 py-2.5 rounded-lg text-sm font-semibold transition-all ${uploading === episode.id ? 'bg-white/10 text-white/40 cursor-not-allowed' : 'bg-blue-600 hover:bg-blue-500 text-white shadow-lg shadow-blue-500/30'}`}>
+                                        {uploading === episode.id ? 'Uploading...' : 'Upload MP3'}
+                                        <input
+                                            type="file"
+                                            accept="audio/*"
+                                            className="hidden"
+                                            disabled={uploading === episode.id}
+                                            onChange={(e) => {
+                                                if (e.target.files?.[0]) {
+                                                    handleUpload(episode.id, e.target.files[0]);
+                                                }
+                                            }}
+                                        />
+                                    </label>
                                 </div>
                             </div>
-
-                            <div className="flex items-center gap-4">
-                                <label className={`cursor-pointer px-4 py-2 rounded-lg text-sm font-medium transition-colors ${uploading === episode.id ? 'bg-gray-700 text-gray-400' : 'bg-blue-600 hover:bg-blue-500 text-white'}`}>
-                                    {uploading === episode.id ? 'Uploading...' : 'Upload MP3'}
-                                    <input
-                                        type="file"
-                                        accept="audio/*"
-                                        className="hidden"
-                                        disabled={uploading === episode.id}
-                                        onChange={(e) => {
-                                            if (e.target.files?.[0]) {
-                                                handleUpload(episode.id, e.target.files[0]);
-                                            }
-                                        }}
-                                    />
-                                </label>
-                            </div>
-                        </div>
-                    ))}
+                        ))}
+                    </div>
                 </div>
-            </div>
+            </main>
         </div>
     );
 }

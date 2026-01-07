@@ -12,6 +12,7 @@ import { ProgressProvider } from './context/ProgressContext';
 import { ThemeProvider } from "./context/ThemeContext";
 import { StreakProvider } from '@/app/context/StreakContext';
 import { LibraryProvider } from '@/app/context/LibraryContext';
+import { AuthProvider } from '@/app/context/AuthContext';
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -45,21 +46,23 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <ThemeProvider>
-          <StreakProvider>
-            <PlayerProvider>
-              <NotesProvider>
-                <LibraryProvider>
-                  <ProgressProvider>
-                    {children}
-                    <Player />
-                    <TutorChat />
-                    <NotesOverlay />
-                    <GlobalNavigation />
-                  </ProgressProvider>
-                </LibraryProvider>
-              </NotesProvider>
-            </PlayerProvider>
-          </StreakProvider>
+          <AuthProvider>
+            <StreakProvider>
+              <PlayerProvider>
+                <NotesProvider>
+                  <LibraryProvider>
+                    <ProgressProvider>
+                      {children}
+                      <Player />
+                      <TutorChat />
+                      <NotesOverlay />
+                      <GlobalNavigation />
+                    </ProgressProvider>
+                  </LibraryProvider>
+                </NotesProvider>
+              </PlayerProvider>
+            </StreakProvider>
+          </AuthProvider>
         </ThemeProvider>
       </body>
     </html>

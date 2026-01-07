@@ -11,7 +11,7 @@ interface Question {
     correctAnswer: number;
     explanation: string;
     category: string;
-    episodeId: number;
+    episodeId?: number;
 }
 
 interface ExamState {
@@ -260,14 +260,14 @@ export default function ExamPage() {
                                     key={idx}
                                     onClick={() => selectAnswer(idx)}
                                     className={`w-full text-left p-4 rounded-xl border-2 transition-all ${selectedAnswer === idx
-                                            ? 'border-indigo-500 bg-indigo-500/10'
-                                            : 'border-card-border bg-card hover:border-indigo-500/50'
+                                        ? 'border-indigo-500 bg-indigo-500/10'
+                                        : 'border-card-border bg-card hover:border-indigo-500/50'
                                         }`}
                                 >
                                     <div className="flex items-start gap-3">
                                         <div className={`flex-shrink-0 h-6 w-6 rounded-full border-2 flex items-center justify-center ${selectedAnswer === idx
-                                                ? 'border-indigo-500 bg-indigo-500'
-                                                : 'border-foreground/30'
+                                            ? 'border-indigo-500 bg-indigo-500'
+                                            : 'border-foreground/30'
                                             }`}>
                                             {selectedAnswer === idx && <div className="h-2 w-2 rounded-full bg-white" />}
                                         </div>
@@ -287,8 +287,8 @@ export default function ExamPage() {
                         <button
                             onClick={toggleMark}
                             className={`px-4 py-2 rounded-lg font-semibold transition-colors ${isMarked
-                                    ? 'bg-yellow-500/20 text-yellow-400 border border-yellow-500/30'
-                                    : 'bg-surface/10 hover:bg-surface/20'
+                                ? 'bg-yellow-500/20 text-yellow-400 border border-yellow-500/30'
+                                : 'bg-surface/10 hover:bg-surface/20'
                                 }`}
                         >
                             {isMarked ? '★ Marked' : '☆ Mark'}

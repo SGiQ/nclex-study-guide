@@ -149,6 +149,14 @@ export default function AdminPage() {
                             <p className="text-white/40 text-sm mt-2">View & Manage Users</p>
                         </Link>
                         <Link
+                            href="/admin/view-database"
+                            className="group flex flex-col items-center justify-center p-8 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 hover:border-green-500/50 hover:bg-white/10 transition-all"
+                        >
+                            <span className="text-5xl mb-4 group-hover:scale-110 transition-transform">🗄️</span>
+                            <h3 className="text-lg font-bold text-white group-hover:text-green-400 transition-colors">View Database</h3>
+                            <p className="text-white/40 text-sm mt-2">Browse Uploaded Content</p>
+                        </Link>
+                        <Link
                             href="/admin/upload-docx"
                             className="group flex flex-col items-center justify-center p-8 bg-gradient-to-br from-purple-500/10 to-indigo-500/10 backdrop-blur-sm rounded-2xl border-2 border-purple-500/30 hover:border-purple-500/60 hover:bg-purple-500/20 transition-all shadow-lg shadow-purple-500/20"
                         >

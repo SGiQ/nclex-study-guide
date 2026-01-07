@@ -1,32 +1,33 @@
 'use client';
 
-import { useAuth } from '@/app/context/AuthContext';
-import { useRouter } from 'next/navigation';
 import { useEffect } from 'react';
+import { useRouter } from 'next/navigation';
+import { useAuth } from '@/app/context/AuthContext';
+import { useOnboarding } from '@/app/context/OnboardingContext';
 
-export default function Page() {
-  const { user, isLoading } = useAuth();
+export default function Home() {
   const router = useRouter();
+  const { user } = useAuth();
+  const { preferences } = useOnboarding();
 
   useEffect(() => {
-    if (!isLoading) {
-      if (user) {
-        router.push('/dashboard');
+    // If user is logged in
+    if (user) {
+      // Check if they've completed onboarding
+      if (!preferences.hasCompletedOnboarding) {
+        router.push('/onboarding');
       } else {
-        router.push('/landing');
+        router.push('/dashboard');
       }
+    } else {
+      // Not logged in, go to landing
+      router.push('/landing');
     }
-  }, [user, isLoading, router]);
+  }, [user, preferences.hasCompletedOnboarding, router]);
 
-  // Show loading state
   return (
     <div className="min-h-screen bg-background flex items-center justify-center">
-      <div className="text-center">
-        <div className="h-12 w-12 mx-auto mb-4 rounded-lg bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center font-bold text-2xl">
-          N
-        </div>
-        <div className="text-foreground/60">Loading...</div>
-      </div>
+      <div className="text-foreground/60">Loading...</div>
     </div>
   );
 }

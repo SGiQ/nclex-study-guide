@@ -14,6 +14,8 @@ import { StreakProvider } from '@/app/context/StreakContext';
 import { LibraryProvider } from '@/app/context/LibraryContext';
 import { AuthProvider } from '@/app/context/AuthContext';
 import { SRSProvider } from '@/app/context/SRSContext';
+import { OnboardingProvider } from '@/app/context/OnboardingContext';
+import QuickActionsFAB from '@/app/components/QuickActionsFAB';
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -49,21 +51,24 @@ export default function RootLayout({
         <ThemeProvider>
           <AuthProvider>
             <SRSProvider>
-              <StreakProvider>
-                <PlayerProvider>
-                  <NotesProvider>
-                    <LibraryProvider>
-                      <ProgressProvider>
-                        {children}
-                        <Player />
-                        <TutorChat />
-                        <NotesOverlay />
-                        <GlobalNavigation />
-                      </ProgressProvider>
-                    </LibraryProvider>
-                  </NotesProvider>
-                </PlayerProvider>
-              </StreakProvider>
+              <OnboardingProvider>
+                <StreakProvider>
+                  <LibraryProvider>
+                    <PlayerProvider>
+                      <NotesProvider>
+                        <ProgressProvider>
+                          {children}
+                          <Player />
+                          <TutorChat />
+                          <NotesOverlay />
+                          <GlobalNavigation />
+                          <QuickActionsFAB />
+                        </ProgressProvider>
+                      </NotesProvider>
+                    </PlayerProvider>
+                  </LibraryProvider>
+                </StreakProvider>
+              </OnboardingProvider>
             </SRSProvider>
           </AuthProvider>
         </ThemeProvider>

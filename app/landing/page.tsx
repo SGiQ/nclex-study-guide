@@ -520,14 +520,12 @@ export default function LandingPage() {
                             <div>
                                 <label className="block text-sm font-medium mb-2">
                                     Promo Code (Optional)
-                                    <span className="text-xs text-indigo-400 ml-2">Get lifetime free access!</span>
                                 </label>
                                 <input
                                     type="text"
                                     value={signupCoupon}
                                     onChange={(e) => setSignupCoupon(e.target.value)}
                                     className="w-full px-4 py-3 rounded-lg bg-white/5 border border-white/10 focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 outline-none uppercase"
-                                    placeholder="TANNEKU"
                                 />
                                 {signupCoupon && validCoupons[signupCoupon.toUpperCase() as keyof typeof validCoupons] && (
                                     <p className="text-xs text-green-400 mt-1">✓ Valid promo code! You'll get lifetime free access</p>

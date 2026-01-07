@@ -9,21 +9,31 @@ export default function AdminLoginPage() {
     const [error, setError] = useState('');
     const [isLoading, setIsLoading] = useState(false);
 
-    // Admin password (in production, this should be server-side with proper auth)
-    const ADMIN_PASSWORD = 'NCLEX2026';
-
-    const handleLogin = (e: React.FormEvent) => {
+    const handleLogin = async (e: React.FormEvent) => {
         e.preventDefault();
         setError('');
         setIsLoading(true);
 
-        // Simple password check
-        if (password === ADMIN_PASSWORD) {
-            // Store admin session
-            localStorage.setItem('adminAuth', 'true');
-            router.push('/admin');
-        } else {
-            setError('Invalid password');
+        try {
+            // Call server-side authentication API
+            const response = await fetch('/api/admin/auth', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ password })
+            });
+
+            const data = await response.json();
+
+            if (data.success && data.token) {
+                // Store auth token securely
+                localStorage.setItem('adminToken', data.token);
+                router.push('/admin');
+            } else {
+                setError(data.error || 'Invalid password');
+            }
+        } catch (err) {
+            setError('Authentication failed. Please try again.');
+        } finally {
             setIsLoading(false);
         }
     };

@@ -18,14 +18,39 @@ export default function AdminPage() {
     const [isAuthenticated, setIsAuthenticated] = useState(false);
 
     useEffect(() => {
-        // Check authentication
-        const auth = localStorage.getItem('adminAuth');
-        if (auth !== 'true') {
-            router.push('/admin/login');
-        } else {
-            setIsAuthenticated(true);
-            fetchEpisodes();
-        }
+        // Check authentication with server
+        const verifyAuth = async () => {
+            const token = localStorage.getItem('adminToken');
+
+            if (!token) {
+                router.push('/admin/login');
+                return;
+            }
+
+            try {
+                const response = await fetch('/api/admin/auth', {
+                    method: 'GET',
+                    headers: {
+                        'Authorization': `Bearer ${token}`
+                    }
+                });
+
+                const data = await response.json();
+
+                if (data.authenticated) {
+                    setIsAuthenticated(true);
+                    fetchEpisodes();
+                } else {
+                    localStorage.removeItem('adminToken');
+                    router.push('/admin/login');
+                }
+            } catch (error) {
+                localStorage.removeItem('adminToken');
+                router.push('/admin/login');
+            }
+        };
+
+        verifyAuth();
     }, [router]);
 
     const fetchEpisodes = () => {
@@ -61,7 +86,7 @@ export default function AdminPage() {
     };
 
     const handleLogout = () => {
-        localStorage.removeItem('adminAuth');
+        localStorage.removeItem('adminToken');
         router.push('/admin/login');
     };
 

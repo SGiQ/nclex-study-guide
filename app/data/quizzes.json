@@ -1733,8 +1733,8 @@
         "id": 7,
         "episodeId": 8,
         "title": "Pharmacological Therapies Part 1",
-        "description": "Principles, CV, Resp, Endocrine Pharmacology",
-        "questionCount": 5,
+        "description": "Medication Administration, CV, Respiratory, Endocrine, Neuro Drugs",
+        "questionCount": 40,
         "color": "from-blue-600 to-cyan-800",
         "questions": [
             {
@@ -1747,7 +1747,475 @@
                     "Constipation"
                 ],
                 "correctAnswer": 1,
-                "explanation": "Headache is a common side effect due to the vasodilation effects of Nitroglycerin."
+                "explanation": "Headache is a common side effect due to vasodilation. Nitroglycerin causes hypotension and tachycardia, not hypertension or bradycardia."
+            },
+            {
+                "id": 2,
+                "text": "A client is taking warfarin (Coumadin). Which lab value should the nurse monitor?",
+                "options": [
+                    "PT/INR",
+                    "aPTT",
+                    "Platelet count",
+                    "Hemoglobin"
+                ],
+                "correctAnswer": 0,
+                "explanation": "PT/INR monitors warfarin effectiveness. Therapeutic INR is typically 2-3. aPTT monitors heparin."
+            },
+            {
+                "id": 3,
+                "text": "Which medication requires checking apical pulse before administration?",
+                "options": [
+                    "Furosemide",
+                    "Digoxin",
+                    "Lisinopril",
+                    "Aspirin"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Check apical pulse before digoxin. Hold if pulse <60 bpm (adult) due to risk of bradycardia and heart block."
+            },
+            {
+                "id": 4,
+                "text": "A client taking furosemide (Lasix) should be monitored for:",
+                "options": [
+                    "Hyperkalemia",
+                    "Hypokalemia",
+                    "Hypernatremia",
+                    "Hypercalcemia"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Furosemide is a loop diuretic that causes potassium loss. Monitor for hypokalemia; encourage potassium-rich foods or supplements."
+            },
+            {
+                "id": 5,
+                "text": "Which drug suffix indicates a beta blocker?",
+                "options": [
+                    "-pril",
+                    "-lol",
+                    "-statin",
+                    "-dipine"
+                ],
+                "correctAnswer": 1,
+                "explanation": "-lol = beta blockers (metoprolol, atenolol). -pril = ACE inhibitors, -statin = cholesterol drugs, -dipine = calcium channel blockers."
+            },
+            {
+                "id": 6,
+                "text": "A client on lisinopril (ACE inhibitor) develops a dry cough. What should the nurse do?",
+                "options": [
+                    "Encourage cough suppressants",
+                    "Notify the provider",
+                    "Increase fluid intake",
+                    "Ignore it as normal"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Dry cough is a common side effect of ACE inhibitors. Notify provider; client may need to switch to an ARB (angiotensin receptor blocker)."
+            },
+            {
+                "id": 7,
+                "text": "What are the 'Five Rights' of medication administration?",
+                "options": [
+                    "Right patient, drug, dose, route, time",
+                    "Right patient, drug, doctor, route, time",
+                    "Right patient, drug, dose, room, time",
+                    "Right patient, drug, dose, route, documentation"
+                ],
+                "correctAnswer": 0,
+                "explanation": "Five Rights: Right patient, drug, dose, route, and time. Some add: right documentation, right reason, right to refuse."
+            },
+            {
+                "id": 8,
+                "text": "A client is prescribed albuterol inhaler. What is the primary action?",
+                "options": [
+                    "Reduces inflammation",
+                    "Bronchodilation",
+                    "Suppresses cough",
+                    "Thins mucus"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Albuterol is a beta-2 agonist bronchodilator for quick relief of bronchospasm. Corticosteroids reduce inflammation."
+            },
+            {
+                "id": 9,
+                "text": "Which insulin has the fastest onset?",
+                "options": [
+                    "NPH",
+                    "Regular",
+                    "Lispro (Humalog)",
+                    "Glargine (Lantus)"
+                ],
+                "correctAnswer": 2,
+                "explanation": "Rapid-acting insulins (lispro, aspart) have onset in 10-15 minutes. Give immediately before meals. Regular onset is 30-60 min."
+            },
+            {
+                "id": 10,
+                "text": "A client taking levothyroxine (Synthroid) for hypothyroidism should take it:",
+                "options": [
+                    "With meals",
+                    "At bedtime",
+                    "On an empty stomach in the morning",
+                    "With calcium supplements"
+                ],
+                "correctAnswer": 2,
+                "explanation": "Take levothyroxine on empty stomach 30-60 minutes before breakfast for best absorption. Avoid taking with calcium or iron."
+            },
+            {
+                "id": 11,
+                "text": "Which is a sign of digoxin toxicity?",
+                "options": [
+                    "Tachycardia",
+                    "Visual disturbances (yellow-green halos)",
+                    "Hypertension",
+                    "Increased appetite"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Digoxin toxicity signs: visual changes (halos), nausea, bradycardia, arrhythmias. Therapeutic level: 0.5-2 ng/mL."
+            },
+            {
+                "id": 12,
+                "text": "A client is prescribed metoprolol (beta blocker). Which condition is a contraindication?",
+                "options": [
+                    "Hypertension",
+                    "Asthma",
+                    "Angina",
+                    "Tachycardia"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Beta blockers can cause bronchoconstriction and are contraindicated in asthma/COPD. Also avoid in heart block and bradycardia."
+            },
+            {
+                "id": 13,
+                "text": "Which medication should be given with food to reduce GI upset?",
+                "options": [
+                    "Levothyroxine",
+                    "Ibuprofen",
+                    "Alendronate",
+                    "Captopril"
+                ],
+                "correctAnswer": 1,
+                "explanation": "NSAIDs like ibuprofen should be taken with food to reduce GI irritation and ulcer risk."
+            },
+            {
+                "id": 14,
+                "text": "A client using an inhaled corticosteroid should:",
+                "options": [
+                    "Use it for acute asthma attacks",
+                    "Rinse mouth after use",
+                    "Use it before the bronchodilator",
+                    "Take it only when wheezing"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Rinse mouth after inhaled corticosteroids to prevent oral thrush. Use bronchodilator first, then corticosteroid. Not for acute attacks."
+            },
+            {
+                "id": 15,
+                "text": "What is the antidote for heparin overdose?",
+                "options": [
+                    "Vitamin K",
+                    "Protamine sulfate",
+                    "Naloxone",
+                    "Flumazenil"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Protamine sulfate reverses heparin. Vitamin K reverses warfarin. Naloxone reverses opioids. Flumazenil reverses benzodiazepines."
+            },
+            {
+                "id": 16,
+                "text": "A client is prescribed NPH insulin. When is the peak action?",
+                "options": [
+                    "1-2 hours",
+                    "4-12 hours",
+                    "15-30 minutes",
+                    "No peak (flat)"
+                ],
+                "correctAnswer": 1,
+                "explanation": "NPH (intermediate-acting) peaks at 4-12 hours. Monitor for hypoglycemia during peak. Glargine/detemir have no peak."
+            },
+            {
+                "id": 17,
+                "text": "Which lab value indicates therapeutic effect of warfarin?",
+                "options": [
+                    "INR 0.8-1.2",
+                    "INR 2-3",
+                    "aPTT 60-80 seconds",
+                    "Platelet count 150,000-400,000"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Therapeutic INR for warfarin is 2-3 (may be 2.5-3.5 for mechanical heart valves). INR 0.8-1.2 is normal/subtherapeutic."
+            },
+            {
+                "id": 18,
+                "text": "A client taking amlodipine (calcium channel blocker) should avoid:",
+                "options": [
+                    "Grapefruit juice",
+                    "Orange juice",
+                    "Milk",
+                    "Water"
+                ],
+                "correctAnswer": 0,
+                "explanation": "Grapefruit juice increases calcium channel blocker levels, causing excessive hypotension. Avoid grapefruit with many medications."
+            },
+            {
+                "id": 19,
+                "text": "Which route has the fastest absorption?",
+                "options": [
+                    "Oral",
+                    "Subcutaneous",
+                    "Intramuscular",
+                    "Intravenous"
+                ],
+                "correctAnswer": 3,
+                "explanation": "IV has immediate onset (fastest). Then: IM, SubQ, oral (slowest). Sublingual and inhalation are also rapid."
+            },
+            {
+                "id": 20,
+                "text": "A client is prescribed prednisone (corticosteroid). Which side effect should the nurse monitor?",
+                "options": [
+                    "Hypoglycemia",
+                    "Hyperglycemia",
+                    "Hypotension",
+                    "Bradycardia"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Corticosteroids cause hyperglycemia, hypertension, weight gain, immunosuppression, and osteoporosis with long-term use."
+            },
+            {
+                "id": 21,
+                "text": "Which medication requires a peak and trough level?",
+                "options": [
+                    "Acetaminophen",
+                    "Gentamicin (aminoglycoside)",
+                    "Aspirin",
+                    "Ibuprofen"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Aminoglycosides (gentamicin, tobramycin) require peak/trough monitoring due to narrow therapeutic window and nephrotoxicity/ototoxicity risk."
+            },
+            {
+                "id": 22,
+                "text": "A client is prescribed metformin for diabetes. What is a serious side effect?",
+                "options": [
+                    "Hypoglycemia",
+                    "Lactic acidosis",
+                    "Hypertension",
+                    "Constipation"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Lactic acidosis is a rare but serious side effect of metformin. Hold before contrast dye procedures. Metformin alone doesn't cause hypoglycemia."
+            },
+            {
+                "id": 23,
+                "text": "Which drug class ends in '-pril'?",
+                "options": [
+                    "Beta blockers",
+                    "ACE inhibitors",
+                    "Calcium channel blockers",
+                    "Diuretics"
+                ],
+                "correctAnswer": 1,
+                "explanation": "-pril = ACE inhibitors (lisinopril, enalapril). Monitor for dry cough, hyperkalemia, and angioedema."
+            },
+            {
+                "id": 24,
+                "text": "A client is prescribed spironolactone (Aldactone). The nurse should monitor for:",
+                "options": [
+                    "Hypokalemia",
+                    "Hyperkalemia",
+                    "Hypocalcemia",
+                    "Hyponatremia"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Spironolactone is a potassium-sparing diuretic. Monitor for hyperkalemia. Avoid potassium supplements and salt substitutes."
+            },
+            {
+                "id": 25,
+                "text": "What is the antidote for warfarin overdose?",
+                "options": [
+                    "Protamine sulfate",
+                    "Vitamin K",
+                    "Naloxone",
+                    "Activated charcoal"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Vitamin K (phytonadione) reverses warfarin. IV for severe bleeding, PO for minor. Protamine reverses heparin."
+            },
+            {
+                "id": 26,
+                "text": "A client is prescribed phenytoin (Dilantin) for seizures. Which side effect is common?",
+                "options": [
+                    "Hair loss",
+                    "Gingival hyperplasia",
+                    "Weight loss",
+                    "Hypotension"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Phenytoin causes gingival hyperplasia (gum overgrowth). Encourage good oral hygiene. Also causes hirsutism and ataxia."
+            },
+            {
+                "id": 27,
+                "text": "Which insulin is long-acting with no peak?",
+                "options": [
+                    "Regular",
+                    "NPH",
+                    "Lispro",
+                    "Glargine (Lantus)"
+                ],
+                "correctAnswer": 3,
+                "explanation": "Glargine and detemir are long-acting (24 hours) with no peak. Provide basal coverage. Cannot be mixed with other insulins."
+            },
+            {
+                "id": 28,
+                "text": "A client taking hydrochlorothiazide (HCTZ) should increase intake of:",
+                "options": [
+                    "Sodium",
+                    "Potassium",
+                    "Calcium",
+                    "Protein"
+                ],
+                "correctAnswer": 1,
+                "explanation": "HCTZ is a thiazide diuretic causing potassium loss. Encourage potassium-rich foods (bananas, oranges, potatoes)."
+            },
+            {
+                "id": 29,
+                "text": "Which medication should NOT be crushed?",
+                "options": [
+                    "Immediate-release tablets",
+                    "Enteric-coated tablets",
+                    "Scored tablets",
+                    "Chewable tablets"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Never crush enteric-coated or sustained-release medications. Crushing destroys the coating and alters absorption."
+            },
+            {
+                "id": 30,
+                "text": "A client is prescribed nitroglycerin sublingual. How should it be taken?",
+                "options": [
+                    "Swallow with water",
+                    "Place under tongue",
+                    "Chew thoroughly",
+                    "Take with food"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Sublingual nitroglycerin dissolves under tongue for rapid absorption. Can repeat every 5 minutes x3. Call 911 if pain persists."
+            },
+            {
+                "id": 31,
+                "text": "Which adverse effect is associated with ACE inhibitors?",
+                "options": [
+                    "Hyperkalemia",
+                    "Hypokalemia",
+                    "Hypernatremia",
+                    "Hypocalcemia"
+                ],
+                "correctAnswer": 0,
+                "explanation": "ACE inhibitors can cause hyperkalemia by reducing aldosterone. Also cause dry cough and angioedema (rare but serious)."
+            },
+            {
+                "id": 32,
+                "text": "A client is prescribed albuterol and fluticasone inhalers. Which should be used first?",
+                "options": [
+                    "Fluticasone (corticosteroid)",
+                    "Albuterol (bronchodilator)",
+                    "Either one",
+                    "Take them together"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Use bronchodilator first to open airways, then corticosteroid for better penetration. Wait 1-2 minutes between inhalers."
+            },
+            {
+                "id": 33,
+                "text": "Which medication requires monitoring of liver function tests?",
+                "options": [
+                    "Acetaminophen (chronic use)",
+                    "Aspirin",
+                    "Ibuprofen",
+                    "Morphine"
+                ],
+                "correctAnswer": 0,
+                "explanation": "Acetaminophen is hepatotoxic in high doses or chronic use. Monitor LFTs. Maximum dose: 4g/day (3g/day for elderly or liver disease)."
+            },
+            {
+                "id": 34,
+                "text": "A client is prescribed enoxaparin (Lovenox). What is the route of administration?",
+                "options": [
+                    "Oral",
+                    "Intramuscular",
+                    "Subcutaneous",
+                    "Intravenous"
+                ],
+                "correctAnswer": 2,
+                "explanation": "Enoxaparin (low molecular weight heparin) is given subcutaneously. Do not aspirate or massage injection site. Rotate sites."
+            },
+            {
+                "id": 35,
+                "text": "Which statement indicates a client understands insulin teaching?",
+                "options": [
+                    "I'll store insulin in the freezer.",
+                    "I'll rotate injection sites.",
+                    "I'll reuse needles to save money.",
+                    "I'll skip doses if I'm not eating."
+                ],
+                "correctAnswer": 1,
+                "explanation": "Rotate injection sites to prevent lipodystrophy. Don't freeze insulin. Use new needles. Don't skip long-acting insulin even if not eating."
+            },
+            {
+                "id": 36,
+                "text": "A client taking atorvastatin (statin) reports muscle pain. What should the nurse do?",
+                "options": [
+                    "Encourage exercise",
+                    "Notify the provider",
+                    "Give pain medication",
+                    "Ignore it as normal"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Muscle pain may indicate rhabdomyolysis (rare but serious). Notify provider. Monitor CK levels. May need to discontinue statin."
+            },
+            {
+                "id": 37,
+                "text": "Which medication should be taken 30 minutes before breakfast?",
+                "options": [
+                    "Alendronate (Fosamax)",
+                    "Metformin",
+                    "Digoxin",
+                    "Furosemide"
+                ],
+                "correctAnswer": 0,
+                "explanation": "Alendronate (bisphosphonate) taken 30-60 min before breakfast with full glass of water. Remain upright 30 min to prevent esophageal irritation."
+            },
+            {
+                "id": 38,
+                "text": "A client is prescribed morphine. Which vital sign is priority to monitor?",
+                "options": [
+                    "Blood pressure",
+                    "Temperature",
+                    "Respiratory rate",
+                    "Heart rate"
+                ],
+                "correctAnswer": 2,
+                "explanation": "Opioids cause respiratory depression. Monitor respiratory rate; hold if <12/min. Have naloxone (Narcan) available for overdose."
+            },
+            {
+                "id": 39,
+                "text": "Which drug class ends in '-dipine'?",
+                "options": [
+                    "Beta blockers",
+                    "ACE inhibitors",
+                    "Calcium channel blockers",
+                    "Diuretics"
+                ],
+                "correctAnswer": 2,
+                "explanation": "-dipine = calcium channel blockers (amlodipine, nifedipine). Cause vasodilation, reduce BP. Monitor for peripheral edema, headache."
+            },
+            {
+                "id": 40,
+                "text": "A client is prescribed regular insulin and NPH insulin. Which should be drawn up first?",
+                "options": [
+                    "NPH (cloudy)",
+                    "Regular (clear)",
+                    "Either one",
+                    "They cannot be mixed"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Draw up clear (regular) before cloudy (NPH). Mnemonic: 'Clear before cloudy' or 'RN' (Regular before NPH)."
             }
         ]
     },

@@ -3692,22 +3692,430 @@
     {
         "id": 11,
         "episodeId": 12,
-        "title": "Physiological Adaptation Part 3",
-        "description": "Immuno, Heme, GI Patho",
-        "questionCount": 5,
+        "title": "Immunology, Hematology & GI",
+        "description": "HIV/AIDS, Anemia, Transfusions, Ulcers, IBD, Liver Disease",
+        "questionCount": 35,
         "color": "from-amber-600 to-orange-900",
         "questions": [
             {
                 "id": 1,
-                "text": "Placeholder for GI Patho",
+                "text": "A client with iron-deficiency anemia should increase intake of:",
                 "options": [
-                    "Option 1",
-                    "Option 2",
-                    "Option 3",
-                    "Option 4"
+                    "Dairy products",
+                    "Red meat and dark leafy greens",
+                    "White bread",
+                    "Citrus fruits only"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Iron-rich foods: red meat, dark leafy greens, beans. Take with vitamin C (citrus) to enhance absorption. Avoid taking with calcium/dairy."
+            },
+            {
+                "id": 2,
+                "text": "A client is receiving a blood transfusion and develops fever, chills, and back pain. What should the nurse do first?",
+                "options": [
+                    "Slow the transfusion rate",
+                    "Stop the transfusion immediately",
+                    "Give acetaminophen",
+                    "Continue and monitor"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Fever, chills, back pain indicate transfusion reaction. Stop transfusion immediately, keep IV open with NS, notify provider, monitor vitals, save blood bag."
+            },
+            {
+                "id": 3,
+                "text": "A client with peptic ulcer disease should avoid:",
+                "options": [
+                    "Milk",
+                    "NSAIDs and alcohol",
+                    "Bland foods",
+                    "Water"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Avoid NSAIDs (cause ulcers), alcohol, caffeine, spicy foods. Milk provides temporary relief but increases acid production later."
+            },
+            {
+                "id": 4,
+                "text": "Which lab value indicates pernicious anemia?",
+                "options": [
+                    "Low B12",
+                    "Low iron",
+                    "High platelets",
+                    "Low calcium"
                 ],
                 "correctAnswer": 0,
-                "explanation": "Pending content."
+                "explanation": "Pernicious anemia: B12 deficiency due to lack of intrinsic factor. Causes neurological symptoms. Treat with B12 injections."
+            },
+            {
+                "id": 5,
+                "text": "A client with Crohn's disease will have:",
+                "options": [
+                    "Bloody diarrhea only in rectum",
+                    "Skip lesions throughout GI tract",
+                    "Curable with surgery",
+                    "No risk of fistulas"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Crohn's: Skip lesions (patchy), anywhere in GI tract, fistulas/abscesses common. Ulcerative colitis: continuous inflammation, colon/rectum only."
+            },
+            {
+                "id": 6,
+                "text": "A client with HIV has a CD4 count of 180. This indicates:",
+                "options": [
+                    "Normal immune function",
+                    "AIDS diagnosis",
+                    "No treatment needed",
+                    "Cure achieved"
+                ],
+                "correctAnswer": 1,
+                "explanation": "CD4 <200 = AIDS diagnosis. Start prophylaxis for opportunistic infections (PCP, toxoplasmosis). Continue antiretroviral therapy."
+            },
+            {
+                "id": 7,
+                "text": "Which finding indicates hemolytic transfusion reaction?",
+                "options": [
+                    "Hives and itching",
+                    "Fever, chills, dark urine, flank pain",
+                    "Mild temperature elevation",
+                    "No symptoms"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Hemolytic reaction (ABO incompatibility): Fever, chills, dark urine, flank/back pain, hypotension. Life-threatening. Stop transfusion immediately."
+            },
+            {
+                "id": 8,
+                "text": "A client with cirrhosis has ascites. What is the priority intervention?",
+                "options": [
+                    "High-sodium diet",
+                    "Sodium restriction and diuretics",
+                    "Force fluids",
+                    "Bed rest only"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Ascites: Restrict sodium, give diuretics (spironolactone, furosemide), monitor weight daily, measure abdominal girth. May need paracentesis."
+            },
+            {
+                "id": 9,
+                "text": "Which type of anemia is caused by chronic kidney disease?",
+                "options": [
+                    "Iron-deficiency",
+                    "Pernicious",
+                    "Anemia of chronic disease (low EPO)",
+                    "Sickle cell"
+                ],
+                "correctAnswer": 2,
+                "explanation": "Kidney disease causes decreased erythropoietin (EPO) production, leading to anemia. Treat with EPO injections (epoetin alfa)."
+            },
+            {
+                "id": 10,
+                "text": "A client with ulcerative colitis is at risk for:",
+                "options": [
+                    "Colon cancer",
+                    "Diabetes",
+                    "Hypertension",
+                    "Osteoarthritis"
+                ],
+                "correctAnswer": 0,
+                "explanation": "Long-term ulcerative colitis increases colon cancer risk. Regular colonoscopy screening needed. May require colectomy."
+            },
+            {
+                "id": 11,
+                "text": "Which precaution is needed for a client with neutropenia?",
+                "options": [
+                    "Contact precautions",
+                    "Protective (reverse) isolation",
+                    "Droplet precautions",
+                    "No precautions needed"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Neutropenia (low WBC <1,000): Protective isolation, no fresh fruits/flowers, avoid crowds, monitor for infection. Neutropenic precautions."
+            },
+            {
+                "id": 12,
+                "text": "A client is receiving warfarin and has INR of 8. What is the priority?",
+                "options": [
+                    "Continue current dose",
+                    "Hold warfarin and notify provider",
+                    "Increase dose",
+                    "No action needed"
+                ],
+                "correctAnswer": 1,
+                "explanation": "INR >4 = high bleeding risk. Hold warfarin, notify provider. May need vitamin K. Monitor for bleeding. Therapeutic INR: 2-3."
+            },
+            {
+                "id": 13,
+                "text": "A client with hepatitis A should:",
+                "options": [
+                    "Avoid alcohol permanently",
+                    "Avoid alcohol during acute phase",
+                    "Drink alcohol freely",
+                    "Take antibiotics"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Hepatitis A: Acute, fecal-oral transmission, avoid alcohol during illness. Hepatitis B/C: Chronic, bloodborne, avoid alcohol permanently."
+            },
+            {
+                "id": 14,
+                "text": "Which is a sign of sickle cell crisis?",
+                "options": [
+                    "Severe pain in joints/abdomen",
+                    "Hypertension",
+                    "Weight gain",
+                    "Bradycardia"
+                ],
+                "correctAnswer": 0,
+                "explanation": "Sickle cell crisis: Severe pain (vaso-occlusive), fever, swelling. Treat with hydration, oxygen, pain management. Avoid triggers (dehydration, cold, stress)."
+            },
+            {
+                "id": 15,
+                "text": "A client with GI bleeding has black, tarry stools. This indicates:",
+                "options": [
+                    "Lower GI bleeding",
+                    "Upper GI bleeding",
+                    "Normal finding",
+                    "Hemorrhoids"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Melena (black, tarry stools) = upper GI bleeding. Bright red blood (hematochezia) = lower GI bleeding. Monitor H/H, vitals, prepare for endoscopy."
+            },
+            {
+                "id": 16,
+                "text": "A client with thrombocytopenia should avoid:",
+                "options": [
+                    "Soft toothbrush",
+                    "IM injections and aspirin",
+                    "Gentle activities",
+                    "All medications"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Thrombocytopenia (low platelets): Bleeding precautions. Avoid IM injections, aspirin, NSAIDs, razors. Use soft toothbrush, electric razor."
+            },
+            {
+                "id": 17,
+                "text": "Which hepatitis is transmitted through contaminated food/water?",
+                "options": [
+                    "Hepatitis A",
+                    "Hepatitis B",
+                    "Hepatitis C",
+                    "Hepatitis D"
+                ],
+                "correctAnswer": 0,
+                "explanation": "Hepatitis A: Fecal-oral (food/water). Hepatitis B, C, D: Bloodborne (needles, sex, blood products). Hepatitis E: Fecal-oral (rare in US)."
+            },
+            {
+                "id": 18,
+                "text": "A client with anaphylaxis should receive:",
+                "options": [
+                    "Oral antihistamine",
+                    "Epinephrine IM immediately",
+                    "Inhaled bronchodilator only",
+                    "IV fluids only"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Anaphylaxis: Epinephrine IM (EpiPen) immediately. Also give oxygen, IV fluids, antihistamines, corticosteroids. Monitor airway."
+            },
+            {
+                "id": 19,
+                "text": "A client with hemophilia should avoid:",
+                "options": [
+                    "Contact sports",
+                    "All exercise",
+                    "Vegetables",
+                    "Water"
+                ],
+                "correctAnswer": 0,
+                "explanation": "Hemophilia: Clotting factor deficiency. Avoid contact sports, aspirin, IM injections. Give factor replacement for bleeding. Teach joint protection."
+            },
+            {
+                "id": 20,
+                "text": "Which is a sign of liver failure?",
+                "options": [
+                    "Jaundice and confusion",
+                    "Hypertension",
+                    "Hyperglycemia",
+                    "Tachycardia only"
+                ],
+                "correctAnswer": 0,
+                "explanation": "Liver failure: Jaundice, confusion (hepatic encephalopathy), ascites, bleeding (low clotting factors), asterixis (flapping tremor)."
+            },
+            {
+                "id": 21,
+                "text": "A client is receiving a blood transfusion. What is the maximum time for one unit?",
+                "options": [
+                    "1 hour",
+                    "2 hours",
+                    "4 hours",
+                    "8 hours"
+                ],
+                "correctAnswer": 2,
+                "explanation": "Transfuse blood over 2-4 hours maximum (bacterial growth risk after 4 hours). Monitor vitals before, 15 min after start, then per protocol."
+            },
+            {
+                "id": 22,
+                "text": "A client with diverticulitis should eat:",
+                "options": [
+                    "High-fiber diet during acute phase",
+                    "Low-fiber diet during acute phase, then high-fiber",
+                    "No restrictions",
+                    "Liquid diet permanently"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Acute diverticulitis: Low-fiber or clear liquids, antibiotics. After healing: High-fiber diet to prevent recurrence. Avoid nuts/seeds (controversial)."
+            },
+            {
+                "id": 23,
+                "text": "Which medication treats pernicious anemia?",
+                "options": [
+                    "Iron supplements",
+                    "Vitamin B12 injections",
+                    "Folic acid",
+                    "Vitamin C"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Pernicious anemia requires B12 injections (oral B12 not absorbed without intrinsic factor). Monitor for neurological improvement."
+            },
+            {
+                "id": 24,
+                "text": "A client with esophageal varices should avoid:",
+                "options": [
+                    "Soft foods",
+                    "Straining and alcohol",
+                    "Liquids",
+                    "All medications"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Esophageal varices (from cirrhosis): Avoid straining, alcohol, aspirin, NSAIDs. Risk of life-threatening bleeding. May need banding or sclerotherapy."
+            },
+            {
+                "id": 25,
+                "text": "Which is a sign of allergic transfusion reaction?",
+                "options": [
+                    "Hives and itching",
+                    "Fever and chills",
+                    "Dark urine",
+                    "Hypotension"
+                ],
+                "correctAnswer": 0,
+                "explanation": "Allergic reaction: Hives, itching, flushing. Stop transfusion, give antihistamine. Can usually resume slowly. Different from hemolytic reaction."
+            },
+            {
+                "id": 26,
+                "text": "A client with hepatic encephalopathy should:",
+                "options": [
+                    "Increase protein intake",
+                    "Restrict protein",
+                    "Increase sodium",
+                    "Stop all medications"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Hepatic encephalopathy: Restrict protein (ammonia buildup), give lactulose (reduces ammonia), monitor mental status. Asterixis is classic sign."
+            },
+            {
+                "id": 27,
+                "text": "Which type of anemia has sickle-shaped RBCs?",
+                "options": [
+                    "Iron-deficiency",
+                    "Pernicious",
+                    "Sickle cell anemia",
+                    "Aplastic"
+                ],
+                "correctAnswer": 2,
+                "explanation": "Sickle cell: Genetic disorder, RBCs sickle when deoxygenated. Causes pain crises, organ damage. Treat with hydration, oxygen, pain management, hydroxyurea."
+            },
+            {
+                "id": 28,
+                "text": "A client with pancreatitis should be NPO because:",
+                "options": [
+                    "Food stimulates pancreatic enzymes",
+                    "Improves appetite",
+                    "Prevents diabetes",
+                    "No reason"
+                ],
+                "correctAnswer": 0,
+                "explanation": "Pancreatitis: NPO to rest pancreas (food stimulates enzyme secretion). Give IV fluids, pain management, NG tube if vomiting. Monitor for complications."
+            },
+            {
+                "id": 29,
+                "text": "Which precaution is needed for HIV-positive client?",
+                "options": [
+                    "Airborne precautions",
+                    "Standard precautions",
+                    "Droplet precautions",
+                    "Contact precautions"
+                ],
+                "correctAnswer": 1,
+                "explanation": "HIV: Standard precautions (not transmitted by casual contact). Bloodborne pathogen. Use gloves for blood/body fluids. Educate about transmission prevention."
+            },
+            {
+                "id": 30,
+                "text": "A client with DIC (disseminated intravascular coagulation) will have:",
+                "options": [
+                    "Increased clotting factors",
+                    "Both bleeding and clotting",
+                    "No symptoms",
+                    "Hypertension only"
+                ],
+                "correctAnswer": 1,
+                "explanation": "DIC: Widespread clotting uses up clotting factors, causing bleeding. Treat underlying cause, give blood products, monitor labs (PT, PTT, platelets, fibrinogen)."
+            },
+            {
+                "id": 31,
+                "text": "A client with gastroesophageal reflux (GERD) should:",
+                "options": [
+                    "Lie down after meals",
+                    "Elevate head of bed and avoid late meals",
+                    "Eat large meals",
+                    "Drink alcohol freely"
+                ],
+                "correctAnswer": 1,
+                "explanation": "GERD: Elevate HOB 30°, small frequent meals, avoid triggers (caffeine, alcohol, chocolate, spicy foods), don't eat 2-3 hours before bed."
+            },
+            {
+                "id": 32,
+                "text": "Which is a sign of iron-deficiency anemia?",
+                "options": [
+                    "Glossitis and koilonychia (spoon nails)",
+                    "Jaundice",
+                    "Petechiae",
+                    "Hematuria"
+                ],
+                "correctAnswer": 0,
+                "explanation": "Iron-deficiency: Pallor, fatigue, glossitis (sore tongue), koilonychia (spoon-shaped nails), pica (craving ice/dirt). Most common anemia."
+            },
+            {
+                "id": 33,
+                "text": "A client with inflammatory bowel disease should avoid:",
+                "options": [
+                    "High-fiber during flare-ups",
+                    "All foods",
+                    "Water",
+                    "Medications"
+                ],
+                "correctAnswer": 0,
+                "explanation": "IBD flare: Low-fiber, low-residue diet. Between flares: Balanced diet, avoid individual triggers. Monitor for complications (obstruction, perforation)."
+            },
+            {
+                "id": 34,
+                "text": "Which lab value indicates hemolytic anemia?",
+                "options": [
+                    "Elevated bilirubin",
+                    "Low bilirubin",
+                    "High calcium",
+                    "Low sodium"
+                ],
+                "correctAnswer": 0,
+                "explanation": "Hemolytic anemia: RBC destruction causes elevated bilirubin (jaundice), elevated LDH, decreased haptoglobin. Causes: autoimmune, transfusion reaction, sickle cell."
+            },
+            {
+                "id": 35,
+                "text": "A client with cholecystitis reports pain in which area?",
+                "options": [
+                    "Left lower quadrant",
+                    "Right upper quadrant",
+                    "Suprapubic",
+                    "Left shoulder"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Cholecystitis (gallbladder inflammation): Right upper quadrant pain, especially after fatty meals. May radiate to right shoulder. Treat with NPO, antibiotics, possible cholecystectomy."
             }
         ]
     },

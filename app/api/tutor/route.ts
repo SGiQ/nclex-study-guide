@@ -55,10 +55,10 @@ export async function POST(req: NextRequest) {
         const bookContext = await getBookContext();
         console.log(`Book context loaded. Length: ${bookContext.length} chars`);
 
-        // 2. Initialize Gemini 1.5 Pro (Best for Long Context)
+        // 2. Initialize Gemini 1.5 Flash (Current stable model)
         const genAI = new GoogleGenerativeAI(apiKey);
         const model = genAI.getGenerativeModel({
-            model: 'gemini-1.5-pro-latest',  // Updated model name
+            model: 'gemini-1.5-flash',  // Current working model
             systemInstruction: `You are "TutorBot", an expert NCLEX-PN nursing tutor.
 You have access to the ENTIRE Review Book text below.
 ALWAYS answer questions based on the provided book context first.

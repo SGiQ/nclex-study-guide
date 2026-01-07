@@ -7,12 +7,13 @@
     "build": "next build --webpack",
     "start": "next start",
     "lint": "eslint",
-    "ingest-pdfs": "ts-node --project tsconfig.json scripts/ingest-pdfs.ts"
+    "ingest-pdfs": "node scripts/ingest-pdfs.js"
   },
   "dependencies": {
     "@ducanh2912/next-pwa": "^10.2.9",
     "@google/generative-ai": "^0.24.1",
     "@types/pg": "^8.16.0",
+    "dotenv": "^17.2.3",
     "next": "16.1.1",
     "openai": "^6.15.0",
     "pdf-parse": "^2.4.5",

@@ -26,11 +26,12 @@ export default function LandingPage() {
     const [isLoading, setIsLoading] = useState(false);
     const [error, setError] = useState('');
 
-    // Valid beta tester coupon codes (in production, validate server-side)
+    // Valid promo codes (in production, validate server-side)
     const validCoupons = {
         'BETA2026': 'lifetime',
         'NCLEX100': 'lifetime',
-        'EARLYBIRD': 'lifetime'
+        'EARLYBIRD': 'lifetime',
+        'TANNEKU': 'lifetime'  // Special lifetime free premium access
     };
 
     const handleSignup = async (e: React.FormEvent) => {
@@ -452,7 +453,7 @@ export default function LandingPage() {
             {/* Signup Modal */}
             {showSignup && (
                 <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm">
-                    <div className="bg-gradient-to-br from-gray-900 to-black border border-white/10 rounded-2xl p-8 max-w-md w-full">
+                    <div className="bg-gradient-to-br from-gray-900 to-black border border-white/10 rounded-2xl p-8 max-w-md w-full max-h-[90vh] overflow-y-auto">
                         <div className="flex items-center justify-between mb-6">
                             <h3 className="text-2xl font-bold">Create Account</h3>
                             <button
@@ -518,18 +519,18 @@ export default function LandingPage() {
                             </div>
                             <div>
                                 <label className="block text-sm font-medium mb-2">
-                                    Coupon Code (Optional)
-                                    <span className="text-xs text-indigo-400 ml-2">Beta testers get lifetime access!</span>
+                                    Promo Code (Optional)
+                                    <span className="text-xs text-indigo-400 ml-2">Get lifetime free access!</span>
                                 </label>
                                 <input
                                     type="text"
                                     value={signupCoupon}
                                     onChange={(e) => setSignupCoupon(e.target.value)}
                                     className="w-full px-4 py-3 rounded-lg bg-white/5 border border-white/10 focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 outline-none uppercase"
-                                    placeholder="BETA2026"
+                                    placeholder="TANNEKU"
                                 />
                                 {signupCoupon && validCoupons[signupCoupon.toUpperCase() as keyof typeof validCoupons] && (
-                                    <p className="text-xs text-green-400 mt-1">✓ Valid coupon! You'll get lifetime access</p>
+                                    <p className="text-xs text-green-400 mt-1">✓ Valid promo code! You'll get lifetime free access</p>
                                 )}
                             </div>
                             <button

@@ -34,6 +34,7 @@ export default function DashboardPage() {
         { title: "Audio Lessons", from: "#2563eb", to: "#1d4ed8", href: "/audio", icon: "▶", cta: "Listen Now" },
         { title: "Quizzes", from: "#475569", to: "#334155", href: "/quizzes", icon: "📝", cta: "Start Quiz" },
         { title: "Flashcards", from: "#9333ea", to: "#7e22ce", href: "/flashcards", icon: "🗂️", cta: "Practice" },
+        { title: "Exam Mode", from: "#10b981", to: "#059669", href: "/exam/setup", icon: "🎯", cta: "Take Exam" },
         { title: "Analytics", from: "#ec4899", to: "#db2777", href: "/analytics", icon: "📊", cta: "View Stats" },
         { title: "Mind Maps", from: "#0891b2", to: "#0e7490", href: "/mindmaps", icon: "🧠", cta: "Explore" },
         { title: "Infographics", from: "#db2777", to: "#be185d", href: "/infographics", icon: "🖼️", cta: "Visuals" },

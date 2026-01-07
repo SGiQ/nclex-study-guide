@@ -3,7 +3,7 @@
 import { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 
 interface User {
-    id: string;
+    id: number;
     name: string;
     email: string;
     plan: 'free' | 'premium' | 'lifetime';
@@ -15,7 +15,7 @@ interface AuthContextType {
     user: User | null;
     isLoading: boolean;
     login: (email: string, password: string) => Promise<void>;
-    signup: (name: string, email: string, password: string, examDate?: string) => Promise<void>;
+    signup: (name: string, email: string, password: string, plan?: string, examDate?: string) => Promise<void>;
     logout: () => void;
     isPremium: boolean;
 }
@@ -25,87 +25,82 @@ const AuthContext = createContext<AuthContextType | undefined>(undefined);
 export function AuthProvider({ children }: { children: ReactNode }) {
     const [user, setUser] = useState<User | null>(null);
     const [isLoading, setIsLoading] = useState(true);
+    const [token, setToken] = useState<string | null>(null);
 
     useEffect(() => {
-        // Check for existing session
-        const storedUser = localStorage.getItem('user');
-        if (storedUser) {
-            setUser(JSON.parse(storedUser));
+        // Check for existing token and fetch user
+        const storedToken = localStorage.getItem('auth_token');
+        if (storedToken) {
+            setToken(storedToken);
+            fetchUser(storedToken);
+        } else {
+            setIsLoading(false);
         }
-        setIsLoading(false);
     }, []);
 
-    const login = async (email: string, password: string) => {
-        // TODO: Replace with actual API call
-        // For now, check if user exists in localStorage
-        const storedUsers = localStorage.getItem('users');
-        let users: User[] = [];
+    const fetchUser = async (authToken: string) => {
+        try {
+            const response = await fetch('/api/auth/me', {
+                headers: {
+                    'Authorization': `Bearer ${authToken}`
+                }
+            });
 
-        if (storedUsers) {
-            users = JSON.parse(storedUsers);
-        }
-
-        // Find user by email
-        const existingUser = users.find(u => u.email === email);
-
-        if (existingUser) {
-            // User found - log them in with their actual data
-            setUser(existingUser);
-            localStorage.setItem('user', JSON.stringify(existingUser));
-        } else {
-            // User not found - create demo user (for backward compatibility)
-            const mockUser: User = {
-                id: '1',
-                name: email.split('@')[0], // Use email prefix as name
-                email,
-                plan: 'premium',
-                createdAt: new Date().toISOString(),
-            };
-            setUser(mockUser);
-            localStorage.setItem('user', JSON.stringify(mockUser));
+            if (response.ok) {
+                const data = await response.json();
+                setUser(data.user);
+            } else {
+                // Token invalid, clear it
+                localStorage.removeItem('auth_token');
+                setToken(null);
+            }
+        } catch (error) {
+            console.error('Failed to fetch user:', error);
+        } finally {
+            setIsLoading(false);
         }
     };
 
-    const signup = async (name: string, email: string, password: string, examDate?: string) => {
-        // TODO: Replace with actual API call
-        // For now, simulate signup with premium access (free trial)
-        const mockUser: User = {
-            id: Date.now().toString(),
-            name,
-            email,
-            plan: 'premium', // Give premium access during free trial
-            examDate,
-            createdAt: new Date().toISOString(),
-        };
+    const login = async (email: string, password: string) => {
+        const response = await fetch('/api/auth/login', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ email, password })
+        });
 
-        // Store user in current session
-        setUser(mockUser);
-        localStorage.setItem('user', JSON.stringify(mockUser));
-
-        // Also store in users array for login lookup
-        const storedUsers = localStorage.getItem('users');
-        let users: User[] = [];
-
-        if (storedUsers) {
-            users = JSON.parse(storedUsers);
+        if (!response.ok) {
+            const error = await response.json();
+            throw new Error(error.error || 'Login failed');
         }
 
-        // Check if user already exists
-        const existingIndex = users.findIndex(u => u.email === email);
-        if (existingIndex >= 0) {
-            // Update existing user
-            users[existingIndex] = mockUser;
-        } else {
-            // Add new user
-            users.push(mockUser);
+        const data = await response.json();
+        setUser(data.user);
+        setToken(data.token);
+        localStorage.setItem('auth_token', data.token);
+    };
+
+    const signup = async (name: string, email: string, password: string, plan: string = 'premium', examDate?: string) => {
+        const response = await fetch('/api/auth/signup', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ name, email, password, plan, examDate })
+        });
+
+        if (!response.ok) {
+            const error = await response.json();
+            throw new Error(error.error || 'Signup failed');
         }
 
-        localStorage.setItem('users', JSON.stringify(users));
+        const data = await response.json();
+        setUser(data.user);
+        setToken(data.token);
+        localStorage.setItem('auth_token', data.token);
     };
 
     const logout = () => {
         setUser(null);
-        localStorage.removeItem('user');
+        setToken(null);
+        localStorage.removeItem('auth_token');
     };
 
     const isPremium = user?.plan === 'premium' || user?.plan === 'lifetime';
@@ -123,4 +118,12 @@ export function useAuth() {
         throw new Error('useAuth must be used within an AuthProvider');
     }
     return context;
+}
+
+// Export token getter for use in other contexts
+export function getAuthToken(): string | null {
+    if (typeof window !== 'undefined') {
+        return localStorage.getItem('auth_token');
+    }
+    return null;
 }

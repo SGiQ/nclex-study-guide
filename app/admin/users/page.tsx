@@ -25,22 +25,13 @@ export default function AdminUsersPage() {
         loadUsers();
     }, []);
 
-    const loadUsers = () => {
+    const loadUsers = async () => {
         try {
-            const storedUsers = localStorage.getItem('users');
-            const quizProgress = localStorage.getItem('quiz_progress');
+            const response = await fetch('/api/admin/users');
+            const data = await response.json();
 
-            if (storedUsers) {
-                const usersData = JSON.parse(storedUsers);
-                const progressData = quizProgress ? JSON.parse(quizProgress) : {};
-
-                const usersWithProgress: UserWithProgress[] = usersData.map((u: any) => ({
-                    ...u,
-                    quizzesCompleted: Object.keys(progressData).length,
-                    lastActive: u.createdAt, // Simplified - would track actual activity in real app
-                }));
-
-                setUsers(usersWithProgress);
+            if (data.success) {
+                setUsers(data.users);
             }
         } catch (error) {
             console.error('Error loading users:', error);

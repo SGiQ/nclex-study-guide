@@ -130,7 +130,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
         // Fallback: Use localStorage (old system)
         const mockUser = {
-            id: Date.now().toString(),
+            id: Date.now(),
             name,
             email,
             plan: plan as 'free' | 'premium' | 'lifetime',

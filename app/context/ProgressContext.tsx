@@ -8,6 +8,8 @@ interface QuizResult {
     score: number;
     total: number;
     completedAt: string;
+    bestScore?: number;
+    attemptCount?: number;
 }
 
 interface ProgressContextType {
@@ -53,7 +55,9 @@ export function ProgressProvider({ children }: { children: React.ReactNode }) {
                             episodeId: parseInt(p.content_id),
                             score: p.score || 0,
                             total: p.total || 0,
-                            completedAt: p.completed_at
+                            completedAt: p.completed_at,
+                            bestScore: p.best_score,
+                            attemptCount: p.attempt_count
                         };
                     });
 

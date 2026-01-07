@@ -1,13 +1,17 @@
 'use client';
 
+import { useState } from 'react';
 import Link from 'next/link';
 import quizzes from '@/app/data/quizzes.json';
 import { useLibrary } from '@/app/context/LibraryContext';
 import { useProgress } from '@/app/context/ProgressContext';
+import ScoreHistoryModal from '@/app/components/ScoreHistoryModal';
 
 export default function QuizListPage() {
     const { getQuizResult } = useProgress();
     const { isSaved, saveItem, removeItem } = useLibrary();
+    const [historyQuizId, setHistoryQuizId] = useState<number | null>(null);
+    const [historyQuizTitle, setHistoryQuizTitle] = useState<string>('');
 
     const handleToggleSave = (e: React.MouseEvent, quiz: any) => {
         e.preventDefault(); // Prevent navigation
@@ -51,6 +55,8 @@ export default function QuizListPage() {
                         const result = getQuizResult(quiz.id);
                         const isCompleted = !!result;
                         const scorePercent = result ? Math.round((result.score / result.total) * 100) : 0;
+                        const bestScore = result?.bestScore || scorePercent;
+                        const attemptCount = result?.attemptCount || 0;
                         const isBookmarked = isSaved(quiz.id, 'quiz');
 
                         return (
@@ -83,10 +89,15 @@ export default function QuizListPage() {
                                     {isCompleted && (
                                         <div className="mb-4">
                                             <div className="flex justify-between text-xs font-bold uppercase tracking-wider mb-1">
-                                                <span className={scorePercent >= 70 ? 'text-emerald-500' : 'text-orange-500'}>
-                                                    {scorePercent}% Score
-                                                </span>
-                                                <span className="text-foreground/40">Completed</span>
+                                                <div className="flex items-center gap-2">
+                                                    <span className={scorePercent >= 70 ? 'text-emerald-500' : 'text-orange-500'}>
+                                                        Latest: {scorePercent}%
+                                                    </span>
+                                                    {bestScore > scorePercent && (
+                                                        <span className="text-emerald-400">⭐ Best: {bestScore}%</span>
+                                                    )}
+                                                </div>
+                                                <span className="text-foreground/40">Attempt {attemptCount}</span>
                                             </div>
                                             <div className="h-2 w-full bg-surface/10 rounded-full overflow-hidden">
                                                 <div
@@ -117,11 +128,25 @@ export default function QuizListPage() {
                                         {quiz.description}
                                     </p>
 
-                                    <div className="flex items-center gap-2 text-sm font-semibold text-purple-500 group-hover:text-purple-400">
-                                        <span>{isCompleted ? 'Retake Quiz' : 'Start Quiz'}</span>
-                                        <svg className="w-4 h-4 transition-transform group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                                            <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14M12 5l7 7-7 7" />
-                                        </svg>
+                                    <div className="flex items-center justify-between">
+                                        <div className="flex items-center gap-2 text-sm font-semibold text-purple-500 group-hover:text-purple-400">
+                                            <span>{isCompleted ? 'Retake Quiz' : 'Start Quiz'}</span>
+                                            <svg className="w-4 h-4 transition-transform group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                                                <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14M12 5l7 7-7 7" />
+                                            </svg>
+                                        </div>
+                                        {isCompleted && attemptCount > 0 && (
+                                            <button
+                                                onClick={(e) => {
+                                                    e.preventDefault();
+                                                    setHistoryQuizId(quiz.id);
+                                                    setHistoryQuizTitle(quiz.title);
+                                                }}
+                                                className="text-xs text-indigo-400 hover:text-indigo-300 transition-colors"
+                                            >
+                                                📊 History
+                                            </button>
+                                        )}
                                     </div>
                                 </div>
                             </Link>
@@ -134,6 +159,16 @@ export default function QuizListPage() {
                     <p className="text-white/40 text-sm">More categories coming soon...</p>
                 </div>
             </main>
+
+            {/* Score History Modal */}
+            {historyQuizId && (
+                <ScoreHistoryModal
+                    quizId={historyQuizId}
+                    quizTitle={historyQuizTitle}
+                    isOpen={true}
+                    onClose={() => setHistoryQuizId(null)}
+                />
+            )}
         </div>
     );
 }

@@ -18,11 +18,18 @@ export default function QuizRunnerPage({ params }: { params: Promise<{ id: strin
     const [showExplanation, setShowExplanation] = useState(false); // Used for POST-ANSWER feedback
     const [showHint, setShowHint] = useState(false); // Used for PRE-ANSWER hint toggle
     const [quizCompleted, setQuizCompleted] = useState(false);
-    const { saveQuizResult } = useProgress();
+    const [attemptNumber, setAttemptNumber] = useState(1);
+    const [bestScore, setBestScore] = useState(0);
+    const { saveQuizResult, getQuizResult } = useProgress();
 
     if (!quiz) {
         return notFound();
     }
+
+    // Get current quiz result for attempt number and best score
+    const currentResult = getQuizResult(quizId);
+    const currentAttemptCount = currentResult?.attemptCount || 0;
+    const currentBestScore = currentResult?.bestScore || 0;
 
     const currentQuestion = quiz.questions[currentQuestionIndex];
     const progress = ((currentQuestionIndex + 1) / quiz.questions.length) * 100;
@@ -68,12 +75,17 @@ export default function QuizRunnerPage({ params }: { params: Promise<{ id: strin
 
     useEffect(() => {
         if (quizCompleted) {
+            setAttemptNumber(currentAttemptCount + 1);
+            setBestScore(Math.max(currentBestScore, Math.round((score / quiz.questions.length) * 100)));
             saveQuizResult(quizId, score, quiz.questions.length);
         }
-    }, [quizCompleted, quizId, score, quiz.questions.length, saveQuizResult]);
+    }, [quizCompleted, quizId, score, quiz.questions.length, saveQuizResult, currentAttemptCount, currentBestScore]);
 
 
     if (quizCompleted) {
+        const scorePercentage = Math.round((score / quiz.questions.length) * 100);
+        const isNewBest = scorePercentage > bestScore;
+
         return (
             <div className="min-h-dvh bg-[#0A0A0F] text-white flex items-center justify-center p-6">
                 <div className="max-w-md w-full bg-[#1A1A20] rounded-3xl p-8 border border-white/10 text-center shadow-2xl">
@@ -81,17 +93,35 @@ export default function QuizRunnerPage({ params }: { params: Promise<{ id: strin
                         <span className="text-4xl">🏆</span>
                     </div>
                     <h1 className="text-3xl font-bold mb-2">Quiz Complete!</h1>
-                    <p className="text-white/60 mb-8">You successfully finished {quiz.title}.</p>
+                    <p className="text-white/60 mb-2">You successfully finished {quiz.title}.</p>
+                    <p className="text-white/40 text-sm mb-8">Attempt #{attemptNumber}</p>
 
-                    <div className="bg-black/30 rounded-2xl p-6 mb-8">
+                    <div className="bg-black/30 rounded-2xl p-6 mb-4">
                         <div className="text-xs uppercase tracking-widest text-white/50 mb-1">Your Score</div>
-                        <div className="text-5xl font-black text-white">{Math.round((score / quiz.questions.length) * 100)}%</div>
+                        <div className="text-5xl font-black text-white">{scorePercentage}%</div>
                         <div className="text-sm text-emerald-400 font-bold mt-2">{score} / {quiz.questions.length} Correct</div>
                     </div>
 
-                    <Link href="/quizzes" className="block w-full py-4 bg-white text-black font-bold rounded-xl hover:scale-[1.02] active:scale-[0.98] transition-transform">
-                        Back to Library
-                    </Link>
+                    {bestScore > 0 && (
+                        <div className="bg-emerald-500/10 border border-emerald-500/30 rounded-xl p-4 mb-6">
+                            <div className="flex items-center justify-center gap-2">
+                                <span className="text-lg">⭐</span>
+                                <div>
+                                    <div className="text-xs text-emerald-400/80">Best Score</div>
+                                    <div className="text-2xl font-bold text-emerald-400">
+                                        {isNewBest ? scorePercentage : bestScore}%
+                                    </div>
+                                </div>
+                                {isNewBest && <span className="text-xs text-emerald-400">New Record!</span>}
+                            </div>
+                        </div>
+                    )}
+
+                    <div className="flex gap-3">
+                        <Link href="/quizzes" className="flex-1 py-4 bg-white text-black font-bold rounded-xl hover:scale-[1.02] active:scale-[0.98] transition-transform">
+                            Back to Library
+                        </Link>
+                    </div>
                 </div>
             </div>
         );
@@ -105,8 +135,15 @@ export default function QuizRunnerPage({ params }: { params: Promise<{ id: strin
                 <Link href="/quizzes" className="text-white/50 hover:text-white transition-colors text-sm font-medium">
                     ✕ Quit
                 </Link>
-                <div className="text-xs font-bold text-white/30 uppercase tracking-widest">
-                    {quiz.title}
+                <div className="flex items-center gap-3">
+                    {currentAttemptCount > 0 && (
+                        <div className="text-xs text-white/40">
+                            Attempt #{currentAttemptCount + 1}
+                        </div>
+                    )}
+                    <div className="text-xs font-bold text-white/30 uppercase tracking-widest">
+                        {quiz.title}
+                    </div>
                 </div>
             </div>
 

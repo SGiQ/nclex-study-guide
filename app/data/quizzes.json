@@ -622,9 +622,9 @@
     {
         "id": 4,
         "episodeId": 4,
-        "title": "Health Promotion & Maintenance",
-        "description": "Pediatrics, Growth & Development, Immunizations",
-        "questionCount": 5,
+        "title": "Health Promotion & Maintenance Part 1",
+        "description": "Pediatrics, Growth & Development, Immunizations, Newborn Care",
+        "questionCount": 30,
         "color": "from-orange-500 to-amber-700",
         "questions": [
             {
@@ -638,6 +638,354 @@
                 ],
                 "correctAnswer": 1,
                 "explanation": "Infants typically double their birth weight by 6 months and triple it by 1 year."
+            },
+            {
+                "id": 2,
+                "text": "According to Erikson's theory, what is the primary developmental task for infants (0-1 year)?",
+                "options": [
+                    "Autonomy vs. Shame and Doubt",
+                    "Trust vs. Mistrust",
+                    "Initiative vs. Guilt",
+                    "Industry vs. Inferiority"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Erikson's first stage (0-1 year) is Trust vs. Mistrust, where infants learn to trust caregivers to meet their needs."
+            },
+            {
+                "id": 3,
+                "text": "A newborn has an APGAR score of 8 at 1 minute. What does this indicate?",
+                "options": [
+                    "Severe distress requiring immediate resuscitation",
+                    "Moderate distress requiring intervention",
+                    "Good condition with minimal intervention needed",
+                    "Perfect condition"
+                ],
+                "correctAnswer": 2,
+                "explanation": "APGAR 7-10 = Good condition. Score of 8 is normal; minor interventions like stimulation or oxygen may be needed."
+            },
+            {
+                "id": 4,
+                "text": "At what age should a child receive the MMR (measles, mumps, rubella) vaccine?",
+                "options": [
+                    "Birth",
+                    "2 months",
+                    "12-15 months",
+                    "4-6 years only"
+                ],
+                "correctAnswer": 2,
+                "explanation": "MMR is given at 12-15 months (first dose) and 4-6 years (second dose). It's a live vaccine, not given before 12 months."
+            },
+            {
+                "id": 5,
+                "text": "Which reflex should be present in a healthy newborn?",
+                "options": [
+                    "Babinski reflex",
+                    "Gag reflex",
+                    "Moro reflex",
+                    "All of the above"
+                ],
+                "correctAnswer": 3,
+                "explanation": "All are normal newborn reflexes. Babinski (toes fan), Moro (startle), and gag reflex should all be present."
+            },
+            {
+                "id": 6,
+                "text": "According to Piaget, a 2-year-old child is in which cognitive stage?",
+                "options": [
+                    "Sensorimotor",
+                    "Preoperational",
+                    "Concrete operational",
+                    "Formal operational"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Preoperational stage (2-7 years) is characterized by symbolic thinking, egocentrism, and magical thinking."
+            },
+            {
+                "id": 7,
+                "text": "What is the most important injury prevention measure for infants?",
+                "options": [
+                    "Never leave infant unattended on elevated surfaces",
+                    "Use a car seat facing forward",
+                    "Give solid foods at 2 months",
+                    "Allow infant to sleep on stomach"
+                ],
+                "correctAnswer": 0,
+                "explanation": "Falls are a major injury risk. Never leave infants unattended on changing tables, beds, or couches."
+            },
+            {
+                "id": 8,
+                "text": "At what age can a child typically ride a tricycle?",
+                "options": [
+                    "1 year",
+                    "2 years",
+                    "3 years",
+                    "5 years"
+                ],
+                "correctAnswer": 2,
+                "explanation": "By age 3, most children have the gross motor skills and coordination to ride a tricycle."
+            },
+            {
+                "id": 9,
+                "text": "Which vaccine is given at birth?",
+                "options": [
+                    "MMR",
+                    "Hepatitis B",
+                    "Varicella",
+                    "DTaP"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Hepatitis B vaccine is given at birth (first dose), then at 1-2 months and 6-18 months."
+            },
+            {
+                "id": 10,
+                "text": "A 4-month-old infant should be able to:",
+                "options": [
+                    "Sit without support",
+                    "Roll from back to front",
+                    "Walk with assistance",
+                    "Say 'mama' and 'dada' specifically"
+                ],
+                "correctAnswer": 1,
+                "explanation": "By 4 months, infants can typically roll from back to front. Sitting unsupported occurs around 6 months."
+            },
+            {
+                "id": 11,
+                "text": "What is the recommended sleep position for infants to prevent SIDS?",
+                "options": [
+                    "On stomach (prone)",
+                    "On back (supine)",
+                    "On side",
+                    "Any position is safe"
+                ],
+                "correctAnswer": 1,
+                "explanation": "'Back to sleep' reduces SIDS risk. Infants should sleep on their backs on a firm surface without loose bedding."
+            },
+            {
+                "id": 12,
+                "text": "According to Erikson, what is the developmental task for toddlers (1-3 years)?",
+                "options": [
+                    "Trust vs. Mistrust",
+                    "Autonomy vs. Shame and Doubt",
+                    "Initiative vs. Guilt",
+                    "Identity vs. Role Confusion"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Toddlers (1-3 years) develop autonomy through independence and self-control. Encouraging choices supports this stage."
+            },
+            {
+                "id": 13,
+                "text": "At what age should solid foods be introduced to an infant?",
+                "options": [
+                    "2 months",
+                    "4-6 months",
+                    "8 months",
+                    "12 months"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Solid foods are introduced around 4-6 months when the infant shows readiness (sits with support, shows interest in food)."
+            },
+            {
+                "id": 14,
+                "text": "Which finding in a newborn requires immediate intervention?",
+                "options": [
+                    "Heart rate of 140 bpm",
+                    "Acrocyanosis (blue hands/feet)",
+                    "Central cyanosis (blue trunk/face)",
+                    "Respiratory rate of 45 breaths/min"
+                ],
+                "correctAnswer": 2,
+                "explanation": "Central cyanosis indicates inadequate oxygenation and requires immediate intervention. Acrocyanosis is normal in newborns."
+            },
+            {
+                "id": 15,
+                "text": "The DTaP vaccine protects against which diseases?",
+                "options": [
+                    "Diphtheria, Tetanus, Pertussis",
+                    "Diphtheria, Typhoid, Polio",
+                    "Dengue, Tetanus, Pneumonia",
+                    "Diphtheria, Tuberculosis, Pertussis"
+                ],
+                "correctAnswer": 0,
+                "explanation": "DTaP = Diphtheria, Tetanus, and acellular Pertussis (whooping cough). Given at 2, 4, 6, 15-18 months, and 4-6 years."
+            },
+            {
+                "id": 16,
+                "text": "A 6-month-old infant should be able to:",
+                "options": [
+                    "Walk independently",
+                    "Sit without support",
+                    "Say 2-3 words",
+                    "Use a spoon independently"
+                ],
+                "correctAnswer": 1,
+                "explanation": "By 6 months, infants can typically sit without support. Walking occurs around 12 months; first words around 12 months."
+            },
+            {
+                "id": 17,
+                "text": "What is the appropriate car seat position for an infant under 2 years?",
+                "options": [
+                    "Forward-facing in front seat",
+                    "Rear-facing in back seat",
+                    "Booster seat in back",
+                    "No car seat needed if held by adult"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Infants and toddlers under 2 years should be rear-facing in the back seat for optimal safety."
+            },
+            {
+                "id": 18,
+                "text": "Which developmental milestone is expected at 12 months?",
+                "options": [
+                    "Runs well",
+                    "Says 2-3 words besides 'mama' and 'dada'",
+                    "Draws a circle",
+                    "Hops on one foot"
+                ],
+                "correctAnswer": 1,
+                "explanation": "By 12 months, children typically say 2-3 words. Running occurs around 18-24 months; drawing circles around 3 years."
+            },
+            {
+                "id": 19,
+                "text": "What is the normal respiratory rate for a newborn?",
+                "options": [
+                    "12-20 breaths/min",
+                    "20-30 breaths/min",
+                    "30-60 breaths/min",
+                    "60-80 breaths/min"
+                ],
+                "correctAnswer": 2,
+                "explanation": "Normal newborn respiratory rate is 30-60 breaths/min. Rates above 60 may indicate respiratory distress."
+            },
+            {
+                "id": 20,
+                "text": "According to Freud's theory, a 2-year-old is in which psychosexual stage?",
+                "options": [
+                    "Oral",
+                    "Anal",
+                    "Phallic",
+                    "Latency"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Anal stage (1-3 years) focuses on toilet training and control. Oral stage is 0-1 year; phallic is 3-6 years."
+            },
+            {
+                "id": 21,
+                "text": "Which food should NOT be given to infants under 1 year?",
+                "options": [
+                    "Rice cereal",
+                    "Pureed vegetables",
+                    "Honey",
+                    "Mashed bananas"
+                ],
+                "correctAnswer": 2,
+                "explanation": "Honey can contain botulism spores and should not be given to infants under 1 year due to immature immune systems."
+            },
+            {
+                "id": 22,
+                "text": "What is the expected head circumference growth in the first year of life?",
+                "options": [
+                    "2 cm total",
+                    "5 cm total",
+                    "12 cm total",
+                    "20 cm total"
+                ],
+                "correctAnswer": 2,
+                "explanation": "Head circumference increases approximately 12 cm (5 inches) in the first year, then slows significantly."
+            },
+            {
+                "id": 23,
+                "text": "At what age should a child be able to speak in 2-3 word sentences?",
+                "options": [
+                    "12 months",
+                    "18 months",
+                    "24 months",
+                    "36 months"
+                ],
+                "correctAnswer": 2,
+                "explanation": "By 24 months (2 years), children typically use 2-3 word sentences. Vocabulary is around 50-300 words."
+            },
+            {
+                "id": 24,
+                "text": "Which vaccine is a live attenuated vaccine and should NOT be given to immunocompromised children?",
+                "options": [
+                    "DTaP",
+                    "Hepatitis B",
+                    "MMR",
+                    "Hib"
+                ],
+                "correctAnswer": 2,
+                "explanation": "MMR is a live vaccine and contraindicated in immunocompromised children. DTaP, Hep B, and Hib are inactivated."
+            },
+            {
+                "id": 25,
+                "text": "What is the primary purpose of well-child visits?",
+                "options": [
+                    "Treat acute illnesses only",
+                    "Health promotion, disease prevention, and developmental screening",
+                    "Administer vaccines only",
+                    "Diagnose chronic conditions"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Well-child visits focus on health promotion, disease prevention, growth monitoring, developmental screening, and immunizations."
+            },
+            {
+                "id": 26,
+                "text": "A 3-year-old child should be able to:",
+                "options": [
+                    "Tie shoelaces",
+                    "Copy a circle",
+                    "Write their full name",
+                    "Count to 100"
+                ],
+                "correctAnswer": 1,
+                "explanation": "By age 3, children can copy a circle. Tying shoes occurs around 5-6 years; writing name around 4-5 years."
+            },
+            {
+                "id": 27,
+                "text": "What is the most common cause of death in children ages 1-4 years?",
+                "options": [
+                    "Cancer",
+                    "Congenital anomalies",
+                    "Unintentional injuries (accidents)",
+                    "Infections"
+                ],
+                "correctAnswer": 2,
+                "explanation": "Unintentional injuries (drowning, motor vehicle accidents, falls, poisoning) are the leading cause of death in this age group."
+            },
+            {
+                "id": 28,
+                "text": "Which reflex disappears by 4 months of age?",
+                "options": [
+                    "Rooting reflex",
+                    "Gag reflex",
+                    "Blink reflex",
+                    "Cough reflex"
+                ],
+                "correctAnswer": 0,
+                "explanation": "Rooting reflex (turns head toward touch on cheek) disappears around 4 months. Gag, blink, and cough are protective reflexes that persist."
+            },
+            {
+                "id": 29,
+                "text": "According to Erikson, what is the developmental task for preschoolers (3-6 years)?",
+                "options": [
+                    "Autonomy vs. Shame and Doubt",
+                    "Initiative vs. Guilt",
+                    "Industry vs. Inferiority",
+                    "Identity vs. Role Confusion"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Preschoolers (3-6 years) develop initiative through play, exploration, and asking questions. Encourage creativity and curiosity."
+            },
+            {
+                "id": 30,
+                "text": "What is the recommended method for taking a temperature in a newborn?",
+                "options": [
+                    "Oral",
+                    "Axillary (armpit)",
+                    "Rectal",
+                    "Tympanic (ear)"
+                ],
+                "correctAnswer": 2,
+                "explanation": "Rectal temperature is most accurate for newborns and infants under 3 months. Axillary is acceptable for screening."
             }
         ]
     },

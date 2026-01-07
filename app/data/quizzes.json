@@ -313,8 +313,8 @@
         "id": 3,
         "episodeId": 3,
         "title": "Safety & Infection Control",
-        "description": "Standard precautions, PPE usage, and client safety.",
-        "questionCount": 5,
+        "description": "Patient Safety, Disaster Management, Hazardous Materials, Infection Control",
+        "questionCount": 25,
         "color": "from-emerald-600 to-teal-800",
         "questions": [
             {
@@ -322,15 +322,27 @@
                 "text": "A nurse is caring for a client who requires contact precautions. Which of the following actions should the nurse take?",
                 "options": [
                     "Wear a mask when entering the room.",
-                    " wear a gown and gloves when entering the room.",
+                    "Wear a gown and gloves when entering the room.",
                     "Keep the door to the client's room closed at all times.",
                     "Ensure the client wears a mask when family visits."
                 ],
                 "correctAnswer": 1,
-                "explanation": "Contact precautions require the use of a gown and gloves to prevent the spread of infection via direct contact. Masks are for droplet/airborne precautions."
+                "explanation": "Contact precautions require gown and gloves to prevent transmission via direct contact with the patient or contaminated surfaces."
             },
             {
                 "id": 2,
+                "text": "Which isolation precaution requires a negative pressure room?",
+                "options": [
+                    "Contact precautions",
+                    "Droplet precautions",
+                    "Airborne precautions",
+                    "Standard precautions"
+                ],
+                "correctAnswer": 2,
+                "explanation": "Airborne precautions require a negative pressure room to prevent airborne pathogens (TB, measles, varicella) from escaping."
+            },
+            {
+                "id": 3,
                 "text": "A client is prescribed a restraint. How often should the nurse release the restraint for assessment?",
                 "options": [
                     "Every 30 minutes",
@@ -339,10 +351,10 @@
                     "Every 4 hours"
                 ],
                 "correctAnswer": 2,
-                "explanation": "Restraints must be released at least every 2 hours (or per facility policy, typically 2h) to assess skin integrity and circulation."
+                "explanation": "Restraints must be released at least every 2 hours to assess circulation, skin integrity, and provide range of motion."
             },
             {
-                "id": 3,
+                "id": 4,
                 "text": "Which of the following is the most effective method for preventing the spread of infection?",
                 "options": [
                     "Administering prophylactic antibiotics",
@@ -351,11 +363,11 @@
                     "Isolating every client"
                 ],
                 "correctAnswer": 1,
-                "explanation": "Hand hygiene is universally recognized as the single most effective method to prevent pathogen transmission."
+                "explanation": "Hand hygiene is the single most effective method to prevent pathogen transmission in healthcare settings."
             },
             {
-                "id": 4,
-                "text": "Correct order for doffing (removing) PPE?",
+                "id": 5,
+                "text": "What is the correct order for doffing (removing) PPE?",
                 "options": [
                     "Gloves, Goggles, Gown, Mask",
                     "Gown, Gloves, Mask, Goggles",
@@ -363,11 +375,11 @@
                     "Gloves, Gown, Goggles, Mask"
                 ],
                 "correctAnswer": 0,
-                "explanation": "Gloves are most contaminated, then Goggles/Face Shield, Gown, and Mask last."
+                "explanation": "Remove most contaminated items first: Gloves, then Goggles/Face Shield, then Gown, and finally Mask (least contaminated)."
             },
             {
-                "id": 5,
-                "text": "R.A.C.E. stands for:",
+                "id": 6,
+                "text": "R.A.C.E. fire response protocol stands for:",
                 "options": [
                     "Run, Alarm, Call, Exit",
                     "Rescue, Alarm, Contain, Extinguish",
@@ -375,7 +387,235 @@
                     "Run, Alert, Check, Extinguish"
                 ],
                 "correctAnswer": 1,
-                "explanation": "R.A.C.E is the standard fire response: Rescue clients, Alarm, Contain fire, Extinguish (if safe)."
+                "explanation": "R.A.C.E.: Rescue clients in immediate danger, Alarm (activate fire alarm), Contain the fire (close doors), Extinguish if safe."
+            },
+            {
+                "id": 7,
+                "text": "During a disaster, a client arrives with a green tag. What does this indicate?",
+                "options": [
+                    "Immediate life-threatening injuries requiring urgent care",
+                    "Delayed treatment - stable injuries that can wait",
+                    "Minor injuries - walking wounded",
+                    "Deceased or expectant - no treatment"
+                ],
+                "correctAnswer": 2,
+                "explanation": "Green tag = Minor injuries, walking wounded. These patients can wait and are treated last in disaster triage."
+            },
+            {
+                "id": 8,
+                "text": "A client with tuberculosis requires which type of mask?",
+                "options": [
+                    "Surgical mask",
+                    "N95 respirator",
+                    "Face shield only",
+                    "No mask needed if room door is closed"
+                ],
+                "correctAnswer": 1,
+                "explanation": "TB requires airborne precautions with an N95 respirator (or PAPR) to filter airborne particles smaller than 5 microns."
+            },
+            {
+                "id": 9,
+                "text": "Which client requires droplet precautions?",
+                "options": [
+                    "Client with tuberculosis",
+                    "Client with influenza",
+                    "Client with C. difficile",
+                    "Client with chickenpox"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Influenza requires droplet precautions (surgical mask, within 3 feet). TB and chickenpox need airborne; C. diff needs contact precautions."
+            },
+            {
+                "id": 10,
+                "text": "A nurse discovers a mercury spill from a broken thermometer. What is the priority action?",
+                "options": [
+                    "Vacuum the mercury immediately",
+                    "Evacuate the area and restrict access",
+                    "Wipe up mercury with paper towels",
+                    "Pour water over the spill to dilute it"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Mercury is hazardous. Priority is to evacuate, restrict access, and call the hazardous materials team. Never vacuum mercury."
+            },
+            {
+                "id": 11,
+                "text": "Which of The Joint Commission's National Patient Safety Goals addresses patient identification?",
+                "options": [
+                    "Use at least two patient identifiers before administering medications",
+                    "Improve staff communication during handoffs",
+                    "Reduce risk of healthcare-associated infections",
+                    "Prevent surgical errors"
+                ],
+                "correctAnswer": 0,
+                "explanation": "Using two patient identifiers (name and DOB, not room number) before procedures/medications is a core safety goal."
+            },
+            {
+                "id": 12,
+                "text": "A client is at high risk for falls. Which intervention is most appropriate?",
+                "options": [
+                    "Apply bilateral wrist restraints",
+                    "Place the bed in the lowest position",
+                    "Keep the side rails fully raised at all times",
+                    "Administer sedation at bedtime"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Bed in lowest position reduces fall injury risk. Restraints increase fall risk; full side rails are considered restraints."
+            },
+            {
+                "id": 13,
+                "text": "During disaster triage, which color tag indicates the highest priority for treatment?",
+                "options": [
+                    "Red",
+                    "Yellow",
+                    "Green",
+                    "Black"
+                ],
+                "correctAnswer": 0,
+                "explanation": "Red tag = Immediate, life-threatening injuries requiring urgent intervention (e.g., airway obstruction, severe bleeding)."
+            },
+            {
+                "id": 14,
+                "text": "A nurse is caring for a client with C. difficile. Which precaution is essential?",
+                "options": [
+                    "Use alcohol-based hand sanitizer after contact",
+                    "Wash hands with soap and water",
+                    "Wear an N95 respirator",
+                    "Place client in negative pressure room"
+                ],
+                "correctAnswer": 1,
+                "explanation": "C. diff spores are not killed by alcohol. Soap and water hand washing is required, along with contact precautions."
+            },
+            {
+                "id": 15,
+                "text": "P.A.S.S. fire extinguisher technique stands for:",
+                "options": [
+                    "Pull, Aim, Squeeze, Sweep",
+                    "Point, Activate, Spray, Stop",
+                    "Prepare, Assess, Spray, Secure",
+                    "Pull, Activate, Squeeze, Stop"
+                ],
+                "correctAnswer": 0,
+                "explanation": "P.A.S.S.: Pull the pin, Aim at base of fire, Squeeze the handle, Sweep side to side."
+            },
+            {
+                "id": 16,
+                "text": "Which client requires airborne precautions?",
+                "options": [
+                    "Client with pneumonia",
+                    "Client with measles",
+                    "Client with MRSA wound infection",
+                    "Client with pertussis"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Measles requires airborne precautions (N95, negative pressure room). MRSA needs contact; pertussis needs droplet precautions."
+            },
+            {
+                "id": 17,
+                "text": "A nurse witnesses a chemical spill in the hallway. What is the first action?",
+                "options": [
+                    "Clean up the spill immediately",
+                    "Alert others and evacuate the area",
+                    "Document the incident",
+                    "Call the physician"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Safety first: Alert others, evacuate the area, and activate the hazardous materials response team."
+            },
+            {
+                "id": 18,
+                "text": "Standard precautions should be used:",
+                "options": [
+                    "Only for clients with known infections",
+                    "For all clients at all times",
+                    "Only when handling blood",
+                    "Only in the operating room"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Standard precautions are used for ALL clients, ALL the time, regardless of diagnosis, to prevent transmission of pathogens."
+            },
+            {
+                "id": 19,
+                "text": "A client is receiving chemotherapy. How should the nurse handle the client's linens?",
+                "options": [
+                    "Place in regular linen hamper",
+                    "Double-bag in specially marked hazardous waste bags",
+                    "Dispose of in biohazard container",
+                    "Wash separately in hot water only"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Linens contaminated with chemotherapy require double-bagging in specially marked hazardous waste bags per facility protocol."
+            },
+            {
+                "id": 20,
+                "text": "Which factor increases a client's risk for falls?",
+                "options": [
+                    "Age under 50 years",
+                    "Taking diuretic medications",
+                    "Eating a high-protein diet",
+                    "Sleeping 8 hours per night"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Diuretics increase fall risk due to frequent urination (rushing to bathroom), orthostatic hypotension, and electrolyte imbalances."
+            },
+            {
+                "id": 21,
+                "text": "During a mass casualty event, which client should be triaged as yellow (delayed)?",
+                "options": [
+                    "Unresponsive with no pulse",
+                    "Open fracture of the femur, stable vital signs",
+                    "Severe respiratory distress",
+                    "Minor abrasions, walking"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Yellow = Delayed. Serious injuries but stable vital signs; can wait for treatment (e.g., fractures without hemorrhage)."
+            },
+            {
+                "id": 22,
+                "text": "A nurse is preparing to administer a medication and notices the client's ID band is missing. What should the nurse do?",
+                "options": [
+                    "Ask the client to state their name and proceed",
+                    "Check the room number and proceed",
+                    "Obtain a new ID band before administering medication",
+                    "Ask the roommate to verify the client's identity"
+                ],
+                "correctAnswer": 2,
+                "explanation": "Two identifiers are required. A new ID band must be obtained before medication administration to ensure correct patient identification."
+            },
+            {
+                "id": 23,
+                "text": "Which PPE is required for standard precautions when there is risk of blood splash?",
+                "options": [
+                    "Gloves only",
+                    "Gloves and gown",
+                    "Gloves, gown, mask, and eye protection",
+                    "N95 respirator and gloves"
+                ],
+                "correctAnswer": 2,
+                "explanation": "Risk of splash to face/eyes requires full PPE: gloves, gown, mask, and eye protection (goggles or face shield)."
+            },
+            {
+                "id": 24,
+                "text": "A client with varicella (chickenpox) requires which precautions?",
+                "options": [
+                    "Standard precautions only",
+                    "Contact and droplet precautions",
+                    "Airborne and contact precautions",
+                    "Droplet precautions only"
+                ],
+                "correctAnswer": 2,
+                "explanation": "Varicella requires both airborne (N95, negative pressure) and contact precautions due to airborne transmission and skin lesions."
+            },
+            {
+                "id": 25,
+                "text": "When should a nurse perform hand hygiene? Select the BEST answer.",
+                "options": [
+                    "Only before and after direct patient contact",
+                    "Before and after glove use, and between patients",
+                    "Only when hands are visibly soiled",
+                    "At the beginning and end of each shift"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Hand hygiene is required: before/after patient contact, before/after glove use, after touching contaminated surfaces, between patients."
             }
         ]
     },

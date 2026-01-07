@@ -5473,21 +5473,249 @@
         "id": 15,
         "episodeId": null,
         "title": "Practice Test #1",
-        "description": "Full Practice Exam 1",
+        "description": "Comprehensive Mixed Review - All NCLEX Categories",
         "questionCount": 20,
         "color": "from-violet-600 to-purple-900",
         "questions": [
             {
                 "id": 1,
-                "text": "Practice Test Question 1...",
+                "text": "A nurse is caring for four clients. Which client should be assessed first?",
                 "options": [
-                    "A",
-                    "B",
-                    "C",
-                    "D"
+                    "Client with diabetes, blood glucose 180 mg/dL",
+                    "Client post-op day 1 with pain 6/10",
+                    "Client with COPD, respiratory rate 28, using accessory muscles",
+                    "Client with hypertension, BP 150/90"
+                ],
+                "correctAnswer": 2,
+                "explanation": "Prioritize using ABCs. Respiratory distress (RR 28, accessory muscles) is life-threatening and requires immediate assessment. Other clients are stable."
+            },
+            {
+                "id": 2,
+                "text": "A client is receiving warfarin. Which food should the nurse teach the client to eat consistently?",
+                "options": [
+                    "Bananas",
+                    "Leafy green vegetables",
+                    "Red meat",
+                    "Dairy products"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Leafy greens contain vitamin K which affects warfarin. Eat consistently (not avoid) to maintain stable INR. Avoid drastic changes in vitamin K intake."
+            },
+            {
+                "id": 3,
+                "text": "A 2-year-old is hospitalized. Which toy is most appropriate?",
+                "options": [
+                    "Puzzle with small pieces",
+                    "Large building blocks",
+                    "Board game",
+                    "Coloring book with crayons"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Toddlers (1-3 years): Parallel play, large toys (choking hazard with small pieces). Building blocks promote development. Puzzles/board games for older children."
+            },
+            {
+                "id": 4,
+                "text": "A client with schizophrenia says 'The FBI is watching me through the TV.' What is the best response?",
+                "options": [
+                    "'That's not true, the FBI isn't watching you.'",
+                    "'I don't see anyone watching, but I understand you feel frightened.'",
+                    "'Why do you think that?'",
+                    "'Let me turn off the TV for you.'"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Acknowledge feelings without reinforcing delusion. Don't argue or agree with delusion. Provide reality orientation while showing empathy."
+            },
+            {
+                "id": 5,
+                "text": "A nurse is preparing to administer insulin. Which action demonstrates proper technique?",
+                "options": [
+                    "Massage injection site after administration",
+                    "Aspirate before injecting",
+                    "Rotate injection sites",
+                    "Inject at 90° angle in deltoid"
+                ],
+                "correctAnswer": 2,
+                "explanation": "Rotate injection sites to prevent lipodystrophy. Don't massage (affects absorption), don't aspirate (not needed for SubQ), use abdomen/thigh (not deltoid for insulin)."
+            },
+            {
+                "id": 6,
+                "text": "A client post-thyroidectomy develops numbness/tingling around mouth. What should the nurse do first?",
+                "options": [
+                    "Document the finding",
+                    "Check Trousseau's and Chvostek's signs",
+                    "Give pain medication",
+                    "Elevate head of bed"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Paresthesias suggest hypocalcemia (parathyroid damage during surgery). Check Trousseau's/Chvostek's, notify provider, prepare calcium gluconate IV."
+            },
+            {
+                "id": 7,
+                "text": "A nurse is delegating tasks. Which can be delegated to unlicensed assistive personnel (UAP)?",
+                "options": [
+                    "Assessing breath sounds",
+                    "Measuring vital signs on stable client",
+                    "Teaching diabetic diet",
+                    "Administering medications"
+                ],
+                "correctAnswer": 1,
+                "explanation": "UAP can do: vital signs, ADLs, ambulation, I&O on stable clients. Cannot: assess, teach, give meds, care for unstable clients. Nurses retain accountability."
+            },
+            {
+                "id": 8,
+                "text": "A pregnant client at 38 weeks has contractions every 3 minutes lasting 60 seconds. Cervix is 6 cm dilated. This is which stage of labor?",
+                "options": [
+                    "First stage, latent phase",
+                    "First stage, active phase",
+                    "Second stage",
+                    "Third stage"
+                ],
+                "correctAnswer": 1,
+                "explanation": "First stage active phase: 4-7 cm dilation, contractions every 2-5 min. Latent: 0-3 cm. Second: 10 cm to delivery. Third: delivery to placenta."
+            },
+            {
+                "id": 9,
+                "text": "A client with heart failure has gained 5 pounds in 2 days. What is the priority intervention?",
+                "options": [
+                    "Restrict sodium and fluids",
+                    "Encourage exercise",
+                    "Increase protein intake",
+                    "Administer oxygen"
                 ],
                 "correctAnswer": 0,
-                "explanation": "Explanation."
+                "explanation": "Rapid weight gain (5 lbs = 2.3 kg = ~2.3 L fluid) indicates fluid retention. Restrict sodium/fluids, give diuretics, monitor I&O, daily weights."
+            },
+            {
+                "id": 10,
+                "text": "A child with epiglottitis is in the emergency department. What is the priority?",
+                "options": [
+                    "Obtain throat culture",
+                    "Keep child calm, prepare for intubation",
+                    "Encourage oral fluids",
+                    "Place in supine position"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Epiglottitis: Airway emergency. Keep calm (crying worsens), upright position, don't examine throat (can cause obstruction), prepare for intubation. Give antibiotics."
+            },
+            {
+                "id": 11,
+                "text": "A client is taking phenytoin (Dilantin). Which finding should the nurse report?",
+                "options": [
+                    "Gingival hyperplasia",
+                    "Ataxia and nystagmus",
+                    "Drowsiness",
+                    "Nausea"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Ataxia and nystagmus indicate phenytoin toxicity. Report immediately, check drug level. Gingival hyperplasia is common side effect (good oral care). Drowsiness/nausea are mild."
+            },
+            {
+                "id": 12,
+                "text": "A client with pneumonia has a productive cough. Which position promotes drainage?",
+                "options": [
+                    "Supine",
+                    "High Fowler's",
+                    "Postural drainage position",
+                    "Prone"
+                ],
+                "correctAnswer": 2,
+                "explanation": "Postural drainage uses gravity to drain secretions from specific lung segments. Position depends on affected area. Also: percussion, vibration, cough/deep breathe."
+            },
+            {
+                "id": 13,
+                "text": "A nurse witnesses a client fall. What should be documented?",
+                "options": [
+                    "'Client was confused and fell'",
+                    "'Client found on floor, states slipped on water'",
+                    "'Client fell due to staff negligence'",
+                    "'Client appeared intoxicated and fell'"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Document objective facts and client statements. Avoid assumptions, blame, or judgmental language. Include assessment, interventions, notifications."
+            },
+            {
+                "id": 14,
+                "text": "A client with cirrhosis has asterixis. This indicates:",
+                "options": [
+                    "Improved liver function",
+                    "Hepatic encephalopathy",
+                    "Ascites",
+                    "Esophageal varices"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Asterixis (flapping tremor) indicates hepatic encephalopathy from elevated ammonia. Give lactulose, restrict protein, monitor mental status."
+            },
+            {
+                "id": 15,
+                "text": "A client is prescribed furosemide. Which lab value should the nurse monitor?",
+                "options": [
+                    "Sodium",
+                    "Potassium",
+                    "Calcium",
+                    "Magnesium"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Loop diuretics (furosemide) cause potassium loss. Monitor for hypokalemia. Also lose calcium, magnesium. Potassium-sparing diuretics (spironolactone) retain potassium."
+            },
+            {
+                "id": 16,
+                "text": "A newborn has Apgar score of 4 at 1 minute. What is the priority?",
+                "options": [
+                    "Document and continue observation",
+                    "Begin resuscitation measures",
+                    "Give to mother for bonding",
+                    "Administer vitamin K"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Apgar 0-3 = severe distress, 4-6 = moderate distress (needs intervention), 7-10 = good. Score 4: Begin resuscitation (stimulation, oxygen, possible PPV)."
+            },
+            {
+                "id": 17,
+                "text": "A client with tuberculosis is on isoniazid. Which supplement should be given?",
+                "options": [
+                    "Vitamin C",
+                    "Vitamin B6 (pyridoxine)",
+                    "Vitamin D",
+                    "Folic acid"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Isoniazid depletes vitamin B6, causing peripheral neuropathy. Give pyridoxine supplement. Also monitor liver function (hepatotoxicity risk)."
+            },
+            {
+                "id": 18,
+                "text": "A client with myasthenia gravis is experiencing muscle weakness. Which medication should be available?",
+                "options": [
+                    "Atropine",
+                    "Edrophonium (Tensilon)",
+                    "Epinephrine",
+                    "Naloxone"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Edrophonium (Tensilon test) differentiates myasthenic crisis (needs more anticholinesterase) from cholinergic crisis (too much medication). Have atropine ready for cholinergic crisis."
+            },
+            {
+                "id": 19,
+                "text": "A client post-mastectomy should avoid which activity on the affected side?",
+                "options": [
+                    "Gentle range of motion exercises",
+                    "Blood pressure measurements",
+                    "Wearing loose clothing",
+                    "Elevating arm"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Post-mastectomy: No BP, IV, injections, or blood draws on affected side (lymphedema risk). Do: ROM exercises, elevate arm, wear loose clothing, monitor for infection."
+            },
+            {
+                "id": 20,
+                "text": "A nurse is preparing to administer blood. Which action is correct?",
+                "options": [
+                    "Use 18-gauge needle, verify with two nurses, start within 30 minutes",
+                    "Use 22-gauge needle, verify with one nurse, start within 2 hours",
+                    "Warm blood in microwave before administration",
+                    "Infuse over 30 minutes"
+                ],
+                "correctAnswer": 0,
+                "explanation": "Blood administration: 18-20 gauge needle, two-nurse verification, start within 30 min of receiving, infuse over 2-4 hours max. Never microwave. Monitor for reactions."
             }
         ]
     },

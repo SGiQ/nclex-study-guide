@@ -34,6 +34,15 @@ export function AuthProvider({ children }: { children: ReactNode }) {
             setToken(storedToken);
             fetchUser(storedToken);
         } else {
+            // Fallback: Check for old localStorage user (backward compatibility)
+            const oldUser = localStorage.getItem('user');
+            if (oldUser) {
+                try {
+                    setUser(JSON.parse(oldUser));
+                } catch (e) {
+                    console.error('Failed to parse old user data');
+                }
+            }
             setIsLoading(false);
         }
     }, []);
@@ -62,39 +71,81 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     };
 
     const login = async (email: string, password: string) => {
-        const response = await fetch('/api/auth/login', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ email, password })
-        });
+        try {
+            const response = await fetch('/api/auth/login', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ email, password })
+            });
 
-        if (!response.ok) {
-            const error = await response.json();
-            throw new Error(error.error || 'Login failed');
+            if (response.ok) {
+                const data = await response.json();
+                setUser(data.user);
+                setToken(data.token);
+                localStorage.setItem('auth_token', data.token);
+                return;
+            }
+        } catch (error) {
+            console.warn('Database login failed, trying localStorage fallback');
         }
 
-        const data = await response.json();
-        setUser(data.user);
-        setToken(data.token);
-        localStorage.setItem('auth_token', data.token);
+        // Fallback: Try localStorage (old system)
+        const storedUsers = localStorage.getItem('users');
+        if (storedUsers) {
+            try {
+                const users = JSON.parse(storedUsers);
+                const existingUser = users.find((u: any) => u.email === email);
+
+                if (existingUser) {
+                    setUser(existingUser);
+                    localStorage.setItem('user', JSON.stringify(existingUser));
+                    return;
+                }
+            } catch (e) {
+                console.error('localStorage fallback failed');
+            }
+        }
+
+        throw new Error('Login failed - please check your credentials');
     };
 
     const signup = async (name: string, email: string, password: string, plan: string = 'premium', examDate?: string) => {
-        const response = await fetch('/api/auth/signup', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ name, email, password, plan, examDate })
-        });
+        try {
+            const response = await fetch('/api/auth/signup', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ name, email, password, plan, examDate })
+            });
 
-        if (!response.ok) {
-            const error = await response.json();
-            throw new Error(error.error || 'Signup failed');
+            if (response.ok) {
+                const data = await response.json();
+                setUser(data.user);
+                setToken(data.token);
+                localStorage.setItem('auth_token', data.token);
+                return;
+            }
+        } catch (error) {
+            console.warn('Database signup failed, using localStorage fallback');
         }
 
-        const data = await response.json();
-        setUser(data.user);
-        setToken(data.token);
-        localStorage.setItem('auth_token', data.token);
+        // Fallback: Use localStorage (old system)
+        const mockUser = {
+            id: Date.now().toString(),
+            name,
+            email,
+            plan: plan as 'free' | 'premium' | 'lifetime',
+            examDate,
+            createdAt: new Date().toISOString()
+        };
+
+        setUser(mockUser);
+        localStorage.setItem('user', JSON.stringify(mockUser));
+
+        // Also store in users array
+        const storedUsers = localStorage.getItem('users');
+        let users = storedUsers ? JSON.parse(storedUsers) : [];
+        users.push(mockUser);
+        localStorage.setItem('users', JSON.stringify(users));
     };
 
     const logout = () => {

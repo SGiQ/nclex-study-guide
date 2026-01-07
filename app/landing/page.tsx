@@ -2,10 +2,75 @@
 
 import Link from 'next/link';
 import { useState } from 'react';
+import { useAuth } from '@/app/context/AuthContext';
+import { useRouter } from 'next/navigation';
 
 export default function LandingPage() {
+    const router = useRouter();
+    const { signup, login } = useAuth();
     const [showSignup, setShowSignup] = useState(false);
     const [showLogin, setShowLogin] = useState(false);
+
+    // Signup form state
+    const [signupName, setSignupName] = useState('');
+    const [signupEmail, setSignupEmail] = useState('');
+    const [signupPassword, setSignupPassword] = useState('');
+    const [signupExamDate, setSignupExamDate] = useState('');
+    const [signupCoupon, setSignupCoupon] = useState('');
+
+    // Login form state
+    const [loginEmail, setLoginEmail] = useState('');
+    const [loginPassword, setLoginPassword] = useState('');
+
+    // Loading and error states
+    const [isLoading, setIsLoading] = useState(false);
+    const [error, setError] = useState('');
+
+    // Valid beta tester coupon codes (in production, validate server-side)
+    const validCoupons = {
+        'BETA2026': 'lifetime',
+        'NCLEX100': 'lifetime',
+        'EARLYBIRD': 'lifetime'
+    };
+
+    const handleSignup = async (e: React.FormEvent) => {
+        e.preventDefault();
+        setError('');
+        setIsLoading(true);
+
+        try {
+            await signup(signupName, signupEmail, signupPassword, signupExamDate);
+
+            // Check if coupon code is valid
+            if (signupCoupon && validCoupons[signupCoupon.toUpperCase() as keyof typeof validCoupons]) {
+                // Upgrade to lifetime
+                const user = JSON.parse(localStorage.getItem('user') || '{}');
+                user.plan = 'lifetime';
+                localStorage.setItem('user', JSON.stringify(user));
+            }
+
+            router.push('/dashboard');
+        } catch (err) {
+            setError('Failed to create account. Please try again.');
+        } finally {
+            setIsLoading(false);
+        }
+    };
+
+    const handleLogin = async (e: React.FormEvent) => {
+        e.preventDefault();
+        setError('');
+        setIsLoading(true);
+
+        try {
+            await login(loginEmail, loginPassword);
+            router.push('/dashboard');
+        } catch (err) {
+            setError('Invalid email or password.');
+        } finally {
+            setIsLoading(false);
+        }
+    };
 
     return (
         <div className="min-h-screen bg-gradient-to-b from-indigo-950 via-purple-950 to-black text-white">
@@ -391,17 +456,30 @@ export default function LandingPage() {
                         <div className="flex items-center justify-between mb-6">
                             <h3 className="text-2xl font-bold">Create Account</h3>
                             <button
-                                onClick={() => setShowSignup(false)}
+                                onClick={() => {
+                                    setShowSignup(false);
+                                    setError('');
+                                }}
                                 className="text-white/60 hover:text-white text-2xl"
                             >
                                 ×
                             </button>
                         </div>
-                        <form className="space-y-4">
+
+                        {error && (
+                            <div className="mb-4 p-3 rounded-lg bg-red-500/10 border border-red-500/30 text-red-400 text-sm">
+                                {error}
+                            </div>
+                        )}
+
+                        <form onSubmit={handleSignup} className="space-y-4">
                             <div>
                                 <label className="block text-sm font-medium mb-2">Full Name</label>
                                 <input
                                     type="text"
+                                    value={signupName}
+                                    onChange={(e) => setSignupName(e.target.value)}
+                                    required
                                     className="w-full px-4 py-3 rounded-lg bg-white/5 border border-white/10 focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 outline-none"
                                     placeholder="John Doe"
                                 />
@@ -410,6 +488,9 @@ export default function LandingPage() {
                                 <label className="block text-sm font-medium mb-2">Email</label>
                                 <input
                                     type="email"
+                                    value={signupEmail}
+                                    onChange={(e) => setSignupEmail(e.target.value)}
+                                    required
                                     className="w-full px-4 py-3 rounded-lg bg-white/5 border border-white/10 focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 outline-none"
                                     placeholder="you@example.com"
                                 />
@@ -418,6 +499,10 @@ export default function LandingPage() {
                                 <label className="block text-sm font-medium mb-2">Password</label>
                                 <input
                                     type="password"
+                                    value={signupPassword}
+                                    onChange={(e) => setSignupPassword(e.target.value)}
+                                    required
+                                    minLength={6}
                                     className="w-full px-4 py-3 rounded-lg bg-white/5 border border-white/10 focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 outline-none"
                                     placeholder="••••••••"
                                 />
@@ -426,14 +511,33 @@ export default function LandingPage() {
                                 <label className="block text-sm font-medium mb-2">NCLEX Exam Date (Optional)</label>
                                 <input
                                     type="date"
+                                    value={signupExamDate}
+                                    onChange={(e) => setSignupExamDate(e.target.value)}
                                     className="w-full px-4 py-3 rounded-lg bg-white/5 border border-white/10 focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 outline-none"
                                 />
                             </div>
+                            <div>
+                                <label className="block text-sm font-medium mb-2">
+                                    Coupon Code (Optional)
+                                    <span className="text-xs text-indigo-400 ml-2">Beta testers get lifetime access!</span>
+                                </label>
+                                <input
+                                    type="text"
+                                    value={signupCoupon}
+                                    onChange={(e) => setSignupCoupon(e.target.value)}
+                                    className="w-full px-4 py-3 rounded-lg bg-white/5 border border-white/10 focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 outline-none uppercase"
+                                    placeholder="BETA2026"
+                                />
+                                {signupCoupon && validCoupons[signupCoupon.toUpperCase() as keyof typeof validCoupons] && (
+                                    <p className="text-xs text-green-400 mt-1">✓ Valid coupon! You'll get lifetime access</p>
+                                )}
+                            </div>
                             <button
                                 type="submit"
-                                className="w-full py-3 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-lg font-bold hover:from-indigo-500 hover:to-purple-500 transition-all"
+                                disabled={isLoading}
+                                className="w-full py-3 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-lg font-bold hover:from-indigo-500 hover:to-purple-500 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
                             >
-                                Start 7-Day Free Trial
+                                {isLoading ? 'Creating Account...' : 'Start 7-Day Free Trial'}
                             </button>
                             <p className="text-center text-sm text-white/60">
                                 Already have an account?{' '}
@@ -442,6 +546,7 @@ export default function LandingPage() {
                                     onClick={() => {
                                         setShowSignup(false);
                                         setShowLogin(true);
+                                        setError('');
                                     }}
                                     className="text-indigo-400 hover:text-indigo-300"
                                 >
@@ -460,17 +565,30 @@ export default function LandingPage() {
                         <div className="flex items-center justify-between mb-6">
                             <h3 className="text-2xl font-bold">Welcome Back</h3>
                             <button
-                                onClick={() => setShowLogin(false)}
+                                onClick={() => {
+                                    setShowLogin(false);
+                                    setError('');
+                                }}
                                 className="text-white/60 hover:text-white text-2xl"
                             >
                                 ×
                             </button>
                         </div>
-                        <form className="space-y-4">
+
+                        {error && (
+                            <div className="mb-4 p-3 rounded-lg bg-red-500/10 border border-red-500/30 text-red-400 text-sm">
+                                {error}
+                            </div>
+                        )}
+
+                        <form onSubmit={handleLogin} className="space-y-4">
                             <div>
                                 <label className="block text-sm font-medium mb-2">Email</label>
                                 <input
                                     type="email"
+                                    value={loginEmail}
+                                    onChange={(e) => setLoginEmail(e.target.value)}
+                                    required
                                     className="w-full px-4 py-3 rounded-lg bg-white/5 border border-white/10 focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 outline-none"
                                     placeholder="you@example.com"
                                 />
@@ -479,6 +597,9 @@ export default function LandingPage() {
                                 <label className="block text-sm font-medium mb-2">Password</label>
                                 <input
                                     type="password"
+                                    value={loginPassword}
+                                    onChange={(e) => setLoginPassword(e.target.value)}
+                                    required
                                     className="w-full px-4 py-3 rounded-lg bg-white/5 border border-white/10 focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 outline-none"
                                     placeholder="••••••••"
                                 />
@@ -494,9 +615,10 @@ export default function LandingPage() {
                             </div>
                             <button
                                 type="submit"
-                                className="w-full py-3 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-lg font-bold hover:from-indigo-500 hover:to-purple-500 transition-all"
+                                disabled={isLoading}
+                                className="w-full py-3 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-lg font-bold hover:from-indigo-500 hover:to-purple-500 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
                             >
-                                Log In
+                                {isLoading ? 'Logging In...' : 'Log In'}
                             </button>
                             <p className="text-center text-sm text-white/60">
                                 Don't have an account?{' '}
@@ -505,6 +627,7 @@ export default function LandingPage() {
                                     onClick={() => {
                                         setShowLogin(false);
                                         setShowSignup(true);
+                                        setError('');
                                     }}
                                     className="text-indigo-400 hover:text-indigo-300"
                                 >

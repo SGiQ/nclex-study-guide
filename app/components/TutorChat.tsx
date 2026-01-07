@@ -85,9 +85,20 @@ export default function TutorChat() {
                 });
             }
 
-        } catch (error) {
-            console.error(error);
-            setMessages(prev => [...prev, { role: 'assistant', content: "I'm having trouble connecting to the Tutor right now. Please try again." }]);
+        } catch (error: any) {
+            console.error('Tutor chat error:', error);
+
+            let errorMsg = "I'm having trouble connecting to the Tutor right now.";
+
+            // Try to get more specific error info
+            if (error?.message) {
+                errorMsg += ` Error: ${error.message}`;
+            }
+
+            setMessages(prev => [...prev, {
+                role: 'assistant',
+                content: `${errorMsg}\n\nPlease check:\n- Your GEMINI_API_KEY is set correctly\n- The API key has Gemini API enabled\n- Try refreshing the page`
+            }]);
         } finally {
             setIsLoading(false);
         }

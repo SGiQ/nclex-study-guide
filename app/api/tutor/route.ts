@@ -109,8 +109,20 @@ ${bookContext}
             headers: { 'Content-Type': 'text/plain; charset=utf-8' },
         });
 
-    } catch (error) {
+    } catch (error: any) {
         console.error('AI Tutor Error:', error);
-        return NextResponse.json({ error: 'Failed to chat with tutor' }, { status: 500 });
+        console.error('Error details:', {
+            message: error?.message,
+            status: error?.status,
+            response: error?.response
+        });
+
+        // Return more helpful error message
+        const errorMessage = error?.message || 'Unknown error occurred';
+        return NextResponse.json({
+            error: 'Failed to chat with tutor',
+            details: errorMessage,
+            apiKeySet: !!apiKey
+        }, { status: 500 });
     }
 }

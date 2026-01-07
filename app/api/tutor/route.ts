@@ -58,7 +58,7 @@ export async function POST(req: NextRequest) {
         // 2. Initialize Gemini 1.5 Pro (Best for Long Context)
         const genAI = new GoogleGenerativeAI(apiKey);
         const model = genAI.getGenerativeModel({
-            model: 'gemini-1.5-pro',
+            model: 'gemini-1.5-pro-latest',  // Updated model name
             systemInstruction: `You are "TutorBot", an expert NCLEX-PN nursing tutor.
 You have access to the ENTIRE Review Book text below.
 ALWAYS answer questions based on the provided book context first.

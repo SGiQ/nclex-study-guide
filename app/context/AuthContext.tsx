@@ -52,12 +52,12 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
     const signup = async (name: string, email: string, password: string, examDate?: string) => {
         // TODO: Replace with actual API call
-        // For now, simulate signup
+        // For now, simulate signup with premium access (free trial)
         const mockUser: User = {
-            id: '1',
+            id: Date.now().toString(),
             name,
             email,
-            plan: 'free', // Start with free trial
+            plan: 'premium', // Give premium access during free trial
             examDate,
             createdAt: new Date().toISOString(),
         };

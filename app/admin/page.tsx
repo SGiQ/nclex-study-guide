@@ -141,6 +141,14 @@ export default function AdminPage() {
                     <h2 className="text-2xl font-bold mb-6">Content Management</h2>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                         <Link
+                            href="/admin/users"
+                            className="group flex flex-col items-center justify-center p-8 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 hover:border-purple-500/50 hover:bg-white/10 transition-all"
+                        >
+                            <span className="text-5xl mb-4 group-hover:scale-110 transition-transform">👥</span>
+                            <h3 className="text-lg font-bold text-white group-hover:text-purple-400 transition-colors">Users</h3>
+                            <p className="text-white/40 text-sm mt-2">View & Manage Users</p>
+                        </Link>
+                        <Link
                             href="/admin/quizzes"
                             className="group flex flex-col items-center justify-center p-8 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 hover:border-purple-500/50 hover:bg-white/10 transition-all"
                         >

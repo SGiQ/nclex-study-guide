@@ -1423,8 +1423,8 @@
         "id": 6,
         "episodeId": 7,
         "title": "Basic Care and Comfort",
-        "description": "Rehabilitation, Wound Care, Nutrition",
-        "questionCount": 5,
+        "description": "Wound Care, Pressure Injuries, Mobility, Elimination, Comfort",
+        "questionCount": 25,
         "color": "from-pink-600 to-rose-800",
         "questions": [
             {
@@ -1438,6 +1438,294 @@
                 ],
                 "correctAnswer": 1,
                 "explanation": "Turning every 2 hours is the standard of care to relieve pressure and preserve skin integrity."
+            },
+            {
+                "id": 2,
+                "text": "A pressure injury with full-thickness skin loss and visible subcutaneous fat is classified as:",
+                "options": [
+                    "Stage 1",
+                    "Stage 2",
+                    "Stage 3",
+                    "Stage 4"
+                ],
+                "correctAnswer": 2,
+                "explanation": "Stage 3 involves full-thickness skin loss with visible fat. Muscle, tendon, and bone are NOT visible (that's Stage 4)."
+            },
+            {
+                "id": 3,
+                "text": "Which nutrient is most important for wound healing?",
+                "options": [
+                    "Carbohydrates",
+                    "Protein",
+                    "Fats",
+                    "Fiber"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Protein is essential for tissue repair and wound healing. Vitamin C and zinc also support healing."
+            },
+            {
+                "id": 4,
+                "text": "A client has a Braden Scale score of 12. What does this indicate?",
+                "options": [
+                    "No risk for pressure injury",
+                    "Low risk",
+                    "Moderate risk",
+                    "High risk"
+                ],
+                "correctAnswer": 3,
+                "explanation": "Braden Scale: ≤12 = High risk, 13-14 = Moderate risk, 15-18 = Low risk, 19-23 = No risk. Lower scores = higher risk."
+            },
+            {
+                "id": 5,
+                "text": "When assisting a client to ambulate, where should the nurse stand?",
+                "options": [
+                    "In front of the client",
+                    "Behind the client",
+                    "On the client's weaker side",
+                    "On the client's stronger side"
+                ],
+                "correctAnswer": 2,
+                "explanation": "Stand on the weaker side to provide support and prevent falls. Use a gait belt for safety."
+            },
+            {
+                "id": 6,
+                "text": "A Stage 2 pressure injury is characterized by:",
+                "options": [
+                    "Intact skin with non-blanchable redness",
+                    "Partial-thickness skin loss with exposed dermis",
+                    "Full-thickness skin loss with visible fat",
+                    "Full-thickness tissue loss with exposed bone"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Stage 2 = Partial-thickness loss with exposed dermis, may appear as blister or shallow ulcer. Dermis is pink/red."
+            },
+            {
+                "id": 7,
+                "text": "Which intervention promotes bowel elimination in a bedridden client?",
+                "options": [
+                    "Restrict fluids",
+                    "Limit physical activity",
+                    "Increase fiber intake",
+                    "Administer laxatives daily"
+                ],
+                "correctAnswer": 2,
+                "explanation": "Increase fiber, fluids, and activity (as tolerated) to promote bowel elimination. Avoid routine laxative use."
+            },
+            {
+                "id": 8,
+                "text": "What is the priority when caring for a client with a urinary catheter?",
+                "options": [
+                    "Empty the drainage bag when full",
+                    "Keep the drainage bag below bladder level",
+                    "Irrigate the catheter daily",
+                    "Disconnect and reconnect tubing as needed"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Keep drainage bag below bladder level to prevent backflow and infection. Never disconnect tubing; maintain closed system."
+            },
+            {
+                "id": 9,
+                "text": "A client reports pain of 8/10. What is the priority intervention?",
+                "options": [
+                    "Document the pain level",
+                    "Administer prescribed pain medication",
+                    "Encourage deep breathing",
+                    "Reassess in 2 hours"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Severe pain (8/10) requires immediate intervention. Administer medication, then reassess effectiveness in 30-60 minutes."
+            },
+            {
+                "id": 10,
+                "text": "Which finding indicates a Stage 1 pressure injury?",
+                "options": [
+                    "Blister with clear fluid",
+                    "Non-blanchable redness on intact skin",
+                    "Shallow crater with pink tissue",
+                    "Deep wound with exposed muscle"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Stage 1 = Intact skin with non-blanchable redness (doesn't turn white when pressed). Skin may be warm and firm."
+            },
+            {
+                "id": 11,
+                "text": "When transferring a client from bed to wheelchair, what should the nurse do first?",
+                "options": [
+                    "Raise the bed to highest position",
+                    "Lock the wheelchair brakes",
+                    "Have the client stand immediately",
+                    "Lower the bed rails"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Lock wheelchair brakes first for safety. Then position wheelchair at 45° angle to bed on client's stronger side."
+            },
+            {
+                "id": 12,
+                "text": "A wound with red, moist tissue and granulation is in which phase of healing?",
+                "options": [
+                    "Inflammatory",
+                    "Proliferative",
+                    "Maturation",
+                    "Necrotic"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Proliferative phase shows granulation tissue (red, moist, bumpy). This is healthy healing tissue."
+            },
+            {
+                "id": 13,
+                "text": "Which assistive device provides the most support for ambulation?",
+                "options": [
+                    "Cane",
+                    "Crutches",
+                    "Walker",
+                    "Gait belt"
+                ],
+                "correctAnswer": 2,
+                "explanation": "Walker provides maximum stability and support. Cane provides least support; crutches require upper body strength."
+            },
+            {
+                "id": 14,
+                "text": "What is the correct technique for measuring a wound?",
+                "options": [
+                    "Measure only the length",
+                    "Measure length x width x depth",
+                    "Estimate the size visually",
+                    "Measure circumference only"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Measure length (head to toe), width (side to side), and depth (deepest point) in centimeters. Document consistently."
+            },
+            {
+                "id": 15,
+                "text": "A client with constipation should avoid which food?",
+                "options": [
+                    "Whole grains",
+                    "Fresh fruits",
+                    "Cheese",
+                    "Vegetables"
+                ],
+                "correctAnswer": 2,
+                "explanation": "Cheese and other dairy products can worsen constipation. Encourage high-fiber foods, fluids, and activity."
+            },
+            {
+                "id": 16,
+                "text": "Which intervention reduces the risk of catheter-associated UTI?",
+                "options": [
+                    "Change catheter daily",
+                    "Perform perineal care twice daily",
+                    "Irrigate catheter every shift",
+                    "Disconnect tubing to measure output"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Perineal care with soap and water reduces infection risk. Maintain closed system; don't irrigate routinely or disconnect tubing."
+            },
+            {
+                "id": 17,
+                "text": "A client uses a cane. Which instruction is correct?",
+                "options": [
+                    "Hold cane on weaker side",
+                    "Hold cane on stronger side",
+                    "Move cane and stronger leg together",
+                    "Keep cane 12 inches from body"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Hold cane on stronger side. Move cane and weaker leg together, then stronger leg. Cane should be 6 inches to side."
+            },
+            {
+                "id": 18,
+                "text": "What is the purpose of a pressure-relieving mattress?",
+                "options": [
+                    "Increase comfort only",
+                    "Distribute pressure evenly to prevent skin breakdown",
+                    "Keep the client warm",
+                    "Prevent falls"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Pressure-relieving devices (foam, air, gel mattresses) distribute pressure to prevent pressure injuries in high-risk clients."
+            },
+            {
+                "id": 19,
+                "text": "Which complementary therapy is appropriate for pain management?",
+                "options": [
+                    "Guided imagery",
+                    "Withholding pain medication",
+                    "Ignoring pain reports",
+                    "Restricting movement"
+                ],
+                "correctAnswer": 0,
+                "explanation": "Complementary therapies (guided imagery, music, massage, heat/cold) can enhance pain relief when used with medications."
+            },
+            {
+                "id": 20,
+                "text": "A client has a Stage 4 pressure injury. What is visible in the wound?",
+                "options": [
+                    "Dermis only",
+                    "Subcutaneous fat only",
+                    "Muscle, tendon, or bone",
+                    "Intact skin with redness"
+                ],
+                "correctAnswer": 2,
+                "explanation": "Stage 4 = Full-thickness tissue loss with exposed muscle, tendon, or bone. High risk for osteomyelitis."
+            },
+            {
+                "id": 21,
+                "text": "When should postmortem care be performed?",
+                "options": [
+                    "Immediately after death is pronounced",
+                    "After family leaves",
+                    "Within 24 hours",
+                    "Only if family requests"
+                ],
+                "correctAnswer": 0,
+                "explanation": "Perform postmortem care promptly after death is pronounced. Allow family time with body first if desired, respecting cultural practices."
+            },
+            {
+                "id": 22,
+                "text": "A client is on bedrest. Which intervention prevents complications?",
+                "options": [
+                    "Keep client flat at all times",
+                    "Perform range of motion exercises",
+                    "Restrict fluid intake",
+                    "Limit position changes"
+                ],
+                "correctAnswer": 1,
+                "explanation": "ROM exercises prevent contractures and maintain joint mobility. Also turn q2h, encourage deep breathing, and prevent DVT."
+            },
+            {
+                "id": 23,
+                "text": "Which wound requires a sterile dressing change?",
+                "options": [
+                    "Surgical incision",
+                    "Pressure injury Stage 1",
+                    "Intact blister",
+                    "Superficial abrasion"
+                ],
+                "correctAnswer": 0,
+                "explanation": "Surgical incisions require sterile technique. Chronic wounds (pressure injuries) use clean technique after initial healing."
+            },
+            {
+                "id": 24,
+                "text": "A client reports bladder fullness but cannot void. What is the priority?",
+                "options": [
+                    "Encourage fluids",
+                    "Assess for bladder distention",
+                    "Document and reassess in 4 hours",
+                    "Restrict fluids"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Assess for urinary retention by palpating bladder. May need catheterization if unable to void and bladder is distended."
+            },
+            {
+                "id": 25,
+                "text": "What is the correct position for a client receiving an enema?",
+                "options": [
+                    "Supine",
+                    "Left lateral (Sims')",
+                    "Right lateral",
+                    "Prone"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Left lateral (Sims') position allows enema solution to flow along natural curve of sigmoid colon and rectum."
             }
         ]
     },

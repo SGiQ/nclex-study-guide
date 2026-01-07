@@ -13,6 +13,7 @@ import { ThemeProvider } from "./context/ThemeContext";
 import { StreakProvider } from '@/app/context/StreakContext';
 import { LibraryProvider } from '@/app/context/LibraryContext';
 import { AuthProvider } from '@/app/context/AuthContext';
+import { SRSProvider } from '@/app/context/SRSContext';
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -47,21 +48,23 @@ export default function RootLayout({
       >
         <ThemeProvider>
           <AuthProvider>
-            <StreakProvider>
-              <PlayerProvider>
-                <NotesProvider>
-                  <LibraryProvider>
-                    <ProgressProvider>
-                      {children}
-                      <Player />
-                      <TutorChat />
-                      <NotesOverlay />
-                      <GlobalNavigation />
-                    </ProgressProvider>
-                  </LibraryProvider>
-                </NotesProvider>
-              </PlayerProvider>
-            </StreakProvider>
+            <SRSProvider>
+              <StreakProvider>
+                <PlayerProvider>
+                  <NotesProvider>
+                    <LibraryProvider>
+                      <ProgressProvider>
+                        {children}
+                        <Player />
+                        <TutorChat />
+                        <NotesOverlay />
+                        <GlobalNavigation />
+                      </ProgressProvider>
+                    </LibraryProvider>
+                  </NotesProvider>
+                </PlayerProvider>
+              </StreakProvider>
+            </SRSProvider>
           </AuthProvider>
         </ThemeProvider>
       </body>

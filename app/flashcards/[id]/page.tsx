@@ -4,11 +4,13 @@ import { useState, useEffect, use } from 'react';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import flashcardsData from '@/app/data/flashcards.json';
+import { useSRS } from '@/app/context/SRSContext';
 
 export default function FlashcardRunnerPage({ params }: { params: Promise<{ id: string }> }) {
     const { id } = use(params);
     const episodeId = parseInt(id);
     const flashcardSet = flashcardsData.find((f) => f.episodeId === episodeId);
+    const { initializeCard, recordReview, getCardStatus } = useSRS();
 
     if (!flashcardSet) {
         return (
@@ -33,10 +35,18 @@ export default function FlashcardRunnerPage({ params }: { params: Promise<{ id: 
 
     const currentCard = flashcardSet.cards[currentIndex];
     const totalCards = flashcardSet.cards.length;
+    const cardId = `flashcard-${episodeId}-${currentCard.id}`;
+
+    // Initialize card in SRS system
+    useEffect(() => {
+        initializeCard(cardId, 'flashcard', episodeId);
+    }, [cardId, episodeId]);
+
+    const cardStatus = getCardStatus(cardId);
 
     const handleExplain = async () => {
         setShowExplain(true);
-        if (explanation) return; // Already have it for this card? (Actually we should reset on next card)
+        if (explanation) return;
 
         setLoadingExplain(true);
         try {
@@ -62,6 +72,12 @@ export default function FlashcardRunnerPage({ params }: { params: Promise<{ id: 
         }
     };
 
+    // Handle SRS difficulty rating
+    const handleDifficulty = (difficulty: 'again' | 'hard' | 'good' | 'easy') => {
+        recordReview(cardId, difficulty);
+        nextCard();
+    };
+
     // Keyboard Navigation
     useEffect(() => {
         const handleKeyDown = (e: KeyboardEvent) => {
@@ -72,12 +88,18 @@ export default function FlashcardRunnerPage({ params }: { params: Promise<{ id: 
                 nextCard();
             } else if (e.code === 'ArrowLeft') {
                 prevCard();
+            } else if (isFlipped) {
+                // SRS shortcuts when card is flipped
+                if (e.code === 'Digit1') handleDifficulty('again');
+                else if (e.code === 'Digit2') handleDifficulty('hard');
+                else if (e.code === 'Digit3') handleDifficulty('good');
+                else if (e.code === 'Digit4') handleDifficulty('easy');
             }
         };
 
         window.addEventListener('keydown', handleKeyDown);
         return () => window.removeEventListener('keydown', handleKeyDown);
-    }, [currentIndex]);
+    }, [currentIndex, isFlipped]);
 
     // Reset state on card change
     useEffect(() => {
@@ -88,18 +110,32 @@ export default function FlashcardRunnerPage({ params }: { params: Promise<{ id: 
 
     const nextCard = () => {
         if (currentIndex < totalCards - 1) {
-            // setIsFlipped(false); // Handled by effect
-            // setShowExplain(false); // Handled by effect
             setTimeout(() => setCurrentIndex(prev => prev + 1), 150);
         }
     };
 
     const prevCard = () => {
         if (currentIndex > 0) {
-            // setIsFlipped(false);
-            // setShowExplain(false);
             setTimeout(() => setCurrentIndex(prev => prev - 1), 150);
         }
+    };
+
+    // Get status badge
+    const getStatusBadge = () => {
+        if (!cardStatus) return null;
+
+        const badges = {
+            new: { text: 'New', color: 'bg-blue-500/10 text-blue-500 border-blue-500/20' },
+            learning: { text: 'Learning', color: 'bg-yellow-500/10 text-yellow-500 border-yellow-500/20' },
+            mastered: { text: 'Mastered', color: 'bg-green-500/10 text-green-500 border-green-500/20' }
+        };
+
+        const badge = badges[cardStatus.status];
+        return (
+            <div className={`px-2 py-1 rounded-full text-[10px] font-bold border ${badge.color}`}>
+                {badge.text}
+            </div>
+        );
     };
 
     return (
@@ -110,8 +146,11 @@ export default function FlashcardRunnerPage({ params }: { params: Promise<{ id: 
                 <Link href="/" className="text-foreground/50 hover:text-foreground transition-colors text-sm font-medium">
                     ✕ Quit
                 </Link>
-                <div className="text-xs font-bold text-foreground/30 uppercase tracking-widest">
-                    {flashcardSet.title}
+                <div className="flex items-center gap-2">
+                    <div className="text-xs font-bold text-foreground/30 uppercase tracking-widest">
+                        {flashcardSet.title}
+                    </div>
+                    {getStatusBadge()}
                 </div>
                 <div className="w-8"></div> {/* Spacer for centering */}
             </div>
@@ -173,16 +212,53 @@ export default function FlashcardRunnerPage({ params }: { params: Promise<{ id: 
                                     {currentCard.back}
                                 </p>
 
-                                {/* Actions on Back */}
-                                <div className="absolute bottom-6 sm:bottom-8 flex gap-4" onClick={(e) => e.stopPropagation()}>
+                                {/* SRS Difficulty Buttons */}
+                                <div className="absolute bottom-6 sm:bottom-8 w-full px-6" onClick={(e) => e.stopPropagation()}>
+                                    <div className="text-[10px] text-foreground/40 text-center mb-2 font-bold tracking-widest">
+                                        HOW WELL DID YOU KNOW THIS?
+                                    </div>
+                                    <div className="grid grid-cols-4 gap-2">
+                                        <button
+                                            onClick={() => handleDifficulty('again')}
+                                            className="px-2 py-2 rounded-lg bg-red-500/10 text-red-500 hover:bg-red-500/20 text-xs font-bold transition-colors border border-red-500/20"
+                                        >
+                                            <div>Again</div>
+                                            <div className="text-[9px] opacity-60">&lt;1m</div>
+                                        </button>
+                                        <button
+                                            onClick={() => handleDifficulty('hard')}
+                                            className="px-2 py-2 rounded-lg bg-orange-500/10 text-orange-500 hover:bg-orange-500/20 text-xs font-bold transition-colors border border-orange-500/20"
+                                        >
+                                            <div>Hard</div>
+                                            <div className="text-[9px] opacity-60">&lt;10m</div>
+                                        </button>
+                                        <button
+                                            onClick={() => handleDifficulty('good')}
+                                            className="px-2 py-2 rounded-lg bg-green-500/10 text-green-500 hover:bg-green-500/20 text-xs font-bold transition-colors border border-green-500/20"
+                                        >
+                                            <div>Good</div>
+                                            <div className="text-[9px] opacity-60">1d</div>
+                                        </button>
+                                        <button
+                                            onClick={() => handleDifficulty('easy')}
+                                            className="px-2 py-2 rounded-lg bg-blue-500/10 text-blue-500 hover:bg-blue-500/20 text-xs font-bold transition-colors border border-blue-500/20"
+                                        >
+                                            <div>Easy</div>
+                                            <div className="text-[9px] opacity-60">4d</div>
+                                        </button>
+                                    </div>
+                                    <div className="text-[9px] text-foreground/30 text-center mt-2">
+                                        Press 1-4 or click
+                                    </div>
+                                </div>
+
+                                {/* Explain Button */}
+                                <div className="absolute top-6 right-6" onClick={(e) => e.stopPropagation()}>
                                     <button
-                                        onClick={(e) => {
-                                            e.stopPropagation(); // Stop flip
-                                            handleExplain();
-                                        }}
-                                        className="px-3 py-1.5 sm:px-4 sm:py-2 rounded-full bg-indigo-500/10 text-indigo-500 hover:bg-indigo-500/20 text-xs sm:text-sm font-bold flex items-center gap-2 transition-colors border border-indigo-500/10"
+                                        onClick={handleExplain}
+                                        className="px-3 py-1.5 rounded-full bg-indigo-500/10 text-indigo-500 hover:bg-indigo-500/20 text-xs font-bold flex items-center gap-2 transition-colors border border-indigo-500/10"
                                     >
-                                        <span className="text-base sm:text-lg">✨</span> Explain
+                                        <span className="text-base">✨</span> Explain
                                     </button>
                                 </div>
                             </div>

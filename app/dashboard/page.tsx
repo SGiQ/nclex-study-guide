@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { useAuth } from '@/app/context/AuthContext';
 import { useStreak } from '@/app/context/StreakContext';
 import { useProgress } from '@/app/context/ProgressContext';
+import { useSRS } from '@/app/context/SRSContext';
 import episodes from '@/app/data/episodes.json';
 import { useRouter } from 'next/navigation';
 
@@ -11,6 +12,7 @@ export default function DashboardPage() {
     const { user, logout } = useAuth();
     const { currentStreak, hasCheckedInToday } = useStreak();
     const { quizResults } = useProgress();
+    const { getDueCount, getMasteredCount, getLearningCount } = useSRS();
     const router = useRouter();
 
     // Redirect if not logged in
@@ -112,6 +114,50 @@ export default function DashboardPage() {
                         </Link>
                     </div>
                 )}
+
+                {/* SRS Daily Review Widget */}
+                <div className="mb-6 animate-slide-up">
+                    <div className="flex items-center justify-between mb-2 px-1">
+                        <h2 className="text-sm font-bold text-indigo-400 flex items-center gap-2">
+                            <span>📚</span> Daily Reviews
+                        </h2>
+                        <Link href="/reviews" className="text-[10px] uppercase font-bold text-indigo-400/70 tracking-wider hover:text-indigo-400">
+                            View All →
+                        </Link>
+                    </div>
+
+                    <Link
+                        href="/reviews"
+                        className="group block relative overflow-hidden rounded-2xl bg-gradient-to-br from-indigo-900/40 to-purple-900/40 border border-indigo-500/20 p-4 transition-all hover:border-indigo-500/40"
+                    >
+                        <div className="flex items-center justify-between mb-3">
+                            <div>
+                                <div className="text-3xl font-black text-indigo-400">{getDueCount()}</div>
+                                <div className="text-xs text-indigo-400/70">Cards Due Today</div>
+                            </div>
+                            <div className="h-12 w-12 rounded-xl bg-indigo-500/20 flex items-center justify-center text-indigo-400 group-hover:scale-110 transition-transform">
+                                🔄
+                            </div>
+                        </div>
+
+                        <div className="flex items-center gap-4 text-xs">
+                            <div>
+                                <span className="text-green-400 font-bold">{getMasteredCount()}</span>
+                                <span className="text-foreground/40"> Mastered</span>
+                            </div>
+                            <div>
+                                <span className="text-yellow-400 font-bold">{getLearningCount()}</span>
+                                <span className="text-foreground/40"> Learning</span>
+                            </div>
+                        </div>
+
+                        {getDueCount() > 0 && (
+                            <div className="mt-3 text-xs text-indigo-400 font-bold">
+                                → Start Review Session
+                            </div>
+                        )}
+                    </Link>
+                </div>
 
                 <div className="grid grid-cols-2 gap-4">
                     {cards.map((c) => {

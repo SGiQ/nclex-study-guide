@@ -10,7 +10,7 @@ import quizzes from '@/app/data/quizzes.json';
 export default function AnalyticsPage() {
     const { quizResults } = useProgress();
     const { getMasteredCount, getLearningCount, getNewCount, reviewData } = useSRS();
-    const { currentStreak, totalDaysStudied } = useStreak();
+    const { currentStreak } = useStreak();
 
     // Calculate Quiz Performance (40% weight)
     const quizScores = Object.values(quizResults);

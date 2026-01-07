@@ -2652,22 +2652,550 @@
     {
         "id": 9,
         "episodeId": 10,
-        "title": "Reduction of Risk Part 1",
-        "description": "Diagnostics, Monitoring, CV Patho",
-        "questionCount": 5,
+        "title": "Reduction of Risk & Cardiovascular",
+        "description": "Lab Values, Diagnostics, CV Monitoring, MI, CHF, Stroke",
+        "questionCount": 45,
         "color": "from-red-600 to-red-900",
         "questions": [
             {
                 "id": 1,
-                "text": "Placeholder Question",
+                "text": "What is the normal range for serum potassium?",
                 "options": [
-                    "A",
-                    "B",
-                    "C",
-                    "D"
+                    "3.5-5.0 mEq/L",
+                    "135-145 mEq/L",
+                    "8.5-10.5 mg/dL",
+                    "95-105 mEq/L"
                 ],
                 "correctAnswer": 0,
-                "explanation": "Content to be added."
+                "explanation": "Normal potassium: 3.5-5.0 mEq/L. <3.5 = hypokalemia, >5.0 = hyperkalemia. Critical values require immediate intervention."
+            },
+            {
+                "id": 2,
+                "text": "A client with chest pain has elevated troponin levels. This indicates:",
+                "options": [
+                    "Normal finding",
+                    "Myocardial infarction",
+                    "Kidney failure",
+                    "Liver disease"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Elevated troponin (cardiac enzyme) indicates myocardial damage/MI. Troponin is more specific than CK-MB for cardiac injury."
+            },
+            {
+                "id": 3,
+                "text": "What is the normal range for hemoglobin in adult males?",
+                "options": [
+                    "12-16 g/dL",
+                    "14-18 g/dL",
+                    "10-12 g/dL",
+                    "18-22 g/dL"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Normal Hgb: Males 14-18 g/dL, Females 12-16 g/dL. Low Hgb indicates anemia; high Hgb may indicate polycythemia or dehydration."
+            },
+            {
+                "id": 4,
+                "text": "A client is experiencing an acute MI. What is the priority intervention?",
+                "options": [
+                    "Administer aspirin",
+                    "Obtain ECG",
+                    "Administer oxygen",
+                    "All of the above"
+                ],
+                "correctAnswer": 3,
+                "explanation": "MONA protocol for MI: Morphine (pain), Oxygen (if SpO2 <90%), Nitroglycerin (chest pain), Aspirin (antiplatelet). Also obtain 12-lead ECG immediately."
+            },
+            {
+                "id": 5,
+                "text": "What is the therapeutic INR range for a client on warfarin?",
+                "options": [
+                    "0.8-1.2",
+                    "2-3",
+                    "5-7",
+                    "10-12"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Therapeutic INR: 2-3 for most indications (may be 2.5-3.5 for mechanical valves). <2 = subtherapeutic, >4 = bleeding risk."
+            },
+            {
+                "id": 6,
+                "text": "A client with heart failure has crackles in lungs and peripheral edema. What medication is priority?",
+                "options": [
+                    "Antibiotic",
+                    "Diuretic",
+                    "Bronchodilator",
+                    "Anticoagulant"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Diuretics (furosemide) reduce fluid overload in CHF. Also use ACE inhibitors, beta blockers, and monitor daily weights."
+            },
+            {
+                "id": 7,
+                "text": "What is the normal range for serum sodium?",
+                "options": [
+                    "3.5-5.0 mEq/L",
+                    "95-105 mEq/L",
+                    "135-145 mEq/L",
+                    "8.5-10.5 mg/dL"
+                ],
+                "correctAnswer": 2,
+                "explanation": "Normal sodium: 135-145 mEq/L. <135 = hyponatremia, >145 = hypernatremia. Affects neurological and cardiac function."
+            },
+            {
+                "id": 8,
+                "text": "A client post-cardiac catheterization should be monitored for:",
+                "options": [
+                    "Bleeding at insertion site",
+                    "Distal pulses",
+                    "Allergic reaction to contrast",
+                    "All of the above"
+                ],
+                "correctAnswer": 3,
+                "explanation": "Post-cath: Monitor insertion site for bleeding/hematoma, check distal pulses, keep leg straight 4-6 hours, watch for contrast reaction and kidney function."
+            },
+            {
+                "id": 9,
+                "text": "What is the normal range for platelet count?",
+                "options": [
+                    "4,500-11,000/mm³",
+                    "150,000-400,000/mm³",
+                    "12-16 g/dL",
+                    "4.5-5.5 million/mm³"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Normal platelets: 150,000-400,000/mm³. <50,000 = bleeding risk, <20,000 = spontaneous bleeding risk. Implement bleeding precautions."
+            },
+            {
+                "id": 10,
+                "text": "A client with hypertension should limit sodium intake to:",
+                "options": [
+                    "No restriction needed",
+                    "Less than 2,300 mg/day",
+                    "5,000 mg/day",
+                    "10,000 mg/day"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Recommended sodium: <2,300 mg/day for general population, <1,500 mg/day for hypertension. DASH diet emphasizes fruits, vegetables, low-fat dairy."
+            },
+            {
+                "id": 11,
+                "text": "What is a normal fasting blood glucose level?",
+                "options": [
+                    "70-100 mg/dL",
+                    "100-125 mg/dL",
+                    "126-200 mg/dL",
+                    "Above 200 mg/dL"
+                ],
+                "correctAnswer": 0,
+                "explanation": "Normal fasting glucose: 70-100 mg/dL. 100-125 = prediabetes, ≥126 = diabetes. Random glucose ≥200 with symptoms also indicates diabetes."
+            },
+            {
+                "id": 12,
+                "text": "A client is having a stroke. What assessment tool should the nurse use?",
+                "options": [
+                    "APGAR score",
+                    "Glasgow Coma Scale",
+                    "FAST assessment",
+                    "Braden Scale"
+                ],
+                "correctAnswer": 2,
+                "explanation": "FAST: Face drooping, Arm weakness, Speech difficulty, Time to call 911. Quick stroke screening tool. Also use NIH Stroke Scale for detailed assessment."
+            },
+            {
+                "id": 13,
+                "text": "What is the normal range for serum creatinine?",
+                "options": [
+                    "0.6-1.2 mg/dL",
+                    "8-20 mg/dL",
+                    "3.5-5.0 mEq/L",
+                    "135-145 mEq/L"
+                ],
+                "correctAnswer": 0,
+                "explanation": "Normal creatinine: 0.6-1.2 mg/dL. Elevated creatinine indicates kidney dysfunction. Also monitor BUN (normal 8-20 mg/dL)."
+            },
+            {
+                "id": 14,
+                "text": "A client with atrial fibrillation is at risk for:",
+                "options": [
+                    "Myocardial infarction",
+                    "Stroke",
+                    "Pneumonia",
+                    "Diabetes"
+                ],
+                "correctAnswer": 1,
+                "explanation": "A-fib causes blood pooling in atria, forming clots that can embolize to brain (stroke). Anticoagulation (warfarin, DOACs) prevents stroke."
+            },
+            {
+                "id": 15,
+                "text": "What is the normal range for WBC count?",
+                "options": [
+                    "4,500-11,000/mm³",
+                    "150,000-400,000/mm³",
+                    "12-16 g/dL",
+                    "3.5-5.0 mEq/L"
+                ],
+                "correctAnswer": 0,
+                "explanation": "Normal WBC: 4,500-11,000/mm³. <4,500 = leukopenia (infection risk), >11,000 = leukocytosis (infection, inflammation, leukemia)."
+            },
+            {
+                "id": 16,
+                "text": "A client post-MI should avoid which activity?",
+                "options": [
+                    "Walking",
+                    "Valsalva maneuver (straining)",
+                    "Deep breathing",
+                    "Light stretching"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Avoid Valsalva maneuver (bearing down, straining) - increases cardiac workload. Prevent constipation with stool softeners. Gradual activity increase."
+            },
+            {
+                "id": 17,
+                "text": "What is the normal range for serum calcium?",
+                "options": [
+                    "3.5-5.0 mEq/L",
+                    "8.5-10.5 mg/dL",
+                    "135-145 mEq/L",
+                    "95-105 mEq/L"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Normal calcium: 8.5-10.5 mg/dL. Hypocalcemia causes tetany, seizures. Hypercalcemia causes kidney stones, confusion, cardiac arrhythmias."
+            },
+            {
+                "id": 18,
+                "text": "A client with left-sided heart failure will have:",
+                "options": [
+                    "Peripheral edema",
+                    "Pulmonary congestion",
+                    "Jugular vein distention",
+                    "Hepatomegaly"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Left-sided HF: Pulmonary congestion (crackles, dyspnea, orthopnea). Right-sided HF: Peripheral edema, JVD, hepatomegaly, ascites."
+            },
+            {
+                "id": 19,
+                "text": "What is a critical low hemoglobin value requiring immediate intervention?",
+                "options": [
+                    "12 g/dL",
+                    "10 g/dL",
+                    "7 g/dL",
+                    "15 g/dL"
+                ],
+                "correctAnswer": 2,
+                "explanation": "Hgb <7 g/dL is critical - may need transfusion. Symptoms: fatigue, pallor, tachycardia, dyspnea. Notify provider immediately."
+            },
+            {
+                "id": 20,
+                "text": "A client is prescribed nitroglycerin for angina. What should the nurse teach?",
+                "options": [
+                    "Take up to 3 doses, 5 minutes apart",
+                    "Store in clear plastic container",
+                    "Headache means it's not working",
+                    "Swallow tablets whole"
+                ],
+                "correctAnswer": 0,
+                "explanation": "Sublingual NTG: Take 1 dose, repeat q5min x3 if needed. Call 911 if pain persists after 3 doses. Store in dark bottle, causes headache (normal)."
+            },
+            {
+                "id": 21,
+                "text": "What is the normal range for serum magnesium?",
+                "options": [
+                    "1.5-2.5 mEq/L",
+                    "3.5-5.0 mEq/L",
+                    "8.5-10.5 mg/dL",
+                    "135-145 mEq/L"
+                ],
+                "correctAnswer": 0,
+                "explanation": "Normal magnesium: 1.5-2.5 mEq/L. Hypomagnesemia causes tremors, arrhythmias. Hypermagnesemia causes decreased reflexes, respiratory depression."
+            },
+            {
+                "id": 22,
+                "text": "A client with peripheral arterial disease should:",
+                "options": [
+                    "Elevate legs above heart",
+                    "Keep legs in dependent position",
+                    "Apply heat to legs",
+                    "Wear tight socks"
+                ],
+                "correctAnswer": 1,
+                "explanation": "PAD: Keep legs dependent (down) to improve arterial flow. Avoid crossing legs, tight clothing. Elevate legs for venous disease, not arterial."
+            },
+            {
+                "id": 23,
+                "text": "What is the normal range for HbA1c?",
+                "options": [
+                    "Less than 5.7%",
+                    "5.7-6.4%",
+                    "6.5% or higher",
+                    "10% or higher"
+                ],
+                "correctAnswer": 0,
+                "explanation": "Normal HbA1c: <5.7%. 5.7-6.4% = prediabetes, ≥6.5% = diabetes. HbA1c reflects average glucose over 2-3 months."
+            },
+            {
+                "id": 24,
+                "text": "A client is receiving thrombolytic therapy for stroke. What is the priority assessment?",
+                "options": [
+                    "Blood pressure",
+                    "Temperature",
+                    "Bowel sounds",
+                    "Appetite"
+                ],
+                "correctAnswer": 0,
+                "explanation": "Monitor BP closely with thrombolytics - keep systolic <180 mmHg to prevent hemorrhagic stroke. Also monitor for bleeding (major complication)."
+            },
+            {
+                "id": 25,
+                "text": "What is the normal range for BUN (blood urea nitrogen)?",
+                "options": [
+                    "0.6-1.2 mg/dL",
+                    "8-20 mg/dL",
+                    "70-100 mg/dL",
+                    "135-145 mEq/L"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Normal BUN: 8-20 mg/dL. Elevated BUN indicates kidney dysfunction or dehydration. BUN:Creatinine ratio helps differentiate causes."
+            },
+            {
+                "id": 26,
+                "text": "A client with deep vein thrombosis should:",
+                "options": [
+                    "Massage the affected leg",
+                    "Keep leg elevated and immobile initially",
+                    "Apply heat immediately",
+                    "Walk vigorously"
+                ],
+                "correctAnswer": 1,
+                "explanation": "DVT: Elevate leg, bed rest initially, anticoagulation. Never massage (can dislodge clot causing PE). Gradual ambulation after anticoagulation started."
+            },
+            {
+                "id": 27,
+                "text": "What is a normal PT (prothrombin time)?",
+                "options": [
+                    "11-13 seconds",
+                    "25-35 seconds",
+                    "60-80 seconds",
+                    "2-3 (INR)"
+                ],
+                "correctAnswer": 0,
+                "explanation": "Normal PT: 11-13 seconds. PT/INR monitors warfarin. aPTT (25-35 sec) monitors heparin. Don't confuse the two."
+            },
+            {
+                "id": 28,
+                "text": "A client with heart failure should be taught to:",
+                "options": [
+                    "Weigh daily at same time",
+                    "Increase salt intake",
+                    "Limit fluid to 500 mL/day",
+                    "Stop medications if feeling better"
+                ],
+                "correctAnswer": 0,
+                "explanation": "Daily weights detect fluid retention (report gain of 2-3 lbs in 1 day or 5 lbs in 1 week). Restrict sodium and fluids as ordered."
+            },
+            {
+                "id": 29,
+                "text": "What is the normal range for serum albumin?",
+                "options": [
+                    "3.5-5.0 g/dL",
+                    "8-20 mg/dL",
+                    "135-145 mEq/L",
+                    "0.6-1.2 mg/dL"
+                ],
+                "correctAnswer": 0,
+                "explanation": "Normal albumin: 3.5-5.0 g/dL. Low albumin indicates malnutrition, liver disease, or kidney disease. Affects wound healing and fluid balance."
+            },
+            {
+                "id": 30,
+                "text": "A client post-pacemaker insertion should avoid:",
+                "options": [
+                    "Microwave ovens",
+                    "MRI machines",
+                    "Cell phones",
+                    "Television"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Avoid MRI (can damage pacemaker). Modern pacemakers are safe with microwaves, cell phones. Avoid raising arm above shoulder on pacemaker side for 4-6 weeks."
+            },
+            {
+                "id": 31,
+                "text": "What is the normal range for aPTT (activated partial thromboplastin time)?",
+                "options": [
+                    "11-13 seconds",
+                    "25-35 seconds",
+                    "60-80 seconds (therapeutic on heparin)",
+                    "2-3 (INR)"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Normal aPTT: 25-35 seconds. Therapeutic on heparin: 60-80 seconds (1.5-2x normal). aPTT monitors heparin, not warfarin."
+            },
+            {
+                "id": 32,
+                "text": "A client with angina should be taught to:",
+                "options": [
+                    "Exercise during chest pain",
+                    "Stop activity and rest if pain occurs",
+                    "Ignore mild chest pain",
+                    "Take aspirin for chest pain"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Angina: Stop activity, rest, take nitroglycerin. If pain persists after 3 NTG doses (15 min), call 911 - may be MI."
+            },
+            {
+                "id": 33,
+                "text": "What is the normal range for total cholesterol?",
+                "options": [
+                    "Less than 200 mg/dL",
+                    "200-239 mg/dL",
+                    "240 mg/dL or higher",
+                    "300 mg/dL or higher"
+                ],
+                "correctAnswer": 0,
+                "explanation": "Desirable total cholesterol: <200 mg/dL. 200-239 = borderline high, ≥240 = high. Also monitor LDL (<100), HDL (>40 men, >50 women), triglycerides (<150)."
+            },
+            {
+                "id": 34,
+                "text": "A client with hypertensive crisis (BP 220/120) should receive:",
+                "options": [
+                    "Oral antihypertensive",
+                    "IV antihypertensive",
+                    "Diuretic only",
+                    "No treatment needed"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Hypertensive crisis requires IV antihypertensive (nitroprusside, labetalol) for rapid BP reduction. Monitor for end-organ damage (stroke, MI, kidney failure)."
+            },
+            {
+                "id": 35,
+                "text": "What is the normal range for serum glucose (random)?",
+                "options": [
+                    "Less than 140 mg/dL",
+                    "140-199 mg/dL",
+                    "200 mg/dL or higher",
+                    "300 mg/dL or higher"
+                ],
+                "correctAnswer": 0,
+                "explanation": "Normal random glucose: <140 mg/dL. ≥200 with symptoms indicates diabetes. Fasting glucose is more accurate for diagnosis."
+            },
+            {
+                "id": 36,
+                "text": "A client with venous insufficiency should:",
+                "options": [
+                    "Keep legs dependent",
+                    "Elevate legs above heart",
+                    "Wear tight clothing",
+                    "Avoid compression stockings"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Venous insufficiency: Elevate legs above heart to improve venous return. Wear compression stockings. Opposite of arterial disease."
+            },
+            {
+                "id": 37,
+                "text": "What is a critical high potassium level?",
+                "options": [
+                    "3.5 mEq/L",
+                    "5.0 mEq/L",
+                    "6.5 mEq/L or higher",
+                    "2.5 mEq/L"
+                ],
+                "correctAnswer": 2,
+                "explanation": "Critical hyperkalemia: >6.5 mEq/L. Causes cardiac arrhythmias, can be fatal. ECG changes: peaked T waves, widened QRS. Give calcium gluconate, insulin/glucose, kayexalate."
+            },
+            {
+                "id": 38,
+                "text": "A client is having a cardiac catheterization. What allergy is most important to assess?",
+                "options": [
+                    "Penicillin",
+                    "Shellfish/iodine",
+                    "Latex",
+                    "Eggs"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Assess shellfish/iodine allergy - contrast dye contains iodine. Also assess kidney function (contrast is nephrotoxic). Hydrate before and after procedure."
+            },
+            {
+                "id": 39,
+                "text": "What is the normal range for serum chloride?",
+                "options": [
+                    "3.5-5.0 mEq/L",
+                    "8.5-10.5 mg/dL",
+                    "95-105 mEq/L",
+                    "135-145 mEq/L"
+                ],
+                "correctAnswer": 2,
+                "explanation": "Normal chloride: 95-105 mEq/L. Usually follows sodium. Hypochloremia occurs with vomiting; hyperchloremia with dehydration."
+            },
+            {
+                "id": 40,
+                "text": "A client with cardiogenic shock will have:",
+                "options": [
+                    "Increased cardiac output",
+                    "Decreased cardiac output and hypotension",
+                    "Hypertension",
+                    "Bradycardia only"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Cardiogenic shock: Decreased cardiac output, hypotension, pulmonary edema. Caused by MI, severe HF. Treat with inotropes, diuretics, possible mechanical support."
+            },
+            {
+                "id": 41,
+                "text": "What is the normal range for RBC count in adult males?",
+                "options": [
+                    "4.5-5.5 million/mm³",
+                    "150,000-400,000/mm³",
+                    "4,500-11,000/mm³",
+                    "12-16 g/dL"
+                ],
+                "correctAnswer": 0,
+                "explanation": "Normal RBC: Males 4.5-5.5 million/mm³, Females 4.0-5.0 million/mm³. Low RBC indicates anemia; high RBC may indicate polycythemia."
+            },
+            {
+                "id": 42,
+                "text": "A client with stable angina experiences chest pain:",
+                "options": [
+                    "At rest",
+                    "With exertion, relieved by rest",
+                    "Constantly",
+                    "Never"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Stable angina: Predictable chest pain with exertion, relieved by rest/NTG. Unstable angina: Pain at rest, increasing frequency/severity (pre-MI)."
+            },
+            {
+                "id": 43,
+                "text": "What is the normal range for hematocrit in adult males?",
+                "options": [
+                    "37-47%",
+                    "42-52%",
+                    "12-16%",
+                    "60-70%"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Normal Hct: Males 42-52%, Females 37-47%. Hct is % of RBCs in blood. Low Hct indicates anemia; high Hct indicates polycythemia or dehydration."
+            },
+            {
+                "id": 44,
+                "text": "A client post-CABG (coronary artery bypass graft) should avoid:",
+                "options": [
+                    "Coughing and deep breathing",
+                    "Driving for 4-6 weeks",
+                    "Walking",
+                    "Eating"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Post-CABG: Avoid driving 4-6 weeks (sternum healing). Do cough/deep breathe, use incentive spirometer. Splint chest with pillow. Gradual activity increase."
+            },
+            {
+                "id": 45,
+                "text": "What is a critical low platelet count?",
+                "options": [
+                    "150,000/mm³",
+                    "100,000/mm³",
+                    "20,000/mm³ or less",
+                    "400,000/mm³"
+                ],
+                "correctAnswer": 2,
+                "explanation": "Critical thrombocytopenia: <20,000/mm³ (spontaneous bleeding risk). <50,000 = bleeding precautions. Avoid IM injections, rectal temps, aspirin."
             }
         ]
     },

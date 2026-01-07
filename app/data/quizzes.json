@@ -993,8 +993,8 @@
         "id": 5,
         "episodeId": 6,
         "title": "Psychosocial Integrity",
-        "description": "Family Dynamics, Therapeutic Relationships, Mental Health",
-        "questionCount": 5,
+        "description": "Therapeutic Communication, Abuse Recognition, Grief, Mental Health",
+        "questionCount": 35,
         "color": "from-purple-600 to-fuchsia-800",
         "questions": [
             {
@@ -1007,7 +1007,415 @@
                     "Giving advice"
                 ],
                 "correctAnswer": 2,
-                "explanation": "Silence and active listening allow the client to express feelings without judgment or pressure."
+                "explanation": "Silence and active listening allow the client to express feelings without judgment or pressure, facilitating the grief process."
+            },
+            {
+                "id": 2,
+                "text": "According to Kübler-Ross, what is the first stage of grief?",
+                "options": [
+                    "Anger",
+                    "Denial",
+                    "Bargaining",
+                    "Depression"
+                ],
+                "correctAnswer": 1,
+                "explanation": "The five stages of grief are: Denial, Anger, Bargaining, Depression, and Acceptance (DABDA)."
+            },
+            {
+                "id": 3,
+                "text": "A nurse suspects child abuse. What is the priority action?",
+                "options": [
+                    "Confront the parents",
+                    "Report to appropriate authorities per facility protocol",
+                    "Document suspicions in the chart only",
+                    "Wait for more evidence"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Nurses are mandated reporters. Suspected abuse must be reported immediately to child protective services or appropriate authorities."
+            },
+            {
+                "id": 4,
+                "text": "Which statement is an example of therapeutic communication?",
+                "options": [
+                    "Why did you do that?",
+                    "Everything will be fine.",
+                    "Tell me more about how you're feeling.",
+                    "You shouldn't feel that way."
+                ],
+                "correctAnswer": 2,
+                "explanation": "Open-ended questions like 'Tell me more...' encourage the client to express feelings and thoughts. 'Why' questions can be defensive."
+            },
+            {
+                "id": 5,
+                "text": "A client says 'I'm going to kill myself.' What is the nurse's priority response?",
+                "options": [
+                    "Ask if the client has a specific plan",
+                    "Tell the client not to talk that way",
+                    "Leave to call the physician",
+                    "Reassure the client things will get better"
+                ],
+                "correctAnswer": 0,
+                "explanation": "Assess suicide risk by asking about plan, means, and intent. Never leave a suicidal client alone; stay and call for help."
+            },
+            {
+                "id": 6,
+                "text": "Which finding is most indicative of elder abuse?",
+                "options": [
+                    "Multiple bruises in various stages of healing",
+                    "Confusion and disorientation",
+                    "Weight loss",
+                    "Frequent UTIs"
+                ],
+                "correctAnswer": 0,
+                "explanation": "Bruises in various stages of healing suggest repeated trauma and are a red flag for physical abuse."
+            },
+            {
+                "id": 7,
+                "text": "A client in the anger stage of grief yells at the nurse. What is the best response?",
+                "options": [
+                    "Leave the room immediately",
+                    "Tell the client to calm down",
+                    "Remain calm and allow the client to express feelings",
+                    "Call security"
+                ],
+                "correctAnswer": 2,
+                "explanation": "Anger is a normal grief stage. Remain calm, set boundaries if needed, and allow safe expression of feelings."
+            },
+            {
+                "id": 8,
+                "text": "Which communication technique should be AVOIDED?",
+                "options": [
+                    "Reflection",
+                    "Clarification",
+                    "False reassurance",
+                    "Open-ended questions"
+                ],
+                "correctAnswer": 2,
+                "explanation": "False reassurance (e.g., 'Everything will be fine') dismisses client concerns and blocks therapeutic communication."
+            },
+            {
+                "id": 9,
+                "text": "A client with depression says 'I'm worthless.' What is the therapeutic response?",
+                "options": [
+                    "You're not worthless.",
+                    "Why do you feel that way?",
+                    "You sound like you're feeling pretty low about yourself.",
+                    "Many people feel that way."
+                ],
+                "correctAnswer": 2,
+                "explanation": "Reflection acknowledges feelings without judgment. Avoid 'why' questions and false reassurance."
+            },
+            {
+                "id": 10,
+                "text": "Which behavior suggests a child is being sexually abused?",
+                "options": [
+                    "Age-inappropriate sexual knowledge or behavior",
+                    "Bedwetting",
+                    "Nightmares",
+                    "Separation anxiety"
+                ],
+                "correctAnswer": 0,
+                "explanation": "Age-inappropriate sexual knowledge or behavior is a strong indicator of sexual abuse and requires immediate reporting."
+            },
+            {
+                "id": 11,
+                "text": "A client in the bargaining stage of grief might say:",
+                "options": [
+                    "This can't be happening to me.",
+                    "If I pray more, maybe I'll get better.",
+                    "I'm so angry this happened.",
+                    "I just feel so sad all the time."
+                ],
+                "correctAnswer": 1,
+                "explanation": "Bargaining involves attempting to negotiate (often with a higher power) to change the outcome."
+            },
+            {
+                "id": 12,
+                "text": "Which is a priority assessment for a client with suicidal ideation?",
+                "options": [
+                    "Sleep patterns",
+                    "Appetite",
+                    "Access to lethal means",
+                    "Social support"
+                ],
+                "correctAnswer": 2,
+                "explanation": "Assessing access to lethal means (guns, pills, etc.) is critical for safety. Remove access to means if possible."
+            },
+            {
+                "id": 13,
+                "text": "A nurse observes a parent yelling and threatening a child. What should the nurse do?",
+                "options": [
+                    "Ignore it as a private family matter",
+                    "Intervene calmly and assess the situation",
+                    "Call the police immediately",
+                    "Document only"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Intervene to ensure child safety, assess the situation, and report per protocol. Emotional abuse is reportable."
+            },
+            {
+                "id": 14,
+                "text": "Which statement demonstrates empathy?",
+                "options": [
+                    "I know exactly how you feel.",
+                    "This must be very difficult for you.",
+                    "You'll feel better soon.",
+                    "Others have it worse."
+                ],
+                "correctAnswer": 1,
+                "explanation": "Empathy acknowledges the client's feelings without claiming to know exactly how they feel or minimizing their experience."
+            },
+            {
+                "id": 15,
+                "text": "A client with anxiety is hyperventilating. What is the priority intervention?",
+                "options": [
+                    "Administer oxygen",
+                    "Have client breathe into a paper bag",
+                    "Coach slow, deep breathing",
+                    "Administer anti-anxiety medication"
+                ],
+                "correctAnswer": 2,
+                "explanation": "Coach slow, deep breathing to reduce hyperventilation. Paper bags are no longer recommended due to hypoxia risk."
+            },
+            {
+                "id": 16,
+                "text": "Which is a sign of domestic violence?",
+                "options": [
+                    "Partner answers all questions for the client",
+                    "Client has a chronic illness",
+                    "Client is unemployed",
+                    "Client has children"
+                ],
+                "correctAnswer": 0,
+                "explanation": "Controlling behavior (partner answering for client, not allowing privacy) is a red flag for domestic violence."
+            },
+            {
+                "id": 17,
+                "text": "In the acceptance stage of grief, a client might say:",
+                "options": [
+                    "I can't believe this is real.",
+                    "Why is this happening to me?",
+                    "I'm ready to face what's ahead.",
+                    "If only I had done things differently."
+                ],
+                "correctAnswer": 2,
+                "explanation": "Acceptance involves coming to terms with reality and finding peace with the situation."
+            },
+            {
+                "id": 18,
+                "text": "A client with schizophrenia says 'The TV is sending me messages.' What is the therapeutic response?",
+                "options": [
+                    "That's not possible.",
+                    "I don't hear any messages, but I understand this is real to you.",
+                    "Let's turn off the TV.",
+                    "Why do you think that?"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Acknowledge the client's reality without reinforcing the delusion. Don't argue or agree with delusions."
+            },
+            {
+                "id": 19,
+                "text": "Which is a risk factor for suicide?",
+                "options": [
+                    "Recent marriage",
+                    "Previous suicide attempt",
+                    "Starting a new job",
+                    "Having young children"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Previous suicide attempt is the strongest predictor of future attempts. Other risks: depression, substance abuse, isolation, access to means."
+            },
+            {
+                "id": 20,
+                "text": "A nurse suspects a colleague is impaired by substances. What should the nurse do?",
+                "options": [
+                    "Confront the colleague privately",
+                    "Ignore it to avoid conflict",
+                    "Report to the nurse manager per facility policy",
+                    "Tell other staff members"
+                ],
+                "correctAnswer": 2,
+                "explanation": "Patient safety is priority. Report suspected impairment to the nurse manager or appropriate authority per facility protocol."
+            },
+            {
+                "id": 21,
+                "text": "Which communication technique involves restating the client's message?",
+                "options": [
+                    "Reflection",
+                    "Clarification",
+                    "Paraphrasing",
+                    "Summarizing"
+                ],
+                "correctAnswer": 2,
+                "explanation": "Paraphrasing restates the client's message in the nurse's own words to ensure understanding."
+            },
+            {
+                "id": 22,
+                "text": "A client with PTSD is experiencing a flashback. What is the priority intervention?",
+                "options": [
+                    "Leave the client alone",
+                    "Orient the client to the present",
+                    "Restrain the client",
+                    "Administer sedation"
+                ],
+                "correctAnswer": 1,
+                "explanation": "During flashbacks, orient the client to the present using grounding techniques (e.g., 'You are safe. You are in the hospital.')."
+            },
+            {
+                "id": 23,
+                "text": "Which is a sign of neglect in an elderly client?",
+                "options": [
+                    "Poor hygiene and malnutrition",
+                    "Dementia",
+                    "Arthritis",
+                    "Living alone"
+                ],
+                "correctAnswer": 0,
+                "explanation": "Poor hygiene, malnutrition, untreated medical conditions, and unsafe living conditions indicate neglect."
+            },
+            {
+                "id": 24,
+                "text": "A client says 'I feel like I'm going crazy.' What is the best response?",
+                "options": [
+                    "You're not crazy.",
+                    "Tell me what you mean by that.",
+                    "Everyone feels that way sometimes.",
+                    "You need to think positively."
+                ],
+                "correctAnswer": 1,
+                "explanation": "Clarification helps understand the client's meaning. Avoid false reassurance or dismissing feelings."
+            },
+            {
+                "id": 25,
+                "text": "Which is an appropriate intervention for a client with depression?",
+                "options": [
+                    "Encourage participation in activities",
+                    "Allow the client to sleep all day",
+                    "Tell the client to cheer up",
+                    "Isolate the client for rest"
+                ],
+                "correctAnswer": 0,
+                "explanation": "Encourage activity and socialization. Depression worsens with isolation and inactivity."
+            },
+            {
+                "id": 26,
+                "text": "A client with mania is pacing and talking rapidly. What is the priority intervention?",
+                "options": [
+                    "Engage in lengthy conversation",
+                    "Provide a quiet, low-stimulation environment",
+                    "Encourage group activities",
+                    "Ignore the behavior"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Reduce stimulation to decrease agitation. Use short, simple statements. Ensure safety."
+            },
+            {
+                "id": 27,
+                "text": "Which behavior suggests a therapeutic nurse-client relationship?",
+                "options": [
+                    "Sharing personal phone number",
+                    "Maintaining professional boundaries",
+                    "Becoming friends on social media",
+                    "Visiting the client at home after discharge"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Professional boundaries protect both nurse and client. Avoid dual relationships and maintain therapeutic focus."
+            },
+            {
+                "id": 28,
+                "text": "A client with anorexia nervosa is exercising excessively. What should the nurse do?",
+                "options": [
+                    "Allow exercise as a coping mechanism",
+                    "Set limits on exercise per treatment plan",
+                    "Encourage more exercise to build appetite",
+                    "Ignore the behavior"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Excessive exercise is a compensatory behavior in eating disorders. Set limits and monitor per treatment plan."
+            },
+            {
+                "id": 29,
+                "text": "Which is a therapeutic response to a client who is crying?",
+                "options": [
+                    "Don't cry, things will get better.",
+                    "Sit quietly with the client.",
+                    "Leave to give privacy.",
+                    "Change the subject."
+                ],
+                "correctAnswer": 1,
+                "explanation": "Therapeutic presence (sitting quietly, offering tissues) shows support without interrupting the emotional release."
+            },
+            {
+                "id": 30,
+                "text": "A client with alcohol withdrawal is experiencing hallucinations. What is the priority?",
+                "options": [
+                    "Argue that hallucinations aren't real",
+                    "Ensure safety and administer prescribed medications",
+                    "Restrain the client",
+                    "Leave the client alone"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Alcohol withdrawal can cause delirium tremens with hallucinations. Ensure safety, administer benzodiazepines as ordered, monitor vital signs."
+            },
+            {
+                "id": 31,
+                "text": "Which statement indicates a client is in the depression stage of grief?",
+                "options": [
+                    "I can't believe this is happening.",
+                    "I just want to be left alone. Nothing matters anymore.",
+                    "If I change my lifestyle, maybe I'll recover.",
+                    "I'm ready to move forward."
+                ],
+                "correctAnswer": 1,
+                "explanation": "Depression stage involves sadness, withdrawal, and feelings of hopelessness about the loss."
+            },
+            {
+                "id": 32,
+                "text": "A client with OCD is washing hands repeatedly. What is the appropriate intervention?",
+                "options": [
+                    "Stop the behavior immediately",
+                    "Allow the behavior initially, then gradually set limits",
+                    "Ignore the behavior completely",
+                    "Punish the behavior"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Don't abruptly stop compulsions (increases anxiety). Gradually set limits while teaching alternative coping strategies."
+            },
+            {
+                "id": 33,
+                "text": "Which is a priority when caring for a client in restraints?",
+                "options": [
+                    "Check circulation every 2 hours",
+                    "Leave restraints on continuously for 8 hours",
+                    "Document only at the end of shift",
+                    "Keep the client sedated"
+                ],
+                "correctAnswer": 0,
+                "explanation": "Monitor circulation, skin integrity, and vital signs every 15-30 minutes. Release restraints every 2 hours for ROM and toileting."
+            },
+            {
+                "id": 34,
+                "text": "A client says 'I hear voices telling me to hurt myself.' What is the priority action?",
+                "options": [
+                    "Ask what the voices are saying",
+                    "Ensure immediate safety and stay with the client",
+                    "Tell the client the voices aren't real",
+                    "Document and continue with care"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Command hallucinations to harm self or others require immediate safety measures. Stay with client, remove dangerous objects, notify provider."
+            },
+            {
+                "id": 35,
+                "text": "Which intervention promotes a therapeutic environment for mental health clients?",
+                "options": [
+                    "Strict rules with no flexibility",
+                    "Consistent routine and clear expectations",
+                    "Allowing clients to do whatever they want",
+                    "Isolating clients from each other"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Structure, consistency, and clear expectations provide safety and reduce anxiety in therapeutic environments."
             }
         ]
     },

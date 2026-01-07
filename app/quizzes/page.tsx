@@ -30,7 +30,7 @@ export default function QuizListPage() {
                 <div className="mx-auto max-w-2xl px-4 py-3">
                     <div className="flex items-center gap-3">
                         <Link
-                            href="/"
+                            href="/dashboard"
                             className="grid h-10 w-10 place-items-center rounded-full bg-surface/10 hover:bg-surface/20 active:bg-surface/30 text-foreground"
                         >
                             ←
@@ -98,7 +98,12 @@ export default function QuizListPage() {
                                     )}
 
                                     {!isCompleted && (
-                                        <div className="mb-4">
+                                        <div className="mb-4 flex items-center gap-2">
+                                            {quiz.episodeId && (
+                                                <span className="text-[10px] font-bold uppercase tracking-wider bg-indigo-500/20 text-indigo-400 px-2 py-1 rounded-md border border-indigo-500/30">
+                                                    Episode {quiz.episodeId}
+                                                </span>
+                                            )}
                                             <span className="text-[10px] font-bold uppercase tracking-wider bg-surface/10 px-2 py-1 rounded-md text-foreground/60">
                                                 {quiz.questionCount} Questions
                                             </span>

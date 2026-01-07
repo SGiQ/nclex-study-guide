@@ -36,37 +36,97 @@ export async function POST(request: Request) {
             );
         }
 
-        // Upsert progress
-        const result = await pool.query(
-            `INSERT INTO user_progress (user_id, content_type, content_id, completed, score, total, completed_at)
-       VALUES ($1, $2, $3, $4, $5, $6, $7)
-       ON CONFLICT (user_id, content_type, content_id)
-       DO UPDATE SET
-         completed = $4,
-         score = $5,
-         total = $6,
-         completed_at = $7
-       RETURNING *`,
-            [
-                payload.userId,
-                contentType,
-                contentId,
-                completed || false,
-                score || null,
-                total || null,
-                completed ? new Date() : null
-            ]
-        );
+        // For quizzes, save to quiz_attempts table and track best score
+        if (contentType === 'quiz' && completed && score !== undefined && total !== undefined) {
+            const percentage = Math.round((score / total) * 100);
 
-        // Update streak if completed
-        if (completed) {
+            // Save attempt to quiz_attempts table
+            try {
+                await pool.query(
+                    `INSERT INTO quiz_attempts (user_id, quiz_id, score, total, percentage)
+                     VALUES ($1, $2, $3, $4, $5)`,
+                    [payload.userId, parseInt(contentId), score, total, percentage]
+                );
+            } catch (err) {
+                // Table might not exist yet, continue with regular flow
+                console.warn('quiz_attempts table not found, skipping attempt save');
+            }
+
+            // Get current progress to check best score
+            const currentProgress = await pool.query(
+                `SELECT best_score, attempt_count FROM user_progress 
+                 WHERE user_id = $1 AND content_type = $2 AND content_id = $3`,
+                [payload.userId, contentType, contentId]
+            );
+
+            const currentBest = currentProgress.rows[0]?.best_score || 0;
+            const currentAttempts = currentProgress.rows[0]?.attempt_count || 0;
+            const newBest = Math.max(currentBest, score);
+
+            // Upsert progress with best score and attempt count
+            const result = await pool.query(
+                `INSERT INTO user_progress (user_id, content_type, content_id, completed, score, total, best_score, attempt_count, completed_at)
+                 VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9)
+                 ON CONFLICT (user_id, content_type, content_id)
+                 DO UPDATE SET
+                   completed = $4,
+                   score = $5,
+                   total = $6,
+                   best_score = GREATEST(COALESCE(user_progress.best_score, 0), $7),
+                   attempt_count = COALESCE(user_progress.attempt_count, 0) + 1,
+                   completed_at = $9
+                 RETURNING *`,
+                [
+                    payload.userId,
+                    contentType,
+                    contentId,
+                    completed,
+                    score,
+                    total,
+                    newBest,
+                    1, // This will be incremented in DO UPDATE
+                    new Date()
+                ]
+            );
+
             await updateStreak(payload.userId);
-        }
 
-        return NextResponse.json({
-            success: true,
-            progress: result.rows[0]
-        });
+            return NextResponse.json({
+                success: true,
+                progress: result.rows[0]
+            });
+        } else {
+            // For non-quiz content, use original logic
+            const result = await pool.query(
+                `INSERT INTO user_progress (user_id, content_type, content_id, completed, score, total, completed_at)
+                 VALUES ($1, $2, $3, $4, $5, $6, $7)
+                 ON CONFLICT (user_id, content_type, content_id)
+                 DO UPDATE SET
+                   completed = $4,
+                   score = $5,
+                   total = $6,
+                   completed_at = $7
+                 RETURNING *`,
+                [
+                    payload.userId,
+                    contentType,
+                    contentId,
+                    completed || false,
+                    score || null,
+                    total || null,
+                    completed ? new Date() : null
+                ]
+            );
+
+            if (completed) {
+                await updateStreak(payload.userId);
+            }
+
+            return NextResponse.json({
+                success: true,
+                progress: result.rows[0]
+            });
+        }
     } catch (error: any) {
         console.error('Progress save error:', error);
         return NextResponse.json(

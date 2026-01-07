@@ -50,21 +50,36 @@ export async function POST(req: NextRequest) {
     try {
         const { messages, userContext } = await req.json();
 
-        // 1. Get the Full Book Text (Cached)
-        console.log("Attempting to load book context...");
-        const bookContext = await getBookContext();
-        console.log(`Book context loaded. Length: ${bookContext.length} chars`);
+        // Get the last user message
+        const lastUserMessage = messages[messages.length - 1]?.content || '';
 
-        // 2. Initialize OpenAI
+        // 1. Generate embedding for user's question
+        console.log("Generating embedding for user question...");
+        const { generateEmbedding } = await import('@/utils/embeddings');
+        const questionEmbedding = await generateEmbedding(lastUserMessage);
+
+        // 2. Search for relevant chunks from the book
+        console.log("Searching for relevant content...");
+        const { searchSimilar } = await import('@/utils/vector-store');
+        const relevantChunks = await searchSimilar(questionEmbedding, 5);
+
+        console.log(`Found ${relevantChunks.length} relevant chunks`);
+
+        // 3. Build context from relevant chunks
+        const bookContext = relevantChunks
+            .map((chunk, i) => `[Source ${i + 1}]: ${chunk.content}`)
+            .join('\n\n');
+
+        // 4. Initialize OpenAI
         const openai = new OpenAI({
             apiKey: apiKey,
         });
 
-        // 3. Build system message with book context
+        // 5. Build system message with relevant context only
         const systemMessage = {
             role: 'system' as const,
             content: `You are "TutorBot", an expert NCLEX-PN nursing tutor.
-You have access to the ENTIRE Review Book text below.
+You have access to relevant sections from the NCLEX Review Book below.
 ALWAYS answer questions based on the provided book context first.
 If the book doesn't contain the answer, use your general nursing knowledge but mention "The book doesn't cover this specifically, but..."
 
@@ -72,17 +87,17 @@ Key Instructions:
 - Be encouraging and supportive.
 - Use simple, clear language.
 - Format answers with Markdown (bold keywords, bullet points).
-- If the user asks about a specific topic, try to reference which section it might be from based on the headers provided.
+- Reference the source numbers [Source 1], [Source 2], etc. when citing information.
 
 User Stats:
 ${JSON.stringify(userContext)}
 
---- BOOK CONTEXT STARTS ---
+--- RELEVANT BOOK SECTIONS ---
 ${bookContext}
---- BOOK CONTEXT ENDS ---`
+--- END OF BOOK SECTIONS ---`
         };
 
-        // 4. Format message history (skip initial assistant greeting)
+        // 6. Format message history (skip initial assistant greeting)
         const formattedMessages = messages
             .filter((m: any, index: number) => !(m.role === 'assistant' && index === 0))
             .map((m: any) => ({
@@ -90,7 +105,7 @@ ${bookContext}
                 content: m.content
             }));
 
-        // 5. Create streaming response
+        // 7. Create streaming response
         const stream = await openai.chat.completions.create({
             model: 'gpt-4-turbo-preview',
             messages: [systemMessage, ...formattedMessages],
@@ -99,7 +114,7 @@ ${bookContext}
             max_tokens: 2000,
         });
 
-        // 6. Stream response to client
+        // 8. Stream response to client
         const encoder = new TextEncoder();
         const readableStream = new ReadableStream({
             async start(controller) {

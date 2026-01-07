@@ -3202,22 +3202,490 @@
     {
         "id": 10,
         "episodeId": 11,
-        "title": "Physiological Adaptation Part 2",
-        "description": "Respiratory, Neuro, Endocrine Patho",
-        "questionCount": 5,
+        "title": "Respiratory, Neurological & Endocrine",
+        "description": "COPD, Asthma, Stroke, Seizures, Diabetes, Thyroid, ABGs",
+        "questionCount": 40,
         "color": "from-rose-600 to-pink-900",
         "questions": [
             {
                 "id": 1,
-                "text": "Placeholder for Resp/Neuro Patho",
+                "text": "A client with COPD should be positioned:",
                 "options": [
-                    "Option 1",
-                    "Option 2",
-                    "Option 3",
-                    "Option 4"
+                    "Supine",
+                    "High Fowler's",
+                    "Trendelenburg",
+                    "Prone"
+                ],
+                "correctAnswer": 1,
+                "explanation": "High Fowler's (sitting upright) maximizes lung expansion and eases breathing in COPD. Also use pursed-lip breathing."
+            },
+            {
+                "id": 2,
+                "text": "What oxygen level is appropriate for a client with COPD?",
+                "options": [
+                    "100% oxygen",
+                    "1-3 L/min via nasal cannula",
+                    "10 L/min via mask",
+                    "No oxygen needed"
+                ],
+                "correctAnswer": 1,
+                "explanation": "COPD clients need low-flow oxygen (1-3 L/min) to maintain hypoxic drive. High oxygen can suppress respiratory drive."
+            },
+            {
+                "id": 3,
+                "text": "A client having a tonic-clonic seizure. What is the priority action?",
+                "options": [
+                    "Restrain the client",
+                    "Insert a tongue blade",
+                    "Protect from injury and turn to side",
+                    "Give oral medications"
+                ],
+                "correctAnswer": 2,
+                "explanation": "Protect from injury, turn to side (prevents aspiration), loosen clothing. Never restrain or put anything in mouth. Time the seizure."
+            },
+            {
+                "id": 4,
+                "text": "Which ABG indicates respiratory acidosis?",
+                "options": [
+                    "pH 7.50, PaCO2 30, HCO3 24",
+                    "pH 7.30, PaCO2 50, HCO3 24",
+                    "pH 7.50, PaCO2 40, HCO3 30",
+                    "pH 7.30, PaCO2 40, HCO3 18"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Respiratory acidosis: pH <7.35, PaCO2 >45 (retaining CO2). Causes: COPD, hypoventilation, respiratory depression."
+            },
+            {
+                "id": 5,
+                "text": "A client with diabetes has blood glucose of 45 mg/dL. What should the nurse do?",
+                "options": [
+                    "Give insulin",
+                    "Give 15g simple carbohydrate",
+                    "Call the provider only",
+                    "Recheck in 2 hours"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Hypoglycemia (<70 mg/dL): Give 15g simple carbs (juice, glucose tablets), recheck in 15 min. If unconscious, give glucagon or D50W IV."
+            },
+            {
+                "id": 6,
+                "text": "A client with asthma is wheezing. Which medication provides quickest relief?",
+                "options": [
+                    "Inhaled corticosteroid",
+                    "Albuterol (bronchodilator)",
+                    "Oral prednisone",
+                    "Antibiotic"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Albuterol (beta-2 agonist) provides quick relief of bronchospasm. Corticosteroids reduce inflammation but take hours/days to work."
+            },
+            {
+                "id": 7,
+                "text": "Which sign indicates increased intracranial pressure?",
+                "options": [
+                    "Decreased blood pressure",
+                    "Widening pulse pressure",
+                    "Tachycardia",
+                    "Constricted pupils"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Cushing's triad (late ICP sign): Widening pulse pressure, bradycardia, irregular respirations. Also: decreased LOC, headache, vomiting, dilated pupils."
+            },
+            {
+                "id": 8,
+                "text": "A client with hypothyroidism will have:",
+                "options": [
+                    "Weight loss and tachycardia",
+                    "Weight gain and bradycardia",
+                    "Exophthalmos",
+                    "Heat intolerance"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Hypothyroidism: Weight gain, bradycardia, fatigue, cold intolerance, constipation, depression. Treat with levothyroxine."
+            },
+            {
+                "id": 9,
+                "text": "Which ABG indicates metabolic alkalosis?",
+                "options": [
+                    "pH 7.30, PaCO2 50, HCO3 24",
+                    "pH 7.50, PaCO2 40, HCO3 30",
+                    "pH 7.30, PaCO2 40, HCO3 18",
+                    "pH 7.50, PaCO2 30, HCO3 24"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Metabolic alkalosis: pH >7.45, HCO3 >26. Causes: vomiting, NG suction, excess antacids, diuretics."
+            },
+            {
+                "id": 10,
+                "text": "A client with pneumonia should:",
+                "options": [
+                    "Avoid coughing",
+                    "Cough and deep breathe every 2 hours",
+                    "Restrict fluids",
+                    "Stay on bed rest"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Encourage coughing/deep breathing, incentive spirometer, fluids (thins secretions), ambulation. Monitor for respiratory distress."
+            },
+            {
+                "id": 11,
+                "text": "A client post-stroke has left-sided weakness. Where should the nurse stand during ambulation?",
+                "options": [
+                    "On the left (weak) side",
+                    "On the right (strong) side",
+                    "In front",
+                    "Behind"
                 ],
                 "correctAnswer": 0,
-                "explanation": "Pending content."
+                "explanation": "Stand on the weaker side to provide support and prevent falls. Use gait belt for safety."
+            },
+            {
+                "id": 12,
+                "text": "Which finding indicates DKA (diabetic ketoacidosis)?",
+                "options": [
+                    "Blood glucose 45 mg/dL",
+                    "Blood glucose 600 mg/dL with fruity breath",
+                    "Normal glucose with confusion",
+                    "Glucose 150 mg/dL"
+                ],
+                "correctAnswer": 1,
+                "explanation": "DKA: Hyperglycemia (>250), ketones, fruity breath, Kussmaul respirations, dehydration. Treat with IV insulin and fluids."
+            },
+            {
+                "id": 13,
+                "text": "A client with COPD is receiving oxygen. Which finding is concerning?",
+                "options": [
+                    "SpO2 90%",
+                    "Respiratory rate 12",
+                    "Respiratory rate 8",
+                    "Pink mucous membranes"
+                ],
+                "correctAnswer": 2,
+                "explanation": "Respiratory rate <12 indicates respiratory depression from too much oxygen (suppressed hypoxic drive). Reduce oxygen, stimulate breathing."
+            },
+            {
+                "id": 14,
+                "text": "Which medication prevents seizures?",
+                "options": [
+                    "Phenytoin (Dilantin)",
+                    "Albuterol",
+                    "Insulin",
+                    "Furosemide"
+                ],
+                "correctAnswer": 0,
+                "explanation": "Anticonvulsants (phenytoin, valproic acid, carbamazepine) prevent seizures. Monitor drug levels, don't stop abruptly."
+            },
+            {
+                "id": 15,
+                "text": "A client with hyperthyroidism will have:",
+                "options": [
+                    "Weight gain and lethargy",
+                    "Weight loss and tachycardia",
+                    "Bradycardia",
+                    "Cold intolerance"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Hyperthyroidism (Graves' disease): Weight loss, tachycardia, heat intolerance, exophthalmos, tremors, anxiety. Treat with antithyroid drugs or radioactive iodine."
+            },
+            {
+                "id": 16,
+                "text": "Which ABG indicates respiratory alkalosis?",
+                "options": [
+                    "pH 7.50, PaCO2 30, HCO3 24",
+                    "pH 7.30, PaCO2 50, HCO3 24",
+                    "pH 7.50, PaCO2 40, HCO3 30",
+                    "pH 7.30, PaCO2 40, HCO3 18"
+                ],
+                "correctAnswer": 0,
+                "explanation": "Respiratory alkalosis: pH >7.45, PaCO2 <35 (blowing off CO2). Causes: hyperventilation, anxiety, pain, fever."
+            },
+            {
+                "id": 17,
+                "text": "A client with asthma should avoid:",
+                "options": [
+                    "Exercise",
+                    "Triggers (smoke, allergens, cold air)",
+                    "Fluids",
+                    "All medications"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Avoid asthma triggers: smoke, allergens, cold air, exercise (without pre-medication). Use peak flow meter to monitor."
+            },
+            {
+                "id": 18,
+                "text": "A client post-stroke has difficulty swallowing. What is the priority?",
+                "options": [
+                    "Give oral medications",
+                    "NPO until swallow evaluation",
+                    "Give thin liquids",
+                    "Force feed"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Dysphagia increases aspiration risk. Keep NPO until swallow study. Elevate HOB 30-90°, thicken liquids if cleared."
+            },
+            {
+                "id": 19,
+                "text": "Which sign indicates hypoglycemia?",
+                "options": [
+                    "Fruity breath",
+                    "Shakiness, sweating, confusion",
+                    "Polyuria",
+                    "Dry skin"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Hypoglycemia: Shakiness, sweating, tachycardia, confusion, hunger. Treat immediately with 15g simple carbs. Hyperglycemia: polyuria, polydipsia, dry skin."
+            },
+            {
+                "id": 20,
+                "text": "Which ABG indicates metabolic acidosis?",
+                "options": [
+                    "pH 7.30, PaCO2 40, HCO3 18",
+                    "pH 7.50, PaCO2 40, HCO3 30",
+                    "pH 7.30, PaCO2 50, HCO3 24",
+                    "pH 7.50, PaCO2 30, HCO3 24"
+                ],
+                "correctAnswer": 0,
+                "explanation": "Metabolic acidosis: pH <7.35, HCO3 <22. Causes: DKA, renal failure, diarrhea, lactic acidosis."
+            },
+            {
+                "id": 21,
+                "text": "A client with COPD should use which breathing technique?",
+                "options": [
+                    "Rapid shallow breathing",
+                    "Pursed-lip breathing",
+                    "Mouth breathing only",
+                    "Holding breath"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Pursed-lip breathing: Inhale through nose, exhale slowly through pursed lips. Prevents airway collapse, improves gas exchange."
+            },
+            {
+                "id": 22,
+                "text": "A client with increased ICP should avoid:",
+                "options": [
+                    "Elevating head of bed 30°",
+                    "Valsalva maneuver (straining)",
+                    "Turning every 2 hours",
+                    "Quiet environment"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Avoid Valsalva, hip flexion, coughing (increases ICP). Elevate HOB 30°, keep head midline, prevent constipation, minimize stimulation."
+            },
+            {
+                "id": 23,
+                "text": "Which is a sign of thyroid storm?",
+                "options": [
+                    "Bradycardia and hypothermia",
+                    "Severe tachycardia and hyperthermia",
+                    "Weight gain",
+                    "Lethargy"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Thyroid storm (hyperthyroid crisis): Severe tachycardia, hyperthermia, agitation, delirium. Life-threatening. Give antithyroid drugs, beta blockers, cooling measures."
+            },
+            {
+                "id": 24,
+                "text": "A client with pneumonia has rusty-colored sputum. This indicates:",
+                "options": [
+                    "Viral pneumonia",
+                    "Bacterial pneumonia (pneumococcal)",
+                    "Tuberculosis",
+                    "Normal finding"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Rusty/blood-tinged sputum suggests bacterial pneumonia (Streptococcus pneumoniae). Green sputum = Pseudomonas. Treat with antibiotics."
+            },
+            {
+                "id": 25,
+                "text": "A client post-seizure is confused and sleepy. This is called:",
+                "options": [
+                    "Aura",
+                    "Postictal state",
+                    "Status epilepticus",
+                    "Tonic phase"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Postictal state: Confusion, drowsiness, headache after seizure. Provide safety, reorient, allow rest. Document seizure characteristics."
+            },
+            {
+                "id": 26,
+                "text": "Which insulin should be given for DKA?",
+                "options": [
+                    "NPH",
+                    "Glargine (Lantus)",
+                    "Regular insulin IV",
+                    "No insulin needed"
+                ],
+                "correctAnswer": 2,
+                "explanation": "DKA requires regular insulin IV drip (only insulin that can be given IV). Also give IV fluids, monitor potassium, treat underlying cause."
+            },
+            {
+                "id": 27,
+                "text": "A client with asthma has a peak flow reading in the red zone. This means:",
+                "options": [
+                    "Good control",
+                    "Caution needed",
+                    "Medical emergency",
+                    "Normal finding"
+                ],
+                "correctAnswer": 2,
+                "explanation": "Peak flow zones: Green (80-100% = good), Yellow (50-80% = caution), Red (<50% = emergency). Red zone requires immediate treatment."
+            },
+            {
+                "id": 28,
+                "text": "Which position is best for a client with increased ICP?",
+                "options": [
+                    "Flat supine",
+                    "Head elevated 30°",
+                    "Trendelenburg",
+                    "Prone"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Elevate HOB 30° to promote venous drainage and reduce ICP. Keep head midline (avoid neck flexion/rotation)."
+            },
+            {
+                "id": 29,
+                "text": "A client with diabetes is NPO for surgery. What should the nurse do with morning insulin?",
+                "options": [
+                    "Give full dose",
+                    "Hold all insulin",
+                    "Give half dose or per protocol",
+                    "Give double dose"
+                ],
+                "correctAnswer": 2,
+                "explanation": "NPO: Usually give half dose long-acting insulin or per facility protocol. Monitor glucose closely. Don't give rapid-acting insulin without food."
+            },
+            {
+                "id": 30,
+                "text": "Which finding indicates status epilepticus?",
+                "options": [
+                    "Single seizure lasting 2 minutes",
+                    "Continuous seizures >5 minutes",
+                    "Postictal confusion",
+                    "Aura before seizure"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Status epilepticus: Continuous seizure >5 min or repeated seizures without regaining consciousness. Medical emergency. Give IV benzodiazepines."
+            },
+            {
+                "id": 31,
+                "text": "A client with COPD should receive which vaccine?",
+                "options": [
+                    "MMR",
+                    "Pneumococcal and influenza",
+                    "Varicella",
+                    "No vaccines needed"
+                ],
+                "correctAnswer": 1,
+                "explanation": "COPD clients need pneumococcal vaccine and annual flu vaccine to prevent respiratory infections."
+            },
+            {
+                "id": 32,
+                "text": "Which cranial nerve is assessed by having the client smile and frown?",
+                "options": [
+                    "CN II (Optic)",
+                    "CN VII (Facial)",
+                    "CN IX (Glossopharyngeal)",
+                    "CN XII (Hypoglossal)"
+                ],
+                "correctAnswer": 1,
+                "explanation": "CN VII (Facial) controls facial expressions. Bell's palsy affects CN VII causing facial drooping. Stroke can also cause facial asymmetry."
+            },
+            {
+                "id": 33,
+                "text": "Which is a sign of hyperglycemia?",
+                "options": [
+                    "Shakiness and sweating",
+                    "Polyuria, polydipsia, polyphagia",
+                    "Bradycardia",
+                    "Hypertension"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Hyperglycemia: 3 P's (Polyuria, Polydipsia, Polyphagia), blurred vision, fatigue, dry skin. Chronic hyperglycemia causes complications."
+            },
+            {
+                "id": 34,
+                "text": "A client with pneumonia has decreased breath sounds in right lower lobe. This indicates:",
+                "options": [
+                    "Normal finding",
+                    "Consolidation/fluid in that area",
+                    "Hyperventilation",
+                    "Asthma"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Decreased/absent breath sounds indicate consolidation, fluid, or collapsed lung. Pneumonia causes consolidation. Also assess for dullness to percussion."
+            },
+            {
+                "id": 35,
+                "text": "Which is the first step in ABG interpretation?",
+                "options": [
+                    "Look at PaCO2",
+                    "Look at HCO3",
+                    "Look at pH",
+                    "Look at PaO2"
+                ],
+                "correctAnswer": 2,
+                "explanation": "ABG steps: 1) pH (acidosis <7.35 or alkalosis >7.45), 2) PaCO2 (respiratory), 3) HCO3 (metabolic), 4) Determine if compensated."
+            },
+            {
+                "id": 36,
+                "text": "A client with stroke has aphasia. This means:",
+                "options": [
+                    "Difficulty swallowing",
+                    "Difficulty speaking or understanding language",
+                    "Paralysis",
+                    "Vision loss"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Aphasia: Language impairment. Expressive = can't speak, Receptive = can't understand, Global = both. Dysphagia = swallowing difficulty."
+            },
+            {
+                "id": 37,
+                "text": "Which medication treats hyperthyroidism?",
+                "options": [
+                    "Levothyroxine",
+                    "Methimazole (Tapazole)",
+                    "Insulin",
+                    "Prednisone"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Antithyroid drugs (methimazole, PTU) treat hyperthyroidism. Also: radioactive iodine or thyroidectomy. Levothyroxine treats hypothyroidism."
+            },
+            {
+                "id": 38,
+                "text": "A client with asthma is using a metered-dose inhaler. What should the nurse teach?",
+                "options": [
+                    "Inhale quickly",
+                    "Shake inhaler, exhale, inhale slowly while pressing canister",
+                    "Hold breath 5 seconds",
+                    "Use without spacer"
+                ],
+                "correctAnswer": 1,
+                "explanation": "MDI technique: Shake, exhale fully, press canister while inhaling slowly, hold breath 10 seconds. Use spacer for better delivery."
+            },
+            {
+                "id": 39,
+                "text": "Which is a late sign of increased ICP?",
+                "options": [
+                    "Headache",
+                    "Restlessness",
+                    "Cushing's triad",
+                    "Nausea"
+                ],
+                "correctAnswer": 2,
+                "explanation": "Early ICP signs: Headache, nausea, restlessness, decreased LOC. Late signs: Cushing's triad (widening pulse pressure, bradycardia, irregular respirations), dilated pupils."
+            },
+            {
+                "id": 40,
+                "text": "A client with diabetes has HbA1c of 9%. This indicates:",
+                "options": [
+                    "Good glucose control",
+                    "Poor glucose control",
+                    "Hypoglycemia",
+                    "Normal finding"
+                ],
+                "correctAnswer": 1,
+                "explanation": "HbA1c goal: <7% for most diabetics. 9% indicates poor control over past 2-3 months. Adjust medications, reinforce diet/exercise."
             }
         ]
     },

@@ -1723,7 +1723,7 @@
     {
         "id": 4,
         "episodeId": 4,
-        "title": "Health Promotion & Maintenance",
+        "title": "Health Promotion & Maintenance - Part A",
         "description": "Pediatrics, Growth & Development, Immunizations, Newborn Care",
         "questionCount": 30,
         "color": "from-orange-500 to-amber-700",
@@ -2087,6 +2087,316 @@
                 ],
                 "correctAnswer": 2,
                 "explanation": "Rectal temperature is most accurate for newborns and infants under 3 months. Axillary is acceptable for screening."
+            }
+        ]
+    },
+    {
+        "id": 141,
+        "episodeId": 4,
+        "title": "Health Promotion & Maintenance - Part B",
+        "description": "Advanced Growth & Development and Safety",
+        "questionCount": 25,
+        "color": "from-green-600 to-green-900",
+        "questions": [
+            {
+                "id": 1,
+                "text": "Which type of vaccine uses a weakened form of the virus that cannot cause disease but triggers a robust immune response?",
+                "options": [
+                    "Inactivated Vaccine",
+                    "Live Attenuated Vaccine",
+                    "Toxoid Vaccine",
+                    "Conjugate Vaccine"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Live attenuated vaccines (like MMR, Varicella) use a weakened virus to create long-lasting immunity."
+            },
+            {
+                "id": 2,
+                "text": "What is the primary advantage of Inactivated Vaccines (like Polio)?",
+                "options": [
+                    "They require fewer doses",
+                    "They provide lifelong immunity with one shot",
+                    "Zero risk of causing disease, safe for immunocompromised patients",
+                    "They are cheaper to produce"
+                ],
+                "correctAnswer": 2,
+                "explanation": "Since the virus is killed, it cannot replicate or cause infection, making it safe for those with weak immune systems."
+            },
+            {
+                "id": 3,
+                "text": "At what age does the Hepatitis B vaccination series typically begin?",
+                "options": [
+                    "2 months",
+                    "6 months",
+                    "At birth",
+                    "1 year"
+                ],
+                "correctAnswer": 2,
+                "explanation": "Hep B is the first vaccine given, literally at birth."
+            },
+            {
+                "id": 4,
+                "text": "The HPV vaccine is recommended for adolescents around age 11-12 primarily to prevent:",
+                "options": [
+                    "Herpes",
+                    "Liver failure",
+                    "Several types of Cancer",
+                    "Infertility"
+                ],
+                "correctAnswer": 2,
+                "explanation": "HPV strains are directly linked to cervical and other cancers later in life."
+            },
+            {
+                "id": 5,
+                "text": "According to Erikson, the psychosocial crisis for a Toddler (1-3 years) is:",
+                "options": [
+                    "Trust vs. Mistrust",
+                    "Autonomy vs. Shame and Doubt",
+                    "Initiative vs. Guilt",
+                    "Industry vs. Inferiority"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Toddlers are learning independence (potty training, feeding). Failure leads to shame."
+            },
+            {
+                "id": 6,
+                "text": "Piaget's 'Sensorimotor' stage corresponds to which age group?",
+                "options": [
+                    "Birth to 2 years",
+                    "2 to 7 years",
+                    "7 to 11 years",
+                    "Adolescence"
+                ],
+                "correctAnswer": 0,
+                "explanation": "Infants learn through senses and motor actions (touching, mouthing)."
+            },
+            {
+                "id": 7,
+                "text": "What is the leading cause of death in children over age 1?",
+                "options": [
+                    "Infection",
+                    "Congenital anomalies",
+                    "Unintentional Injury (Accidents)",
+                    "Cancer"
+                ],
+                "correctAnswer": 2,
+                "explanation": "Safety and injury prevention are the highest priorities in health promotion."
+            },
+            {
+                "id": 8,
+                "text": "When does the 'Posterior Fontanel' typically close?",
+                "options": [
+                    "2-3 months",
+                    "12-18 months",
+                    "At birth",
+                    "6 months"
+                ],
+                "correctAnswer": 0,
+                "explanation": "The posterior closes early (2-3 mos). The Anterior closes later (12-18 mos)."
+            },
+            {
+                "id": 9,
+                "text": "The 'Moro' reflex (startle reflex) should disappear by:",
+                "options": [
+                    "1 month",
+                    "4 months",
+                    "1 year",
+                    "It persists for life"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Persistence beyond 4 months may indicate neurological issues."
+            },
+            {
+                "id": 10,
+                "text": "For an infant, the safest sleep position to prevent SIDS is:",
+                "options": [
+                    "On the stomach (Prone)",
+                    "Side-lying",
+                    "On the back (Supine)",
+                    "With a soft pillow"
+                ],
+                "correctAnswer": 2,
+                "explanation": "Back to Sleep campaign significantly reduced SIDS."
+            },
+            {
+                "id": 11,
+                "text": "Which behavior is characteristic of 'Associative Play' in preschoolers?",
+                "options": [
+                    "Playing alone with different toys",
+                    "Playing side-by-side but not interacting",
+                    "Playing together without rigid rules or organization",
+                    "Organized games with rules"
+                ],
+                "correctAnswer": 2,
+                "explanation": "Preschoolers interact and share (Associative) but lack formal organization (Cooperative)."
+            },
+            {
+                "id": 12,
+                "text": "The primary psychosocial task for the Adolescent (12-18 years) is:",
+                "options": [
+                    "Intimacy vs. Isolation",
+                    "Identity vs. Role Confusion",
+                    "Generativity vs. Stagnation",
+                    "Integrity vs. Despair"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Adolescents are figuring out 'Who am I?' vs trying to fit in."
+            },
+            {
+                "id": 13,
+                "text": "Which car seat position is recommended for infants up to 2 years (or until weight limit)?",
+                "options": [
+                    "Forward-facing in the front seat",
+                    "Rear-facing in the back seat",
+                    "Forward-facing in the back seat",
+                    "Booster seat"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Rear-facing protects the heavy head and weak neck."
+            },
+            {
+                "id": 14,
+                "text": "What is 'Object Permanence' and when does it typically develop?",
+                "options": [
+                    "Knowing an object exists even when unseen; 9 months",
+                    "Understanding volume conservation; 5 years",
+                    "Abstract thinking; 12 years",
+                    "Recognizing faces; 1 month"
+                ],
+                "correctAnswer": 0,
+                "explanation": "This creates separation anxiety because they know the parent exists even when gone."
+            },
+            {
+                "id": 15,
+                "text": "Which vaccine protects against Whooping Cough?",
+                "options": [
+                    "MMR",
+                    "DTaP (Pertussis)",
+                    "Hib",
+                    "Varicella"
+                ],
+                "correctAnswer": 1,
+                "explanation": "The 'P' in DTaP stands for Pertussis."
+            },
+            {
+                "id": 16,
+                "text": "A 4-year-old child believes his bad thoughts caused his brother to get sick. This is:",
+                "options": [
+                    "Logical thinking",
+                    "Magical Thinking",
+                    "Concrete Operations",
+                    "Abstract Thinking"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Preschoolers (Preoperational) struggle with cause-and-effect and often blame themselves."
+            },
+            {
+                "id": 17,
+                "text": "The recommended site for IM injections in infants under 12 months is:",
+                "options": [
+                    "Deltoid",
+                    "Dorsogluteal",
+                    "Vastus Lateralis (Thigh)",
+                    "Ventrogluteal"
+                ],
+                "correctAnswer": 2,
+                "explanation": "The thigh muscle is the most developed and avoids nerves."
+            },
+            {
+                "id": 18,
+                "text": "At what age should a child typically double their birth weight?",
+                "options": [
+                    "4 months",
+                    "6 months",
+                    "1 year",
+                    "2 years"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Double by 6 months, Triple by 1 year."
+            },
+            {
+                "id": 19,
+                "text": "What is the 'pincer grasp' and when does it develop?",
+                "options": [
+                    "Using the whole hand; 3 months",
+                    "Using thumb and forefinger to pick up small objects; 8-10 months",
+                    "Throwing a ball; 18 months",
+                    "Holding a spoon; 6 months"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Crucial for self-feeding (and choking hazards)."
+            },
+            {
+                "id": 20,
+                "text": "Toilet training is most successful when the child shows readiness, typically around:",
+                "options": [
+                    "12 months",
+                    "18-24 months",
+                    "3-4 years",
+                    "6 months"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Requires physiological control (sphincters) and cognitive ability to communicate need."
+            },
+            {
+                "id": 21,
+                "text": "Lead poisoning screening is universally recommended at ages:",
+                "options": [
+                    "Start of school",
+                    "1 and 2 years",
+                    "Birth",
+                    "10 years"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Toddlers are at highest risk (hand-to-mouth behavior)."
+            },
+            {
+                "id": 22,
+                "text": "For a School-Age child (Industry vs Inferiority), what is a key motivator?",
+                "options": [
+                    "Food",
+                    "Achievement and competence (Completing tasks)",
+                    "Independence from parents",
+                    "Fantasy play"
+                ],
+                "correctAnswer": 1,
+                "explanation": "They like rules, collecting things, and feeling 'good' at something."
+            },
+            {
+                "id": 23,
+                "text": "Adolescents often engage in risk-taking behavior due to the 'Personal Fable'. What is this?",
+                "options": [
+                    "They lie about their age",
+                    "Belief that they are unique and invincible ('It won't happen to me')",
+                    "Fear of standing out",
+                    "Lack of intelligence"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Developmental egocentrism that drives reckless driving, substance use, etc."
+            },
+            {
+                "id": 24,
+                "text": "Which nutrient is most critical to supplement for breastfed infants?",
+                "options": [
+                    "Iron",
+                    "Vitamin D",
+                    "Vitamin C",
+                    "Calcium"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Breast milk is low in Vitamin D; supplements prevent Rickets."
+            },
+            {
+                "id": 25,
+                "text": "Parallel play (side-by-side, no interaction) is characteristic of:",
+                "options": [
+                    "Infants",
+                    "Toddlers",
+                    "Preschoolers",
+                    "School-age"
+                ],
+                "correctAnswer": 1,
+                "explanation": "They play next to each other but do not share or cooperate yet."
             }
         ]
     },
@@ -8891,27 +9201,6 @@
         ]
     },
     {
-        "id": 16,
-        "title": "Final Prep Review",
-        "description": "Test Anxiety & Final Concept Checks",
-        "questionCount": 10,
-        "color": "from-fuchsia-600 to-pink-900",
-        "questions": [
-            {
-                "id": 1,
-                "text": "Study strategy question...",
-                "options": [
-                    "A",
-                    "B",
-                    "C",
-                    "D"
-                ],
-                "correctAnswer": 0,
-                "explanation": "Explanation."
-            }
-        ]
-    },
-    {
         "id": 5,
         "title": "Psychosocial Integrity (Unassigned)",
         "description": "Therapeutic Communication, Abuse Recognition, Grief, Mental Health",
@@ -14057,6 +14346,27 @@
                 ],
                 "correctAnswer": 0,
                 "explanation": "Blood administration: 18-20 gauge needle, two-nurse verification, start within 30 min of receiving, infuse over 2-4 hours max. Never microwave. Monitor for reactions."
+            }
+        ]
+    },
+    {
+        "id": 16,
+        "title": "Final Prep Review",
+        "description": "Test Anxiety & Final Concept Checks",
+        "questionCount": 10,
+        "color": "from-fuchsia-600 to-pink-900",
+        "questions": [
+            {
+                "id": 1,
+                "text": "Study strategy question...",
+                "options": [
+                    "A",
+                    "B",
+                    "C",
+                    "D"
+                ],
+                "correctAnswer": 0,
+                "explanation": "Explanation."
             }
         ]
     }

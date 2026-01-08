@@ -179,10 +179,10 @@ export default function FlashcardRunnerPage({ params }: { params: Promise<{ id: 
                 </button>
 
                 {/* Card Container */}
-                <div className="flex-1 flex flex-col items-center justify-center max-w-md mx-2 sm:mx-4">
+                <div className="flex-1 flex flex-col items-center justify-center max-w-2xl mx-2 sm:mx-6">
                     {/* 3D Flip Card Container */}
                     <div
-                        className="relative w-full aspect-[3/4] cursor-pointer group"
+                        className="relative w-full aspect-[4/3] cursor-pointer group"
                         onClick={() => setIsFlipped(!isFlipped)}
                     >
                         <div
@@ -192,23 +192,23 @@ export default function FlashcardRunnerPage({ params }: { params: Promise<{ id: 
 
                             {/* FRONT */}
                             <div
-                                className="absolute inset-0 backface-hidden bg-card rounded-2xl sm:rounded-3xl border border-card-border p-6 sm:p-8 flex flex-col items-center justify-center text-center shadow-2xl group-hover:border-card-border/70 transition-colors"
+                                className="absolute inset-0 backface-hidden bg-card rounded-2xl sm:rounded-3xl border border-card-border p-8 sm:p-12 flex flex-col items-center justify-center text-center shadow-2xl group-hover:border-card-border/70 transition-colors"
                             >
-                                <span className="text-xs uppercase font-bold text-blue-500 tracking-wider mb-4 sm:mb-6">Question</span>
-                                <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-tight text-foreground px-2">
+                                <span className="text-sm uppercase font-bold text-blue-500 tracking-wider mb-6 sm:mb-8">Question</span>
+                                <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold leading-relaxed text-foreground px-4">
                                     {currentCard.front}
                                 </h2>
-                                <div className="absolute bottom-6 sm:bottom-8 text-foreground/40 text-[10px] sm:text-xs font-bold tracking-widest animate-pulse">
+                                <div className="absolute bottom-8 sm:bottom-10 text-foreground/40 text-xs sm:text-sm font-bold tracking-widest animate-pulse">
                                     CLICK OR SPACE FOR ANSWER
                                 </div>
                             </div>
 
                             {/* BACK */}
                             <div
-                                className="absolute inset-0 backface-hidden bg-card rounded-2xl sm:rounded-3xl border border-purple-500/30 p-6 sm:p-8 flex flex-col items-center justify-center text-center shadow-2xl rotate-y-180"
+                                className="absolute inset-0 backface-hidden bg-card rounded-2xl sm:rounded-3xl border border-purple-500/30 p-8 sm:p-12 flex flex-col items-center justify-center text-center shadow-2xl rotate-y-180"
                             >
-                                <span className="text-xs uppercase font-bold text-purple-500 tracking-wider mb-4 sm:mb-6">Answer</span>
-                                <p className="text-lg sm:text-xl md:text-2xl font-medium text-foreground/90 leading-relaxed px-2">
+                                <span className="text-sm uppercase font-bold text-purple-500 tracking-wider mb-6 sm:mb-8">Answer</span>
+                                <p className="text-xl sm:text-2xl md:text-3xl font-medium text-foreground/90 leading-relaxed px-4">
                                     {currentCard.back}
                                 </p>
 

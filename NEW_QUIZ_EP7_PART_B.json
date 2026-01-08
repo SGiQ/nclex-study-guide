@@ -1,0 +1,310 @@
+{
+    "id": 109,
+    "episodeId": 7,
+    "title": "Pharmacology Part B: Systems & Safety",
+    "description": "Endocrine (Insulin), Respiratory, Immunologic, Chemo, Herbal Safety",
+    "questionCount": 25,
+    "color": "from-blue-600 to-indigo-900",
+    "questions": [
+        {
+            "id": 1,
+            "text": "Metformin primarily works by:",
+            "options": [
+                "Stimulating the pancreas to squeeze more insulin",
+                "Increasing insulin sensitivity and decreasing liver glucose production",
+                "Blocking carb absorption",
+                "Increasing urination"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Metformin is a Biguanide. It sensitizes cells to insulin and tells the liver to stop dumping sugar into the blood. No hypoglycemia risk alone."
+        },
+        {
+            "id": 2,
+            "text": "Rapid-Acting Insulin (Homalog/Lispro) has an onset of:",
+            "options": [
+                "30-60 minutes",
+                "5-15 minutes",
+                "2 hours",
+                "1 day"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Fastest insulin. Food MUST be in front of the patient. Onset 5-15 min."
+        },
+        {
+            "id": 3,
+            "text": "Long-Acting Insulin (Glargine/Lantus) is unique because:",
+            "options": [
+                "It works instantly",
+                "It has NO peak (steady plateau for ~24 hours)",
+                "It can be mixed",
+                "It is taken with meals"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Glargine has no peak. It provides a steady basal rate of insulin coverage for 24 hours. Never mix it in a syringe."
+        },
+        {
+            "id": 4,
+            "text": "Corticosteroids (Prednisone) reduce inflammation but cause:",
+            "options": [
+                "Weight loss",
+                "Immune suppression and infection risk",
+                "Low blood sugar",
+                "Sleepiness"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Corticosteroids powerfully suppress the immune system. Long term use leads to Cushing's, infection risk, hyperglycemia, and bone loss."
+        },
+        {
+            "id": 5,
+            "text": "What is 'Neutropenia' in chemotherapy patients?",
+            "options": [
+                "Low Red blood cells",
+                "Low Neutrophils (WBCs), leading to life-threatening infection risk",
+                "Hair loss",
+                "Nausea"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Chemo kills fast-growing cells, including bone marrow. Neutropenia means the body has no defense against bacteria -> Sepsis risk."
+        },
+        {
+            "id": 6,
+            "text": "Cyclosporine is an immunosuppressant used to:",
+            "options": [
+                "Cure flu",
+                "Prevent organ transplant rejection",
+                "Treat pain",
+                "Build muscle"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Cyclosporine targets T-lymphocytes to stop the body from attacking a new organ."
+        },
+        {
+            "id": 7,
+            "text": "Chemotherapy (Alkylating agents) target:",
+            "options": [
+                "Only cancer cells",
+                "ALL rapidly dividing cells (Cancer, Hair, GI tract, Bone Marrow)",
+                "Viruses",
+                "Bacteria"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Chemo attacks rapid division. This explains the side effects: Hair loss (follicles), Nausea (GI lining), Infection (Bone marrow)."
+        },
+        {
+            "id": 8,
+            "text": "Regular Insulin (Short Acting) is the only insulin that can be given:",
+            "options": [
+                "Orally",
+                "IV (Intravenously)",
+                "Inhaled",
+                "Without food"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Regular insulin is the only one safe for IV administration (e.g., for DKA)."
+        },
+        {
+            "id": 9,
+            "text": "Beta Adrenergic Agonists (Albuterol) cause bronchodilation but side effects include:",
+            "options": [
+                "Sedation",
+                "Tachycardia (High HR) and tremors",
+                "Low BP",
+                "Constipation"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Because they mimic adrenaline (sympathetic NS stimulation), they speed up the heart and cause jitters."
+        },
+        {
+            "id": 10,
+            "text": "Why must patients on long-term steroids NOT stop abruptly?",
+            "options": [
+                "Addiction",
+                "Adrenal Crisis (The body stopped making its own cortisol)",
+                "Rash",
+                "Fever"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Exogenous steroids supress the HPA axis. Stopping suddenly leads to Adrenal Crisis because the body can't produce cortisol fast enough."
+        },
+        {
+            "id": 11,
+            "text": "Theophylline (Methylxanthine) is a bronchodilator with a risk of:",
+            "options": [
+                "Toxicity (Narrow therapeutic index like Digoxin)",
+                "Sleepiness",
+                "Weight gain",
+                "Bleeding"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Like Digoxin, Theophylline has a narrow window. Toxicity prevents as nervousness, seizures, and arrhythmias."
+        },
+        {
+            "id": 12,
+            "text": "NPH Insulin is intermediate-acting and appears:",
+            "options": [
+                "Clear",
+                "Cloudy",
+                "Blue",
+                "Red"
+            ],
+            "correctAnswer": 1,
+            "explanation": "NPH is Cloudy. (Remember: 'Clear before Cloudy' when mixing)."
+        },
+        {
+            "id": 13,
+            "text": "What is the primary role of ACE Inhibitors in Heart Failure?",
+            "options": [
+                "Increase HR",
+                "Reduce Afterload (Workload) by preventing vasoconstriction",
+                "Cure the heart",
+                "Increase electrical conduction"
+            ],
+            "correctAnswer": 1,
+            "explanation": "By blocking Angiotensin II (a potent vasoconstrictor), ACEs open arteries, making it easier for the weak heart to pump."
+        },
+        {
+            "id": 14,
+            "text": "Which class of drugs is used to 'dry up' secretions (Anticholinergic)?",
+            "options": [
+                "Beta Blockers",
+                "Anticholinergics (e.g. Atropine)",
+                "Cholinergics",
+                "Diuretics"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Anticholinergics block acetylcholine, leading to 'Can't See, Can't Pee, Can't Spit, Can't Sh*t' effects."
+        },
+        {
+            "id": 15,
+            "text": "What is the 'synergy' of using a Loop Diuretic + Potassium-Sparing Diuretic?",
+            "options": [
+                "Double potency",
+                "Balancing Potassium loss (Loop) with Potassium retention (Sparing)",
+                "Lower cost",
+                "Fewer pills"
+            ],
+            "correctAnswer": 1,
+            "explanation": "They cancel out each other's potassium side effects while both removing fluid."
+        },
+        {
+            "id": 16,
+            "text": "A patient on Warfarin has an INR of 5.0 (High). The risk is:",
+            "options": [
+                "Clotting",
+                "Severe Bleeding",
+                "Stroke (Ischemic)",
+                "Nothing"
+            ],
+            "correctAnswer": 1,
+            "explanation": "High INR = Thin blood = Bleeding risk. Low INR = Thick blood = Clotting risk."
+        },
+        {
+            "id": 17,
+            "text": "Calcium Channel Blockers avoid grapefruit juice because:",
+            "options": [
+                "Taste",
+                "Grapefruit inhibits CYP450 enzymes causing toxic drug levels",
+                "It neutralizes the drug",
+                "It causes diarrhea"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Grapefruit Juice inhibits the liver enzyme that breaks down CCBs (and Statins), leading to toxic overdose levels."
+        },
+        {
+            "id": 18,
+            "text": "What is 'Palliative Chemotherapy'?",
+            "options": [
+                "Cure only",
+                "Treatment focused on symptom relief and quality of life, not cure",
+                "Surgery",
+                "Radiation"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Palliative chemo aims to shrink tumors to reduce pain/obstruction, extending quality of life rather than eradicating the disease."
+        },
+        {
+            "id": 19,
+            "text": "Immunosuppressants make patients vulnerable to 'Opportunistic Infections', which are:",
+            "options": [
+                "Rare diseases",
+                "Infections caused by common organisms that usually don't harm healthy people",
+                "Hospital associated",
+                "Genetic"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Organisms like Candida or CMV that a healthy immune system ignores become deadly when suppressed."
+        },
+        {
+            "id": 20,
+            "text": "The onset of NPH insulin peak is typically:",
+            "options": [
+                "1 hour",
+                "6-12 hours",
+                "24 hours",
+                "30 minutes"
+            ],
+            "correctAnswer": 1,
+            "explanation": "NPH peaks mid-day (6-12 hours). This is when the risk of hypoglycemia is highest if they haven't eaten lunch."
+        },
+        {
+            "id": 21,
+            "text": "Sublingual Nitroglycerin is given for Chest Pain. It works by:",
+            "options": [
+                "Numbing the heart",
+                "Systemic Vasodilation (reducing Preload) and Coronary Artery Dilation",
+                "Clotting blood",
+                "Slowing the brain"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Nitro causes massive vasodilation. It drops blood pressure (reducing heart work) and opens heart arteries."
+        },
+        {
+            "id": 22,
+            "text": "Which organ is primarily responsible for Drug Excretion?",
+            "options": [
+                "Liver",
+                "Kidneys",
+                "Lungs",
+                "Skin"
+            ],
+            "correctAnswer": 1,
+            "explanation": "The Kidneys filter blood and excrete drug metabolites. Renal failure = Drug Toxicity."
+        },
+        {
+            "id": 23,
+            "text": "Which organ is primarily responsible for Drug Metabolism?",
+            "options": [
+                "Kidneys",
+                "Liver",
+                "Heart",
+                "Stomach"
+            ],
+            "correctAnswer": 1,
+            "explanation": "The Liver is the chemical processing plant (Cytochrome P450 system)."
+        },
+        {
+            "id": 24,
+            "text": "What does 'Teratogenic' mean?",
+            "options": [
+                "Treats cancer",
+                "Causes birth defects",
+                "Causes vomiting",
+                "Safe for pregnancy"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Teratogens cause malformations in a developing fetus (e.g., ACE inhibitors, Retinoids, Thalidomide)."
+        },
+        {
+            "id": 25,
+            "text": "Why are 'Statins' given at night?",
+            "options": [
+                "To help sleep",
+                "Cholesterol synthesis by the liver is highest at night",
+                "They cause nausea",
+                "Convenience"
+            ],
+            "correctAnswer": 1,
+            "explanation": "The liver makes the most cholesterol while we sleep, so HMG-CoA reductase inhibitors work best then."
+        }
+    ]
+}

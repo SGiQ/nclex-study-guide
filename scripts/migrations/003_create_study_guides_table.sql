@@ -157,3 +157,8 @@ VALUES (
   ]'::jsonb
 )
 ON CONFLICT DO NOTHING;
+-- Insert Episode 5: Psychosocial Integrity
+-- Insert Episode 6: Basic Care and Comfort  
+-- Insert Episode 7: Pharmacology
+-- Insert Episode 8: Pharmacological Therapies
+-- (Simplified inserts - full data will be added via admin interface after migration runs)

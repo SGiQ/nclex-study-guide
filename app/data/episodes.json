@@ -45,13 +45,13 @@
   },
   {
     "id": 5,
-    "title": "Health Promotion & Maintenance Part 2",
-    "description": "Maternity, Antepartum, Intrapartum, Postpartum",
-    "content": "Maternity Nursing: Antepartum\nMaternity Nursing: Intrapartum\nMaternity Nursing: Postpartum\nMaternity Nursing: Newborn Care",
+    "title": "Psychosocial Integrity",
+    "description": "Therapeutic Communication, Abuse & Neglect, Grief, Crisis Intervention",
+    "content": "Therapeutic Communication Techniques\\nAbuse & Neglect Assessment\\nFamily Dynamics & Systems Theory\\nGrief & Loss (Kubler-Ross)\\nAnxiety & Suicide Risk\\nDe-escalation & Restraints\\nCBT & Trauma-Informed Care",
     "pages": "89-115",
     "duration": 1250,
     "audioUrl": "/uploads/episode-5.mp3",
-    "category": "Health Promotion",
+    "category": "Psychosocial",
     "order": 5
   },
   {

@@ -2091,432 +2091,802 @@
         ]
     },
     {
-        "id": 5,
+        "id": 104,
         "episodeId": 5,
-        "title": "Health Promotion & Maintenance Part 2",
-        "description": "Maternity: Antepartum, Intrapartum, Postpartum, Newborn Care",
+        "title": "Psychosocial Integrity - Part A",
+        "description": "Therapeutic Communication, Abuse & Neglect Assessment, Family Dynamics",
         "questionCount": 35,
-        "color": "from-pink-600 to-rose-800",
+        "color": "from-purple-600 to-indigo-800",
         "questions": [
             {
                 "id": 1,
-                "text": "A pregnant client at 10 weeks gestation reports nausea and vomiting. Which recommendation is most appropriate?",
+                "text": "What are the two non-negotiable principles of therapeutic communication?",
                 "options": [
-                    "Eat three large meals per day",
-                    "Eat small, frequent meals and avoid spicy foods",
-                    "Drink large amounts of fluids with meals",
-                    "Lie down immediately after eating"
+                    "Honesty and efficiency",
+                    "Unwavering respect for the patient/family and the assumption that all behavior has meaning",
+                    "Documentation and reporting",
+                    "Speed and accuracy"
                 ],
                 "correctAnswer": 1,
-                "explanation": "Small, frequent meals help manage morning sickness. Avoiding spicy, fatty foods and separating liquids from solids can reduce nausea."
+                "explanation": "The foundation of therapeutic communication is unwavering respect and recognizing that all behavior - even silence or anger - is meaningful communication."
             },
             {
                 "id": 2,
-                "text": "A nurse is teaching a prenatal class about fetal development. At what gestational age can the fetal heartbeat typically be heard with a Doppler?",
+                "text": "What is the most effective way to open a therapeutic conversation?",
                 "options": [
-                    "6-8 weeks",
-                    "10-12 weeks",
-                    "16-18 weeks",
-                    "20-22 weeks"
+                    "Ask closed-ended yes/no questions",
+                    "Use an open-ended statement like 'Is there anything you'd like to discuss today?'",
+                    "Tell them what you think they need",
+                    "Start with medical history"
                 ],
                 "correctAnswer": 1,
-                "explanation": "Fetal heart tones can typically be detected with a Doppler device at 10-12 weeks gestation. Earlier detection may be possible with transvaginal ultrasound."
+                "explanation": "Open-ended statements invite the patient to lead the conversation and share what's important to them, building rapport immediately."
             },
             {
                 "id": 3,
-                "text": "A client at 28 weeks gestation has a positive glucose challenge test. What is the next step?",
+                "text": "What is empathy through reflection?",
                 "options": [
-                    "Diagnose gestational diabetes immediately",
-                    "Schedule a 3-hour glucose tolerance test",
-                    "Start insulin therapy",
-                    "Restrict all carbohydrates"
+                    "Repeating exactly what the patient said",
+                    "Making a concrete observation ('You're shaking') then reflecting a potential feeling ('You seem worried')",
+                    "Telling them how you would feel",
+                    "Asking why they feel that way"
                 ],
                 "correctAnswer": 1,
-                "explanation": "A positive glucose challenge test requires confirmation with a 3-hour glucose tolerance test before diagnosing gestational diabetes."
+                "explanation": "Reflection combines observation with empathetic interpretation, validating nonverbal cues and giving patients a chance to confirm or clarify their feelings."
             },
             {
                 "id": 4,
-                "text": "Which finding in a pregnant client at 32 weeks gestation requires immediate intervention?",
+                "text": "A patient says 'This pill is just making me feel worse.' What is verbalizing the implied message?",
                 "options": [
-                    "Mild ankle edema at end of day",
-                    "Frequent urination",
-                    "Severe headache with blurred vision",
-                    "Backache after standing"
+                    "Asking if they want to stop the medication",
+                    "Saying 'It sounds like you feel the treatment is trapping you'",
+                    "Explaining the medication's benefits",
+                    "Telling them to give it more time"
                 ],
-                "correctAnswer": 2,
-                "explanation": "Severe headache with visual changes indicates possible preeclampsia, requiring immediate assessment of blood pressure and other symptoms."
+                "correctAnswer": 1,
+                "explanation": "Verbalizing the implied message gives voice to the deeper frustration or fear beneath their words, helping them feel truly heard."
             },
             {
                 "id": 5,
-                "text": "A nurse is teaching about warning signs during pregnancy. Which symptom should be reported immediately?",
+                "text": "Why should you avoid saying 'Everything will be fine' to an anxious patient?",
                 "options": [
-                    "Increased vaginal discharge",
-                    "Braxton Hicks contractions",
-                    "Sudden gush of fluid from vagina",
-                    "Mild constipation"
+                    "It's unprofessional",
+                    "It's a meaningless clich\u00e9 that dismisses and invalidates their fear",
+                    "It makes promises you can't keep",
+                    "It takes too long to say"
                 ],
-                "correctAnswer": 2,
-                "explanation": "Sudden gush of fluid suggests rupture of membranes, requiring immediate evaluation to assess for infection risk and fetal well-being."
+                "correctAnswer": 1,
+                "explanation": "Meaningless clich\u00e9s like 'Everything will be fine' are dismissive and invalidate the patient's legitimate concerns, destroying trust."
             },
             {
                 "id": 6,
-                "text": "What is the recommended weight gain during pregnancy for a woman with normal pre-pregnancy BMI?",
+                "text": "Why is giving approval or disapproval ('I think that's great' or 'You shouldn't cry') harmful?",
                 "options": [
-                    "15-20 pounds",
-                    "25-35 pounds",
-                    "40-50 pounds",
-                    "10-15 pounds"
+                    "It's too time-consuming",
+                    "It immediately puts you in a position of judgment, destroying trust",
+                    "It's against hospital policy",
+                    "It confuses the patient"
                 ],
                 "correctAnswer": 1,
-                "explanation": "For women with normal BMI (18.5-24.9), the recommended weight gain is 25-35 pounds during pregnancy."
+                "explanation": "Approval/disapproval creates a judgmental dynamic that destroys the therapeutic relationship and makes patients hide their true feelings."
             },
             {
                 "id": 7,
-                "text": "A laboring client's membranes rupture spontaneously. What is the nurse's priority action?",
+                "text": "Why should you avoid asking 'Why are you in tears?'",
                 "options": [
-                    "Document the time and characteristics",
-                    "Assess fetal heart rate",
-                    "Notify the provider",
-                    "Prepare for delivery"
+                    "It's too direct",
+                    "It puts the patient on the defensive and makes them justify their feelings",
+                    "It's grammatically incorrect",
+                    "It shows too much concern"
                 ],
                 "correctAnswer": 1,
-                "explanation": "After rupture of membranes, immediately assess fetal heart rate to detect cord prolapse or compression, which can cause fetal distress."
+                "explanation": "'Why' questions force patients to defend or justify their emotions, creating defensiveness instead of openness."
             },
             {
                 "id": 8,
-                "text": "A client in active labor has contractions every 3 minutes lasting 60 seconds. The cervix is dilated 6 cm. What stage of labor is this?",
+                "text": "Instead of asking 'why,' what should you ask to understand a patient's distress?",
                 "options": [
-                    "First stage, latent phase",
-                    "First stage, active phase",
-                    "Second stage",
-                    "Third stage"
+                    "Nothing, just observe",
+                    "Focus on 'what' and feelings: 'Tell me what led up to this' or 'Help me understand what you're feeling'",
+                    "Ask their family",
+                    "Check their chart"
                 ],
                 "correctAnswer": 1,
-                "explanation": "Active phase of first stage labor is characterized by cervical dilation of 4-7 cm with regular, strong contractions."
+                "explanation": "'What' questions and feeling-focused inquiries let patients be the expert on their own experience without defensiveness."
             },
             {
                 "id": 9,
-                "text": "Which fetal heart rate pattern requires immediate intervention?",
+                "text": "A patient says 'The night nurse promised I didn't have to walk today.' What should you do FIRST?",
                 "options": [
-                    "Baseline 140 bpm with moderate variability",
-                    "Early decelerations with contractions",
-                    "Late decelerations with each contraction",
-                    "Accelerations with fetal movement"
+                    "Show them the physical therapy order",
+                    "Acknowledge their feeling: 'I understand you feel let down'",
+                    "Call the night nurse",
+                    "Explain hospital policy"
                 ],
-                "correctAnswer": 2,
-                "explanation": "Late decelerations indicate uteroplacental insufficiency and fetal hypoxia, requiring immediate intervention (position change, oxygen, IV fluids)."
+                "correctAnswer": 1,
+                "explanation": "Always acknowledge the emotion BEFORE dealing with facts. Address feelings first, then problem-solve."
             },
             {
                 "id": 10,
-                "text": "A client receives an epidural for labor pain. What is the priority nursing assessment?",
+                "text": "How should communication be adapted for patients with cognitive disabilities?",
                 "options": [
-                    "Level of consciousness",
-                    "Blood pressure",
-                    "Respiratory rate",
-                    "Temperature"
+                    "Speak louder",
+                    "Use concrete, simple ideas in a quiet area, possibly with visual aids",
+                    "Avoid eye contact",
+                    "Use medical terminology"
                 ],
                 "correctAnswer": 1,
-                "explanation": "Hypotension is a common side effect of epidural anesthesia due to vasodilation. Monitor blood pressure frequently and position client on left side."
+                "explanation": "Cognitive disabilities require concrete, simple communication in a calm environment, often supplemented with visual aids."
             },
             {
                 "id": 11,
-                "text": "Which finding indicates the transition phase of labor?",
+                "text": "What is the priority when communicating with a patient in an acute psychiatric state?",
                 "options": [
-                    "Cervix dilated 3 cm",
-                    "Contractions every 10 minutes",
-                    "Cervix dilated 8-10 cm with intense contractions",
-                    "Delivery of the placenta"
+                    "Getting detailed history",
+                    "Safety first - speak calmly, use direct eye contact, never challenge them if paranoid",
+                    "Medication administration",
+                    "Family involvement"
                 ],
-                "correctAnswer": 2,
-                "explanation": "Transition phase occurs at 8-10 cm dilation with very strong, frequent contractions. Client may feel overwhelmed and irritable."
+                "correctAnswer": 1,
+                "explanation": "Safety is paramount. Use calm, direct communication and never challenge paranoid delusions as this escalates danger."
             },
             {
                 "id": 12,
-                "text": "A client is pushing during second stage of labor. Which position is most effective?",
+                "text": "What is the biggest red flag for abuse in a patient's history?",
                 "options": [
-                    "Supine with legs in stirrups",
-                    "Squatting or semi-sitting",
-                    "Prone position",
-                    "Trendelenburg position"
+                    "Multiple hospital visits",
+                    "Inconsistency between physical findings and the story being told",
+                    "Living alone",
+                    "Being elderly"
                 ],
                 "correctAnswer": 1,
-                "explanation": "Upright positions (squatting, semi-sitting) use gravity to assist descent and allow pelvic diameter to increase, facilitating delivery."
+                "explanation": "A glaring inconsistency between injuries and the explanation (e.g., spiral fracture from 'rolling off sofa') is a major abuse indicator."
             },
             {
                 "id": 13,
-                "text": "When should the nurse expect delivery of the placenta after birth?",
+                "text": "What behavioral patterns suggest possible abuse?",
                 "options": [
-                    "Immediately after birth",
-                    "Within 5-30 minutes",
-                    "Within 1-2 hours",
-                    "Within 24 hours"
+                    "Patient is talkative",
+                    "Patient denies how they got hurt, or family is either indifferent or over-the-top",
+                    "Patient asks many questions",
+                    "Patient wants to go home"
                 ],
                 "correctAnswer": 1,
-                "explanation": "The third stage of labor (placental delivery) typically occurs within 5-30 minutes after birth. Prolonged third stage increases hemorrhage risk."
+                "explanation": "Denial about injuries, family indifference, or excessive concern can all indicate abuse dynamics."
             },
             {
                 "id": 14,
-                "text": "A postpartum client has a boggy uterus. What is the first nursing action?",
+                "text": "What financial indicator suggests elder abuse?",
                 "options": [
-                    "Notify the provider",
-                    "Massage the fundus",
-                    "Administer oxytocin",
-                    "Check for bladder distention"
+                    "Patient has savings",
+                    "Patient lacks access to their own money, or a family member controls everything",
+                    "Patient receives Social Security",
+                    "Patient has insurance"
                 ],
                 "correctAnswer": 1,
-                "explanation": "A boggy (soft, uncontracted) uterus indicates uterine atony. First action is to massage the fundus to stimulate contraction and prevent hemorrhage."
+                "explanation": "Financial exploitation is common in elder abuse - look for lack of access to their own funds or family members controlling finances."
             },
             {
                 "id": 15,
-                "text": "What is the expected location of the fundus immediately after delivery?",
+                "text": "What physical findings suggest abuse?",
                 "options": [
-                    "At the umbilicus",
-                    "2 cm above the umbilicus",
-                    "Below the umbilicus",
-                    "At the symphysis pubis"
+                    "Single bruise on shin",
+                    "Pattern bruising (belt/rope marks), cigarette burns, bilateral injuries (defensive wounds)",
+                    "Surgical scars",
+                    "Age-appropriate mobility issues"
                 ],
-                "correctAnswer": 0,
-                "explanation": "Immediately postpartum, the fundus should be firm and at or slightly below the umbilicus. It descends approximately 1 cm per day."
+                "correctAnswer": 1,
+                "explanation": "Pattern injuries, burns, and bilateral defensive wounds are classic physical indicators of intentional harm."
             },
             {
                 "id": 16,
-                "text": "A breastfeeding mother asks about afterpains. What should the nurse explain?",
+                "text": "What is a torn frenulum and why is it significant?",
                 "options": [
-                    "They indicate infection",
-                    "They are caused by oxytocin release during breastfeeding",
-                    "They should not occur after the first birth",
-                    "They require pain medication"
+                    "A normal finding",
+                    "Torn tissue under the lip/tongue - major indicator of force-feeding or direct blow in children",
+                    "A dental problem",
+                    "A speech impediment"
                 ],
                 "correctAnswer": 1,
-                "explanation": "Afterpains are uterine contractions caused by oxytocin release during breastfeeding. They are more common in multiparas and help prevent hemorrhage."
+                "explanation": "A torn frenulum (tissue under lip/tongue) is a specific, serious indicator of force-feeding or facial trauma in children."
             },
             {
                 "id": 17,
-                "text": "Which lochia characteristic on postpartum day 1 is normal?",
+                "text": "What are signs of neglect?",
                 "options": [
-                    "Lochia alba (white/yellow)",
-                    "Lochia rubra (red) with small clots",
-                    "Lochia serosa (pink/brown)",
-                    "No lochia present"
+                    "Patient is quiet",
+                    "Improper clothes for weather, poor hygiene, missing assistive devices, unexplained weight loss",
+                    "Patient prefers privacy",
+                    "Patient is elderly"
                 ],
                 "correctAnswer": 1,
-                "explanation": "Lochia rubra (red, bloody discharge) with small clots is normal for days 1-3 postpartum. Large clots or excessive bleeding require assessment."
+                "explanation": "Neglect shows as missing basic needs: appropriate clothing, hygiene, necessary medical devices, and adequate nutrition."
             },
             {
                 "id": 18,
-                "text": "A postpartum client reports severe perineal pain. What should the nurse assess first?",
+                "text": "What is the FIRST step in the seven-step domestic violence protocol?",
                 "options": [
-                    "Vital signs",
-                    "Perineum for hematoma",
-                    "Fundal height",
-                    "Lochia amount"
+                    "Call police",
+                    "Inquiry and screening - ask directly 'Have you ever been abused?' and believe them",
+                    "Document injuries",
+                    "Provide shelter information"
                 ],
                 "correctAnswer": 1,
-                "explanation": "Severe perineal pain may indicate hematoma formation. Assess for swelling, discoloration, and asymmetry of the perineum."
+                "explanation": "Building trust starts with direct inquiry and believing the patient's disclosure, creating a safe space for them to open up."
             },
             {
                 "id": 19,
-                "text": "What is the priority teaching for a client with postpartum preeclampsia?",
+                "text": "When does mandatory reporting override the seven-step process?",
                 "options": [
-                    "Increase fluid intake",
-                    "Report headache or visual changes immediately",
-                    "Limit visitors",
-                    "Avoid breastfeeding"
+                    "Never",
+                    "When there's immediate threat to life or child abuse - safety trumps everything",
+                    "Only with patient permission",
+                    "After 24 hours"
                 ],
                 "correctAnswer": 1,
-                "explanation": "Postpartum preeclampsia can progress to eclampsia (seizures). Teach client to report warning signs: severe headache, visual changes, epigastric pain."
+                "explanation": "Immediate life threats and child abuse require immediate mandatory reporting - safety always comes first."
             },
             {
                 "id": 20,
-                "text": "When should a postpartum client resume sexual activity?",
+                "text": "After mandatory reporting (if needed), what are the next steps in domestic violence intervention?",
                 "options": [
-                    "After 1 week",
-                    "After 2 weeks",
-                    "After lochia stops and perineum heals (4-6 weeks)",
-                    "After 3 months"
+                    "Discharge the patient",
+                    "Validate their experience, give information (hotlines/shelters), make referrals, then document",
+                    "Call family",
+                    "Prescribe medication"
                 ],
-                "correctAnswer": 2,
-                "explanation": "Sexual activity should be delayed until lochia has stopped and perineal healing is complete, typically 4-6 weeks postpartum."
+                "correctAnswer": 1,
+                "explanation": "The sequence is: validate, inform, refer, document. Each step builds support and creates a paper trail."
             },
             {
                 "id": 21,
-                "text": "A newborn's Apgar score at 1 minute is 8. What does this indicate?",
+                "text": "Why must abuse documentation be meticulous?",
                 "options": [
-                    "Severe distress requiring resuscitation",
-                    "Moderate distress",
-                    "Good condition with minimal intervention needed",
-                    "Perfect condition"
+                    "For billing purposes",
+                    "It's crucial for legal proceedings - use body maps to chart every injury",
+                    "To satisfy administration",
+                    "For research"
                 ],
-                "correctAnswer": 2,
-                "explanation": "Apgar scores: 7-10 = good condition, 4-6 = moderate distress, 0-3 = severe distress. Score of 8 indicates good adaptation to extrauterine life."
+                "correctAnswer": 1,
+                "explanation": "Precise documentation with body maps creates legal evidence that can protect victims and prosecute abusers."
             },
             {
                 "id": 22,
-                "text": "What is the normal respiratory rate for a newborn?",
+                "text": "What does family systems theory teach us?",
                 "options": [
-                    "20-30 breaths/minute",
-                    "30-60 breaths/minute",
-                    "60-80 breaths/minute",
-                    "10-20 breaths/minute"
+                    "Families are independent units",
+                    "The family is like a mobile - touch one part and the whole thing moves",
+                    "Only the patient matters",
+                    "Families don't affect health"
                 ],
                 "correctAnswer": 1,
-                "explanation": "Normal newborn respiratory rate is 30-60 breaths per minute. Rates above 60 may indicate respiratory distress."
+                "explanation": "Family systems theory shows that one person's illness or crisis affects the entire family system, which seeks equilibrium."
             },
             {
                 "id": 23,
-                "text": "A newborn has a heart rate of 180 bpm while crying. What should the nurse do?",
+                "text": "What does structural-functional family theory assess?",
                 "options": [
-                    "Call the provider immediately",
-                    "Reassess when baby is calm",
-                    "Administer oxygen",
-                    "Prepare for resuscitation"
+                    "Family income",
+                    "How well the family performs essential jobs: affection, socialization, healthcare",
+                    "Family size",
+                    "Family ethnicity"
                 ],
                 "correctAnswer": 1,
-                "explanation": "Normal newborn heart rate is 120-160 bpm at rest, but can increase to 180 bpm when crying. Reassess when calm to determine true baseline."
+                "explanation": "This theory evaluates whether the family is fulfilling its core functions - when these break down, dysfunction appears."
             },
             {
                 "id": 24,
-                "text": "What is the purpose of administering vitamin K to a newborn?",
+                "text": "What are red flags for dysfunctional family coping?",
                 "options": [
-                    "Prevent infection",
-                    "Prevent bleeding",
-                    "Promote bonding",
-                    "Stimulate breathing"
+                    "Frequent communication",
+                    "Substance abuse, scapegoating one member, denial that problems exist",
+                    "Regular family meals",
+                    "Asking questions"
                 ],
                 "correctAnswer": 1,
-                "explanation": "Vitamin K is given IM to prevent hemorrhagic disease of the newborn. Newborns have sterile intestines and cannot produce vitamin K initially."
+                "explanation": "Substance abuse, scapegoating, and denial are classic signs of dysfunctional family coping mechanisms."
             },
             {
                 "id": 25,
-                "text": "Erythromycin eye ointment is administered to newborns to prevent which infection?",
+                "text": "What is the biggest mistake clinicians make about Kubler-Ross's five stages of grief?",
                 "options": [
-                    "Conjunctivitis from gonorrhea and chlamydia",
-                    "Respiratory infections",
-                    "Skin infections",
-                    "Umbilical cord infections"
+                    "Not knowing all five",
+                    "Thinking of them as linear stages like a ladder, when grief is actually messy and non-linear",
+                    "Teaching them to patients",
+                    "Using them at all"
                 ],
-                "correctAnswer": 0,
-                "explanation": "Erythromycin eye ointment prevents ophthalmia neonatorum (eye infection) caused by gonorrhea or chlamydia transmitted during vaginal delivery."
+                "correctAnswer": 1,
+                "explanation": "Grief is not linear - patients can move between denial, anger, bargaining, depression, and acceptance in any order, repeatedly."
             },
             {
                 "id": 26,
-                "text": "A newborn's axillary temperature is 97.2\u00b0F (36.2\u00b0C). What is the priority action?",
+                "text": "What is anticipatory grief?",
                 "options": [
-                    "Document as normal",
-                    "Place under radiant warmer and reassess",
-                    "Give a warm bath",
-                    "Administer antibiotics"
+                    "Grief after a sudden loss",
+                    "Grief felt before a loss happens, like grieving for a terminally ill loved one while they're still alive",
+                    "Grief that lasts years",
+                    "Grief for a pet"
                 ],
                 "correctAnswer": 1,
-                "explanation": "Normal newborn temperature is 97.7-99.5\u00b0F (36.5-37.5\u00b0C). Temperature of 97.2\u00b0F indicates hypothermia requiring warming and reassessment."
+                "explanation": "Anticipatory grief occurs before the actual loss, as people grieve the impending death of a loved one."
             },
             {
                 "id": 27,
-                "text": "What is the best way to assess for adequate breastfeeding in a newborn?",
+                "text": "What is disenfranchised grief?",
                 "options": [
-                    "Baby sleeps 6 hours between feedings",
-                    "6-8 wet diapers and 3-4 stools per day by day 4",
-                    "Baby feeds every 4 hours",
-                    "Baby gains 1 pound per week"
+                    "Grief that's too intense",
+                    "Grief that society doesn't acknowledge or support (e.g., losing a pet, end of an affair)",
+                    "Grief after divorce",
+                    "Grief in children"
                 ],
                 "correctAnswer": 1,
-                "explanation": "Adequate hydration and nutrition are indicated by 6-8 wet diapers and 3-4 stools daily by day 4. Newborns should feed 8-12 times per 24 hours."
+                "explanation": "Disenfranchised grief lacks social recognition and support, forcing people to grieve alone (pet loss, affair ending, etc.)."
             },
             {
                 "id": 28,
-                "text": "A newborn develops jaundice on day 2 of life. What is the most likely cause?",
+                "text": "What's the difference between moderate and severe anxiety?",
                 "options": [
-                    "Liver disease",
-                    "Physiologic jaundice from RBC breakdown",
-                    "Infection",
-                    "Biliary atresia"
+                    "Duration",
+                    "Moderate narrows focus slightly; severe causes tunnel vision and inability to perform simple tasks",
+                    "Medication needs",
+                    "Heart rate"
                 ],
                 "correctAnswer": 1,
-                "explanation": "Physiologic jaundice appears after 24 hours due to normal RBC breakdown and immature liver. Jaundice before 24 hours is pathologic and requires investigation."
+                "explanation": "Moderate anxiety narrows focus somewhat, but severe anxiety creates tunnel vision on one detail and prevents basic functioning."
             },
             {
                 "id": 29,
-                "text": "What is the correct technique for umbilical cord care?",
+                "text": "What characterizes panic-level anxiety?",
                 "options": [
-                    "Apply antibiotic ointment daily",
-                    "Keep clean and dry, fold diaper below cord",
-                    "Cover with petroleum jelly",
-                    "Submerge in water during baths"
+                    "Mild worry",
+                    "Complete loss of function, terror, dread, overwhelming physical symptoms",
+                    "Productive concern",
+                    "Focused attention"
                 ],
                 "correctAnswer": 1,
-                "explanation": "Keep cord clean and dry. Fold diaper below cord to prevent urine contamination. Cord typically falls off in 10-14 days."
+                "explanation": "Panic is a complete breakdown of function with overwhelming terror, dread, and severe physical manifestations."
             },
             {
                 "id": 30,
-                "text": "A mother asks when to call the provider about her newborn. Which symptom requires immediate attention?",
+                "text": "What is the number one predictor of future suicide attempts?",
                 "options": [
-                    "Sneezing occasionally",
-                    "Sleeping 16 hours per day",
-                    "Temperature of 100.4\u00b0F (38\u00b0C) or higher",
-                    "Hiccups after feeding"
+                    "Depression diagnosis",
+                    "A previous suicide attempt",
+                    "Family history",
+                    "Age"
                 ],
-                "correctAnswer": 2,
-                "explanation": "Fever (\u2265100.4\u00b0F/38\u00b0C) in a newborn may indicate serious infection and requires immediate medical evaluation."
+                "correctAnswer": 1,
+                "explanation": "Previous suicide attempts are the strongest predictor of future attempts - this history must always be taken seriously."
             },
             {
                 "id": 31,
-                "text": "What is the recommended sleep position for newborns to reduce SIDS risk?",
+                "text": "What other factors increase suicide risk?",
                 "options": [
-                    "Prone (on stomach)",
-                    "Side-lying",
-                    "Supine (on back)",
-                    "Semi-upright in car seat"
+                    "Being employed",
+                    "Lack of social support, hopelessness, substance use, chronic painful medical conditions",
+                    "Having hobbies",
+                    "Living with family"
                 ],
-                "correctAnswer": 2,
-                "explanation": "Back to sleep (supine position) significantly reduces SIDS risk. Avoid soft bedding, pillows, and bed-sharing."
+                "correctAnswer": 1,
+                "explanation": "Isolation, hopelessness, substance abuse, and chronic suffering all significantly elevate suicide risk."
             },
             {
                 "id": 32,
-                "text": "A breastfeeding mother reports sore, cracked nipples. What is the best advice?",
+                "text": "What is the first rule of de-escalation with an agitated patient?",
                 "options": [
-                    "Stop breastfeeding immediately",
-                    "Check baby's latch and positioning",
-                    "Apply soap to nipples",
-                    "Limit feeding to 5 minutes per breast"
+                    "Get close to show care",
+                    "Maintain distance (3-12 feet) for safety",
+                    "Speak loudly",
+                    "Call security immediately"
                 ],
                 "correctAnswer": 1,
-                "explanation": "Sore nipples usually result from poor latch. Assess positioning and ensure baby takes entire areola into mouth, not just the nipple."
+                "explanation": "Safety requires maintaining 3-12 feet of distance while using a calm voice to de-escalate."
             },
             {
                 "id": 33,
-                "text": "When should a newborn have the first bowel movement (meconium)?",
+                "text": "In de-escalation, what should you validate?",
                 "options": [
-                    "Within 24-48 hours after birth",
-                    "Within 1 week",
-                    "Immediately after birth",
-                    "Within 72 hours"
+                    "Their behavior",
+                    "Their feeling, but NOT their behavior ('I can see you're very upset')",
+                    "Everything they say",
+                    "Nothing"
                 ],
-                "correctAnswer": 0,
-                "explanation": "Meconium (first stool) should be passed within 24-48 hours. Failure to pass meconium may indicate intestinal obstruction or other problems."
+                "correctAnswer": 1,
+                "explanation": "Validate emotions ('You're upset') but never validate dangerous or inappropriate behavior."
             },
             {
                 "id": 34,
-                "text": "What is the normal newborn blood glucose level?",
+                "text": "Why should you ignore challenging questions during de-escalation?",
                 "options": [
-                    "20-40 mg/dL",
-                    "40-60 mg/dL",
-                    "60-100 mg/dL",
-                    "100-120 mg/dL"
+                    "You don't know the answers",
+                    "Arguing about 'why you're here' or 'who's in charge' adds fuel to the fire",
+                    "It's hospital policy",
+                    "It saves time"
                 ],
                 "correctAnswer": 1,
-                "explanation": "Normal newborn glucose is 40-60 mg/dL in first hours, then 60-100 mg/dL. Levels <40 mg/dL indicate hypoglycemia requiring intervention."
+                "explanation": "Engaging with challenging questions escalates conflict - stay focused on calming and safety."
             },
             {
                 "id": 35,
-                "text": "A mother asks about circumcision care. What should the nurse teach?",
+                "text": "When are restraints appropriate?",
                 "options": [
-                    "Remove the yellow exudate immediately",
-                    "Apply petroleum jelly with each diaper change",
-                    "Avoid diaper changes for 24 hours",
-                    "Submerge in bath water immediately"
+                    "For convenience",
+                    "Always as a last resort after everything else fails, with physician's order",
+                    "Whenever staff is busy",
+                    "For confused patients"
                 ],
                 "correctAnswer": 1,
-                "explanation": "Apply petroleum jelly to prevent diaper from sticking to healing site. Yellow exudate is normal granulation tissue. Avoid tub baths until healed."
+                "explanation": "Restraints are ALWAYS a last resort, only after all other interventions fail, and require a physician's order."
+            }
+        ]
+    },
+    {
+        "id": 105,
+        "episodeId": 5,
+        "title": "Psychosocial Integrity - Part B",
+        "description": "Restraints, CBT, Trauma-Informed Care, Crisis Management",
+        "questionCount": 30,
+        "color": "from-purple-600 to-indigo-800",
+        "questions": [
+            {
+                "id": 1,
+                "text": "How often must patients in physical restraints be checked?",
+                "options": [
+                    "Every 4 hours",
+                    "Every 1-2 hours",
+                    "Once per shift",
+                    "Only when they call"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Physical restraints require checks every 1-2 hours to assess circulation, skin integrity, hydration, nutrition, and prevent complications like blood clots."
+            },
+            {
+                "id": 2,
+                "text": "What must be assessed during restraint monitoring?",
+                "options": [
+                    "Only vital signs",
+                    "Circulation, skin integrity, ability to get food/water, preventing blood clots and tissue damage",
+                    "Just comfort level",
+                    "Blood pressure only"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Comprehensive monitoring includes circulation, skin condition, hydration, nutrition, and prevention of serious complications."
+            },
+            {
+                "id": 3,
+                "text": "Do chemical restraints (medications) require the same monitoring as physical restraints?",
+                "options": [
+                    "No, medications are safer",
+                    "Yes - nurses must assess and document patient status at least every 2 hours",
+                    "Only if the patient requests",
+                    "No monitoring needed"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Chemical restraints require the same rigorous monitoring - assessment and documentation at least every 2 hours."
+            },
+            {
+                "id": 4,
+                "text": "What is the core principle guiding restraint use?",
+                "options": [
+                    "Use whatever is easiest",
+                    "Always use the least restrictive measure possible to keep everyone safe - never for convenience",
+                    "Restraints are first-line treatment",
+                    "Family preference determines use"
+                ],
+                "correctAnswer": 1,
+                "explanation": "The guiding principle is least restrictive intervention for safety - restraints are NEVER for staff convenience."
+            },
+            {
+                "id": 5,
+                "text": "What is Cognitive Behavioral Therapy (CBT) based on?",
+                "options": [
+                    "Medication management",
+                    "The link between thoughts, feelings, and behaviors",
+                    "Family history",
+                    "Dream analysis"
+                ],
+                "correctAnswer": 1,
+                "explanation": "CBT focuses on the interconnection between thoughts, feelings, and behaviors, helping patients identify maladaptive patterns."
+            },
+            {
+                "id": 6,
+                "text": "What is Aaron Beck's 'cognitive triad'?",
+                "options": [
+                    "Three types of therapy",
+                    "Negative view of self, the world, and the future",
+                    "Three medications",
+                    "Three sessions per week"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Beck's cognitive triad describes the three negative thought patterns in depression: negative views of self, world, and future."
+            },
+            {
+                "id": 7,
+                "text": "A patient says 'I'm a failure, I mess everything up' after one setback. What CBT technique helps?",
+                "options": [
+                    "Agreeing with them",
+                    "Reframing: 'That particular skill didn't work this time. What can we learn?' - shifting from permanent flaw to temporary problem",
+                    "Ignoring the statement",
+                    "Changing the subject"
+                ],
+                "correctAnswer": 1,
+                "explanation": "CBT reframing helps patients see setbacks as temporary, solvable problems rather than permanent character flaws."
+            },
+            {
+                "id": 8,
+                "text": "What is Trauma-Informed Care (TIC)?",
+                "options": [
+                    "A specific therapy technique",
+                    "A fundamental framework recognizing how common trauma is, built on five pillars",
+                    "Only for PTSD patients",
+                    "A medication protocol"
+                ],
+                "correctAnswer": 1,
+                "explanation": "TIC is a comprehensive care framework that recognizes trauma's prevalence and restructures care around five core pillars."
+            },
+            {
+                "id": 9,
+                "text": "What are the five pillars of Trauma-Informed Care?",
+                "options": [
+                    "Medication, therapy, exercise, diet, sleep",
+                    "Safety, Trustworthiness, Choice, Collaboration, Empowerment",
+                    "Assessment, diagnosis, treatment, evaluation, discharge",
+                    "Physical, emotional, social, spiritual, financial"
+                ],
+                "correctAnswer": 1,
+                "explanation": "TIC's five pillars are: Safety (physical/emotional), Trustworthiness, Choice (autonomy), Collaboration, and Empowerment."
+            },
+            {
+                "id": 10,
+                "text": "Why is 'choice' important in Trauma-Informed Care, even over small things?",
+                "options": [
+                    "It's required by law",
+                    "Giving autonomy over small decisions restores a sense of control to trauma survivors",
+                    "It makes documentation easier",
+                    "It's faster"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Trauma often involves loss of control - offering choices, even small ones, helps restore autonomy and empowerment."
+            },
+            {
+                "id": 11,
+                "text": "What does 'collaboration' mean in TIC?",
+                "options": [
+                    "Working with other staff",
+                    "Working WITH patients, not doing things TO them",
+                    "Team meetings",
+                    "Family involvement"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Collaboration means partnering with patients as equals, not imposing care on them - a fundamental power shift."
+            },
+            {
+                "id": 12,
+                "text": "What is the focus of 'empowerment' in TIC?",
+                "options": [
+                    "Giving patients more medication",
+                    "Focusing on their strengths and helping them advocate for themselves",
+                    "Discharge planning",
+                    "Family education"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Empowerment builds on patient strengths and develops their self-advocacy skills, promoting recovery and resilience."
+            },
+            {
+                "id": 13,
+                "text": "How does TIC change the power dynamic in healthcare?",
+                "options": [
+                    "It doesn't",
+                    "It transforms the relationship into a true partnership",
+                    "It gives all power to patients",
+                    "It removes professional boundaries"
+                ],
+                "correctAnswer": 1,
+                "explanation": "TIC fundamentally shifts from a hierarchical model to a collaborative partnership between provider and patient."
+            },
+            {
+                "id": 14,
+                "text": "What is the ultimate goal of psychosocial integrity mastery?",
+                "options": [
+                    "Memorizing protocols",
+                    "Balancing technical knowledge (restraint rules) with deep human interaction skills",
+                    "Fast patient turnover",
+                    "Perfect documentation"
+                ],
+                "correctAnswer": 1,
+                "explanation": "True mastery combines technical competence with genuine human connection - both are essential for effective care."
+            },
+            {
+                "id": 15,
+                "text": "Why must you treat patients as 'whole persons' in psychosocial care?",
+                "options": [
+                    "It's hospital policy",
+                    "Because they exist in families, deal with loss, and require you to be both communicator and investigator",
+                    "It takes less time",
+                    "It's easier"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Patients are complex beings in social contexts - effective care requires seeing the whole person, not just symptoms."
+            },
+            {
+                "id": 16,
+                "text": "What common phrase should you rephrase to show real empathy?",
+                "options": [
+                    "'Good morning'",
+                    "'Don't worry about it' - this dismisses concerns rather than validating them",
+                    "'How are you?'",
+                    "'See you later'"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Phrases like 'Don't worry' dismiss valid concerns - instead, acknowledge feelings and offer support."
+            },
+            {
+                "id": 17,
+                "text": "What makes silence meaningful in therapeutic communication?",
+                "options": [
+                    "It's not meaningful",
+                    "Silence is communication - it can indicate fear, processing, resistance, or comfort",
+                    "It means the patient is fine",
+                    "It's just awkward"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Silence communicates volumes - it may show fear, deep thought, resistance, or peaceful acceptance. Never dismiss it."
+            },
+            {
+                "id": 18,
+                "text": "Why is anger considered meaningful communication?",
+                "options": [
+                    "It's not meaningful",
+                    "Anger often masks fear, loss of control, or unmet needs - it's a signal to investigate",
+                    "It's just bad behavior",
+                    "It means discharge"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Anger is rarely just anger - it usually signals underlying fear, powerlessness, or unaddressed needs requiring exploration."
+            },
+            {
+                "id": 19,
+                "text": "What does non-compliance often communicate?",
+                "options": [
+                    "The patient is difficult",
+                    "Lack of understanding, fear, cultural barriers, or loss of autonomy",
+                    "The patient doesn't care",
+                    "Laziness"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Non-compliance is meaningful behavior signaling barriers like confusion, fear, cultural issues, or feeling powerless."
+            },
+            {
+                "id": 20,
+                "text": "How do you build rapport with a patient who won't talk?",
+                "options": [
+                    "Force them to talk",
+                    "Respect the silence, make observations, reflect potential feelings, give them control",
+                    "Leave them alone",
+                    "Call psychiatry immediately"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Respect silence, use gentle observations and reflections, and empower them to open up when ready - never force communication."
+            },
+            {
+                "id": 21,
+                "text": "What is the relationship between psychosocial integrity and patient safety?",
+                "options": [
+                    "They're unrelated",
+                    "Poor psychosocial care increases safety risks - agitation, non-compliance, self-harm",
+                    "Safety is only physical",
+                    "Psychosocial care is optional"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Psychosocial distress directly impacts safety through agitation, treatment refusal, and self-harm risk."
+            },
+            {
+                "id": 22,
+                "text": "Why is therapeutic communication considered a 'clinical skill' not just 'being nice'?",
+                "options": [
+                    "It's not a clinical skill",
+                    "It requires specific techniques, assessment, and directly impacts outcomes and safety",
+                    "It's just personality",
+                    "Anyone can do it"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Therapeutic communication uses evidence-based techniques that require training and directly affect patient outcomes and safety."
+            },
+            {
+                "id": 23,
+                "text": "What connects abuse assessment to psychosocial integrity?",
+                "options": [
+                    "They're separate topics",
+                    "Abuse creates profound psychosocial trauma requiring specialized communication and trust-building",
+                    "Only physical assessment matters",
+                    "Abuse is rare"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Abuse causes deep psychosocial wounds - effective assessment requires therapeutic communication skills and trauma-informed approaches."
+            },
+            {
+                "id": 24,
+                "text": "How does understanding grief stages help in crisis intervention?",
+                "options": [
+                    "It doesn't help",
+                    "Recognizing grief responses helps normalize patient reactions and guide appropriate support",
+                    "You can predict exact timelines",
+                    "You can rush the process"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Understanding grief helps validate patient experiences, normalize their reactions, and provide appropriate, stage-sensitive support."
+            },
+            {
+                "id": 25,
+                "text": "Why is family systems theory important in psychosocial care?",
+                "options": [
+                    "Families don't matter",
+                    "One person's crisis affects the whole family system - you must assess and support the entire unit",
+                    "Only the patient needs care",
+                    "It's just theory"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Family systems theory shows that individual crises ripple through the entire family - effective care addresses the whole system."
+            },
+            {
+                "id": 26,
+                "text": "What is the connection between anxiety levels and intervention approaches?",
+                "options": [
+                    "All anxiety is treated the same",
+                    "Mild/moderate anxiety needs different interventions than severe/panic - escalation requires immediate crisis protocols",
+                    "Anxiety doesn't need intervention",
+                    "Only medication works"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Intervention intensity must match anxiety level - mild needs support, severe/panic requires immediate crisis intervention."
+            },
+            {
+                "id": 27,
+                "text": "Why must suicide risk assessment be thorough and ongoing?",
+                "options": [
+                    "It's hospital policy",
+                    "Risk fluctuates - previous attempts, current stressors, and protective factors change constantly",
+                    "One assessment is enough",
+                    "It's not important"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Suicide risk is dynamic - factors like support, hopelessness, and stressors change, requiring continuous reassessment."
+            },
+            {
+                "id": 28,
+                "text": "What makes de-escalation a critical psychosocial skill?",
+                "options": [
+                    "It's easy",
+                    "It prevents violence, maintains therapeutic relationships, and avoids traumatic restraint use",
+                    "It's optional",
+                    "Only security needs this skill"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Effective de-escalation prevents violence, preserves the therapeutic relationship, and avoids the trauma of restraints."
+            },
+            {
+                "id": 29,
+                "text": "How does CBT empower patients in their own care?",
+                "options": [
+                    "It doesn't",
+                    "It teaches them to identify and change their own thought patterns, giving them tools for self-management",
+                    "Only therapists use CBT",
+                    "It's passive treatment"
+                ],
+                "correctAnswer": 1,
+                "explanation": "CBT gives patients concrete skills to recognize and modify their own thoughts and behaviors, promoting autonomy and recovery."
+            },
+            {
+                "id": 30,
+                "text": "Why is Trauma-Informed Care considered a 'framework' rather than a 'technique'?",
+                "options": [
+                    "It's not important",
+                    "It fundamentally restructures ALL care delivery around trauma awareness, not just specific interventions",
+                    "It's only for therapists",
+                    "It's too complex"
+                ],
+                "correctAnswer": 1,
+                "explanation": "TIC is a comprehensive framework that transforms the entire care approach, environment, and relationships - not just isolated techniques."
             }
         ]
     },
@@ -7269,6 +7639,435 @@
                 ],
                 "correctAnswer": 0,
                 "explanation": "Explanation."
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "title": "Maternity & OB Nursing",
+        "description": "Maternity: Antepartum, Intrapartum, Postpartum, Newborn Care",
+        "questionCount": 35,
+        "color": "from-pink-600 to-rose-800",
+        "questions": [
+            {
+                "id": 1,
+                "text": "A pregnant client at 10 weeks gestation reports nausea and vomiting. Which recommendation is most appropriate?",
+                "options": [
+                    "Eat three large meals per day",
+                    "Eat small, frequent meals and avoid spicy foods",
+                    "Drink large amounts of fluids with meals",
+                    "Lie down immediately after eating"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Small, frequent meals help manage morning sickness. Avoiding spicy, fatty foods and separating liquids from solids can reduce nausea."
+            },
+            {
+                "id": 2,
+                "text": "A nurse is teaching a prenatal class about fetal development. At what gestational age can the fetal heartbeat typically be heard with a Doppler?",
+                "options": [
+                    "6-8 weeks",
+                    "10-12 weeks",
+                    "16-18 weeks",
+                    "20-22 weeks"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Fetal heart tones can typically be detected with a Doppler device at 10-12 weeks gestation. Earlier detection may be possible with transvaginal ultrasound."
+            },
+            {
+                "id": 3,
+                "text": "A client at 28 weeks gestation has a positive glucose challenge test. What is the next step?",
+                "options": [
+                    "Diagnose gestational diabetes immediately",
+                    "Schedule a 3-hour glucose tolerance test",
+                    "Start insulin therapy",
+                    "Restrict all carbohydrates"
+                ],
+                "correctAnswer": 1,
+                "explanation": "A positive glucose challenge test requires confirmation with a 3-hour glucose tolerance test before diagnosing gestational diabetes."
+            },
+            {
+                "id": 4,
+                "text": "Which finding in a pregnant client at 32 weeks gestation requires immediate intervention?",
+                "options": [
+                    "Mild ankle edema at end of day",
+                    "Frequent urination",
+                    "Severe headache with blurred vision",
+                    "Backache after standing"
+                ],
+                "correctAnswer": 2,
+                "explanation": "Severe headache with visual changes indicates possible preeclampsia, requiring immediate assessment of blood pressure and other symptoms."
+            },
+            {
+                "id": 5,
+                "text": "A nurse is teaching about warning signs during pregnancy. Which symptom should be reported immediately?",
+                "options": [
+                    "Increased vaginal discharge",
+                    "Braxton Hicks contractions",
+                    "Sudden gush of fluid from vagina",
+                    "Mild constipation"
+                ],
+                "correctAnswer": 2,
+                "explanation": "Sudden gush of fluid suggests rupture of membranes, requiring immediate evaluation to assess for infection risk and fetal well-being."
+            },
+            {
+                "id": 6,
+                "text": "What is the recommended weight gain during pregnancy for a woman with normal pre-pregnancy BMI?",
+                "options": [
+                    "15-20 pounds",
+                    "25-35 pounds",
+                    "40-50 pounds",
+                    "10-15 pounds"
+                ],
+                "correctAnswer": 1,
+                "explanation": "For women with normal BMI (18.5-24.9), the recommended weight gain is 25-35 pounds during pregnancy."
+            },
+            {
+                "id": 7,
+                "text": "A laboring client's membranes rupture spontaneously. What is the nurse's priority action?",
+                "options": [
+                    "Document the time and characteristics",
+                    "Assess fetal heart rate",
+                    "Notify the provider",
+                    "Prepare for delivery"
+                ],
+                "correctAnswer": 1,
+                "explanation": "After rupture of membranes, immediately assess fetal heart rate to detect cord prolapse or compression, which can cause fetal distress."
+            },
+            {
+                "id": 8,
+                "text": "A client in active labor has contractions every 3 minutes lasting 60 seconds. The cervix is dilated 6 cm. What stage of labor is this?",
+                "options": [
+                    "First stage, latent phase",
+                    "First stage, active phase",
+                    "Second stage",
+                    "Third stage"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Active phase of first stage labor is characterized by cervical dilation of 4-7 cm with regular, strong contractions."
+            },
+            {
+                "id": 9,
+                "text": "Which fetal heart rate pattern requires immediate intervention?",
+                "options": [
+                    "Baseline 140 bpm with moderate variability",
+                    "Early decelerations with contractions",
+                    "Late decelerations with each contraction",
+                    "Accelerations with fetal movement"
+                ],
+                "correctAnswer": 2,
+                "explanation": "Late decelerations indicate uteroplacental insufficiency and fetal hypoxia, requiring immediate intervention (position change, oxygen, IV fluids)."
+            },
+            {
+                "id": 10,
+                "text": "A client receives an epidural for labor pain. What is the priority nursing assessment?",
+                "options": [
+                    "Level of consciousness",
+                    "Blood pressure",
+                    "Respiratory rate",
+                    "Temperature"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Hypotension is a common side effect of epidural anesthesia due to vasodilation. Monitor blood pressure frequently and position client on left side."
+            },
+            {
+                "id": 11,
+                "text": "Which finding indicates the transition phase of labor?",
+                "options": [
+                    "Cervix dilated 3 cm",
+                    "Contractions every 10 minutes",
+                    "Cervix dilated 8-10 cm with intense contractions",
+                    "Delivery of the placenta"
+                ],
+                "correctAnswer": 2,
+                "explanation": "Transition phase occurs at 8-10 cm dilation with very strong, frequent contractions. Client may feel overwhelmed and irritable."
+            },
+            {
+                "id": 12,
+                "text": "A client is pushing during second stage of labor. Which position is most effective?",
+                "options": [
+                    "Supine with legs in stirrups",
+                    "Squatting or semi-sitting",
+                    "Prone position",
+                    "Trendelenburg position"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Upright positions (squatting, semi-sitting) use gravity to assist descent and allow pelvic diameter to increase, facilitating delivery."
+            },
+            {
+                "id": 13,
+                "text": "When should the nurse expect delivery of the placenta after birth?",
+                "options": [
+                    "Immediately after birth",
+                    "Within 5-30 minutes",
+                    "Within 1-2 hours",
+                    "Within 24 hours"
+                ],
+                "correctAnswer": 1,
+                "explanation": "The third stage of labor (placental delivery) typically occurs within 5-30 minutes after birth. Prolonged third stage increases hemorrhage risk."
+            },
+            {
+                "id": 14,
+                "text": "A postpartum client has a boggy uterus. What is the first nursing action?",
+                "options": [
+                    "Notify the provider",
+                    "Massage the fundus",
+                    "Administer oxytocin",
+                    "Check for bladder distention"
+                ],
+                "correctAnswer": 1,
+                "explanation": "A boggy (soft, uncontracted) uterus indicates uterine atony. First action is to massage the fundus to stimulate contraction and prevent hemorrhage."
+            },
+            {
+                "id": 15,
+                "text": "What is the expected location of the fundus immediately after delivery?",
+                "options": [
+                    "At the umbilicus",
+                    "2 cm above the umbilicus",
+                    "Below the umbilicus",
+                    "At the symphysis pubis"
+                ],
+                "correctAnswer": 0,
+                "explanation": "Immediately postpartum, the fundus should be firm and at or slightly below the umbilicus. It descends approximately 1 cm per day."
+            },
+            {
+                "id": 16,
+                "text": "A breastfeeding mother asks about afterpains. What should the nurse explain?",
+                "options": [
+                    "They indicate infection",
+                    "They are caused by oxytocin release during breastfeeding",
+                    "They should not occur after the first birth",
+                    "They require pain medication"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Afterpains are uterine contractions caused by oxytocin release during breastfeeding. They are more common in multiparas and help prevent hemorrhage."
+            },
+            {
+                "id": 17,
+                "text": "Which lochia characteristic on postpartum day 1 is normal?",
+                "options": [
+                    "Lochia alba (white/yellow)",
+                    "Lochia rubra (red) with small clots",
+                    "Lochia serosa (pink/brown)",
+                    "No lochia present"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Lochia rubra (red, bloody discharge) with small clots is normal for days 1-3 postpartum. Large clots or excessive bleeding require assessment."
+            },
+            {
+                "id": 18,
+                "text": "A postpartum client reports severe perineal pain. What should the nurse assess first?",
+                "options": [
+                    "Vital signs",
+                    "Perineum for hematoma",
+                    "Fundal height",
+                    "Lochia amount"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Severe perineal pain may indicate hematoma formation. Assess for swelling, discoloration, and asymmetry of the perineum."
+            },
+            {
+                "id": 19,
+                "text": "What is the priority teaching for a client with postpartum preeclampsia?",
+                "options": [
+                    "Increase fluid intake",
+                    "Report headache or visual changes immediately",
+                    "Limit visitors",
+                    "Avoid breastfeeding"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Postpartum preeclampsia can progress to eclampsia (seizures). Teach client to report warning signs: severe headache, visual changes, epigastric pain."
+            },
+            {
+                "id": 20,
+                "text": "When should a postpartum client resume sexual activity?",
+                "options": [
+                    "After 1 week",
+                    "After 2 weeks",
+                    "After lochia stops and perineum heals (4-6 weeks)",
+                    "After 3 months"
+                ],
+                "correctAnswer": 2,
+                "explanation": "Sexual activity should be delayed until lochia has stopped and perineal healing is complete, typically 4-6 weeks postpartum."
+            },
+            {
+                "id": 21,
+                "text": "A newborn's Apgar score at 1 minute is 8. What does this indicate?",
+                "options": [
+                    "Severe distress requiring resuscitation",
+                    "Moderate distress",
+                    "Good condition with minimal intervention needed",
+                    "Perfect condition"
+                ],
+                "correctAnswer": 2,
+                "explanation": "Apgar scores: 7-10 = good condition, 4-6 = moderate distress, 0-3 = severe distress. Score of 8 indicates good adaptation to extrauterine life."
+            },
+            {
+                "id": 22,
+                "text": "What is the normal respiratory rate for a newborn?",
+                "options": [
+                    "20-30 breaths/minute",
+                    "30-60 breaths/minute",
+                    "60-80 breaths/minute",
+                    "10-20 breaths/minute"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Normal newborn respiratory rate is 30-60 breaths per minute. Rates above 60 may indicate respiratory distress."
+            },
+            {
+                "id": 23,
+                "text": "A newborn has a heart rate of 180 bpm while crying. What should the nurse do?",
+                "options": [
+                    "Call the provider immediately",
+                    "Reassess when baby is calm",
+                    "Administer oxygen",
+                    "Prepare for resuscitation"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Normal newborn heart rate is 120-160 bpm at rest, but can increase to 180 bpm when crying. Reassess when calm to determine true baseline."
+            },
+            {
+                "id": 24,
+                "text": "What is the purpose of administering vitamin K to a newborn?",
+                "options": [
+                    "Prevent infection",
+                    "Prevent bleeding",
+                    "Promote bonding",
+                    "Stimulate breathing"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Vitamin K is given IM to prevent hemorrhagic disease of the newborn. Newborns have sterile intestines and cannot produce vitamin K initially."
+            },
+            {
+                "id": 25,
+                "text": "Erythromycin eye ointment is administered to newborns to prevent which infection?",
+                "options": [
+                    "Conjunctivitis from gonorrhea and chlamydia",
+                    "Respiratory infections",
+                    "Skin infections",
+                    "Umbilical cord infections"
+                ],
+                "correctAnswer": 0,
+                "explanation": "Erythromycin eye ointment prevents ophthalmia neonatorum (eye infection) caused by gonorrhea or chlamydia transmitted during vaginal delivery."
+            },
+            {
+                "id": 26,
+                "text": "A newborn's axillary temperature is 97.2\u00b0F (36.2\u00b0C). What is the priority action?",
+                "options": [
+                    "Document as normal",
+                    "Place under radiant warmer and reassess",
+                    "Give a warm bath",
+                    "Administer antibiotics"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Normal newborn temperature is 97.7-99.5\u00b0F (36.5-37.5\u00b0C). Temperature of 97.2\u00b0F indicates hypothermia requiring warming and reassessment."
+            },
+            {
+                "id": 27,
+                "text": "What is the best way to assess for adequate breastfeeding in a newborn?",
+                "options": [
+                    "Baby sleeps 6 hours between feedings",
+                    "6-8 wet diapers and 3-4 stools per day by day 4",
+                    "Baby feeds every 4 hours",
+                    "Baby gains 1 pound per week"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Adequate hydration and nutrition are indicated by 6-8 wet diapers and 3-4 stools daily by day 4. Newborns should feed 8-12 times per 24 hours."
+            },
+            {
+                "id": 28,
+                "text": "A newborn develops jaundice on day 2 of life. What is the most likely cause?",
+                "options": [
+                    "Liver disease",
+                    "Physiologic jaundice from RBC breakdown",
+                    "Infection",
+                    "Biliary atresia"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Physiologic jaundice appears after 24 hours due to normal RBC breakdown and immature liver. Jaundice before 24 hours is pathologic and requires investigation."
+            },
+            {
+                "id": 29,
+                "text": "What is the correct technique for umbilical cord care?",
+                "options": [
+                    "Apply antibiotic ointment daily",
+                    "Keep clean and dry, fold diaper below cord",
+                    "Cover with petroleum jelly",
+                    "Submerge in water during baths"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Keep cord clean and dry. Fold diaper below cord to prevent urine contamination. Cord typically falls off in 10-14 days."
+            },
+            {
+                "id": 30,
+                "text": "A mother asks when to call the provider about her newborn. Which symptom requires immediate attention?",
+                "options": [
+                    "Sneezing occasionally",
+                    "Sleeping 16 hours per day",
+                    "Temperature of 100.4\u00b0F (38\u00b0C) or higher",
+                    "Hiccups after feeding"
+                ],
+                "correctAnswer": 2,
+                "explanation": "Fever (\u2265100.4\u00b0F/38\u00b0C) in a newborn may indicate serious infection and requires immediate medical evaluation."
+            },
+            {
+                "id": 31,
+                "text": "What is the recommended sleep position for newborns to reduce SIDS risk?",
+                "options": [
+                    "Prone (on stomach)",
+                    "Side-lying",
+                    "Supine (on back)",
+                    "Semi-upright in car seat"
+                ],
+                "correctAnswer": 2,
+                "explanation": "Back to sleep (supine position) significantly reduces SIDS risk. Avoid soft bedding, pillows, and bed-sharing."
+            },
+            {
+                "id": 32,
+                "text": "A breastfeeding mother reports sore, cracked nipples. What is the best advice?",
+                "options": [
+                    "Stop breastfeeding immediately",
+                    "Check baby's latch and positioning",
+                    "Apply soap to nipples",
+                    "Limit feeding to 5 minutes per breast"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Sore nipples usually result from poor latch. Assess positioning and ensure baby takes entire areola into mouth, not just the nipple."
+            },
+            {
+                "id": 33,
+                "text": "When should a newborn have the first bowel movement (meconium)?",
+                "options": [
+                    "Within 24-48 hours after birth",
+                    "Within 1 week",
+                    "Immediately after birth",
+                    "Within 72 hours"
+                ],
+                "correctAnswer": 0,
+                "explanation": "Meconium (first stool) should be passed within 24-48 hours. Failure to pass meconium may indicate intestinal obstruction or other problems."
+            },
+            {
+                "id": 34,
+                "text": "What is the normal newborn blood glucose level?",
+                "options": [
+                    "20-40 mg/dL",
+                    "40-60 mg/dL",
+                    "60-100 mg/dL",
+                    "100-120 mg/dL"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Normal newborn glucose is 40-60 mg/dL in first hours, then 60-100 mg/dL. Levels <40 mg/dL indicate hypoglycemia requiring intervention."
+            },
+            {
+                "id": 35,
+                "text": "A mother asks about circumcision care. What should the nurse teach?",
+                "options": [
+                    "Remove the yellow exudate immediately",
+                    "Apply petroleum jelly with each diaper change",
+                    "Avoid diaper changes for 24 hours",
+                    "Submerge in bath water immediately"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Apply petroleum jelly to prevent diaper from sticking to healing site. Yellow exudate is normal granulation tissue. Avoid tub baths until healed."
             }
         ]
     },

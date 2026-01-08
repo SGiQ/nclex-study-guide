@@ -11,12 +11,16 @@ export interface TranscriptSegment {
 // Episode 2: Coordinated Care
 import episode2Data from './episode-2-transcript.json';
 
+// Episode 3: Safety & Infection Control
+import episode3Data from './episode-3-transcript.json';
+
 // Episode 10: Respiratory, Neurological & Endocrine
 import episode10Data from './episode-10-transcript.json';
 
 // Transcript lookup by episode ID
 export const transcripts: Record<number, TranscriptSegment[]> = {
     2: episode2Data as TranscriptSegment[],
+    3: episode3Data as TranscriptSegment[],
     10: episode10Data as TranscriptSegment[],
     // Add more episodes as transcripts become available
 };

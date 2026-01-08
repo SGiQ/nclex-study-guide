@@ -7,7 +7,8 @@
     "build": "next build --webpack",
     "start": "next start",
     "lint": "eslint",
-    "ingest-pdfs": "node scripts/ingest-pdfs.js"
+    "ingest-pdfs": "node scripts/ingest-pdfs.js",
+    "migrate": "npx tsx scripts/migrations/run-migration.ts"
   },
   "dependencies": {
     "@ducanh2912/next-pwa": "^10.2.9",

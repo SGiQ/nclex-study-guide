@@ -8,11 +8,15 @@ export interface TranscriptSegment {
     speaker?: string;   // Optional speaker label
 }
 
+// Episode 2: Coordinated Care
+import episode2Data from './episode-2-transcript.json';
+
 // Episode 10: Respiratory, Neurological & Endocrine
 import episode10Data from './episode-10-transcript.json';
 
 // Transcript lookup by episode ID
 export const transcripts: Record<number, TranscriptSegment[]> = {
+    2: episode2Data as TranscriptSegment[],
     10: episode10Data as TranscriptSegment[],
     // Add more episodes as transcripts become available
 };

@@ -59,7 +59,9 @@ export default function MindMapViewerPage({ params }: { params: Promise<{ id: st
                     initialScale={1}
                     minScale={0.5}
                     maxScale={4}
-                    centerOnInit={true}
+                    centerOnInit={false}
+                    limitToBounds={false}
+                    panning={{ disabled: false }}
                     wheel={{ step: 0.1 }}
                     doubleClick={{ disabled: false, mode: 'zoomIn', step: 0.5 }}
                 >

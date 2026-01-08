@@ -1,0 +1,370 @@
+{
+    "id": 102,
+    "episodeId": 10,
+    "title": "Endocrine & Critical Care - Part B",
+    "description": "Diabetes, DKA, HHNS, Critical Assessment, Interventions",
+    "questionCount": 30,
+    "color": "from-red-600 to-red-900",
+    "questions": [
+        {
+            "id": 1,
+            "text": "What is the fundamental problem in diabetes mellitus?",
+            "options": [
+                "Excess insulin production",
+                "Problem with insulin - the key that lets glucose into cells",
+                "Too much glucose excretion",
+                "Kidney failure"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Diabetes is fundamentally a problem with insulin, which acts as the key allowing glucose to enter cells for fuel."
+        },
+        {
+            "id": 2,
+            "text": "Type 1 diabetes is characterized by:",
+            "options": [
+                "Insulin resistance",
+                "Absolute insulin deficiency due to destroyed pancreatic beta cells",
+                "Reversible with diet alone",
+                "Late onset in elderly"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Type 1 is an absolute insulin deficiency from destroyed beta cells, requiring lifelong exogenous insulin."
+        },
+        {
+            "id": 3,
+            "text": "Type 2 diabetes initially involves:",
+            "options": [
+                "Complete lack of insulin",
+                "Insulin resistance first, then inadequate production later",
+                "Pancreatic cancer",
+                "Kidney dysfunction"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Type 2 starts with insulin resistance, then progresses to inadequate insulin production. Usually managed with diet, exercise, and oral medications."
+        },
+        {
+            "id": 4,
+            "text": "What are the 'three polys' of diabetes?",
+            "options": [
+                "Polyphagia, polydipsia, polyuria",
+                "Polyps, polyneuropathy, polycythemia",
+                "Polypharmacy, polytrauma, polymyalgia",
+                "Polyarthritis, polycystic, polymorphic"
+            ],
+            "correctAnswer": 0,
+            "explanation": "The classic signs are polyuria (frequent urination), polydipsia (excessive thirst), and polyphagia (excessive hunger)."
+        },
+        {
+            "id": 5,
+            "text": "DKA (diabetic ketoacidosis) is typically a complication of which type of diabetes?",
+            "options": [
+                "Type 2",
+                "Type 1",
+                "Gestational",
+                "Pre-diabetes"
+            ],
+            "correctAnswer": 1,
+            "explanation": "DKA typically occurs in Type 1 diabetes due to absolute lack of insulin, causing the body to break down fat for fuel."
+        },
+        {
+            "id": 6,
+            "text": "In DKA, why does the body break down fat?",
+            "options": [
+                "To lose weight",
+                "Because cells can't get glucose without insulin, so the body thinks it's starving",
+                "To produce more insulin",
+                "To lower blood sugar"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Without insulin, cells can't access glucose. The body perceives starvation and breaks down fat for alternative fuel."
+        },
+        {
+            "id": 7,
+            "text": "What are ketones and why are they dangerous?",
+            "options": [
+                "Sugars that provide energy",
+                "Highly acidic byproducts of fat breakdown that cause metabolic acidosis",
+                "Proteins that build muscle",
+                "Harmless waste products"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Ketones are acidic byproducts of fat metabolism. When they accumulate, they overwhelm buffers and cause severe metabolic acidosis."
+        },
+        {
+            "id": 8,
+            "text": "What is Kussmaul breathing and what does it indicate?",
+            "options": [
+                "Shallow, slow breathing",
+                "Deep, labored, rapid breaths attempting to blow off CO2 and raise pH",
+                "Normal breathing pattern",
+                "Irregular breathing"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Kussmaul respirations are deep, rapid breaths - the body's attempt to compensate for acidosis by exhaling CO2 (an acid)."
+        },
+        {
+            "id": 9,
+            "text": "What causes the fruity breath odor in DKA?",
+            "options": [
+                "Poor oral hygiene",
+                "Acetone (a volatile ketone) being exhaled",
+                "Bacterial infection",
+                "Dehydration"
+            ],
+            "correctAnswer": 1,
+            "explanation": "The fruity smell is acetone, a volatile ketone being exhaled through the lungs."
+        },
+        {
+            "id": 10,
+            "text": "What lab values confirm DKA?",
+            "options": [
+                "Glucose <100, pH >7.4",
+                "Glucose >250, pH <7.3, ketones present",
+                "Normal glucose, low pH",
+                "High pH, no ketones"
+            ],
+            "correctAnswer": 1,
+            "explanation": "DKA is confirmed by glucose >250 mg/dL, pH <7.3, and presence of ketones in blood or urine."
+        },
+        {
+            "id": 11,
+            "text": "What is the FIRST priority in treating DKA?",
+            "options": [
+                "Give insulin immediately",
+                "Aggressive fluid resuscitation to correct dehydration",
+                "Administer antibiotics",
+                "Check blood pressure only"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Fluids first! Must correct severe dehydration and poor perfusion before starting insulin therapy."
+        },
+        {
+            "id": 12,
+            "text": "Why is it dangerous to give insulin before addressing potassium in DKA?",
+            "options": [
+                "Insulin is ineffective without potassium",
+                "Insulin drives potassium into cells, potentially causing fatal hypokalemia",
+                "Potassium blocks insulin action",
+                "It causes hyperglycemia"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Insulin shifts potassium into cells. If serum potassium is already low, insulin can cause dangerous or fatal hypokalemia."
+        },
+        {
+            "id": 13,
+            "text": "What are the three priorities in DKA treatment, in order?",
+            "options": [
+                "Insulin, fluids, potassium",
+                "Fluids, IV insulin, potassium replacement",
+                "Potassium, insulin, fluids",
+                "Antibiotics, fluids, insulin"
+            ],
+            "correctAnswer": 1,
+            "explanation": "The order is critical: 1) Fluids to correct dehydration, 2) IV insulin to stop ketone production, 3) Potassium replacement."
+        },
+        {
+            "id": 14,
+            "text": "HHNS (hyperosmolar hyperglycemic non-ketotic syndrome) typically occurs in which type of diabetes?",
+            "options": [
+                "Type 1",
+                "Type 2",
+                "Gestational",
+                "LADA"
+            ],
+            "correctAnswer": 1,
+            "explanation": "HHNS typically occurs in Type 2 diabetes, where there's enough insulin to prevent ketone formation but not enough to control glucose."
+        },
+        {
+            "id": 15,
+            "text": "What is the key difference between DKA and HHNS?",
+            "options": [
+                "HHNS has higher glucose levels",
+                "HHNS lacks ketones and acidosis",
+                "DKA only affects children",
+                "HHNS is less serious"
+            ],
+            "correctAnswer": 1,
+            "explanation": "HHNS shares high glucose and dehydration with DKA, but lacks ketones and acidosis because some insulin is present."
+        },
+        {
+            "id": 16,
+            "text": "In HHNS, glucose levels can reach:",
+            "options": [
+                "150-200 mg/dL",
+                "Over 600 mg/dL",
+                "Below 100 mg/dL",
+                "300-400 mg/dL"
+            ],
+            "correctAnswer": 1,
+            "explanation": "HHNS can have astronomical glucose levels, sometimes exceeding 600 mg/dL, causing profound dehydration."
+        },
+        {
+            "id": 17,
+            "text": "What is the primary intervention focus in HHNS?",
+            "options": [
+                "Immediate insulin",
+                "Massive fluid resuscitation first, then controlled insulin",
+                "Antibiotics",
+                "Dialysis"
+            ],
+            "correctAnswer": 1,
+            "explanation": "HHNS is primarily a dehydration crisis. Treatment focuses on aggressive fluid replacement, then controlled insulin administration."
+        },
+        {
+            "id": 18,
+            "text": "Why is respiratory failure described as a 'common lethal endpoint' for many crises?",
+            "options": [
+                "It only affects the lungs",
+                "Multiple system failures (seizures, DKA, COPD) all can lead to respiratory collapse",
+                "It's easily reversible",
+                "It's rare"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Whether from status epilepticus exhaustion, DKA compensation, or COPD structural failure, many crises end in respiratory failure."
+        },
+        {
+            "id": 19,
+            "text": "A patient in DKA shows signs of volume depletion. What causes this?",
+            "options": [
+                "Excessive fluid intake",
+                "Osmotic pull of high glucose in urine causing massive fluid loss",
+                "Kidney failure",
+                "Heart failure"
+            ],
+            "correctAnswer": 1,
+            "explanation": "High glucose in urine creates osmotic pull, dragging water out and causing severe dehydration, hypotension, and tachycardia."
+        },
+        {
+            "id": 20,
+            "text": "What connects the respiratory and endocrine systems in DKA?",
+            "options": [
+                "They're unrelated",
+                "Kussmaul breathing is the respiratory system compensating for metabolic acidosis",
+                "The lungs produce insulin",
+                "The pancreas controls breathing"
+            ],
+            "correctAnswer": 1,
+            "explanation": "The respiratory system attempts to compensate for DKA's metabolic acidosis through Kussmaul breathing to blow off CO2."
+        },
+        {
+            "id": 21,
+            "text": "What assessment finding would indicate successful DKA treatment?",
+            "options": [
+                "Continued Kussmaul breathing",
+                "Normalizing pH, decreasing glucose, improved mental status",
+                "Worsening acidosis",
+                "Increased ketones"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Successful treatment shows normalizing pH, decreasing glucose levels, clearing ketones, and improved mental status."
+        },
+        {
+            "id": 22,
+            "text": "Why must glucose be monitored closely during DKA treatment?",
+            "options": [
+                "To ensure it stays high",
+                "To prevent hypoglycemia as insulin works and to adjust treatment",
+                "Glucose doesn't need monitoring",
+                "To increase insulin dose"
+            ],
+            "correctAnswer": 1,
+            "explanation": "As insulin lowers glucose, close monitoring prevents hypoglycemia and guides treatment adjustments."
+        },
+        {
+            "id": 23,
+            "text": "What role does the neurological system play in recognizing metabolic crises?",
+            "options": [
+                "No role",
+                "Altered mental status signals severe metabolic derangement",
+                "Only affects reflexes",
+                "Causes the crisis"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Changes in mental status (confusion, lethargy, coma) are critical signs of severe metabolic disturbance in DKA/HHNS."
+        },
+        {
+            "id": 24,
+            "text": "A patient with diabetes presents with confusion. What should be assessed first?",
+            "options": [
+                "Blood pressure only",
+                "Blood glucose level",
+                "Temperature",
+                "Respiratory rate only"
+            ],
+            "correctAnswer": 1,
+            "explanation": "In diabetic patients with altered mental status, immediately check blood glucose to rule out hypo- or hyperglycemia."
+        },
+        {
+            "id": 25,
+            "text": "What makes the interconnection of respiratory, neurological, and endocrine systems clinically significant?",
+            "options": [
+                "They work independently",
+                "Failure in one system rapidly affects the others, creating cascading emergencies",
+                "They never interact",
+                "Only one system matters"
+            ],
+            "correctAnswer": 1,
+            "explanation": "These systems are profoundly interconnected - failure in one (e.g., DKA) immediately impacts others (respiratory compensation, altered mental status)."
+        },
+        {
+            "id": 26,
+            "text": "What is the clinical significance of recognizing Kussmaul breathing?",
+            "options": [
+                "It's normal breathing",
+                "It instantly signals severe metabolic acidosis requiring immediate intervention",
+                "It means the patient is anxious",
+                "It's insignificant"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Kussmaul breathing is a critical red flag instantly indicating severe acidosis (likely DKA) requiring emergency treatment."
+        },
+        {
+            "id": 27,
+            "text": "Why is 'time is brain' emphasized in stroke care?",
+            "options": [
+                "Strokes are slow to develop",
+                "Every minute without treatment causes more irreversible brain damage",
+                "Time doesn't matter",
+                "Treatment can wait"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Brain tissue dies rapidly without blood flow. Every minute of delay causes more permanent damage, making rapid intervention critical."
+        },
+        {
+            "id": 28,
+            "text": "What principle guides all critical care interventions discussed?",
+            "options": [
+                "Treat symptoms only",
+                "Identify and treat the underlying cause immediately",
+                "Wait and observe",
+                "Use maximum medications"
+            ],
+            "correctAnswer": 1,
+            "explanation": "The core principle across all emergencies is to immediately identify and treat the underlying cause, not just mask symptoms."
+        },
+        {
+            "id": 29,
+            "text": "How do assessment flags like pulsus paradoxus or Kussmaul breathing help clinicians?",
+            "options": [
+                "They're just interesting findings",
+                "They instantly reveal underlying pathology and dictate immediate life-saving interventions",
+                "They're unreliable",
+                "They only matter for documentation"
+            ],
+            "correctAnswer": 1,
+            "explanation": "These clinical flags instantly clue you into the underlying crisis and tell you exactly what intervention is needed to save the patient."
+        },
+        {
+            "id": 30,
+            "text": "What makes understanding system interconnections essential for nursing practice?",
+            "options": [
+                "It's only academic knowledge",
+                "It transforms facts into a clinical roadmap for recognizing and treating cascading emergencies",
+                "Systems never interact",
+                "It's optional knowledge"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Understanding how systems interact transforms isolated facts into an actionable clinical roadmap for managing complex, multi-system emergencies."
+        }
+    ]
+}

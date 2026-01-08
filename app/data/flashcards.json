@@ -2416,257 +2416,157 @@
     {
         "episodeId": 13,
         "title": "Episode 13 Flashcards",
-        "description": "Flashcards for Episode 13",
+        "description": "Metabolic, Integumentary & Sensory",
         "cards": [
             {
                 "id": 1,
-                "front": "What is the normal pH range for human blood?",
-                "back": "The normal pH range is 7.35 to 7.45."
+                "front": "What is the normal range for arterial blood pH?",
+                "back": "7.35 to 7.45."
             },
             {
                 "id": 2,
-                "front": "A blood pH value below 7.35 indicates what condition?",
-                "back": "A pH below 7.35 indicates acidosis."
+                "front": "In Metabolic Acidosis, what compensatory breathing pattern is seen?",
+                "back": "Kussmaul Respirations (deep, rapid breathing to blow off CO2)."
             },
             {
                 "id": 3,
-                "front": "What is the function of pCO2 in a blood gas reading?",
-                "back": "pCO2 measures the partial pressure of carbon dioxide and is the respiratory component of an ABG."
+                "front": "Respiratory Alkalosis is typically caused by:",
+                "back": "Hyperventilation (Anxiety, Panic)."
             },
             {
                 "id": 4,
-                "front": "What is the normal range for pCO2 in an arterial blood gas?",
-                "back": "The normal range for pCO2 is 35-45 mmHg."
+                "front": "What organ regulates Bicarbonate (HCO3) levels?",
+                "back": "The Kidneys (slow compensation)."
             },
             {
                 "id": 5,
-                "front": "What component of a blood gas reading is a measure of the metabolic component and is regulated by the kidneys?",
-                "back": "Bicarbonate (HCO3) is the metabolic component."
+                "front": "Hyponatremia (Low Sodium) causes dangerous swelling in the:",
+                "back": "Brain (Cerebral Edema), leading to seizures."
             },
             {
                 "id": 6,
-                "front": "What is the normal range for bicarbonate (HCO3) in the blood?",
-                "back": "The normal value for bicarbonate is 22-26 mEq/L."
+                "front": "What is the primary danger of Hyperkalemia (High Potassium)?",
+                "back": "Cardiac Arrest / Ventricular Fibrillation."
             },
             {
                 "id": 7,
-                "front": "\"In uncompensated metabolic acidosis",
-                "back": "what are the expected changes in pH and pCO2?\",The pH is decreased (<7.35) and the pCO2 is normal."
+                "front": "What is the max rate for IV Potassium infusion peripherally?",
+                "back": "10 mEq per hour (Never IV Push!)."
             },
             {
                 "id": 8,
-                "front": "\"In compensated metabolic acidosis",
-                "back": "how does the pCO2 level change?\",The pCO2 level decreases as a compensatory mechanism."
+                "front": "What does IV Calcium Gluconate do in Hyperkalemia?",
+                "back": "Stabilizes the heart membrane (does not lower K+)."
             },
             {
                 "id": 9,
-                "front": "List three common causes of metabolic acidosis.",
-                "back": "\"Diabetic ketoacidosis (DKA), lactic acidosis, diarrhea, starvation, and renal failure.\""
+                "front": "What medication shifts Potassium from the blood into cells?",
+                "back": "Insulin (given with Dextrose)."
             },
             {
                 "id": 10,
-                "front": "What is a key respiratory symptom of metabolic acidosis?",
-                "back": "\"Rapid, deep, labored breathing known as Kussmaul respirations.\""
+                "front": "Chvostek's and Trousseau's signs indicate:",
+                "back": "Hypocalcemia (Low Calcium) or Hypomagnesemia (Neuromuscular irritability)."
             },
             {
                 "id": 11,
-                "front": "\"In respiratory acidosis",
-                "back": "what is the primary pathophysiological problem?\",\"Hypoventilation and CO2 retention, with renal compensatory retention of bicarbonate.\""
+                "front": "What is the difference between Cellulitis and Necrotizing Fasciitis?",
+                "back": "Cellulitis is skin deep; Necrotizing Fasciitis kills deep tissue/fascia and requires emergency surgery."
             },
             {
                 "id": 12,
-                "front": "\"In uncompensated respiratory acidosis",
-                "back": "what are the expected lab values for pH and pCO2?\",The pH is decreased (<7.35) and the pCO2 is increased."
+                "front": "What is the priority for Chemical Extravasation?",
+                "back": "Stop infusion, Secure line, Elevate."
             },
             {
                 "id": 13,
-                "front": "What are two potential causes of respiratory acidosis?",
-                "back": "\"Overdose of sedatives, obesity, severe pneumonia, or mechanical hypoventilation.\""
+                "front": "Bell's Palsy affects which Cranial Nerve?",
+                "back": "CN VII (Facial Nerve)."
             },
             {
                 "id": 14,
-                "front": "What is the primary cause of metabolic alkalosis?",
-                "back": "\"A loss of strong acid or a gain of base, with compensatory CO2 retention by the lungs.\""
+                "front": "What is the triad of Meniere's Disease symptoms?",
+                "back": "Vertigo, Tinnitus, and Fluctuating Hearing Loss."
             },
             {
                 "id": 15,
-                "front": "What are the expected lab findings for pH and HCO3 in metabolic alkalosis?",
-                "back": "Increased serum pH (>7.45) and increased HCO3."
+                "front": "Why is Temporal Arteritis an emergency?",
+                "back": "Risk of irreversible blindness."
             },
             {
                 "id": 16,
-                "front": "\"Excessive vomiting",
-                "back": "gastric suctioning, and diuretic use are common causes of which acid-base imbalance?\",Metabolic alkalosis."
+                "front": "What medication is critical for Temporal Arteritis?",
+                "back": "High-dose Corticosteroids (Prednisone)."
             },
             {
                 "id": 17,
-                "front": "\"Muscle cramping",
-                "back": "tetany, and tremors are neuromuscular symptoms associated with which acid-base imbalance?\",Metabolic alkalosis."
+                "front": "What is the priority for facial trauma (LeFort fractures)?",
+                "back": "Airway Patency."
             },
             {
                 "id": 18,
-                "front": "What is the underlying pathophysiology of respiratory alkalosis?",
-                "back": "\"Hyperventilation and increased excretion of CO2, with compensatory HCO3 excretion by the kidneys.\""
+                "front": "Why must wire cutters be at the bedside for a patient with wired jaws?",
+                "back": "To cut the wires immediately if they vomit (prevent aspiration)."
             },
             {
                 "id": 19,
-                "front": "\"In uncompensated respiratory alkalosis",
-                "back": "what would be the expected lab values for pH and PCO2?\",Increased serum pH (>7.45) and decreased PCO2."
+                "front": "A major burn injury causes which initial electrolyte spike?",
+                "back": "Hyperkalemia (due to cell destruction)."
             },
             {
                 "id": 20,
-                "front": "\"Anxiety",
-                "back": "pain, fever, and salicylate overdose are all potential causes of which acid-base imbalance?\",Respiratory alkalosis."
+                "front": "What is the treatment for Labyrinthitis?",
+                "back": "Supportive care (if viral) or Antibiotics (if bacterial)."
             },
             {
                 "id": 21,
-                "front": "What is the normal range for serum sodium (Na)?",
-                "back": "The normal range is 135-145 mEq/L."
+                "front": "What is Jaw Claudication?",
+                "back": "Pain in the jaw while chewing; a sign of Temporal Arteritis."
             },
             {
                 "id": 22,
-                "front": "Hyponatremia is defined as a serum sodium level below _____.",
-                "back": "135 mEq/L."
+                "front": "Does Metabolic Alkalosis come from vomiting or diarrhea?",
+                "back": "Vomiting (Loss of Stomach Acid)."
             },
             {
                 "id": 23,
-                "front": "Hypernatremia is defined as a serum sodium level above _____.",
-                "back": "145 mEq/L."
+                "front": "Does Metabolic Acidosis come from vomiting or diarrhea?",
+                "back": "Diarrhea (Loss of Bicarbonate/Base)."
             },
             {
                 "id": 24,
-                "front": "\"Lethargy",
-                "back": "confusion, seizures, and coma are primary symptoms of which electrolyte imbalance?\",Hyponatremia."
+                "front": "What is Hyperbaric Oxygen Therapy used for?",
+                "back": "Necrotizing Fasciitis (kills anaerobic bacteria)."
             },
             {
                 "id": 25,
-                "front": "What are potential causes of hypernatremia?",
-                "back": "\"Dehydration from lethargy, diabetes insipidus, and fluid depletion.\""
+                "front": "Magnesium toxicity causes reflexes to be:",
+                "back": "Absent or Diminished."
             },
             {
                 "id": 26,
-                "front": "What is the normal range for serum potassium (K)?",
-                "back": "The normal range is 3.5-5.0 mEq/L."
+                "front": "Low Magnesium causes reflexes to be:",
+                "back": "Hyperactive."
             },
             {
                 "id": 27,
-                "front": "A serum potassium level below 3.5 mEq/L is defined as _____.",
-                "back": "Hypokalemia."
+                "front": "What is the Palm Slide Test?",
+                "back": "Checking for 'bottoming out' on a pressure mattress."
             },
             {
                 "id": 28,
-                "front": "What EKG change is characteristically seen with hypokalemia?",
-                "back": "Flattened T-waves."
+                "front": "Kayexalate is used to lower:",
+                "back": "Potassium (Hyperkalemia)."
             },
             {
                 "id": 29,
-                "front": "What is the maximum recommended rate for peripheral IV potassium administration?",
-                "back": "The rate should not be faster than 10 mEq/hour."
+                "front": "What solution is 0.9% NaCl?",
+                "back": "Isotonic Normal Saline."
             },
             {
                 "id": 30,
-                "front": "What is the definition of hyperkalemia based on serum levels?",
-                "back": "A serum potassium level greater than 5.0 mEq/L."
-            },
-            {
-                "id": 31,
-                "front": "Which EKG finding is a classic sign of hyperkalemia?",
-                "back": "Peaked T-waves."
-            },
-            {
-                "id": 32,
-                "front": "What medication is given to antagonize the cardiac membrane effects of severe hyperkalemia?",
-                "back": "IV Calcium gluconate."
-            },
-            {
-                "id": 33,
-                "front": "What are two causes of hyperkalemia?",
-                "back": "\"Renal disease, adrenal insufficiency, metabolic acidosis, severe dehydration, or burns.\""
-            },
-            {
-                "id": 34,
-                "front": "What is the normal range for total serum calcium (Ca)?",
-                "back": "The normal range is 8.2-10.2 mg/dL."
-            },
-            {
-                "id": 35,
-                "front": "A serum calcium level below 8.2 mg/dL is known as _____.",
-                "back": "Hypocalcemia."
-            },
-            {
-                "id": 36,
-                "front": "\"Muscle cramping or spasm",
-                "back": "numbness/tingling of the fingers, and lip paresthesia are symptoms of what electrolyte imbalance?\",Hypocalcemia."
-            },
-            {
-                "id": 37,
-                "front": "What is a major cause of hypocalcemia related to parathyroid function?",
-                "back": "Damage to the parathyroid resulting in hypoparathyroidism."
-            },
-            {
-                "id": 38,
-                "front": "A serum calcium level above 10.2 mg/dL is known as _____.",
-                "back": "Hypercalcemia."
-            },
-            {
-                "id": 39,
-                "front": "What are common causes of hypercalcemia?",
-                "back": "\"Acidosis, kidney disease, hyperparathyroidism, prolonged immobilization, and malignancies.\""
-            },
-            {
-                "id": 40,
-                "front": "What is the normal range for serum phosphate (PO4)?",
-                "back": "The normal range is 2.4-4.5 mEq/L."
-            },
-            {
-                "id": 41,
-                "front": "Hypophosphatemia is a serum phosphate level below _____.",
-                "back": "2.4 mEq/L."
-            },
-            {
-                "id": 42,
-                "front": "\"Severe protein-calorie malnutrition",
-                "back": "hyperventilation, and severe burns are associated with which phosphate imbalance?\",Hypophosphatemia."
-            },
-            {
-                "id": 43,
-                "front": "What is the definition of hyperphosphatemia based on serum level?",
-                "back": "A serum phosphate level greater than 4.5 mEq/L."
-            },
-            {
-                "id": 44,
-                "front": "What are two primary causes of hyperphosphatemia?",
-                "back": "\"Renal failure, hypoparathyroidism, and neoplastic disease.\""
-            },
-            {
-                "id": 45,
-                "front": "What is the normal range for serum magnesium (Mg)?",
-                "back": "The normal range is 1.7-2.2 mg/dL."
-            },
-            {
-                "id": 46,
-                "front": "A serum magnesium level below 1.2 mg/dL is considered a _____ value.",
-                "back": "Critical."
-            },
-            {
-                "id": 47,
-                "front": "\"Chronic diarrhea",
-                "back": "chronic renal disease, and excessive diuretic use can lead to which magnesium imbalance?\",Hypomagnesemia."
-            },
-            {
-                "id": 48,
-                "front": "What are the neuromuscular symptoms of hypomagnesemia?",
-                "back": "\"Neuromuscular irritability or tetany, confusion, headaches, dizziness, seizure, and coma.\""
-            },
-            {
-                "id": 49,
-                "front": "Hypermagnesemia is defined as a serum magnesium level above _____.",
-                "back": "2.2 mg/dL."
-            },
-            {
-                "id": 50,
-                "front": "\"Muscle weakness",
-                "back": "seizures, and dysphagia with decreased gag reflex are symptoms of which electrolyte imbalance?\",Hypermagnesemia."
+                "front": "What is Tinnitus?",
+                "back": "Ringing in the ears."
             }
         ]
     },

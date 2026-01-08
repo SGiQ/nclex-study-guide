@@ -133,9 +133,9 @@
   },
   {
     "id": 13,
-    "title": "Physiological Adaptation Part 2",
-    "description": "Renal, Musculoskeletal, Reproductive, Integumentary",
-    "content": "Pathophysiology: Renal System\nPathophysiology: Musculoskeletal System\nPathophysiology: Reproductive System\nPathophysiology: Integumentary System (Burns)",
+    "title": "Physiological Adaptation: Metabolic & Integumentary",
+    "description": "Acid-Base Balance, Electrolytes, Burns, Sensory (Eye/Ear)",
+    "content": "Fluid & Electrolytes: ABGs, Sodium/Potassium Imbalances\\nIntegumentary: Burns, Necrotizing Fasciitis, Wound Care (Wound Vac)\\nSensory: Eye/Ear Disorders (Meniere's, Glaucoma)\\nNeurological: Bell's Palsy, Temporal Arteritis",
     "pages": "296-320",
     "duration": 1020,
     "audioUrl": "/uploads/episode-13.mp3",

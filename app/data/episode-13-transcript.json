@@ -1,0 +1,836 @@
+[
+  {
+    "start": 0.16,
+    "end": 6.68,
+    "text": "Welcome back to the Deep Dive. Our mission today is, I think it's fair to say it's one of our most ambitious yet.",
+    "speaker": "Speaker A"
+  },
+  {
+    "start": 6.68,
+    "end": 7.6,
+    "text": "I'd agree with that.",
+    "speaker": "Speaker B"
+  },
+  {
+    "start": 7.6,
+    "end": 14.8,
+    "text": "We're trying to connect three very different yet completely critical spheres of human function.",
+    "speaker": "Speaker A"
+  },
+  {
+    "start": 14.8,
+    "end": 17.6,
+    "text": "Right. We're going from the microscopic all the way to the visible.",
+    "speaker": "Speaker B"
+  },
+  {
+    "start": 17.76,
+    "end": 29.76,
+    "text": "Exactly. From the subtle chemistry that governs every single heartbeat, to the skin that protects us, and then finally to the very complex sensitive structures of the head and neck.",
+    "speaker": "Speaker A"
+  },
+  {
+    "start": 29.76,
+    "end": 30.68,
+    "text": "That's a huge scope.",
+    "speaker": "Speaker B"
+  },
+  {
+    "start": 30.68,
+    "end": 50.62,
+    "text": "It is. We've gone through a stack of sources, really dense clinical material, and what we're hunting for is the shortcut, the through line. The through line, yes. The critical signs and priority interventions that link all these systems. And you should care because a seemingly simple rash or maybe just a moment of dizziness, that could actually be a sign of a massive systemic failure.",
+    "speaker": "Speaker A"
+  },
+  {
+    "start": 50.62,
+    "end": 54.38,
+    "text": "And recognizing that threat and recognizing it quickly is everything.",
+    "speaker": "Speaker B"
+  },
+  {
+    "start": 54.46,
+    "end": 62.87,
+    "text": "Okay, let's unpack this. Starting where life itself is managed. The invisible chemistry of the body's fluid and acid base balance.",
+    "speaker": "Speaker A"
+  },
+  {
+    "start": 63.03,
+    "end": 71.19,
+    "text": "Yeah. I think if you imagine the body as this incredibly complex machine, the chemical balance of the blood is basically its operating system.",
+    "speaker": "Speaker B"
+  },
+  {
+    "start": 71.27,
+    "end": 71.75,
+    "text": "Okay.",
+    "speaker": "Speaker A"
+  },
+  {
+    "start": 71.75,
+    "end": 81.87,
+    "text": "If the ph is off, the machine just. It doesn't run properly. And the most informative tool we have for assessing this is the arterial blood gas, the abg. The abg.",
+    "speaker": "Speaker B"
+  },
+  {
+    "start": 81.87,
+    "end": 96.37,
+    "text": "It's the gold standard. Right. It gives you that immediate snapshot of the whole chemical environment. So for anyone listening who maybe doesn't look at these readings every day, what are the three numbers that really matter? What defines that, you know, that sweet spot for health?",
+    "speaker": "Speaker A"
+  },
+  {
+    "start": 96.61,
+    "end": 100.45,
+    "text": "Well, the ph is the main thing. You could think of it as a tightrope. The body has to walk.",
+    "speaker": "Speaker B"
+  },
+  {
+    "start": 100.45,
+    "end": 100.97,
+    "text": "Okay.",
+    "speaker": "Speaker A"
+  },
+  {
+    "start": 100.97,
+    "end": 113.65,
+    "text": "Normal is an incredibly narrow range. Just 7.35 to 7.45. That's it? That's it. Anything below 7.35, you're in acidosis. Too much acid. Anything above 7.45 is alkalosis. Too basic.",
+    "speaker": "Speaker B"
+  },
+  {
+    "start": 113.65,
+    "end": 117.27,
+    "text": "So to understand why it shifted, we look at the other two numbers.",
+    "speaker": "Speaker A"
+  },
+  {
+    "start": 117.27,
+    "end": 137.75,
+    "text": "Exactly the two components. Managing the balance. First, there's PCO2, that's the respiratory component, managed by the lungs instantly. By your lungs. The normal range there is 35 to 45. The lungs are your rapid response team. And the second one, the second is HCO3 or bicarbonate. That's the metabolic component. And it's managed slowly by the kidneys. Its normal is 22 to 26.",
+    "speaker": "Speaker B"
+  },
+  {
+    "start": 138.07,
+    "end": 141.35,
+    "text": "So the kidneys are the long term strategic planners.",
+    "speaker": "Speaker A"
+  },
+  {
+    "start": 141.43,
+    "end": 142.79,
+    "text": "That's a perfect way to put it.",
+    "speaker": "Speaker B"
+  },
+  {
+    "start": 142.79,
+    "end": 159.43,
+    "text": "That distinction. Fast lungs, slow kidneys. That seems so important. So let's look at one of the most dangerous situations. Metabolic acidosis. The sources show us that both the ph and that metabolic component, the HCO3, they both just crash downward.",
+    "speaker": "Speaker A"
+  },
+  {
+    "start": 159.51,
+    "end": 167.43,
+    "text": "Precisely. And this can happen from massive acid production. Think diabetic ketoacidosis, DKA or lactic acidosis.",
+    "speaker": "Speaker B"
+  },
+  {
+    "start": 167.43,
+    "end": 168.83,
+    "text": "Or from losing bicarbonate.",
+    "speaker": "Speaker A"
+  },
+  {
+    "start": 168.83,
+    "end": 178.06,
+    "text": "Right. From severe diarrhea or renal failure. And the body immediately recognizes this danger and it tries to compensate. It tries desperately to blow off CO2, which is acidic.",
+    "speaker": "Speaker B"
+  },
+  {
+    "start": 178.06,
+    "end": 182.66,
+    "text": "And that desperation shows up as a really powerful clinical sign. Kiss MAL Respirations.",
+    "speaker": "Speaker A"
+  },
+  {
+    "start": 182.74,
+    "end": 183.22,
+    "text": "Yes.",
+    "speaker": "Speaker B"
+  },
+  {
+    "start": 183.38,
+    "end": 191.3,
+    "text": "This isn't just heavy breathing, is it? It's deep, labored, forced breathing. It honestly looks like a patient running a marathon while they're lying in bed.",
+    "speaker": "Speaker A"
+  },
+  {
+    "start": 191.46,
+    "end": 198.1,
+    "text": "It's the body's last ditch effort to manually dump that acid. And the other symptoms are just as alarming.",
+    "speaker": "Speaker B"
+  },
+  {
+    "start": 198.1,
+    "end": 200.1,
+    "text": "Confusion and even coma.",
+    "speaker": "Speaker A"
+  },
+  {
+    "start": 200.5,
+    "end": 204.02,
+    "text": "Now, let's contrast that with the opposite problem. Respiratory alkalosis.",
+    "speaker": "Speaker B"
+  },
+  {
+    "start": 204.1,
+    "end": 206.34,
+    "text": "So here the problem starts with the lungs, right?",
+    "speaker": "Speaker A"
+  },
+  {
+    "start": 206.42,
+    "end": 215.82,
+    "text": "Usually from hyperventilation. It could be anxiety, high altitude, maybe even a ventilator that's set too aggressively. The patient is just breathing off way too much CO2.",
+    "speaker": "Speaker B"
+  },
+  {
+    "start": 215.82,
+    "end": 218.18,
+    "text": "So the blood gets too basic and the ph goes up.",
+    "speaker": "Speaker A"
+  },
+  {
+    "start": 218.18,
+    "end": 229.09,
+    "text": "Exactly. And the symptoms are classic. Dizziness, lightheadedness, and sometimes those really terrifying involuntary muscle spasms. Kidney tetany, where the hands or feet just cramp up.",
+    "speaker": "Speaker B"
+  },
+  {
+    "start": 229.33,
+    "end": 233.45,
+    "text": "So what's really crucial to grasp here is that compensation mechanism, isn't it?",
+    "speaker": "Speaker A"
+  },
+  {
+    "start": 233.45,
+    "end": 244.77,
+    "text": "It's the whole key. If the problem is metabolic, like in dka, the lungs try to fix it. If the problem is respiratory from hyperventilation, then the kidneys are working slowly behind the scenes.",
+    "speaker": "Speaker B"
+  },
+  {
+    "start": 245.01,
+    "end": 251.45,
+    "text": "So understanding which component is driving the change and which one is fighting back, that's how you interpret the abg.",
+    "speaker": "Speaker A"
+  },
+  {
+    "start": 251.45,
+    "end": 253.39,
+    "text": "That is the absolute key that gives.",
+    "speaker": "Speaker B"
+  },
+  {
+    "start": 253.39,
+    "end": 262.03,
+    "text": "Us a beautiful framework. Let's pivot now to part two and focus on the. The critical movers, the electrolyte, the electrical.",
+    "speaker": "Speaker A"
+  },
+  {
+    "start": 262.03,
+    "end": 262.67,
+    "text": "Grid of the body.",
+    "speaker": "Speaker B"
+  },
+  {
+    "start": 262.67,
+    "end": 266.11,
+    "text": "I like that. They're constantly dictating nerve and muscle function.",
+    "speaker": "Speaker A"
+  },
+  {
+    "start": 266.11,
+    "end": 276.55,
+    "text": "And we'll focus on the big four. Sodium, potassium, calcium and magnesium. If these are off, it's not just that you feel unwell. Your brain and your heart are immediately at risk.",
+    "speaker": "Speaker B"
+  },
+  {
+    "start": 276.87,
+    "end": 278.15,
+    "text": "So let's start with sodium.",
+    "speaker": "Speaker A"
+  },
+  {
+    "start": 278.65,
+    "end": 287.49,
+    "text": "Sodium is the primary chemical bodyguard of the fluid outside your cells. It regulates your total fluid volume and osmolality. Normal is about 135 to 145.",
+    "speaker": "Speaker B"
+  },
+  {
+    "start": 287.49,
+    "end": 298.09,
+    "text": "And when it drops below 135, hyponatremia. The danger is mostly neurological. Right. We see this with severe GI loss, burns, things like that. Why is the brain so vulnerable?",
+    "speaker": "Speaker A"
+  },
+  {
+    "start": 298.33,
+    "end": 306.81,
+    "text": "Because water follows salt. It's a basic rule. So when the blood outside the cells gets dilute from low sodium, water rushes into the brain cells to try and balance things out.",
+    "speaker": "Speaker B"
+  },
+  {
+    "start": 306.81,
+    "end": 309.51,
+    "text": "And that causes the swelling, cerebral edema.",
+    "speaker": "Speaker A"
+  },
+  {
+    "start": 309.51,
+    "end": 313.95,
+    "text": "Which leads directly to lethargy, confusion, and then seizures. It is an immediate brain emergency.",
+    "speaker": "Speaker B"
+  },
+  {
+    "start": 313.95,
+    "end": 316.59,
+    "text": "The opposite hypernatremia above 145.",
+    "speaker": "Speaker A"
+  },
+  {
+    "start": 316.75,
+    "end": 329.71,
+    "text": "That means the fluid outside the cells is too concentrated. You see it in renal failure or diabetes insipidus. And the body's response is visible. Intense thirst, flushed skin, and often this profound muscle weakness.",
+    "speaker": "Speaker B"
+  },
+  {
+    "start": 329.71,
+    "end": 334.43,
+    "text": "But the true cardiac dictator, that's potassium, without a doubt. Yeah.",
+    "speaker": "Speaker A"
+  },
+  {
+    "start": 334.43,
+    "end": 340.55,
+    "text": "So it's the primary chemical inside your cells. And its normal range is incredibly tight, just 3.5 to 5.0.",
+    "speaker": "Speaker B"
+  },
+  {
+    "start": 340.71,
+    "end": 344.03,
+    "text": "So even tiny deviations can cause lethal rhythm changes.",
+    "speaker": "Speaker A"
+  },
+  {
+    "start": 344.03,
+    "end": 344.55,
+    "text": "That's right.",
+    "speaker": "Speaker B"
+  },
+  {
+    "start": 344.55,
+    "end": 352.63,
+    "text": "This brings us to a major priority intervention alert from the sources. Let's talk Hypokalemia. Potassium below 3.5.",
+    "speaker": "Speaker A"
+  },
+  {
+    "start": 352.71,
+    "end": 353.23,
+    "text": "Okay.",
+    "speaker": "Speaker B"
+  },
+  {
+    "start": 353.23,
+    "end": 360.51,
+    "text": "You see distinct ECG changes, PVCs, those flattened T waves. And the sources are crystal clear on the intervention.",
+    "speaker": "Speaker A"
+  },
+  {
+    "start": 360.51,
+    "end": 361.79,
+    "text": "It's all about the replacement speed.",
+    "speaker": "Speaker B"
+  },
+  {
+    "start": 361.79,
+    "end": 368.61,
+    "text": "Exactly. You must never give potassium faster than 10 milliq per hour through a peripheral or 20 milliq per hour through a central line.",
+    "speaker": "Speaker A"
+  },
+  {
+    "start": 368.61,
+    "end": 378.69,
+    "text": "That slow infusion rate is absolutely non negotiable. Not just for safety, but for patient comfort too. But the real, the fastest killer in the electrolyte world is arguably Hyperkalemia.",
+    "speaker": "Speaker B"
+  },
+  {
+    "start": 378.69,
+    "end": 380.13,
+    "text": "Potassium above 5.0.",
+    "speaker": "Speaker A"
+  },
+  {
+    "start": 380.13,
+    "end": 390.93,
+    "text": "Yeah, and on the ECG, you look for those dramatic peaked T waves. It's a huge red flag for ventricular arrhythmias, V fib and cardiac arrest.",
+    "speaker": "Speaker B"
+  },
+  {
+    "start": 391.09,
+    "end": 396.44,
+    "text": "That sounds like a terrifying moment. What is the immediate life saving cascade of treatment?",
+    "speaker": "Speaker A"
+  },
+  {
+    "start": 396.44,
+    "end": 412.64,
+    "text": "It's a critical three step process. First you stabilize. How you immediately give IV calcium gluconate. Now, this doesn't lower the potassium, but it stabilizes the heart muscle. It protects it from the toxic effects of the high potassium. It buys you time.",
+    "speaker": "Speaker B"
+  },
+  {
+    "start": 412.64,
+    "end": 415.16,
+    "text": "Okay, so step one, stabilize. What's next?",
+    "speaker": "Speaker A"
+  },
+  {
+    "start": 415.24,
+    "end": 421.96,
+    "text": "Step two is shift. You have to push that potassium from the blood back into the cells. We use insulin and dextrose for this.",
+    "speaker": "Speaker B"
+  },
+  {
+    "start": 421.96,
+    "end": 423.8,
+    "text": "It tricks the cells into reabsorbing.",
+    "speaker": "Speaker A"
+  },
+  {
+    "start": 423.8,
+    "end": 432.24,
+    "text": "Right. And then third, you remove. This is the long term fix. Usually with kayaxalate, which binds potassium in the gut or you know, ultimately emergency dialysis.",
+    "speaker": "Speaker B"
+  },
+  {
+    "start": 432.32,
+    "end": 440.88,
+    "text": "Stabilize, shift, remove. That order is critical for survival. Yeah, that is an incredibly high stakes protocol. And before we move on, let's briefly touch on calcium and magnesium.",
+    "speaker": "Speaker A"
+  },
+  {
+    "start": 440.96,
+    "end": 452.99,
+    "text": "Both are essential for nerve and muscle function. With hypocalcemia, you get immediate visible neuromuscular excitability, muscle cramping and those famous signs, Trousseau's and schwasteks.",
+    "speaker": "Speaker B"
+  },
+  {
+    "start": 452.99,
+    "end": 455.71,
+    "text": "The carpal spasm and the facial twitch.",
+    "speaker": "Speaker A"
+  },
+  {
+    "start": 455.79,
+    "end": 477.31,
+    "text": "Right. And hypomagnesemia look very similar. You get that same increased neuromuscular irritability, tetany, and often tachycardia. It's important to notice that both hypostates make the body's electrical system sort of hyperactive and irritable. No, let's use that as a bridge. We said potassium is mostly stored inside the cell. So what happens when the integrity of those cell walls is broken?",
+    "speaker": "Speaker B"
+  },
+  {
+    "start": 477.49,
+    "end": 481.09,
+    "text": "You get a sudden, massive leak of potassium into the bloodstream.",
+    "speaker": "Speaker A"
+  },
+  {
+    "start": 481.17,
+    "end": 498.69,
+    "text": "Exactly. And that leads us directly to part three, the protective barrier, the integumentary system, the skin. The skin is your first line of defense. But when that defense is breached by trauma or infection, your internal chemistry, especially that K balance, is immediately threatened.",
+    "speaker": "Speaker B"
+  },
+  {
+    "start": 498.77,
+    "end": 506.99,
+    "text": "Let's start with a common infection, cellulitis. Bacterial, usually staph or strep, presents with redness, warmth, and systemic symptoms like fever and chills.",
+    "speaker": "Speaker A"
+  },
+  {
+    "start": 506.99,
+    "end": 514.23,
+    "text": "Right. And it requires prompt antibiotics. It's especially dangerous in patients with poor circulation like those with PVD or diabetes.",
+    "speaker": "Speaker B"
+  },
+  {
+    "start": 514.55,
+    "end": 517.39,
+    "text": "But the truly terrifying threat is necrotizing.",
+    "speaker": "Speaker A"
+  },
+  {
+    "start": 517.39,
+    "end": 532.04,
+    "text": "Fasciitis, the flesh eating disease. It's a critical, deep infection that causes rapid tissue death, necrosis. And the research is clear that while antibiotics are mandatory, they are secondary to the immediate physical intervention.",
+    "speaker": "Speaker B"
+  },
+  {
+    "start": 532.44,
+    "end": 537.48,
+    "text": "And that physical intervention is radical debridement, an emergency fasciotomy.",
+    "speaker": "Speaker A"
+  },
+  {
+    "start": 537.64,
+    "end": 542.68,
+    "text": "You have to surgically remove every single bit of dead tissue. It's a life and limb procedure.",
+    "speaker": "Speaker B"
+  },
+  {
+    "start": 542.76,
+    "end": 545.6,
+    "text": "Some sources also mention hyperbaric oxygen therapy.",
+    "speaker": "Speaker A"
+  },
+  {
+    "start": 545.6,
+    "end": 549.44,
+    "text": "Yes, as an adjunct, it helps destroy the anaerobic bacteria.",
+    "speaker": "Speaker B"
+  },
+  {
+    "start": 549.44,
+    "end": 551.96,
+    "text": "Now, what about chemical damage? Extravasation.",
+    "speaker": "Speaker A"
+  },
+  {
+    "start": 552.2,
+    "end": 557.24,
+    "text": "That's when an IV medication, often a vesicant, leaks out of the vein into the tissue around it.",
+    "speaker": "Speaker B"
+  },
+  {
+    "start": 557.24,
+    "end": 559.56,
+    "text": "And the signs are pretty pain, burning.",
+    "speaker": "Speaker A"
+  },
+  {
+    "start": 559.64,
+    "end": 567.84,
+    "text": "Swelling and a scary looking pallor at the site. The priority intervention here is standardized and immediate. Stop the infusion, secure the line, elevate.",
+    "speaker": "Speaker B"
+  },
+  {
+    "start": 567.84,
+    "end": 572.24,
+    "text": "The limb, and then, depending on the agent, you give an antidote or use hot or cold packs.",
+    "speaker": "Speaker A"
+  },
+  {
+    "start": 572.32,
+    "end": 575.6,
+    "text": "That rapid assessment is so crucial to preventing permanent damage.",
+    "speaker": "Speaker B"
+  },
+  {
+    "start": 575.68,
+    "end": 581.44,
+    "text": "Shifting to more complex wound care, there are tools like the wound vacative pressure wound therapy.",
+    "speaker": "Speaker A"
+  },
+  {
+    "start": 581.6,
+    "end": 588.8,
+    "text": "A total game changer. It uses controlled suction, usually set between 75 and 125ml Hg.",
+    "speaker": "Speaker B"
+  },
+  {
+    "start": 589.06,
+    "end": 595.7,
+    "text": "And that suction literally pulls fluid out, reduces the swelling, and stimulates the growth of new, healthy tissue.",
+    "speaker": "Speaker A"
+  },
+  {
+    "start": 595.7,
+    "end": 601.34,
+    "text": "Exactly. And since preventing wounds is always better than treating them, let's talk about pressure reduction surfaces.",
+    "speaker": "Speaker B"
+  },
+  {
+    "start": 601.34,
+    "end": 605.62,
+    "text": "For bedridden patients, there are two main types, right? Static and dynamic.",
+    "speaker": "Speaker A"
+  },
+  {
+    "start": 605.62,
+    "end": 614.82,
+    "text": "Static surfaces use foam or gel to just redistribute pressure. Dynamic surfaces need mechanical help, like an air pump to actively shift the pressure points.",
+    "speaker": "Speaker B"
+  },
+  {
+    "start": 614.9,
+    "end": 618.94,
+    "text": "There was a great practical tip in the sources about this. The palm slide test.",
+    "speaker": "Speaker A"
+  },
+  {
+    "start": 618.94,
+    "end": 626.93,
+    "text": "Oh, yeah, that's a good one. When you're assessing one of these mattresses, you slide your hand between the surface and the patient's bony part, like their hip or tailbone.",
+    "speaker": "Speaker B"
+  },
+  {
+    "start": 626.93,
+    "end": 630.29,
+    "text": "And if you can feel the patient bottom out on the hard base underneath.",
+    "speaker": "Speaker A"
+  },
+  {
+    "start": 630.29,
+    "end": 633.57,
+    "text": "Then the surface isn't doing its job. The patient is still at risk.",
+    "speaker": "Speaker B"
+  },
+  {
+    "start": 633.57,
+    "end": 647.47,
+    "text": "That's a great actionable nugget. Okay, let's move our focus now completely. Part four, the head and sensory system. We're moving from the body's shell and plumbing to the delicate structures of the ent and maxillofacial system.",
+    "speaker": "Speaker A"
+  },
+  {
+    "start": 648.34,
+    "end": 656.74,
+    "text": "What's fascinating here is how often a really severe systemic threat first shows up as what seems like a benign sensory or motor chain.",
+    "speaker": "Speaker B"
+  },
+  {
+    "start": 656.74,
+    "end": 657.82,
+    "text": "Nick, Bill's palsy.",
+    "speaker": "Speaker A"
+  },
+  {
+    "start": 657.82,
+    "end": 665.1,
+    "text": "Exactly. Inflammation of cranial nerve 7 that causes that unilateral facial weakness or paralysis. And it's very frequently linked to a virus.",
+    "speaker": "Speaker B"
+  },
+  {
+    "start": 665.1,
+    "end": 666.06,
+    "text": "Herpes simplex.",
+    "speaker": "Speaker A"
+  },
+  {
+    "start": 666.06,
+    "end": 674.86,
+    "text": "Herpes simplex. Which is why the treatment is a combination of steroids like prednisone to reduce the nerve inflammation and an antiviral like a cyclovir.",
+    "speaker": "Speaker B"
+  },
+  {
+    "start": 674.86,
+    "end": 676.76,
+    "text": "Thyme is definitely of the essence of there.",
+    "speaker": "Speaker A"
+  },
+  {
+    "start": 676.76,
+    "end": 679.96,
+    "text": "But now we hit another absolute emergency that demands recognition.",
+    "speaker": "Speaker B"
+  },
+  {
+    "start": 680.44,
+    "end": 683.6,
+    "text": "Temporal arteritis, also called giant cell arteritis.",
+    "speaker": "Speaker A"
+  },
+  {
+    "start": 683.6,
+    "end": 688.68,
+    "text": "It's a systemic inflammatory condition that targets blood vessels, especially in the head and neck.",
+    "speaker": "Speaker B"
+  },
+  {
+    "start": 688.68,
+    "end": 692.639,
+    "text": "And the symptom cluster is key. A new, very specific kind of headache.",
+    "speaker": "Speaker A"
+  },
+  {
+    "start": 692.639,
+    "end": 695.28,
+    "text": "Vision changes, which can be sudden and severe.",
+    "speaker": "Speaker B"
+  },
+  {
+    "start": 695.28,
+    "end": 698.52,
+    "text": "And jaw claudication. Pain in the jaw when you chew.",
+    "speaker": "Speaker A"
+  },
+  {
+    "start": 698.84,
+    "end": 712.77,
+    "text": "And you cannot wait for a definitive diagnosis here. You just can't. While a temporal artery biopsy is needed to confirm it, the consensus is that you must start treatment with high dose prednisone immediately, if you even suspect it.",
+    "speaker": "Speaker B"
+  },
+  {
+    "start": 713.01,
+    "end": 715.97,
+    "text": "Because the priority is preventing irreversible blindness.",
+    "speaker": "Speaker A"
+  },
+  {
+    "start": 715.97,
+    "end": 717.89,
+    "text": "Which can happen incredibly fast.",
+    "speaker": "Speaker B"
+  },
+  {
+    "start": 717.97,
+    "end": 728.77,
+    "text": "Okay, jumping into the ear. Now we've got complex balance and hearing disorders. Otitis media, a middle ear infection is often just supportive care, unless it's clearly bacterial.",
+    "speaker": "Speaker A"
+  },
+  {
+    "start": 729.21,
+    "end": 735.33,
+    "text": "Then amoxicillin is common. But the critical balance issues are Meniere's disease versus labyrinthitis.",
+    "speaker": "Speaker B"
+  },
+  {
+    "start": 735.33,
+    "end": 739.13,
+    "text": "Meniere's is structural, right? A dilation of the inner ears. Endolymphatic space.",
+    "speaker": "Speaker A"
+  },
+  {
+    "start": 739.13,
+    "end": 748.57,
+    "text": "Right. And it causes this very specific recurring quartet of symptoms. Fluctuating hearing loss, tinnitus, oral pressure, and intense vertigo that lasts for minutes to hours.",
+    "speaker": "Speaker B"
+  },
+  {
+    "start": 748.65,
+    "end": 753.37,
+    "text": "So the management is about reducing that fluid pressure, low sodium diet, diuretics.",
+    "speaker": "Speaker A"
+  },
+  {
+    "start": 753.37,
+    "end": 757.45,
+    "text": "Contrast that with labyrinthitis. That's inflammation of the vestibular system itself.",
+    "speaker": "Speaker B"
+  },
+  {
+    "start": 757.84,
+    "end": 763.44,
+    "text": "Often from a virus, and that causes a sudden, severe vertigo that's often more continuous than the Meniere's attacks.",
+    "speaker": "Speaker A"
+  },
+  {
+    "start": 763.52,
+    "end": 769.2,
+    "text": "Right, and the management depends on the cause. Supportive care for viral antibiotics, if it's bacterial.",
+    "speaker": "Speaker B"
+  },
+  {
+    "start": 769.28,
+    "end": 772.08,
+    "text": "Finally, let's wrap this section with maxillofacial trauma.",
+    "speaker": "Speaker A"
+  },
+  {
+    "start": 772.08,
+    "end": 778.24,
+    "text": "Specifically, the LeFort fractures, categorized as I2 and 3. Lafort 3 is the most catastrophic.",
+    "speaker": "Speaker B"
+  },
+  {
+    "start": 778.24,
+    "end": 783.8,
+    "text": "That's a transverse fracture across the bridge of the nose and upper maxilla. A complete craniofacial separation.",
+    "speaker": "Speaker A"
+  },
+  {
+    "start": 783.8,
+    "end": 794.33,
+    "text": "It's devastating. But regardless of the fracture type, the single overriding priority is always, always, always stabilizing the patient and ensuring a patent airway.",
+    "speaker": "Speaker B"
+  },
+  {
+    "start": 794.33,
+    "end": 795.33,
+    "text": "The ABCs.",
+    "speaker": "Speaker A"
+  },
+  {
+    "start": 795.49,
+    "end": 802.77,
+    "text": "Everything else comes second. Manual disimpaction, surgical fixation. That only happens once the air supply is absolutely secure.",
+    "speaker": "Speaker B"
+  },
+  {
+    "start": 802.77,
+    "end": 809.33,
+    "text": "This has been a huge deep dive. We've gone from the tightrope of blood ph to the skin barrier, all the way up to the face.",
+    "speaker": "Speaker A"
+  },
+  {
+    "start": 809.33,
+    "end": 816.54,
+    "text": "And the real value here is connecting those docks, recognizing the critical signs. We saw how a massive burn instantly.",
+    "speaker": "Speaker B"
+  },
+  {
+    "start": 816.54,
+    "end": 820.78,
+    "text": "Floods the system with potassium, causing hyperkalemia and metabolic acidosis.",
+    "speaker": "Speaker A"
+  },
+  {
+    "start": 820.78,
+    "end": 825.14,
+    "text": "And we established that absolute three step, stabilize, shift, remove to save the heart.",
+    "speaker": "Speaker B"
+  },
+  {
+    "start": 825.3,
+    "end": 837.14,
+    "text": "And we learned that recognizing a new headache paired with jaw pain isn't just a nuisance. It's a time sensitive vascular emergency, temporal arteritis that demands immediate steroids to save someone's sight.",
+    "speaker": "Speaker A"
+  },
+  {
+    "start": 837.79,
+    "end": 843.95,
+    "text": "These systems seem so separate, but they're completely unified by systemic health. Every part really does reflect the whole.",
+    "speaker": "Speaker B"
+  },
+  {
+    "start": 844.11,
+    "end": 860.79,
+    "text": "So as you move forward with this knowledge, maybe consider this final thought. How often is the first non specific symptom, like new confusion or unusual fatigue, or that persistent vague muscle cramping? How often is that? Not a localized issue at all, but.",
+    "speaker": "Speaker A"
+  },
+  {
+    "start": 860.79,
+    "end": 863.55,
+    "text": "Maybe the key indicator that a profound.",
+    "speaker": "Speaker B"
+  },
+  {
+    "start": 863.55,
+    "end": 870.67,
+    "text": "Systemic crisis, an unrecognized sodium or potassium imbalance, a dangerous acid based shift is already underway.",
+    "speaker": "Speaker A"
+  },
+  {
+    "start": 870.67,
+    "end": 872.67,
+    "text": "What's that subtle sign you'll look for next time?",
+    "speaker": "Speaker B"
+  },
+  {
+    "start": 872.67,
+    "end": 874.79,
+    "text": "That was the deep dive. We'll see you next time.",
+    "speaker": "Speaker A"
+  }
+]

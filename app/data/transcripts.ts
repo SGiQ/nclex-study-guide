@@ -44,6 +44,9 @@ import episode11Data from './episode-11-transcript.json';
 // Episode 12: Physiological Adaptation (Renal/Musculoskeletal)
 import episode12Data from './episode-12-transcript.json';
 
+// Episode 13: Physiological Adaptation (Metabolic/Integumentary)
+import episode13Data from './episode-13-transcript.json';
+
 // Transcript lookup by episode ID
 export const transcripts: Record<number, TranscriptSegment[]> = {
     1: episode1Data as TranscriptSegment[],
@@ -58,6 +61,7 @@ export const transcripts: Record<number, TranscriptSegment[]> = {
     10: episode10Data as TranscriptSegment[],
     11: episode11Data as TranscriptSegment[],
     12: episode12Data as TranscriptSegment[],
+    13: episode13Data as TranscriptSegment[],
     // Add more episodes as transcripts become available
 };
 

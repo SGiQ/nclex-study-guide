@@ -1,0 +1,157 @@
+{
+    "episodeId": 13,
+    "title": "Episode 13 Flashcards",
+    "description": "Metabolic, Integumentary & Sensory",
+    "cards": [
+        {
+            "id": 1,
+            "front": "What is the normal range for arterial blood pH?",
+            "back": "7.35 to 7.45."
+        },
+        {
+            "id": 2,
+            "front": "In Metabolic Acidosis, what compensatory breathing pattern is seen?",
+            "back": "Kussmaul Respirations (deep, rapid breathing to blow off CO2)."
+        },
+        {
+            "id": 3,
+            "front": "Respiratory Alkalosis is typically caused by:",
+            "back": "Hyperventilation (Anxiety, Panic)."
+        },
+        {
+            "id": 4,
+            "front": "What organ regulates Bicarbonate (HCO3) levels?",
+            "back": "The Kidneys (slow compensation)."
+        },
+        {
+            "id": 5,
+            "front": "Hyponatremia (Low Sodium) causes dangerous swelling in the:",
+            "back": "Brain (Cerebral Edema), leading to seizures."
+        },
+        {
+            "id": 6,
+            "front": "What is the primary danger of Hyperkalemia (High Potassium)?",
+            "back": "Cardiac Arrest / Ventricular Fibrillation."
+        },
+        {
+            "id": 7,
+            "front": "What is the max rate for IV Potassium infusion peripherally?",
+            "back": "10 mEq per hour (Never IV Push!)."
+        },
+        {
+            "id": 8,
+            "front": "What does IV Calcium Gluconate do in Hyperkalemia?",
+            "back": "Stabilizes the heart membrane (does not lower K+)."
+        },
+        {
+            "id": 9,
+            "front": "What medication shifts Potassium from the blood into cells?",
+            "back": "Insulin (given with Dextrose)."
+        },
+        {
+            "id": 10,
+            "front": "Chvostek's and Trousseau's signs indicate:",
+            "back": "Hypocalcemia (Low Calcium) or Hypomagnesemia (Neuromuscular irritability)."
+        },
+        {
+            "id": 11,
+            "front": "What is the difference between Cellulitis and Necrotizing Fasciitis?",
+            "back": "Cellulitis is skin deep; Necrotizing Fasciitis kills deep tissue/fascia and requires emergency surgery."
+        },
+        {
+            "id": 12,
+            "front": "What is the priority for Chemical Extravasation?",
+            "back": "Stop infusion, Secure line, Elevate."
+        },
+        {
+            "id": 13,
+            "front": "Bell's Palsy affects which Cranial Nerve?",
+            "back": "CN VII (Facial Nerve)."
+        },
+        {
+            "id": 14,
+            "front": "What is the triad of Meniere's Disease symptoms?",
+            "back": "Vertigo, Tinnitus, and Fluctuating Hearing Loss."
+        },
+        {
+            "id": 15,
+            "front": "Why is Temporal Arteritis an emergency?",
+            "back": "Risk of irreversible blindness."
+        },
+        {
+            "id": 16,
+            "front": "What medication is critical for Temporal Arteritis?",
+            "back": "High-dose Corticosteroids (Prednisone)."
+        },
+        {
+            "id": 17,
+            "front": "What is the priority for facial trauma (LeFort fractures)?",
+            "back": "Airway Patency."
+        },
+        {
+            "id": 18,
+            "front": "Why must wire cutters be at the bedside for a patient with wired jaws?",
+            "back": "To cut the wires immediately if they vomit (prevent aspiration)."
+        },
+        {
+            "id": 19,
+            "front": "A major burn injury causes which initial electrolyte spike?",
+            "back": "Hyperkalemia (due to cell destruction)."
+        },
+        {
+            "id": 20,
+            "front": "What is the treatment for Labyrinthitis?",
+            "back": "Supportive care (if viral) or Antibiotics (if bacterial)."
+        },
+        {
+            "id": 21,
+            "front": "What is Jaw Claudication?",
+            "back": "Pain in the jaw while chewing; a sign of Temporal Arteritis."
+        },
+        {
+            "id": 22,
+            "front": "Does Metabolic Alkalosis come from vomiting or diarrhea?",
+            "back": "Vomiting (Loss of Stomach Acid)."
+        },
+        {
+            "id": 23,
+            "front": "Does Metabolic Acidosis come from vomiting or diarrhea?",
+            "back": "Diarrhea (Loss of Bicarbonate/Base)."
+        },
+        {
+            "id": 24,
+            "front": "What is Hyperbaric Oxygen Therapy used for?",
+            "back": "Necrotizing Fasciitis (kills anaerobic bacteria)."
+        },
+        {
+            "id": 25,
+            "front": "Magnesium toxicity causes reflexes to be:",
+            "back": "Absent or Diminished."
+        },
+        {
+            "id": 26,
+            "front": "Low Magnesium causes reflexes to be:",
+            "back": "Hyperactive."
+        },
+        {
+            "id": 27,
+            "front": "What is the Palm Slide Test?",
+            "back": "Checking for 'bottoming out' on a pressure mattress."
+        },
+        {
+            "id": 28,
+            "front": "Kayexalate is used to lower:",
+            "back": "Potassium (Hyperkalemia)."
+        },
+        {
+            "id": 29,
+            "front": "What solution is 0.9% NaCl?",
+            "back": "Isotonic Normal Saline."
+        },
+        {
+            "id": 30,
+            "front": "What is Tinnitus?",
+            "back": "Ringing in the ears."
+        }
+    ]
+}

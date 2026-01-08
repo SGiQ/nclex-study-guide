@@ -7651,432 +7651,622 @@
         ]
     },
     {
-        "id": 12,
+        "id": 118,
         "episodeId": 13,
-        "title": "GU, Musculoskeletal & Integumentary",
-        "description": "UTI, Kidney Disease, Fractures, Arthritis, Burns, Wounds",
-        "questionCount": 35,
-        "color": "from-green-600 to-emerald-900",
+        "title": "Metabolic & Electrolytes - Part A",
+        "description": "Acid-Base Balance (ABGs), Electrolyte Imbalances (Na, K, Ca, Mg)",
+        "questionCount": 25,
+        "color": "from-teal-600 to-teal-900",
         "questions": [
             {
                 "id": 1,
-                "text": "A client with a UTI should:",
+                "text": "The normal pH range for human blood is:",
                 "options": [
-                    "Restrict fluids",
-                    "Increase fluids to 3L/day",
-                    "Avoid all medications",
-                    "Stay on bed rest"
+                    "7.0 - 8.0",
+                    "7.35 - 7.45",
+                    "6.35 - 6.45",
+                    "7.25 - 7.35"
                 ],
                 "correctAnswer": 1,
-                "explanation": "UTI: Increase fluids (flushes bacteria), take full course of antibiotics, void frequently, wipe front to back. Cranberry juice may help prevent recurrence."
+                "explanation": "A very narrow range; deviations affect enzyme function."
             },
             {
                 "id": 2,
-                "text": "What are the '5 P's' of neurovascular assessment?",
+                "text": "In Acid-Base balance, the Lungs manage CO2 (acid) by breathing faster/slower. This response is:",
                 "options": [
-                    "Pain, Pallor, Pulse, Paresthesia, Paralysis",
-                    "Pressure, Position, Pulse, Pain, Pallor",
-                    "Pulse, Pressure, Pallor, Position, Pain",
-                    "Pain, Pulse, Position, Pressure, Pallor"
+                    "Slow (days)",
+                    "Rapid (Immediate/Minutes)",
+                    "Irrelevant",
+                    "Never happens"
                 ],
-                "correctAnswer": 0,
-                "explanation": "5 P's assess compartment syndrome/neurovascular compromise: Pain, Pallor, Pulse (absent/diminished), Paresthesia (numbness/tingling), Paralysis. Report immediately."
+                "correctAnswer": 1,
+                "explanation": "Respiratory compensation is fast. Kidney compensation is slow."
             },
             {
                 "id": 3,
-                "text": "A client with a cast reports severe pain unrelieved by medication. This may indicate:",
+                "text": "Kussmaul Respirations (deep, rapid breathing) are a compensatory mechanism for:",
                 "options": [
-                    "Normal healing",
-                    "Compartment syndrome",
-                    "Adequate pain control",
-                    "Cast is too loose"
+                    "Respiratory Alkalosis",
+                    "Metabolic Acidosis (e.g., DKA)",
+                    "High Blood Pressure",
+                    "Asthma"
                 ],
                 "correctAnswer": 1,
-                "explanation": "Compartment syndrome: Severe pain unrelieved by meds, pallor, pulselessness, paresthesia, paralysis. Medical emergency. Cast must be split/removed immediately."
+                "explanation": "The body tries to blow off CO2 (acid) to fix the metabolic acidity."
             },
             {
                 "id": 4,
-                "text": "A client with chronic kidney disease should restrict:",
+                "text": "Respiratory Alkalosis (High pH, Low CO2) is commonly caused by:",
                 "options": [
-                    "Protein and potassium",
-                    "Carbohydrates only",
-                    "All fluids",
-                    "Vitamins"
+                    "Vomiting",
+                    "Hyperventilation (Anxiety, Panic Attack)",
+                    "Diarrhea",
+                    "Kidney Failure"
                 ],
-                "correctAnswer": 0,
-                "explanation": "CKD: Restrict protein, potassium, phosphorus, sodium, fluids. Monitor for hyperkalemia, fluid overload, anemia. May need dialysis."
+                "correctAnswer": 1,
+                "explanation": "Blowing off too much CO2 makes you alkaline."
             },
             {
                 "id": 5,
-                "text": "What is the Rule of Nines for burns?",
+                "text": "Hyponatremia (Low Sodium) primarily affects which system due to cellular swelling?",
                 "options": [
-                    "Estimates burn depth",
-                    "Estimates percentage of body surface burned",
-                    "Determines infection risk",
-                    "Calculates pain level"
+                    "Neurological (Confusion, Seizures)",
+                    "Musculoskeletal",
+                    "Skin",
+                    "Digestion"
                 ],
-                "correctAnswer": 1,
-                "explanation": "Rule of Nines estimates burn area: Head 9%, each arm 9%, each leg 18%, anterior trunk 18%, posterior trunk 18%, perineum 1%."
+                "correctAnswer": 0,
+                "explanation": "Water rushes into brain cells -> Cerebral Edema."
             },
             {
                 "id": 6,
-                "text": "A client with rheumatoid arthritis should:",
+                "text": "Hypernatremia (High Sodium) often presents with:",
                 "options": [
-                    "Avoid all exercise",
-                    "Balance rest and gentle exercise",
-                    "Exercise only during flare-ups",
-                    "Stay in bed permanently"
+                    "Intense Thirst, Dry mucous membranes, Flushed skin",
+                    "Excessive Saliva",
+                    "Edema",
+                    "Slow heart rate"
                 ],
-                "correctAnswer": 1,
-                "explanation": "RA: Balance rest and exercise, use heat for stiffness, cold for inflammation. Medications: NSAIDs, DMARDs, biologics. Protect joints."
+                "correctAnswer": 0,
+                "explanation": "You are 'pickled' / dried out."
             },
             {
                 "id": 7,
-                "text": "A client on hemodialysis should avoid:",
+                "text": "Hypokalemia (Low Potassium) is characterized by:",
                 "options": [
-                    "All fluids",
-                    "BP measurement on fistula arm",
-                    "All foods",
-                    "Walking"
+                    "Peaked T waves",
+                    "Flattened T waves / U waves and Muscle Weakness",
+                    "Seizures",
+                    "Red skin"
                 ],
                 "correctAnswer": 1,
-                "explanation": "Protect AV fistula: No BP, IV, or blood draws on fistula arm. Check for thrill/bruit. Monitor for infection, clotting."
+                "explanation": "Heart muscle repolarization is delayed."
             },
             {
                 "id": 8,
-                "text": "Which burn involves epidermis and dermis with blisters?",
+                "text": "The max rate for IV Potassium infusion via peripheral line is:",
                 "options": [
-                    "Superficial (1st degree)",
-                    "Partial-thickness (2nd degree)",
-                    "Full-thickness (3rd degree)",
-                    "Fourth degree"
+                    "10 mEq/hr",
+                    "20 mEq/hr",
+                    "Push it fast",
+                    "40 mEq/hr"
                 ],
-                "correctAnswer": 1,
-                "explanation": "Partial-thickness (2nd degree): Blisters, red/moist, painful. Superficial: Red, no blisters. Full-thickness: White/charred, painless (nerve damage)."
+                "correctAnswer": 0,
+                "explanation": "Never push K+ IV push. It stops the heart. 10mEq/hr is safe max peripheral."
             },
             {
                 "id": 9,
-                "text": "A client with a hip fracture is at risk for:",
+                "text": "Hyperkalemia (High Potassium) causes what dangerous ECG change?",
                 "options": [
-                    "Diabetes",
-                    "Fat embolism",
-                    "Hypertension",
-                    "UTI only"
+                    "Flat line",
+                    "Tall, Peaked T Waves",
+                    "Inverted P waves",
+                    "Fast sinus rhythm"
                 ],
                 "correctAnswer": 1,
-                "explanation": "Hip/long bone fractures risk fat embolism. Signs: Dyspnea, petechiae, confusion. Also risk DVT, infection, delayed healing."
+                "explanation": "Precursor to V-Fib/Cardiac Arrest."
             },
             {
                 "id": 10,
-                "text": "A client with acute kidney injury has potassium of 6.8. What is the priority?",
+                "text": "The emergency treatment for severe Hyperkalemia to STABILIZE the heart membrane is:",
                 "options": [
-                    "Restrict fluids",
-                    "Give calcium gluconate IV",
-                    "Increase potassium intake",
-                    "No intervention needed"
+                    "Insulin",
+                    "IV Calcium Gluconate",
+                    "Kayexalate",
+                    "Lasix"
                 ],
                 "correctAnswer": 1,
-                "explanation": "Critical hyperkalemia (>6.5): Give calcium gluconate (protects heart), insulin/glucose, kayexalate, possible dialysis. Monitor ECG for arrhythmias."
+                "explanation": "Calcium doesn't lower K+, it protects the heart muscle from stopping."
             },
             {
                 "id": 11,
-                "text": "A client post-hip replacement should avoid:",
+                "text": "To SHIFT potassium from blood back into cells, you administer:",
                 "options": [
-                    "Walking with walker",
-                    "Hip flexion >90\u00b0, crossing legs, internal rotation",
-                    "All movement",
-                    "Sitting in chair"
+                    "Calcium",
+                    "IV Insulin and Dextrose",
+                    "Magnesium",
+                    "Sodium"
                 ],
                 "correctAnswer": 1,
-                "explanation": "Post-hip replacement: Avoid hip flexion >90\u00b0, crossing legs, internal rotation (risk dislocation). Use abduction pillow, elevated toilet seat."
+                "explanation": "Insulin carries glucose and potassium into cells."
             },
             {
                 "id": 12,
-                "text": "Which is a sign of acute kidney injury?",
+                "text": "Chvostek's Sign (face twitch) and Trousseau's Sign (carpal spasm) indicate:",
                 "options": [
-                    "Increased urine output",
-                    "Decreased urine output (<400 mL/day)",
-                    "Clear urine",
-                    "Hypotension only"
+                    "Hyperkalemia",
+                    "Hypocalcemia (Low Calcium) or Hypomagnesemia",
+                    "High Sodium",
+                    "Low Iron"
                 ],
                 "correctAnswer": 1,
-                "explanation": "AKI: Oliguria (<400 mL/day), elevated BUN/creatinine, fluid overload, hyperkalemia, metabolic acidosis. Treat underlying cause."
+                "explanation": "Neuromuscular irritability/tetany."
             },
             {
                 "id": 13,
-                "text": "A client with osteoporosis should:",
+                "text": "Magnesium acts as the body's:",
                 "options": [
-                    "Avoid all calcium",
-                    "Increase calcium, vitamin D, weight-bearing exercise",
-                    "Stay in bed",
-                    "Avoid all exercise"
+                    "Energizer",
+                    "Sedative / Relaxant",
+                    "Stimulant",
+                    "Acid"
                 ],
                 "correctAnswer": 1,
-                "explanation": "Osteoporosis: Calcium 1200-1500 mg/day, vitamin D, weight-bearing exercise, bisphosphonates. Prevent falls. DEXA scan monitors bone density."
+                "explanation": "Low Mag = Hyperactive reflexes. High Mag = Absent reflexes (too sedated)."
             },
             {
                 "id": 14,
-                "text": "What is the priority intervention for a burn victim?",
+                "text": "A patient with metabolic acidosis (e.g., kidney failure) will have:",
                 "options": [
-                    "Apply ice",
-                    "Assess airway and breathing",
-                    "Remove all clothing",
-                    "Apply ointment"
+                    "Low pH, Low HCO3",
+                    "High pH, Low HCO3",
+                    "Low pH, High PCO2",
+                    "High pH, High PCO2"
                 ],
-                "correctAnswer": 1,
-                "explanation": "Burn priority: Airway (inhalation injury risk), breathing, circulation. Stop burning process, remove jewelry, cover with clean cloth, IV fluids for large burns."
+                "correctAnswer": 0,
+                "explanation": "Metabolic = HCO3 matches pH direction (Both Low = Acidosis)."
             },
             {
                 "id": 15,
-                "text": "A client with gout should avoid:",
+                "text": "Massive tissue damage (like Burns or Crush injuries) releases intracellular Potassium, causing:",
                 "options": [
-                    "Water",
-                    "Purine-rich foods (organ meats, shellfish)",
-                    "All vegetables",
-                    "Exercise"
+                    "Hypokalemia",
+                    "Hyperkalemia",
+                    "Hyponatremia",
+                    "Hypercalcemia"
                 ],
                 "correctAnswer": 1,
-                "explanation": "Gout: Avoid purines (organ meats, shellfish, alcohol), increase fluids, take medications (colchicine, allopurinol). Affects big toe typically."
+                "explanation": "Cells burst open, spilling K+ into the blood."
             },
             {
                 "id": 16,
-                "text": "A client on peritoneal dialysis develops cloudy dialysate. This indicates:",
+                "text": "The 'Gold Standard' for assessing acid-base balance is:",
                 "options": [
-                    "Normal finding",
-                    "Peritonitis",
-                    "Adequate dialysis",
-                    "Dehydration"
+                    "Pulse Oximeter",
+                    "Arterial Blood Gas (ABG)",
+                    "Urine test",
+                    "Chest X-ray"
                 ],
                 "correctAnswer": 1,
-                "explanation": "Cloudy dialysate indicates peritonitis (infection). Also: abdominal pain, fever. Send sample for culture, give antibiotics. Clear dialysate is normal."
+                "explanation": "Measures pH, PaCO2, HCO3, PaO2 directly."
             },
             {
                 "id": 17,
-                "text": "Which position is best for a client with a hip fracture before surgery?",
+                "text": "Kayexalate works by:",
                 "options": [
-                    "Affected leg abducted",
-                    "Affected leg adducted",
-                    "Prone",
-                    "Trendelenburg"
+                    "Shifting K into cells",
+                    "Binding Potassium in the gut for excretion in stool",
+                    "Stabilizing the heart",
+                    "Diluting the blood"
                 ],
-                "correctAnswer": 0,
-                "explanation": "Hip fracture: Keep affected leg abducted (pillow between legs), neutral rotation, minimal movement. Assess neurovascular status. Prepare for surgery."
+                "correctAnswer": 1,
+                "explanation": "The 'Removal' step (permanent lowering of K)."
             },
             {
                 "id": 18,
-                "text": "A client with a full-thickness burn will have:",
+                "text": "Hypocalcemia can occur after surgery on which gland?",
                 "options": [
-                    "Severe pain",
-                    "Little to no pain (nerve damage)",
-                    "Blisters",
-                    "Red, moist skin"
+                    "Thyroid / Parathyroid",
+                    "Adrenal",
+                    "Pancreas",
+                    "Pituitary"
                 ],
-                "correctAnswer": 1,
-                "explanation": "Full-thickness (3rd degree): White/brown/charred, dry, painless (nerves destroyed). Requires skin grafting. Partial-thickness is painful."
+                "correctAnswer": 0,
+                "explanation": "Accidental damage to Parathyroids drops Calcium levels rapidly."
             },
             {
                 "id": 19,
-                "text": "A client with urinary retention should:",
+                "text": "Which condition causes Metabolic Alkalosis?",
                 "options": [
-                    "Restrict all fluids",
-                    "Receive catheterization",
-                    "Avoid all medications",
-                    "Increase caffeine"
+                    "Diarrhea (Losing base)",
+                    "Prolonged Vomiting or NG Suction (Losing Acid)",
+                    "Kidney failure",
+                    "Hypoventilation"
                 ],
                 "correctAnswer": 1,
-                "explanation": "Urinary retention: Catheterization (straight or indwelling), treat underlying cause (BPH, medications, neurological). Monitor for bladder distention."
+                "explanation": "Losing stomach acid leaves you alkaline."
             },
             {
                 "id": 20,
-                "text": "Which is a sign of compartment syndrome?",
+                "text": "Diarrhea typically causes:",
                 "options": [
-                    "Mild discomfort",
-                    "Severe pain with passive stretching",
-                    "No symptoms",
-                    "Improved circulation"
+                    "Metabolic Alkalosis",
+                    "Metabolic Acidosis",
+                    "Respiratory Alkalosis",
+                    "Respiratory Acidosis"
                 ],
                 "correctAnswer": 1,
-                "explanation": "Compartment syndrome: Severe pain (especially with passive stretching), pallor, pulselessness, paresthesia, paralysis, tense compartment. Emergency fasciotomy needed."
+                "explanation": "You lose 'Base' from the 'Basement' (Bowels) -> Acidic."
             },
             {
                 "id": 21,
-                "text": "A client with kidney stones should:",
+                "text": "Which organ manages Bicarbonate (HCO3)?",
                 "options": [
-                    "Restrict all fluids",
-                    "Increase fluids to 3-4 L/day",
-                    "Avoid all medications",
-                    "Stay on bed rest"
+                    "Lungs",
+                    "Kidneys",
+                    "Liver",
+                    "Heart"
                 ],
                 "correctAnswer": 1,
-                "explanation": "Kidney stones: Increase fluids (prevents formation), strain urine, pain management. Lithotripsy or surgery for large stones. Prevent recurrence based on stone type."
+                "explanation": "The slow metabolic regulator."
             },
             {
                 "id": 22,
-                "text": "A client with a fracture has a cast applied. What should the nurse teach?",
+                "text": "A patient hyperventilating from a panic attack should:",
                 "options": [
-                    "Keep cast wet",
-                    "Report numbness, tingling, or severe pain",
-                    "Remove cast if uncomfortable",
-                    "Insert objects to scratch"
+                    "Run around",
+                    "Breathe into a paper bag",
+                    "Take deep breaths",
+                    "Drink water"
                 ],
                 "correctAnswer": 1,
-                "explanation": "Cast care: Keep dry, elevate to reduce swelling, report 5 P's (neurovascular compromise), don't insert objects, check skin at edges."
+                "explanation": "Re-breathe CO2 to correct respiratory alkalosis."
             },
             {
                 "id": 23,
-                "text": "Which type of burn is caused by chemicals?",
+                "text": "If a patient has High Magnesium (Hypermagnesemia), deep tendon reflexes will be:",
                 "options": [
-                    "Thermal",
-                    "Chemical",
-                    "Electrical",
-                    "Radiation"
+                    "Hyperactive",
+                    "Diminished or Absent",
+                    "Normal",
+                    "Clonus"
                 ],
                 "correctAnswer": 1,
-                "explanation": "Burn types: Thermal (heat), Chemical (acids/alkalis - irrigate with water), Electrical (entry/exit wounds, cardiac monitoring), Radiation."
+                "explanation": "Magnesium Sedates."
             },
             {
                 "id": 24,
-                "text": "A client with benign prostatic hyperplasia (BPH) will have:",
+                "text": "Which IV solution is Isotonic?",
                 "options": [
-                    "Increased urinary frequency and urgency",
-                    "Decreased urination",
-                    "No symptoms",
-                    "Hematuria only"
+                    "3% Saline",
+                    "0.9% Normal Saline",
+                    "0.45% Saline",
+                    "D5W (in the bag)"
                 ],
-                "correctAnswer": 0,
-                "explanation": "BPH: Urinary frequency, urgency, nocturia, weak stream, retention. Treat with alpha blockers, 5-alpha reductase inhibitors, or TURP surgery."
+                "correctAnswer": 1,
+                "explanation": "It matches body fluid osmolality."
             },
             {
                 "id": 25,
-                "text": "A client with osteoarthritis has pain that:",
+                "text": "Water intoxication (drinking too much water) leads to:",
                 "options": [
-                    "Improves with rest",
-                    "Worsens with activity",
-                    "Is constant",
-                    "Never occurs"
+                    "Hypernatremia",
+                    "Hyponatremia (Dilutional)",
+                    "Hyperkalemia",
+                    "Dehydration"
                 ],
                 "correctAnswer": 1,
-                "explanation": "Osteoarthritis: Pain worsens with activity, improves with rest. Joint stiffness, Heberden's nodes. Treat with NSAIDs, exercise, weight loss, joint replacement."
-            },
+                "explanation": "Dilutes the sodium."
+            }
+        ]
+    },
+    {
+        "id": 119,
+        "episodeId": 13,
+        "title": "Integumentary, Sensory & Neuro - Part B",
+        "description": "Burns, Necrotizing Fasciitis, Meniere's, Temporal Arteritis",
+        "questionCount": 25,
+        "color": "from-rose-600 to-rose-900",
+        "questions": [
             {
-                "id": 26,
-                "text": "What is the priority for a client with a major burn?",
+                "id": 1,
+                "text": "The priority intervention for Chemical Extravasation (IV leak of vesicant) is:",
                 "options": [
-                    "Pain management",
-                    "Fluid resuscitation",
-                    "Wound care",
-                    "Nutrition"
+                    "Speed up the infusion",
+                    "Stop infusion immediately, secure line, elevate limb",
+                    "Start a second line",
+                    "Apply lotion"
                 ],
                 "correctAnswer": 1,
-                "explanation": "Major burn priorities: Airway, fluid resuscitation (Parkland formula), prevent infection, pain management, nutrition. Monitor for shock, infection, contractures."
+                "explanation": "Limit the amount of toxic drug entering the tissue. Don't remove the catheter instantly\u2014you might need it to inject an antidote."
             },
             {
-                "id": 27,
-                "text": "A client post-amputation reports pain in the missing limb. This is called:",
+                "id": 2,
+                "text": "Necrotizing Fasciitis ('Flesh-eating disease') requires what immediate life-saving intervention?",
                 "options": [
-                    "Acute pain",
-                    "Phantom limb pain",
-                    "Chronic pain",
-                    "No pain"
+                    "Cream",
+                    "Emergency Surgical Debridement (Fasciotomy)",
+                    "Oral antibiotics",
+                    "Rest"
                 ],
                 "correctAnswer": 1,
-                "explanation": "Phantom limb pain: Sensation of pain in amputated limb. Real phenomenon. Treat with medications, mirror therapy, desensitization."
+                "explanation": "Antibiotics alone can't penetrate dead tissue. It must be cut out."
             },
             {
-                "id": 28,
-                "text": "A client with acute glomerulonephritis will have:",
+                "id": 3,
+                "text": "What electrolyte imbalance is an immediate risk after a major burn?",
                 "options": [
-                    "Clear urine",
-                    "Tea-colored urine, hypertension, edema",
-                    "Increased urine output",
-                    "No symptoms"
-                ],
-                "correctAnswer": 1,
-                "explanation": "Glomerulonephritis: Tea/cola-colored urine (hematuria), hypertension, edema, proteinuria. Often follows strep infection. Treat underlying cause, monitor kidney function."
-            },
-            {
-                "id": 29,
-                "text": "Which is a sign of fat embolism?",
-                "options": [
-                    "Bradycardia",
-                    "Petechiae, dyspnea, confusion",
-                    "Hypertension",
-                    "Increased appetite"
-                ],
-                "correctAnswer": 1,
-                "explanation": "Fat embolism (from long bone fractures): Petechiae (chest/axilla), dyspnea, confusion, tachycardia. Monitor respiratory status, give oxygen."
-            },
-            {
-                "id": 30,
-                "text": "A client with a pressure injury Stage 3 has:",
-                "options": [
-                    "Intact skin with redness",
-                    "Partial-thickness skin loss",
-                    "Full-thickness skin loss",
-                    "Muscle/bone exposed"
-                ],
-                "correctAnswer": 2,
-                "explanation": "Pressure injury stages: 1=intact/red, 2=partial thickness/blister, 3=full thickness/crater, 4=muscle/bone exposed, Unstageable=eschar covering."
-            },
-            {
-                "id": 31,
-                "text": "A client with urinary incontinence should:",
-                "options": [
-                    "Restrict all fluids",
-                    "Perform Kegel exercises",
-                    "Avoid all activity",
-                    "Stay catheterized permanently"
-                ],
-                "correctAnswer": 1,
-                "explanation": "Incontinence: Kegel exercises (strengthen pelvic floor), scheduled voiding, adequate fluids, treat underlying cause. Avoid bladder irritants (caffeine, alcohol)."
-            },
-            {
-                "id": 32,
-                "text": "A client with a sprain should use RICE. This stands for:",
-                "options": [
-                    "Rest, Ice, Compression, Elevation",
-                    "Rest, Immobilization, Cold, Exercise",
-                    "Restriction, Ice, Compression, Exercise",
-                    "Rest, Ice, Circulation, Elevation"
+                    "Hyperkalemia (High Potassium)",
+                    "Hypokalemia",
+                    "Hypercalcemia",
+                    "Normal levels"
                 ],
                 "correctAnswer": 0,
-                "explanation": "RICE for sprains/strains: Rest, Ice (first 24-48 hours), Compression (elastic bandage), Elevation (above heart). Then heat and gentle exercise."
+                "explanation": "Massive cell destruction releases intracellular Potassium into the blood."
             },
             {
-                "id": 33,
-                "text": "A client with end-stage renal disease will need:",
+                "id": 4,
+                "text": "A Wound Vac (Negative Pressure Wound Therapy) promotes healing by:",
                 "options": [
-                    "Increased protein",
-                    "Dialysis or kidney transplant",
-                    "No treatment",
-                    "Increased potassium"
+                    "Heating the wound",
+                    "Removing excess fluid, reducing edema, and stimulating blood flow",
+                    "Keeping it dry",
+                    "Adding pressure"
                 ],
                 "correctAnswer": 1,
-                "explanation": "ESRD: Dialysis (hemodialysis or peritoneal) or kidney transplant. Strict diet restrictions, fluid limits, medications, monitor for complications."
+                "explanation": "Negative pressure draws wound edges together and removes 'bad' fluid."
             },
             {
-                "id": 34,
-                "text": "Which is the most common site for pressure injuries?",
+                "id": 5,
+                "text": "Bell's Palsy affects which Cranial Nerve?",
                 "options": [
-                    "Elbow",
-                    "Sacrum and heels",
-                    "Knees",
-                    "Shoulders"
+                    "CN V (Trigeminal)",
+                    "CN VII (Facial)",
+                    "CN I (Olfactory)",
+                    "CN X (Vagus)"
                 ],
                 "correctAnswer": 1,
-                "explanation": "Common pressure injury sites: Sacrum, heels, ischial tuberosities, greater trochanter, occiput. Prevent with repositioning q2h, pressure-relief devices."
+                "explanation": "Unilateral facial paralysis."
             },
             {
-                "id": 35,
-                "text": "A client with carpal tunnel syndrome will have:",
+                "id": 6,
+                "text": "Bell's Palsy is often linked to Herpes Simplex Virus. Treatment includes:",
                 "options": [
-                    "Foot pain",
-                    "Numbness/tingling in thumb, index, middle fingers",
-                    "Back pain",
-                    "No symptoms"
+                    "Surgery",
+                    "Steroids (Prednisone) and Antivirals (Acyclovir)",
+                    "Antibiotics",
+                    "Chemo"
                 ],
                 "correctAnswer": 1,
-                "explanation": "Carpal tunnel: Numbness/tingling in thumb, index, middle fingers (median nerve compression). Positive Tinel's/Phalen's sign. Treat with splint, NSAIDs, or surgery."
+                "explanation": "Reduce inflammation and fight the virus."
+            },
+            {
+                "id": 7,
+                "text": "Temporal Arteritis (Giant Cell Arteritis) presents with a new headache, jaw pain, and:",
+                "options": [
+                    "Vision changes / Blindness risk",
+                    "Hearing loss",
+                    "Toothache",
+                    "Rash"
+                ],
+                "correctAnswer": 0,
+                "explanation": "A medical emergency requiring immediate steroids to save vision."
+            },
+            {
+                "id": 8,
+                "text": "Meniere's Disease is characterized by a triad of symptoms:",
+                "options": [
+                    "Headache, Nausea, Fever",
+                    "Vertigo, Tinnitus, and Fluctuating Hearing Loss",
+                    "Pain, Redness, swelling",
+                    "Cough, Cold, Flu"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Fluid buildup in the inner ear."
+            },
+            {
+                "id": 9,
+                "text": "The diet for Meniere's Disease should be:",
+                "options": [
+                    "High Sodium",
+                    "Low Sodium",
+                    "High Sugar",
+                    "Liquid only"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Sodium retains water; you want to reduce fluid pressure in the ear."
+            },
+            {
+                "id": 10,
+                "text": "LeFort Fractures involve which part of the body?",
+                "options": [
+                    "Leg",
+                    "Face (Maxilla)",
+                    "Arm",
+                    "Spine"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Major facial trauma."
+            },
+            {
+                "id": 11,
+                "text": "The priority intervention for a LeFort fracture (or any facial trauma) is:",
+                "options": [
+                    "Pain control",
+                    "Airway Patency",
+                    "Ice",
+                    "Stitches"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Swelling/bleeding can block the airway instantly."
+            },
+            {
+                "id": 12,
+                "text": "The 'Palm Slide Test' is used to check:",
+                "options": [
+                    "Hand strength",
+                    "Effectiveness of a pressure-reducing mattress",
+                    "Skin temperature",
+                    "Sweat"
+                ],
+                "correctAnswer": 1,
+                "explanation": "If you can feel the bony prominence through the mattress, it's failing."
+            },
+            {
+                "id": 13,
+                "text": "Labyrinthitis differs from Meniere's because:",
+                "options": [
+                    "It is permanent",
+                    "It is usually viral/acute and causes constant severe vertigo",
+                    "It is painless",
+                    "It affects the nose"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Inflammation of the inner ear structures."
+            },
+            {
+                "id": 14,
+                "text": "Cellulitis is:",
+                "options": [
+                    "Cancer",
+                    "Bacterial infection of the deeper skin layers (dermis/subcutaneous)",
+                    "A rash",
+                    "Dry skin"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Red, hot, swollen, painful."
+            },
+            {
+                "id": 15,
+                "text": "Otitis Media is an infection of the:",
+                "options": [
+                    "Outer Ear",
+                    "Middle Ear",
+                    "Inner Ear",
+                    "Nose"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Behind the eardrum."
+            },
+            {
+                "id": 16,
+                "text": "What precaution is taken for a patient with Temporal Arteritis?",
+                "options": [
+                    "Isolation",
+                    "Immediate High-Dose Corticosteroids",
+                    "Surgery",
+                    "Antibiotics"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Don't wait for biopsy results. Save the eye."
+            },
+            {
+                "id": 17,
+                "text": "Jaw Claudication (pain when chewing) is a specific sign of:",
+                "options": [
+                    "TMJ",
+                    "Temporal Arteritis",
+                    "Tooth infection",
+                    "Stroke"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Ischemia of the masticator muscles."
+            },
+            {
+                "id": 18,
+                "text": "To prevent aspiration in a patient with facial trauma/wiring, keeping what at the bedside is critical?",
+                "options": [
+                    "Water",
+                    "Wire Cutters",
+                    "Food",
+                    "Pillow"
+                ],
+                "correctAnswer": 1,
+                "explanation": "If they vomit with their jaw wired shut, you must cut the wires instantly."
+            },
+            {
+                "id": 19,
+                "text": "A 'Vesicant' medication:",
+                "options": [
+                    "Soothes skin",
+                    "Causes blistering and tissue necrosis if extravasated",
+                    "Is harmless",
+                    "Is a vitamin"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Handle with extreme care (e.g., Chemo)."
+            },
+            {
+                "id": 20,
+                "text": "Which is a sign of Metabolic Acidosis?",
+                "options": [
+                    "Hypoventilation",
+                    "Kussmaul Respirations",
+                    "Seizures",
+                    "High pH"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Compensatory hyperventilation."
+            },
+            {
+                "id": 21,
+                "text": "Hyperbaric Oxygen Therapy is used for Necrotizing Fasciitis because:",
+                "options": [
+                    "It feels good",
+                    "It kills anaerobic bacteria and promotes healing",
+                    "It cools the skin",
+                    "It is cheaper"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Oxygen is toxic to anaerobes."
+            },
+            {
+                "id": 22,
+                "text": "Glaucoma is characterized by:",
+                "options": [
+                    "Increased Intraocular Pressure (IOP)",
+                    "Infection",
+                    "Cloudy lens",
+                    "Dry eyes"
+                ],
+                "correctAnswer": 0,
+                "explanation": "Pressure damages the optic nerve."
+            },
+            {
+                "id": 23,
+                "text": "A patient with Meniere's is at high risk for:",
+                "options": [
+                    "Falls (due to vertigo)",
+                    "Infection",
+                    "Bleeding",
+                    "Choking"
+                ],
+                "correctAnswer": 0,
+                "explanation": "Safety is priority #1."
+            },
+            {
+                "id": 24,
+                "text": "The Tinnitus in Meniere's disease is typically described as:",
+                "options": [
+                    "Clicking",
+                    "Roaring or Ringing",
+                    "Voices",
+                    "Music"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Classic symptom."
+            },
+            {
+                "id": 25,
+                "text": "Static pressure surfaces (foam/gel) differ from Dynamic because:",
+                "options": [
+                    "They move",
+                    "They do not move/inflate; they just redistribute weight",
+                    "They use electricity",
+                    "They are harder"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Dynamic uses a pump."
             }
         ]
     },
@@ -12082,6 +12272,435 @@
                 ],
                 "correctAnswer": 1,
                 "explanation": "HbA1c goal: <7% for most diabetics. 9% indicates poor control over past 2-3 months. Adjust medications, reinforce diet/exercise."
+            }
+        ]
+    },
+    {
+        "id": 12,
+        "title": "GU, Musculoskeletal & Integumentary",
+        "description": "UTI, Kidney Disease, Fractures, Arthritis, Burns, Wounds",
+        "questionCount": 35,
+        "color": "from-green-600 to-emerald-900",
+        "questions": [
+            {
+                "id": 1,
+                "text": "A client with a UTI should:",
+                "options": [
+                    "Restrict fluids",
+                    "Increase fluids to 3L/day",
+                    "Avoid all medications",
+                    "Stay on bed rest"
+                ],
+                "correctAnswer": 1,
+                "explanation": "UTI: Increase fluids (flushes bacteria), take full course of antibiotics, void frequently, wipe front to back. Cranberry juice may help prevent recurrence."
+            },
+            {
+                "id": 2,
+                "text": "What are the '5 P's' of neurovascular assessment?",
+                "options": [
+                    "Pain, Pallor, Pulse, Paresthesia, Paralysis",
+                    "Pressure, Position, Pulse, Pain, Pallor",
+                    "Pulse, Pressure, Pallor, Position, Pain",
+                    "Pain, Pulse, Position, Pressure, Pallor"
+                ],
+                "correctAnswer": 0,
+                "explanation": "5 P's assess compartment syndrome/neurovascular compromise: Pain, Pallor, Pulse (absent/diminished), Paresthesia (numbness/tingling), Paralysis. Report immediately."
+            },
+            {
+                "id": 3,
+                "text": "A client with a cast reports severe pain unrelieved by medication. This may indicate:",
+                "options": [
+                    "Normal healing",
+                    "Compartment syndrome",
+                    "Adequate pain control",
+                    "Cast is too loose"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Compartment syndrome: Severe pain unrelieved by meds, pallor, pulselessness, paresthesia, paralysis. Medical emergency. Cast must be split/removed immediately."
+            },
+            {
+                "id": 4,
+                "text": "A client with chronic kidney disease should restrict:",
+                "options": [
+                    "Protein and potassium",
+                    "Carbohydrates only",
+                    "All fluids",
+                    "Vitamins"
+                ],
+                "correctAnswer": 0,
+                "explanation": "CKD: Restrict protein, potassium, phosphorus, sodium, fluids. Monitor for hyperkalemia, fluid overload, anemia. May need dialysis."
+            },
+            {
+                "id": 5,
+                "text": "What is the Rule of Nines for burns?",
+                "options": [
+                    "Estimates burn depth",
+                    "Estimates percentage of body surface burned",
+                    "Determines infection risk",
+                    "Calculates pain level"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Rule of Nines estimates burn area: Head 9%, each arm 9%, each leg 18%, anterior trunk 18%, posterior trunk 18%, perineum 1%."
+            },
+            {
+                "id": 6,
+                "text": "A client with rheumatoid arthritis should:",
+                "options": [
+                    "Avoid all exercise",
+                    "Balance rest and gentle exercise",
+                    "Exercise only during flare-ups",
+                    "Stay in bed permanently"
+                ],
+                "correctAnswer": 1,
+                "explanation": "RA: Balance rest and exercise, use heat for stiffness, cold for inflammation. Medications: NSAIDs, DMARDs, biologics. Protect joints."
+            },
+            {
+                "id": 7,
+                "text": "A client on hemodialysis should avoid:",
+                "options": [
+                    "All fluids",
+                    "BP measurement on fistula arm",
+                    "All foods",
+                    "Walking"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Protect AV fistula: No BP, IV, or blood draws on fistula arm. Check for thrill/bruit. Monitor for infection, clotting."
+            },
+            {
+                "id": 8,
+                "text": "Which burn involves epidermis and dermis with blisters?",
+                "options": [
+                    "Superficial (1st degree)",
+                    "Partial-thickness (2nd degree)",
+                    "Full-thickness (3rd degree)",
+                    "Fourth degree"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Partial-thickness (2nd degree): Blisters, red/moist, painful. Superficial: Red, no blisters. Full-thickness: White/charred, painless (nerve damage)."
+            },
+            {
+                "id": 9,
+                "text": "A client with a hip fracture is at risk for:",
+                "options": [
+                    "Diabetes",
+                    "Fat embolism",
+                    "Hypertension",
+                    "UTI only"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Hip/long bone fractures risk fat embolism. Signs: Dyspnea, petechiae, confusion. Also risk DVT, infection, delayed healing."
+            },
+            {
+                "id": 10,
+                "text": "A client with acute kidney injury has potassium of 6.8. What is the priority?",
+                "options": [
+                    "Restrict fluids",
+                    "Give calcium gluconate IV",
+                    "Increase potassium intake",
+                    "No intervention needed"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Critical hyperkalemia (>6.5): Give calcium gluconate (protects heart), insulin/glucose, kayexalate, possible dialysis. Monitor ECG for arrhythmias."
+            },
+            {
+                "id": 11,
+                "text": "A client post-hip replacement should avoid:",
+                "options": [
+                    "Walking with walker",
+                    "Hip flexion >90\u00b0, crossing legs, internal rotation",
+                    "All movement",
+                    "Sitting in chair"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Post-hip replacement: Avoid hip flexion >90\u00b0, crossing legs, internal rotation (risk dislocation). Use abduction pillow, elevated toilet seat."
+            },
+            {
+                "id": 12,
+                "text": "Which is a sign of acute kidney injury?",
+                "options": [
+                    "Increased urine output",
+                    "Decreased urine output (<400 mL/day)",
+                    "Clear urine",
+                    "Hypotension only"
+                ],
+                "correctAnswer": 1,
+                "explanation": "AKI: Oliguria (<400 mL/day), elevated BUN/creatinine, fluid overload, hyperkalemia, metabolic acidosis. Treat underlying cause."
+            },
+            {
+                "id": 13,
+                "text": "A client with osteoporosis should:",
+                "options": [
+                    "Avoid all calcium",
+                    "Increase calcium, vitamin D, weight-bearing exercise",
+                    "Stay in bed",
+                    "Avoid all exercise"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Osteoporosis: Calcium 1200-1500 mg/day, vitamin D, weight-bearing exercise, bisphosphonates. Prevent falls. DEXA scan monitors bone density."
+            },
+            {
+                "id": 14,
+                "text": "What is the priority intervention for a burn victim?",
+                "options": [
+                    "Apply ice",
+                    "Assess airway and breathing",
+                    "Remove all clothing",
+                    "Apply ointment"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Burn priority: Airway (inhalation injury risk), breathing, circulation. Stop burning process, remove jewelry, cover with clean cloth, IV fluids for large burns."
+            },
+            {
+                "id": 15,
+                "text": "A client with gout should avoid:",
+                "options": [
+                    "Water",
+                    "Purine-rich foods (organ meats, shellfish)",
+                    "All vegetables",
+                    "Exercise"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Gout: Avoid purines (organ meats, shellfish, alcohol), increase fluids, take medications (colchicine, allopurinol). Affects big toe typically."
+            },
+            {
+                "id": 16,
+                "text": "A client on peritoneal dialysis develops cloudy dialysate. This indicates:",
+                "options": [
+                    "Normal finding",
+                    "Peritonitis",
+                    "Adequate dialysis",
+                    "Dehydration"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Cloudy dialysate indicates peritonitis (infection). Also: abdominal pain, fever. Send sample for culture, give antibiotics. Clear dialysate is normal."
+            },
+            {
+                "id": 17,
+                "text": "Which position is best for a client with a hip fracture before surgery?",
+                "options": [
+                    "Affected leg abducted",
+                    "Affected leg adducted",
+                    "Prone",
+                    "Trendelenburg"
+                ],
+                "correctAnswer": 0,
+                "explanation": "Hip fracture: Keep affected leg abducted (pillow between legs), neutral rotation, minimal movement. Assess neurovascular status. Prepare for surgery."
+            },
+            {
+                "id": 18,
+                "text": "A client with a full-thickness burn will have:",
+                "options": [
+                    "Severe pain",
+                    "Little to no pain (nerve damage)",
+                    "Blisters",
+                    "Red, moist skin"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Full-thickness (3rd degree): White/brown/charred, dry, painless (nerves destroyed). Requires skin grafting. Partial-thickness is painful."
+            },
+            {
+                "id": 19,
+                "text": "A client with urinary retention should:",
+                "options": [
+                    "Restrict all fluids",
+                    "Receive catheterization",
+                    "Avoid all medications",
+                    "Increase caffeine"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Urinary retention: Catheterization (straight or indwelling), treat underlying cause (BPH, medications, neurological). Monitor for bladder distention."
+            },
+            {
+                "id": 20,
+                "text": "Which is a sign of compartment syndrome?",
+                "options": [
+                    "Mild discomfort",
+                    "Severe pain with passive stretching",
+                    "No symptoms",
+                    "Improved circulation"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Compartment syndrome: Severe pain (especially with passive stretching), pallor, pulselessness, paresthesia, paralysis, tense compartment. Emergency fasciotomy needed."
+            },
+            {
+                "id": 21,
+                "text": "A client with kidney stones should:",
+                "options": [
+                    "Restrict all fluids",
+                    "Increase fluids to 3-4 L/day",
+                    "Avoid all medications",
+                    "Stay on bed rest"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Kidney stones: Increase fluids (prevents formation), strain urine, pain management. Lithotripsy or surgery for large stones. Prevent recurrence based on stone type."
+            },
+            {
+                "id": 22,
+                "text": "A client with a fracture has a cast applied. What should the nurse teach?",
+                "options": [
+                    "Keep cast wet",
+                    "Report numbness, tingling, or severe pain",
+                    "Remove cast if uncomfortable",
+                    "Insert objects to scratch"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Cast care: Keep dry, elevate to reduce swelling, report 5 P's (neurovascular compromise), don't insert objects, check skin at edges."
+            },
+            {
+                "id": 23,
+                "text": "Which type of burn is caused by chemicals?",
+                "options": [
+                    "Thermal",
+                    "Chemical",
+                    "Electrical",
+                    "Radiation"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Burn types: Thermal (heat), Chemical (acids/alkalis - irrigate with water), Electrical (entry/exit wounds, cardiac monitoring), Radiation."
+            },
+            {
+                "id": 24,
+                "text": "A client with benign prostatic hyperplasia (BPH) will have:",
+                "options": [
+                    "Increased urinary frequency and urgency",
+                    "Decreased urination",
+                    "No symptoms",
+                    "Hematuria only"
+                ],
+                "correctAnswer": 0,
+                "explanation": "BPH: Urinary frequency, urgency, nocturia, weak stream, retention. Treat with alpha blockers, 5-alpha reductase inhibitors, or TURP surgery."
+            },
+            {
+                "id": 25,
+                "text": "A client with osteoarthritis has pain that:",
+                "options": [
+                    "Improves with rest",
+                    "Worsens with activity",
+                    "Is constant",
+                    "Never occurs"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Osteoarthritis: Pain worsens with activity, improves with rest. Joint stiffness, Heberden's nodes. Treat with NSAIDs, exercise, weight loss, joint replacement."
+            },
+            {
+                "id": 26,
+                "text": "What is the priority for a client with a major burn?",
+                "options": [
+                    "Pain management",
+                    "Fluid resuscitation",
+                    "Wound care",
+                    "Nutrition"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Major burn priorities: Airway, fluid resuscitation (Parkland formula), prevent infection, pain management, nutrition. Monitor for shock, infection, contractures."
+            },
+            {
+                "id": 27,
+                "text": "A client post-amputation reports pain in the missing limb. This is called:",
+                "options": [
+                    "Acute pain",
+                    "Phantom limb pain",
+                    "Chronic pain",
+                    "No pain"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Phantom limb pain: Sensation of pain in amputated limb. Real phenomenon. Treat with medications, mirror therapy, desensitization."
+            },
+            {
+                "id": 28,
+                "text": "A client with acute glomerulonephritis will have:",
+                "options": [
+                    "Clear urine",
+                    "Tea-colored urine, hypertension, edema",
+                    "Increased urine output",
+                    "No symptoms"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Glomerulonephritis: Tea/cola-colored urine (hematuria), hypertension, edema, proteinuria. Often follows strep infection. Treat underlying cause, monitor kidney function."
+            },
+            {
+                "id": 29,
+                "text": "Which is a sign of fat embolism?",
+                "options": [
+                    "Bradycardia",
+                    "Petechiae, dyspnea, confusion",
+                    "Hypertension",
+                    "Increased appetite"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Fat embolism (from long bone fractures): Petechiae (chest/axilla), dyspnea, confusion, tachycardia. Monitor respiratory status, give oxygen."
+            },
+            {
+                "id": 30,
+                "text": "A client with a pressure injury Stage 3 has:",
+                "options": [
+                    "Intact skin with redness",
+                    "Partial-thickness skin loss",
+                    "Full-thickness skin loss",
+                    "Muscle/bone exposed"
+                ],
+                "correctAnswer": 2,
+                "explanation": "Pressure injury stages: 1=intact/red, 2=partial thickness/blister, 3=full thickness/crater, 4=muscle/bone exposed, Unstageable=eschar covering."
+            },
+            {
+                "id": 31,
+                "text": "A client with urinary incontinence should:",
+                "options": [
+                    "Restrict all fluids",
+                    "Perform Kegel exercises",
+                    "Avoid all activity",
+                    "Stay catheterized permanently"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Incontinence: Kegel exercises (strengthen pelvic floor), scheduled voiding, adequate fluids, treat underlying cause. Avoid bladder irritants (caffeine, alcohol)."
+            },
+            {
+                "id": 32,
+                "text": "A client with a sprain should use RICE. This stands for:",
+                "options": [
+                    "Rest, Ice, Compression, Elevation",
+                    "Rest, Immobilization, Cold, Exercise",
+                    "Restriction, Ice, Compression, Exercise",
+                    "Rest, Ice, Circulation, Elevation"
+                ],
+                "correctAnswer": 0,
+                "explanation": "RICE for sprains/strains: Rest, Ice (first 24-48 hours), Compression (elastic bandage), Elevation (above heart). Then heat and gentle exercise."
+            },
+            {
+                "id": 33,
+                "text": "A client with end-stage renal disease will need:",
+                "options": [
+                    "Increased protein",
+                    "Dialysis or kidney transplant",
+                    "No treatment",
+                    "Increased potassium"
+                ],
+                "correctAnswer": 1,
+                "explanation": "ESRD: Dialysis (hemodialysis or peritoneal) or kidney transplant. Strict diet restrictions, fluid limits, medications, monitor for complications."
+            },
+            {
+                "id": 34,
+                "text": "Which is the most common site for pressure injuries?",
+                "options": [
+                    "Elbow",
+                    "Sacrum and heels",
+                    "Knees",
+                    "Shoulders"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Common pressure injury sites: Sacrum, heels, ischial tuberosities, greater trochanter, occiput. Prevent with repositioning q2h, pressure-relief devices."
+            },
+            {
+                "id": 35,
+                "text": "A client with carpal tunnel syndrome will have:",
+                "options": [
+                    "Foot pain",
+                    "Numbness/tingling in thumb, index, middle fingers",
+                    "Back pain",
+                    "No symptoms"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Carpal tunnel: Numbness/tingling in thumb, index, middle fingers (median nerve compression). Positive Tinel's/Phalen's sign. Treat with splint, NSAIDs, or surgery."
             }
         ]
     },

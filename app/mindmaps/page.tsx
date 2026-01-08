@@ -1,21 +1,33 @@
-import Link from 'next/link';
-import fs from 'fs';
-import path from 'path';
+'use client';
 
-// Server Component Data Fetching
-function getMindMaps() {
-    const filePath = path.join(process.cwd(), 'app', 'data', 'mindmaps.json');
-    if (!fs.existsSync(filePath)) return [];
-    try {
-        const fileData = fs.readFileSync(filePath, 'utf8');
-        return JSON.parse(fileData);
-    } catch (e) {
-        return [];
-    }
+import { useState, useEffect } from 'react';
+import Link from 'next/link';
+
+interface Mindmap {
+    id: number;
+    episode_id: number | null;
+    title: string;
+    file_name: string;
+    file_type: string;
+    created_at: string;
 }
 
 export default function MindMapsLibraryPage() {
-    const mindmaps = getMindMaps();
+    const [mindmaps, setMindmaps] = useState<Mindmap[]>([]);
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+        fetch('/api/mindmaps')
+            .then(res => res.json())
+            .then(data => {
+                setMindmaps(data);
+                setLoading(false);
+            })
+            .catch(err => {
+                console.error('Error fetching mindmaps:', err);
+                setLoading(false);
+            });
+    }, []);
 
     return (
         <div className="min-h-dvh bg-[#0A0A0F] text-white font-sans p-6 pb-24">
@@ -36,7 +48,12 @@ export default function MindMapsLibraryPage() {
 
             {/* Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {mindmaps.length === 0 ? (
+                {loading ? (
+                    <div className="col-span-full text-center py-16">
+                        <div className="text-4xl mb-4">⏳</div>
+                        <p className="text-white/50">Loading mind maps...</p>
+                    </div>
+                ) : mindmaps.length === 0 ? (
                     <div className="col-span-full text-center py-16 bg-white/5 rounded-3xl border border-white/5 border-dashed">
                         <div className="text-6xl mb-4">🧠</div>
                         <h3 className="text-xl font-bold text-white/80 mb-2">No Mind Maps Yet</h3>
@@ -45,7 +62,7 @@ export default function MindMapsLibraryPage() {
                         </p>
                     </div>
                 ) : (
-                    mindmaps.map((item: any) => (
+                    mindmaps.map((item) => (
                         <Link
                             key={item.id}
                             href={`/mindmaps/${item.id}`}
@@ -53,7 +70,7 @@ export default function MindMapsLibraryPage() {
                         >
                             {/* Image Thumbnail */}
                             <img
-                                src={`/uploads/mindmaps/${item.fileName}`}
+                                src={`/api/mindmaps/${item.id}/image`}
                                 alt={item.title}
                                 className="absolute inset-0 w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-opacity duration-500"
                             />
@@ -66,7 +83,7 @@ export default function MindMapsLibraryPage() {
                                     {item.title}
                                 </h3>
                                 <p className="text-xs text-white/50 font-medium uppercase tracking-wider">
-                                    {item.episodeId ? `Episode ${item.episodeId}` : 'Concept Map'}
+                                    {item.episode_id ? `Episode ${item.episode_id}` : 'Concept Map'}
                                 </p>
                             </div>
 

@@ -1,31 +1,16 @@
 import { NextResponse } from 'next/server';
-import fs from 'fs';
-import path from 'path';
-import { pipeline } from 'stream';
-import { promisify } from 'util';
-
-const pump = promisify(pipeline);
-
-const dataFilePath = path.join(process.cwd(), 'app', 'data', 'slides.json');
-const uploadDir = path.join(process.cwd(), 'public', 'uploads', 'slides');
-
-// Ensure upload directory exists
-if (!fs.existsSync(uploadDir)) {
-    fs.mkdirSync(uploadDir, { recursive: true });
-}
-
-function getSlides() {
-    if (!fs.existsSync(dataFilePath)) return [];
-    try {
-        const fileData = fs.readFileSync(dataFilePath, 'utf8');
-        return JSON.parse(fileData);
-    } catch (e) {
-        return [];
-    }
-}
+import { pool } from '@/lib/db';
 
 export async function GET() {
-    return NextResponse.json(getSlides());
+    try {
+        const result = await pool.query(
+            'SELECT id, episode_id, title, file_name, file_type, created_at FROM slides ORDER BY created_at DESC'
+        );
+        return NextResponse.json(result.rows);
+    } catch (error) {
+        console.error('Error fetching slides:', error);
+        return NextResponse.json({ error: 'Failed to fetch slides' }, { status: 500 });
+    }
 }
 
 export async function POST(request: Request) {
@@ -39,31 +24,28 @@ export async function POST(request: Request) {
             return NextResponse.json({ error: 'Missing file or title' }, { status: 400 });
         }
 
-        const fileName = `${Date.now()}-${file.name.replace(/\s+/g, '_')}`;
-        const filePath = path.join(uploadDir, fileName);
-
-        // Convert file to buffer and write to disk
+        // Convert file to buffer
         const arrayBuffer = await file.arrayBuffer();
         const buffer = Buffer.from(arrayBuffer);
-        fs.writeFileSync(filePath, buffer);
 
-        // Save metadata
-        const slides = getSlides();
-        const newSlide = {
-            id: Date.now(),
-            episodeId: parseInt(episodeId) || 0,
-            title,
-            fileName,
-            uploadedAt: new Date().toISOString()
-        };
+        // Insert into database
+        const result = await pool.query(
+            `INSERT INTO slides (episode_id, title, file_name, file_data, file_type, created_at) 
+             VALUES ($1, $2, $3, $4, $5, NOW()) 
+             RETURNING id, episode_id, title, file_name, file_type, created_at`,
+            [
+                episodeId ? parseInt(episodeId) : null,
+                title,
+                file.name,
+                buffer,
+                file.type
+            ]
+        );
 
-        slides.unshift(newSlide);
-        fs.writeFileSync(dataFilePath, JSON.stringify(slides, null, 2));
-
-        return NextResponse.json({ success: true, slide: newSlide });
+        return NextResponse.json({ success: true, slide: result.rows[0] });
 
     } catch (error) {
         console.error('Upload error:', error);
-        return NextResponse.json({ error: 'Failed to upload slide' }, { status: 500 });
+        return NextResponse.json({ error: 'Failed to upload slide deck' }, { status: 500 });
     }
 }

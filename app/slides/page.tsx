@@ -1,25 +1,36 @@
-import Link from 'next/link';
-import fs from 'fs';
-import path from 'path';
+'use client';
 
-// Server Component Data Fetching
-function getSlides() {
-    const filePath = path.join(process.cwd(), 'app', 'data', 'slides.json');
-    if (!fs.existsSync(filePath)) return [];
-    try {
-        const fileData = fs.readFileSync(filePath, 'utf8');
-        return JSON.parse(fileData);
-    } catch (e) {
-        return [];
-    }
+import { useState, useEffect } from 'react';
+import Link from 'next/link';
+
+interface Slide {
+    id: number;
+    episode_id: number | null;
+    title: string;
+    file_name: string;
+    file_type: string;
+    created_at: string;
 }
 
 export default function SlidesLibraryPage() {
-    const slides = getSlides();
+    const [slides, setSlides] = useState<Slide[]>([]);
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+        fetch('/api/slides')
+            .then(res => res.json())
+            .then(data => {
+                setSlides(data);
+                setLoading(false);
+            })
+            .catch(err => {
+                console.error('Error fetching slides:', err);
+                setLoading(false);
+            });
+    }, []);
 
     return (
         <div className="min-h-dvh bg-[#0A0A0F] text-white font-sans p-6 pb-24">
-            {/* Header */}
             <header className="mb-8 flex items-center justify-between">
                 <div>
                     <Link href="/" className="text-sm font-medium text-white/50 hover:text-white mb-2 block">
@@ -34,9 +45,13 @@ export default function SlidesLibraryPage() {
                 </div>
             </header>
 
-            {/* Grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                {slides.length === 0 ? (
+                {loading ? (
+                    <div className="col-span-full text-center py-12">
+                        <div className="text-4xl mb-4">⏳</div>
+                        <p className="text-white/50">Loading slide decks...</p>
+                    </div>
+                ) : slides.length === 0 ? (
                     <div className="col-span-full text-center py-12 bg-white/5 rounded-3xl border border-white/5 border-dashed">
                         <div className="text-4xl mb-4">📂</div>
                         <h3 className="text-lg font-bold text-white/80">No Slide Decks Yet</h3>
@@ -45,7 +60,7 @@ export default function SlidesLibraryPage() {
                         </p>
                     </div>
                 ) : (
-                    slides.map((deck: any) => (
+                    slides.map((deck) => (
                         <Link
                             key={deck.id}
                             href={`/slides/${deck.id}`}
@@ -63,13 +78,13 @@ export default function SlidesLibraryPage() {
                                 {deck.title}
                             </h3>
                             <p className="text-xs text-white/40 font-medium uppercase tracking-wider">
-                                {deck.episodeId ? `Episode ${deck.episodeId}` : 'General Reference'}
+                                {deck.episode_id ? `Episode ${deck.episode_id}` : 'General Reference'}
                             </p>
 
                             <div className="mt-4 flex items-center gap-2 text-xs text-white/30">
                                 <span>PDF</span>
                                 <span>•</span>
-                                <span>{new Date(deck.uploadedAt).toLocaleDateString()}</span>
+                                <span>{new Date(deck.created_at).toLocaleDateString()}</span>
                             </div>
                         </Link>
                     ))

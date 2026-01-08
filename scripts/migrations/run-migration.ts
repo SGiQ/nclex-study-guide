@@ -1,6 +1,10 @@
 import { Client } from 'pg';
-import { readFileSync } from 'fs';
+import { readFileSync, readdirSync } from 'fs';
 import { join } from 'path';
+import * as dotenv from 'dotenv';
+
+// Load environment variables
+dotenv.config({ path: '.env.local' });
 
 async function runMigration() {
     // Use Railway database URL
@@ -15,16 +19,26 @@ async function runMigration() {
         console.log('Connecting to database...');
         await client.connect();
 
-        console.log('Running migration: 001_create_users_tables.sql');
+        // Get all migration files in order
+        const migrationFiles = readdirSync(__dirname)
+            .filter(file => file.endsWith('.sql'))
+            .sort();
 
-        const sql = readFileSync(
-            join(__dirname, '001_create_users_tables.sql'),
-            'utf-8'
-        );
+        console.log(`Found ${migrationFiles.length} migration files`);
 
-        await client.query(sql);
+        for (const file of migrationFiles) {
+            console.log(`\nRunning migration: ${file}`);
 
-        console.log('✅ Migration completed successfully!');
+            const sql = readFileSync(
+                join(__dirname, file),
+                'utf-8'
+            );
+
+            await client.query(sql);
+            console.log(`✅ ${file} completed successfully!`);
+        }
+
+        console.log('\n✅ All migrations completed successfully!');
     } catch (error) {
         console.error('❌ Migration failed:', error);
         process.exit(1);

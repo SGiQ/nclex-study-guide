@@ -92,7 +92,7 @@ export default function MindMapViewerPage({ params }: { params: Promise<{ id: st
                     <div className="bg-white/5 rounded-2xl p-8 border border-white/10">
                         <div className="overflow-auto">
                             <img
-                                src={`/uploads/mindmaps/${mindmap.fileName}`}
+                                src={`/api/mindmaps/${id}/image`}
                                 alt={mindmap.title}
                                 style={{ transform: `scale(${zoom / 100})`, transformOrigin: 'top left' }}
                                 className="max-w-none transition-transform duration-200"
@@ -103,7 +103,7 @@ export default function MindMapViewerPage({ params }: { params: Promise<{ id: st
                     {/* Download Button */}
                     <div className="mt-6 text-center">
                         <a
-                            href={`/uploads/mindmaps/${mindmap.fileName}`}
+                            href={`/api/mindmaps/${id}/image`}
                             download
                             className="inline-flex items-center gap-2 px-6 py-3 bg-purple-600 hover:bg-purple-500 rounded-xl font-semibold transition-colors"
                         >

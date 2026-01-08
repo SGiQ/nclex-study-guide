@@ -9,24 +9,35 @@ import path from 'path';
  */
 export async function GET() {
     try {
-        // Read the migration SQL file
-        const migrationPath = path.join(process.cwd(), 'scripts', 'migrations', '002_create_content_tables.sql');
+        const migrationsDir = path.join(process.cwd(), 'scripts', 'migrations');
 
-        if (!fs.existsSync(migrationPath)) {
+        // Get all SQL migration files and sort them
+        const migrationFiles = fs.readdirSync(migrationsDir)
+            .filter(file => file.endsWith('.sql'))
+            .sort(); // This will sort them: 001, 002, 003, etc.
+
+        if (migrationFiles.length === 0) {
             return NextResponse.json({
-                error: 'Migration file not found',
-                path: migrationPath
+                error: 'No migration files found',
+                path: migrationsDir
             }, { status: 404 });
         }
 
-        const sql = fs.readFileSync(migrationPath, 'utf8');
+        const results: string[] = [];
 
-        // Execute the migration
-        await pool.query(sql);
+        // Run each migration file in order
+        for (const file of migrationFiles) {
+            const migrationPath = path.join(migrationsDir, file);
+            const sql = fs.readFileSync(migrationPath, 'utf8');
+
+            await pool.query(sql);
+            results.push(file);
+        }
 
         return NextResponse.json({
             success: true,
-            message: 'Database migration completed successfully! Tables created: episodes, quizzes, flashcards, mindmaps, infographics, slides'
+            message: `Database migration completed successfully! Ran ${results.length} migration files.`,
+            migrations: results
         });
 
     } catch (error) {

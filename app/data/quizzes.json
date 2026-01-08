@@ -1,5 +1,253 @@
 [
     {
+        "id": 101,
+        "episodeId": 1,
+        "title": "NCLEX Strategies & Study Skills",
+        "description": "Test-Taking Keys, Study Planning, Question Analysis",
+        "questionCount": 20,
+        "color": "from-blue-600 to-blue-900",
+        "questions": [
+            {
+                "id": 1,
+                "text": "According to 'Secret Key #1', how long should an effective study sprint last?",
+                "options": [
+                    "2 hours",
+                    "45 minutes",
+                    "15 minutes",
+                    "4 hours"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Working memory effectiveness drops off significantly after 45 minutes."
+            },
+            {
+                "id": 2,
+                "text": "What is the 'active retention' strategy suggested for solidifying understanding?",
+                "options": [
+                    "Re-reading the chapter",
+                    "Highlighting every line",
+                    "Explaining the concept out loud to an imaginary patient",
+                    "Listening to music"
+                ],
+                "correctAnswer": 2,
+                "explanation": "Forcing retrieval and articulation creates actual learning, unlike passive reading."
+            },
+            {
+                "id": 3,
+                "text": "When analyzing practice tests, which three groups of questions need special attention?",
+                "options": [
+                    "Wrong answers, Guessed answers, and Slow/Difficult answers",
+                    "Only wrong answers",
+                    "Only correct answers",
+                    "First 10 and Last 10"
+                ],
+                "correctAnswer": 0,
+                "explanation": "Guessed answers (lucky hits) and slow answers (weakness/lack of fluency) are just as important as wrong ones."
+            },
+            {
+                "id": 4,
+                "text": "What is the recommended average time per question on the NCLEX-PN to 'bank time'?",
+                "options": [
+                    "60 seconds",
+                    "30 seconds",
+                    "90 seconds",
+                    "10 seconds"
+                ],
+                "correctAnswer": 1,
+                "explanation": "30 seconds allows you to bank time for complex case studies."
+            },
+            {
+                "id": 5,
+                "text": "What is the '$5 Challenge' used for?",
+                "options": [
+                    "Buying snacks",
+                    "Eliminating wrong answers with confidence",
+                    "Betting on your score",
+                    "Paying for the exam"
+                ],
+                "correctAnswer": 1,
+                "explanation": "If you are confident enough to bet money an option is wrong, cross it off immediately to narrow choices."
+            },
+            {
+                "id": 6,
+                "text": "What is a 'Switchback Word' in a question stem?",
+                "options": [
+                    "And / Also",
+                    "But / However / Yet",
+                    "Therefore",
+                    "Because"
+                ],
+                "correctAnswer": 1,
+                "explanation": "It signals a contradiction or shift in priority that often holds the key to the question."
+            },
+            {
+                "id": 7,
+                "text": "True or False: 'Extreme Statements' containing words like ALL, NEVER, or ALWAYS are usually correct.",
+                "options": [
+                    "True",
+                    "False"
+                ],
+                "correctAnswer": 1,
+                "explanation": "False. Medicine rarely has absolutes. These are usually traps."
+            },
+            {
+                "id": 8,
+                "text": "What is a 'Fact Trap'?",
+                "options": [
+                    "A lie in the answer choices",
+                    "A statement that is factually true but does not answer the specific question asked",
+                    "A difficult conversion",
+                    "A typo"
+                ],
+                "correctAnswer": 1,
+                "explanation": "It lures you in because you recognize the fact, but you must ask: 'Does this answer the question?'."
+            },
+            {
+                "id": 9,
+                "text": "Phase 1 of the practice test strategy involves:",
+                "options": [
+                    "Timed, Closed Book",
+                    "Untimed, Open Book",
+                    "Timed, Open Book",
+                    "Group study"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Start with no pressure to learn the strategies/logic first."
+            },
+            {
+                "id": 10,
+                "text": "In the 5-Week Study Plan, why does Week 1 start with Safety & Infection Control?",
+                "options": [
+                    "It's the easiest",
+                    "It's the foundation for all safe, effective care environments",
+                    "It's alphabetical",
+                    "It's the hardest"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Safety is the lens through which you must view every other topic."
+            },
+            {
+                "id": 11,
+                "text": "Which learning modality benefits most from role-playing or using hands to trace flowcharts?",
+                "options": [
+                    "Visual",
+                    "Auditory",
+                    "Kinesthetic",
+                    "Reading/Writing"
+                ],
+                "correctAnswer": 2,
+                "explanation": "Kinesthetic learners learn by *doing* and moving."
+            },
+            {
+                "id": 12,
+                "text": "What does a 'Hedge Word' (e.g., generally, usually) imply?",
+                "options": [
+                    "Uncertainty",
+                    "A likely correct answer because it allows for exceptions",
+                    "An incorrect answer",
+                    "A trick"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Nursing care often requires clinical judgment, so 'generally' is often safer than 'always'."
+            },
+            {
+                "id": 13,
+                "text": "If a question is too difficult and you are stuck, you should:",
+                "options": [
+                    "Spend 5 minutes figuring it out",
+                    "Make an educated guess, bookmark it mentally, and move on immediately",
+                    "Panic",
+                    "Ask a friend"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Never let one hard question derail your pace or morale."
+            },
+            {
+                "id": 14,
+                "text": "Why is 'Cramming' (long study sessions) counterproductive?",
+                "options": [
+                    "It's boring",
+                    "Lasting retention drops significantly after the first hour",
+                    "You get hungry",
+                    "It's expensive"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Your brain can't encode long-term memories effectively in marathon sessions."
+            },
+            {
+                "id": 15,
+                "text": "Week 5 of the study plan is dedicated entirely to:",
+                "options": [
+                    "Learning new content",
+                    "Simulated Practice Tests (Stamina & Strategy)",
+                    "Relaxing",
+                    "Flashcards"
+                ],
+                "correctAnswer": 1,
+                "explanation": "The final week is for dress rehearsal - simulating the exam environment."
+            },
+            {
+                "id": 16,
+                "text": "Answering a question correctly by guessing means:",
+                "options": [
+                    "You know the material",
+                    "You got lucky, and you still need to review that topic",
+                    "You are a genius",
+                    "The test is easy"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Don't count lucky guesses as knowledge. Review them!"
+            },
+            {
+                "id": 17,
+                "text": "If you are 'Kinesthetic', what is a good study tool?",
+                "options": [
+                    "Podcasts only",
+                    "Physical Flashcards (flipping/sorting)",
+                    "Silent reading",
+                    "Lectures"
+                ],
+                "correctAnswer": 1,
+                "explanation": "The physical act helps bind the memory."
+            },
+            {
+                "id": 18,
+                "text": "The 'Predetermined Answer' rule (e.g., picking the first remaining option) is designed to:",
+                "options": [
+                    "Save time",
+                    "Prevent 'analysis paralysis' and emotional second-guessing",
+                    "Trick the computer",
+                    "Increase randomness"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Have a system to break ties so you don't agonize over 50/50 choices."
+            },
+            {
+                "id": 19,
+                "text": "Post-Op care would fall under which Study Week category?",
+                "options": [
+                    "Week 1: Safety",
+                    "Week 3: Basic Care & Comfort / Physiological",
+                    "Week 2: Psychosocial",
+                    "Week 5: Practice"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Basic Care and Physiological Adaptation cover physical care."
+            },
+            {
+                "id": 20,
+                "text": "The ultimate goal of the study plan is:",
+                "options": [
+                    "To memorize everything",
+                    "To build confidence and tactical awareness strategies",
+                    "To be fast",
+                    "To read 10 books"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Knowledge + Strategy + Confidence = Passing."
+            }
+        ]
+    },
+    {
         "id": 2,
         "episodeId": 2,
         "title": "Management Quiz",

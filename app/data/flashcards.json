@@ -1,5 +1,87 @@
 [
     {
+        "episodeId": 1,
+        "title": "Episode 1 Flashcards",
+        "description": "NCLEX Strategies & 5 Secret Keys",
+        "cards": [
+            {
+                "id": 1,
+                "front": "What is Secret Key #1 ('Plan Big, Study Small')?",
+                "back": "Divide study time into 45-minute focused sprints with breaks, rather than long marathon sessions."
+            },
+            {
+                "id": 2,
+                "front": "What is Secret Key #2 ('Make Your Studying Count')?",
+                "back": "Use active retention strategies like explaining concepts out loud or using visual aids, rather than passive reading."
+            },
+            {
+                "id": 3,
+                "front": "What is Secret Key #3 ('Practice the Right Way')?",
+                "back": "Analyze every practice question (especially wrong, guessed, or slow ones) to understand the concept and strategy."
+            },
+            {
+                "id": 4,
+                "front": "What is Secret Key #4 ('Pace Yourself')?",
+                "back": "Aim for an average of 30 seconds per question to bank time for harder case studies."
+            },
+            {
+                "id": 5,
+                "front": "What is Secret Key #5 ('Have a Plan for Guessing')?",
+                "back": "Use the $5 Challenge to eliminate choices, then pick a predetermined answer (e.g., first remaining)."
+            },
+            {
+                "id": 6,
+                "front": "What are 'Hedge Words'?",
+                "back": "Words like 'usually', 'generally', 'often'. They allow for exceptions and are more likely to be correct in nursing."
+            },
+            {
+                "id": 7,
+                "front": "What are 'Switchback Words'?",
+                "back": "Words like 'but', 'however', 'yet'. They signal a contradiction or shift in priority."
+            },
+            {
+                "id": 8,
+                "front": "What is a 'Fact Trap'?",
+                "back": "An answer choice that is factually true but does not answer the specific question asked."
+            },
+            {
+                "id": 9,
+                "front": "Why should you avoid 'Extreme Statements' (Always/Never)?",
+                "back": "Because patient care is individualized and rarely allows for absolutes."
+            },
+            {
+                "id": 10,
+                "front": "What is the primary focus of Week 1 in the 5-Week Study Plan?",
+                "back": "Safety and Infection Control (Coordinated Care)."
+            },
+            {
+                "id": 11,
+                "front": "What is the primary focus of Week 5 in the Study Plan?",
+                "back": "Practice Tests (Simulating the exam environment)."
+            },
+            {
+                "id": 12,
+                "front": "How does 'Kinesthetic' learning work best?",
+                "back": "Through movement and doing (e.g., flipping flashcards, role-playing scenarios)."
+            },
+            {
+                "id": 13,
+                "front": "What is the recommended maximum time for intense focus before retention drops?",
+                "back": "45 minutes."
+            },
+            {
+                "id": 14,
+                "front": "Why is 'Banking Time' important?",
+                "back": "It saves minutes from easy questions to use on complex case studies later."
+            },
+            {
+                "id": 15,
+                "front": "What should you do if you are stuck on a question?",
+                "back": "Make an educated guess and move on immediately. Don't let it derail your morale."
+            }
+        ]
+    },
+    {
         "episodeId": 2,
         "title": "Episode 2 Flashcards",
         "description": "Flashcards for Episode 2",

@@ -175,8 +175,8 @@ export default function LandingPage() {
                             },
                             {
                                 icon: "🗂️",
-                                title: "4000+ Flashcards",
-                                description: "Spaced repetition flashcards for maximum retention and efficient studying"
+                                title: "750+ Flashcards",
+                                description: "Spaced repetition flashcards covering all 16 episodes for maximum retention"
                             },
                             {
                                 icon: "📊",
@@ -303,7 +303,7 @@ export default function LandingPage() {
                             <ul className="space-y-3 mb-8">
                                 <li className="flex items-center gap-2">✅ All 16 Episodes</li>
                                 <li className="flex items-center gap-2">✅ 440+ Practice Questions</li>
-                                <li className="flex items-center gap-2">✅ 4000+ Flashcards</li>
+                                <li className="flex items-center gap-2">✅ 750+ Flashcards</li>
                                 <li className="flex items-center gap-2">✅ Unlimited AI Tutor</li>
                                 <li className="flex items-center gap-2">✅ Full Exam Simulation</li>
                                 <li className="flex items-center gap-2">✅ Performance Analytics</li>

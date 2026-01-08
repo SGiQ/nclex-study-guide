@@ -63,37 +63,60 @@ export default function MindMapsLibraryPage() {
                     </div>
                 ) : (
                     mindmaps.map((item) => (
-                        <Link
+                        <div
                             key={item.id}
-                            href={`/mindmaps/${item.id}`}
-                            className="group relative aspect-[4/3] bg-[#16161C] rounded-2xl overflow-hidden border border-white/5 hover:border-purple-500/50 transition-all hover:-translate-y-1 hover:shadow-2xl hover:shadow-purple-900/20 active:scale-[0.99] block"
+                            className="group relative aspect-[4/3] bg-[#16161C] rounded-2xl overflow-hidden border border-white/5 hover:border-purple-500/50 transition-all"
                         >
-                            {/* Image Thumbnail */}
-                            <img
-                                src={`/api/mindmaps/${item.id}/image`}
-                                alt={item.title}
-                                className="absolute inset-0 w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-opacity duration-500"
-                            />
+                            <Link
+                                href={`/mindmaps/${item.id}`}
+                                className="absolute inset-0 hover:-translate-y-1 hover:shadow-2xl hover:shadow-purple-900/20 active:scale-[0.99] transition-all block"
+                            >
+                                {/* Image Thumbnail */}
+                                <img
+                                    src={`/api/mindmaps/${item.id}/image`}
+                                    alt={item.title}
+                                    className="absolute inset-0 w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-opacity duration-500"
+                                />
 
-                            {/* Gradient Overlay */}
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/30 to-transparent" />
+                                {/* Gradient Overlay */}
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/30 to-transparent" />
 
-                            <div className="absolute bottom-0 left-0 right-0 p-5">
-                                <h3 className="text-base font-bold leading-tight mb-2 text-white group-hover:text-purple-300 transition-colors line-clamp-2">
-                                    {item.title}
-                                </h3>
-                                <p className="text-xs text-white/50 font-medium uppercase tracking-wider">
-                                    {item.episode_id ? `Episode ${item.episode_id}` : 'Concept Map'}
-                                </p>
-                            </div>
-
-                            {/* Hover Icon */}
-                            <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity">
-                                <div className="bg-purple-500/20 backdrop-blur-sm border border-purple-500/30 rounded-full p-2">
-                                    <span className="text-xl">🔍</span>
+                                {/* Title */}
+                                <div className="absolute bottom-0 left-0 right-0 p-4">
+                                    <h3 className="font-bold text-white text-lg line-clamp-2 drop-shadow-lg">
+                                        {item.title}
+                                    </h3>
+                                    {item.episode_id && (
+                                        <p className="text-xs text-purple-300 mt-1">Episode {item.episode_id}</p>
+                                    )}
                                 </div>
-                            </div>
-                        </Link>
+                            </Link>
+
+                            {/* Delete Button */}
+                            <button
+                                onClick={async (e) => {
+                                    e.stopPropagation();
+                                    if (confirm(`Delete "${item.title}"? This cannot be undone.`)) {
+                                        try {
+                                            const res = await fetch(`/api/mindmaps/${item.id}`, {
+                                                method: 'DELETE',
+                                            });
+                                            if (res.ok) {
+                                                setMindmaps(mindmaps.filter(m => m.id !== item.id));
+                                            } else {
+                                                alert('Failed to delete mind map');
+                                            }
+                                        } catch (error) {
+                                            alert('Error deleting mind map');
+                                        }
+                                    }
+                                }}
+                                className="absolute top-2 right-2 z-10 w-8 h-8 bg-red-600 hover:bg-red-500 rounded-lg flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity"
+                                title="Delete mind map"
+                            >
+                                🗑️
+                            </button>
+                        </div>
                     ))
                 )}
             </div>

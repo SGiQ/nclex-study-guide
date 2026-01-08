@@ -61,31 +61,55 @@ export default function InfographicsLibraryPage() {
                     </div>
                 ) : (
                     infographics.map((item) => (
-                        <Link
+                        <div
                             key={item.id}
-                            href={`/infographics/${item.id}`}
-                            className="group relative aspect-[4/3] bg-[#16161C] rounded-2xl overflow-hidden border border-white/5 hover:border-pink-500/50 transition-all hover:-translate-y-1 hover:shadow-2xl hover:shadow-pink-900/20 active:scale-[0.99] block"
+                            className="group relative aspect-[4/3] bg-[#16161C] rounded-2xl overflow-hidden border border-white/5 hover:border-pink-500/50 transition-all"
                         >
-                            <img
-                                src={`/api/infographics/${item.id}/image`}
-                                alt={item.title}
-                                className="absolute inset-0 w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-opacity duration-500"
-                            />
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/30 to-transparent" />
-                            <div className="absolute bottom-0 left-0 right-0 p-5">
-                                <h3 className="text-base font-bold leading-tight mb-2 text-white group-hover:text-pink-300 transition-colors line-clamp-2">
-                                    {item.title}
-                                </h3>
-                                <p className="text-xs text-white/50 font-medium uppercase tracking-wider">
-                                    {item.episode_id ? `Episode ${item.episode_id}` : 'Quick Reference'}
-                                </p>
-                            </div>
-                            <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity">
-                                <div className="bg-pink-500/20 backdrop-blur-sm border border-pink-500/30 rounded-full p-2">
-                                    <span className="text-xl">🔍</span>
+                            <Link
+                                href={`/infographics/${item.id}`}
+                                className="absolute inset-0 hover:-translate-y-1 hover:shadow-2xl hover:shadow-pink-900/20 active:scale-[0.99] transition-all block"
+                            >
+                                <img
+                                    src={`/api/infographics/${item.id}/image`}
+                                    alt={item.title}
+                                    className="absolute inset-0 w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-opacity duration-500"
+                                />
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/30 to-transparent" />
+                                <div className="absolute bottom-0 left-0 right-0 p-5">
+                                    <h3 className="text-base font-bold leading-tight mb-2 text-white group-hover:text-pink-300 transition-colors line-clamp-2">
+                                        {item.title}
+                                    </h3>
+                                    <p className="text-xs text-white/50 font-medium uppercase tracking-wider">
+                                        {item.episode_id ? `Episode ${item.episode_id}` : 'Quick Reference'}
+                                    </p>
                                 </div>
-                            </div>
-                        </Link>
+                            </Link>
+
+                            {/* Delete Button */}
+                            <button
+                                onClick={async (e) => {
+                                    e.stopPropagation();
+                                    if (confirm(`Delete "${item.title}"? This cannot be undone.`)) {
+                                        try {
+                                            const res = await fetch(`/api/infographics/${item.id}`, {
+                                                method: 'DELETE',
+                                            });
+                                            if (res.ok) {
+                                                setInfographics(infographics.filter(i => i.id !== item.id));
+                                            } else {
+                                                alert('Failed to delete infographic');
+                                            }
+                                        } catch (error) {
+                                            alert('Error deleting infographic');
+                                        }
+                                    }
+                                }}
+                                className="absolute top-2 right-2 z-10 w-8 h-8 bg-red-600 hover:bg-red-500 rounded-lg flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity"
+                                title="Delete infographic"
+                            >
+                                🗑️
+                            </button>
+                        </div>
                     ))
                 )}
             </div>

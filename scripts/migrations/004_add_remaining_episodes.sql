@@ -1,4 +1,0 @@
-﻿-- Insert Episode 5 study guide
-INSERT INTO study_guides (episode_id, title, short_answer_questions, essay_questions, glossary)
-VALUES (5, 'Comprehensive Study Guide: Psychosocial Integrity and Patient Assessment', '[{""question"":""What is the primary difference between violent and non-violent physical restraints, and what is a key federal guideline for their use?"",""answer"":""Violent physical restraints are used to control aggressive patient behavior, while non-violent restraints are used to ensure patient safety in a clinical context, such as preventing an individual from pulling out an IV line. A key federal guideline is that all restraints require a physician''s order, which is time-limited, and a nurse must remove the restraints and assess the patient at least every two hours.""}]'::jsonb, '[]'::jsonb, '[]'::jsonb)
-ON CONFLICT DO NOTHING;

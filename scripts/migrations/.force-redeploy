@@ -1,3 +1,0 @@
--- Force Railway to pick up the study_guides migration
--- This file ensures the migration runs
-SELECT 1;

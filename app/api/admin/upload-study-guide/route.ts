@@ -16,8 +16,8 @@ function parseStudyGuide(content: string, episodeId: number, title: string): Par
     const shortAnswerSection = sections[0] || '';
     const answerKeySection = sections[1] || '';
 
-    const questionMatches = [...shortAnswerSection.matchAll(/(\d+)\.\s+(.+?)(?=\n\d+\.|$)/gs)];
-    const answerMatches = [...answerKeySection.matchAll(/(\d+)\.\s+(.+?)(?=\n\d+\.|$)/gs)];
+    const questionMatches = [...shortAnswerSection.matchAll(/(\d+)\.\s+(.+?)(?=\n\d+\.|$)/g)];
+    const answerMatches = [...answerKeySection.matchAll(/(\d+)\.\s+(.+?)(?=\n\d+\.|$)/g)];
 
     const shortAnswerQuestions = questionMatches.map((qMatch, index) => ({
         question: qMatch[2].trim(),
@@ -26,7 +26,7 @@ function parseStudyGuide(content: string, episodeId: number, title: string): Par
 
     // Parse Essay Questions
     const essaySection = sections[2] || '';
-    const essayMatches = [...essaySection.matchAll(/(\d+)\.\s+(.+?)(?=\n\d+\.|Instructions:|$)/gs)];
+    const essayMatches = [...essaySection.matchAll(/(\d+)\.\s+(.+?)(?=\n\d+\.|Instructions:|$)/g)];
 
     const essayQuestions = essayMatches.map(match => ({
         question: match[2].trim(),

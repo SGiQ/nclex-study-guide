@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio Transcriber - NCLEX Study Guide</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 32px;
+        }
+
+        .subtitle {
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 14px;
+        }
+
+        .upload-area {
+            border: 3px dashed #667eea;
+            border-radius: 15px;
+            padding: 40px;
+            text-align: center;
+            margin-bottom: 30px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .upload-area:hover {
+            background: #f8f9ff;
+            border-color: #764ba2;
+        }
+
+        .upload-area.dragover {
+            background: #e8ebff;
+            border-color: #764ba2;
+        }
+
+        input[type="file"] {
+            display: none;
+        }
+
+        .btn {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s;
+            margin: 10px;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+        }
+
+        .btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        .progress {
+            margin: 20px 0;
+            display: none;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 8px;
+            background: #e0e0e0;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+            width: 0%;
+            transition: width 0.3s;
+        }
+
+        .status {
+            margin: 10px 0;
+            padding: 15px;
+            border-radius: 10px;
+            display: none;
+        }
+
+        .status.info {
+            background: #e3f2fd;
+            color: #1976d2;
+        }
+
+        .status.success {
+            background: #e8f5e9;
+            color: #388e3c;
+        }
+
+        .status.error {
+            background: #ffebee;
+            color: #d32f2f;
+        }
+
+        .transcript-output {
+            margin-top: 30px;
+            display: none;
+        }
+
+        .transcript-box {
+            background: #f5f5f5;
+            border-radius: 10px;
+            padding: 20px;
+            max-height: 400px;
+            overflow-y: auto;
+            margin-bottom: 20px;
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+            line-height: 1.8;
+        }
+
+        .segment {
+            margin-bottom: 15px;
+            padding: 10px;
+            background: white;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+        }
+
+        .timestamp {
+            color: #667eea;
+            font-weight: bold;
+            font-size: 12px;
+            margin-bottom: 5px;
+        }
+
+        .speaker {
+            color: #764ba2;
+            font-weight: bold;
+            font-size: 13px;
+            margin-bottom: 5px;
+        }
+
+        .text {
+            color: #333;
+        }
+
+        .actions {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .file-info {
+            background: #f8f9ff;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 20px 0;
+            display: none;
+        }
+
+        .file-info strong {
+            color: #667eea;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎙️ Audio Transcriber</h1>
+        <p class="subtitle">Upload your NCLEX episode audio to generate a transcript with timestamps</p>
+
+        <div class="upload-area" id="uploadArea">
+            <h3>📁 Drop audio file here or click to browse</h3>
+            <p style="color: #999; margin-top: 10px;">Supports MP3, WAV, M4A</p>
+            <input type="file" id="fileInput" accept="audio/*">
+        </div>
+
+        <div class="file-info" id="fileInfo"></div>
+
+        <div class="status" id="status"></div>
+
+        <div class="progress" id="progress">
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+            <p style="text-align: center; margin-top: 10px; color: #666;" id="progressText">Processing...</p>
+        </div>
+
+        <div class="actions" id="actions" style="display: none;">
+            <button class="btn" id="startBtn">▶️ Start Transcription</button>
+            <button class="btn" id="stopBtn" style="display: none;">⏹️ Stop</button>
+        </div>
+
+        <div class="transcript-output" id="output">
+            <h2>📝 Transcript</h2>
+            <div class="transcript-box" id="transcriptBox"></div>
+            <div class="actions">
+                <button class="btn" id="downloadTxt">💾 Download TXT</button>
+                <button class="btn" id="downloadJson">💾 Download JSON</button>
+                <button class="btn" id="copyBtn">📋 Copy to Clipboard</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let audioFile = null;
+        let audioElement = null;
+        let recognition = null;
+        let transcript = [];
+        let currentSegment = null;
+        let startTime = 0;
+
+        const uploadArea = document.getElementById('uploadArea');
+        const fileInput = document.getElementById('fileInput');
+        const fileInfo = document.getElementById('fileInfo');
+        const status = document.getElementById('status');
+        const progress = document.getElementById('progress');
+        const progressFill = document.getElementById('progressFill');
+        const progressText = document.getElementById('progressText');
+        const actions = document.getElementById('actions');
+        const output = document.getElementById('output');
+        const transcriptBox = document.getElementById('transcriptBox');
+
+        // Check browser support
+        if (!('webkitSpeechRecognition' in window) && !('SpeechRecognition' in window)) {
+            showStatus('error', '❌ Your browser doesn\'t support speech recognition. Please use Chrome or Edge.');
+        }
+
+        // File upload handlers
+        uploadArea.addEventListener('click', () => fileInput.click());
+        uploadArea.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            uploadArea.classList.add('dragover');
+        });
+        uploadArea.addEventListener('dragleave', () => {
+            uploadArea.classList.remove('dragover');
+        });
+        uploadArea.addEventListener('drop', (e) => {
+            e.preventDefault();
+            uploadArea.classList.remove('dragover');
+            handleFile(e.dataTransfer.files[0]);
+        });
+        fileInput.addEventListener('change', (e) => {
+            handleFile(e.target.files[0]);
+        });
+
+        function handleFile(file) {
+            if (!file || !file.type.startsWith('audio/')) {
+                showStatus('error', '❌ Please select a valid audio file');
+                return;
+            }
+
+            audioFile = file;
+            const sizeMB = (file.size / (1024 * 1024)).toFixed(1);
+            
+            fileInfo.innerHTML = `
+                <strong>File:</strong> ${file.name}<br>
+                <strong>Size:</strong> ${sizeMB} MB<br>
+                <strong>Type:</strong> ${file.type}
+            `;
+            fileInfo.style.display = 'block';
+            actions.style.display = 'flex';
+            
+            showStatus('success', '✅ File loaded! Click "Start Transcription" to begin.');
+        }
+
+        document.getElementById('startBtn').addEventListener('click', startTranscription);
+        document.getElementById('stopBtn').addEventListener('click', stopTranscription);
+        document.getElementById('downloadTxt').addEventListener('click', downloadTxt);
+        document.getElementById('downloadJson').addEventListener('click', downloadJson);
+        document.getElementById('copyBtn').addEventListener('click', copyToClipboard);
+
+        function startTranscription() {
+            if (!audioFile) return;
+
+            // Create audio element
+            audioElement = new Audio(URL.createObjectURL(audioFile));
+            
+            // Initialize speech recognition
+            const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+            recognition = new SpeechRecognition();
+            recognition.continuous = true;
+            recognition.interimResults = true;
+            recognition.lang = 'en-US';
+
+            transcript = [];
+            transcriptBox.innerHTML = '';
+            startTime = Date.now();
+
+            recognition.onstart = () => {
+                showStatus('info', '🎙️ Transcription started... Playing audio...');
+                progress.style.display = 'block';
+                document.getElementById('startBtn').style.display = 'none';
+                document.getElementById('stopBtn').style.display = 'inline-block';
+                audioElement.play();
+            };
+
+            recognition.onresult = (event) => {
+                const result = event.results[event.results.length - 1];
+                const text = result[0].transcript;
+                const isFinal = result.isFinal;
+                const currentTime = audioElement.currentTime;
+
+                if (isFinal) {
+                    const segment = {
+                        start: currentTime - 5, // Approximate
+                        end: currentTime,
+                        text: text.trim()
+                    };
+                    transcript.push(segment);
+                    addSegmentToDisplay(segment);
+                }
+            };
+
+            recognition.onerror = (event) => {
+                console.error('Recognition error:', event.error);
+                showStatus('error', `❌ Error: ${event.error}`);
+            };
+
+            recognition.onend = () => {
+                if (audioElement && !audioElement.paused) {
+                    recognition.start(); // Restart if audio still playing
+                }
+            };
+
+            audioElement.addEventListener('timeupdate', () => {
+                const percent = (audioElement.currentTime / audioElement.duration) * 100;
+                progressFill.style.width = percent + '%';
+                progressText.textContent = `${formatTime(audioElement.currentTime)} / ${formatTime(audioElement.duration)}`;
+            });
+
+            audioElement.addEventListener('ended', () => {
+                stopTranscription();
+            });
+
+            recognition.start();
+        }
+
+        function stopTranscription() {
+            if (recognition) {
+                recognition.stop();
+            }
+            if (audioElement) {
+                audioElement.pause();
+            }
+            
+            showStatus('success', `✅ Transcription complete! ${transcript.length} segments captured.`);
+            document.getElementById('startBtn').style.display = 'inline-block';
+            document.getElementById('stopBtn').style.display = 'none';
+            output.style.display = 'block';
+        }
+
+        function addSegmentToDisplay(segment) {
+            const div = document.createElement('div');
+            div.className = 'segment';
+            div.innerHTML = `
+                <div class="timestamp">[${formatTime(segment.start)} - ${formatTime(segment.end)}]</div>
+                <div class="text">${segment.text}</div>
+            `;
+            transcriptBox.appendChild(div);
+            transcriptBox.scrollTop = transcriptBox.scrollHeight;
+        }
+
+        function formatTime(seconds) {
+            const mins = Math.floor(seconds / 60);
+            const secs = Math.floor(seconds % 60);
+            return `${mins}:${secs.toString().padStart(2, '0')}`;
+        }
+
+        function downloadTxt() {
+            const text = transcript.map(s => 
+                `[${formatTime(s.start)}] ${s.text}`
+            ).join('\n\n');
+            
+            const blob = new Blob([text], { type: 'text/plain' });
+            downloadBlob(blob, 'transcript.txt');
+        }
+
+        function downloadJson() {
+            const json = JSON.stringify(transcript, null, 2);
+            const blob = new Blob([json], { type: 'application/json' });
+            downloadBlob(blob, 'transcript.json');
+        }
+
+        function downloadBlob(blob, filename) {
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = filename;
+            a.click();
+            URL.revokeObjectURL(url);
+        }
+
+        function copyToClipboard() {
+            const text = transcript.map(s => s.text).join(' ');
+            navigator.clipboard.writeText(text).then(() => {
+                showStatus('success', '✅ Copied to clipboard!');
+                setTimeout(() => status.style.display = 'none', 2000);
+            });
+        }
+
+        function showStatus(type, message) {
+            status.className = `status ${type}`;
+            status.textContent = message;
+            status.style.display = 'block';
+        }
+    </script>
+</body>
+</html>

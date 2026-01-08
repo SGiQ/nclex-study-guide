@@ -3752,8 +3752,8 @@
     {
         "id": 9,
         "episodeId": 10,
-        "title": "Reduction of Risk & Cardiovascular",
-        "description": "Lab Values, Diagnostics, CV Monitoring, MI, CHF, Stroke",
+        "title": "Respiratory, Neurological & Endocrine",
+        "description": "COPD, Asthma, Pneumonia, Delirium, Stroke, Seizures, Diabetes, DKA",
         "questionCount": 45,
         "color": "from-red-600 to-red-900",
         "questions": [

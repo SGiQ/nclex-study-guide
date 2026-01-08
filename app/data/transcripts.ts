@@ -1,5 +1,5 @@
-// Sample transcript data structure
-// This will be replaced with actual transcripts once generated
+// Transcript data for episodes
+// Generated from AssemblyAI transcription with speaker detection
 
 export interface TranscriptSegment {
     start: number;      // Start time in seconds
@@ -8,30 +8,21 @@ export interface TranscriptSegment {
     speaker?: string;   // Optional speaker label
 }
 
-// Sample transcript for Episode 10 (placeholder)
-export const episode10Transcript: TranscriptSegment[] = [
-    {
-        start: 0,
-        end: 15,
-        text: "Welcome to Episode 10: Reduction of Risk Potential. In this episode, we'll cover diagnostic tests, laboratory values, and cardiovascular pathophysiology.",
-        speaker: "Speaker 1"
-    },
-    {
-        start: 15,
-        end: 30,
-        text: "Let's start with understanding common diagnostic procedures and how to interpret lab values in clinical settings.",
-        speaker: "Speaker 2"
-    },
-    // More segments will be added from actual transcription
-];
+// Episode 10: Respiratory, Neurological & Endocrine
+import episode10Data from './episode-10-transcript.json';
 
 // Transcript lookup by episode ID
 export const transcripts: Record<number, TranscriptSegment[]> = {
-    10: episode10Transcript,
+    10: episode10Data as TranscriptSegment[],
     // Add more episodes as transcripts become available
 };
 
 // Helper to get transcript for an episode
 export function getTranscript(episodeId: number): TranscriptSegment[] {
     return transcripts[episodeId] || [];
+}
+
+// Helper to check if transcript exists
+export function hasTranscript(episodeId: number): boolean {
+    return episodeId in transcripts && transcripts[episodeId].length > 0;
 }

@@ -4,6 +4,8 @@ import Link from 'next/link';
 import { usePlayer } from '@/app/context/PlayerContext';
 import { useLibrary } from '@/app/context/LibraryContext';
 import { useRef, useEffect, useState } from 'react';
+import TranscriptViewer from './TranscriptViewer';
+import { getTranscript } from '@/app/data/transcripts';
 
 export default function Player() {
     const { currentEpisode, isPlaying, setIsPlaying, togglePlay, closePlayer } = usePlayer();
@@ -309,6 +311,19 @@ export default function Player() {
                             </button>
                         </div>
                     </div>
+
+                    {/* Transcript Viewer */}
+                    {currentEpisode && (
+                        <TranscriptViewer
+                            segments={getTranscript(currentEpisode.id)}
+                            currentTime={audioRef.current?.currentTime || 0}
+                            onSeek={(time) => {
+                                if (audioRef.current) {
+                                    audioRef.current.currentTime = time;
+                                }
+                            }}
+                        />
+                    )}
 
                     {/* Bottom Icons (Connect/Share) */}
                     <div className="flex-none flex items-center justify-between px-4 pb-2">

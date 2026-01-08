@@ -1,0 +1,431 @@
+{
+    "id": 103,
+    "episodeId": 3,
+    "title": "Safety & Infection Control - Part B",
+    "description": "Advanced Safety: Triage, Hazmat, Isolation Precautions, Ergonomics",
+    "questionCount": 35,
+    "color": "from-emerald-600 to-teal-800",
+    "questions": [
+        {
+            "id": 1,
+            "text": "What are the two patient identifiers that must ALWAYS be used before any intervention?",
+            "options": [
+                "Name and room number",
+                "Name and date of birth",
+                "Date of birth and medical record number",
+                "Room number and diagnosis"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Name and date of birth are the two distinct identifiers required before giving meds, drawing blood, or any intervention. Room numbers can change."
+        },
+        {
+            "id": 2,
+            "text": "Why is patient identification considered the 'bedrock' of patient safety?",
+            "options": [
+                "It's the easiest task to perform",
+                "If you start with the wrong patient, everything after that is wrong",
+                "It's required by insurance",
+                "It helps with billing"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Starting with the wrong patient makes every subsequent action wrong - wrong meds, wrong procedures, potentially catastrophic outcomes."
+        },
+        {
+            "id": 3,
+            "text": "What is the most foundational fall prevention intervention?",
+            "options": [
+                "Bed alarms",
+                "Ensuring the patient knows how to use their call light and it's within reach",
+                "Restraints",
+                "Hourly rounding"
+            ],
+            "correctAnswer": 1,
+            "explanation": "The call light must be within reach and the patient must know how to use it. If they can't reach it, provide an alternative like a handheld bell."
+        },
+        {
+            "id": 4,
+            "text": "Where should a confused patient who might wander be assigned?",
+            "options": [
+                "At the end of the hallway for privacy",
+                "Near the nursing station to cut down response time",
+                "In a private room far from noise",
+                "Next to the exit"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Confused patients who might wander need to be near the nursing station for quick response and constant monitoring."
+        },
+        {
+            "id": 5,
+            "text": "Approximately how many deaths per year in the US are attributed to medication errors?",
+            "options": [
+                "700",
+                "1,500",
+                "7,000",
+                "70,000"
+            ],
+            "correctAnswer": 2,
+            "explanation": "Up to 7,000 deaths per year in the US are attributed to medication errors, making rigid protocols essential."
+        },
+        {
+            "id": 6,
+            "text": "What is the 'closed loop' communication technique for medication orders?",
+            "options": [
+                "Writing orders in a circle",
+                "Reading back verbal or handwritten orders to the physician for confirmation",
+                "Using only electronic orders",
+                "Having two nurses verify"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Closed loop communication means reading back orders to the prescriber for verification, closing off chances for misinterpretation."
+        },
+        {
+            "id": 7,
+            "text": "Why must latex allergy assessment include questions about specific fruits?",
+            "options": [
+                "Fruits contain latex",
+                "Latex proteins are similar to proteins in bananas, avocados, and papayas (cross-reactivity)",
+                "Fruits cause all allergies",
+                "It's hospital policy"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Latex proteins cross-react with proteins in bananas, avocados, and papayas. Latex allergy patients often react to these fruits."
+        },
+        {
+            "id": 8,
+            "text": "What are the two critical 'do nots' during a seizure?",
+            "options": [
+                "Do not call for help, do not document",
+                "Do not restrain the patient, do not put anything in their mouth",
+                "Do not stay with patient, do not time the seizure",
+                "Do not lower the bed, do not pad rails"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Never restrain (can cause fractures) and never put anything in the mouth (can block airway or cause injury). Focus on protection, not restriction."
+        },
+        {
+            "id": 9,
+            "text": "What does RACE stand for in fire response?",
+            "options": [
+                "Run, Alert, Call, Exit",
+                "Rescue, Alarm, Confine, Extinguish/Evacuate",
+                "Remove, Assess, Contain, Escape",
+                "Respond, Activate, Clear, Exit"
+            ],
+            "correctAnswer": 1,
+            "explanation": "RACE: Rescue patients from immediate danger, pull the Alarm, Confine the fire by closing doors, Extinguish or Evacuate."
+        },
+        {
+            "id": 10,
+            "text": "What does PASS stand for when using a fire extinguisher?",
+            "options": [
+                "Point, Activate, Spray, Stop",
+                "Pull, Aim, Squeeze, Sweep",
+                "Prepare, Assess, Spray, Secure",
+                "Position, Activate, Spray, Stop"
+            ],
+            "correctAnswer": 1,
+            "explanation": "PASS: Pull the pin, Aim at the base of the fire, Squeeze the handle, Sweep side to side."
+        },
+        {
+            "id": 11,
+            "text": "What is brachytherapy?",
+            "options": [
+                "External radiation therapy",
+                "Radioactive source placed inside the patient's body near the tumor",
+                "Chemotherapy infusion",
+                "Surgical removal of tumors"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Brachytherapy places a radioactive source inside the patient's body, making the patient themselves radioactive and requiring strict safety protocols."
+        },
+        {
+            "id": 12,
+            "text": "What are the three principles for reducing radiation exposure in brachytherapy?",
+            "options": [
+                "Speed, proximity, barriers",
+                "Time, distance, shielding",
+                "Duration, closeness, protection",
+                "Hours, feet, walls"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Time (limit to 30 min/day), Distance (stay 6 feet away when possible), and Shielding (use protective barriers) reduce radiation exposure."
+        },
+        {
+            "id": 13,
+            "text": "Why are pregnant staff or those trying to conceive restricted from brachytherapy patients?",
+            "options": [
+                "Hospital policy only",
+                "The radiation risk to the developing fetus is too high",
+                "It's too physically demanding",
+                "Insurance reasons"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Radiation exposure poses severe risks to developing fetuses, making this restriction critical for fetal safety."
+        },
+        {
+            "id": 14,
+            "text": "What is the number one rule for manual lifting to prevent back injury?",
+            "options": [
+                "Lift with your back",
+                "Never bend and twist at the same time",
+                "Always lift alone",
+                "Lift as fast as possible"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Never bend and twist simultaneously - this is the most common cause of back injuries. Use your legs, keep your back straight, and get help."
+        },
+        {
+            "id": 15,
+            "text": "What are the two phases of disaster recovery?",
+            "options": [
+                "Planning and execution",
+                "Restoration (getting basic services back) and Reconstruction (long-term rebuilding)",
+                "Assessment and treatment",
+                "Triage and transport"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Restoration focuses on temporary solutions and basic services. Reconstruction is the long-term physical and economic rebuilding."
+        },
+        {
+            "id": 16,
+            "text": "How long does a mass casualty triage assessment take?",
+            "options": [
+                "5-10 minutes",
+                "30-60 seconds",
+                "2-3 minutes",
+                "15-20 minutes"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Triage must be rapid - 30 to 60 seconds per patient - to quickly categorize and prioritize large numbers of casualties."
+        },
+        {
+            "id": 17,
+            "text": "What does RED tag mean in mass casualty triage?",
+            "options": [
+                "Minor injuries, can wait",
+                "Immediate - life-threatening injuries with good survival chance if treated now",
+                "Dead or dying, no chance of survival",
+                "Serious but stable"
+            ],
+            "correctAnswer": 1,
+            "explanation": "RED (Immediate): Life-threatening injuries like shock or major burns, but good survival chance with immediate treatment."
+        },
+        {
+            "id": 18,
+            "text": "What does YELLOW tag mean in mass casualty triage?",
+            "options": [
+                "Immediate treatment needed",
+                "Delayed - seriously injured but stable, can wait a few hours",
+                "Minor injuries",
+                "Expectant, not expected to survive"
+            ],
+            "correctAnswer": 1,
+            "explanation": "YELLOW (Delayed): Serious injuries like multiple fractures, but stable enough to wait a few hours without life-threatening consequences."
+        },
+        {
+            "id": 19,
+            "text": "What does BLACK tag mean in mass casualty triage?",
+            "options": [
+                "Highest priority",
+                "Minor injuries",
+                "Expectant - catastrophic injuries, not expected to survive given limited resources",
+                "Needs immediate surgery"
+            ],
+            "correctAnswer": 2,
+            "explanation": "BLACK (Expectant): Catastrophic injuries like massive head trauma where survival is not expected given limited resources. A terrible but necessary triage decision."
+        },
+        {
+            "id": 20,
+            "text": "What does BE NICE stand for in hazardous materials?",
+            "options": [
+                "Biological, Environmental, Nuclear, Incendiary, Chemical, Explosive",
+                "Biological, Nuclear, Incendiary, Chemical, Explosive",
+                "Bacterial, Nuclear, Inflammatory, Chemical, Explosive",
+                "Biological, Nerve, Incendiary, Caustic, Explosive"
+            ],
+            "correctAnswer": 1,
+            "explanation": "BE NICE: Biological, Nuclear, Incendiary, Chemical, Explosive - the major categories of hazardous materials in disasters."
+        },
+        {
+            "id": 21,
+            "text": "What is the key difference in response between chemical and biological threats?",
+            "options": [
+                "Chemical is less dangerous",
+                "Chemical effects are immediate (requiring immediate decon), biological effects are delayed (requiring isolation and prophylaxis)",
+                "Biological requires no treatment",
+                "Chemical only affects lungs"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Chemical agents (nerve gas) have immediate effects requiring immediate decontamination. Biological agents (anthrax) have delayed symptoms requiring isolation and preventive treatment."
+        },
+        {
+            "id": 22,
+            "text": "What are Safety Data Sheets (SDS) and why are they critical?",
+            "options": [
+                "Employee schedules",
+                "Documents that detail PPE needed, handling procedures, and emergency response for hazardous materials",
+                "Patient safety checklists",
+                "Medication information",
+                ""
+            ],
+            "correctAnswer": 1,
+            "explanation": "SDS provide essential information about hazardous materials: what PPE to wear, how to handle safely, and emergency procedures."
+        },
+        {
+            "id": 23,
+            "text": "What is the most common hospital-acquired infection (HAI)?",
+            "options": [
+                "Surgical site infection",
+                "Catheter-associated UTI (CAUTI)",
+                "Pneumonia",
+                "Bloodstream infection"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Catheter-associated UTIs (CAUTI) are by far the most common nosocomial infection, followed by surgical site infections and pneumonia."
+        },
+        {
+            "id": 24,
+            "text": "What is the cornerstone of standard precautions?",
+            "options": [
+                "Wearing gowns always",
+                "Meticulous hand hygiene",
+                "N95 masks",
+                "Isolation rooms"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Hand hygiene is the cornerstone of standard precautions - the universal baseline for every single patient."
+        },
+        {
+            "id": 25,
+            "text": "When should PPE be used under standard precautions?",
+            "options": [
+                "With every patient always",
+                "Only when you anticipate splash or spray of body fluids",
+                "Only with diagnosed infections",
+                "Never under standard precautions"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Under standard precautions, PPE (gloves, gowns, face shields) is based on the task and anticipated exposure, not the patient's diagnosis."
+        },
+        {
+            "id": 26,
+            "text": "What type of mask is required for airborne precautions?",
+            "options": [
+                "Surgical mask",
+                "Fitted N95 respirator",
+                "Cloth mask",
+                "No mask needed"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Airborne precautions (TB, chickenpox) require a fitted N95 respirator to filter tiny particles that hang in the air for long periods."
+        },
+        {
+            "id": 27,
+            "text": "What type of room is required for airborne precautions?",
+            "options": [
+                "Any private room",
+                "Negative pressure room",
+                "Positive pressure room",
+                "Semi-private room"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Airborne precautions require a negative pressure room that pulls air in and filters it before releasing, preventing airborne particles from escaping."
+        },
+        {
+            "id": 28,
+            "text": "What is the key difference between airborne and droplet precautions?",
+            "options": [
+                "No difference",
+                "Particle size - airborne has tiny particles that hang in air, droplet has larger particles that only travel a few feet",
+                "Airborne is more contagious",
+                "Droplet requires N95"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Airborne: tiny particles that hang in air (need N95, negative pressure room). Droplet: larger particles that travel only a few feet (need surgical mask only)."
+        },
+        {
+            "id": 29,
+            "text": "What PPE is required for contact precautions?",
+            "options": [
+                "N95 mask only",
+                "Gown and gloves every time you enter the room",
+                "Surgical mask only",
+                "Face shield only"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Contact precautions (MRSA, C. diff) require gown and gloves every single time you enter the room to prevent transmission via touch."
+        },
+        {
+            "id": 30,
+            "text": "What is the immediate first action after a needle stick injury?",
+            "options": [
+                "Report to supervisor",
+                "Wash the site with soap and water, let it bleed",
+                "Apply pressure to stop bleeding",
+                "Get tested immediately"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Immediately wash with soap and water and let it bleed to flush out potential pathogens. Then report immediately for assessment and post-exposure prophylaxis."
+        },
+        {
+            "id": 31,
+            "text": "What diseases is the source patient assessed for after a needle stick?",
+            "options": [
+                "Only HIV",
+                "HIV, Hepatitis B, and Hepatitis C",
+                "Only Hepatitis",
+                "All bloodborne pathogens"
+            ],
+            "correctAnswer": 1,
+            "explanation": "The source patient is assessed for HIV, Hepatitis B, and Hepatitis C - the primary bloodborne pathogens of concern."
+        },
+        {
+            "id": 32,
+            "text": "What is post-exposure prophylaxis (PEP) and who pays for it?",
+            "options": [
+                "Treatment after exposure, patient pays",
+                "Preventive treatment after exposure, provided free of charge by the facility",
+                "Pre-exposure vaccine",
+                "Not available for needle sticks"
+            ],
+            "correctAnswer": 1,
+            "explanation": "PEP is preventive treatment given after exposure to bloodborne pathogens. The facility must provide it free of charge to exposed staff."
+        },
+        {
+            "id": 33,
+            "text": "Why is 'layered defense' important in safety?",
+            "options": [
+                "It's not important",
+                "Big picture preparation (disaster plans) must merge with moment-to-moment vigilance (hand washing, ID checks)",
+                "Only one layer is needed",
+                "It only applies to infections"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Safety requires both macro-level preparation (disaster plans, drills) and micro-level vigilance (hand hygiene, patient ID) working together."
+        },
+        {
+            "id": 34,
+            "text": "What makes a patient an active partner in their own safety?",
+            "options": [
+                "Just following orders",
+                "Knowing how to use call light, recognizing infection signs, understanding medication side effects",
+                "Staying quiet",
+                "Not asking questions"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Empowering patients with knowledge about call lights, infection signs, and medication effects makes them active safety partners."
+        },
+        {
+            "id": 35,
+            "text": "What is the three-fold purpose of an infection control plan?",
+            "options": [
+                "Document, report, treat",
+                "Decrease infection rates, evaluate effectiveness of measures, spot and manage outbreaks quickly",
+                "Isolate, medicate, discharge",
+                "Prevent, cure, monitor"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Infection control plans must: 1) Decrease infection rates, 2) Evaluate how well measures work (e.g., hand hygiene compliance), 3) Quickly identify and manage outbreaks."
+        }
+    ]
+}

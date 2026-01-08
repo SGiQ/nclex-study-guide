@@ -83,10 +83,10 @@ export default function AudioParams() {
                     const isCurrent = currentEpisode?.id === episode.id;
 
                     return (
-                        <div
+                        <Link
                             key={episode.id}
-                            onClick={() => playEpisode(episode)}
-                            className={`animate-enter p-4 flex items-center gap-4 cursor-pointer hover:bg-surface/5 active:scale-[0.99] transition-all ${isCurrent ? 'bg-indigo-500/10 border-l-4 border-indigo-500' : 'border-l-4 border-transparent'}`}
+                            href={`/audio/${episode.id}`}
+                            className={`block animate-enter p-4 flex items-center gap-4 cursor-pointer hover:bg-surface/5 active:scale-[0.99] transition-all ${isCurrent ? 'bg-indigo-500/10 border-l-4 border-indigo-500' : 'border-l-4 border-transparent'}`}
                         >
                             {/* Number Box */}
                             <div className={`h-12 w-12 rounded-lg shrink-0 flex items-center justify-center shadow-sm transition-colors ${isCurrent ? 'bg-indigo-600 text-white' : 'bg-blue-600 text-white'}`}>
@@ -147,10 +147,17 @@ export default function AudioParams() {
                             </div>
 
                             {/* Play Action */}
-                            <button className={`h-8 w-8 flex items-center justify-center rounded-full border transition-colors ${isCurrent ? 'border-indigo-500/30 text-indigo-400' : 'border-foreground/10 text-foreground/20'}`}>
+                            <button
+                                onClick={(e) => {
+                                    e.preventDefault();
+                                    e.stopPropagation();
+                                    playEpisode(episode);
+                                }}
+                                className={`h-8 w-8 flex items-center justify-center rounded-full border transition-colors hover:bg-surface/20 ${isCurrent ? 'border-indigo-500/30 text-indigo-400' : 'border-foreground/10 text-foreground/20'}`}
+                            >
                                 {isCurrent && isPlaying ? '⏸' : '▶'}
                             </button>
-                        </div>
+                        </Link>
                     );
                 })}
 

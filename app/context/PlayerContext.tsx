@@ -14,10 +14,12 @@ interface Episode {
 interface PlayerContextType {
     currentEpisode: Episode | null;
     isPlaying: boolean;
+    currentTime: number;
     playEpisode: (episode: Episode) => void;
     loadEpisode: (episode: Episode) => void;
     togglePlay: () => void;
     setIsPlaying: (playing: boolean) => void;
+    setCurrentTime: (time: number) => void;
     closePlayer: () => void;
 }
 
@@ -26,6 +28,7 @@ const PlayerContext = createContext<PlayerContextType | undefined>(undefined);
 export function PlayerProvider({ children }: { children: ReactNode }) {
     const [currentEpisode, setCurrentEpisode] = useState<Episode | null>(null);
     const [isPlaying, setIsPlaying] = useState(false);
+    const [currentTime, setCurrentTime] = useState(0);
 
     const playEpisode = (episode: Episode) => {
         if (currentEpisode?.id === episode.id) {
@@ -33,12 +36,14 @@ export function PlayerProvider({ children }: { children: ReactNode }) {
         } else {
             setCurrentEpisode(episode);
             setIsPlaying(true);
+            setCurrentTime(0);
         }
     };
 
     const loadEpisode = (episode: Episode) => {
         setCurrentEpisode(episode);
         setIsPlaying(false);
+        setCurrentTime(0);
     };
 
     const togglePlay = () => {
@@ -48,10 +53,11 @@ export function PlayerProvider({ children }: { children: ReactNode }) {
     const closePlayer = () => {
         setCurrentEpisode(null);
         setIsPlaying(false);
+        setCurrentTime(0);
     };
 
     return (
-        <PlayerContext.Provider value={{ currentEpisode, isPlaying, playEpisode, loadEpisode, togglePlay, setIsPlaying, closePlayer }}>
+        <PlayerContext.Provider value={{ currentEpisode, isPlaying, currentTime, setCurrentTime, playEpisode, loadEpisode, togglePlay, setIsPlaying, closePlayer }}>
             {children}
         </PlayerContext.Provider>
     );

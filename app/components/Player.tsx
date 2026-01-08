@@ -8,7 +8,7 @@ import TranscriptViewer from './TranscriptViewer';
 import { getTranscript } from '@/app/data/transcripts';
 
 export default function Player() {
-    const { currentEpisode, isPlaying, setIsPlaying, togglePlay, closePlayer } = usePlayer();
+    const { currentEpisode, isPlaying, setIsPlaying, togglePlay, closePlayer, setCurrentTime } = usePlayer();
     const { saveItem, removeItem, isSaved } = useLibrary();
 
     const audioRef = useRef<HTMLAudioElement>(null);
@@ -50,6 +50,7 @@ export default function Player() {
     const handleTimeUpdate = () => {
         if (audioRef.current) {
             const current = audioRef.current.currentTime;
+            setCurrentTime(current);
             const total = audioRef.current.duration || duration || 1;
 
             if (audioRef.current.duration && Math.abs(audioRef.current.duration - duration) > 1) {
@@ -312,18 +313,7 @@ export default function Player() {
                         </div>
                     </div>
 
-                    {/* Transcript Viewer */}
-                    {currentEpisode && (
-                        <TranscriptViewer
-                            segments={getTranscript(currentEpisode.id)}
-                            currentTime={audioRef.current?.currentTime || 0}
-                            onSeek={(time) => {
-                                if (audioRef.current) {
-                                    audioRef.current.currentTime = time;
-                                }
-                            }}
-                        />
-                    )}
+
 
                     {/* Bottom Icons (Connect/Share) */}
                     <div className="flex-none flex items-center justify-between px-4 pb-2">

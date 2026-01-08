@@ -3,8 +3,9 @@ import { pool } from '@/lib/db';
 
 export async function GET(
     request: Request,
-    { params }: { params: { id: string } }
+    { params }: { params: Promise<{ id: string }> }
 ) {
+    const { id } = await params;
     try {
         const result = await pool.query(
             'SELECT file_data, file_type, file_name FROM infographics WHERE id = $1',

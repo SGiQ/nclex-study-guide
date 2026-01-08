@@ -1,0 +1,310 @@
+{
+    "id": 121,
+    "episodeId": 14,
+    "title": "Maternal & OB Emergencies - Part B",
+    "description": "Bleeding Disorders (Abruptio, Previa), PPH, Preeclampsia",
+    "questionCount": 25,
+    "color": "from-pink-600 to-pink-900",
+    "questions": [
+        {
+            "id": 1,
+            "text": "The primary symptom distinguishing Placenta PREVIA from Abruptio Placentae is:",
+            "options": [
+                "Severe Pain",
+                "Painless bright red bleeding",
+                "Rigid uterus",
+                "Fever"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Previa is Painless. Abruption is Painful."
+        },
+        {
+            "id": 2,
+            "text": "What is the absolute contraindication in a patient with Placenta Previa?",
+            "options": [
+                "Ultrasound",
+                "Vaginal Examination (Digital Exam)",
+                "IV fluids",
+                "Bed rest"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Poking the placenta can cause massive, uncontrollable hemorrhage."
+        },
+        {
+            "id": 3,
+            "text": "Abruptio Placentae (premature separation) presents with:",
+            "options": [
+                "Soft abdomen",
+                "Painful vaginal bleeding and a rigid, board-like uterus",
+                "Painless bleeding",
+                "Low blood pressure only"
+            ],
+            "correctAnswer": 1,
+            "explanation": "The uterus contracts and bleeds internally. High fetal mortality."
+        },
+        {
+            "id": 4,
+            "text": "Severe Preeclampsia is characterized by BP > 160/110 and:",
+            "options": [
+                "No other symptoms",
+                "Proteinuria, Headache, Visual disturbances, Epigastric pain",
+                "Low platelets only",
+                "Fever"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Epigastric pain is a sign of liver involvement (HELLP)."
+        },
+        {
+            "id": 5,
+            "text": "Eclampsia is defined as Preeclampsia + :",
+            "options": [
+                "Higher BP",
+                "Seizures",
+                "Edema",
+                "Vomiting"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Seizure activity marks the transition to Eclampsia."
+        },
+        {
+            "id": 6,
+            "text": "The drug of choice to prevent/treat seizures in Eclampsia is:",
+            "options": [
+                "Valium",
+                "Magnesium Sulfate",
+                "Labetalol",
+                "Tylenol"
+            ],
+            "correctAnswer": 1,
+            "explanation": "It is a CNS depressant used for neuroprotection."
+        },
+        {
+            "id": 7,
+            "text": "When administering Magnesium Sulfate, what should you monitor for toxicity?",
+            "options": [
+                "Hyperactive reflexes",
+                "Absent Deep Tendon Reflexes (DTRs), Respiratory Depression, Oliguria",
+                "Tachycardia",
+                "Hypertension"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Magnesium slows everything down. Too much = Respiratory Arrest."
+        },
+        {
+            "id": 8,
+            "text": "The antidote for Magnesium Sulfate toxicity is:",
+            "options": [
+                "Narcan",
+                "Calcium Gluconate",
+                "Vitamin K",
+                "Insulin"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Keep it at the bedside."
+        },
+        {
+            "id": 9,
+            "text": "HELLP Syndrome stands for:",
+            "options": [
+                "Help Everyone Live Long Pregnancy",
+                "Hemolysis, Elevated Liver enzymes, Low Platelets",
+                "High Electrolytes, Low Liver, Pain",
+                "Hemoglobin, Edema, Low Pressure"
+            ],
+            "correctAnswer": 1,
+            "explanation": "A severe form of Preeclampsia involving organ failure."
+        },
+        {
+            "id": 10,
+            "text": "Postpartum Hemorrhage (PPH) is defined as blood loss greater than:",
+            "options": [
+                "100 ml",
+                "500 ml (Vaginal) or 1000 ml (C-Section)",
+                "200 ml",
+                "300 ml"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Significant loss leading to hypovolemia."
+        },
+        {
+            "id": 11,
+            "text": "The #1 cause of Postpartum Hemorrhage is:",
+            "options": [
+                "Lacerations",
+                "Uterine Atony (Boggy Uterus)",
+                "Infection",
+                "Previa"
+            ],
+            "correctAnswer": 1,
+            "explanation": "The muscle fails to clamp down on the blood vessels."
+        },
+        {
+            "id": 12,
+            "text": "The first intervention for a Boggy Uterus (Uterine Atony) is:",
+            "options": [
+                "Surgery",
+                "Fundal Massage",
+                "Antibiotics",
+                "Blood transfusion"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Massage the fundus until firm."
+        },
+        {
+            "id": 13,
+            "text": "Which medication is used to contract the uterus in PPH?",
+            "options": [
+                "Magnesium",
+                "Oxytocin (Pitocin) or Methylergonovine (Methergine)",
+                "Terbutaline",
+                "Aspirin"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Stimulates contraction to stop bleeding."
+        },
+        {
+            "id": 14,
+            "text": "In a patient with Placenta Previa, bleeding is typically:",
+            "options": [
+                "Dark red",
+                "Painful",
+                "Painless and Bright Red",
+                "Review"
+            ],
+            "correctAnswer": 2,
+            "explanation": "Fresh blood from the cervix/placenta interface."
+        },
+        {
+            "id": 15,
+            "text": "A rigid, board-like abdomen in a pregnant patient indicates:",
+            "options": [
+                "Labor",
+                "Concealed Hemorrhage / Abruptio Placentae",
+                "Constipation",
+                "Full bladder"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Internal bleeding fills the uterus, making it tight."
+        },
+        {
+            "id": 16,
+            "text": "Epigastric pain in a preeclamptic patient is a warning sign of:",
+            "options": [
+                "Indigestion",
+                "Liver edema/capsule stretching (HELLP) - Seizure imminent",
+                "Hunger",
+                "Baby kicking"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Don't dismiss it as heartburn."
+        },
+        {
+            "id": 17,
+            "text": "What complication of Abruptio Placentae involves clotting depletion?",
+            "options": [
+                "DVT",
+                "DIC (Disseminated Intravascular Coagulation)",
+                "Stroke",
+                "Anemia"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Massive tissue factor release triggers DIC."
+        },
+        {
+            "id": 18,
+            "text": "The therapeutic level for Magnesium Sulfate is:",
+            "options": [
+                "1-2 mg/dL",
+                "4-8 mg/dL (Higher than normal lab range)",
+                "10-12 mg/dL",
+                "0.5 mg/dL"
+            ],
+            "correctAnswer": 1,
+            "explanation": "You keep them slightly hypermagnesemic to prevent seizures."
+        },
+        {
+            "id": 19,
+            "text": "Methergine (for PPH) is contraindicated in patients with:",
+            "options": [
+                "Diabetes",
+                "Hypertension",
+                "Asthma",
+                "Infection"
+            ],
+            "correctAnswer": 1,
+            "explanation": "It causes vasoconstriction and can stroke out a hypertensive patient."
+        },
+        {
+            "id": 20,
+            "text": "The priority for a prolapsed umbilical cord is:",
+            "options": [
+                "Push it back in",
+                "Position mother (Knee-chest/Trendelenburg) and relieve pressure on cord manually",
+                "Wait",
+                "Give oxygen"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Take the baby's head off the cord to restore blood flow. Then C-Section."
+        },
+        {
+            "id": 21,
+            "text": "Preeclampsia usually occurs after what gestation week?",
+            "options": [
+                "Week 1",
+                "Week 20",
+                "Week 10",
+                "Week 4"
+            ],
+            "correctAnswer": 1,
+            "explanation": "It is a disease of the placenta."
+        },
+        {
+            "id": 22,
+            "text": "Are Deep Tendon Reflexes (DTRs) assessed during Mag Sulfate therapy?",
+            "options": [
+                "No",
+                "Yes, hourly. Loss of DTRs is the first sign of toxicity",
+                "Only daily",
+                "Only if they ask"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Absent DTRs = Stop the Mag."
+        },
+        {
+            "id": 23,
+            "text": "What differentiates chronic hypertension from gestational hypertension?",
+            "options": [
+                "Severity",
+                "Presence before 20 weeks gestation vs. onset after 20 weeks",
+                "Medication",
+                "Age"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Before 20 weeks = You already had it."
+        },
+        {
+            "id": 24,
+            "text": "Late Decelerations on a Fetal Heart Monitor indicate:",
+            "options": [
+                "Head compression",
+                "Placental Insufficiency (Hypoxia)",
+                "Cord compression",
+                "Normal"
+            ],
+            "correctAnswer": 1,
+            "explanation": "LION: Left side, IV fluids, Oxygen, Notify MD."
+        },
+        {
+            "id": 25,
+            "text": "Variable Decelerations indicate:",
+            "options": [
+                "Cord Compression",
+                "Placental issue",
+                "Head compression",
+                "Fever"
+            ],
+            "correctAnswer": 0,
+            "explanation": "VEAL CHOP: Variable = Cord."
+        }
+    ]
+}

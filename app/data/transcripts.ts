@@ -47,6 +47,9 @@ import episode12Data from './episode-12-transcript.json';
 // Episode 13: Physiological Adaptation (Metabolic/Integumentary)
 import episode13Data from './episode-13-transcript.json';
 
+// Episode 14: Complex Care & Emergencies (Sepsis/OB/Geriatrics)
+import episode14Data from './episode-14-transcript.json';
+
 // Transcript lookup by episode ID
 export const transcripts: Record<number, TranscriptSegment[]> = {
     1: episode1Data as TranscriptSegment[],
@@ -62,6 +65,7 @@ export const transcripts: Record<number, TranscriptSegment[]> = {
     11: episode11Data as TranscriptSegment[],
     12: episode12Data as TranscriptSegment[],
     13: episode13Data as TranscriptSegment[],
+    14: episode14Data as TranscriptSegment[],
     // Add more episodes as transcripts become available
 };
 

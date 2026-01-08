@@ -1,0 +1,668 @@
+[
+  {
+    "start": 0.16,
+    "end": 20.16,
+    "text": "Welcome back to the Deep Dive. Today we're embarking on a really mission critical deep dive into the source material on acute multi system conditions. We're looking for those absolute earliest signals of catastrophic system failure. You know, those moments where a timely intervention doesn't just improve outcomes, it actually saves lives.",
+    "speaker": "Speaker A"
+  },
+  {
+    "start": 20.4,
+    "end": 46.71,
+    "text": "That's the core focus. Survival is often measured in minutes in these scenarios, so. Yeah, exactly. We are extracting insights from three areas that demand immediate high stakes recognition, systemic inflammatory collapse, OB emergencies, and the unique complexities of the geriatric population. Okay, for you, the takeaway should really be how to spot those quiet red flags in situations where every second counts and across vastly different patient groups.",
+    "speaker": "Speaker B"
+  },
+  {
+    "start": 46.71,
+    "end": 77.08,
+    "text": "We've got a clear structure to guide us. First, we'll tackle that terrifying progression of shock and sepsis, that cascade of system failure. From there, we'll pivot to the urgency of maternal crises, where you're dealing with two patients at once. And finally, we'll analyze the unique challenges of our aging population where symptoms, well, they often fail to follow the textbook rules. Okay, let's unpack this. Starting with the severe infection spectrum and how the body's own defense mechanism can turn into a deadly weapon.",
+    "speaker": "Speaker A"
+  },
+  {
+    "start": 77.56,
+    "end": 83.96,
+    "text": "So the initial indicator we really need to understand is Systemic Inflammatory Response syndrome, or sirs.",
+    "speaker": "Speaker B"
+  },
+  {
+    "start": 83.96,
+    "end": 84.56,
+    "text": "Sirs?",
+    "speaker": "Speaker A"
+  },
+  {
+    "start": 84.56,
+    "end": 92.87,
+    "text": "Yeah. This is the body's general emergency alarm. It tells us something is very wrong, whether the cause is infection, trauma, maybe.",
+    "speaker": "Speaker B"
+  },
+  {
+    "start": 92.87,
+    "end": 94.79,
+    "text": "Major surgery or even severe burns.",
+    "speaker": "Speaker A"
+  },
+  {
+    "start": 94.79,
+    "end": 96.39,
+    "text": "Exactly. It's a broad signal.",
+    "speaker": "Speaker B"
+  },
+  {
+    "start": 96.39,
+    "end": 103.35,
+    "text": "The sources outline four key criteria for SIRs, and you need at least two of them to meet the definition. It's an interesting mix.",
+    "speaker": "Speaker A"
+  },
+  {
+    "start": 103.35,
+    "end": 103.75,
+    "text": "It is.",
+    "speaker": "Speaker B"
+  },
+  {
+    "start": 103.75,
+    "end": 115.71,
+    "text": "You're looking for extremes of temperature. Either high over 38 Celsius or low under 36. Then tachycardia, a heart rate over 90 beats per minute and rapid breathing, hitchypnea, or sometimes we see a low PAC O2.",
+    "speaker": "Speaker A"
+  },
+  {
+    "start": 115.79,
+    "end": 132.19,
+    "text": "And that final piece is the white blood cell count. It can be too high, indicating the body is fighting hard, or conversely, too low. Right, which suggests the immune system is just getting overwhelmed. The key takeaway here isn't just memorizing the four criteria. It's understanding that SIRS is non specific.",
+    "speaker": "Speaker B"
+  },
+  {
+    "start": 132.19,
+    "end": 133.39,
+    "text": "Right. So it could be anything.",
+    "speaker": "Speaker A"
+  },
+  {
+    "start": 133.39,
+    "end": 144.99,
+    "text": "It could. A massive trauma victim. And a patient in the very early stages of a serious infection might look identical based on SIRS alone. And that means clinical suspicion has to start immediate.",
+    "speaker": "Speaker B"
+  },
+  {
+    "start": 145.48,
+    "end": 152.92,
+    "text": "That distinction is so crucial. So when does that general alarm SIRS become the specific life threat we call sepsis?",
+    "speaker": "Speaker A"
+  },
+  {
+    "start": 153.0,
+    "end": 158.92,
+    "text": "Sepsis is SIRS plus a confirmed or, you know, a strongly suspected infectious Source.",
+    "speaker": "Speaker B"
+  },
+  {
+    "start": 158.92,
+    "end": 159.4,
+    "text": "Okay.",
+    "speaker": "Speaker A"
+  },
+  {
+    "start": 159.4,
+    "end": 174.25,
+    "text": "And once you have sepsis, the system is under heavy attack, and the progression to organ damage can be terrifyingly fast. When sepsis includes clear signs of organ injury, things like new hypotension and acute change in mental status or. Or rapidly declining urine output, we call.",
+    "speaker": "Speaker B"
+  },
+  {
+    "start": 174.25,
+    "end": 189.09,
+    "text": "It severe sepsis and the ultimate breakdown. The point of greatest danger is septic shock. The sources really emphasize the term refractory hypotension here. What exactly makes the hypotension in septic shock refractory?",
+    "speaker": "Speaker A"
+  },
+  {
+    "start": 189.17,
+    "end": 195.57,
+    "text": "That's the key. Clinical differentiator. It means the patient's low blood pressure failed to improve despite giving them enough fluid.",
+    "speaker": "Speaker B"
+  },
+  {
+    "start": 195.57,
+    "end": 197.65,
+    "text": "So you've already pushed fluids aggressively.",
+    "speaker": "Speaker A"
+  },
+  {
+    "start": 198.05,
+    "end": 208.45,
+    "text": "You've given maybe 0.5 to 1.0 liters of isotonic crystalloid every 5 to 10 minutes, potentially up to 6 liters in total, and the circulation still hasn't stabilized.",
+    "speaker": "Speaker B"
+  },
+  {
+    "start": 208.45,
+    "end": 208.89,
+    "text": "Wow.",
+    "speaker": "Speaker A"
+  },
+  {
+    "start": 208.89,
+    "end": 217.01,
+    "text": "This failure tells you the problem is no longer just volume, but massive unregulated vasodilation. The pipes have broken, you know the volume is misplaced.",
+    "speaker": "Speaker B"
+  },
+  {
+    "start": 217.17,
+    "end": 225.45,
+    "text": "And if that intervention fails, we quickly move to multiorgan dysfunction syndrome, or mods. This really is the catastrophic endgame, isn't it?",
+    "speaker": "Speaker A"
+  },
+  {
+    "start": 225.45,
+    "end": 234.05,
+    "text": "It is. And sadly, it's the most common cause of sepsis related death. The cascade of inflammatory mediators just overwhelms the system, leading to widespread organ failure.",
+    "speaker": "Speaker B"
+  },
+  {
+    "start": 234.05,
+    "end": 235.45,
+    "text": "And what systems are we talking about?",
+    "speaker": "Speaker A"
+  },
+  {
+    "start": 235.53,
+    "end": 245.29,
+    "text": "Our sources highlighted the critical. The lungs, which can lead to ARDs, the liver, causing jaundice, and a frightening clotting disorder called dic.",
+    "speaker": "Speaker B"
+  },
+  {
+    "start": 245.53,
+    "end": 247.61,
+    "text": "Disseminated intravascular coagulation.",
+    "speaker": "Speaker A"
+  },
+  {
+    "start": 247.77,
+    "end": 254.25,
+    "text": "Right. Essentially, the body uses up all its clotting factors trying to fix leaks, and then it just starts bleeding uncontrollably.",
+    "speaker": "Speaker B"
+  },
+  {
+    "start": 254.79,
+    "end": 262.99,
+    "text": "So understanding this progression is the why, but the so what is the immediate aggressive intervention required for septic shock?",
+    "speaker": "Speaker A"
+  },
+  {
+    "start": 262.99,
+    "end": 263.39,
+    "text": "Yeah.",
+    "speaker": "Speaker B"
+  },
+  {
+    "start": 263.39,
+    "end": 266.79,
+    "text": "What are the absolute non negotiables? Once you recognize it, you have to.",
+    "speaker": "Speaker A"
+  },
+  {
+    "start": 266.79,
+    "end": 272.11,
+    "text": "Act on multiple fronts at once. First, secure the airway if necessary. Intubation might be required.",
+    "speaker": "Speaker B"
+  },
+  {
+    "start": 272.11,
+    "end": 272.71,
+    "text": "Okay.",
+    "speaker": "Speaker A"
+  },
+  {
+    "start": 272.79,
+    "end": 282.27,
+    "text": "Second, that aggressive fluid administration we mentioned trying to restore perfusion. Third, time is tissue. So you have to start broad spectrum antibiotics, ideally within the first hour.",
+    "speaker": "Speaker B"
+  },
+  {
+    "start": 282.27,
+    "end": 284.15,
+    "text": "And you worry about narrowing them down later.",
+    "speaker": "Speaker A"
+  },
+  {
+    "start": 284.31,
+    "end": 287.89,
+    "text": "Exactly. You only narrow the antibiotics after the source is known.",
+    "speaker": "Speaker B"
+  },
+  {
+    "start": 287.89,
+    "end": 290.41,
+    "text": "And beyond fluids and antibiotics, you have.",
+    "speaker": "Speaker A"
+  },
+  {
+    "start": 290.41,
+    "end": 311.25,
+    "text": "To closely monitor urinary output with a goal at about 0.5 milliliter per kilogram per hour. And critically, if fluids alone fail, which is what defines the shock, you immediately move to vasoactive agents like dopamine or norepinephrine. Yes. To physically squeeze those dilated blood vessels and bring the pressure back up.",
+    "speaker": "Speaker B"
+  },
+  {
+    "start": 311.33,
+    "end": 321.98,
+    "text": "Septic shock is a type of distributive shock. But if we zoom out, the source material reminds us there are four main physiological types of shock, and each needs a fundamentally different approach.",
+    "speaker": "Speaker A"
+  },
+  {
+    "start": 322.14,
+    "end": 331.34,
+    "text": "Right. Looking at the physics of flow really simplifies the whole concept. In distributive shock, which includes sepsis and anaphylaxis, the problem is vascular tone.",
+    "speaker": "Speaker B"
+  },
+  {
+    "start": 331.419,
+    "end": 332.1,
+    "text": "The pipes.",
+    "speaker": "Speaker A"
+  },
+  {
+    "start": 332.1,
+    "end": 340.86,
+    "text": "The pipes. Exactly. You have decreased systemic vascular resistance. Imagine the body's pressurized copper pipes suddenly becoming wide, flabby gargon hoses.",
+    "speaker": "Speaker B"
+  },
+  {
+    "start": 341.06,
+    "end": 342.14,
+    "text": "So the pressure just drops out.",
+    "speaker": "Speaker A"
+  },
+  {
+    "start": 342.14,
+    "end": 347.74,
+    "text": "The pressure is gone. But your cardiac output is usually normal or even increased because the pump itself is fine.",
+    "speaker": "Speaker B"
+  },
+  {
+    "start": 347.74,
+    "end": 352.58,
+    "text": "Then you have cardiogenic shock. The name tells you everything. The problem is the pump itself.",
+    "speaker": "Speaker A"
+  },
+  {
+    "start": 352.82,
+    "end": 370.92,
+    "text": "Right. Which leads to decreased preload and a dramatically decreased cardiac output. And you absolutely do not want to push liters of fluid into a failing heart. Of course, contrast that with hypovolemic shock, often from a massive hemorrhage. Here, the system is working perfectly, but the volume is just gone.",
+    "speaker": "Speaker B"
+  },
+  {
+    "start": 371.08,
+    "end": 373.28,
+    "text": "And the sources classify that volume loss.",
+    "speaker": "Speaker A"
+  },
+  {
+    "start": 373.28,
+    "end": 383.72,
+    "text": "They do, from class I up to class four. And class four is the most critical. You're losing over 40% of your total circulating volume. That requires immediate maximum replacement.",
+    "speaker": "Speaker B"
+  },
+  {
+    "start": 383.8,
+    "end": 393.08,
+    "text": "And finally, the unique outlier neurogenic shock. This one is fascinating because it doesn't fit that typical high heart rate response to low blood pressure.",
+    "speaker": "Speaker A"
+  },
+  {
+    "start": 393.48,
+    "end": 409.16,
+    "text": "That's right. It comes from a loss of sympathetic vascular tone, usually from a severe spinal cord injury. And while it causes hypotension, because the vessels dilate, heart rate stays low. It often stays slow or bradycardic. And that's a major red flag that separates it from almost every other form of shock.",
+    "speaker": "Speaker B"
+  },
+  {
+    "start": 409.32,
+    "end": 429.19,
+    "text": "The unifying theme in shock is often managing an immediate volume or pressure crisis. And speaking of immediate critical volume loss, that brings us directly to high stakes maternal emergencies. Here's where it gets really interesting, because now we're shifting to a scenario where failure means catastrophic risk for two lives.",
+    "speaker": "Speaker A"
+  },
+  {
+    "start": 429.35,
+    "end": 441.31,
+    "text": "We have to look at two major causes of antepartum hemorrhage. And while both involve bleeding, they are completely different in their mechanism and symptoms. We're talking abruptio placenta and placenta previa.",
+    "speaker": "Speaker B"
+  },
+  {
+    "start": 441.31,
+    "end": 445.99,
+    "text": "Okay, so abruptio placentae, that's the premature separation of the placenta from the uterine wall.",
+    "speaker": "Speaker A"
+  },
+  {
+    "start": 445.99,
+    "end": 446.39,
+    "text": "Correct.",
+    "speaker": "Speaker B"
+  },
+  {
+    "start": 446.39,
+    "end": 452.66,
+    "text": "The source material notes the bleeding here is often painful, and it comes with a uterus that's rigid, tender, and hypertonic.",
+    "speaker": "Speaker A"
+  },
+  {
+    "start": 452.66,
+    "end": 461.7,
+    "text": "And that's what makes it so much more dangerous. Systemically, the trauma of the separation often triggers dic, that clotting disorder again, and significant fetal distress.",
+    "speaker": "Speaker B"
+  },
+  {
+    "start": 461.7,
+    "end": 462.62,
+    "text": "What's the treatment?",
+    "speaker": "Speaker A"
+  },
+  {
+    "start": 462.7,
+    "end": 472.54,
+    "text": "It has to be swift and multifaceted. Immediate transfusion, aggressive volume replacement, and often fresh frozen plasma to restore the clotting factors that are being used up by the dic.",
+    "speaker": "Speaker B"
+  },
+  {
+    "start": 472.7,
+    "end": 475.18,
+    "text": "Okay, now contrast that with placenta previa.",
+    "speaker": "Speaker A"
+  },
+  {
+    "start": 475.34,
+    "end": 482.3,
+    "text": "With previa, the placenta is actually covering the cervical opening. The defining symptom is generally painless bleeding.",
+    "speaker": "Speaker B"
+  },
+  {
+    "start": 482.46,
+    "end": 484.38,
+    "text": "Painless. That's a huge difference.",
+    "speaker": "Speaker A"
+  },
+  {
+    "start": 484.38,
+    "end": 499.98,
+    "text": "A huge difference. And diagnosis is via ultrasound. The sources are emphatic here. If the bleeding is uncontrolled, a vaginal examination is absolutely avoided because you could puncture the placenta and cause a massive uncontrollable hemorrhage. Yeah.",
+    "speaker": "Speaker B"
+  },
+  {
+    "start": 500.22,
+    "end": 506.42,
+    "text": "Moving past delivery, we have postpartum hemorrhage or pph. Another critical time sensitive crisis.",
+    "speaker": "Speaker A"
+  },
+  {
+    "start": 506.42,
+    "end": 518.01,
+    "text": "Right. It's defined as blood loss over 500ml after a vaginal deliver or a liter after a C section within that first 24 hours. The single most common cause is uterine atony.",
+    "speaker": "Speaker B"
+  },
+  {
+    "start": 518.25,
+    "end": 520.65,
+    "text": "So the uterus just fails to contract properly.",
+    "speaker": "Speaker A"
+  },
+  {
+    "start": 520.65,
+    "end": 523.21,
+    "text": "Exactly. It's like trying to stop a leak with a wet sponge.",
+    "speaker": "Speaker B"
+  },
+  {
+    "start": 523.21,
+    "end": 526.57,
+    "text": "The critical intervention then is both mechanical and pharmacological.",
+    "speaker": "Speaker A"
+  },
+  {
+    "start": 526.57,
+    "end": 536.37,
+    "text": "Precisely. You need to physically force that muscle to contract primarily through uterine massage. And then you give powerful oxytocin like methargine to promote that contraction.",
+    "speaker": "Speaker B"
+  },
+  {
+    "start": 536.37,
+    "end": 538.15,
+    "text": "And if that doesn't work, if those.",
+    "speaker": "Speaker A"
+  },
+  {
+    "start": 538.15,
+    "end": 542.55,
+    "text": "Interventions fail, then surgical management becomes necessary to control the bleeding.",
+    "speaker": "Speaker B"
+  },
+  {
+    "start": 542.63,
+    "end": 548.87,
+    "text": "Beyond bleeding, let's talk about hypertensive disorders which can cause system failure just as rapidly. Preeclampsia and eclampsia.",
+    "speaker": "Speaker A"
+  },
+  {
+    "start": 548.95,
+    "end": 562.71,
+    "text": "Preeclampsia is defined by sustained high blood pressure, 140, 90 or even 160 over 110, usually with proteinuria and edema after 20 weeks. But severe preeclampsia is where the organs truly start complaining.",
+    "speaker": "Speaker B"
+  },
+  {
+    "start": 562.79,
+    "end": 564.19,
+    "text": "What are the signs you look for?",
+    "speaker": "Speaker A"
+  },
+  {
+    "start": 564.19,
+    "end": 570.93,
+    "text": "Headaches, visual disturbances, and the really ominous sign of epigastric pain, which suggests the liver is involved.",
+    "speaker": "Speaker B"
+  },
+  {
+    "start": 571.01,
+    "end": 585.41,
+    "text": "And when those system failures trigger seizure activity, that is eclampsia. We talked about how septic shock leads to mods. Does HLP syndrome represent a kind of acute pregnancy specific mods?",
+    "speaker": "Speaker A"
+  },
+  {
+    "start": 585.57,
+    "end": 596.62,
+    "text": "That's a fantastic way to frame it. HL LP is a severe variant of preeclampsia. Stands for hemolysis, elevated liver enzymes and low platelets. It is massive, rapidly progressing multisystems damage.",
+    "speaker": "Speaker B"
+  },
+  {
+    "start": 596.62,
+    "end": 598.26,
+    "text": "So it can lead to stroke, renal.",
+    "speaker": "Speaker A"
+  },
+  {
+    "start": 598.26,
+    "end": 603.38,
+    "text": "Failure, liver rupture like mods. It is systemic collapse driven by an inflammatory process.",
+    "speaker": "Speaker B"
+  },
+  {
+    "start": 603.7,
+    "end": 610.5,
+    "text": "So given the immediate life threat of seizures and system failure, what is the absolute cornerstone intervention for eclampsia?",
+    "speaker": "Speaker A"
+  },
+  {
+    "start": 610.58,
+    "end": 623.69,
+    "text": "Magnesium sulfate. And it is administered immediately, not to lower blood pressure, but specifically to prevent or stop the seizure activity. It's for neuroprotection for both mother and fetus. That's a critical distinction.",
+    "speaker": "Speaker B"
+  },
+  {
+    "start": 623.93,
+    "end": 639.61,
+    "text": "We've looked at patients whose systems fail loudly, either through a massive inflammatory response or immediate volume loss. Now we shift to a population with the systems often fail silently, the symptoms are subtle, or they're masked. And that's the complexity of geriatric vulnerabilities.",
+    "speaker": "Speaker A"
+  },
+  {
+    "start": 639.77,
+    "end": 651.45,
+    "text": "When we talk about the elderly population, we have to understand geriatric syndromes. These aren't specific diseases, but common clinical signs that significantly impact function and often signal a serious underlying illness.",
+    "speaker": "Speaker B"
+  },
+  {
+    "start": 651.69,
+    "end": 656.49,
+    "text": "The sources list several key syndromes, but one is often the first and most dangerous indicator.",
+    "speaker": "Speaker A"
+  },
+  {
+    "start": 656.73,
+    "end": 657.45,
+    "text": "Delirium.",
+    "speaker": "Speaker B"
+  },
+  {
+    "start": 657.77,
+    "end": 670.81,
+    "text": "Delirium, that acute and fluctuating change in mental status, is the single most important red flag for an elderly patient. It is often the only symptom of a physical illness like a UTI pneumonia or even shock. So it's not dementia?",
+    "speaker": "Speaker A"
+  },
+  {
+    "start": 670.81,
+    "end": 676.17,
+    "text": "No, dementia is a chronic decline. Delirium is acute. It signals that the system is under stress right now.",
+    "speaker": "Speaker B"
+  },
+  {
+    "start": 676.41,
+    "end": 685.19,
+    "text": "Then you have frailty, which is a state of chronic vulnerability. It's characterized by things like unintentional weight loss, weakness, slowed walking speed.",
+    "speaker": "Speaker A"
+  },
+  {
+    "start": 685.27,
+    "end": 690.47,
+    "text": "And this isn't just getting old. It's a specific, measurable syndrome of accumulated deficits.",
+    "speaker": "Speaker B"
+  },
+  {
+    "start": 690.47,
+    "end": 690.79,
+    "text": "Right.",
+    "speaker": "Speaker A"
+  },
+  {
+    "start": 690.79,
+    "end": 699.87,
+    "text": "And we can't forget falls. The sources note they're the most common manifestation of a physical ailment in this group, and they often lead to a rapid functional decline.",
+    "speaker": "Speaker B"
+  },
+  {
+    "start": 699.87,
+    "end": 706.23,
+    "text": "Which just makes the clinical picture even harder. We're not just dealing with one illness. We're dealing with layers of accumulated risk.",
+    "speaker": "Speaker A"
+  },
+  {
+    "start": 706.31,
+    "end": 716.66,
+    "text": "Exactly. The source material clusters these vulnerabilities into three major areas. First, the physical, cardiovascular and metabolic disorders like heart disease and diabetes.",
+    "speaker": "Speaker B"
+  },
+  {
+    "start": 716.66,
+    "end": 717.22,
+    "text": "Okay.",
+    "speaker": "Speaker A"
+  },
+  {
+    "start": 717.38,
+    "end": 726.58,
+    "text": "Second, the psychological burden. Anxiety, depression, chronic pain, which often overlap and complicate how symptoms are even reported.",
+    "speaker": "Speaker B"
+  },
+  {
+    "start": 726.98,
+    "end": 736.1,
+    "text": "And finally, the neuropsychiatric disorders like Alzheimer's, Parkinson's, and dementia, which can obscure symptoms and make communicating discomfort almost impossible.",
+    "speaker": "Speaker A"
+  },
+  {
+    "start": 736.26,
+    "end": 747.36,
+    "text": "And the physical changes of aging dramatically increase the risk of rapid decompensation. Take the respiratory system. The rib cage gets more rigid, ventilation is reduced, the diaphragm weakens.",
+    "speaker": "Speaker B"
+  },
+  {
+    "start": 747.36,
+    "end": 749.36,
+    "text": "So a minor cold becomes a big problem.",
+    "speaker": "Speaker A"
+  },
+  {
+    "start": 749.52,
+    "end": 758.08,
+    "text": "It does. Coupled with a decreased cough effectiveness, a minor upper respiratory bug can turn into a high risk for full blown Pneumonia.",
+    "speaker": "Speaker B"
+  },
+  {
+    "start": 758.24,
+    "end": 764.48,
+    "text": "And this circles back directly to our first segment on sepsis. Because their immune response is fundamentally different.",
+    "speaker": "Speaker A"
+  },
+  {
+    "start": 764.56,
+    "end": 773.35,
+    "text": "Precisely. It's not just that the immune system is weaker, it's slower and less accurate. Their T cells don't function as well, antibody production lags.",
+    "speaker": "Speaker B"
+  },
+  {
+    "start": 773.51,
+    "end": 774.87,
+    "text": "So what does that mean in practice?",
+    "speaker": "Speaker A"
+  },
+  {
+    "start": 775.11,
+    "end": 788.23,
+    "text": "It means two things. One, they're more susceptible to infection, and two, they often exhibit a blunted fever response. They might be severely septic, approaching mods without ever mounting that high fever we associate with infection in a younger person.",
+    "speaker": "Speaker B"
+  },
+  {
+    "start": 788.63,
+    "end": 792.11,
+    "text": "Which means the lack of a typical symptom is itself the red flag.",
+    "speaker": "Speaker A"
+  },
+  {
+    "start": 792.11,
+    "end": 800.85,
+    "text": "It is. You have to rely on those subtle cues, like that sudden onset of delirium. Body's classic alarm system, the high fever. It might not go off.",
+    "speaker": "Speaker B"
+  },
+  {
+    "start": 801.17,
+    "end": 806.29,
+    "text": "And you add to that the risk of trauma from falls because of decreased bone strength.",
+    "speaker": "Speaker A"
+  },
+  {
+    "start": 806.29,
+    "end": 813.81,
+    "text": "Yes. Leading to common hip, wrist and vertebral fractures, which just rapidly escalate the risk of other complications like dvt.",
+    "speaker": "Speaker B"
+  },
+  {
+    "start": 813.81,
+    "end": 832.03,
+    "text": "We've covered three vastly different clinical settings, yet the core insights are so unified. It's all about rapid identification and intervention. We looked at the lightning fast system collapse of shock, the dual patient crisis of obstetric emergencies, and the need to the subtle baseline shifts in the geriatric population.",
+    "speaker": "Speaker A"
+  },
+  {
+    "start": 832.35,
+    "end": 854.83,
+    "text": "If we connect this to the bigger picture, the consistent theme is recognizing system stress before it becomes irreversible multi organ harm. Whether that stress manifests as the refractory hypotension of septic shock, the seizure activity of eclampsia, or the acute mental status changes of delirium in an elderly patient, catching that earliest deviation is the definition of high stakes care.",
+    "speaker": "Speaker B"
+  },
+  {
+    "start": 855.27,
+    "end": 879.59,
+    "text": "So what does this all mean for you? Considering the profound changes in immunity and the risk of delirium in the elderly, a population that often presents with a blunted fever response, how does the absence of a typical symptom like a high fever fundamentally change the required baseline expectation for recognizing and treating a severe multisystem condition like sepsis? In that population, you have to look for what isn't there. And that's something worth mulling over.",
+    "speaker": "Speaker A"
+  }
+]

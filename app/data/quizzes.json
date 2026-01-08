@@ -8271,862 +8271,622 @@
         ]
     },
     {
-        "id": 11,
+        "id": 120,
         "episodeId": 14,
-        "title": "Immunology, Hematology & GI",
-        "description": "HIV/AIDS, Anemia, Transfusions, Ulcers, IBD, Liver Disease",
-        "questionCount": 35,
-        "color": "from-amber-600 to-orange-900",
+        "title": "Sepsis & Multi-System Emergencies - Part A",
+        "description": "SIRS, Septic Shock, DIC, Geriatric Atypical Presentation",
+        "questionCount": 25,
+        "color": "from-red-600 to-red-900",
         "questions": [
             {
                 "id": 1,
-                "text": "A client with iron-deficiency anemia should increase intake of:",
+                "text": "SIRS (Systemic Inflammatory Response Syndrome) requires at least 2 criteria. Which of the following is a criterion?",
                 "options": [
-                    "Dairy products",
-                    "Red meat and dark leafy greens",
-                    "White bread",
-                    "Citrus fruits only"
+                    "Blood Pressure > 120/80",
+                    "Temperature > 38\u00b0C (100.4\u00b0F) or < 36\u00b0C (96.8\u00b0F)",
+                    "Heart Rate < 60",
+                    "Respiratory Rate < 12"
                 ],
                 "correctAnswer": 1,
-                "explanation": "Iron-rich foods: red meat, dark leafy greens, beans. Take with vitamin C (citrus) to enhance absorption. Avoid taking with calcium/dairy."
+                "explanation": "Extremes of temp, Tachycardia (>90), Tachypnea, or abn WBC count."
             },
             {
                 "id": 2,
-                "text": "A client is receiving a blood transfusion and develops fever, chills, and back pain. What should the nurse do first?",
+                "text": "Sepsis is defined as:",
                 "options": [
-                    "Slow the transfusion rate",
-                    "Stop the transfusion immediately",
-                    "Give acetaminophen",
-                    "Continue and monitor"
+                    "Just an infection",
+                    "SIRS + Confirmed or Suspected Infection",
+                    "Low Blood Pressure",
+                    "Fever"
                 ],
                 "correctAnswer": 1,
-                "explanation": "Fever, chills, back pain indicate transfusion reaction. Stop transfusion immediately, keep IV open with NS, notify provider, monitor vitals, save blood bag."
+                "explanation": "It's the systemic response to an infection."
             },
             {
                 "id": 3,
-                "text": "A client with peptic ulcer disease should avoid:",
+                "text": "Septic Shock is distinguished from Severe Sepsis by:",
                 "options": [
-                    "Milk",
-                    "NSAIDs and alcohol",
-                    "Bland foods",
-                    "Water"
+                    "Fever",
+                    "Refractory Hypotension (Low BP persists despite aggressive fluid resuscitation)",
+                    "Cough",
+                    "Pain"
                 ],
                 "correctAnswer": 1,
-                "explanation": "Avoid NSAIDs (cause ulcers), alcohol, caffeine, spicy foods. Milk provides temporary relief but increases acid production later."
+                "explanation": "If fluids don't fix the BP, it's Shock. You need Vasopressors."
             },
             {
                 "id": 4,
-                "text": "Which lab value indicates pernicious anemia?",
+                "text": "The massive vasodilation in Distributive Shock (like Sepsis) causes:",
                 "options": [
-                    "Low B12",
-                    "Low iron",
-                    "High platelets",
-                    "Low calcium"
+                    "High Systemic Vascular Resistance (SVR)",
+                    "Low Systemic Vascular Resistance (SVR) / 'Flabby Pipes'",
+                    "High Blood Pressure",
+                    "Slow Heart Rate"
                 ],
-                "correctAnswer": 0,
-                "explanation": "Pernicious anemia: B12 deficiency due to lack of intrinsic factor. Causes neurological symptoms. Treat with B12 injections."
+                "correctAnswer": 1,
+                "explanation": "The vascular tone is lost, so pressure drops."
             },
             {
                 "id": 5,
-                "text": "A client with Crohn's disease will have:",
+                "text": "DIC (Disseminated Intravascular Coagulation) is a complication of sepsis where:",
                 "options": [
-                    "Bloody diarrhea only in rectum",
-                    "Skip lesions throughout GI tract",
-                    "Curable with surgery",
-                    "No risk of fistulas"
+                    "Blood clots too much",
+                    "Clotting factors are used up causing widespread clotting AND massive bleeding simultaneously",
+                    "Platelets are high",
+                    "Blood is too thick"
                 ],
                 "correctAnswer": 1,
-                "explanation": "Crohn's: Skip lesions (patchy), anywhere in GI tract, fistulas/abscesses common. Ulcerative colitis: continuous inflammation, colon/rectum only."
+                "explanation": "A paradox: You bleed because you clotted too much elsewhere."
             },
             {
                 "id": 6,
-                "text": "A client with HIV has a CD4 count of 180. This indicates:",
+                "text": "The priority intervention window for starting antibiotics in sepsis is:",
                 "options": [
-                    "Normal immune function",
-                    "AIDS diagnosis",
-                    "No treatment needed",
-                    "Cure achieved"
+                    "Within 24 hours",
+                    "Within the first hour (after cultures)",
+                    "Within 1 week",
+                    "Whenever"
                 ],
                 "correctAnswer": 1,
-                "explanation": "CD4 <200 = AIDS diagnosis. Start prophylaxis for opportunistic infections (PCP, toxoplasmosis). Continue antiretroviral therapy."
+                "explanation": "Time is tissue. Mortality increases every hour delayed."
             },
             {
                 "id": 7,
-                "text": "Which finding indicates hemolytic transfusion reaction?",
+                "text": "If fluid resuscitation (30ml/kg) fails to restore MAP in Septic Shock, the next step is:",
                 "options": [
-                    "Hives and itching",
-                    "Fever, chills, dark urine, flank pain",
-                    "Mild temperature elevation",
-                    "No symptoms"
+                    "More fluids forever",
+                    "Start Vasoactive agents (Vasopressors like Norepinephrine)",
+                    "Wait",
+                    "Give aspirin"
                 ],
                 "correctAnswer": 1,
-                "explanation": "Hemolytic reaction (ABO incompatibility): Fever, chills, dark urine, flank/back pain, hypotension. Life-threatening. Stop transfusion immediately."
+                "explanation": "Squeeze the pipes to maintain perfusion."
             },
             {
                 "id": 8,
-                "text": "A client with cirrhosis has ascites. What is the priority intervention?",
+                "text": "The single most dangerous 'Red Flag' for acute illness in the elderly is:",
                 "options": [
-                    "High-sodium diet",
-                    "Sodium restriction and diuretics",
-                    "Force fluids",
-                    "Bed rest only"
+                    "Sudden Confusion or Delirium",
+                    "Knee pain",
+                    "Hearing loss",
+                    "Wrinkles"
                 ],
-                "correctAnswer": 1,
-                "explanation": "Ascites: Restrict sodium, give diuretics (spironolactone, furosemide), monitor weight daily, measure abdominal girth. May need paracentesis."
+                "correctAnswer": 0,
+                "explanation": "Acute Mental Status Change = Infection/Hypoxia until proven otherwise."
             },
             {
                 "id": 9,
-                "text": "Which type of anemia is caused by chronic kidney disease?",
+                "text": "Why might an elderly patient with severe sepsis NOT have a fever?",
                 "options": [
-                    "Iron-deficiency",
-                    "Pernicious",
-                    "Anemia of chronic disease (low EPO)",
-                    "Sickle cell"
+                    "They are tough",
+                    "Blunted immune response / Inability to mount a fever",
+                    "The room is cold",
+                    "It's viral"
                 ],
-                "correctAnswer": 2,
-                "explanation": "Kidney disease causes decreased erythropoietin (EPO) production, leading to anemia. Treat with EPO injections (epoetin alfa)."
+                "correctAnswer": 1,
+                "explanation": "Don't trust temperature in the elderly. Look for confusion."
             },
             {
                 "id": 10,
-                "text": "A client with ulcerative colitis is at risk for:",
+                "text": "Delirium differs front Dementia because Delirium is:",
                 "options": [
-                    "Colon cancer",
-                    "Diabetes",
-                    "Hypertension",
-                    "Osteoarthritis"
+                    "Chronic and slow",
+                    "Acute, fluctuating, and often reversible",
+                    "Permanent",
+                    "Normal aging"
                 ],
-                "correctAnswer": 0,
-                "explanation": "Long-term ulcerative colitis increases colon cancer risk. Regular colonoscopy screening needed. May require colectomy."
+                "correctAnswer": 1,
+                "explanation": "Delirium is a medical emergency."
             },
             {
                 "id": 11,
-                "text": "Which precaution is needed for a client with neutropenia?",
+                "text": "Neurogenic Shock is unique because it presents with Hypotension and:",
                 "options": [
-                    "Contact precautions",
-                    "Protective (reverse) isolation",
-                    "Droplet precautions",
-                    "No precautions needed"
+                    "Tachycardia (High HR)",
+                    "Bradycardia (Low HR)",
+                    "Fever",
+                    "Seizures"
                 ],
                 "correctAnswer": 1,
-                "explanation": "Neutropenia (low WBC <1,000): Protective isolation, no fresh fruits/flowers, avoid crowds, monitor for infection. Neutropenic precautions."
+                "explanation": "Loss of sympathetic tone means the heart rate doesn't speed up to compensate."
             },
             {
                 "id": 12,
-                "text": "A client is receiving warfarin and has INR of 8. What is the priority?",
+                "text": "Cardiogenic Shock is a failure of:",
                 "options": [
-                    "Continue current dose",
-                    "Hold warfarin and notify provider",
-                    "Increase dose",
-                    "No action needed"
+                    "Vascular tone",
+                    "The Pump (Heart muscle)",
+                    "Blood volume",
+                    "Lungs"
                 ],
                 "correctAnswer": 1,
-                "explanation": "INR >4 = high bleeding risk. Hold warfarin, notify provider. May need vitamin K. Monitor for bleeding. Therapeutic INR: 2-3."
+                "explanation": "The heart fails to squeeze. Do NOT overload with fluids."
             },
             {
                 "id": 13,
-                "text": "A client with hepatitis A should:",
+                "text": "Hypovolemic Shock is caused by:",
                 "options": [
-                    "Avoid alcohol permanently",
-                    "Avoid alcohol during acute phase",
-                    "Drink alcohol freely",
-                    "Take antibiotics"
+                    "Infection",
+                    "Loss of circulating volume (Hemorrhage or Dehydration)",
+                    "Heart attack",
+                    "Pain"
                 ],
                 "correctAnswer": 1,
-                "explanation": "Hepatitis A: Acute, fecal-oral transmission, avoid alcohol during illness. Hepatitis B/C: Chronic, bloodborne, avoid alcohol permanently."
+                "explanation": "The tank is empty."
             },
             {
                 "id": 14,
-                "text": "Which is a sign of sickle cell crisis?",
+                "text": "MODS stands for:",
                 "options": [
-                    "Severe pain in joints/abdomen",
-                    "Hypertension",
-                    "Weight gain",
-                    "Bradycardia"
+                    "Multiple Organ Dysfunction Syndrome",
+                    "Mild Organ Damage",
+                    "Many Old Drugs",
+                    "Medical Onset Disease"
                 ],
                 "correctAnswer": 0,
-                "explanation": "Sickle cell crisis: Severe pain (vaso-occlusive), fever, swelling. Treat with hydration, oxygen, pain management. Avoid triggers (dehydration, cold, stress)."
+                "explanation": "The endgame of uncorrected shock."
             },
             {
                 "id": 15,
-                "text": "A client with GI bleeding has black, tarry stools. This indicates:",
+                "text": "A urinary output below what level indicates kidney failure/shock?",
                 "options": [
-                    "Lower GI bleeding",
-                    "Upper GI bleeding",
-                    "Normal finding",
-                    "Hemorrhoids"
+                    "100 ml/hr",
+                    "0.5 ml/kg/hr (approx 30ml/hr)",
+                    "200 ml/hr",
+                    "500 ml/hr"
                 ],
                 "correctAnswer": 1,
-                "explanation": "Melena (black, tarry stools) = upper GI bleeding. Bright red blood (hematochezia) = lower GI bleeding. Monitor H/H, vitals, prepare for endoscopy."
+                "explanation": "Oliguria is the first sign of poor perfusion."
             },
             {
                 "id": 16,
-                "text": "A client with thrombocytopenia should avoid:",
+                "text": "Geriatric 'Frailty' is characterized by:",
                 "options": [
-                    "Soft toothbrush",
-                    "IM injections and aspirin",
-                    "Gentle activities",
-                    "All medications"
+                    "High energy",
+                    "Unintentional weight loss, weakness, and slowed activity",
+                    "Gaining weight",
+                    "Good balance"
                 ],
                 "correctAnswer": 1,
-                "explanation": "Thrombocytopenia (low platelets): Bleeding precautions. Avoid IM injections, aspirin, NSAIDs, razors. Use soft toothbrush, electric razor."
+                "explanation": "A state of high vulnerability to stressors."
             },
             {
                 "id": 17,
-                "text": "Which hepatitis is transmitted through contaminated food/water?",
+                "text": "The most common manifestation of physical illness in the elderly is:",
                 "options": [
-                    "Hepatitis A",
-                    "Hepatitis B",
-                    "Hepatitis C",
-                    "Hepatitis D"
+                    "Headache",
+                    "Falls",
+                    "Hunger",
+                    "Rash"
                 ],
-                "correctAnswer": 0,
-                "explanation": "Hepatitis A: Fecal-oral (food/water). Hepatitis B, C, D: Bloodborne (needles, sex, blood products). Hepatitis E: Fecal-oral (rare in US)."
+                "correctAnswer": 1,
+                "explanation": "A fall is rarely just an accident; investigate the 'why'."
             },
             {
                 "id": 18,
-                "text": "A client with anaphylaxis should receive:",
+                "text": "Treating Sepsis involves a 'Bundle' of care. Which comes FIRST?",
                 "options": [
-                    "Oral antihistamine",
-                    "Epinephrine IM immediately",
-                    "Inhaled bronchodilator only",
-                    "IV fluids only"
+                    "Vasopressors",
+                    "Fluids and Cultures (Lactate measurement)",
+                    "Surgery",
+                    "Tylenol"
                 ],
                 "correctAnswer": 1,
-                "explanation": "Anaphylaxis: Epinephrine IM (EpiPen) immediately. Also give oxygen, IV fluids, antihistamines, corticosteroids. Monitor airway."
+                "explanation": "Measure Lactate, get blood cultures, start fluids/antibiotics."
             },
             {
                 "id": 19,
-                "text": "A client with hemophilia should avoid:",
+                "text": "Refractory Hypotension in shock indicates:",
                 "options": [
-                    "Contact sports",
-                    "All exercise",
-                    "Vegetables",
-                    "Water"
+                    "The patient is fine",
+                    "Need for Vasopressors (Pipes are too dilapidated)",
+                    "Need for less fluid",
+                    "Hypertension"
                 ],
-                "correctAnswer": 0,
-                "explanation": "Hemophilia: Clotting factor deficiency. Avoid contact sports, aspirin, IM injections. Give factor replacement for bleeding. Teach joint protection."
+                "correctAnswer": 1,
+                "explanation": "Fluid alone isn't enough."
             },
             {
                 "id": 20,
-                "text": "Which is a sign of liver failure?",
+                "text": "In Anaphylactic Shock (a type of Distributive Shock), the priority is:",
                 "options": [
-                    "Jaundice and confusion",
-                    "Hypertension",
-                    "Hyperglycemia",
-                    "Tachycardia only"
+                    "Fluids",
+                    "Epinephrine (IM)",
+                    "Antibiotics",
+                    "Pain meds"
                 ],
-                "correctAnswer": 0,
-                "explanation": "Liver failure: Jaundice, confusion (hepatic encephalopathy), ascites, bleeding (low clotting factors), asterixis (flapping tremor)."
+                "correctAnswer": 1,
+                "explanation": "Epinephrine reverses the vasodilation and bronchoconstriction."
             },
             {
                 "id": 21,
-                "text": "A client is receiving a blood transfusion. What is the maximum time for one unit?",
+                "text": "Severe Sepsis is SIRS + Infection + :",
                 "options": [
-                    "1 hour",
-                    "2 hours",
-                    "4 hours",
-                    "8 hours"
+                    "Organ Dysfunction (e.g., Hypotension, Confusion, Oliguria)",
+                    "Nothing else",
+                    "Headache",
+                    "Hunger"
                 ],
-                "correctAnswer": 2,
-                "explanation": "Transfuse blood over 2-4 hours maximum (bacterial growth risk after 4 hours). Monitor vitals before, 15 min after start, then per protocol."
+                "correctAnswer": 0,
+                "explanation": "Organ damage marks the transition to Severe."
             },
             {
                 "id": 22,
-                "text": "A client with diverticulitis should eat:",
+                "text": "Class IV Hypovolemic Shock involves losing:",
                 "options": [
-                    "High-fiber diet during acute phase",
-                    "Low-fiber diet during acute phase, then high-fiber",
-                    "No restrictions",
-                    "Liquid diet permanently"
+                    "10% of blood",
+                    ">40% of blood volume (Life-threatening)",
+                    "5%",
+                    "Just water"
                 ],
                 "correctAnswer": 1,
-                "explanation": "Acute diverticulitis: Low-fiber or clear liquids, antibiotics. After healing: High-fiber diet to prevent recurrence. Avoid nuts/seeds (controversial)."
+                "explanation": "Massive hemorrhage."
             },
             {
                 "id": 23,
-                "text": "Which medication treats pernicious anemia?",
+                "text": "Polypharmacy in the elderly increases the risk of:",
                 "options": [
-                    "Iron supplements",
-                    "Vitamin B12 injections",
-                    "Folic acid",
-                    "Vitamin C"
+                    "Better health",
+                    "Drug interactions and Delirium",
+                    "Stronger bones",
+                    "Weight gain"
                 ],
                 "correctAnswer": 1,
-                "explanation": "Pernicious anemia requires B12 injections (oral B12 not absorbed without intrinsic factor). Monitor for neurological improvement."
+                "explanation": "More drugs = More problems."
             },
             {
                 "id": 24,
-                "text": "A client with esophageal varices should avoid:",
+                "text": "A 'Shift to the Left' in WBC count indicates:",
                 "options": [
-                    "Soft foods",
-                    "Straining and alcohol",
-                    "Liquids",
-                    "All medications"
+                    "Viral infection",
+                    "Acute Bacterial Infection (increase in immature neutrophils/bands)",
+                    "Recovery",
+                    "Allergy"
                 ],
                 "correctAnswer": 1,
-                "explanation": "Esophageal varices (from cirrhosis): Avoid straining, alcohol, aspirin, NSAIDs. Risk of life-threatening bleeding. May need banding or sclerotherapy."
+                "explanation": "The marrow is pumping out baby WBCs to fight."
             },
             {
                 "id": 25,
-                "text": "Which is a sign of allergic transfusion reaction?",
+                "text": "Why is 'Time' tissue in Sepsis?",
                 "options": [
-                    "Hives and itching",
-                    "Fever and chills",
-                    "Dark urine",
-                    "Hypotension"
-                ],
-                "correctAnswer": 0,
-                "explanation": "Allergic reaction: Hives, itching, flushing. Stop transfusion, give antihistamine. Can usually resume slowly. Different from hemolytic reaction."
-            },
-            {
-                "id": 26,
-                "text": "A client with hepatic encephalopathy should:",
-                "options": [
-                    "Increase protein intake",
-                    "Restrict protein",
-                    "Increase sodium",
-                    "Stop all medications"
+                    "It isn't",
+                    "Delayed perfusion causes permanent organ death",
+                    "Doctors are busy",
+                    "Antibiotics expire"
                 ],
                 "correctAnswer": 1,
-                "explanation": "Hepatic encephalopathy: Restrict protein (ammonia buildup), give lactulose (reduces ammonia), monitor mental status. Asterixis is classic sign."
-            },
-            {
-                "id": 27,
-                "text": "Which type of anemia has sickle-shaped RBCs?",
-                "options": [
-                    "Iron-deficiency",
-                    "Pernicious",
-                    "Sickle cell anemia",
-                    "Aplastic"
-                ],
-                "correctAnswer": 2,
-                "explanation": "Sickle cell: Genetic disorder, RBCs sickle when deoxygenated. Causes pain crises, organ damage. Treat with hydration, oxygen, pain management, hydroxyurea."
-            },
-            {
-                "id": 28,
-                "text": "A client with pancreatitis should be NPO because:",
-                "options": [
-                    "Food stimulates pancreatic enzymes",
-                    "Improves appetite",
-                    "Prevents diabetes",
-                    "No reason"
-                ],
-                "correctAnswer": 0,
-                "explanation": "Pancreatitis: NPO to rest pancreas (food stimulates enzyme secretion). Give IV fluids, pain management, NG tube if vomiting. Monitor for complications."
-            },
-            {
-                "id": 29,
-                "text": "Which precaution is needed for HIV-positive client?",
-                "options": [
-                    "Airborne precautions",
-                    "Standard precautions",
-                    "Droplet precautions",
-                    "Contact precautions"
-                ],
-                "correctAnswer": 1,
-                "explanation": "HIV: Standard precautions (not transmitted by casual contact). Bloodborne pathogen. Use gloves for blood/body fluids. Educate about transmission prevention."
-            },
-            {
-                "id": 30,
-                "text": "A client with DIC (disseminated intravascular coagulation) will have:",
-                "options": [
-                    "Increased clotting factors",
-                    "Both bleeding and clotting",
-                    "No symptoms",
-                    "Hypertension only"
-                ],
-                "correctAnswer": 1,
-                "explanation": "DIC: Widespread clotting uses up clotting factors, causing bleeding. Treat underlying cause, give blood products, monitor labs (PT, PTT, platelets, fibrinogen)."
-            },
-            {
-                "id": 31,
-                "text": "A client with gastroesophageal reflux (GERD) should:",
-                "options": [
-                    "Lie down after meals",
-                    "Elevate head of bed and avoid late meals",
-                    "Eat large meals",
-                    "Drink alcohol freely"
-                ],
-                "correctAnswer": 1,
-                "explanation": "GERD: Elevate HOB 30\u00b0, small frequent meals, avoid triggers (caffeine, alcohol, chocolate, spicy foods), don't eat 2-3 hours before bed."
-            },
-            {
-                "id": 32,
-                "text": "Which is a sign of iron-deficiency anemia?",
-                "options": [
-                    "Glossitis and koilonychia (spoon nails)",
-                    "Jaundice",
-                    "Petechiae",
-                    "Hematuria"
-                ],
-                "correctAnswer": 0,
-                "explanation": "Iron-deficiency: Pallor, fatigue, glossitis (sore tongue), koilonychia (spoon-shaped nails), pica (craving ice/dirt). Most common anemia."
-            },
-            {
-                "id": 33,
-                "text": "A client with inflammatory bowel disease should avoid:",
-                "options": [
-                    "High-fiber during flare-ups",
-                    "All foods",
-                    "Water",
-                    "Medications"
-                ],
-                "correctAnswer": 0,
-                "explanation": "IBD flare: Low-fiber, low-residue diet. Between flares: Balanced diet, avoid individual triggers. Monitor for complications (obstruction, perforation)."
-            },
-            {
-                "id": 34,
-                "text": "Which lab value indicates hemolytic anemia?",
-                "options": [
-                    "Elevated bilirubin",
-                    "Low bilirubin",
-                    "High calcium",
-                    "Low sodium"
-                ],
-                "correctAnswer": 0,
-                "explanation": "Hemolytic anemia: RBC destruction causes elevated bilirubin (jaundice), elevated LDH, decreased haptoglobin. Causes: autoimmune, transfusion reaction, sickle cell."
-            },
-            {
-                "id": 35,
-                "text": "A client with cholecystitis reports pain in which area?",
-                "options": [
-                    "Left lower quadrant",
-                    "Right upper quadrant",
-                    "Suprapubic",
-                    "Left shoulder"
-                ],
-                "correctAnswer": 1,
-                "explanation": "Cholecystitis (gallbladder inflammation): Right upper quadrant pain, especially after fatty meals. May radiate to right shoulder. Treat with NPO, antibiotics, possible cholecystectomy."
+                "explanation": "Every hour of hypotension increases mortality."
             }
         ]
     },
     {
-        "id": 14,
+        "id": 121,
         "episodeId": 14,
-        "title": "Multi-System & OB Emergencies",
-        "description": "Sepsis, Shock, Preeclampsia, Eclampsia, Placental Emergencies",
-        "questionCount": 35,
-        "color": "from-blue-600 to-indigo-900",
+        "title": "Maternal & OB Emergencies - Part B",
+        "description": "Bleeding Disorders (Abruptio, Previa), PPH, Preeclampsia",
+        "questionCount": 25,
+        "color": "from-pink-600 to-pink-900",
         "questions": [
             {
                 "id": 1,
-                "text": "A client has BP 88/50, HR 120, cool clammy skin after blood loss. This is:",
+                "text": "The primary symptom distinguishing Placenta PREVIA from Abruptio Placentae is:",
                 "options": [
-                    "Cardiogenic shock",
-                    "Hypovolemic shock",
-                    "Septic shock",
-                    "Anaphylactic shock"
+                    "Severe Pain",
+                    "Painless bright red bleeding",
+                    "Rigid uterus",
+                    "Fever"
                 ],
                 "correctAnswer": 1,
-                "explanation": "Hypovolemic shock: Fluid/blood loss causes decreased BP, tachycardia, cool/clammy skin. Give IV fluids, blood products, treat bleeding source."
+                "explanation": "Previa is Painless. Abruption is Painful."
             },
             {
                 "id": 2,
-                "text": "A pregnant client has BP 160/110, 3+ proteinuria, and headache. This indicates:",
+                "text": "What is the absolute contraindication in a patient with Placenta Previa?",
                 "options": [
-                    "Normal pregnancy",
-                    "Preeclampsia",
-                    "Gestational diabetes",
-                    "Placenta previa"
+                    "Ultrasound",
+                    "Vaginal Examination (Digital Exam)",
+                    "IV fluids",
+                    "Bed rest"
                 ],
                 "correctAnswer": 1,
-                "explanation": "Preeclampsia: HTN (>140/90) after 20 weeks, proteinuria, edema. Severe: BP >160/110, headache, visual changes, epigastric pain. Give magnesium sulfate, deliver baby."
+                "explanation": "Poking the placenta can cause massive, uncontrollable hemorrhage."
             },
             {
                 "id": 3,
-                "text": "Which type of shock has warm, flushed skin initially?",
+                "text": "Abruptio Placentae (premature separation) presents with:",
                 "options": [
-                    "Hypovolemic",
-                    "Cardiogenic",
-                    "Septic",
-                    "Neurogenic"
+                    "Soft abdomen",
+                    "Painful vaginal bleeding and a rigid, board-like uterus",
+                    "Painless bleeding",
+                    "Low blood pressure only"
                 ],
-                "correctAnswer": 2,
-                "explanation": "Septic shock (early/warm phase): Warm, flushed skin, bounding pulses, fever. Later (cold phase): Cool, clammy skin. Give antibiotics, fluids, vasopressors."
+                "correctAnswer": 1,
+                "explanation": "The uterus contracts and bleeds internally. High fetal mortality."
             },
             {
                 "id": 4,
-                "text": "A client with preeclampsia is receiving magnesium sulfate. Which finding indicates toxicity?",
+                "text": "Severe Preeclampsia is characterized by BP > 160/110 and:",
                 "options": [
-                    "Respiratory rate 10",
-                    "Deep tendon reflexes 2+",
-                    "Urine output 40 mL/hr",
-                    "BP 140/90"
+                    "No other symptoms",
+                    "Proteinuria, Headache, Visual disturbances, Epigastric pain",
+                    "Low platelets only",
+                    "Fever"
                 ],
-                "correctAnswer": 0,
-                "explanation": "Magnesium toxicity: Respiratory rate <12, absent DTRs, decreased urine output. Antidote: Calcium gluconate. Therapeutic level: 4-7 mEq/L."
+                "correctAnswer": 1,
+                "explanation": "Epigastric pain is a sign of liver involvement (HELLP)."
             },
             {
                 "id": 5,
-                "text": "A client in septic shock needs which intervention first?",
+                "text": "Eclampsia is defined as Preeclampsia + :",
                 "options": [
-                    "Broad-spectrum antibiotics",
-                    "Blood cultures, then antibiotics within 1 hour",
-                    "Surgery",
-                    "Discharge"
+                    "Higher BP",
+                    "Seizures",
+                    "Edema",
+                    "Vomiting"
                 ],
                 "correctAnswer": 1,
-                "explanation": "Sepsis bundle: Blood cultures first, then broad-spectrum antibiotics within 1 hour, IV fluids, monitor lactate, vasopressors if needed."
+                "explanation": "Seizure activity marks the transition to Eclampsia."
             },
             {
                 "id": 6,
-                "text": "A pregnant client has painless bright red vaginal bleeding. This suggests:",
+                "text": "The drug of choice to prevent/treat seizures in Eclampsia is:",
                 "options": [
-                    "Placenta previa",
-                    "Abruptio placentae",
-                    "Normal labor",
-                    "Preeclampsia"
+                    "Valium",
+                    "Magnesium Sulfate",
+                    "Labetalol",
+                    "Tylenol"
                 ],
-                "correctAnswer": 0,
-                "explanation": "Placenta previa: Painless bright red bleeding (placenta covers cervix). No vaginal exams! Bed rest, C-section delivery. Abruptio: Painful dark bleeding."
+                "correctAnswer": 1,
+                "explanation": "It is a CNS depressant used for neuroprotection."
             },
             {
                 "id": 7,
-                "text": "Which is a sign of cardiogenic shock?",
+                "text": "When administering Magnesium Sulfate, what should you monitor for toxicity?",
                 "options": [
-                    "Warm, flushed skin",
-                    "Pulmonary edema and decreased cardiac output",
-                    "Bradycardia",
+                    "Hyperactive reflexes",
+                    "Absent Deep Tendon Reflexes (DTRs), Respiratory Depression, Oliguria",
+                    "Tachycardia",
                     "Hypertension"
                 ],
                 "correctAnswer": 1,
-                "explanation": "Cardiogenic shock: Heart can't pump (MI, CHF). Pulmonary edema, decreased CO, cool/clammy skin. Treat with inotropes, diuretics, possible mechanical support."
+                "explanation": "Magnesium slows everything down. Too much = Respiratory Arrest."
             },
             {
                 "id": 8,
-                "text": "A client with eclampsia is having a seizure. What is the priority?",
+                "text": "The antidote for Magnesium Sulfate toxicity is:",
                 "options": [
-                    "Restrain the client",
-                    "Protect from injury, turn to side, give oxygen",
-                    "Insert tongue blade",
-                    "Give oral medications"
-                ],
-                "correctAnswer": 1,
-                "explanation": "Eclampsia (seizure from preeclampsia): Protect from injury, turn to side, oxygen, magnesium sulfate IV. Deliver baby after stabilization."
-            },
-            {
-                "id": 9,
-                "text": "Which type of shock results from spinal cord injury?",
-                "options": [
-                    "Hypovolemic",
-                    "Cardiogenic",
-                    "Neurogenic",
-                    "Septic"
-                ],
-                "correctAnswer": 2,
-                "explanation": "Neurogenic shock: Spinal cord injury causes loss of sympathetic tone. Hypotension, bradycardia, warm/dry skin. Treat with fluids, vasopressors, atropine."
-            },
-            {
-                "id": 10,
-                "text": "A pregnant client has severe abdominal pain, rigid abdomen, and dark vaginal bleeding. This suggests:",
-                "options": [
-                    "Placenta previa",
-                    "Abruptio placentae",
-                    "Normal labor",
-                    "Ectopic pregnancy"
-                ],
-                "correctAnswer": 1,
-                "explanation": "Abruptio placentae: Placental separation causes severe pain, rigid/board-like abdomen, dark bleeding, fetal distress. Emergency C-section, monitor for DIC."
-            },
-            {
-                "id": 11,
-                "text": "What is the first sign of shock?",
-                "options": [
-                    "Decreased level of consciousness",
-                    "Hypotension",
-                    "Tachycardia",
-                    "Oliguria"
-                ],
-                "correctAnswer": 2,
-                "explanation": "Early shock: Tachycardia (compensatory), restlessness, cool extremities. Late shock: Hypotension, decreased LOC, oliguria. Treat early!"
-            },
-            {
-                "id": 12,
-                "text": "A postpartum client has heavy bleeding and a boggy uterus. What should the nurse do first?",
-                "options": [
-                    "Call the provider only",
-                    "Massage the fundus",
-                    "Give pain medication",
-                    "Discharge the client"
-                ],
-                "correctAnswer": 1,
-                "explanation": "Postpartum hemorrhage: Massage fundus to stimulate contraction, empty bladder, give oxytocin, monitor vitals. Boggy uterus = uterine atony (most common cause)."
-            },
-            {
-                "id": 13,
-                "text": "Which lab value indicates SIRS (Systemic Inflammatory Response Syndrome)?",
-                "options": [
-                    "WBC >12,000 or <4,000",
-                    "Glucose <70",
-                    "Potassium >5.0",
-                    "Calcium <8.0"
-                ],
-                "correctAnswer": 0,
-                "explanation": "SIRS criteria (2+ needed): Temp >38\u00b0C or <36\u00b0C, HR >90, RR >20, WBC >12,000 or <4,000. With infection = sepsis."
-            },
-            {
-                "id": 14,
-                "text": "A client with preeclampsia should be monitored for:",
-                "options": [
-                    "Hyperglycemia",
-                    "HELLP syndrome",
-                    "Hypotension",
-                    "Bradycardia"
-                ],
-                "correctAnswer": 1,
-                "explanation": "HELLP syndrome: Hemolysis, Elevated Liver enzymes, Low Platelets. Severe complication of preeclampsia. Symptoms: RUQ pain, nausea, malaise. Deliver baby."
-            },
-            {
-                "id": 15,
-                "text": "Which position is best for a client in shock?",
-                "options": [
-                    "Trendelenburg",
-                    "Supine with legs elevated 20-30\u00b0",
-                    "High Fowler's",
-                    "Prone"
-                ],
-                "correctAnswer": 1,
-                "explanation": "Shock position: Supine with legs elevated 20-30\u00b0 (modified Trendelenburg) improves venous return. Full Trendelenburg can impair breathing."
-            },
-            {
-                "id": 16,
-                "text": "A laboring client has the umbilical cord protruding from vagina. What is the priority?",
-                "options": [
-                    "Push cord back in",
-                    "Elevate hips, cover cord with sterile saline gauze, prepare for C-section",
-                    "Continue labor",
-                    "Apply dry gauze"
-                ],
-                "correctAnswer": 1,
-                "explanation": "Prolapsed cord: Elevate hips (knee-chest or Trendelenburg), cover cord with sterile saline gauze, don't push back, emergency C-section. Relieve pressure on cord."
-            },
-            {
-                "id": 17,
-                "text": "Which is a sign of anaphylactic shock?",
-                "options": [
-                    "Bradycardia",
-                    "Urticaria, angioedema, bronchospasm",
-                    "Hypertension",
-                    "Decreased respirations"
-                ],
-                "correctAnswer": 1,
-                "explanation": "Anaphylactic shock: Urticaria, angioedema, bronchospasm, hypotension. Give epinephrine IM immediately, oxygen, IV fluids, antihistamines, corticosteroids."
-            },
-            {
-                "id": 18,
-                "text": "A client with severe preeclampsia should be in which environment?",
-                "options": [
-                    "Bright, stimulating room",
-                    "Quiet, darkened room",
-                    "Noisy hallway",
-                    "Crowded area"
-                ],
-                "correctAnswer": 1,
-                "explanation": "Severe preeclampsia: Quiet, darkened room to prevent seizures. Limit stimulation, monitor BP/reflexes, magnesium sulfate, prepare for delivery."
-            },
-            {
-                "id": 19,
-                "text": "What is the goal of shock treatment?",
-                "options": [
-                    "Decrease cardiac output",
-                    "Restore tissue perfusion and oxygenation",
-                    "Lower blood pressure",
-                    "Decrease heart rate"
-                ],
-                "correctAnswer": 1,
-                "explanation": "Shock treatment goals: Restore tissue perfusion, maintain BP, adequate urine output (30-50 mL/hr), normal lactate, mental status. Treat underlying cause."
-            },
-            {
-                "id": 20,
-                "text": "A postpartum client has fever, foul-smelling lochia, and uterine tenderness. This indicates:",
-                "options": [
-                    "Normal postpartum",
-                    "Endometritis",
-                    "Mastitis",
-                    "Preeclampsia"
-                ],
-                "correctAnswer": 1,
-                "explanation": "Endometritis: Uterine infection. Fever, foul lochia, uterine tenderness. Give broad-spectrum antibiotics. Risk factors: C-section, prolonged rupture of membranes."
-            },
-            {
-                "id": 21,
-                "text": "Which medication is used to treat septic shock hypotension?",
-                "options": [
-                    "Insulin",
-                    "Norepinephrine (vasopressor)",
-                    "Furosemide",
-                    "Acetaminophen"
-                ],
-                "correctAnswer": 1,
-                "explanation": "Septic shock: Norepinephrine (first-line vasopressor) if hypotensive despite fluids. Also: antibiotics, IV fluids (30 mL/kg), monitor lactate."
-            },
-            {
-                "id": 22,
-                "text": "A client at 32 weeks gestation has contractions. Which medication stops labor?",
-                "options": [
-                    "Oxytocin",
-                    "Terbutaline (tocolytic)",
-                    "Magnesium sulfate",
+                    "Narcan",
+                    "Calcium Gluconate",
+                    "Vitamin K",
                     "Insulin"
                 ],
                 "correctAnswer": 1,
-                "explanation": "Tocolytics (terbutaline, nifedipine) stop preterm labor. Magnesium sulfate also used. Give corticosteroids (betamethasone) for fetal lung maturity."
+                "explanation": "Keep it at the bedside."
+            },
+            {
+                "id": 9,
+                "text": "HELLP Syndrome stands for:",
+                "options": [
+                    "Help Everyone Live Long Pregnancy",
+                    "Hemolysis, Elevated Liver enzymes, Low Platelets",
+                    "High Electrolytes, Low Liver, Pain",
+                    "Hemoglobin, Edema, Low Pressure"
+                ],
+                "correctAnswer": 1,
+                "explanation": "A severe form of Preeclampsia involving organ failure."
+            },
+            {
+                "id": 10,
+                "text": "Postpartum Hemorrhage (PPH) is defined as blood loss greater than:",
+                "options": [
+                    "100 ml",
+                    "500 ml (Vaginal) or 1000 ml (C-Section)",
+                    "200 ml",
+                    "300 ml"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Significant loss leading to hypovolemia."
+            },
+            {
+                "id": 11,
+                "text": "The #1 cause of Postpartum Hemorrhage is:",
+                "options": [
+                    "Lacerations",
+                    "Uterine Atony (Boggy Uterus)",
+                    "Infection",
+                    "Previa"
+                ],
+                "correctAnswer": 1,
+                "explanation": "The muscle fails to clamp down on the blood vessels."
+            },
+            {
+                "id": 12,
+                "text": "The first intervention for a Boggy Uterus (Uterine Atony) is:",
+                "options": [
+                    "Surgery",
+                    "Fundal Massage",
+                    "Antibiotics",
+                    "Blood transfusion"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Massage the fundus until firm."
+            },
+            {
+                "id": 13,
+                "text": "Which medication is used to contract the uterus in PPH?",
+                "options": [
+                    "Magnesium",
+                    "Oxytocin (Pitocin) or Methylergonovine (Methergine)",
+                    "Terbutaline",
+                    "Aspirin"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Stimulates contraction to stop bleeding."
+            },
+            {
+                "id": 14,
+                "text": "In a patient with Placenta Previa, bleeding is typically:",
+                "options": [
+                    "Dark red",
+                    "Painful",
+                    "Painless and Bright Red",
+                    "Review"
+                ],
+                "correctAnswer": 2,
+                "explanation": "Fresh blood from the cervix/placenta interface."
+            },
+            {
+                "id": 15,
+                "text": "A rigid, board-like abdomen in a pregnant patient indicates:",
+                "options": [
+                    "Labor",
+                    "Concealed Hemorrhage / Abruptio Placentae",
+                    "Constipation",
+                    "Full bladder"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Internal bleeding fills the uterus, making it tight."
+            },
+            {
+                "id": 16,
+                "text": "Epigastric pain in a preeclamptic patient is a warning sign of:",
+                "options": [
+                    "Indigestion",
+                    "Liver edema/capsule stretching (HELLP) - Seizure imminent",
+                    "Hunger",
+                    "Baby kicking"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Don't dismiss it as heartburn."
+            },
+            {
+                "id": 17,
+                "text": "What complication of Abruptio Placentae involves clotting depletion?",
+                "options": [
+                    "DVT",
+                    "DIC (Disseminated Intravascular Coagulation)",
+                    "Stroke",
+                    "Anemia"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Massive tissue factor release triggers DIC."
+            },
+            {
+                "id": 18,
+                "text": "The therapeutic level for Magnesium Sulfate is:",
+                "options": [
+                    "1-2 mg/dL",
+                    "4-8 mg/dL (Higher than normal lab range)",
+                    "10-12 mg/dL",
+                    "0.5 mg/dL"
+                ],
+                "correctAnswer": 1,
+                "explanation": "You keep them slightly hypermagnesemic to prevent seizures."
+            },
+            {
+                "id": 19,
+                "text": "Methergine (for PPH) is contraindicated in patients with:",
+                "options": [
+                    "Diabetes",
+                    "Hypertension",
+                    "Asthma",
+                    "Infection"
+                ],
+                "correctAnswer": 1,
+                "explanation": "It causes vasoconstriction and can stroke out a hypertensive patient."
+            },
+            {
+                "id": 20,
+                "text": "The priority for a prolapsed umbilical cord is:",
+                "options": [
+                    "Push it back in",
+                    "Position mother (Knee-chest/Trendelenburg) and relieve pressure on cord manually",
+                    "Wait",
+                    "Give oxygen"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Take the baby's head off the cord to restore blood flow. Then C-Section."
+            },
+            {
+                "id": 21,
+                "text": "Preeclampsia usually occurs after what gestation week?",
+                "options": [
+                    "Week 1",
+                    "Week 20",
+                    "Week 10",
+                    "Week 4"
+                ],
+                "correctAnswer": 1,
+                "explanation": "It is a disease of the placenta."
+            },
+            {
+                "id": 22,
+                "text": "Are Deep Tendon Reflexes (DTRs) assessed during Mag Sulfate therapy?",
+                "options": [
+                    "No",
+                    "Yes, hourly. Loss of DTRs is the first sign of toxicity",
+                    "Only daily",
+                    "Only if they ask"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Absent DTRs = Stop the Mag."
             },
             {
                 "id": 23,
-                "text": "Which is a late sign of shock?",
+                "text": "What differentiates chronic hypertension from gestational hypertension?",
                 "options": [
-                    "Tachycardia",
-                    "Restlessness",
-                    "Hypotension",
-                    "Cool extremities"
+                    "Severity",
+                    "Presence before 20 weeks gestation vs. onset after 20 weeks",
+                    "Medication",
+                    "Age"
                 ],
-                "correctAnswer": 2,
-                "explanation": "Late shock signs: Hypotension, decreased LOC, oliguria, metabolic acidosis. Early signs: Tachycardia, restlessness, cool extremities. Intervene early!"
+                "correctAnswer": 1,
+                "explanation": "Before 20 weeks = You already had it."
             },
             {
                 "id": 24,
-                "text": "A laboring client has fetal head delivered but shoulders stuck. This is:",
+                "text": "Late Decelerations on a Fetal Heart Monitor indicate:",
                 "options": [
-                    "Normal delivery",
-                    "Shoulder dystocia",
-                    "Breech presentation",
-                    "Prolapsed cord"
+                    "Head compression",
+                    "Placental Insufficiency (Hypoxia)",
+                    "Cord compression",
+                    "Normal"
                 ],
                 "correctAnswer": 1,
-                "explanation": "Shoulder dystocia: Shoulders stuck after head delivery. McRoberts maneuver (flex hips), suprapubic pressure, call for help. Risk: large baby, maternal diabetes."
+                "explanation": "LION: Left side, IV fluids, Oxygen, Notify MD."
             },
             {
                 "id": 25,
-                "text": "Which organ fails first in MODS (Multiple Organ Dysfunction Syndrome)?",
+                "text": "Variable Decelerations indicate:",
                 "options": [
-                    "Heart",
-                    "Lungs",
-                    "Kidneys",
-                    "Brain"
-                ],
-                "correctAnswer": 1,
-                "explanation": "MODS: Progressive organ failure from severe illness/sepsis. Lungs often fail first (ARDS), then kidneys, liver, heart. High mortality. Supportive care."
-            },
-            {
-                "id": 26,
-                "text": "A pregnant client has BP 170/115 and is seeing spots. What medication is given?",
-                "options": [
-                    "Insulin",
-                    "Magnesium sulfate",
-                    "Oxytocin",
-                    "Furosemide"
-                ],
-                "correctAnswer": 1,
-                "explanation": "Severe preeclampsia: Magnesium sulfate prevents seizures. Also: antihypertensives (hydralazine, labetalol), monitor reflexes/respirations, deliver baby."
-            },
-            {
-                "id": 27,
-                "text": "Which is a sign of distributive shock?",
-                "options": [
-                    "Decreased cardiac output",
-                    "Vasodilation and decreased SVR",
-                    "Fluid overload",
-                    "Hypertension"
-                ],
-                "correctAnswer": 1,
-                "explanation": "Distributive shock (septic, anaphylactic, neurogenic): Vasodilation, decreased SVR, relative hypovolemia. Treat with fluids, vasopressors, address cause."
-            },
-            {
-                "id": 28,
-                "text": "A postpartum client has saturated 2 pads in 30 minutes. This is:",
-                "options": [
-                    "Normal",
-                    "Postpartum hemorrhage",
-                    "Infection",
-                    "Preeclampsia"
-                ],
-                "correctAnswer": 1,
-                "explanation": "Postpartum hemorrhage: >500 mL vaginal, >1000 mL C-section, or saturating pad in <1 hour. Massage fundus, oxytocin, monitor vitals, possible surgery."
-            },
-            {
-                "id": 29,
-                "text": "Which lab value indicates inadequate tissue perfusion in shock?",
-                "options": [
-                    "Elevated lactate",
-                    "Low glucose",
-                    "High calcium",
-                    "Low sodium"
+                    "Cord Compression",
+                    "Placental issue",
+                    "Head compression",
+                    "Fever"
                 ],
                 "correctAnswer": 0,
-                "explanation": "Elevated lactate (>2 mmol/L) indicates anaerobic metabolism from poor tissue perfusion. Monitor lactate clearance to assess shock treatment effectiveness."
-            },
-            {
-                "id": 30,
-                "text": "A client with preeclampsia has hyperreflexia and clonus. This indicates:",
-                "options": [
-                    "Improvement",
-                    "Increased seizure risk",
-                    "Normal finding",
-                    "Magnesium toxicity"
-                ],
-                "correctAnswer": 1,
-                "explanation": "Hyperreflexia and clonus indicate CNS irritability and increased seizure risk. Give magnesium sulfate, monitor closely, prepare for possible eclampsia."
-            },
-            {
-                "id": 31,
-                "text": "Which is the most common cause of postpartum hemorrhage?",
-                "options": [
-                    "Uterine atony",
-                    "Lacerations",
-                    "Retained placenta",
-                    "Coagulation disorders"
-                ],
-                "correctAnswer": 0,
-                "explanation": "Uterine atony (70%): Boggy uterus, heavy bleeding. Massage fundus, empty bladder, oxytocin, methergine. Other causes: lacerations, retained placenta, coagulopathy."
-            },
-            {
-                "id": 32,
-                "text": "A client in shock has urine output 15 mL/hr. This indicates:",
-                "options": [
-                    "Adequate perfusion",
-                    "Inadequate renal perfusion",
-                    "Overhydration",
-                    "Normal finding"
-                ],
-                "correctAnswer": 1,
-                "explanation": "Oliguria (<30 mL/hr) indicates inadequate renal perfusion. Goal: 30-50 mL/hr. Monitor hourly urine output, give fluids, vasopressors if needed."
-            },
-            {
-                "id": 33,
-                "text": "A pregnant client has gestational diabetes. The baby is at risk for:",
-                "options": [
-                    "Hypoglycemia after birth",
-                    "Hyperglycemia after birth",
-                    "Bradycardia",
-                    "Hypertension"
-                ],
-                "correctAnswer": 0,
-                "explanation": "Maternal diabetes \u2192 fetal hyperinsulinemia. After birth, baby loses maternal glucose \u2192 hypoglycemia. Monitor glucose, feed early, possible IV dextrose. Also risk: macrosomia, shoulder dystocia."
-            },
-            {
-                "id": 34,
-                "text": "Which is a contraindication for magnesium sulfate?",
-                "options": [
-                    "Hypertension",
-                    "Absent deep tendon reflexes",
-                    "Proteinuria",
-                    "Edema"
-                ],
-                "correctAnswer": 1,
-                "explanation": "Magnesium contraindications: Absent DTRs, respiratory rate <12, renal failure, myasthenia gravis. Monitor reflexes, respirations, urine output. Have calcium gluconate ready."
-            },
-            {
-                "id": 35,
-                "text": "A client in shock is receiving IV fluids. Which finding indicates fluid overload?",
-                "options": [
-                    "Dry mucous membranes",
-                    "Crackles and JVD",
-                    "Hypotension",
-                    "Tachycardia"
-                ],
-                "correctAnswer": 1,
-                "explanation": "Fluid overload: Crackles, JVD, dyspnea, edema. Monitor lung sounds, daily weights, I&O. May need diuretics. Balance fluid resuscitation with risk of overload."
+                "explanation": "VEAL CHOP: Variable = Cord."
             }
         ]
     },
@@ -12276,6 +12036,435 @@
         ]
     },
     {
+        "id": 11,
+        "title": "Immunology, Hematology & GI",
+        "description": "HIV/AIDS, Anemia, Transfusions, Ulcers, IBD, Liver Disease",
+        "questionCount": 35,
+        "color": "from-amber-600 to-orange-900",
+        "questions": [
+            {
+                "id": 1,
+                "text": "A client with iron-deficiency anemia should increase intake of:",
+                "options": [
+                    "Dairy products",
+                    "Red meat and dark leafy greens",
+                    "White bread",
+                    "Citrus fruits only"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Iron-rich foods: red meat, dark leafy greens, beans. Take with vitamin C (citrus) to enhance absorption. Avoid taking with calcium/dairy."
+            },
+            {
+                "id": 2,
+                "text": "A client is receiving a blood transfusion and develops fever, chills, and back pain. What should the nurse do first?",
+                "options": [
+                    "Slow the transfusion rate",
+                    "Stop the transfusion immediately",
+                    "Give acetaminophen",
+                    "Continue and monitor"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Fever, chills, back pain indicate transfusion reaction. Stop transfusion immediately, keep IV open with NS, notify provider, monitor vitals, save blood bag."
+            },
+            {
+                "id": 3,
+                "text": "A client with peptic ulcer disease should avoid:",
+                "options": [
+                    "Milk",
+                    "NSAIDs and alcohol",
+                    "Bland foods",
+                    "Water"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Avoid NSAIDs (cause ulcers), alcohol, caffeine, spicy foods. Milk provides temporary relief but increases acid production later."
+            },
+            {
+                "id": 4,
+                "text": "Which lab value indicates pernicious anemia?",
+                "options": [
+                    "Low B12",
+                    "Low iron",
+                    "High platelets",
+                    "Low calcium"
+                ],
+                "correctAnswer": 0,
+                "explanation": "Pernicious anemia: B12 deficiency due to lack of intrinsic factor. Causes neurological symptoms. Treat with B12 injections."
+            },
+            {
+                "id": 5,
+                "text": "A client with Crohn's disease will have:",
+                "options": [
+                    "Bloody diarrhea only in rectum",
+                    "Skip lesions throughout GI tract",
+                    "Curable with surgery",
+                    "No risk of fistulas"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Crohn's: Skip lesions (patchy), anywhere in GI tract, fistulas/abscesses common. Ulcerative colitis: continuous inflammation, colon/rectum only."
+            },
+            {
+                "id": 6,
+                "text": "A client with HIV has a CD4 count of 180. This indicates:",
+                "options": [
+                    "Normal immune function",
+                    "AIDS diagnosis",
+                    "No treatment needed",
+                    "Cure achieved"
+                ],
+                "correctAnswer": 1,
+                "explanation": "CD4 <200 = AIDS diagnosis. Start prophylaxis for opportunistic infections (PCP, toxoplasmosis). Continue antiretroviral therapy."
+            },
+            {
+                "id": 7,
+                "text": "Which finding indicates hemolytic transfusion reaction?",
+                "options": [
+                    "Hives and itching",
+                    "Fever, chills, dark urine, flank pain",
+                    "Mild temperature elevation",
+                    "No symptoms"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Hemolytic reaction (ABO incompatibility): Fever, chills, dark urine, flank/back pain, hypotension. Life-threatening. Stop transfusion immediately."
+            },
+            {
+                "id": 8,
+                "text": "A client with cirrhosis has ascites. What is the priority intervention?",
+                "options": [
+                    "High-sodium diet",
+                    "Sodium restriction and diuretics",
+                    "Force fluids",
+                    "Bed rest only"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Ascites: Restrict sodium, give diuretics (spironolactone, furosemide), monitor weight daily, measure abdominal girth. May need paracentesis."
+            },
+            {
+                "id": 9,
+                "text": "Which type of anemia is caused by chronic kidney disease?",
+                "options": [
+                    "Iron-deficiency",
+                    "Pernicious",
+                    "Anemia of chronic disease (low EPO)",
+                    "Sickle cell"
+                ],
+                "correctAnswer": 2,
+                "explanation": "Kidney disease causes decreased erythropoietin (EPO) production, leading to anemia. Treat with EPO injections (epoetin alfa)."
+            },
+            {
+                "id": 10,
+                "text": "A client with ulcerative colitis is at risk for:",
+                "options": [
+                    "Colon cancer",
+                    "Diabetes",
+                    "Hypertension",
+                    "Osteoarthritis"
+                ],
+                "correctAnswer": 0,
+                "explanation": "Long-term ulcerative colitis increases colon cancer risk. Regular colonoscopy screening needed. May require colectomy."
+            },
+            {
+                "id": 11,
+                "text": "Which precaution is needed for a client with neutropenia?",
+                "options": [
+                    "Contact precautions",
+                    "Protective (reverse) isolation",
+                    "Droplet precautions",
+                    "No precautions needed"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Neutropenia (low WBC <1,000): Protective isolation, no fresh fruits/flowers, avoid crowds, monitor for infection. Neutropenic precautions."
+            },
+            {
+                "id": 12,
+                "text": "A client is receiving warfarin and has INR of 8. What is the priority?",
+                "options": [
+                    "Continue current dose",
+                    "Hold warfarin and notify provider",
+                    "Increase dose",
+                    "No action needed"
+                ],
+                "correctAnswer": 1,
+                "explanation": "INR >4 = high bleeding risk. Hold warfarin, notify provider. May need vitamin K. Monitor for bleeding. Therapeutic INR: 2-3."
+            },
+            {
+                "id": 13,
+                "text": "A client with hepatitis A should:",
+                "options": [
+                    "Avoid alcohol permanently",
+                    "Avoid alcohol during acute phase",
+                    "Drink alcohol freely",
+                    "Take antibiotics"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Hepatitis A: Acute, fecal-oral transmission, avoid alcohol during illness. Hepatitis B/C: Chronic, bloodborne, avoid alcohol permanently."
+            },
+            {
+                "id": 14,
+                "text": "Which is a sign of sickle cell crisis?",
+                "options": [
+                    "Severe pain in joints/abdomen",
+                    "Hypertension",
+                    "Weight gain",
+                    "Bradycardia"
+                ],
+                "correctAnswer": 0,
+                "explanation": "Sickle cell crisis: Severe pain (vaso-occlusive), fever, swelling. Treat with hydration, oxygen, pain management. Avoid triggers (dehydration, cold, stress)."
+            },
+            {
+                "id": 15,
+                "text": "A client with GI bleeding has black, tarry stools. This indicates:",
+                "options": [
+                    "Lower GI bleeding",
+                    "Upper GI bleeding",
+                    "Normal finding",
+                    "Hemorrhoids"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Melena (black, tarry stools) = upper GI bleeding. Bright red blood (hematochezia) = lower GI bleeding. Monitor H/H, vitals, prepare for endoscopy."
+            },
+            {
+                "id": 16,
+                "text": "A client with thrombocytopenia should avoid:",
+                "options": [
+                    "Soft toothbrush",
+                    "IM injections and aspirin",
+                    "Gentle activities",
+                    "All medications"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Thrombocytopenia (low platelets): Bleeding precautions. Avoid IM injections, aspirin, NSAIDs, razors. Use soft toothbrush, electric razor."
+            },
+            {
+                "id": 17,
+                "text": "Which hepatitis is transmitted through contaminated food/water?",
+                "options": [
+                    "Hepatitis A",
+                    "Hepatitis B",
+                    "Hepatitis C",
+                    "Hepatitis D"
+                ],
+                "correctAnswer": 0,
+                "explanation": "Hepatitis A: Fecal-oral (food/water). Hepatitis B, C, D: Bloodborne (needles, sex, blood products). Hepatitis E: Fecal-oral (rare in US)."
+            },
+            {
+                "id": 18,
+                "text": "A client with anaphylaxis should receive:",
+                "options": [
+                    "Oral antihistamine",
+                    "Epinephrine IM immediately",
+                    "Inhaled bronchodilator only",
+                    "IV fluids only"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Anaphylaxis: Epinephrine IM (EpiPen) immediately. Also give oxygen, IV fluids, antihistamines, corticosteroids. Monitor airway."
+            },
+            {
+                "id": 19,
+                "text": "A client with hemophilia should avoid:",
+                "options": [
+                    "Contact sports",
+                    "All exercise",
+                    "Vegetables",
+                    "Water"
+                ],
+                "correctAnswer": 0,
+                "explanation": "Hemophilia: Clotting factor deficiency. Avoid contact sports, aspirin, IM injections. Give factor replacement for bleeding. Teach joint protection."
+            },
+            {
+                "id": 20,
+                "text": "Which is a sign of liver failure?",
+                "options": [
+                    "Jaundice and confusion",
+                    "Hypertension",
+                    "Hyperglycemia",
+                    "Tachycardia only"
+                ],
+                "correctAnswer": 0,
+                "explanation": "Liver failure: Jaundice, confusion (hepatic encephalopathy), ascites, bleeding (low clotting factors), asterixis (flapping tremor)."
+            },
+            {
+                "id": 21,
+                "text": "A client is receiving a blood transfusion. What is the maximum time for one unit?",
+                "options": [
+                    "1 hour",
+                    "2 hours",
+                    "4 hours",
+                    "8 hours"
+                ],
+                "correctAnswer": 2,
+                "explanation": "Transfuse blood over 2-4 hours maximum (bacterial growth risk after 4 hours). Monitor vitals before, 15 min after start, then per protocol."
+            },
+            {
+                "id": 22,
+                "text": "A client with diverticulitis should eat:",
+                "options": [
+                    "High-fiber diet during acute phase",
+                    "Low-fiber diet during acute phase, then high-fiber",
+                    "No restrictions",
+                    "Liquid diet permanently"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Acute diverticulitis: Low-fiber or clear liquids, antibiotics. After healing: High-fiber diet to prevent recurrence. Avoid nuts/seeds (controversial)."
+            },
+            {
+                "id": 23,
+                "text": "Which medication treats pernicious anemia?",
+                "options": [
+                    "Iron supplements",
+                    "Vitamin B12 injections",
+                    "Folic acid",
+                    "Vitamin C"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Pernicious anemia requires B12 injections (oral B12 not absorbed without intrinsic factor). Monitor for neurological improvement."
+            },
+            {
+                "id": 24,
+                "text": "A client with esophageal varices should avoid:",
+                "options": [
+                    "Soft foods",
+                    "Straining and alcohol",
+                    "Liquids",
+                    "All medications"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Esophageal varices (from cirrhosis): Avoid straining, alcohol, aspirin, NSAIDs. Risk of life-threatening bleeding. May need banding or sclerotherapy."
+            },
+            {
+                "id": 25,
+                "text": "Which is a sign of allergic transfusion reaction?",
+                "options": [
+                    "Hives and itching",
+                    "Fever and chills",
+                    "Dark urine",
+                    "Hypotension"
+                ],
+                "correctAnswer": 0,
+                "explanation": "Allergic reaction: Hives, itching, flushing. Stop transfusion, give antihistamine. Can usually resume slowly. Different from hemolytic reaction."
+            },
+            {
+                "id": 26,
+                "text": "A client with hepatic encephalopathy should:",
+                "options": [
+                    "Increase protein intake",
+                    "Restrict protein",
+                    "Increase sodium",
+                    "Stop all medications"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Hepatic encephalopathy: Restrict protein (ammonia buildup), give lactulose (reduces ammonia), monitor mental status. Asterixis is classic sign."
+            },
+            {
+                "id": 27,
+                "text": "Which type of anemia has sickle-shaped RBCs?",
+                "options": [
+                    "Iron-deficiency",
+                    "Pernicious",
+                    "Sickle cell anemia",
+                    "Aplastic"
+                ],
+                "correctAnswer": 2,
+                "explanation": "Sickle cell: Genetic disorder, RBCs sickle when deoxygenated. Causes pain crises, organ damage. Treat with hydration, oxygen, pain management, hydroxyurea."
+            },
+            {
+                "id": 28,
+                "text": "A client with pancreatitis should be NPO because:",
+                "options": [
+                    "Food stimulates pancreatic enzymes",
+                    "Improves appetite",
+                    "Prevents diabetes",
+                    "No reason"
+                ],
+                "correctAnswer": 0,
+                "explanation": "Pancreatitis: NPO to rest pancreas (food stimulates enzyme secretion). Give IV fluids, pain management, NG tube if vomiting. Monitor for complications."
+            },
+            {
+                "id": 29,
+                "text": "Which precaution is needed for HIV-positive client?",
+                "options": [
+                    "Airborne precautions",
+                    "Standard precautions",
+                    "Droplet precautions",
+                    "Contact precautions"
+                ],
+                "correctAnswer": 1,
+                "explanation": "HIV: Standard precautions (not transmitted by casual contact). Bloodborne pathogen. Use gloves for blood/body fluids. Educate about transmission prevention."
+            },
+            {
+                "id": 30,
+                "text": "A client with DIC (disseminated intravascular coagulation) will have:",
+                "options": [
+                    "Increased clotting factors",
+                    "Both bleeding and clotting",
+                    "No symptoms",
+                    "Hypertension only"
+                ],
+                "correctAnswer": 1,
+                "explanation": "DIC: Widespread clotting uses up clotting factors, causing bleeding. Treat underlying cause, give blood products, monitor labs (PT, PTT, platelets, fibrinogen)."
+            },
+            {
+                "id": 31,
+                "text": "A client with gastroesophageal reflux (GERD) should:",
+                "options": [
+                    "Lie down after meals",
+                    "Elevate head of bed and avoid late meals",
+                    "Eat large meals",
+                    "Drink alcohol freely"
+                ],
+                "correctAnswer": 1,
+                "explanation": "GERD: Elevate HOB 30\u00b0, small frequent meals, avoid triggers (caffeine, alcohol, chocolate, spicy foods), don't eat 2-3 hours before bed."
+            },
+            {
+                "id": 32,
+                "text": "Which is a sign of iron-deficiency anemia?",
+                "options": [
+                    "Glossitis and koilonychia (spoon nails)",
+                    "Jaundice",
+                    "Petechiae",
+                    "Hematuria"
+                ],
+                "correctAnswer": 0,
+                "explanation": "Iron-deficiency: Pallor, fatigue, glossitis (sore tongue), koilonychia (spoon-shaped nails), pica (craving ice/dirt). Most common anemia."
+            },
+            {
+                "id": 33,
+                "text": "A client with inflammatory bowel disease should avoid:",
+                "options": [
+                    "High-fiber during flare-ups",
+                    "All foods",
+                    "Water",
+                    "Medications"
+                ],
+                "correctAnswer": 0,
+                "explanation": "IBD flare: Low-fiber, low-residue diet. Between flares: Balanced diet, avoid individual triggers. Monitor for complications (obstruction, perforation)."
+            },
+            {
+                "id": 34,
+                "text": "Which lab value indicates hemolytic anemia?",
+                "options": [
+                    "Elevated bilirubin",
+                    "Low bilirubin",
+                    "High calcium",
+                    "Low sodium"
+                ],
+                "correctAnswer": 0,
+                "explanation": "Hemolytic anemia: RBC destruction causes elevated bilirubin (jaundice), elevated LDH, decreased haptoglobin. Causes: autoimmune, transfusion reaction, sickle cell."
+            },
+            {
+                "id": 35,
+                "text": "A client with cholecystitis reports pain in which area?",
+                "options": [
+                    "Left lower quadrant",
+                    "Right upper quadrant",
+                    "Suprapubic",
+                    "Left shoulder"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Cholecystitis (gallbladder inflammation): Right upper quadrant pain, especially after fatty meals. May radiate to right shoulder. Treat with NPO, antibiotics, possible cholecystectomy."
+            }
+        ]
+    },
+    {
         "id": 12,
         "title": "GU, Musculoskeletal & Integumentary",
         "description": "UTI, Kidney Disease, Fractures, Arthritis, Burns, Wounds",
@@ -13190,6 +13379,435 @@
                 ],
                 "correctAnswer": 1,
                 "explanation": "Always identify and treat underlying cause of electrolyte imbalances (medications, disease, diet). Correct imbalances cautiously to avoid complications."
+            }
+        ]
+    },
+    {
+        "id": 14,
+        "title": "Multi-System & OB Emergencies",
+        "description": "Sepsis, Shock, Preeclampsia, Eclampsia, Placental Emergencies",
+        "questionCount": 35,
+        "color": "from-blue-600 to-indigo-900",
+        "questions": [
+            {
+                "id": 1,
+                "text": "A client has BP 88/50, HR 120, cool clammy skin after blood loss. This is:",
+                "options": [
+                    "Cardiogenic shock",
+                    "Hypovolemic shock",
+                    "Septic shock",
+                    "Anaphylactic shock"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Hypovolemic shock: Fluid/blood loss causes decreased BP, tachycardia, cool/clammy skin. Give IV fluids, blood products, treat bleeding source."
+            },
+            {
+                "id": 2,
+                "text": "A pregnant client has BP 160/110, 3+ proteinuria, and headache. This indicates:",
+                "options": [
+                    "Normal pregnancy",
+                    "Preeclampsia",
+                    "Gestational diabetes",
+                    "Placenta previa"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Preeclampsia: HTN (>140/90) after 20 weeks, proteinuria, edema. Severe: BP >160/110, headache, visual changes, epigastric pain. Give magnesium sulfate, deliver baby."
+            },
+            {
+                "id": 3,
+                "text": "Which type of shock has warm, flushed skin initially?",
+                "options": [
+                    "Hypovolemic",
+                    "Cardiogenic",
+                    "Septic",
+                    "Neurogenic"
+                ],
+                "correctAnswer": 2,
+                "explanation": "Septic shock (early/warm phase): Warm, flushed skin, bounding pulses, fever. Later (cold phase): Cool, clammy skin. Give antibiotics, fluids, vasopressors."
+            },
+            {
+                "id": 4,
+                "text": "A client with preeclampsia is receiving magnesium sulfate. Which finding indicates toxicity?",
+                "options": [
+                    "Respiratory rate 10",
+                    "Deep tendon reflexes 2+",
+                    "Urine output 40 mL/hr",
+                    "BP 140/90"
+                ],
+                "correctAnswer": 0,
+                "explanation": "Magnesium toxicity: Respiratory rate <12, absent DTRs, decreased urine output. Antidote: Calcium gluconate. Therapeutic level: 4-7 mEq/L."
+            },
+            {
+                "id": 5,
+                "text": "A client in septic shock needs which intervention first?",
+                "options": [
+                    "Broad-spectrum antibiotics",
+                    "Blood cultures, then antibiotics within 1 hour",
+                    "Surgery",
+                    "Discharge"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Sepsis bundle: Blood cultures first, then broad-spectrum antibiotics within 1 hour, IV fluids, monitor lactate, vasopressors if needed."
+            },
+            {
+                "id": 6,
+                "text": "A pregnant client has painless bright red vaginal bleeding. This suggests:",
+                "options": [
+                    "Placenta previa",
+                    "Abruptio placentae",
+                    "Normal labor",
+                    "Preeclampsia"
+                ],
+                "correctAnswer": 0,
+                "explanation": "Placenta previa: Painless bright red bleeding (placenta covers cervix). No vaginal exams! Bed rest, C-section delivery. Abruptio: Painful dark bleeding."
+            },
+            {
+                "id": 7,
+                "text": "Which is a sign of cardiogenic shock?",
+                "options": [
+                    "Warm, flushed skin",
+                    "Pulmonary edema and decreased cardiac output",
+                    "Bradycardia",
+                    "Hypertension"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Cardiogenic shock: Heart can't pump (MI, CHF). Pulmonary edema, decreased CO, cool/clammy skin. Treat with inotropes, diuretics, possible mechanical support."
+            },
+            {
+                "id": 8,
+                "text": "A client with eclampsia is having a seizure. What is the priority?",
+                "options": [
+                    "Restrain the client",
+                    "Protect from injury, turn to side, give oxygen",
+                    "Insert tongue blade",
+                    "Give oral medications"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Eclampsia (seizure from preeclampsia): Protect from injury, turn to side, oxygen, magnesium sulfate IV. Deliver baby after stabilization."
+            },
+            {
+                "id": 9,
+                "text": "Which type of shock results from spinal cord injury?",
+                "options": [
+                    "Hypovolemic",
+                    "Cardiogenic",
+                    "Neurogenic",
+                    "Septic"
+                ],
+                "correctAnswer": 2,
+                "explanation": "Neurogenic shock: Spinal cord injury causes loss of sympathetic tone. Hypotension, bradycardia, warm/dry skin. Treat with fluids, vasopressors, atropine."
+            },
+            {
+                "id": 10,
+                "text": "A pregnant client has severe abdominal pain, rigid abdomen, and dark vaginal bleeding. This suggests:",
+                "options": [
+                    "Placenta previa",
+                    "Abruptio placentae",
+                    "Normal labor",
+                    "Ectopic pregnancy"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Abruptio placentae: Placental separation causes severe pain, rigid/board-like abdomen, dark bleeding, fetal distress. Emergency C-section, monitor for DIC."
+            },
+            {
+                "id": 11,
+                "text": "What is the first sign of shock?",
+                "options": [
+                    "Decreased level of consciousness",
+                    "Hypotension",
+                    "Tachycardia",
+                    "Oliguria"
+                ],
+                "correctAnswer": 2,
+                "explanation": "Early shock: Tachycardia (compensatory), restlessness, cool extremities. Late shock: Hypotension, decreased LOC, oliguria. Treat early!"
+            },
+            {
+                "id": 12,
+                "text": "A postpartum client has heavy bleeding and a boggy uterus. What should the nurse do first?",
+                "options": [
+                    "Call the provider only",
+                    "Massage the fundus",
+                    "Give pain medication",
+                    "Discharge the client"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Postpartum hemorrhage: Massage fundus to stimulate contraction, empty bladder, give oxytocin, monitor vitals. Boggy uterus = uterine atony (most common cause)."
+            },
+            {
+                "id": 13,
+                "text": "Which lab value indicates SIRS (Systemic Inflammatory Response Syndrome)?",
+                "options": [
+                    "WBC >12,000 or <4,000",
+                    "Glucose <70",
+                    "Potassium >5.0",
+                    "Calcium <8.0"
+                ],
+                "correctAnswer": 0,
+                "explanation": "SIRS criteria (2+ needed): Temp >38\u00b0C or <36\u00b0C, HR >90, RR >20, WBC >12,000 or <4,000. With infection = sepsis."
+            },
+            {
+                "id": 14,
+                "text": "A client with preeclampsia should be monitored for:",
+                "options": [
+                    "Hyperglycemia",
+                    "HELLP syndrome",
+                    "Hypotension",
+                    "Bradycardia"
+                ],
+                "correctAnswer": 1,
+                "explanation": "HELLP syndrome: Hemolysis, Elevated Liver enzymes, Low Platelets. Severe complication of preeclampsia. Symptoms: RUQ pain, nausea, malaise. Deliver baby."
+            },
+            {
+                "id": 15,
+                "text": "Which position is best for a client in shock?",
+                "options": [
+                    "Trendelenburg",
+                    "Supine with legs elevated 20-30\u00b0",
+                    "High Fowler's",
+                    "Prone"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Shock position: Supine with legs elevated 20-30\u00b0 (modified Trendelenburg) improves venous return. Full Trendelenburg can impair breathing."
+            },
+            {
+                "id": 16,
+                "text": "A laboring client has the umbilical cord protruding from vagina. What is the priority?",
+                "options": [
+                    "Push cord back in",
+                    "Elevate hips, cover cord with sterile saline gauze, prepare for C-section",
+                    "Continue labor",
+                    "Apply dry gauze"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Prolapsed cord: Elevate hips (knee-chest or Trendelenburg), cover cord with sterile saline gauze, don't push back, emergency C-section. Relieve pressure on cord."
+            },
+            {
+                "id": 17,
+                "text": "Which is a sign of anaphylactic shock?",
+                "options": [
+                    "Bradycardia",
+                    "Urticaria, angioedema, bronchospasm",
+                    "Hypertension",
+                    "Decreased respirations"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Anaphylactic shock: Urticaria, angioedema, bronchospasm, hypotension. Give epinephrine IM immediately, oxygen, IV fluids, antihistamines, corticosteroids."
+            },
+            {
+                "id": 18,
+                "text": "A client with severe preeclampsia should be in which environment?",
+                "options": [
+                    "Bright, stimulating room",
+                    "Quiet, darkened room",
+                    "Noisy hallway",
+                    "Crowded area"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Severe preeclampsia: Quiet, darkened room to prevent seizures. Limit stimulation, monitor BP/reflexes, magnesium sulfate, prepare for delivery."
+            },
+            {
+                "id": 19,
+                "text": "What is the goal of shock treatment?",
+                "options": [
+                    "Decrease cardiac output",
+                    "Restore tissue perfusion and oxygenation",
+                    "Lower blood pressure",
+                    "Decrease heart rate"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Shock treatment goals: Restore tissue perfusion, maintain BP, adequate urine output (30-50 mL/hr), normal lactate, mental status. Treat underlying cause."
+            },
+            {
+                "id": 20,
+                "text": "A postpartum client has fever, foul-smelling lochia, and uterine tenderness. This indicates:",
+                "options": [
+                    "Normal postpartum",
+                    "Endometritis",
+                    "Mastitis",
+                    "Preeclampsia"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Endometritis: Uterine infection. Fever, foul lochia, uterine tenderness. Give broad-spectrum antibiotics. Risk factors: C-section, prolonged rupture of membranes."
+            },
+            {
+                "id": 21,
+                "text": "Which medication is used to treat septic shock hypotension?",
+                "options": [
+                    "Insulin",
+                    "Norepinephrine (vasopressor)",
+                    "Furosemide",
+                    "Acetaminophen"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Septic shock: Norepinephrine (first-line vasopressor) if hypotensive despite fluids. Also: antibiotics, IV fluids (30 mL/kg), monitor lactate."
+            },
+            {
+                "id": 22,
+                "text": "A client at 32 weeks gestation has contractions. Which medication stops labor?",
+                "options": [
+                    "Oxytocin",
+                    "Terbutaline (tocolytic)",
+                    "Magnesium sulfate",
+                    "Insulin"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Tocolytics (terbutaline, nifedipine) stop preterm labor. Magnesium sulfate also used. Give corticosteroids (betamethasone) for fetal lung maturity."
+            },
+            {
+                "id": 23,
+                "text": "Which is a late sign of shock?",
+                "options": [
+                    "Tachycardia",
+                    "Restlessness",
+                    "Hypotension",
+                    "Cool extremities"
+                ],
+                "correctAnswer": 2,
+                "explanation": "Late shock signs: Hypotension, decreased LOC, oliguria, metabolic acidosis. Early signs: Tachycardia, restlessness, cool extremities. Intervene early!"
+            },
+            {
+                "id": 24,
+                "text": "A laboring client has fetal head delivered but shoulders stuck. This is:",
+                "options": [
+                    "Normal delivery",
+                    "Shoulder dystocia",
+                    "Breech presentation",
+                    "Prolapsed cord"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Shoulder dystocia: Shoulders stuck after head delivery. McRoberts maneuver (flex hips), suprapubic pressure, call for help. Risk: large baby, maternal diabetes."
+            },
+            {
+                "id": 25,
+                "text": "Which organ fails first in MODS (Multiple Organ Dysfunction Syndrome)?",
+                "options": [
+                    "Heart",
+                    "Lungs",
+                    "Kidneys",
+                    "Brain"
+                ],
+                "correctAnswer": 1,
+                "explanation": "MODS: Progressive organ failure from severe illness/sepsis. Lungs often fail first (ARDS), then kidneys, liver, heart. High mortality. Supportive care."
+            },
+            {
+                "id": 26,
+                "text": "A pregnant client has BP 170/115 and is seeing spots. What medication is given?",
+                "options": [
+                    "Insulin",
+                    "Magnesium sulfate",
+                    "Oxytocin",
+                    "Furosemide"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Severe preeclampsia: Magnesium sulfate prevents seizures. Also: antihypertensives (hydralazine, labetalol), monitor reflexes/respirations, deliver baby."
+            },
+            {
+                "id": 27,
+                "text": "Which is a sign of distributive shock?",
+                "options": [
+                    "Decreased cardiac output",
+                    "Vasodilation and decreased SVR",
+                    "Fluid overload",
+                    "Hypertension"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Distributive shock (septic, anaphylactic, neurogenic): Vasodilation, decreased SVR, relative hypovolemia. Treat with fluids, vasopressors, address cause."
+            },
+            {
+                "id": 28,
+                "text": "A postpartum client has saturated 2 pads in 30 minutes. This is:",
+                "options": [
+                    "Normal",
+                    "Postpartum hemorrhage",
+                    "Infection",
+                    "Preeclampsia"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Postpartum hemorrhage: >500 mL vaginal, >1000 mL C-section, or saturating pad in <1 hour. Massage fundus, oxytocin, monitor vitals, possible surgery."
+            },
+            {
+                "id": 29,
+                "text": "Which lab value indicates inadequate tissue perfusion in shock?",
+                "options": [
+                    "Elevated lactate",
+                    "Low glucose",
+                    "High calcium",
+                    "Low sodium"
+                ],
+                "correctAnswer": 0,
+                "explanation": "Elevated lactate (>2 mmol/L) indicates anaerobic metabolism from poor tissue perfusion. Monitor lactate clearance to assess shock treatment effectiveness."
+            },
+            {
+                "id": 30,
+                "text": "A client with preeclampsia has hyperreflexia and clonus. This indicates:",
+                "options": [
+                    "Improvement",
+                    "Increased seizure risk",
+                    "Normal finding",
+                    "Magnesium toxicity"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Hyperreflexia and clonus indicate CNS irritability and increased seizure risk. Give magnesium sulfate, monitor closely, prepare for possible eclampsia."
+            },
+            {
+                "id": 31,
+                "text": "Which is the most common cause of postpartum hemorrhage?",
+                "options": [
+                    "Uterine atony",
+                    "Lacerations",
+                    "Retained placenta",
+                    "Coagulation disorders"
+                ],
+                "correctAnswer": 0,
+                "explanation": "Uterine atony (70%): Boggy uterus, heavy bleeding. Massage fundus, empty bladder, oxytocin, methergine. Other causes: lacerations, retained placenta, coagulopathy."
+            },
+            {
+                "id": 32,
+                "text": "A client in shock has urine output 15 mL/hr. This indicates:",
+                "options": [
+                    "Adequate perfusion",
+                    "Inadequate renal perfusion",
+                    "Overhydration",
+                    "Normal finding"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Oliguria (<30 mL/hr) indicates inadequate renal perfusion. Goal: 30-50 mL/hr. Monitor hourly urine output, give fluids, vasopressors if needed."
+            },
+            {
+                "id": 33,
+                "text": "A pregnant client has gestational diabetes. The baby is at risk for:",
+                "options": [
+                    "Hypoglycemia after birth",
+                    "Hyperglycemia after birth",
+                    "Bradycardia",
+                    "Hypertension"
+                ],
+                "correctAnswer": 0,
+                "explanation": "Maternal diabetes \u2192 fetal hyperinsulinemia. After birth, baby loses maternal glucose \u2192 hypoglycemia. Monitor glucose, feed early, possible IV dextrose. Also risk: macrosomia, shoulder dystocia."
+            },
+            {
+                "id": 34,
+                "text": "Which is a contraindication for magnesium sulfate?",
+                "options": [
+                    "Hypertension",
+                    "Absent deep tendon reflexes",
+                    "Proteinuria",
+                    "Edema"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Magnesium contraindications: Absent DTRs, respiratory rate <12, renal failure, myasthenia gravis. Monitor reflexes, respirations, urine output. Have calcium gluconate ready."
+            },
+            {
+                "id": 35,
+                "text": "A client in shock is receiving IV fluids. Which finding indicates fluid overload?",
+                "options": [
+                    "Dry mucous membranes",
+                    "Crackles and JVD",
+                    "Hypotension",
+                    "Tachycardia"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Fluid overload: Crackles, JVD, dyspnea, edema. Monitor lung sounds, daily weights, I&O. May need diuretics. Balance fluid resuscitation with risk of overload."
             }
         ]
     },

@@ -2573,232 +2573,157 @@
     {
         "episodeId": 14,
         "title": "Episode 14 Flashcards",
-        "description": "Flashcards for Episode 14",
+        "description": "Sepsis, OB Emergencies & Geriatrics",
         "cards": [
             {
                 "id": 1,
-                "front": "What is the primary difference between bacteremia and septicemia?",
-                "back": "\"Bacteremia is the presence of bacteria in the blood, while septicemia is a systemic infection caused by pathogens (bacteria or fungi) being present in the blood.\""
+                "front": "What are the criteria for SIRS (Systemic Inflammatory Response Syndrome)?",
+                "back": "Need 2 of 4: Temp >38 or <36, HR >90, RR >20 (or PaCO2 <32), WBC >12k or <4k or >10% bands."
             },
             {
                 "id": 2,
-                "front": "Systemic Inflammatory Response Syndrome (SIRS) is a generalized inflammatory response that can be caused by infectious or non-infectious agents. Name two of the four diagnostic criteria for SIRS.",
-                "back": "\"Any two of the following: Elevated/depressed temperature (>38\u00b0C or <36\u00b0C), tachycardia (>90 bpm), tachypnea (>20 breaths/min), or leukocytosis/leukopenia (>12,000 or <4000).\""
+                "front": "What defines Septic Shock?",
+                "back": "Sepsis with Refractory Hypotension (BP stays low despite fluids) necessitating Vasopressors."
             },
             {
                 "id": 3,
-                "front": "How is sepsis defined in relation to SIRS?",
-                "back": "\"Sepsis is the presence of infection, either locally or systemically, in which there is a generalized life-threatening inflammatory response (SIRS).\""
+                "front": "What initiates DIC (Disseminated Intravascular Coagulation) in sepsis?",
+                "back": "Widespread activation of clotting cascades uses up clotting factors, leading to simultaneous clotting and hemorrhage."
             },
             {
                 "id": 4,
-                "front": "\"The progression from sepsis to _____ is indicated by organ dysfunction",
-                "back": "hypotension, and hypoperfusion.\",severe sepsis"
+                "front": "What is the First-Line Vasopressor for Septic Shock?",
+                "back": "Norepinephrine (Levophed)."
             },
             {
                 "id": 5,
-                "front": "What is the defining characteristic of septic shock?",
-                "back": "\"It is a progression from severe sepsis in which refractory hypotension occurs despite treatment, requiring vasopressors to maintain blood pressure.\""
+                "front": "What is the priority timeframe for antibiotics in Sepsis?",
+                "back": "Within the first hour (after cultures are drawn)."
             },
             {
                 "id": 6,
-                "front": "\"What condition is considered the most common cause of sepsis-related death",
-                "back": "characterized by cardiac function becoming depressed and the potential for ARDS and DIC?\",Multi-organ dysfunction syndrome (MODS)."
+                "front": "Why might an elderly patient with sepsis NOT have a fever?",
+                "back": "Blunted immune response due to aging (immunosenescence)."
             },
             {
                 "id": 7,
-                "front": "\"In cardiogenic shock",
-                "back": "what are the expected states of preload, cardiac output (CO), and systemic vascular resistance (SVR)?\",\"Preload is increased, cardiac output is decreased, and systemic vascular resistance is increased.\""
+                "front": "What is the key sign of Delirium?",
+                "back": "Acute, fluctuating change in mental status (often the first sign of infection in elderly)."
             },
             {
                 "id": 8,
-                "front": "\"Septic shock",
-                "back": "anaphylactic shock, and neurogenic shock are all sub-types of what main category of shock?\",Distributive shock."
+                "front": "Placenta Previa presents with:",
+                "back": "Painless Bright Red Vaginal Bleeding."
             },
             {
                 "id": 9,
-                "front": "What is the primary cause of septic shock?",
-                "back": "\"Toxins produced by bacteria and cytokines that the body produces in response to severe infection, resulting in a complex syndrome of disorders.\""
+                "front": "Abruptio Placentae presents with:",
+                "back": "Rigid/Board-like Uterus and Painful Dark Red Bleeding."
             },
             {
                 "id": 10,
-                "front": "What is the primary treatment for septic shock to address the underlying cause?",
-                "back": "\"Empiric IV antibiotic therapy, which may be changed once cultures and sensitivities are known, and removing the source of infection.\""
+                "front": "What is contraindicated in Placenta Previa?",
+                "back": "Vaginal Exam (Digital Exam)."
             },
             {
                 "id": 11,
-                "front": "A type of distributive shock that occurs from trauma resulting in acute spinal cord injury is known as _____.",
-                "back": "neurogenic shock"
+                "front": "What is the #1 cause of Postpartum Hemorrhage?",
+                "back": "Uterine Atony (Boggy Uterus)."
             },
             {
                 "id": 12,
-                "front": "\"What is the classic",
-                "back": "yet not universal, presentation of vital signs in neurogenic shock?\",Hypotension and bradycardia."
+                "front": "What is the triad of HELLP Syndrome?",
+                "back": "Hemolysis, Elevated Liver Enzymes, Low Platelets."
             },
             {
                 "id": 13,
-                "front": "What type of shock occurs when there is inadequate intravascular fluid?",
-                "back": "Hypovolemic shock."
+                "front": "Why is Magnesium Sulfate given in Preeclampsia?",
+                "back": "To prevent Seizures (Neuroprotection), NOT to lower BP."
             },
             {
                 "id": 14,
-                "front": "\"According to the classification system",
-                "back": "what percentage of total circulating volume (TCV) is lost in Class III hypovolemic shock?\",\"30-40% of TCV, or 1500-2000 mL.\""
+                "front": "What is the antidote for Magnesium Toxicity?",
+                "back": "Calcium Gluconate."
             },
             {
                 "id": 15,
-                "front": "What is the immediate priority in treating anaphylactic shock?",
-                "back": "Administering epinephrine (IM or solution)."
+                "front": "What is the first sign of Magnesium Toxicity?",
+                "back": "Loss of Deep Tendon Reflexes (DTRs)."
             },
             {
                 "id": 16,
-                "front": "What is the term for the premature separation of the placenta from the wall of the uterus?",
-                "back": "Abruptio placentae."
+                "front": "Neurogenic Shock is characterized by Hypotension and:",
+                "back": "Bradycardia (Low HR)."
             },
             {
                 "id": 17,
-                "front": "\"What is the term for when the placenta implants over the cervical opening",
-                "back": "often presenting with painless bleeding after the 20th week of gestation?\",Placenta previa."
+                "front": "Severe Sepsis includes organ dysfunction. Name a sign.",
+                "back": "Oliguria (<0.5 ml/kg/hr), Altered Mental Status, or Hypotension."
             },
             {
                 "id": 18,
-                "front": "Why should a digital or speculum vaginal examination be avoided if placenta previa is suspected?",
-                "back": "It may cause hemorrhage."
+                "front": "What drug treats Uterine Atony?",
+                "back": "Oxytocin (Pitocin) or Methylergonovine (Methergine)."
             },
             {
                 "id": 19,
-                "front": "What is an ectopic pregnancy?",
-                "back": "\"A pregnancy where the fertilized ovum implants outside the uterus, most commonly in a fallopian tube.\""
+                "front": "Epigastric pain in a pregnant patient warns of:",
+                "back": "Severe Preeclampsia/HELLP (Liver swelling)."
             },
             {
                 "id": 20,
-                "front": "What is the defining feature that differentiates eclampsia from preeclampsia?",
-                "back": "The presence of seizures."
+                "front": "Methergine is contraindicated in:",
+                "back": "Hypertension (it causes vasoconstriction)."
             },
             {
                 "id": 21,
-                "front": "What does the acronym HELLP stand for in the context of a severe variant of preeclampsia?",
-                "back": "\"Hemolysis, elevated liver enzymes (AST and ALT), and low platelets.\""
+                "front": "What is the priority for a Prolapsed Cord?",
+                "back": "Relieve pressure on the cord (knee-chest position) and prepare for stat C-Section."
             },
             {
                 "id": 22,
-                "front": "What is a prolapsed umbilical cord?",
-                "back": "\"An emergency that occurs when the umbilical cord precedes the presenting fetal part or, in some cases, is adjacent to the presenting part.\""
+                "front": "Variable Decelerations on FHR indicate:",
+                "back": "Cord Compression."
             },
             {
                 "id": 23,
-                "front": "What is the immediate intervention for a prolapsed umbilical cord to relieve pressure on the cord?",
-                "back": "Manually lift the head or presenting part off the cord with a gloved hand."
+                "front": "Late Decelerations on FHR indicate:",
+                "back": "Placental Insufficiency."
             },
             {
                 "id": 24,
-                "front": "\"In this type of breech presentation",
-                "back": "the hips are flexed and knees extended with buttocks presenting.\",Frank breech."
+                "front": "What happens in Distributive Shock?",
+                "back": "Massive Vasodilation ('The pipes get big')."
             },
             {
                 "id": 25,
-                "front": "Postpartum hemorrhage is defined as blood loss greater than _____ for a vaginal delivery or greater than _____ for a Cesarean section occurring within 24 hours.",
-                "back": "\"500 mL; 1,000 mL\""
+                "front": "What is the target MAP (Mean Arterial Pressure) in sepsis?",
+                "back": "Greater than 65 mmHg."
             },
             {
                 "id": 26,
-                "front": "What is the most common cause of postpartum hemorrhage?",
-                "back": "\"Uterine atony, which is the failure of the uterus to contract adequately.\""
+                "front": "What defines 'Frailty' in the elderly?",
+                "back": "Unintentional weight loss, weakness, exhaustion, and slowed activity."
             },
             {
                 "id": 27,
-                "front": "Define the geriatric syndrome of frailty.",
-                "back": "\"A syndrome of weight loss, weakness, strength, and speed that results from the natural decline of aging.\""
+                "front": "Is Delirium permanent?",
+                "back": "No, it is acute and reversible. Dementia is permanent."
             },
             {
                 "id": 28,
-                "front": "\"What is the most common manifestation of any physical ailment amongst the elderly",
-                "back": "which may be an indication of other more serious issues?\",Delirium."
+                "front": "What is Polypharmacy?",
+                "back": "Use of multiple medications, increasing risk of adverse events and confusion."
             },
             {
                 "id": 29,
-                "front": "What is functional decline in the geriatric population?",
-                "back": "The diminished ability of an individual to carry out the necessary tasks of daily living."
+                "front": "Class IV Hemorrhage involves loss of:",
+                "back": ">40% of blood volume."
             },
             {
                 "id": 30,
-                "front": "How does an elderly patient's immune system change regarding T-cells and antibody production?",
-                "back": "\"The number of T-cells is stable, but they do not work as well, and it is harder for an older patient to make antibodies.\""
-            },
-            {
-                "id": 31,
-                "front": "How does REM sleep change with aging?",
-                "back": "REM sleep starts approximately 120 minutes after going to sleep (instead of 90) and happens in 3-4 evenly spread-out increments (instead of 5-6)."
-            },
-            {
-                "id": 32,
-                "front": "\"_____ incontinence is caused by increased intra-abdominal pressure from sneezing",
-                "back": "coughing, laughing, or pregnancy.\",Stress urinary incontinence (SUI)"
-            },
-            {
-                "id": 33,
-                "front": "\"What is the cause of urge incontinence",
-                "back": "which is common in patients with Parkinson's, stroke, or Alzheimer's?\",Detrusor muscle spasms cause an urgent desire to urinate because of neurological impairment."
-            },
-            {
-                "id": 34,
-                "front": "What are two age-related changes in the respiratory system?",
-                "back": "\"Any two of: rib cage becomes more rigid, decreased lung elasticity, decreased ability for chest walls to expand, or breaths are not as deep and coughs are not as forceful.\""
-            },
-            {
-                "id": 35,
-                "front": "What is the primary concern for an elderly patient with chronic diarrhea?",
-                "back": "Dehydration."
-            },
-            {
-                "id": 36,
-                "front": "What are the most common sites for fractures in the elderly population due to poor vision and decreased strength?",
-                "back": "\"Hip, humerus, proximal femur and tibia, vertebrae, and pubis.\""
-            },
-            {
-                "id": 37,
-                "front": "What is the term for the age-related lens opacity behind the pupil that focuses light on the retina?",
-                "back": "Cataracts."
-            },
-            {
-                "id": 38,
-                "front": "How is peripheral hearing loss different from central hearing loss?",
-                "back": "\"Peripheral hearing loss results from when the ear canal is obstructed or impacted, while central hearing loss is the result of damage to the portion of the brain that is wired for hearing.\""
-            },
-            {
-                "id": 39,
-                "front": "What are the three most common comorbidity patterns among the geriatric population?",
-                "back": "Cardiovascular/metabolic disorders; Anxiety/depression/somatoform disorders and pain; and Neuropsychiatric disorders."
-            },
-            {
-                "id": 40,
-                "front": "\"Psychological responses to chronic disease are often based on general concepts of fear",
-                "back": "_____, and loss of control.\",self-esteem"
-            },
-            {
-                "id": 41,
-                "front": "What is the main physiological cause of distributive shock?",
-                "back": "Widespread vasodilation that results in decreased vascular tone and hypoperfusion of internal organs."
-            },
-            {
-                "id": 42,
-                "front": "What is the initial fluid resuscitation recommendation for septic shock?",
-                "back": "\"If access is available, 2 large bore catheters and central venous line; administer isotonic crystalloid every 5-10 minutes as needed for a total of 6-10 L.\""
-            },
-            {
-                "id": 43,
-                "front": "\"In managing hypertensive disorders of pregnancy",
-                "back": "what medication is typically administered to prevent seizures in patients with severe preeclampsia or eclampsia?\",Magnesium sulfate."
-            },
-            {
-                "id": 44,
-                "front": "An elderly patient's decreased ability to clear secretions effectively is due to which age-related change?",
-                "back": "Breaths and coughs are not as strong or forceful."
-            },
-            {
-                "id": 45,
-                "front": "\"In what type of shock is hypotension accompanied by warm",
-                "back": "dry skin due to loss of vascular tone?\",Neurogenic shock."
+                "front": "What does a 'Left Shift' indicate?",
+                "back": "Acute bacterial infection (immature neutrophils released)."
             }
         ]
     },

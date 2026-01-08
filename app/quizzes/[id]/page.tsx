@@ -5,6 +5,7 @@ import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import quizzes from '@/app/data/quizzes.json';
 import { useProgress } from '@/app/context/ProgressContext';
+import { useAchievements } from '@/app/context/AchievementContext';
 
 // Types for quiz progress
 interface QuizProgress {
@@ -46,7 +47,9 @@ export default function QuizRunnerPage({ params }: { params: Promise<{ id: strin
     const [quizCompleted, setQuizCompleted] = useState(false);
     const [attemptNumber, setAttemptNumber] = useState(1);
     const [bestScore, setBestScore] = useState(0);
+    const [quizStartTime] = useState(Date.now());
     const { saveQuizResult, getQuizResult } = useProgress();
+    const { updateStats, checkAndUnlockBadges } = useAchievements();
 
     if (!quiz) {
         return notFound();
@@ -80,8 +83,24 @@ export default function QuizRunnerPage({ params }: { params: Promise<{ id: strin
             setAttemptNumber(currentAttemptCount + 1);
             setBestScore(Math.max(currentBestScore, Math.round((score / quiz.questions.length) * 100)));
             saveQuizResult(quizId, score, quiz.questions.length);
+
+            // Update achievement stats
+            const quizDuration = (Date.now() - quizStartTime) / 1000; // in seconds
+            const currentHour = new Date().getHours();
+
+            updateStats({
+                questionsAnswered: quiz.questions.length,
+                quizzesCompleted: 1,
+                bestQuizScore: Math.max(currentBestScore, Math.round((score / quiz.questions.length) * 100)),
+                totalStudyTime: Math.round(quizDuration)
+            });
+
+            // Check for achievements
+            setTimeout(() => {
+                checkAndUnlockBadges();
+            }, 500);
         }
-    }, [quizCompleted, quizId, score, quiz.questions.length, saveQuizResult, currentAttemptCount, currentBestScore]);
+    }, [quizCompleted, quizId, score, quiz.questions.length, saveQuizResult, currentAttemptCount, currentBestScore, quizStartTime, updateStats, checkAndUnlockBadges]);
 
     const handleResumeQuiz = () => {
         if (savedProgress) {

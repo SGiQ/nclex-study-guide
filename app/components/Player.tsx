@@ -6,7 +6,7 @@ import { useLibrary } from '@/app/context/LibraryContext';
 import { useRef, useEffect, useState } from 'react';
 
 export default function Player() {
-    const { currentEpisode, isPlaying, setIsPlaying, togglePlay } = usePlayer();
+    const { currentEpisode, isPlaying, setIsPlaying, togglePlay, closePlayer } = usePlayer();
     const { saveItem, removeItem, isSaved } = useLibrary();
 
     const audioRef = useRef<HTMLAudioElement>(null);
@@ -122,18 +122,23 @@ export default function Player() {
             {/* Mini Player */}
             {!isExpanded && (
                 <div
-                    onClick={() => setIsExpanded(true)}
-                    className="fixed bottom-[74px] left-2 right-2 z-40 bg-[rgba(28,28,30,0.6)] backdrop-blur-xl border border-white/10 rounded-lg p-2 cursor-pointer shadow-lg hover:bg-[rgba(44,44,46,0.7)] transition-colors"
+                    className="fixed bottom-[74px] left-2 right-2 z-40 bg-[rgba(28,28,30,0.6)] backdrop-blur-xl border border-white/10 rounded-lg p-2 shadow-lg hover:bg-[rgba(44,44,46,0.7)] transition-colors"
                 >
                     <div className="flex items-center gap-3">
                         {/* Thumbnail / Number */}
-                        <div className="h-10 w-10 rounded bg-indigo-600 flex flex-col items-center justify-center text-xs font-bold text-white shrink-0 leading-none">
+                        <div
+                            onClick={() => setIsExpanded(true)}
+                            className="h-10 w-10 rounded bg-indigo-600 flex flex-col items-center justify-center text-xs font-bold text-white shrink-0 leading-none cursor-pointer"
+                        >
                             <span className="text-[7px] opacity-70 uppercase tracking-wider">EP</span>
                             <span className="text-sm">{currentEpisode.order}</span>
                         </div>
 
                         {/* Text Info */}
-                        <div className="flex-1 min-w-0 flex flex-col justify-center">
+                        <div
+                            onClick={() => setIsExpanded(true)}
+                            className="flex-1 min-w-0 flex flex-col justify-center cursor-pointer"
+                        >
                             <h4 className="text-sm font-bold text-white leading-tight truncate">{currentEpisode.title}</h4>
                             <p className="text-[10px] text-indigo-400 font-medium uppercase tracking-wide">
                                 {isPlaying ? 'Now Playing' : 'Paused'}
@@ -141,8 +146,8 @@ export default function Player() {
                         </div>
 
                         {/* Controls */}
-                        <div className="flex items-center gap-3 pr-2">
-                            {/* Play/Pause Button - More Prominent */}
+                        <div className="flex items-center gap-2 pr-1">
+                            {/* Play/Pause Button */}
                             <button
                                 onClick={(e) => { e.stopPropagation(); togglePlay(); }}
                                 className="h-10 w-10 flex items-center justify-center rounded-full bg-indigo-600 text-white hover:bg-indigo-700 hover:scale-105 active:scale-95 transition-all shadow-lg"
@@ -152,6 +157,17 @@ export default function Player() {
                                 ) : (
                                     <svg className="w-5 h-5 fill-current ml-0.5" viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg>
                                 )}
+                            </button>
+
+                            {/* Close Button */}
+                            <button
+                                onClick={(e) => { e.stopPropagation(); closePlayer(); }}
+                                className="h-8 w-8 flex items-center justify-center rounded-full bg-white/10 text-white/70 hover:bg-red-500/20 hover:text-red-400 active:scale-95 transition-all"
+                                title="Close player"
+                            >
+                                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                                </svg>
                             </button>
                         </div>
                     </div>

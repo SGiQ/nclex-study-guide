@@ -74,8 +74,13 @@ export default function OnboardingPage() {
 
     const selectDiagnosticAnswer = (answer: number) => {
         setDiagnosticAnswers({ ...diagnosticAnswers, [currentQuizQuestion]: answer });
+        // Only move to next question if we haven't reached the end
         if (currentQuizQuestion < diagnosticQuestions.length - 1) {
             setCurrentQuizQuestion(currentQuizQuestion + 1);
+        } else {
+            // If this was the last question, move to the next question index
+            // to trigger the "All questions answered" view
+            setCurrentQuizQuestion(diagnosticQuestions.length);
         }
     };
 

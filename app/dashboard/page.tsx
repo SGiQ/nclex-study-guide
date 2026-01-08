@@ -5,6 +5,8 @@ import { useAuth } from '@/app/context/AuthContext';
 import { useStreak } from '@/app/context/StreakContext';
 import { useProgress } from '@/app/context/ProgressContext';
 import { useSRS } from '@/app/context/SRSContext';
+import { useAchievements } from '@/app/context/AchievementContext';
+import BadgeCard from '@/app/components/BadgeCard';
 import episodes from '@/app/data/episodes.json';
 import { useRouter } from 'next/navigation';
 
@@ -13,7 +15,16 @@ export default function DashboardPage() {
     const { currentStreak, hasCheckedInToday } = useStreak();
     const { quizResults } = useProgress();
     const { getDueCount, getMasteredCount, getLearningCount } = useSRS();
+    const { badges } = useAchievements();
     const router = useRouter();
+
+    // Achievement data
+    const unlockedBadges = badges.filter(b => b.unlocked);
+    const recentBadges = [...unlockedBadges]
+        .sort((a, b) => (b.unlockedAt || 0) - (a.unlockedAt || 0))
+        .slice(0, 3);
+    const totalBadges = badges.length;
+    const achievementProgress = Math.round((unlockedBadges.length / totalBadges) * 100);
 
     // Redirect if not logged in
     if (!user) {
@@ -90,6 +101,55 @@ export default function DashboardPage() {
 
             {/* Content */}
             <main className="mx-auto max-w-md px-5 pb-40 pt-4 stagger-1">
+
+                {/* Achievements Section */}
+                {unlockedBadges.length > 0 && (
+                    <div className="mb-6 animate-slide-up">
+                        <div className="flex items-center justify-between mb-2 px-1">
+                            <h2 className="text-sm font-bold text-yellow-400 flex items-center gap-2">
+                                <span>🏆</span> Recent Achievements
+                            </h2>
+                            <Link href="/achievements" className="text-[10px] uppercase font-bold text-yellow-400/70 tracking-wider hover:text-yellow-400">
+                                View All →
+                            </Link>
+                        </div>
+
+                        <Link
+                            href="/achievements"
+                            className="group block relative overflow-hidden rounded-2xl bg-gradient-to-br from-yellow-900/40 to-orange-900/40 border border-yellow-500/20 p-4 transition-all hover:border-yellow-500/40"
+                        >
+                            <div className="flex items-center justify-between mb-3">
+                                <div>
+                                    <div className="text-3xl font-black text-yellow-400">{unlockedBadges.length}/{totalBadges}</div>
+                                    <div className="text-xs text-yellow-400/70">Badges Unlocked</div>
+                                </div>
+                                <div className="h-12 w-12 rounded-xl bg-yellow-500/20 flex items-center justify-center text-yellow-400 group-hover:scale-110 transition-transform">
+                                    🏆
+                                </div>
+                            </div>
+
+                            {/* Progress Bar */}
+                            <div className="h-2 bg-background/30 rounded-full overflow-hidden mb-3">
+                                <div
+                                    className="h-full bg-gradient-to-r from-yellow-500 to-orange-500 transition-all duration-500"
+                                    style={{ width: `${achievementProgress}%` }}
+                                />
+                            </div>
+
+                            {/* Recent Badges */}
+                            {recentBadges.length > 0 && (
+                                <div className="grid grid-cols-3 gap-2">
+                                    {recentBadges.map(badge => (
+                                        <div key={badge.id} className="text-center">
+                                            <div className="text-2xl mb-1">{badge.icon}</div>
+                                            <div className="text-[9px] text-yellow-400/70 font-medium truncate">{badge.name}</div>
+                                        </div>
+                                    ))}
+                                </div>
+                            )}
+                        </Link>
+                    </div>
+                )}
 
                 {/* Weakness Targeting Alert */}
                 {suggestedReview && (

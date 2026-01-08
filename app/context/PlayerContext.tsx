@@ -18,6 +18,7 @@ interface PlayerContextType {
     loadEpisode: (episode: Episode) => void;
     togglePlay: () => void;
     setIsPlaying: (playing: boolean) => void;
+    closePlayer: () => void;
 }
 
 const PlayerContext = createContext<PlayerContextType | undefined>(undefined);
@@ -44,8 +45,13 @@ export function PlayerProvider({ children }: { children: ReactNode }) {
         setIsPlaying(!isPlaying);
     };
 
+    const closePlayer = () => {
+        setCurrentEpisode(null);
+        setIsPlaying(false);
+    };
+
     return (
-        <PlayerContext.Provider value={{ currentEpisode, isPlaying, playEpisode, loadEpisode, togglePlay, setIsPlaying }}>
+        <PlayerContext.Provider value={{ currentEpisode, isPlaying, playEpisode, loadEpisode, togglePlay, setIsPlaying, closePlayer }}>
             {children}
         </PlayerContext.Provider>
     );

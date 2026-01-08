@@ -1,0 +1,370 @@
+{
+    "id": 112,
+    "episodeId": 9,
+    "title": "CV Diagnostics & Dysrhythmias - Part A",
+    "description": "Lab Values, EKG Interpretation, Dysrhythmias (Afib, VT, VF)",
+    "questionCount": 30,
+    "color": "from-red-600 to-red-900",
+    "questions": [
+        {
+            "id": 1,
+            "text": "What is the primary indicator of organ perfusion pressure?",
+            "options": [
+                "Systolic BP",
+                "Diastolic BP",
+                "Mean Arterial Pressure (MAP)",
+                "Heart Rate"
+            ],
+            "correctAnswer": 2,
+            "explanation": "MAP is the true perfusion pressure. Normal is 70-100."
+        },
+        {
+            "id": 2,
+            "text": "What is the critical minimum MAP required to perfuse vital organs?",
+            "options": [
+                "90 mm Hg",
+                "60 mm Hg",
+                "40 mm Hg",
+                "100 mm Hg"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Below 60 mm Hg, organs are not being perfused."
+        },
+        {
+            "id": 3,
+            "text": "An S3 heart sound ('Gallop') is a key indicator of:",
+            "options": [
+                "Hypertension",
+                "Heart Failure / Fluid Overload",
+                "Pericarditis",
+                "Healthy Athlete"
+            ],
+            "correctAnswer": 1,
+            "explanation": "S3 indicates a non-compliant ventricle or volume overload, classic for Heart Failure."
+        },
+        {
+            "id": 4,
+            "text": "A 'Pericardial Friction Rub' is best heard when the patient:",
+            "options": [
+                "Lies flat",
+                "Leans forward",
+                "Lies on left side",
+                "Holds breath"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Leaning forward brings the heart closer to the chest wall, accentuating the scratchy rub of Pericarditis."
+        },
+        {
+            "id": 5,
+            "text": "Which Cardiac Enzyme is the 'Gold Standard' for diagnosing an MI because it stays elevated for days?",
+            "options": [
+                "CK-MB",
+                "Myoglobin",
+                "Troponin I/T",
+                "BNP"
+            ],
+            "correctAnswer": 2,
+            "explanation": "Troponin is specific to cardiac muscle and stays elevated for 5-14 days, catching delayed diagnoses."
+        },
+        {
+            "id": 6,
+            "text": "CK-MB levels typically return to normal within:",
+            "options": [
+                "2 hours",
+                "3-4 days",
+                "2 weeks",
+                "1 month"
+            ],
+            "correctAnswer": 1,
+            "explanation": "CK-MB peaks in 24 hours and clears in 3-4 days. Useful for re-infarction diagnosis."
+        },
+        {
+            "id": 7,
+            "text": "Which coagulation lab is used to monitor Heparin therapy?",
+            "options": [
+                "PT/INR",
+                "aPTT",
+                "Platelets",
+                "D-Dimer"
+            ],
+            "correctAnswer": 1,
+            "explanation": "aPTT (Activated Partial Thromboplastin Time) measures the intrinsic pathway affected by Heparin."
+        },
+        {
+            "id": 8,
+            "text": "What is the critical low threshold for Platelets where spontaneous bleeding is a major risk?",
+            "options": [
+                "150,000",
+                "100,000",
+                "50,000",
+                "10,000"
+            ],
+            "correctAnswer": 2,
+            "explanation": "Below 50,000 is the danger zone for bleeding."
+        },
+        {
+            "id": 9,
+            "text": "ST-Segment Elevation on an EKG indicates:",
+            "options": [
+                "Ischemia",
+                "Active Myocardial Injury (STEMI)",
+                "Old infarction",
+                "Electrolyte imbalance"
+            ],
+            "correctAnswer": 1,
+            "explanation": "ST Elevation = STEMI = Complete vessel occlusion = Emergency."
+        },
+        {
+            "id": 10,
+            "text": "ST-Segment Depression indicates:",
+            "options": [
+                "Injury",
+                "Ischemia (Lack of Oxygen)",
+                "Hyperkalemia",
+                "Normal variant"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Depression means the muscle is starving for oxygen but not yet dead."
+        },
+        {
+            "id": 11,
+            "text": "The drug of choice for symptomatic Sinus Bradycardia is:",
+            "options": [
+                "Adenosine",
+                "Atropine",
+                "Amiodarone",
+                "Epinephrine"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Atropine speeds up the heart rate."
+        },
+        {
+            "id": 12,
+            "text": "In Atrial Fibrillation (Afib), the two primary goals of treatment are:",
+            "options": [
+                "Rate Control and Anticoagulation (prevent clots)",
+                "Rhythm Control and Diuretics",
+                "Increasing BP and sedation",
+                "Defibrillation and Antibiotics"
+            ],
+            "correctAnswer": 0,
+            "explanation": "Prevent the rapid rate and prevent the clots that form in the quivering atria."
+        },
+        {
+            "id": 13,
+            "text": "The first question to ask when you see Ventricular Tachycardia (V-Tach) is:",
+            "options": [
+                "Is the patient awake?",
+                "Does the patient have a pulse?",
+                "What is the BP?",
+                "Is there P waves?"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Pulse = Meds/Cardioversion. No Pulse = Defibrillation/CPR. Determines the entire path."
+        },
+        {
+            "id": 14,
+            "text": "The treatment for Ventricular Fibrillation (V-Fib) is:",
+            "options": [
+                "Wait and see",
+                "Immediate Defibrillation",
+                "Atropine",
+                "Synchronized Cardioversion"
+            ],
+            "correctAnswer": 1,
+            "explanation": "V-Fib is cardiac arrest. Shock immediately to reset the rhythm."
+        },
+        {
+            "id": 15,
+            "text": "ScvO2 (Central Venous Oxygen Saturation) measures:",
+            "options": [
+                "Arterial oxygen",
+                "The balance between oxygen supply and demand",
+                "Lung function",
+                "Hemoglobin level"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Low ScvO2 means tissues are extracting too much O2 (demand > supply)."
+        },
+        {
+            "id": 16,
+            "text": "A 'Thrombocytopenia' diagnosis would be based on which platelet count?",
+            "options": [
+                "300,000",
+                "160,000",
+                "90,000",
+                "500,000"
+            ],
+            "correctAnswer": 2,
+            "explanation": "Anything < 150,000 is low. 90k is thrombocytopenia."
+        },
+        {
+            "id": 17,
+            "text": "Which medication is essentially a 'chemical cardioversion' to restart the heart in SVT?",
+            "options": [
+                "Adenosine",
+                "Digoxin",
+                "Lisinopril",
+                "Furosemide"
+            ],
+            "correctAnswer": 0,
+            "explanation": "Adenosine briefly stops the heart to reset the rhythm."
+        },
+        {
+            "id": 18,
+            "text": "Brain Natriuretic Peptide (BNP) is released in response to:",
+            "options": [
+                "Low Blood Pressure",
+                "Ventricular Stretch (Volume Overload)",
+                "Infection",
+                "Pain"
+            ],
+            "correctAnswer": 1,
+            "explanation": "It's the heart's cry for help when overfilled. Diagnostic for Heart Failure."
+        },
+        {
+            "id": 19,
+            "text": "If a patient on Warfarin has an INR of 5.2, they are at risk for:",
+            "options": [
+                "Clotting",
+                "Bleeding",
+                "Infection",
+                "Seizures"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Therapeutic INR is 2-3. >5 is dangerously thin blood."
+        },
+        {
+            "id": 20,
+            "text": "Normal pH of blood is:",
+            "options": [
+                "7.0 - 8.0",
+                "7.35 - 7.45",
+                "7.25 - 7.35",
+                "7.45 - 7.55"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Very narrow range. Life is not compatible far outside this."
+        },
+        {
+            "id": 21,
+            "text": "Which electrolyte imbalance causes tall, peaked T-waves?",
+            "options": [
+                "Hypokalemia",
+                "Hyperkalemia (High Potassium)",
+                "Hyponatremia",
+                "Hypocalcemia"
+            ],
+            "correctAnswer": 1,
+            "explanation": "High Potassium = Peaked T waves -> V-Fib arrest."
+        },
+        {
+            "id": 22,
+            "text": "Synchronized Cardioversion is used for:",
+            "options": [
+                "Pulseless V-Tach",
+                "Unstable Tachycardia WITH a pulse (e.g., rapid Afib/SVT)",
+                "Asystole",
+                "Bradycardia"
+            ],
+            "correctAnswer": 1,
+            "explanation": "It syncs with the R wave to avoid causing V-Fib."
+        },
+        {
+            "id": 23,
+            "text": "Which assessment finding typically precedes a drop in BP in shock?",
+            "options": [
+                "Decreased Urine Output",
+                "Tachycardia (High Heart Rate)",
+                "Fever",
+                "Rash"
+            ],
+            "correctAnswer": 1,
+            "explanation": "The heart speeds up to compensate for falling output BEFORE pressure drops."
+        },
+        {
+            "id": 24,
+            "text": "For a patient with an Angiogram (femoral access), what is the priority post-op?",
+            "options": [
+                "Ambulate immediately",
+                "Keep leg straight and flat for 4-6 hours to prevent bleeding",
+                "Elevate leg on pillows",
+                "Massage the groin"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Flexing the hip could blow the clot at the artery puncture site."
+        },
+        {
+            "id": 25,
+            "text": "D-Dimer measures:",
+            "options": [
+                "Clotting time",
+                "Fibrin degradation products (indicates clot breakdown somewhere)",
+                "Red blood cells",
+                "Potassium"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Used to rule in/out PE or DVT."
+        },
+        {
+            "id": 26,
+            "text": "On an EKG, the P wave represents:",
+            "options": [
+                "Ventricular contraction",
+                "Atrial Depolarization",
+                "Ventricular repolarization",
+                "Resting phase"
+            ],
+            "correctAnswer": 1,
+            "explanation": "The electrical firing of the Atria."
+        },
+        {
+            "id": 27,
+            "text": "The QRS complex represents:",
+            "options": [
+                "Atrial kick",
+                "Ventricular Depolarization (Contraction)",
+                "Atrial reset",
+                "Valve closure"
+            ],
+            "correctAnswer": 1,
+            "explanation": "The main pumping event of the ventricles."
+        },
+        {
+            "id": 28,
+            "text": "A 'Sawtooth' pattern on an EKG is classic for:",
+            "options": [
+                "Atrial Fibrillation",
+                "Atrial Flutter",
+                "Sinus Rhythm",
+                "V-Tach"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Flutter waves look like the teeth of a saw."
+        },
+        {
+            "id": 29,
+            "text": "What does 'Isoelectric' mean in EKG terms?",
+            "options": [
+                "High voltage",
+                "The flat baseline (zero activity)",
+                "Irregular",
+                "Fast"
+            ],
+            "correctAnswer": 1,
+            "explanation": "The ST segment should be isoelectric (flat) with the PR segment."
+        },
+        {
+            "id": 30,
+            "text": "Why is oral fluid intake encouraged after a cardiac cath with dye?",
+            "options": [
+                "To prevent hunger",
+                "To flush the nephrotoxic contrast dye out of the kidneys",
+                "To increase BP",
+                "To settle stomach"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Contrast dye can cause Kidney Failure. Flush it out."
+        }
+    ]
+}

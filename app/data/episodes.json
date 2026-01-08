@@ -89,13 +89,13 @@
   },
   {
     "id": 9,
-    "title": "Pharmacological Therapies Part 2",
-    "description": "Neuro, GI, Antibiotics, Psych Meds",
-    "content": "Neurological Medications (Anticonvulsants, Antiparkinsonian)\nGastrointestinal Medications\nAntibiotics & Anti-infectives\nPsychotropic Medications\nPain Medications (Opioids, NSAIDs)",
+    "title": "Reduction of Risk: Cardiovascular & Diagnostics",
+    "description": "Labs, EKG Interpretation, Dysrhythmias, ACS, Heart Failure",
+    "content": "Diagnostics (Troponin, Coags, ABGs)\\nEKG Interpretation & Dysrhythmias (Afib, VT, VF)\\nAcute Coronary Syndromes (STEMI vs NSTEMI)\\nHeart Failure & Hypertensive Crisis",
     "pages": "196-220",
     "duration": 1200,
     "audioUrl": "/uploads/episode-9.mp3",
-    "category": "Pharmacology",
+    "category": "Reduction of Risk",
     "order": 9
   },
   {

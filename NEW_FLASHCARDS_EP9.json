@@ -1,0 +1,157 @@
+{
+    "episodeId": 9,
+    "title": "Episode 9 Flashcards",
+    "description": "Reduction of Risk: Cardiovascular Diagnostics & Pathologies",
+    "cards": [
+        {
+            "id": 1,
+            "front": "What does MAP stand for and what does it measure?",
+            "back": "Mean Arterial Pressure. It measures the average pressure in a patient's arteries during one cardiac cycle and serves as an indicator of organ perfusion."
+        },
+        {
+            "id": 2,
+            "front": "How do you calculate MAP?",
+            "back": "(SBP + 2(DBP)) / 3"
+        },
+        {
+            "id": 3,
+            "front": "What is the minimum MAP required to maintain organ perfusion?",
+            "back": "60 mm Hg."
+        },
+        {
+            "id": 4,
+            "front": "What does a high ScvO2 (Central Venous Oxygen Saturation) generally indicate?",
+            "back": "The tissues are not extracting oxygen (e.g., in Sepsis)."
+        },
+        {
+            "id": 5,
+            "front": "What does a low ScvO2 generally indicate?",
+            "back": "Oxygen demand exceeds supply (Cardiac failure, low Hb, high metabolic state)."
+        },
+        {
+            "id": 6,
+            "front": "Which cardiac enzyme is the most specific marker for Myocardial Infarction?",
+            "back": "Troponin (I or T)."
+        },
+        {
+            "id": 7,
+            "front": "How long does Troponin stay elevated after an MI?",
+            "back": "5 to 14 days."
+        },
+        {
+            "id": 8,
+            "front": "What does aPTT monitor?",
+            "back": "The effectiveness of Heparin therapy."
+        },
+        {
+            "id": 9,
+            "front": "What does PT/INR monitor?",
+            "back": "The effectiveness of Warfarin (Coumadin) therapy."
+        },
+        {
+            "id": 10,
+            "front": "What is the normal therapeutic INR range for a patient on Warfarin?",
+            "back": "2.0 to 3.0."
+        },
+        {
+            "id": 11,
+            "front": "An S3 heart sound ('Ventricular Gallop') is often an early sign of:",
+            "back": "Heart Failure (Volume Overload)."
+        },
+        {
+            "id": 12,
+            "front": "A 'Pericardial Friction Rub' indicates:",
+            "back": "Acute Pericarditis."
+        },
+        {
+            "id": 13,
+            "front": "What does the P wave represent on an EKG?",
+            "back": "Atrial Depolarization."
+        },
+        {
+            "id": 14,
+            "front": "What does the QRS complex represent on an EKG?",
+            "back": "Ventricular Depolarization."
+        },
+        {
+            "id": 15,
+            "front": "ST-Segment Elevation is a sign of:",
+            "back": "Myocardial Injury / Infarction (STEMI)."
+        },
+        {
+            "id": 16,
+            "front": "ST-Segment Depression is a sign of:",
+            "back": "Myocardial Ischemia."
+        },
+        {
+            "id": 17,
+            "front": "What is the drug of choice for symptomatic Sinus Bradycardia?",
+            "back": "Atropine."
+        },
+        {
+            "id": 18,
+            "front": "What is the primary risk associated with Atrial Fibrillation?",
+            "back": "Stroke (due to clot formation in the atria)."
+        },
+        {
+            "id": 19,
+            "front": "What is the immediate treatment for Pulseless Ventricular Tachycardia (V-Tach)?",
+            "back": "Defibrillation and High-Quality CPR."
+        },
+        {
+            "id": 20,
+            "front": "How is Ventricular Fibrillation (V-Fib) treated?",
+            "back": "Immediate Defibrillation."
+        },
+        {
+            "id": 21,
+            "front": "What is B-Type Natriuretic Peptide (BNP) used to diagnose?",
+            "back": "Heart Failure (it rises when ventricles are stretched)."
+        },
+        {
+            "id": 22,
+            "front": "What defines a Hypertensive Emergency?",
+            "back": "Severe hypertension (>180/120) WITH evidence of acute target organ damage."
+        },
+        {
+            "id": 23,
+            "front": "What is the goal of treatment for Hypertensive Urgency?",
+            "back": "Lower BP slowly over 24 hours to prevent cerebral ischemia."
+        },
+        {
+            "id": 24,
+            "front": "An Ankle-Brachial Index (ABI) less than 0.9 indicates:",
+            "back": "Peripheral Arterial Disease (PAD)."
+        },
+        {
+            "id": 25,
+            "front": "What is Intermittent Claudication?",
+            "back": "Pain in the legs during exercise that relieves with rest; a classic sign of PAD."
+        },
+        {
+            "id": 26,
+            "front": "What positioning is required after a femoral artery catheterization?",
+            "back": "Supine with the affected leg straight for 4-6 hours."
+        },
+        {
+            "id": 27,
+            "front": "What is Virchow's Triad?",
+            "back": "Three factors that contribute to thrombosis: Stasis of blood flow, Endothelial injury, and Hypercoagulability."
+        },
+        {
+            "id": 28,
+            "front": "What does a positive D-Dimer test indicate?",
+            "back": "The presence of fibrin degradation products, suggesting a clot (DVT/PE) is being broken down."
+        },
+        {
+            "id": 29,
+            "front": "What are the classic signs of a Pulmonary Embolism?",
+            "back": "Sudden onset dyspnea, pleuritic chest pain, tachycardia, and anxiety ('Impending Doom')."
+        },
+        {
+            "id": 30,
+            "front": "What does MONA stand for in the context of ACS treatment?",
+            "back": "Morphine, Oxygen, Nitroglycerin, Aspirin."
+        }
+    ]
+}

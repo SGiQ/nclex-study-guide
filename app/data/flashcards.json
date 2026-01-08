@@ -1556,352 +1556,157 @@
     {
         "episodeId": 9,
         "title": "Episode 9 Flashcards",
-        "description": "Flashcards for Episode 9",
+        "description": "Reduction of Risk: Cardiovascular Diagnostics & Pathologies",
         "cards": [
             {
                 "id": 1,
-                "front": "What is the normal range for Mean Arterial Pressure (MAP) required to perfuse vital organs?",
-                "back": "\"A MAP of greater than 60 mmHg is required to perfuse vital organs, with a normal range being 70-100 mmHg.\""
+                "front": "What does MAP stand for and what does it measure?",
+                "back": "Mean Arterial Pressure. It measures the average pressure in a patient's arteries during one cardiac cycle and serves as an indicator of organ perfusion."
             },
             {
                 "id": 2,
-                "front": "\"The first heart sound (S1) or \"\"lub\"\" is associated with the closure of which two heart valves?\"",
-                "back": "S1 is associated with the closure of the mitral and tricuspid valves."
+                "front": "How do you calculate MAP?",
+                "back": "(SBP + 2(DBP)) / 3"
             },
             {
                 "id": 3,
-                "front": "\"The second heart sound (S2) or \"\"dub\"\" is associated with the closure of which two heart valves?\"",
-                "back": "S2 is associated with the closure of the aortic and pulmonic valves."
+                "front": "What is the minimum MAP required to maintain organ perfusion?",
+                "back": "60 mm Hg."
             },
             {
                 "id": 4,
-                "front": "An ST segment that is elevated _____ above the baseline is an indication of myocardial injury.",
-                "back": "1 mm"
+                "front": "What does a high ScvO2 (Central Venous Oxygen Saturation) generally indicate?",
+                "back": "The tissues are not extracting oxygen (e.g., in Sepsis)."
             },
             {
                 "id": 5,
-                "front": "\"In a patient with a suspected myocardial injury",
-                "back": "how often are Creatine kinase (CK) and CK-MB levels typically evaluated?\",CK and CK-MB levels are evaluated every 6-8 hours."
+                "front": "What does a low ScvO2 generally indicate?",
+                "back": "Oxygen demand exceeds supply (Cardiac failure, low Hb, high metabolic state)."
             },
             {
                 "id": 6,
-                "front": "\"When does Troponin I first appear in the blood after myocardial injury",
-                "back": "and when does it peak?\",Troponin I appears in 3-4 hours and peaks at 14-20 hours."
+                "front": "Which cardiac enzyme is the most specific marker for Myocardial Infarction?",
+                "back": "Troponin (I or T)."
             },
             {
                 "id": 7,
-                "front": "What type of echocardiography provides better visualization of the valvular structure and is used for suspected aortic dissection or aneurysm?",
-                "back": "Transesophageal echocardiography (TEE)."
+                "front": "How long does Troponin stay elevated after an MI?",
+                "back": "5 to 14 days."
             },
             {
                 "id": 8,
-                "front": "What is the normal laboratory value for fasting blood glucose?",
-                "back": "The normal range for fasting blood glucose is 70-99 mg/dL."
+                "front": "What does aPTT monitor?",
+                "back": "The effectiveness of Heparin therapy."
             },
             {
                 "id": 9,
-                "front": "A Hemoglobin A1c value of greater than what percentage is indicative of diabetes?",
-                "back": "A Hemoglobin A1c value of >6.5% indicates diabetes."
+                "front": "What does PT/INR monitor?",
+                "back": "The effectiveness of Warfarin (Coumadin) therapy."
             },
             {
                 "id": 10,
-                "front": "What is the normal hemoglobin range for males older than 18 years?",
-                "back": "The normal hemoglobin range for males >18 years is 14.0-17.46 g/dL."
+                "front": "What is the normal therapeutic INR range for a patient on Warfarin?",
+                "back": "2.0 to 3.0."
             },
             {
                 "id": 11,
-                "front": "What is the normal hematocrit range for females older than 18 years?",
-                "back": "The normal hematocrit range for females >18 years is 36-45%."
+                "front": "An S3 heart sound ('Ventricular Gallop') is often an early sign of:",
+                "back": "Heart Failure (Volume Overload)."
             },
             {
                 "id": 12,
-                "front": "What is the normal range for a white blood cell (WBC) count in adults?",
-                "back": "\"The normal WBC count for adults is 4,000-10,000.\""
+                "front": "A 'Pericardial Friction Rub' indicates:",
+                "back": "Acute Pericarditis."
             },
             {
                 "id": 13,
-                "front": "\"An increase in immature neutrophils (bands)",
-                "back": "referred to as a \"\"shift to the left,\"\" is an indication of what type of process?\",\"A \"\"shift to the left\"\" is an indication of an infectious process.\""
+                "front": "What does the P wave represent on an EKG?",
+                "back": "Atrial Depolarization."
             },
             {
                 "id": 14,
-                "front": "What is the normal range for Prothrombin Time (PT)?",
-                "back": "The normal range for Prothrombin Time (PT) is 10-14 seconds."
+                "front": "What does the QRS complex represent on an EKG?",
+                "back": "Ventricular Depolarization."
             },
             {
                 "id": 15,
-                "front": "Which coagulation test is used to monitor heparin dosage?",
-                "back": "Activated partial thromboplastin time (aPTT)."
+                "front": "ST-Segment Elevation is a sign of:",
+                "back": "Myocardial Injury / Infarction (STEMI)."
             },
             {
                 "id": 16,
-                "front": "What is the normal range for a platelet count?",
-                "back": "\"The normal platelet count is 150,000-400,000 per \u00b5L.\""
+                "front": "ST-Segment Depression is a sign of:",
+                "back": "Myocardial Ischemia."
             },
             {
                 "id": 17,
-                "front": "\"For patients receiving anticoagulation therapy",
-                "back": "what is the target International Normalized Ratio (INR)?\",The target INR for patients on anticoagulation is 2-3."
+                "front": "What is the drug of choice for symptomatic Sinus Bradycardia?",
+                "back": "Atropine."
             },
             {
                 "id": 18,
-                "front": "What is the normal laboratory range for albumin?",
-                "back": "The normal range for albumin is 3.5-5.5 g/dL."
+                "front": "What is the primary risk associated with Atrial Fibrillation?",
+                "back": "Stroke (due to clot formation in the atria)."
             },
             {
                 "id": 19,
-                "front": "Which nutritional lab is most commonly monitored for acute changes in nutritional status due to its short half-life of 2-3 days?",
-                "back": "Prealbumin (transthyretin)."
+                "front": "What is the immediate treatment for Pulseless Ventricular Tachycardia (V-Tach)?",
+                "back": "Defibrillation and High-Quality CPR."
             },
             {
                 "id": 20,
-                "front": "What is the normal range for Blood Urea Nitrogen (BUN)?",
-                "back": "The normal BUN range is 7-8 mg/dL (8-20 mg/dL if age >60)."
+                "front": "How is Ventricular Fibrillation (V-Fib) treated?",
+                "back": "Immediate Defibrillation."
             },
             {
                 "id": 21,
-                "front": "What is the normal range for serum creatinine?",
-                "back": "The normal serum creatinine range is 0.6-1.2 mg/dL."
+                "front": "What is B-Type Natriuretic Peptide (BNP) used to diagnose?",
+                "back": "Heart Failure (it rises when ventricles are stretched)."
             },
             {
                 "id": 22,
-                "front": "What is the key difference between stable angina and unstable angina?",
-                "back": "\"Stable angina is relieved by rest or nitroglycerin, whereas unstable angina is not and may occur at rest.\""
+                "front": "What defines a Hypertensive Emergency?",
+                "back": "Severe hypertension (>180/120) WITH evidence of acute target organ damage."
             },
             {
                 "id": 23,
-                "front": "In which type of myocardial infarction does an ST elevation on the electrocardiogram occur?",
-                "back": "ST-segment elevation MI (STEMI)."
+                "front": "What is the goal of treatment for Hypertensive Urgency?",
+                "back": "Lower BP slowly over 24 hours to prevent cerebral ischemia."
             },
             {
                 "id": 24,
-                "front": "\"An MI involving leads V1",
-                "back": "V2, V3, and V4 indicates an occlusion of which coronary artery?\",An anterior MI (V1-V4) indicates an occlusion of the left anterior descending (LAD) or left coronary artery."
+                "front": "An Ankle-Brachial Index (ABI) less than 0.9 indicates:",
+                "back": "Peripheral Arterial Disease (PAD)."
             },
             {
                 "id": 25,
-                "front": "\"An MI involving leads II",
-                "back": "III, and aVF indicates an occlusion of which coronary artery?\",\"An inferior/diaphragmatic MI (II, III, aVF) indicates an occlusion of the right coronary artery.\""
+                "front": "What is Intermittent Claudication?",
+                "back": "Pain in the legs during exercise that relieves with rest; a classic sign of PAD."
             },
             {
                 "id": 26,
-                "front": "What are the classic signs and symptoms of cardiogenic shock?",
-                "back": "\"Symptoms include hypotension, altered mental status, cool extremities, oliguria, tachycardia or tachypnea, and jugular venous distension.\""
+                "front": "What positioning is required after a femoral artery catheterization?",
+                "back": "Supine with the affected leg straight for 4-6 hours."
             },
             {
                 "id": 27,
-                "front": "Sinus bradycardia is characterized by a heart rate of less than _____ beats per minute.",
-                "back": "60"
+                "front": "What is Virchow's Triad?",
+                "back": "Three factors that contribute to thrombosis: Stasis of blood flow, Endothelial injury, and Hypercoagulability."
             },
             {
                 "id": 28,
-                "front": "What medication is typically given IV to treat symptomatic sinus bradycardia?",
-                "back": "Atropine 0.5-1.0 mg may be given IV."
+                "front": "What does a positive D-Dimer test indicate?",
+                "back": "The presence of fibrin degradation products, suggesting a clot (DVT/PE) is being broken down."
             },
             {
                 "id": 29,
-                "front": "Sinus tachycardia is characterized by a heart rate of more than _____ beats per minute.",
-                "back": "100"
+                "front": "What are the classic signs of a Pulmonary Embolism?",
+                "back": "Sudden onset dyspnea, pleuritic chest pain, tachycardia, and anxiety ('Impending Doom')."
             },
             {
                 "id": 30,
-                "front": "What is the characteristic heart rate range for supraventricular tachycardia (SVT)?",
-                "back": "The heart rate in SVT is typically 100-280 BPM."
-            },
-            {
-                "id": 31,
-                "front": "What is the first-line medication treatment for stable supraventricular tachycardia (SVT)?",
-                "back": "Adenosine."
-            },
-            {
-                "id": 32,
-                "front": "\"On an ECG",
-                "back": "atrial flutter is characterized by an atrial rate of _____, with a classic \"\"sawtooth\"\" pattern of P waves.\",250-400 beats per minute"
-            },
-            {
-                "id": 33,
-                "front": "\"In atrial fibrillation",
-                "back": "blood pooling in the atria increases the risk of what major complication?\",The pooling of blood can lead to thrombus formation and emboli."
-            },
-            {
-                "id": 34,
-                "front": "What are the ECG characteristics of a Premature Ventricular Contraction (PVC)?",
-                "back": "\"A PVC is characterized by an early, wide (>0.12 seconds), and bizarre-appearing QRS complex that is not preceded by a P wave.\""
-            },
-            {
-                "id": 35,
-                "front": "What is the definition of ventricular tachycardia (VT)?",
-                "back": "Ventricular tachycardia is defined as greater than 3 PVCs in a row with a ventricular rate of 100-250 beats per minute."
-            },
-            {
-                "id": 36,
-                "front": "What is the immediate treatment for ventricular fibrillation (VF)?",
-                "back": "\"The treatment is emergency defibrillation, as it is a life-threatening arrhythmia.\""
-            },
-            {
-                "id": 37,
-                "front": "\"Which cardiac rhythm is often referred to as \"\"cardiac arrest\"\" and is characterized by the absence of an audible heartbeat",
-                "back": "palpable pulse, and respirations?\",Ventricular asystole."
-            },
-            {
-                "id": 38,
-                "front": "What is the hallmark ECG finding of a First-Degree AV Block?",
-                "back": "\"A prolonged PR interval, consistently greater than 0.20 seconds.\""
-            },
-            {
-                "id": 39,
-                "front": "\"In a Second-Degree AV Block",
-                "back": "Type I (Wenckebach), what happens to the PR interval?\",The PR interval progressively lengthens until a QRS complex is dropped."
-            },
-            {
-                "id": 40,
-                "front": "What is the defining characteristic of a Third-Degree (Complete) AV Block on an ECG?",
-                "back": "There is no relationship between P waves and QRS complexes (AV dissociation)."
-            },
-            {
-                "id": 41,
-                "front": "\"In a _____ bundle branch block",
-                "back": "the QRS is widened (>0.12 seconds) and an 'RSR' pattern resembling the letter 'M' is seen in lead V1.\",right"
-            },
-            {
-                "id": 42,
-                "front": "What is the primary problem in systolic heart failure?",
-                "back": "The heart has a weakened contraction and reduced ejection of blood from the ventricle."
-            },
-            {
-                "id": 43,
-                "front": "What is the primary problem in diastolic heart failure?",
-                "back": "\"The ventricle is unable to relax and fill properly, although the contraction may be normal.\""
-            },
-            {
-                "id": 44,
-                "front": "\"Acute cardiac-related pulmonary edema occurs when heart failure results in fluid overload",
-                "back": "leading to what condition in the lungs?\",It leads to third-spacing of fluid into the interstitial spaces of the lungs."
-            },
-            {
-                "id": 45,
-                "front": "What condition involves a narrowing of the mitral valve that obstructs blood flow from the left atrium to the left ventricle?",
-                "back": "Mitral stenosis."
-            },
-            {
-                "id": 46,
-                "front": "\"What valvular disorder occurs when the mitral valve fails to close completely",
-                "back": "allowing blood to backflow into the left atrium during systole?\",Mitral valve insufficiency (or regurgitation)."
-            },
-            {
-                "id": 47,
-                "front": "\"Aortic stenosis",
-                "back": "a narrowing of the aortic valve, can lead to what specific type of heart failure?\",Aortic stenosis often leads to left-sided heart failure."
-            },
-            {
-                "id": 48,
-                "front": "A _____ is defined as a hypertensive state where acute hypertension must be treated immediately to lower blood pressure and prevent damage to vital organs.",
-                "back": "hypertensive emergency"
-            },
-            {
-                "id": 49,
-                "front": "\"What are the \"\"6 P's\"\" that are classic signs and symptoms of acute peripheral arterial insufficiency?\"",
-                "back": "\"Pain, pallor, pulselessness, poikilothermia (coolness), paresthesias, and paralysis.\""
-            },
-            {
-                "id": 50,
-                "front": "\"What diagnostic procedure uses ultrasound to evaluate the structure and function of the heart",
-                "back": "including valves and wall motion?\",Echocardiography."
-            },
-            {
-                "id": 51,
-                "front": "\"What does a bubble study",
-                "back": "an addition to echocardiography, help determine?\",A bubble study helps determine if there is a right to left blood flow through a patent foramen ovale or a more distal intrapulmonary shunt."
-            },
-            {
-                "id": 52,
-                "front": "Which diagnostic test involves monitoring the heart's electrical activity and blood pressure while the patient exercises on a treadmill?",
-                "back": "Exercise stress testing."
-            },
-            {
-                "id": 53,
-                "front": "\"For a 12-lead ECG",
-                "back": "where is the V1 electrode placed?\",The V1 electrode is placed at the fourth intercostal space on the right sternal border."
-            },
-            {
-                "id": 54,
-                "front": "\"For a 12-lead ECG",
-                "back": "where is the V4 electrode placed?\",The V4 electrode is placed at the fifth intercostal space on the left midclavicular line."
-            },
-            {
-                "id": 55,
-                "front": "\"On an ECG tracing",
-                "back": "what does the P wave represent?\",The P wave represents the start of electrical depolarization in the sinus node and its spread through the atria."
-            },
-            {
-                "id": 56,
-                "front": "\"On an ECG tracing",
-                "back": "what does the QRS complex represent?\",The QRS complex represents ventricular muscle depolarization and atrial repolarization."
-            },
-            {
-                "id": 57,
-                "front": "\"On an ECG tracing",
-                "back": "what does the T wave represent?\",The T wave represents ventricular muscle repolarization."
-            },
-            {
-                "id": 58,
-                "front": "A gallop rhythm known as S3 commonly occurs after S2 and may indicate what condition in older adults?",
-                "back": "\"In older adults, an S3 gallop may indicate heart failure or left ventricular failure.\""
-            },
-            {
-                "id": 59,
-                "front": "An S4 heart sound is heard when the patient is lying on their left side and may indicate what conditions?",
-                "back": "\"An S4 sound may indicate coronary artery disease, hypertension, or aortic valve stenosis.\""
-            },
-            {
-                "id": 60,
-                "front": "A ____ is a blowing or swishing sound caused by turbulent blood flow due to stenotic or malfunctioning valves.",
-                "back": "murmur"
-            },
-            {
-                "id": 61,
-                "front": "What is the normal range for C-reactive protein?",
-                "back": "The normal value for C-reactive protein is 2.6-7.6 ug/dL."
-            },
-            {
-                "id": 62,
-                "front": "\"In chronic venous insufficiency",
-                "back": "the skin often presents with a brownish discoloration around the ankles and anterior tibial area, known as what?\",Stasis dermatitis."
-            },
-            {
-                "id": 63,
-                "front": "\"What are the three components of Virchow's triad",
-                "back": "which are risk factors for venous thromboembolism?\",\"The three components are venous stasis, hypercoagulability, and intimal injury (endothelial damage).\""
-            },
-            {
-                "id": 64,
-                "front": "Which diagnostic test can be used to diagnose a pulmonary emboli?",
-                "back": "\"Ultrasound, d-dimer test, CT scan, pulmonary angiogram, and ventilation-perfusion lung scan.\""
-            },
-            {
-                "id": 65,
-                "front": "What is the purpose of an Ankle-Brachial Index (ABI) examination?",
-                "back": "The ABI examination is done to evaluate for peripheral arterial disease of the lower extremities."
-            },
-            {
-                "id": 66,
-                "front": "An Ankle-Brachial Index (ABI) score of less than 0.5 indicates what degree of arterial disease?",
-                "back": "An ABI of <0.5 indicates severe arterial disease."
-            },
-            {
-                "id": 67,
-                "front": "\"Following an angiogram",
-                "back": "what specific positioning is required for the patient?\",\"The patient is placed in a supine position, with the extremity kept straight for 6-8 hours to prevent bleeding from the puncture site.\""
-            },
-            {
-                "id": 68,
-                "front": "What is the most common presentation of a pulmonary embolism resulting from a deep vein thrombosis?",
-                "back": "The most common presentation is acute onset dyspnea."
-            },
-            {
-                "id": 69,
-                "front": "What is the appropriate patient positioning following a femoral arteriogram?",
-                "back": "The patient should be positioned with the head of the bed elevated no more than 15 degrees and the affected leg kept straight."
+                "front": "What does MONA stand for in the context of ACS treatment?",
+                "back": "Morphine, Oxygen, Nitroglycerin, Aspirin."
             }
         ]
     },

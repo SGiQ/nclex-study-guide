@@ -4871,432 +4871,682 @@
         ]
     },
     {
-        "id": 8,
+        "id": 112,
         "episodeId": 9,
-        "title": "Pharmacological Therapies Part 2",
-        "description": "Pain Management, GI, Psychiatric, Geriatric Pharmacology",
-        "questionCount": 35,
-        "color": "from-indigo-600 to-violet-800",
+        "title": "CV Diagnostics & Dysrhythmias - Part A",
+        "description": "Lab Values, EKG Interpretation, Dysrhythmias (Afib, VT, VF)",
+        "questionCount": 30,
+        "color": "from-red-600 to-red-900",
         "questions": [
             {
                 "id": 1,
-                "text": "When administering lithium, the nurse monitors for toxicity. Early signs include:",
+                "text": "What is the primary indicator of organ perfusion pressure?",
                 "options": [
-                    "Fine hand tremors, nausea, polyuria",
-                    "Coarse hand tremors, vomiting, confusion",
-                    "Seizures and coma",
-                    "Hypertension and tachycardia"
+                    "Systolic BP",
+                    "Diastolic BP",
+                    "Mean Arterial Pressure (MAP)",
+                    "Heart Rate"
                 ],
-                "correctAnswer": 0,
-                "explanation": "Early lithium toxicity: fine tremors, nausea, polyuria. Advanced toxicity: coarse tremors, vomiting, confusion, seizures. Therapeutic level: 0.6-1.2 mEq/L."
+                "correctAnswer": 2,
+                "explanation": "MAP is the true perfusion pressure. Normal is 70-100."
             },
             {
                 "id": 2,
-                "text": "What is the antidote for opioid overdose?",
+                "text": "What is the critical minimum MAP required to perfuse vital organs?",
                 "options": [
-                    "Flumazenil",
-                    "Naloxone (Narcan)",
-                    "Protamine sulfate",
-                    "Vitamin K"
+                    "90 mm Hg",
+                    "60 mm Hg",
+                    "40 mm Hg",
+                    "100 mm Hg"
                 ],
                 "correctAnswer": 1,
-                "explanation": "Naloxone reverses opioid effects including respiratory depression. May need repeated doses. Flumazenil reverses benzodiazepines."
+                "explanation": "Below 60 mm Hg, organs are not being perfused."
             },
             {
                 "id": 3,
-                "text": "A client taking an SSRI (selective serotonin reuptake inhibitor) should be monitored for:",
+                "text": "An S3 heart sound ('Gallop') is a key indicator of:",
                 "options": [
-                    "Hypertensive crisis",
-                    "Serotonin syndrome",
-                    "Agranulocytosis",
-                    "Hepatotoxicity"
+                    "Hypertension",
+                    "Heart Failure / Fluid Overload",
+                    "Pericarditis",
+                    "Healthy Athlete"
                 ],
                 "correctAnswer": 1,
-                "explanation": "Serotonin syndrome symptoms: agitation, confusion, tremor, hyperthermia, muscle rigidity. Can occur with SSRI overdose or drug interactions."
+                "explanation": "S3 indicates a non-compliant ventricle or volume overload, classic for Heart Failure."
             },
             {
                 "id": 4,
-                "text": "Which pain scale is appropriate for a 4-year-old child?",
+                "text": "A 'Pericardial Friction Rub' is best heard when the patient:",
                 "options": [
-                    "Numeric Rating Scale (0-10)",
-                    "FACES pain scale",
-                    "Visual Analog Scale",
-                    "McGill Pain Questionnaire"
+                    "Lies flat",
+                    "Leans forward",
+                    "Lies on left side",
+                    "Holds breath"
                 ],
                 "correctAnswer": 1,
-                "explanation": "FACES scale (Wong-Baker) is appropriate for children 3+ years. Shows faces from happy to crying. Numeric scales work for ages 8+."
+                "explanation": "Leaning forward brings the heart closer to the chest wall, accentuating the scratchy rub of Pericarditis."
             },
             {
                 "id": 5,
-                "text": "A client is prescribed morphine PCA (patient-controlled analgesia). What is the priority assessment?",
+                "text": "Which Cardiac Enzyme is the 'Gold Standard' for diagnosing an MI because it stays elevated for days?",
                 "options": [
-                    "Blood pressure",
-                    "Respiratory rate",
-                    "Heart rate",
-                    "Temperature"
+                    "CK-MB",
+                    "Myoglobin",
+                    "Troponin I/T",
+                    "BNP"
                 ],
-                "correctAnswer": 1,
-                "explanation": "Monitor respiratory rate closely with opioids. Hold if <12/min. Also assess sedation level, pain relief, and for side effects."
+                "correctAnswer": 2,
+                "explanation": "Troponin is specific to cardiac muscle and stays elevated for 5-14 days, catching delayed diagnoses."
             },
             {
                 "id": 6,
-                "text": "Which medication is used to treat extrapyramidal symptoms (EPS) from antipsychotics?",
+                "text": "CK-MB levels typically return to normal within:",
                 "options": [
-                    "Haloperidol",
-                    "Benztropine (Cogentin)",
-                    "Lithium",
-                    "Fluoxetine"
+                    "2 hours",
+                    "3-4 days",
+                    "2 weeks",
+                    "1 month"
                 ],
                 "correctAnswer": 1,
-                "explanation": "Benztropine (anticholinergic) treats EPS (dystonia, akathisia, pseudoparkinsonism) caused by typical antipsychotics."
+                "explanation": "CK-MB peaks in 24 hours and clears in 3-4 days. Useful for re-infarction diagnosis."
             },
             {
                 "id": 7,
-                "text": "A client taking omeprazole (proton pump inhibitor) for GERD should take it:",
+                "text": "Which coagulation lab is used to monitor Heparin therapy?",
                 "options": [
-                    "With meals",
-                    "At bedtime",
-                    "30 minutes before breakfast",
-                    "After meals"
+                    "PT/INR",
+                    "aPTT",
+                    "Platelets",
+                    "D-Dimer"
                 ],
-                "correctAnswer": 2,
-                "explanation": "PPIs work best when taken 30 minutes before first meal of the day on empty stomach for maximum acid suppression."
+                "correctAnswer": 1,
+                "explanation": "aPTT (Activated Partial Thromboplastin Time) measures the intrinsic pathway affected by Heparin."
             },
             {
                 "id": 8,
-                "text": "Which is a common side effect of opioid analgesics?",
+                "text": "What is the critical low threshold for Platelets where spontaneous bleeding is a major risk?",
                 "options": [
-                    "Diarrhea",
-                    "Constipation",
-                    "Hypertension",
-                    "Tachycardia"
+                    "150,000",
+                    "100,000",
+                    "50,000",
+                    "10,000"
                 ],
-                "correctAnswer": 1,
-                "explanation": "Opioids commonly cause constipation. Prevent with stool softeners, fluids, fiber. Also cause nausea, sedation, respiratory depression."
+                "correctAnswer": 2,
+                "explanation": "Below 50,000 is the danger zone for bleeding."
             },
             {
                 "id": 9,
-                "text": "A client is prescribed lorazepam (Ativan) for anxiety. Which statement indicates understanding?",
+                "text": "ST-Segment Elevation on an EKG indicates:",
                 "options": [
-                    "I can drink alcohol while taking this.",
-                    "I should avoid driving until I know how this affects me.",
-                    "I can stop taking this abruptly.",
-                    "This medication is not habit-forming."
+                    "Ischemia",
+                    "Active Myocardial Injury (STEMI)",
+                    "Old infarction",
+                    "Electrolyte imbalance"
                 ],
                 "correctAnswer": 1,
-                "explanation": "Benzodiazepines cause sedation. Avoid alcohol and driving. Don't stop abruptly (risk of seizures). Can be habit-forming."
+                "explanation": "ST Elevation = STEMI = Complete vessel occlusion = Emergency."
             },
             {
                 "id": 10,
-                "text": "Which antiemetic is contraindicated in Parkinson's disease?",
+                "text": "ST-Segment Depression indicates:",
                 "options": [
-                    "Ondansetron (Zofran)",
-                    "Metoclopramide (Reglan)",
-                    "Meclizine",
-                    "Ginger"
+                    "Injury",
+                    "Ischemia (Lack of Oxygen)",
+                    "Hyperkalemia",
+                    "Normal variant"
                 ],
                 "correctAnswer": 1,
-                "explanation": "Metoclopramide blocks dopamine and can worsen Parkinson's symptoms. Ondansetron (5-HT3 antagonist) is safe alternative."
+                "explanation": "Depression means the muscle is starving for oxygen but not yet dead."
             },
             {
                 "id": 11,
-                "text": "What is the maximum daily dose of acetaminophen for adults?",
+                "text": "The drug of choice for symptomatic Sinus Bradycardia is:",
                 "options": [
-                    "2 grams",
-                    "3 grams",
-                    "4 grams",
-                    "6 grams"
+                    "Adenosine",
+                    "Atropine",
+                    "Amiodarone",
+                    "Epinephrine"
                 ],
-                "correctAnswer": 2,
-                "explanation": "Maximum acetaminophen: 4g/day for healthy adults, 3g/day for elderly or liver disease. Exceeding causes hepatotoxicity."
+                "correctAnswer": 1,
+                "explanation": "Atropine speeds up the heart rate."
             },
             {
                 "id": 12,
-                "text": "A client taking haloperidol (typical antipsychotic) develops muscle rigidity, fever, and altered mental status. This indicates:",
+                "text": "In Atrial Fibrillation (Afib), the two primary goals of treatment are:",
                 "options": [
-                    "Serotonin syndrome",
-                    "Neuroleptic malignant syndrome",
-                    "Tardive dyskinesia",
-                    "Akathisia"
+                    "Rate Control and Anticoagulation (prevent clots)",
+                    "Rhythm Control and Diuretics",
+                    "Increasing BP and sedation",
+                    "Defibrillation and Antibiotics"
                 ],
-                "correctAnswer": 1,
-                "explanation": "Neuroleptic malignant syndrome (NMS) is life-threatening: muscle rigidity, hyperthermia, altered consciousness, autonomic instability. Stop drug immediately."
+                "correctAnswer": 0,
+                "explanation": "Prevent the rapid rate and prevent the clots that form in the quivering atria."
             },
             {
                 "id": 13,
-                "text": "Which laxative works by drawing water into the intestine?",
+                "text": "The first question to ask when you see Ventricular Tachycardia (V-Tach) is:",
                 "options": [
-                    "Docusate (stool softener)",
-                    "Bisacodyl (stimulant)",
-                    "Polyethylene glycol (osmotic)",
-                    "Psyllium (bulk-forming)"
+                    "Is the patient awake?",
+                    "Does the patient have a pulse?",
+                    "What is the BP?",
+                    "Is there P waves?"
                 ],
-                "correctAnswer": 2,
-                "explanation": "Osmotic laxatives (PEG, lactulose, magnesium citrate) draw water into bowel. Gentler than stimulant laxatives."
+                "correctAnswer": 1,
+                "explanation": "Pulse = Meds/Cardioversion. No Pulse = Defibrillation/CPR. Determines the entire path."
             },
             {
                 "id": 14,
-                "text": "A geriatric client is at higher risk for medication toxicity due to:",
+                "text": "The treatment for Ventricular Fibrillation (V-Fib) is:",
                 "options": [
-                    "Increased liver metabolism",
-                    "Increased kidney function",
-                    "Decreased body fat",
-                    "Decreased kidney function"
+                    "Wait and see",
+                    "Immediate Defibrillation",
+                    "Atropine",
+                    "Synchronized Cardioversion"
                 ],
-                "correctAnswer": 3,
-                "explanation": "Elderly have decreased kidney/liver function, increased body fat, decreased lean mass. Start low, go slow with dosing."
+                "correctAnswer": 1,
+                "explanation": "V-Fib is cardiac arrest. Shock immediately to reset the rhythm."
             },
             {
                 "id": 15,
-                "text": "Which SSRI has the longest half-life?",
+                "text": "ScvO2 (Central Venous Oxygen Saturation) measures:",
                 "options": [
-                    "Sertraline (Zoloft)",
-                    "Fluoxetine (Prozac)",
-                    "Paroxetine (Paxil)",
-                    "Citalopram (Celexa)"
+                    "Arterial oxygen",
+                    "The balance between oxygen supply and demand",
+                    "Lung function",
+                    "Hemoglobin level"
                 ],
                 "correctAnswer": 1,
-                "explanation": "Fluoxetine has longest half-life (4-6 days). Can discontinue without tapering. Other SSRIs require gradual taper to avoid withdrawal."
+                "explanation": "Low ScvO2 means tissues are extracting too much O2 (demand > supply)."
             },
             {
                 "id": 16,
-                "text": "A client is prescribed fentanyl patch for chronic pain. When does it reach peak effect?",
+                "text": "A 'Thrombocytopenia' diagnosis would be based on which platelet count?",
                 "options": [
-                    "30 minutes",
-                    "2-4 hours",
-                    "12-24 hours",
-                    "3 days"
+                    "300,000",
+                    "160,000",
+                    "90,000",
+                    "500,000"
                 ],
                 "correctAnswer": 2,
-                "explanation": "Fentanyl patch takes 12-24 hours to reach peak. Change every 72 hours. Dispose properly (fold sticky sides together)."
+                "explanation": "Anything < 150,000 is low. 90k is thrombocytopenia."
             },
             {
                 "id": 17,
-                "text": "Which medication requires monitoring for tardive dyskinesia?",
+                "text": "Which medication is essentially a 'chemical cardioversion' to restart the heart in SVT?",
                 "options": [
-                    "Lithium",
-                    "Haloperidol",
-                    "Lorazepam",
-                    "Fluoxetine"
+                    "Adenosine",
+                    "Digoxin",
+                    "Lisinopril",
+                    "Furosemide"
                 ],
-                "correctAnswer": 1,
-                "explanation": "Tardive dyskinesia (involuntary movements) occurs with long-term antipsychotic use, especially typical antipsychotics. May be irreversible."
+                "correctAnswer": 0,
+                "explanation": "Adenosine briefly stops the heart to reset the rhythm."
             },
             {
                 "id": 18,
-                "text": "A client taking an MAOI (monoamine oxidase inhibitor) should avoid:",
+                "text": "Brain Natriuretic Peptide (BNP) is released in response to:",
                 "options": [
-                    "Bananas",
-                    "Aged cheese",
-                    "Fresh vegetables",
-                    "White bread"
+                    "Low Blood Pressure",
+                    "Ventricular Stretch (Volume Overload)",
+                    "Infection",
+                    "Pain"
                 ],
                 "correctAnswer": 1,
-                "explanation": "Avoid tyramine-rich foods with MAOIs (aged cheese, wine, cured meats) - can cause hypertensive crisis. Rarely used due to dietary restrictions."
+                "explanation": "It's the heart's cry for help when overfilled. Diagnostic for Heart Failure."
             },
             {
                 "id": 19,
-                "text": "Which pain medication is contraindicated in clients with peptic ulcer disease?",
+                "text": "If a patient on Warfarin has an INR of 5.2, they are at risk for:",
                 "options": [
-                    "Acetaminophen",
-                    "Morphine",
-                    "Ibuprofen",
-                    "Tramadol"
+                    "Clotting",
+                    "Bleeding",
+                    "Infection",
+                    "Seizures"
                 ],
-                "correctAnswer": 2,
-                "explanation": "NSAIDs (ibuprofen, naproxen) increase ulcer risk and GI bleeding. Acetaminophen is safer for clients with ulcers."
+                "correctAnswer": 1,
+                "explanation": "Therapeutic INR is 2-3. >5 is dangerously thin blood."
             },
             {
                 "id": 20,
-                "text": "A client is prescribed ondansetron (Zofran) for chemotherapy-induced nausea. When should it be given?",
+                "text": "Normal pH of blood is:",
                 "options": [
-                    "After nausea occurs",
-                    "30 minutes before chemotherapy",
-                    "Only at bedtime",
-                    "With meals"
+                    "7.0 - 8.0",
+                    "7.35 - 7.45",
+                    "7.25 - 7.35",
+                    "7.45 - 7.55"
                 ],
                 "correctAnswer": 1,
-                "explanation": "Give antiemetics 30 minutes before chemotherapy for prevention. More effective than treating nausea after it occurs."
+                "explanation": "Very narrow range. Life is not compatible far outside this."
             },
             {
                 "id": 21,
-                "text": "Which statement about tramadol is correct?",
+                "text": "Which electrolyte imbalance causes tall, peaked T-waves?",
                 "options": [
-                    "It is not an opioid",
-                    "It has no addiction potential",
-                    "It lowers seizure threshold",
-                    "It causes severe respiratory depression"
+                    "Hypokalemia",
+                    "Hyperkalemia (High Potassium)",
+                    "Hyponatremia",
+                    "Hypocalcemia"
                 ],
-                "correctAnswer": 2,
-                "explanation": "Tramadol is a weak opioid that lowers seizure threshold. Avoid in seizure disorders. Has lower respiratory depression risk than morphine."
+                "correctAnswer": 1,
+                "explanation": "High Potassium = Peaked T waves -> V-Fib arrest."
             },
             {
                 "id": 22,
-                "text": "A client taking clozapine (atypical antipsychotic) requires monitoring of:",
+                "text": "Synchronized Cardioversion is used for:",
                 "options": [
-                    "Blood glucose",
-                    "White blood cell count",
-                    "Liver enzymes",
-                    "All of the above"
+                    "Pulseless V-Tach",
+                    "Unstable Tachycardia WITH a pulse (e.g., rapid Afib/SVT)",
+                    "Asystole",
+                    "Bradycardia"
                 ],
-                "correctAnswer": 3,
-                "explanation": "Clozapine requires WBC monitoring (agranulocytosis risk), blood glucose (diabetes risk), and LFTs. Most effective but highest risk antipsychotic."
+                "correctAnswer": 1,
+                "explanation": "It syncs with the R wave to avoid causing V-Fib."
             },
             {
                 "id": 23,
-                "text": "Which medication is used for opioid-induced constipation?",
+                "text": "Which assessment finding typically precedes a drop in BP in shock?",
                 "options": [
-                    "Loperamide (Imodium)",
-                    "Docusate (Colace)",
-                    "Diphenhydramine",
-                    "Omeprazole"
+                    "Decreased Urine Output",
+                    "Tachycardia (High Heart Rate)",
+                    "Fever",
+                    "Rash"
                 ],
                 "correctAnswer": 1,
-                "explanation": "Stool softeners (docusate) and stimulant laxatives prevent/treat opioid-induced constipation. Start prophylactically with opioid therapy."
+                "explanation": "The heart speeds up to compensate for falling output BEFORE pressure drops."
             },
             {
                 "id": 24,
-                "text": "A client is prescribed gabapentin for neuropathic pain. Which statement is correct?",
+                "text": "For a patient with an Angiogram (femoral access), what is the priority post-op?",
                 "options": [
-                    "It is an opioid analgesic",
-                    "It is an anticonvulsant used for nerve pain",
-                    "It should be stopped abruptly",
-                    "It has no side effects"
+                    "Ambulate immediately",
+                    "Keep leg straight and flat for 4-6 hours to prevent bleeding",
+                    "Elevate leg on pillows",
+                    "Massage the groin"
                 ],
                 "correctAnswer": 1,
-                "explanation": "Gabapentin is an anticonvulsant effective for neuropathic pain (diabetic neuropathy, postherpetic neuralgia). Taper gradually to discontinue."
+                "explanation": "Flexing the hip could blow the clot at the artery puncture site."
             },
             {
                 "id": 25,
-                "text": "Which antacid should be avoided in clients with kidney disease?",
+                "text": "D-Dimer measures:",
                 "options": [
-                    "Calcium carbonate",
-                    "Magnesium hydroxide",
-                    "Aluminum hydroxide",
-                    "Sodium bicarbonate"
+                    "Clotting time",
+                    "Fibrin degradation products (indicates clot breakdown somewhere)",
+                    "Red blood cells",
+                    "Potassium"
                 ],
                 "correctAnswer": 1,
-                "explanation": "Magnesium-containing antacids can cause hypermagnesemia in kidney disease. Aluminum antacids can cause constipation."
+                "explanation": "Used to rule in/out PE or DVT."
             },
             {
                 "id": 26,
-                "text": "A client taking duloxetine (Cymbalta) for depression and pain should be monitored for:",
+                "text": "On an EKG, the P wave represents:",
                 "options": [
-                    "Hypertension",
-                    "Hypotension",
-                    "Hyperglycemia",
-                    "Hypothyroidism"
+                    "Ventricular contraction",
+                    "Atrial Depolarization",
+                    "Ventricular repolarization",
+                    "Resting phase"
                 ],
-                "correctAnswer": 0,
-                "explanation": "SNRIs (duloxetine, venlafaxine) can increase blood pressure. Monitor BP regularly. Also effective for neuropathic pain and fibromyalgia."
+                "correctAnswer": 1,
+                "explanation": "The electrical firing of the Atria."
             },
             {
                 "id": 27,
-                "text": "Which medication is first-line for acute migraine?",
+                "text": "The QRS complex represents:",
                 "options": [
-                    "Morphine",
-                    "Sumatriptan (Imitrex)",
-                    "Acetaminophen",
-                    "Prednisone"
+                    "Atrial kick",
+                    "Ventricular Depolarization (Contraction)",
+                    "Atrial reset",
+                    "Valve closure"
                 ],
                 "correctAnswer": 1,
-                "explanation": "Triptans (sumatriptan) are first-line for acute migraine. Contraindicated in coronary artery disease. NSAIDs are alternative."
+                "explanation": "The main pumping event of the ventricles."
             },
             {
                 "id": 28,
-                "text": "A geriatric client should avoid which medication class due to fall risk?",
+                "text": "A 'Sawtooth' pattern on an EKG is classic for:",
                 "options": [
-                    "Antibiotics",
-                    "Benzodiazepines",
-                    "Vitamins",
-                    "Antacids"
+                    "Atrial Fibrillation",
+                    "Atrial Flutter",
+                    "Sinus Rhythm",
+                    "V-Tach"
                 ],
                 "correctAnswer": 1,
-                "explanation": "Benzodiazepines increase fall risk in elderly due to sedation and impaired coordination. Use cautiously or avoid. Consider alternatives."
+                "explanation": "Flutter waves look like the teeth of a saw."
             },
             {
                 "id": 29,
-                "text": "Which is a sign of anticholinergic toxicity?",
+                "text": "What does 'Isoelectric' mean in EKG terms?",
                 "options": [
-                    "Bradycardia, salivation, urination",
-                    "Dry mouth, blurred vision, urinary retention",
-                    "Diarrhea and sweating",
-                    "Constricted pupils"
+                    "High voltage",
+                    "The flat baseline (zero activity)",
+                    "Irregular",
+                    "Fast"
                 ],
                 "correctAnswer": 1,
-                "explanation": "Anticholinergic toxicity: 'Dry as a bone, blind as a bat, red as a beet, hot as a hare, mad as a hatter.' Causes dry mouth, blurred vision, urinary retention, hyperthermia, confusion."
+                "explanation": "The ST segment should be isoelectric (flat) with the PR segment."
             },
             {
                 "id": 30,
-                "text": "A client is prescribed bisacodyl (Dulcolax). What is the mechanism of action?",
+                "text": "Why is oral fluid intake encouraged after a cardiac cath with dye?",
                 "options": [
-                    "Stool softener",
-                    "Stimulant laxative",
-                    "Osmotic laxative",
-                    "Bulk-forming laxative"
+                    "To prevent hunger",
+                    "To flush the nephrotoxic contrast dye out of the kidneys",
+                    "To increase BP",
+                    "To settle stomach"
                 ],
                 "correctAnswer": 1,
-                "explanation": "Bisacodyl is a stimulant laxative that increases intestinal motility. Works in 6-12 hours orally, 15-60 min rectally. Don't use long-term."
-            },
+                "explanation": "Contrast dye can cause Kidney Failure. Flush it out."
+            }
+        ]
+    },
+    {
+        "id": 113,
+        "episodeId": 9,
+        "title": "CV Pathologies & Procedures - Part B",
+        "description": "ACS, Heart Failure, Hypertensive Crisis, PAD, DVT",
+        "questionCount": 25,
+        "color": "from-red-600 to-red-900",
+        "questions": [
             {
-                "id": 31,
-                "text": "Which pain assessment tool is appropriate for a nonverbal client?",
+                "id": 1,
+                "text": "What is the key difference between STEMI and NSTEMI?",
                 "options": [
-                    "Numeric Rating Scale",
-                    "FLACC scale",
-                    "McGill Pain Questionnaire",
-                    "Visual Analog Scale"
+                    "NSTEMI is fake",
+                    "STEMI involves full-thickness vessel blockage requiring immediate reperfusion (Cath Lab)",
+                    "NSTEMI has ST elevation",
+                    "STEMI is treated with pills only"
                 ],
                 "correctAnswer": 1,
-                "explanation": "FLACC (Face, Legs, Activity, Cry, Consolability) assesses pain in nonverbal clients. Also use behavioral indicators: grimacing, guarding, restlessness."
+                "explanation": "STEMI = ST Elevation = Complete Blockage. NSTEMI = Partial Blockage."
             },
             {
-                "id": 32,
-                "text": "A client taking risperidone (atypical antipsychotic) should be monitored for:",
+                "id": 2,
+                "text": "Cardiogenic Shock is characterized by:",
                 "options": [
-                    "Weight loss",
-                    "Hypoglycemia",
-                    "Weight gain and metabolic syndrome",
-                    "Hypokalemia"
-                ],
-                "correctAnswer": 2,
-                "explanation": "Atypical antipsychotics cause weight gain, hyperglycemia, dyslipidemia (metabolic syndrome). Monitor weight, glucose, lipids regularly."
-            },
-            {
-                "id": 33,
-                "text": "Which medication is used to reverse benzodiazepine overdose?",
-                "options": [
-                    "Naloxone",
-                    "Flumazenil",
-                    "Protamine sulfate",
-                    "Activated charcoal"
+                    "High BP and warm skin",
+                    "Pump failure causing severe Hypotension, tachycardia, and cold/clammy extremities",
+                    "Increased urine output",
+                    "Fever"
                 ],
                 "correctAnswer": 1,
-                "explanation": "Flumazenil reverses benzodiazepines. Use cautiously - can precipitate seizures in chronic users. Naloxone reverses opioids."
+                "explanation": "The heart fails as a pump. Perfusion crashes globally."
             },
             {
-                "id": 34,
-                "text": "A client is prescribed sucralfate (Carafate) for peptic ulcer. When should it be taken?",
+                "id": 3,
+                "text": "What is the primary function of an Intra-Aortic Balloon Pump (IABP)?",
                 "options": [
-                    "With meals",
-                    "1 hour before meals",
-                    "At bedtime only",
-                    "After meals"
+                    "Pumps blood for the heart",
+                    "Inflates during diastole to perfuse coronaries, deflates during systole to reduce workload",
+                    "Acts as a pacemaker",
+                    "Filters blood"
                 ],
                 "correctAnswer": 1,
-                "explanation": "Sucralfate forms protective barrier over ulcer. Take 1 hour before meals and at bedtime on empty stomach. Don't take with antacids."
+                "explanation": "It helps the heart rest and feeds the heart muscle itself."
             },
             {
-                "id": 35,
-                "text": "Which is a Beers Criteria medication to avoid in elderly?",
+                "id": 4,
+                "text": "Left-Sided Heart Failure typically causes symptoms in the:",
                 "options": [
-                    "Acetaminophen",
-                    "Diphenhydramine (Benadryl)",
-                    "Docusate",
-                    "Vitamin D"
+                    "Legs (Edema)",
+                    "Lungs (Pulmonary Edema, Crackles, Dyspnea)",
+                    "Liver (Ascites)",
+                    "Neck veins"
                 ],
                 "correctAnswer": 1,
-                "explanation": "Beers Criteria lists potentially inappropriate medications for elderly. Diphenhydramine (anticholinergic) causes confusion, falls, urinary retention. Avoid in elderly."
+                "explanation": "Left = Lungs. Blood backs up from the left ventricle into the pulmonary veins."
+            },
+            {
+                "id": 5,
+                "text": "Right-Sided Heart Failure typically causes:",
+                "options": [
+                    "Cough",
+                    "Systemic Congestion (JVD, Peripheral Edema, Ascites)",
+                    "Pink sputum",
+                    "Confusion"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Right = Rest of Body. Blood backs up into the venous system."
+            },
+            {
+                "id": 6,
+                "text": "Classic sign of Acute Pulmonary Edema is:",
+                "options": [
+                    "Hunger",
+                    "Pink, frothy sputum",
+                    "Dry cough",
+                    "Fever"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Fluid fills the alveoli, mixing with air to create pink foam."
+            },
+            {
+                "id": 7,
+                "text": "The priority nursing intervention for Pulmonary Edema is:",
+                "options": [
+                    "Lay flat",
+                    "High Fowler's position (Sit up), Oxygen, Diuretics (Lasix)",
+                    "Walk the patient",
+                    "Beta blockers"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Sit up to drop the diaphragm. Diuretics to remove fluid. Morphine to reduce anxiety/preload."
+            },
+            {
+                "id": 8,
+                "text": "Hypertensive Emergency differs from Urgency because Emergency includes:",
+                "options": [
+                    "Higher numbers",
+                    "Evidence of Acute End-Organ Damage (Stroke, Kidney Failure, MI)",
+                    "Headache",
+                    "Anxiety"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Emergency = Organ Damage occurring NOW."
+            },
+            {
+                "id": 9,
+                "text": "In Hypertensive Urgency, the goal is to lower BP:",
+                "options": [
+                    "Instantly",
+                    "Slowly over 24 hours (approx 1/3 reduction) to prevent cerebral ischemia",
+                    "To zero",
+                    "Only with IV meds"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Dropping BP too fast can cause a stroke because the brain has auto-regulated to the high pressure."
+            },
+            {
+                "id": 10,
+                "text": "An Ankle-Brachial Index (ABI) of < 0.5 indicates:",
+                "options": [
+                    "Normal flow",
+                    "Severe Peripheral Arterial Disease (PAD)",
+                    "Venous insufficiency",
+                    "Deep Vein Thrombosis"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Below 0.9 is PAD. Below 0.5 is severe ischemia."
+            },
+            {
+                "id": 11,
+                "text": "Intermittent Claudication is:",
+                "options": [
+                    "Chest pain",
+                    "Pain/Cramping in legs during walking that relieves with rest (classic PAD sign)",
+                    "Joint pain",
+                    "Nerve pain"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Leg angina. Muscles starve for O2 when walking."
+            },
+            {
+                "id": 12,
+                "text": "Which position helps relieve pain in Peripheral Arterial Disease (PAD)?",
+                "options": [
+                    "Elevating legs",
+                    "Dangling legs (Dependent position)",
+                    "Lying flat",
+                    "Crossed legs"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Gravity helps blood flow DOWN to the ischemic feet."
+            },
+            {
+                "id": 13,
+                "text": "After an Abdominal Aortic Aneurysm (AAA) repair, why is hip flexion avoided?",
+                "options": [
+                    "It hurts",
+                    "It puts pressure on the femoral artery graft/incision",
+                    "It causes reflux",
+                    "Patients can't bend"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Keep HOB < 45 degrees. Pinching the graft could rupture it."
+            },
+            {
+                "id": 14,
+                "text": "Virchow's Triad for DVT risk includes:",
+                "options": [
+                    "Pain, Pallor, Pulselessness",
+                    "Venous Stasis, Endothelial Injury, Hypercoagulability",
+                    "HR, BP, RR",
+                    "Airway, Breathing, Circulation"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Stasis (slow blood), Injury (vessel damage), Thick blood (clotting)."
+            },
+            {
+                "id": 15,
+                "text": "Sequential Compression Devices (SCDs) are used to:",
+                "options": [
+                    "Treat existing DVT",
+                    "Prevent DVT by simulating walking/pumping blood",
+                    "Keep legs warm",
+                    "Measure BP"
+                ],
+                "correctAnswer": 1,
+                "explanation": "NEVER put SCDs on a leg with a KNOWN DVT (it could dislodge the clot). Use for prevention only."
+            },
+            {
+                "id": 16,
+                "text": "A 'Papillary Muscle Rupture' is a catastrophic complication that can occur:",
+                "options": [
+                    "During eating",
+                    "Days after an MI, causing acute valve failure/heart failure",
+                    "From running",
+                    "From sleeping"
+                ],
+                "correctAnswer": 1,
+                "explanation": "The muscle holding the mitral valve snaps. Massive backflow -> Flash Pulmonary Edema."
+            },
+            {
+                "id": 17,
+                "text": "MONA is an acronym for MI treatment. It stands for:",
+                "options": [
+                    "Mom, Only, Needs, Apples",
+                    "Morphine, Oxygen, Nitroglycerin, Aspirin",
+                    "Metoprolol, Onions, Naproxen, Ativan",
+                    "Monitor, Observe, Nurse, Act"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Standard initial interventions for chest pain (though order varies)."
+            },
+            {
+                "id": 18,
+                "text": "Nitroglycerin works for angina by:",
+                "options": [
+                    "Numbing the heart",
+                    "Vasodilation (opening vessels) to increase O2 supply and decrease workload",
+                    "Thinning blood",
+                    "Slowing heart rate"
+                ],
+                "correctAnswer": 1,
+                "explanation": "It opens the pipes, reducing the pressure the heart has to pump against (afterload) and filling pressure (preload)."
+            },
+            {
+                "id": 19,
+                "text": "A common side effect of Nitroglycerin is:",
+                "options": [
+                    "Constipation",
+                    "Severe Headache",
+                    "Hypertension",
+                    "Hunger"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Vasodilation in the head causes a pounding headache."
+            },
+            {
+                "id": 20,
+                "text": "Why must a patient with a DVT be on bedrest initially (or limited activity)?",
+                "options": [
+                    "They are tired",
+                    "To prevent the clot from dislodging and becoming a Pulmonary Embolism (PE)",
+                    "Legs hurt",
+                    "Hospital policy"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Movement creates muscle pump action which can shoot the clot to the lungs."
+            },
+            {
+                "id": 21,
+                "text": "Signs of a Pulmonary Embolism (PE) include:",
+                "options": [
+                    "Slow breathing",
+                    "Sudden onset Dyspnea, Chest Pain, Tachycardia, Anxiety ('Doom')",
+                    "Rash",
+                    "Hunger"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Clot in lung = No oxygen exchange + Right heart strain."
+            },
+            {
+                "id": 22,
+                "text": "Digital Clubbing is a sign of:",
+                "options": [
+                    "Acute infection",
+                    "Chronic Hypoxia (Long-term oxygen deprivation)",
+                    "Broken fingers",
+                    "Arthritis"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Seen in chronic heart/lung disease (e.g., Tetraology of Fallot, COPD)."
+            },
+            {
+                "id": 23,
+                "text": "Raynaud's Phenomenon involves:",
+                "options": [
+                    "Hot hands",
+                    "Vasospasm in fingers/toes causing color changes (White-Blue-Red) in cold/stress",
+                    "Sweaty palms",
+                    "Numbness alone"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Arteries spasm shut. Keep hands warm."
+            },
+            {
+                "id": 24,
+                "text": "Buerger's Disease is strongly linked to:",
+                "options": [
+                    "Alcohol",
+                    "Smoking/Tobacco use",
+                    "Sugar",
+                    "Fat"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Thromboangiitis obliterans. The only cure is to STOP SMOKING."
+            },
+            {
+                "id": 25,
+                "text": "Which position is best for a patient in Hypovolemic Shock?",
+                "options": [
+                    "Standing",
+                    "Trendelenburg or Modified Trendelenburg (Legs elevated)",
+                    "High Fowler's",
+                    "Prone"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Gravity helps drain blood from legs back to the heart/brain."
             }
         ]
     },
@@ -10045,6 +10295,435 @@
                 ],
                 "correctAnswer": 1,
                 "explanation": "Draw up clear (regular) before cloudy (NPH). Mnemonic: 'Clear before cloudy' or 'RN' (Regular before NPH)."
+            }
+        ]
+    },
+    {
+        "id": 8,
+        "title": "Pharmacology Part 2 (Unassigned)",
+        "description": "Pain Management, GI, Psychiatric, Geriatric Pharmacology",
+        "questionCount": 35,
+        "color": "from-indigo-600 to-violet-800",
+        "questions": [
+            {
+                "id": 1,
+                "text": "When administering lithium, the nurse monitors for toxicity. Early signs include:",
+                "options": [
+                    "Fine hand tremors, nausea, polyuria",
+                    "Coarse hand tremors, vomiting, confusion",
+                    "Seizures and coma",
+                    "Hypertension and tachycardia"
+                ],
+                "correctAnswer": 0,
+                "explanation": "Early lithium toxicity: fine tremors, nausea, polyuria. Advanced toxicity: coarse tremors, vomiting, confusion, seizures. Therapeutic level: 0.6-1.2 mEq/L."
+            },
+            {
+                "id": 2,
+                "text": "What is the antidote for opioid overdose?",
+                "options": [
+                    "Flumazenil",
+                    "Naloxone (Narcan)",
+                    "Protamine sulfate",
+                    "Vitamin K"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Naloxone reverses opioid effects including respiratory depression. May need repeated doses. Flumazenil reverses benzodiazepines."
+            },
+            {
+                "id": 3,
+                "text": "A client taking an SSRI (selective serotonin reuptake inhibitor) should be monitored for:",
+                "options": [
+                    "Hypertensive crisis",
+                    "Serotonin syndrome",
+                    "Agranulocytosis",
+                    "Hepatotoxicity"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Serotonin syndrome symptoms: agitation, confusion, tremor, hyperthermia, muscle rigidity. Can occur with SSRI overdose or drug interactions."
+            },
+            {
+                "id": 4,
+                "text": "Which pain scale is appropriate for a 4-year-old child?",
+                "options": [
+                    "Numeric Rating Scale (0-10)",
+                    "FACES pain scale",
+                    "Visual Analog Scale",
+                    "McGill Pain Questionnaire"
+                ],
+                "correctAnswer": 1,
+                "explanation": "FACES scale (Wong-Baker) is appropriate for children 3+ years. Shows faces from happy to crying. Numeric scales work for ages 8+."
+            },
+            {
+                "id": 5,
+                "text": "A client is prescribed morphine PCA (patient-controlled analgesia). What is the priority assessment?",
+                "options": [
+                    "Blood pressure",
+                    "Respiratory rate",
+                    "Heart rate",
+                    "Temperature"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Monitor respiratory rate closely with opioids. Hold if <12/min. Also assess sedation level, pain relief, and for side effects."
+            },
+            {
+                "id": 6,
+                "text": "Which medication is used to treat extrapyramidal symptoms (EPS) from antipsychotics?",
+                "options": [
+                    "Haloperidol",
+                    "Benztropine (Cogentin)",
+                    "Lithium",
+                    "Fluoxetine"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Benztropine (anticholinergic) treats EPS (dystonia, akathisia, pseudoparkinsonism) caused by typical antipsychotics."
+            },
+            {
+                "id": 7,
+                "text": "A client taking omeprazole (proton pump inhibitor) for GERD should take it:",
+                "options": [
+                    "With meals",
+                    "At bedtime",
+                    "30 minutes before breakfast",
+                    "After meals"
+                ],
+                "correctAnswer": 2,
+                "explanation": "PPIs work best when taken 30 minutes before first meal of the day on empty stomach for maximum acid suppression."
+            },
+            {
+                "id": 8,
+                "text": "Which is a common side effect of opioid analgesics?",
+                "options": [
+                    "Diarrhea",
+                    "Constipation",
+                    "Hypertension",
+                    "Tachycardia"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Opioids commonly cause constipation. Prevent with stool softeners, fluids, fiber. Also cause nausea, sedation, respiratory depression."
+            },
+            {
+                "id": 9,
+                "text": "A client is prescribed lorazepam (Ativan) for anxiety. Which statement indicates understanding?",
+                "options": [
+                    "I can drink alcohol while taking this.",
+                    "I should avoid driving until I know how this affects me.",
+                    "I can stop taking this abruptly.",
+                    "This medication is not habit-forming."
+                ],
+                "correctAnswer": 1,
+                "explanation": "Benzodiazepines cause sedation. Avoid alcohol and driving. Don't stop abruptly (risk of seizures). Can be habit-forming."
+            },
+            {
+                "id": 10,
+                "text": "Which antiemetic is contraindicated in Parkinson's disease?",
+                "options": [
+                    "Ondansetron (Zofran)",
+                    "Metoclopramide (Reglan)",
+                    "Meclizine",
+                    "Ginger"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Metoclopramide blocks dopamine and can worsen Parkinson's symptoms. Ondansetron (5-HT3 antagonist) is safe alternative."
+            },
+            {
+                "id": 11,
+                "text": "What is the maximum daily dose of acetaminophen for adults?",
+                "options": [
+                    "2 grams",
+                    "3 grams",
+                    "4 grams",
+                    "6 grams"
+                ],
+                "correctAnswer": 2,
+                "explanation": "Maximum acetaminophen: 4g/day for healthy adults, 3g/day for elderly or liver disease. Exceeding causes hepatotoxicity."
+            },
+            {
+                "id": 12,
+                "text": "A client taking haloperidol (typical antipsychotic) develops muscle rigidity, fever, and altered mental status. This indicates:",
+                "options": [
+                    "Serotonin syndrome",
+                    "Neuroleptic malignant syndrome",
+                    "Tardive dyskinesia",
+                    "Akathisia"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Neuroleptic malignant syndrome (NMS) is life-threatening: muscle rigidity, hyperthermia, altered consciousness, autonomic instability. Stop drug immediately."
+            },
+            {
+                "id": 13,
+                "text": "Which laxative works by drawing water into the intestine?",
+                "options": [
+                    "Docusate (stool softener)",
+                    "Bisacodyl (stimulant)",
+                    "Polyethylene glycol (osmotic)",
+                    "Psyllium (bulk-forming)"
+                ],
+                "correctAnswer": 2,
+                "explanation": "Osmotic laxatives (PEG, lactulose, magnesium citrate) draw water into bowel. Gentler than stimulant laxatives."
+            },
+            {
+                "id": 14,
+                "text": "A geriatric client is at higher risk for medication toxicity due to:",
+                "options": [
+                    "Increased liver metabolism",
+                    "Increased kidney function",
+                    "Decreased body fat",
+                    "Decreased kidney function"
+                ],
+                "correctAnswer": 3,
+                "explanation": "Elderly have decreased kidney/liver function, increased body fat, decreased lean mass. Start low, go slow with dosing."
+            },
+            {
+                "id": 15,
+                "text": "Which SSRI has the longest half-life?",
+                "options": [
+                    "Sertraline (Zoloft)",
+                    "Fluoxetine (Prozac)",
+                    "Paroxetine (Paxil)",
+                    "Citalopram (Celexa)"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Fluoxetine has longest half-life (4-6 days). Can discontinue without tapering. Other SSRIs require gradual taper to avoid withdrawal."
+            },
+            {
+                "id": 16,
+                "text": "A client is prescribed fentanyl patch for chronic pain. When does it reach peak effect?",
+                "options": [
+                    "30 minutes",
+                    "2-4 hours",
+                    "12-24 hours",
+                    "3 days"
+                ],
+                "correctAnswer": 2,
+                "explanation": "Fentanyl patch takes 12-24 hours to reach peak. Change every 72 hours. Dispose properly (fold sticky sides together)."
+            },
+            {
+                "id": 17,
+                "text": "Which medication requires monitoring for tardive dyskinesia?",
+                "options": [
+                    "Lithium",
+                    "Haloperidol",
+                    "Lorazepam",
+                    "Fluoxetine"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Tardive dyskinesia (involuntary movements) occurs with long-term antipsychotic use, especially typical antipsychotics. May be irreversible."
+            },
+            {
+                "id": 18,
+                "text": "A client taking an MAOI (monoamine oxidase inhibitor) should avoid:",
+                "options": [
+                    "Bananas",
+                    "Aged cheese",
+                    "Fresh vegetables",
+                    "White bread"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Avoid tyramine-rich foods with MAOIs (aged cheese, wine, cured meats) - can cause hypertensive crisis. Rarely used due to dietary restrictions."
+            },
+            {
+                "id": 19,
+                "text": "Which pain medication is contraindicated in clients with peptic ulcer disease?",
+                "options": [
+                    "Acetaminophen",
+                    "Morphine",
+                    "Ibuprofen",
+                    "Tramadol"
+                ],
+                "correctAnswer": 2,
+                "explanation": "NSAIDs (ibuprofen, naproxen) increase ulcer risk and GI bleeding. Acetaminophen is safer for clients with ulcers."
+            },
+            {
+                "id": 20,
+                "text": "A client is prescribed ondansetron (Zofran) for chemotherapy-induced nausea. When should it be given?",
+                "options": [
+                    "After nausea occurs",
+                    "30 minutes before chemotherapy",
+                    "Only at bedtime",
+                    "With meals"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Give antiemetics 30 minutes before chemotherapy for prevention. More effective than treating nausea after it occurs."
+            },
+            {
+                "id": 21,
+                "text": "Which statement about tramadol is correct?",
+                "options": [
+                    "It is not an opioid",
+                    "It has no addiction potential",
+                    "It lowers seizure threshold",
+                    "It causes severe respiratory depression"
+                ],
+                "correctAnswer": 2,
+                "explanation": "Tramadol is a weak opioid that lowers seizure threshold. Avoid in seizure disorders. Has lower respiratory depression risk than morphine."
+            },
+            {
+                "id": 22,
+                "text": "A client taking clozapine (atypical antipsychotic) requires monitoring of:",
+                "options": [
+                    "Blood glucose",
+                    "White blood cell count",
+                    "Liver enzymes",
+                    "All of the above"
+                ],
+                "correctAnswer": 3,
+                "explanation": "Clozapine requires WBC monitoring (agranulocytosis risk), blood glucose (diabetes risk), and LFTs. Most effective but highest risk antipsychotic."
+            },
+            {
+                "id": 23,
+                "text": "Which medication is used for opioid-induced constipation?",
+                "options": [
+                    "Loperamide (Imodium)",
+                    "Docusate (Colace)",
+                    "Diphenhydramine",
+                    "Omeprazole"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Stool softeners (docusate) and stimulant laxatives prevent/treat opioid-induced constipation. Start prophylactically with opioid therapy."
+            },
+            {
+                "id": 24,
+                "text": "A client is prescribed gabapentin for neuropathic pain. Which statement is correct?",
+                "options": [
+                    "It is an opioid analgesic",
+                    "It is an anticonvulsant used for nerve pain",
+                    "It should be stopped abruptly",
+                    "It has no side effects"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Gabapentin is an anticonvulsant effective for neuropathic pain (diabetic neuropathy, postherpetic neuralgia). Taper gradually to discontinue."
+            },
+            {
+                "id": 25,
+                "text": "Which antacid should be avoided in clients with kidney disease?",
+                "options": [
+                    "Calcium carbonate",
+                    "Magnesium hydroxide",
+                    "Aluminum hydroxide",
+                    "Sodium bicarbonate"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Magnesium-containing antacids can cause hypermagnesemia in kidney disease. Aluminum antacids can cause constipation."
+            },
+            {
+                "id": 26,
+                "text": "A client taking duloxetine (Cymbalta) for depression and pain should be monitored for:",
+                "options": [
+                    "Hypertension",
+                    "Hypotension",
+                    "Hyperglycemia",
+                    "Hypothyroidism"
+                ],
+                "correctAnswer": 0,
+                "explanation": "SNRIs (duloxetine, venlafaxine) can increase blood pressure. Monitor BP regularly. Also effective for neuropathic pain and fibromyalgia."
+            },
+            {
+                "id": 27,
+                "text": "Which medication is first-line for acute migraine?",
+                "options": [
+                    "Morphine",
+                    "Sumatriptan (Imitrex)",
+                    "Acetaminophen",
+                    "Prednisone"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Triptans (sumatriptan) are first-line for acute migraine. Contraindicated in coronary artery disease. NSAIDs are alternative."
+            },
+            {
+                "id": 28,
+                "text": "A geriatric client should avoid which medication class due to fall risk?",
+                "options": [
+                    "Antibiotics",
+                    "Benzodiazepines",
+                    "Vitamins",
+                    "Antacids"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Benzodiazepines increase fall risk in elderly due to sedation and impaired coordination. Use cautiously or avoid. Consider alternatives."
+            },
+            {
+                "id": 29,
+                "text": "Which is a sign of anticholinergic toxicity?",
+                "options": [
+                    "Bradycardia, salivation, urination",
+                    "Dry mouth, blurred vision, urinary retention",
+                    "Diarrhea and sweating",
+                    "Constricted pupils"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Anticholinergic toxicity: 'Dry as a bone, blind as a bat, red as a beet, hot as a hare, mad as a hatter.' Causes dry mouth, blurred vision, urinary retention, hyperthermia, confusion."
+            },
+            {
+                "id": 30,
+                "text": "A client is prescribed bisacodyl (Dulcolax). What is the mechanism of action?",
+                "options": [
+                    "Stool softener",
+                    "Stimulant laxative",
+                    "Osmotic laxative",
+                    "Bulk-forming laxative"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Bisacodyl is a stimulant laxative that increases intestinal motility. Works in 6-12 hours orally, 15-60 min rectally. Don't use long-term."
+            },
+            {
+                "id": 31,
+                "text": "Which pain assessment tool is appropriate for a nonverbal client?",
+                "options": [
+                    "Numeric Rating Scale",
+                    "FLACC scale",
+                    "McGill Pain Questionnaire",
+                    "Visual Analog Scale"
+                ],
+                "correctAnswer": 1,
+                "explanation": "FLACC (Face, Legs, Activity, Cry, Consolability) assesses pain in nonverbal clients. Also use behavioral indicators: grimacing, guarding, restlessness."
+            },
+            {
+                "id": 32,
+                "text": "A client taking risperidone (atypical antipsychotic) should be monitored for:",
+                "options": [
+                    "Weight loss",
+                    "Hypoglycemia",
+                    "Weight gain and metabolic syndrome",
+                    "Hypokalemia"
+                ],
+                "correctAnswer": 2,
+                "explanation": "Atypical antipsychotics cause weight gain, hyperglycemia, dyslipidemia (metabolic syndrome). Monitor weight, glucose, lipids regularly."
+            },
+            {
+                "id": 33,
+                "text": "Which medication is used to reverse benzodiazepine overdose?",
+                "options": [
+                    "Naloxone",
+                    "Flumazenil",
+                    "Protamine sulfate",
+                    "Activated charcoal"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Flumazenil reverses benzodiazepines. Use cautiously - can precipitate seizures in chronic users. Naloxone reverses opioids."
+            },
+            {
+                "id": 34,
+                "text": "A client is prescribed sucralfate (Carafate) for peptic ulcer. When should it be taken?",
+                "options": [
+                    "With meals",
+                    "1 hour before meals",
+                    "At bedtime only",
+                    "After meals"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Sucralfate forms protective barrier over ulcer. Take 1 hour before meals and at bedtime on empty stomach. Don't take with antacids."
+            },
+            {
+                "id": 35,
+                "text": "Which is a Beers Criteria medication to avoid in elderly?",
+                "options": [
+                    "Acetaminophen",
+                    "Diphenhydramine (Benadryl)",
+                    "Docusate",
+                    "Vitamin D"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Beers Criteria lists potentially inappropriate medications for elderly. Diphenhydramine (anticholinergic) causes confusion, falls, urinary retention. Avoid in elderly."
             }
         ]
     },

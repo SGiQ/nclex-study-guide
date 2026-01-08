@@ -57,9 +57,10 @@ export default function MindMapViewerPage({ params }: { params: Promise<{ id: st
             <main className="flex-1 overflow-hidden bg-gray-900">
                 <TransformWrapper
                     initialScale={1}
-                    minScale={0.5}
+                    minScale={0.1}
                     maxScale={4}
-                    centerOnInit={false}
+                    centerOnInit={true}
+                    centerZoomedOut={true}
                     limitToBounds={false}
                     panning={{ disabled: false }}
                     wheel={{ step: 0.1 }}

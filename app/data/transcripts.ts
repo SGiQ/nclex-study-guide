@@ -50,6 +50,12 @@ import episode13Data from './episode-13-transcript.json';
 // Episode 14: Complex Care & Emergencies (Sepsis/OB/Geriatrics)
 import episode14Data from './episode-14-transcript.json';
 
+// Episode 15: Practice Test Strategy
+import episode15Data from './episode-15-transcript.json';
+
+// Episode 16: Final Readiness
+import episode16Data from './episode-16-transcript.json';
+
 // Transcript lookup by episode ID
 export const transcripts: Record<number, TranscriptSegment[]> = {
     1: episode1Data as TranscriptSegment[],
@@ -66,6 +72,8 @@ export const transcripts: Record<number, TranscriptSegment[]> = {
     12: episode12Data as TranscriptSegment[],
     13: episode13Data as TranscriptSegment[],
     14: episode14Data as TranscriptSegment[],
+    15: episode15Data as TranscriptSegment[],
+    16: episode16Data as TranscriptSegment[],
     // Add more episodes as transcripts become available
 };
 

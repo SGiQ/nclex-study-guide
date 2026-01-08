@@ -1,0 +1,157 @@
+{
+    "episodeId": 12,
+    "title": "Episode 12 Flashcards",
+    "description": "Physiological Adaptation: Renal & Trauma",
+    "cards": [
+        {
+            "id": 1,
+            "front": "What is the difference between Pyelonephritis and Cystitis?",
+            "back": "Cystitis is a lower UTI (ladder); Pyelonephritis is an upper UTI (kidney organ) and is much more severe."
+        },
+        {
+            "id": 2,
+            "front": "What defines Prerenal AKI?",
+            "back": "Reduced blood flow to the kidneys (e.g., dehydration, shock, heart failure)."
+        },
+        {
+            "id": 3,
+            "front": "What defines Intrarenal AKI?",
+            "back": "Direct damage to kidney tissue (e.g., nephrotoxins, ischemia, Acute Tubular Necrosis)."
+        },
+        {
+            "id": 4,
+            "front": "What defines Postrenal AKI?",
+            "back": "Obstruction of urine outflow (e.g., BPH, kidney stones)."
+        },
+        {
+            "id": 5,
+            "front": "What is Acute Tubular Necrosis (ATN)?",
+            "back": "The most common Intrarenal failure; death of tubular cells due to lack of O2 or toxins."
+        },
+        {
+            "id": 6,
+            "front": "Why is 'Anemia' a complication of CKD?",
+            "back": "Kidneys stop producing Erythropoietin (EPO), so bone marrow makes fewer red blood cells."
+        },
+        {
+            "id": 7,
+            "front": "What is the greatest risk with Peritoneal Dialysis?",
+            "back": "Peritonitis (cloudy outflow = infection)."
+        },
+        {
+            "id": 8,
+            "front": "How do you assess an AV Fistula for patency?",
+            "back": "Palpate for a Thrill (vibration) and Auscultate for a Bruit (swishing)."
+        },
+        {
+            "id": 9,
+            "front": "What is 'Disequilibrium Syndrome' in Hemodialysis?",
+            "back": "Cerebral edema causes confusion/seizures due to rapid solute removal."
+        },
+        {
+            "id": 10,
+            "front": "What is the #1 rule for urinary catheter bags?",
+            "back": "Keep below the level of the bladder at all times to prevent backflow."
+        },
+        {
+            "id": 11,
+            "front": "What are the 6 P's of Compartment Syndrome?",
+            "back": "Pain (unrelieved), Pallor, Pulselessness, Paresthesia, Paralysis, Poikilothermia."
+        },
+        {
+            "id": 12,
+            "front": "What is the treatment for acute Compartment Syndrome?",
+            "back": "Emergency Fasciotomy (cutting the fascia to release pressure)."
+        },
+        {
+            "id": 13,
+            "front": "What are the signs of Fat Embolism Syndrome?",
+            "back": "Respiratory distress, Confusion, and Petechial Rash on chest/neck (classic sign)."
+        },
+        {
+            "id": 14,
+            "front": "What is Rhabdomyolysis?",
+            "back": "Muscle breakdown releases Myoglobin, which clogs kidneys causing ATN/Acute Kidney Injury."
+        },
+        {
+            "id": 15,
+            "front": "What is the hallmark sign of Rhabdomyolysis?",
+            "back": "Dark, tea or cola-colored urine."
+        },
+        {
+            "id": 16,
+            "front": "Why are Pelvic Fractures so dangerous?",
+            "back": "High risk of massive internal hemorrhage due to vascularity."
+        },
+        {
+            "id": 17,
+            "front": "What is an Open Fracture?",
+            "back": "Bone breaks through the skin; high risk of Osteomyelitis."
+        },
+        {
+            "id": 18,
+            "front": "How should a severed limb part be stored?",
+            "back": "Wrapped in moist sterile gauze, in a sealed bag, placed ON ice water (never directly on ice)."
+        },
+        {
+            "id": 19,
+            "front": "What is a contraindication for a tourniquet?",
+            "back": "Sickle Cell Disease or DVT (risk of causing irreversible ischemia/clots)."
+        },
+        {
+            "id": 20,
+            "front": "What is the purpose of Buck's Traction?",
+            "back": "To reduce muscle spasms and stabilize a hip fracture before surgery."
+        },
+        {
+            "id": 21,
+            "front": "How do you prevent hip contractures in an amputee?",
+            "back": "Have the patient lie Prone (on stomach) several times a day."
+        },
+        {
+            "id": 22,
+            "front": "What is an active closed drainage system?",
+            "back": "A drain that uses suction (e.g., Jackson-Pratt/JP drain)."
+        },
+        {
+            "id": 23,
+            "front": "What is the RICE acronym?",
+            "back": "Rest, Ice, Compression, Elevation."
+        },
+        {
+            "id": 24,
+            "front": "What should you assume first with a confused trauma patient?",
+            "back": "Hypoxia or Shock (not just head injury)."
+        },
+        {
+            "id": 25,
+            "front": "Why is 'Pistoning' of a catheter bad?",
+            "back": "Movement introduces bacteria into the urethra; prevent by securing the catheter to the leg."
+        },
+        {
+            "id": 26,
+            "front": "What is Uremic Frost?",
+            "back": "Crystallized urea deposits on the skin in severe End-Stage Renal Disease."
+        },
+        {
+            "id": 27,
+            "front": "What electrolyte must be monitored closely in renal failure due to cardiac risk?",
+            "back": "Potassium (Hyperkalemia)."
+        },
+        {
+            "id": 28,
+            "front": "What is the immediate action for suspected spinal injury?",
+            "back": "Immobilize the spine."
+        },
+        {
+            "id": 29,
+            "front": "What defines Oliguria?",
+            "back": "Urine output less than 400 mL/day."
+        },
+        {
+            "id": 30,
+            "front": "What is a 'Greenstick' fracture?",
+            "back": "Incomplete break common in children."
+        }
+    ]
+}

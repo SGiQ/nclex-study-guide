@@ -122,9 +122,9 @@
   },
   {
     "id": 12,
-    "title": "Physiological Adaptation Part 1",
-    "description": "Fluid & Electrolytes, Acid-Base, Emergencies",
-    "content": "Fluid & Electrolyte Imbalances\nAcid-Base Balance\nMedical Emergencies (Shock, CPR, Trauma)\nOncology Nursing",
+    "title": "Physiological Adaptation: Renal & Musculoskeletal",
+    "description": "AKI/CKD, Dialysis, Fractures, Trauma (Compartment Syndrome), Catheter Care",
+    "content": "Renal System: Pyelonephritis, AKI vs CKD, Dialysis (Hemo vs Peritoneal)\\nUrinary: Catheter Care & Infections\\nMusculoskeletal: Fractures, Compartment Syndrome, Fat Embolism, Rhabdomyolysis\\nTrauma: Amputation Care, Tourniquets",
     "pages": "271-295",
     "duration": 900,
     "audioUrl": "/uploads/episode-12.mp3",

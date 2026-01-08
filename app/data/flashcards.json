@@ -2259,262 +2259,157 @@
     {
         "episodeId": 12,
         "title": "Episode 12 Flashcards",
-        "description": "Flashcards for Episode 12",
+        "description": "Physiological Adaptation: Renal & Trauma",
         "cards": [
             {
                 "id": 1,
-                "front": "What is the primary purpose of a tourniquet?",
-                "back": "To control hemorrhage in an extremity."
+                "front": "What is the difference between Pyelonephritis and Cystitis?",
+                "back": "Cystitis is a lower UTI (ladder); Pyelonephritis is an upper UTI (kidney organ) and is much more severe."
             },
             {
                 "id": 2,
-                "front": "\"Tourniquets may be contraindicated in patients with conditions such as DVT",
-                "back": "Raynaud's disease, crushing injuries, _____, severe peripheral vascular disease, and previous revascularization of the extremity.\",sickle cell disease"
+                "front": "What defines Prerenal AKI?",
+                "back": "Reduced blood flow to the kidneys (e.g., dehydration, shock, heart failure)."
             },
             {
                 "id": 3,
-                "front": "\"Regardless of the type",
-                "back": "a tourniquet should be placed as _____ on the extremity as possible.\",high"
+                "front": "What defines Intrarenal AKI?",
+                "back": "Direct damage to kidney tissue (e.g., nephrotoxins, ischemia, Acute Tubular Necrosis)."
             },
             {
                 "id": 4,
-                "front": "Which type of nasogastric tube is a single lumen tube used only with low suction to drain gastric secretions?",
-                "back": "Levin tube."
+                "front": "What defines Postrenal AKI?",
+                "back": "Obstruction of urine outflow (e.g., BPH, kidney stones)."
             },
             {
                 "id": 5,
-                "front": "What is the key feature of a Salem Sump tube that allows for continuous low or intermittent high suction?",
-                "back": "It has a vent lumen (pigtail) to prevent a vacuum from forming."
+                "front": "What is Acute Tubular Necrosis (ATN)?",
+                "back": "The most common Intrarenal failure; death of tubular cells due to lack of O2 or toxins."
             },
             {
                 "id": 6,
-                "front": "How is the insertion length of an NG tube typically measured?",
-                "back": "\"From the earlobe to the xiphoid process, and from the earlobe to the nose tip.\""
+                "front": "Why is 'Anemia' a complication of CKD?",
+                "back": "Kidneys stop producing Erythropoietin (EPO), so bone marrow makes fewer red blood cells."
             },
             {
                 "id": 7,
-                "front": "A _____ involves the percutaneous endoscopic insertion of a sheathed needle with a guidewire through the abdomen and stomach so that a tube for feedings can be inserted.",
-                "back": "PEG tube (Percutaneous endoscopic gastrostomy)"
+                "front": "What is the greatest risk with Peritoneal Dialysis?",
+                "back": "Peritonitis (cloudy outflow = infection)."
             },
             {
                 "id": 8,
-                "front": "What is 'buried bumper syndrome' in relation to PEG tubes?",
-                "back": "\"A complication where the internal fixation device becomes lodged in the mucosal lining of the gastric wall, resulting in ulcerations.\""
+                "front": "How do you assess an AV Fistula for patency?",
+                "back": "Palpate for a Thrill (vibration) and Auscultate for a Bruit (swishing)."
             },
             {
                 "id": 9,
-                "front": "\"Which type of surgical drain is a flat",
-                "back": "soft rubber/latex tube placed in a wound to drain fluid by gravity and capillary action?\",Penrose drain."
+                "front": "What is 'Disequilibrium Syndrome' in Hemodialysis?",
+                "back": "Cerebral edema causes confusion/seizures due to rapid solute removal."
             },
             {
                 "id": 10,
-                "front": "What is the mechanism of action for closed-drainage systems like the Jackson-Pratt or Hemovac?",
-                "back": "They use low-pressure suction to provide continuous gravity drainage of wounds by compressing the collection device."
+                "front": "What is the #1 rule for urinary catheter bags?",
+                "back": "Keep below the level of the bladder at all times to prevent backflow."
             },
             {
                 "id": 11,
-                "front": "A Jackson-Pratt is a bulb-type drain that can hold about _____ mL of drainage.",
-                "back": "100"
+                "front": "What are the 6 P's of Compartment Syndrome?",
+                "back": "Pain (unrelieved), Pallor, Pulselessness, Paresthesia, Paralysis, Poikilothermia."
             },
             {
                 "id": 12,
-                "front": "A Hemovac is a round drain with coiled springs inside that can hold up to _____ mL of drainage.",
-                "back": "500"
+                "front": "What is the treatment for acute Compartment Syndrome?",
+                "back": "Emergency Fasciotomy (cutting the fascia to release pressure)."
             },
             {
                 "id": 13,
-                "front": "\"What is the term for providing nutrition to a patient through a tube placed in either the nose",
-                "back": "stomach, or small intestine?\",Enteral nutrition."
+                "front": "What are the signs of Fat Embolism Syndrome?",
+                "back": "Respiratory distress, Confusion, and Petechial Rash on chest/neck (classic sign)."
             },
             {
                 "id": 14,
-                "front": "What is total parenteral nutrition (TPN)?",
-                "back": "A method of providing nutrition that completely bypasses the digestive system by administering it through an intravenous line."
+                "front": "What is Rhabdomyolysis?",
+                "back": "Muscle breakdown releases Myoglobin, which clogs kidneys causing ATN/Acute Kidney Injury."
             },
             {
                 "id": 15,
-                "front": "What is a common cause of diarrhea in patients receiving tube feedings?",
-                "back": "\"Rapid feeding, antibiotic/medication intolerance, or intolerance of a hypertonic formula.\""
+                "front": "What is the hallmark sign of Rhabdomyolysis?",
+                "back": "Dark, tea or cola-colored urine."
             },
             {
                 "id": 16,
-                "front": "What is the primary purpose of an indwelling fecal management system?",
-                "back": "\"To be used for incontinent clients with loose or watery stools to avoid perianal excoriation, contamination of wounds, and to prevent the spread of organisms.\""
+                "front": "Why are Pelvic Fractures so dangerous?",
+                "back": "High risk of massive internal hemorrhage due to vascularity."
             },
             {
                 "id": 17,
-                "front": "What is the definition of stress incontinence?",
-                "back": "\"A loss of urine during activities that increase intra-abdominal pressure, such as laughing, coughing, or sneezing.\""
+                "front": "What is an Open Fracture?",
+                "back": "Bone breaks through the skin; high risk of Osteomyelitis."
             },
             {
                 "id": 18,
-                "front": "What is hydronephrosis?",
-                "back": "A disease involving swelling of the kidney pelvices and calyces because of an obstruction in the urinary tract."
+                "front": "How should a severed limb part be stored?",
+                "back": "Wrapped in moist sterile gauze, in a sealed bag, placed ON ice water (never directly on ice)."
             },
             {
                 "id": 19,
-                "front": "What is acute tubular necrosis (ATN)?",
-                "back": "\"A hypoxic condition that causes renal ischemia and damages tubular cells of the nephrons, leading to acute renal failure.\""
+                "front": "What is a contraindication for a tourniquet?",
+                "back": "Sickle Cell Disease or DVT (risk of causing irreversible ischemia/clots)."
             },
             {
                 "id": 20,
-                "front": "What defines pre-renal causes of acute kidney injury (AKI)?",
-                "back": "Causes that are characterized by a decrease in perfusion to the kidneys."
+                "front": "What is the purpose of Buck's Traction?",
+                "back": "To reduce muscle spasms and stabilize a hip fracture before surgery."
             },
             {
                 "id": 21,
-                "front": "What defines post-renal causes of acute kidney injury (AKI)?",
-                "back": "Causes related to an obstruction in the outflow of urine."
+                "front": "How do you prevent hip contractures in an amputee?",
+                "back": "Have the patient lie Prone (on stomach) several times a day."
             },
             {
                 "id": 22,
-                "front": "Uremic syndrome occurs with end-stage renal disease when the creatinine clearance is less than _____ mL/min.",
-                "back": "10"
+                "front": "What is an active closed drainage system?",
+                "back": "A drain that uses suction (e.g., Jackson-Pratt/JP drain)."
             },
             {
                 "id": 23,
-                "front": "What is the cause of decreased RBC production in uremic syndrome?",
-                "back": "The kidney is unable to produce adequate erythropoietin in the peritubular cells."
+                "front": "What is the RICE acronym?",
+                "back": "Rest, Ice, Compression, Elevation."
             },
             {
                 "id": 24,
-                "front": "What is pyelonephritis?",
-                "back": "A potentially organ-damaging bacterial infection of the parenchyma of the kidney."
+                "front": "What should you assume first with a confused trauma patient?",
+                "back": "Hypoxia or Shock (not just head injury)."
             },
             {
                 "id": 25,
-                "front": "\"A common symptom of pyelonephritis is flank/lower back pain",
-                "back": "specifically _____ tenderness.\",costovertebral angle"
+                "front": "Why is 'Pistoning' of a catheter bad?",
+                "back": "Movement introduces bacteria into the urethra; prevent by securing the catheter to the leg."
             },
             {
                 "id": 26,
-                "front": "What is cystitis?",
-                "back": "A common and often chronic low-grade kidney infection that develops over time."
+                "front": "What is Uremic Frost?",
+                "back": "Crystallized urea deposits on the skin in severe End-Stage Renal Disease."
             },
             {
                 "id": 27,
-                "front": "\"What is the inability to retract the foreskin proximal to the glans penis",
-                "back": "sometimes resulting in urinary retention or hematuria?\",Phimosis."
+                "front": "What electrolyte must be monitored closely in renal failure due to cardiac risk?",
+                "back": "Potassium (Hyperkalemia)."
             },
             {
                 "id": 28,
-                "front": "\"What condition occurs when the foreskin slides above the glans penis and cannot be extended to its normal position",
-                "back": "causing edema?\",Paraphimosis."
+                "front": "What is the immediate action for suspected spinal injury?",
+                "back": "Immobilize the spine."
             },
             {
                 "id": 29,
-                "front": "What is testicular torsion?",
-                "back": "\"A twisting of the spermatic cord within or below the inguinal canal, causing constriction of blood supply to the testis.\""
+                "front": "What defines Oliguria?",
+                "back": "Urine output less than 400 mL/day."
             },
             {
                 "id": 30,
-                "front": "What is the typical treatment for testicular torsion if manual detorsion is not successful?",
-                "back": "Emergency surgical repair."
-            },
-            {
-                "id": 31,
-                "front": "What is epididymitis?",
-                "back": "\"Infection of the epididymis, often associated with infection in a testis (epididymo-orchitis).\""
-            },
-            {
-                "id": 32,
-                "front": "What is prostatitis?",
-                "back": "\"An acute infection of the prostate gland, commonly caused by Escherichia coli.\""
-            },
-            {
-                "id": 33,
-                "front": "What is benign prostatic hypertrophy (BPH)?",
-                "back": "\"A condition, usually developing after age 40, where the prostate may slowly enlarge, but the surrounding tissue resists outward growth, causing the gland to compress the urethra.\""
-            },
-            {
-                "id": 34,
-                "front": "What is pelvic inflammatory disease (PID)?",
-                "back": "\"A serious infection of the upper reproductive system, often ascending from the vagina and cervix.\""
-            },
-            {
-                "id": 35,
-                "front": "What is vulvovaginitis?",
-                "back": "Inflammation of the vulvar and vaginal tissues."
-            },
-            {
-                "id": 36,
-                "front": "\"In diagnosing vulvovaginitis",
-                "back": "a pH greater than 4.5 is typical of _____ infections, while a pH less than 4.5 is typical of _____ infections.\",bacterial and trichomonas; fungal"
-            },
-            {
-                "id": 37,
-                "front": "What is the difference between a follicular cyst and a corpus luteum cyst?",
-                "back": "\"A follicular cyst develops when the follicle doesn't rupture or release its egg, while a corpus luteum cyst develops when fluid accumulates inside the follicle after it releases its egg.\""
-            },
-            {
-                "id": 38,
-                "front": "What is a Bartholin cyst?",
-                "back": "\"A blockage of the Bartholin glands (located on either side of the vagina) due to infection or trauma, resulting in swelling and cyst formation.\""
-            },
-            {
-                "id": 39,
-                "front": "One of the key strategies for reducing infection risks with urinary catheters is using _____ for both straight and indwelling catheter insertion.",
-                "back": "aseptic technique"
-            },
-            {
-                "id": 40,
-                "front": "What is the primary difference between peritoneal dialysis and hemodialysis?",
-                "back": "\"Peritoneal dialysis uses the peritoneal cavity as a filter, while hemodialysis circulates blood outside the body through a dialyzer.\""
-            },
-            {
-                "id": 41,
-                "front": "Term: Strain",
-                "back": "Definition: An overstretching of a part of the musculature ('pulled muscle') that causes microscopic tears in the muscle."
-            },
-            {
-                "id": 42,
-                "front": "Term: Sprain",
-                "back": "\"Definition: Damage to a joint, usually resulting from excess stress or overuse of the muscle, with a partial rupture of the supporting ligaments.\""
-            },
-            {
-                "id": 43,
-                "front": "What does the RICE protocol for treating sprains and strains stand for?",
-                "back": "\"Rest, Ice, Compression, and Elevation.\""
-            },
-            {
-                "id": 44,
-                "front": "What is a major complication that can result from a dislocation of the hip?",
-                "back": "Avascular necrosis of the femoral head."
-            },
-            {
-                "id": 45,
-                "front": "What is an 'open book' pelvic fracture?",
-                "back": "\"A fracture where the pelvis is pulled apart, usually from a frontal injury, which may cause severe hemorrhage.\""
-            },
-            {
-                "id": 46,
-                "front": "What is a fat embolism?",
-                "back": "\"A complication of traumatic fracture where bone marrow fat is released into the bloodstream and travels to the lung, disrupting blood flow.\""
-            },
-            {
-                "id": 47,
-                "front": "What is compartment syndrome?",
-                "back": "\"A condition where there is an increase in the amount of pressure within a grouping of muscles, nerves, and blood vessels, resulting in compromised blood flow.\""
-            },
-            {
-                "id": 48,
-                "front": "The definitive treatment for acute compartment syndrome is a surgical procedure called a _____.",
-                "back": "fasciotomy"
-            },
-            {
-                "id": 49,
-                "front": "What is rhabdomyolysis?",
-                "back": "A condition that occurs when damage to the cells of the skeletal muscles causes the release of toxins from those cells into the bloodstream."
-            },
-            {
-                "id": 50,
-                "front": "\"What is the purpose of the Allen test",
-                "back": "particularly before amputation?\",To determine arterial injury of digits by assessing collateral circulation between the radial and ulnar arteries."
-            },
-            {
-                "id": 51,
-                "front": "How should an amputated part be stored prior to reattachment?",
-                "back": "\"Wrapped in saline-moistened gauze, placed in a sealed plastic bag, and then placed in ice water (1:1 ice to water).\""
+                "front": "What is a 'Greenstick' fracture?",
+                "back": "Incomplete break common in children."
             }
         ]
     },

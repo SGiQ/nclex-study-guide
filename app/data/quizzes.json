@@ -7031,492 +7031,622 @@
         ]
     },
     {
-        "id": 13,
+        "id": 116,
         "episodeId": 12,
-        "title": "Electrolytes, Burns & Acid-Base",
-        "description": "Electrolyte Imbalances, ABG Interpretation, Burn Management",
-        "questionCount": 40,
-        "color": "from-teal-600 to-cyan-900",
+        "title": "Renal Pathophysiology - Part A",
+        "description": "AKI vs CKD, Pyelonephritis, Dialysis (Hemo vs Peritoneal)",
+        "questionCount": 25,
+        "color": "from-blue-600 to-blue-900",
         "questions": [
             {
                 "id": 1,
-                "text": "A client with hypokalemia (K+ 2.8) will have:",
+                "text": "The primary difference between Cystitis and Pyelonephritis is:",
                 "options": [
-                    "Peaked T waves",
-                    "Flat T waves, muscle weakness",
-                    "Hyperreflexia",
-                    "No symptoms"
+                    "Cystitis is viral; Pyelonephritis is bacterial",
+                    "Cystitis involves the bladder (lower tract); Pyelonephritis involves the kidney parenchyma (upper tract)",
+                    "Pyelonephritis is less severe",
+                    "Cystitis causes high fever"
                 ],
                 "correctAnswer": 1,
-                "explanation": "Hypokalemia (<3.5): Flat T waves, muscle weakness, cramping, arrhythmias, constipation. Give potassium supplements/IV cautiously."
+                "explanation": "Pyelonephritis is an organ-level infection that can lead to sepsis."
             },
             {
                 "id": 2,
-                "text": "Which ABG indicates fully compensated metabolic acidosis?",
+                "text": "Acute Kidney Injury (AKI) is often reversible if potential causes (Prerenal, Intrarenal, Postrenal) are addressed. What defines 'Prerenal' failure?",
                 "options": [
-                    "pH 7.35, PaCO2 30, HCO3 18",
-                    "pH 7.30, PaCO2 40, HCO3 18",
-                    "pH 7.45, PaCO2 45, HCO3 30",
-                    "pH 7.50, PaCO2 30, HCO3 24"
-                ],
-                "correctAnswer": 0,
-                "explanation": "Fully compensated: pH normal (7.35-7.45), both PaCO2 and HCO3 abnormal. Metabolic acidosis with respiratory compensation."
-            },
-            {
-                "id": 3,
-                "text": "A client with hyperkalemia (K+ 6.5) should receive:",
-                "options": [
-                    "Potassium supplements",
-                    "Calcium gluconate IV",
-                    "Sodium restriction",
-                    "Increased fluids only"
-                ],
-                "correctAnswer": 1,
-                "explanation": "Hyperkalemia (>5.0): Calcium gluconate (protects heart), insulin/glucose, kayexalate, dialysis. Monitor ECG for peaked T waves, widened QRS."
-            },
-            {
-                "id": 4,
-                "text": "A burn client needs fluid resuscitation. Which formula is used?",
-                "options": [
-                    "Parkland formula",
-                    "Harris-Benedict",
-                    "Braden scale",
-                    "Glasgow Coma Scale"
-                ],
-                "correctAnswer": 0,
-                "explanation": "Parkland formula: 4 mL \u00d7 kg \u00d7 %TBSA burned. Give half in first 8 hours, half in next 16 hours. Monitor urine output 30-50 mL/hr."
-            },
-            {
-                "id": 5,
-                "text": "A client with hyponatremia (Na+ 125) will have:",
-                "options": [
-                    "Dry mucous membranes",
-                    "Confusion, seizures",
-                    "Hypertension",
-                    "Hyperreflexia"
-                ],
-                "correctAnswer": 1,
-                "explanation": "Hyponatremia (<135): Confusion, lethargy, seizures, muscle cramps. Causes: SIADH, diuretics, water intoxication. Correct slowly to avoid central pontine myelinolysis."
-            },
-            {
-                "id": 6,
-                "text": "Which is a sign of hypocalcemia?",
-                "options": [
-                    "Positive Trousseau's and Chvostek's signs",
                     "Kidney stones",
-                    "Constipation",
-                    "Bone pain"
-                ],
-                "correctAnswer": 0,
-                "explanation": "Hypocalcemia (<8.5): Trousseau's (carpal spasm), Chvostek's (facial twitching), tetany, seizures, prolonged QT. Give calcium IV slowly."
-            },
-            {
-                "id": 7,
-                "text": "A client with DKA has which acid-base imbalance?",
-                "options": [
-                    "Respiratory acidosis",
-                    "Metabolic acidosis",
-                    "Respiratory alkalosis",
-                    "Metabolic alkalosis"
-                ],
-                "correctAnswer": 1,
-                "explanation": "DKA causes metabolic acidosis (ketones). ABG: Low pH, low HCO3. Kussmaul respirations (compensatory hyperventilation) blow off CO2."
-            },
-            {
-                "id": 8,
-                "text": "A client with burns to both legs (36% TBSA) is at risk for:",
-                "options": [
-                    "Hypovolemic shock",
-                    "Hypervolemia",
-                    "Hypertension",
-                    "Bradycardia"
-                ],
-                "correctAnswer": 0,
-                "explanation": "Major burns cause massive fluid shift (third-spacing), leading to hypovolemic shock. Aggressive fluid resuscitation needed. Monitor urine output, vitals."
-            },
-            {
-                "id": 9,
-                "text": "Which is a sign of hypernatremia?",
-                "options": [
-                    "Confusion, seizures",
-                    "Thirst, dry mucous membranes, restlessness",
-                    "Muscle weakness",
-                    "Bradycardia"
-                ],
-                "correctAnswer": 1,
-                "explanation": "Hypernatremia (>145): Thirst, dry mucous membranes, restlessness, seizures. Causes: dehydration, diabetes insipidus. Give hypotonic fluids slowly."
-            },
-            {
-                "id": 10,
-                "text": "A client with hypomagnesemia will have:",
-                "options": [
-                    "Decreased reflexes",
-                    "Tremors, hyperreflexia, arrhythmias",
-                    "Constipation",
-                    "Bradycardia"
-                ],
-                "correctAnswer": 1,
-                "explanation": "Hypomagnesemia (<1.5): Tremors, hyperreflexia, arrhythmias, positive Trousseau's/Chvostek's. Often occurs with hypocalcemia. Give magnesium sulfate IV."
-            },
-            {
-                "id": 11,
-                "text": "Which ABG indicates uncompensated respiratory alkalosis?",
-                "options": [
-                    "pH 7.50, PaCO2 30, HCO3 24",
-                    "pH 7.30, PaCO2 50, HCO3 24",
-                    "pH 7.35, PaCO2 30, HCO3 18",
-                    "pH 7.45, PaCO2 40, HCO3 26"
-                ],
-                "correctAnswer": 0,
-                "explanation": "Uncompensated respiratory alkalosis: pH >7.45, PaCO2 <35, HCO3 normal. Caused by hyperventilation (anxiety, pain, fever)."
-            },
-            {
-                "id": 12,
-                "text": "A burn client develops stridor and hoarseness. This indicates:",
-                "options": [
-                    "Normal healing",
-                    "Inhalation injury",
-                    "Infection",
-                    "Dehydration"
-                ],
-                "correctAnswer": 1,
-                "explanation": "Stridor, hoarseness, singed nasal hairs indicate inhalation injury. Prepare for intubation. Give 100% oxygen. Monitor for airway obstruction."
-            },
-            {
-                "id": 13,
-                "text": "Which is a sign of hypercalcemia?",
-                "options": [
-                    "Tetany",
-                    "Kidney stones, constipation, confusion",
-                    "Seizures",
-                    "Hyperreflexia"
-                ],
-                "correctAnswer": 1,
-                "explanation": "Hypercalcemia (>10.5): 'Stones, bones, groans, moans' - kidney stones, bone pain, constipation, confusion. Causes: hyperparathyroidism, cancer. Give fluids, loop diuretics."
-            },
-            {
-                "id": 14,
-                "text": "A client with COPD has chronic respiratory acidosis. The kidneys compensate by:",
-                "options": [
-                    "Excreting bicarbonate",
-                    "Retaining bicarbonate",
-                    "Excreting sodium",
-                    "Retaining potassium"
-                ],
-                "correctAnswer": 1,
-                "explanation": "Kidneys compensate for respiratory acidosis by retaining bicarbonate (HCO3) to raise pH. Takes days. Respiratory compensation is faster (minutes-hours)."
-            },
-            {
-                "id": 15,
-                "text": "A burn client should be placed in which position?",
-                "options": [
-                    "Supine with arms at sides",
-                    "Position of function (anti-contracture)",
-                    "Prone only",
-                    "Trendelenburg"
-                ],
-                "correctAnswer": 1,
-                "explanation": "Position of function prevents contractures: neck extended, shoulders abducted, hands in functional position. Use splints. Encourage ROM exercises."
-            },
-            {
-                "id": 16,
-                "text": "Which is a sign of hypermagnesemia?",
-                "options": [
-                    "Hyperreflexia",
-                    "Decreased reflexes, respiratory depression",
-                    "Seizures",
-                    "Tachycardia"
-                ],
-                "correctAnswer": 1,
-                "explanation": "Hypermagnesemia (>2.5): Decreased reflexes, lethargy, respiratory depression, bradycardia, hypotension. Causes: renal failure, excessive antacids. Give calcium gluconate."
-            },
-            {
-                "id": 17,
-                "text": "A client is hyperventilating due to anxiety. Which acid-base imbalance will occur?",
-                "options": [
-                    "Respiratory acidosis",
-                    "Respiratory alkalosis",
-                    "Metabolic acidosis",
-                    "Metabolic alkalosis"
-                ],
-                "correctAnswer": 1,
-                "explanation": "Hyperventilation blows off CO2, causing respiratory alkalosis. Have client breathe into paper bag (rebreathe CO2) or use relaxation techniques."
-            },
-            {
-                "id": 18,
-                "text": "A burn client develops curling's ulcer. This is:",
-                "options": [
-                    "Kidney stone",
-                    "Stress ulcer in stomach",
-                    "Skin infection",
-                    "Contracture"
-                ],
-                "correctAnswer": 1,
-                "explanation": "Curling's ulcer: Stress ulcer in burn clients. Prevent with H2 blockers or PPIs. Monitor for GI bleeding (coffee-ground emesis, melena)."
-            },
-            {
-                "id": 19,
-                "text": "Which electrolyte imbalance causes peaked T waves on ECG?",
-                "options": [
-                    "Hypokalemia",
-                    "Hyperkalemia",
-                    "Hypocalcemia",
-                    "Hyponatremia"
-                ],
-                "correctAnswer": 1,
-                "explanation": "Hyperkalemia causes peaked T waves, widened QRS, eventually sine wave pattern. Life-threatening arrhythmias. Give calcium gluconate, insulin/glucose."
-            },
-            {
-                "id": 20,
-                "text": "A client with vomiting has which acid-base imbalance?",
-                "options": [
-                    "Metabolic acidosis",
-                    "Metabolic alkalosis",
-                    "Respiratory acidosis",
-                    "Respiratory alkalosis"
-                ],
-                "correctAnswer": 1,
-                "explanation": "Vomiting causes loss of stomach acid (HCl), leading to metabolic alkalosis. ABG: High pH, high HCO3. Also causes hypokalemia, hypochloremia."
-            },
-            {
-                "id": 21,
-                "text": "A burn client needs escharotomy. This is done to:",
-                "options": [
-                    "Remove dead tissue",
-                    "Relieve compartment syndrome from circumferential burns",
-                    "Apply skin graft",
-                    "Prevent infection"
-                ],
-                "correctAnswer": 1,
-                "explanation": "Escharotomy: Surgical incision through eschar to relieve compartment syndrome from circumferential full-thickness burns. Restores circulation."
-            },
-            {
-                "id": 22,
-                "text": "Which is a sign of hypokalemia on ECG?",
-                "options": [
-                    "Peaked T waves",
-                    "Flat T waves, U waves",
-                    "Widened QRS",
-                    "Shortened QT"
-                ],
-                "correctAnswer": 1,
-                "explanation": "Hypokalemia: Flat/inverted T waves, prominent U waves, ST depression, prolonged QT. Risk of arrhythmias. Give potassium cautiously."
-            },
-            {
-                "id": 23,
-                "text": "A client with diarrhea has which acid-base imbalance?",
-                "options": [
-                    "Metabolic acidosis",
-                    "Metabolic alkalosis",
-                    "Respiratory acidosis",
-                    "Respiratory alkalosis"
-                ],
-                "correctAnswer": 0,
-                "explanation": "Diarrhea causes loss of bicarbonate, leading to metabolic acidosis. ABG: Low pH, low HCO3. Also causes dehydration, hypokalemia."
-            },
-            {
-                "id": 24,
-                "text": "A burn client should have urine output of at least:",
-                "options": [
-                    "10 mL/hr",
-                    "30-50 mL/hr",
-                    "100 mL/hr",
-                    "200 mL/hr"
-                ],
-                "correctAnswer": 1,
-                "explanation": "Target urine output: 30-50 mL/hr (adults), 1 mL/kg/hr (children). Indicates adequate fluid resuscitation. Adjust IV fluids based on output."
-            },
-            {
-                "id": 25,
-                "text": "Which electrolyte imbalance causes prolonged QT interval?",
-                "options": [
-                    "Hyperkalemia",
-                    "Hypocalcemia",
-                    "Hypernatremia",
-                    "Hypermagnesemia"
-                ],
-                "correctAnswer": 1,
-                "explanation": "Hypocalcemia causes prolonged QT interval, risk of torsades de pointes. Hypercalcemia causes shortened QT."
-            },
-            {
-                "id": 26,
-                "text": "A client with renal failure has which acid-base imbalance?",
-                "options": [
-                    "Metabolic acidosis",
-                    "Metabolic alkalosis",
-                    "Respiratory acidosis",
-                    "Respiratory alkalosis"
-                ],
-                "correctAnswer": 0,
-                "explanation": "Renal failure causes metabolic acidosis (can't excrete H+ or reabsorb HCO3). ABG: Low pH, low HCO3. May need dialysis."
-            },
-            {
-                "id": 27,
-                "text": "A burn client develops sepsis. What is the priority?",
-                "options": [
-                    "Pain management",
-                    "Broad-spectrum antibiotics and fluid resuscitation",
-                    "Wound care only",
-                    "Nutrition"
-                ],
-                "correctAnswer": 1,
-                "explanation": "Sepsis: Broad-spectrum antibiotics, aggressive fluid resuscitation, vasopressors if needed. Monitor vitals, labs. Leading cause of death in burn clients."
-            },
-            {
-                "id": 28,
-                "text": "Which is a sign of hypophosphatemia?",
-                "options": [
-                    "Muscle weakness, confusion",
-                    "Hyperreflexia",
-                    "Constipation",
-                    "Bradycardia"
-                ],
-                "correctAnswer": 0,
-                "explanation": "Hypophosphatemia: Muscle weakness, confusion, respiratory failure, hemolytic anemia. Causes: refeeding syndrome, malnutrition, alcoholism."
-            },
-            {
-                "id": 29,
-                "text": "A client with NG suction has which acid-base imbalance?",
-                "options": [
-                    "Metabolic acidosis",
-                    "Metabolic alkalosis",
-                    "Respiratory acidosis",
-                    "Respiratory alkalosis"
-                ],
-                "correctAnswer": 1,
-                "explanation": "NG suction removes stomach acid, causing metabolic alkalosis. ABG: High pH, high HCO3. Also causes hypokalemia, hypochloremia."
-            },
-            {
-                "id": 30,
-                "text": "A burn client needs silver sulfadiazine (Silvadene). What should the nurse know?",
-                "options": [
-                    "Apply to face",
-                    "Avoid if sulfa allergy",
-                    "Use on full-thickness burns only",
-                    "Apply once weekly"
-                ],
-                "correctAnswer": 1,
-                "explanation": "Silver sulfadiazine: Topical antimicrobial for partial-thickness burns. Avoid if sulfa allergy. Don't use on face. Apply 1-2x daily after cleaning."
-            },
-            {
-                "id": 31,
-                "text": "Which ABG indicates partially compensated respiratory acidosis?",
-                "options": [
-                    "pH 7.32, PaCO2 50, HCO3 28",
-                    "pH 7.40, PaCO2 50, HCO3 30",
-                    "pH 7.50, PaCO2 30, HCO3 24",
-                    "pH 7.30, PaCO2 50, HCO3 24"
-                ],
-                "correctAnswer": 0,
-                "explanation": "Partially compensated: pH abnormal, both PaCO2 and HCO3 abnormal. Respiratory acidosis with metabolic compensation (kidneys retaining HCO3)."
-            },
-            {
-                "id": 32,
-                "text": "A burn client develops contractures. Prevention includes:",
-                "options": [
-                    "Bed rest",
-                    "ROM exercises and splinting",
-                    "Avoiding all movement",
-                    "High-protein diet only"
-                ],
-                "correctAnswer": 1,
-                "explanation": "Prevent contractures: ROM exercises, splinting, position of function, early mobilization. Occupational/physical therapy essential."
-            },
-            {
-                "id": 33,
-                "text": "Which is a sign of fluid overload?",
-                "options": [
-                    "Dry mucous membranes",
-                    "Crackles, JVD, edema",
-                    "Hypotension",
-                    "Decreased urine output"
-                ],
-                "correctAnswer": 1,
-                "explanation": "Fluid overload: Crackles, JVD, peripheral edema, weight gain, hypertension. Give diuretics, restrict fluids/sodium."
-            },
-            {
-                "id": 34,
-                "text": "A client with hyperventilation has tingling in fingers. This is due to:",
-                "options": [
-                    "Hypoxia",
-                    "Respiratory alkalosis (low CO2)",
-                    "Hyperglycemia",
+                    "Decreased perfusion/blood flow to the kidney (e.g., dehydration, heart failure)",
+                    "Toxic damage to nephrons",
                     "Infection"
                 ],
                 "correctAnswer": 1,
-                "explanation": "Hyperventilation causes respiratory alkalosis, leading to paresthesias (tingling). Have client breathe into paper bag or use relaxation techniques."
+                "explanation": "The 'pump' (heart/volume) fails to get blood to the filter."
             },
             {
-                "id": 35,
-                "text": "A burn client needs autograft. This is:",
+                "id": 3,
+                "text": "'Postrenal' failure is caused by:",
                 "options": [
-                    "Skin from cadaver",
-                    "Client's own skin",
-                    "Synthetic skin",
-                    "Pig skin"
-                ],
-                "correctAnswer": 1,
-                "explanation": "Autograft: Client's own skin (permanent). Allograft: Cadaver skin (temporary). Xenograft: Pig skin (temporary). Synthetic skin also available."
-            },
-            {
-                "id": 36,
-                "text": "Which electrolyte should be monitored closely with loop diuretics?",
-                "options": [
-                    "Calcium",
-                    "Potassium",
-                    "Phosphorus",
-                    "Chloride"
-                ],
-                "correctAnswer": 1,
-                "explanation": "Loop diuretics (furosemide) cause potassium loss. Monitor for hypokalemia. Also lose calcium, magnesium. Thiazides are potassium-wasting too."
-            },
-            {
-                "id": 37,
-                "text": "A client with burns needs high-protein diet. This is because:",
-                "options": [
-                    "Prevents infection",
-                    "Promotes wound healing and prevents catabolism",
-                    "Lowers blood pressure",
-                    "No reason"
-                ],
-                "correctAnswer": 1,
-                "explanation": "Burns cause hypermetabolism and catabolism. Need high-protein, high-calorie diet for wound healing. May need tube feeding or TPN."
-            },
-            {
-                "id": 38,
-                "text": "Which ABG indicates uncompensated metabolic acidosis?",
-                "options": [
-                    "pH 7.30, PaCO2 40, HCO3 18",
-                    "pH 7.35, PaCO2 30, HCO3 18",
-                    "pH 7.50, PaCO2 40, HCO3 30",
-                    "pH 7.40, PaCO2 35, HCO3 22"
+                    "Obstruction of urine outflow (e.g., BPH, kidney stones)",
+                    "Low blood pressure",
+                    "Antibiotics",
+                    "Trauma"
                 ],
                 "correctAnswer": 0,
-                "explanation": "Uncompensated metabolic acidosis: pH <7.35, HCO3 <22, PaCO2 normal. No respiratory compensation yet."
+                "explanation": "Back-pressure from a blockage damages the kidney."
             },
             {
-                "id": 39,
-                "text": "A burn client develops ARDS. This is:",
+                "id": 4,
+                "text": "Acute Tubular Necrosis (ATN) is a common cause of Intrarenal failure. It is triggered by:",
                 "options": [
-                    "Kidney failure",
-                    "Acute respiratory distress syndrome",
+                    "Drinking too much water",
+                    "Ischemia or Nephrotoxins (contrast dye, certain antibiotics)",
+                    "Kidney stones",
+                    "High potassium"
+                ],
+                "correctAnswer": 1,
+                "explanation": "The cells inside the kidney die due to poisons or lack of oxygen."
+            },
+            {
+                "id": 5,
+                "text": "Chronic Kidney Disease (CKD) becomes noticeable when:",
+                "options": [
+                    "Immediately",
+                    ">50% of nephrons are permanently destroyed",
+                    "After 1 week",
+                    "When you turn 50"
+                ],
+                "correctAnswer": 1,
+                "explanation": "The kidneys are resilient; symptoms are late-stage."
+            },
+            {
+                "id": 6,
+                "text": "Why does renal failure cause Anemia?",
+                "options": [
+                    "Bleeding",
+                    "Lack of Erythropoietin (EPO) production by the kidney",
+                    "Poor diet",
+                    "Iron loss"
+                ],
+                "correctAnswer": 1,
+                "explanation": "The kidney signals the bone marrow to make RBCs. No kidney = No signal."
+            },
+            {
+                "id": 7,
+                "text": "Peritoneal Dialysis uses what as the filter membrane?",
+                "options": [
+                    "A machine",
+                    "The lining of the abdominal cavity (Peritoneum)",
+                    "The liver",
+                    "A mesh"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Dialysate sits in the abdomen, pulling waste across the membrane."
+            },
+            {
+                "id": 8,
+                "text": "The major risk with Peritoneal Dialysis is:",
+                "options": [
+                    "Headache",
+                    "Peritonitis (infection of the abdominal cavity)",
+                    "Low blood sugar",
+                    "Weight loss"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Bacteria can enter via the catheter, causing a serious infection. Cloudy outflow = Bad."
+            },
+            {
+                "id": 9,
+                "text": "Hemodialysis requires vascular access, typically an AV Fistula. What is a key assessment for a fistula?",
+                "options": [
+                    "Check for a pulse",
+                    "Feel the 'Thrill' (vibration) and hear the 'Bruit' (swishing sound)",
+                    "Cover with a tight bandage",
+                    "Draw blood from it daily"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Thrill and Bruit confirm patency and high flow."
+            },
+            {
+                "id": 10,
+                "text": "What is the single most important rule for Urinary Catheter care to prevent infection?",
+                "options": [
+                    "Change it weekly",
+                    "Keep the collection bag below the level of the bladder (maintain dependent flow)",
+                    "Use scented wipes",
+                    "Flush with water"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Prevent backflow of urine. Gravity is your friend."
+            },
+            {
+                "id": 11,
+                "text": "Securing the catheter to the leg prevents 'Pistoning', which is:",
+                "options": [
+                    "Comfort",
+                    "In-and-out movement that introduces bacteria into the urethra",
+                    "Kinking",
+                    "Leaking"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Micro-trauma creates entry points for germs."
+            },
+            {
+                "id": 12,
+                "text": "Uremic Syndrome (in End-Stage Renal Disease) affects:",
+                "options": [
+                    "Only the kidneys",
+                    "Every body system (Neuro, GI, Skin, Heme, Bone)",
+                    "Only the bladder",
+                    "Only the skin"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Waste products circulate everywhere, 'poisoning' the whole body."
+            },
+            {
+                "id": 13,
+                "text": "High Ammonia levels in liver/renal failure cause what skin sign?",
+                "options": [
+                    "Uremic Frost",
+                    "Hives",
+                    "Acne",
+                    "Sweating"
+                ],
+                "correctAnswer": 0,
+                "explanation": "(Note: Actually Uremic Frost is urea crystals, Ammonia causes encephalopathy. But Uremic Frost is the skin sign of severe ESRD)."
+            },
+            {
+                "id": 14,
+                "text": "Patients on Hemodialysis are at high risk for:",
+                "options": [
+                    "Weight gain",
+                    "Fluid shifts (Hypotension) and Fistula complications",
+                    "Sleeping too much",
+                    "Improved vision"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Rapid fluid removal can crash blood pressure."
+            },
+            {
+                "id": 15,
+                "text": "What does a 'Closed Drainage System' mean for a catheter?",
+                "options": [
+                    "The bag is sealed",
+                    "The connection between tube and bag is never broken to prevent bacteria entry",
+                    "The patient cannot pee",
+                    "It is disposable"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Breaking the seal invites bacteria."
+            },
+            {
+                "id": 16,
+                "text": "Rhabdomyolysis causes kidney damage via:",
+                "options": [
+                    "High sugar",
+                    "Myoglobin released from damaged muscle blocking renal tubules",
+                    "Low BP",
+                    "Infection"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Muscle protein is toxic to kidneys."
+            },
+            {
+                "id": 17,
+                "text": "A key sign of Rhabdomyolysis is:",
+                "options": [
+                    "Clear urine",
+                    "Dark, tea/cola-colored urine",
+                    "Blue urine",
+                    "Frequent urination"
+                ],
+                "correctAnswer": 1,
+                "explanation": "That's the myoglobin."
+            },
+            {
+                "id": 18,
+                "text": "Oliguria is defined as:",
+                "options": [
+                    "No urine",
+                    "Low urine output (<400ml/day)",
+                    "High output",
+                    "Painful urination"
+                ],
+                "correctAnswer": 1,
+                "explanation": "A sign of failing kidneys."
+            },
+            {
+                "id": 19,
+                "text": "Which electrolyte imbalance is life-threatening in Renal Failure?",
+                "options": [
+                    "Hypernatremia",
+                    "Hyperkalemia (High Potassium)",
+                    "Hypocalcemia",
+                    "Hypomagnesemia"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Kidneys can't excrete Potassium -> Arrhythmias -> Cardiac Arrest."
+            },
+            {
+                "id": 20,
+                "text": "Kayexalate is used to treat:",
+                "options": [
+                    "High BP",
+                    "High Potassium (Hyperkalemia)",
+                    "Constipation",
+                    "Pain"
+                ],
+                "correctAnswer": 1,
+                "explanation": "It binds potassium in the gut and excretes it via stool."
+            },
+            {
+                "id": 21,
+                "text": "Nephrotic Syndrome is characterized by massive loss of what in urine?",
+                "options": [
+                    "Blood",
+                    "Protein (Proteinuria)",
+                    "Glucose",
+                    "Bacteria"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Leaky glomerulus lets protein escape -> Oedema."
+            },
+            {
+                "id": 22,
+                "text": "In Hemodialysis, 'Disequilibrium Syndrome' is caused by:",
+                "options": [
+                    "Eating too fast",
+                    "Rapid removal of solutes causing cerebral edema (brain swelling)",
                     "Infection",
-                    "Contracture"
+                    "Blood loss"
                 ],
                 "correctAnswer": 1,
-                "explanation": "ARDS: Acute respiratory distress syndrome. Causes: inhalation injury, sepsis, fluid overload. Requires mechanical ventilation, PEEP."
+                "explanation": "Fluid shifts into brain cells. Watch for LOC changes/seizures."
             },
             {
-                "id": 40,
-                "text": "Which is the most important intervention for electrolyte imbalances?",
+                "id": 23,
+                "text": "Why do renal patients get bone disease (Renal Osteodystrophy)?",
                 "options": [
-                    "Treat symptoms only",
-                    "Identify and treat underlying cause",
-                    "Ignore mild imbalances",
-                    "Give fluids only"
+                    "Lack of exercise",
+                    "Imbalanced Calcium/Phosphorus and lack of Vitamin D activation",
+                    "Too much milk",
+                    "Aging"
                 ],
                 "correctAnswer": 1,
-                "explanation": "Always identify and treat underlying cause of electrolyte imbalances (medications, disease, diet). Correct imbalances cautiously to avoid complications."
+                "explanation": "High Phos pulls Calcium from bones."
+            },
+            {
+                "id": 24,
+                "text": "A suprapubic catheter is inserted:",
+                "options": [
+                    "Through the urethra",
+                    "Surgically through the abdominal wall directly into the bladder",
+                    "Into the kidney",
+                    "Into the ureter"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Bypasses the urethra."
+            },
+            {
+                "id": 25,
+                "text": "The diet for a Renal Failure patient typically restricts:",
+                "options": [
+                    "Carbs",
+                    "Protein, Potassium, Sodium, and Phosphorus",
+                    "Fats",
+                    "Fiber"
+                ],
+                "correctAnswer": 1,
+                "explanation": "The kidneys can't filter the byproducts of these."
+            }
+        ]
+    },
+    {
+        "id": 117,
+        "episodeId": 12,
+        "title": "Musculoskeletal & Trauma - Part B",
+        "description": "Fractures, Compartment Syndrome, Fat Embolism, Amputation Care",
+        "questionCount": 25,
+        "color": "from-orange-600 to-orange-900",
+        "questions": [
+            {
+                "id": 1,
+                "text": "What is the RICE protocol for soft tissue injuries (sprains/strains)?",
+                "options": [
+                    "Run, Ice, Cry, Eat",
+                    "Rest, Ice, Compression, Elevation",
+                    "Rest, Injection, Cut, Elevate",
+                    "Rub, Ice, Cold, Elevation"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Standard first aid to limit swelling and bleeding."
+            },
+            {
+                "id": 2,
+                "text": "The difference between an Open and Closed fracture is:",
+                "options": [
+                    "Open is painful",
+                    "Open fractures break the skin (bone exposed); Closed do not",
+                    "Closed fractures are worse",
+                    "There is no difference"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Open fractures carry a massive risk of infection (Osteomyelitis)."
+            },
+            {
+                "id": 3,
+                "text": "What is the priority assessment for a patient with a cast or splint?",
+                "options": [
+                    "Itchiness",
+                    "Neurovascular Checks (Pulse, Color, Temp, Sensation, Movement)",
+                    "Dryness",
+                    "Signatures"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Ensures the cast isn't cutting off circulation (Compartment Syndrome)."
+            },
+            {
+                "id": 4,
+                "text": "Compartment Syndrome differs from normal post-injury pain because:",
+                "options": [
+                    "It hurts less",
+                    "It is disproportionately severe, persistent, and unrelieved by pain meds",
+                    "It comes and goes",
+                    "It only happens at night"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Pressure builds in the fascia, crushing nerves/vessels."
+            },
+            {
+                "id": 5,
+                "text": "The treatment for acute Compartment Syndrome is:",
+                "options": [
+                    "More ice",
+                    "Fasciotomy (surgical slicing of the fascia to release pressure)",
+                    "Tight bandage",
+                    "Elevation"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Relieve the pressure before tissue dies."
+            },
+            {
+                "id": 6,
+                "text": "Fat Embolism Syndrome is a risk after:",
+                "options": [
+                    "Stubbing a toe",
+                    "Long Bone Fractures (Femur) or Pelvic Fractures",
+                    "Wrist sprain",
+                    "Headache"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Marrow fat escapes into the bloodstream and clogs lung capillaries."
+            },
+            {
+                "id": 7,
+                "text": "Classic signs of Fat Embolism include respiratory distress, confusion, and:",
+                "options": [
+                    "Hives",
+                    "Petechial Rash (on chest/neck)",
+                    "Acne",
+                    "Bruising"
+                ],
+                "correctAnswer": 1,
+                "explanation": "The rash helps distinguish it from a regular PE."
+            },
+            {
+                "id": 8,
+                "text": "Why are pelvic fractures life-threatening?",
+                "options": [
+                    "They hurt",
+                    "High risk of massive internal hemorrhage due to vascularity",
+                    "They prevent walking",
+                    "Digestion issues"
+                ],
+                "correctAnswer": 1,
+                "explanation": "You can bleed out into the pelvic cavity quickly."
+            },
+            {
+                "id": 9,
+                "text": "What is the purpose of a Pelvic Stabilizer/Binder?",
+                "options": [
+                    "Comfort",
+                    "To compress the pelvis, reducing volume and tamponading bleeding",
+                    "Style",
+                    "To keep pants up"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Mechanical pressure stops the internal bleed."
+            },
+            {
+                "id": 10,
+                "text": "When caring for a severed/amputated limb part for potential reattachment, you should:",
+                "options": [
+                    "Put it directly on ice",
+                    "Wrap in moist sterile gauze, place in bag, then place bag on ice water",
+                    "Freeze it",
+                    "Keep it warm"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Never put directly on ice (causes frostbite/cellular death)."
+            },
+            {
+                "id": 11,
+                "text": "What is the contraindication for using a tourniquet?",
+                "options": [
+                    "Bleeding",
+                    "Sickle Cell Crisis (increases ischemia risk) or known DVT",
+                    "Pain",
+                    "Panic"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Balance saving life vs. saving limb. Standard tourniquet is for uncontrolled life-threatening bleed."
+            },
+            {
+                "id": 12,
+                "text": "A 'Greenstick' fracture is common in:",
+                "options": [
+                    "Elderly",
+                    "Children (bones are softer/bendable)",
+                    "Athletes",
+                    "Dogs"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Incomplete break, like a green twig."
+            },
+            {
+                "id": 13,
+                "text": "What is Buck's Traction used for?",
+                "options": [
+                    "Neck pain",
+                    "Pre-operative hip fracture stabilization (reduces muscle spasm)",
+                    "Post-op",
+                    "Back pain"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Skin traction to pull the leg and stop spasms."
+            },
+            {
+                "id": 14,
+                "text": "In Skeletal Traction (pins in bone), the weights must:",
+                "options": [
+                    "Rest on the floor",
+                    "Hang freely at all times",
+                    "Be removed daily",
+                    "Be lifted"
+                ],
+                "correctAnswer": 1,
+                "explanation": "If weights touch the floor, traction is lost."
+            },
+            {
+                "id": 15,
+                "text": "Pin care for skeletal traction involves:",
+                "options": [
+                    "Leaving it alone",
+                    "Cleaning with Chlorhexidine/Saline to prevent infection (Osteomyelitis)",
+                    "Applying lotion",
+                    "Covering with tape"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Direct path to the bone = High infection risk."
+            },
+            {
+                "id": 16,
+                "text": "What is 'Phantom Limb Pain'?",
+                "options": [
+                    "Imaginary pain",
+                    "Real pain sensation perceived in the missing limb due to nerve pathways",
+                    "Psychological issue only",
+                    "A lie"
+                ],
+                "correctAnswer": 1,
+                "explanation": "It is real pain. Treat it."
+            },
+            {
+                "id": 17,
+                "text": "To prevent hip contractures in an amputee, you should:",
+                "options": [
+                    "Elevate limb on pillows for days",
+                    "Have them lie Prone (on stomach) several times a day",
+                    "Sit in a chair all day",
+                    "Use crutches"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Prone position stretches the hip flexors."
+            },
+            {
+                "id": 18,
+                "text": "A Jackson-Pratt (JP) drain is an example of:",
+                "options": [
+                    "Passive drain",
+                    "Active closed suction drain",
+                    "Open drain",
+                    "Gravity drain"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Squeezing the bulb creates vacuum suction."
+            },
+            {
+                "id": 19,
+                "text": "A Penrose drain is:",
+                "options": [
+                    "Active suction",
+                    "Passive gravity drain (open system)",
+                    "A catheter",
+                    "A needle"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Soft tube, drains onto dressing. High infection risk."
+            },
+            {
+                "id": 20,
+                "text": "The 6 P's of Neurovascular Assessment are:",
+                "options": [
+                    "Pain, Pulse, Pallor, Paresthesia, Paralysis, Poikilothermia (Cold)",
+                    "Pain only",
+                    "Pulse and Pressure",
+                    "Pink, Purple, Pale"
+                ],
+                "correctAnswer": 0,
+                "explanation": "Memorize these for any ortho injury."
+            },
+            {
+                "id": 21,
+                "text": "Poikilothermia means:",
+                "options": [
+                    "Fever",
+                    "Inability to regulate temp (limb takes on temp of environment/cold)",
+                    "Sweating",
+                    "Hot flashes"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Sign of arterial occlusion."
+            },
+            {
+                "id": 22,
+                "text": "Hypovolemic Shock signs in a trauma patient:",
+                "options": [
+                    "High BP, Low HR",
+                    "Low BP, Tachycardia (High HR), Tachypnea",
+                    "Warm skin",
+                    "Sleepiness"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Body compensates for blood loss by pumping faster."
+            },
+            {
+                "id": 23,
+                "text": "Crush injuries release Myoglobin, causing:",
+                "options": [
+                    "Liver failure",
+                    "Rhabdomyolysis / Acute Kidney Injury",
+                    "Lung failure",
+                    "Brain damage"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Clogs the kidneys."
+            },
+            {
+                "id": 24,
+                "text": "Early mobilization after fracture surgery prevents:",
+                "options": [
+                    "Hunger",
+                    "DVT (Deep Vein Thrombosis) and Pneumonia",
+                    "Pain",
+                    "Healing"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Stasis causes clots."
+            },
+            {
+                "id": 25,
+                "text": "For a suspected spinal injury, the immediate action is:",
+                "options": [
+                    "Move them to a bed",
+                    "Immobilize the spine (C-Collar, Backboard)",
+                    "Check ID",
+                    "Ask them to walk"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Prevent permanent paralysis."
             }
         ]
     },
@@ -11952,6 +12082,495 @@
                 ],
                 "correctAnswer": 1,
                 "explanation": "HbA1c goal: <7% for most diabetics. 9% indicates poor control over past 2-3 months. Adjust medications, reinforce diet/exercise."
+            }
+        ]
+    },
+    {
+        "id": 13,
+        "title": "Electrolytes, Burns & Acid-Base",
+        "description": "Electrolyte Imbalances, ABG Interpretation, Burn Management",
+        "questionCount": 40,
+        "color": "from-teal-600 to-cyan-900",
+        "questions": [
+            {
+                "id": 1,
+                "text": "A client with hypokalemia (K+ 2.8) will have:",
+                "options": [
+                    "Peaked T waves",
+                    "Flat T waves, muscle weakness",
+                    "Hyperreflexia",
+                    "No symptoms"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Hypokalemia (<3.5): Flat T waves, muscle weakness, cramping, arrhythmias, constipation. Give potassium supplements/IV cautiously."
+            },
+            {
+                "id": 2,
+                "text": "Which ABG indicates fully compensated metabolic acidosis?",
+                "options": [
+                    "pH 7.35, PaCO2 30, HCO3 18",
+                    "pH 7.30, PaCO2 40, HCO3 18",
+                    "pH 7.45, PaCO2 45, HCO3 30",
+                    "pH 7.50, PaCO2 30, HCO3 24"
+                ],
+                "correctAnswer": 0,
+                "explanation": "Fully compensated: pH normal (7.35-7.45), both PaCO2 and HCO3 abnormal. Metabolic acidosis with respiratory compensation."
+            },
+            {
+                "id": 3,
+                "text": "A client with hyperkalemia (K+ 6.5) should receive:",
+                "options": [
+                    "Potassium supplements",
+                    "Calcium gluconate IV",
+                    "Sodium restriction",
+                    "Increased fluids only"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Hyperkalemia (>5.0): Calcium gluconate (protects heart), insulin/glucose, kayexalate, dialysis. Monitor ECG for peaked T waves, widened QRS."
+            },
+            {
+                "id": 4,
+                "text": "A burn client needs fluid resuscitation. Which formula is used?",
+                "options": [
+                    "Parkland formula",
+                    "Harris-Benedict",
+                    "Braden scale",
+                    "Glasgow Coma Scale"
+                ],
+                "correctAnswer": 0,
+                "explanation": "Parkland formula: 4 mL \u00d7 kg \u00d7 %TBSA burned. Give half in first 8 hours, half in next 16 hours. Monitor urine output 30-50 mL/hr."
+            },
+            {
+                "id": 5,
+                "text": "A client with hyponatremia (Na+ 125) will have:",
+                "options": [
+                    "Dry mucous membranes",
+                    "Confusion, seizures",
+                    "Hypertension",
+                    "Hyperreflexia"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Hyponatremia (<135): Confusion, lethargy, seizures, muscle cramps. Causes: SIADH, diuretics, water intoxication. Correct slowly to avoid central pontine myelinolysis."
+            },
+            {
+                "id": 6,
+                "text": "Which is a sign of hypocalcemia?",
+                "options": [
+                    "Positive Trousseau's and Chvostek's signs",
+                    "Kidney stones",
+                    "Constipation",
+                    "Bone pain"
+                ],
+                "correctAnswer": 0,
+                "explanation": "Hypocalcemia (<8.5): Trousseau's (carpal spasm), Chvostek's (facial twitching), tetany, seizures, prolonged QT. Give calcium IV slowly."
+            },
+            {
+                "id": 7,
+                "text": "A client with DKA has which acid-base imbalance?",
+                "options": [
+                    "Respiratory acidosis",
+                    "Metabolic acidosis",
+                    "Respiratory alkalosis",
+                    "Metabolic alkalosis"
+                ],
+                "correctAnswer": 1,
+                "explanation": "DKA causes metabolic acidosis (ketones). ABG: Low pH, low HCO3. Kussmaul respirations (compensatory hyperventilation) blow off CO2."
+            },
+            {
+                "id": 8,
+                "text": "A client with burns to both legs (36% TBSA) is at risk for:",
+                "options": [
+                    "Hypovolemic shock",
+                    "Hypervolemia",
+                    "Hypertension",
+                    "Bradycardia"
+                ],
+                "correctAnswer": 0,
+                "explanation": "Major burns cause massive fluid shift (third-spacing), leading to hypovolemic shock. Aggressive fluid resuscitation needed. Monitor urine output, vitals."
+            },
+            {
+                "id": 9,
+                "text": "Which is a sign of hypernatremia?",
+                "options": [
+                    "Confusion, seizures",
+                    "Thirst, dry mucous membranes, restlessness",
+                    "Muscle weakness",
+                    "Bradycardia"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Hypernatremia (>145): Thirst, dry mucous membranes, restlessness, seizures. Causes: dehydration, diabetes insipidus. Give hypotonic fluids slowly."
+            },
+            {
+                "id": 10,
+                "text": "A client with hypomagnesemia will have:",
+                "options": [
+                    "Decreased reflexes",
+                    "Tremors, hyperreflexia, arrhythmias",
+                    "Constipation",
+                    "Bradycardia"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Hypomagnesemia (<1.5): Tremors, hyperreflexia, arrhythmias, positive Trousseau's/Chvostek's. Often occurs with hypocalcemia. Give magnesium sulfate IV."
+            },
+            {
+                "id": 11,
+                "text": "Which ABG indicates uncompensated respiratory alkalosis?",
+                "options": [
+                    "pH 7.50, PaCO2 30, HCO3 24",
+                    "pH 7.30, PaCO2 50, HCO3 24",
+                    "pH 7.35, PaCO2 30, HCO3 18",
+                    "pH 7.45, PaCO2 40, HCO3 26"
+                ],
+                "correctAnswer": 0,
+                "explanation": "Uncompensated respiratory alkalosis: pH >7.45, PaCO2 <35, HCO3 normal. Caused by hyperventilation (anxiety, pain, fever)."
+            },
+            {
+                "id": 12,
+                "text": "A burn client develops stridor and hoarseness. This indicates:",
+                "options": [
+                    "Normal healing",
+                    "Inhalation injury",
+                    "Infection",
+                    "Dehydration"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Stridor, hoarseness, singed nasal hairs indicate inhalation injury. Prepare for intubation. Give 100% oxygen. Monitor for airway obstruction."
+            },
+            {
+                "id": 13,
+                "text": "Which is a sign of hypercalcemia?",
+                "options": [
+                    "Tetany",
+                    "Kidney stones, constipation, confusion",
+                    "Seizures",
+                    "Hyperreflexia"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Hypercalcemia (>10.5): 'Stones, bones, groans, moans' - kidney stones, bone pain, constipation, confusion. Causes: hyperparathyroidism, cancer. Give fluids, loop diuretics."
+            },
+            {
+                "id": 14,
+                "text": "A client with COPD has chronic respiratory acidosis. The kidneys compensate by:",
+                "options": [
+                    "Excreting bicarbonate",
+                    "Retaining bicarbonate",
+                    "Excreting sodium",
+                    "Retaining potassium"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Kidneys compensate for respiratory acidosis by retaining bicarbonate (HCO3) to raise pH. Takes days. Respiratory compensation is faster (minutes-hours)."
+            },
+            {
+                "id": 15,
+                "text": "A burn client should be placed in which position?",
+                "options": [
+                    "Supine with arms at sides",
+                    "Position of function (anti-contracture)",
+                    "Prone only",
+                    "Trendelenburg"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Position of function prevents contractures: neck extended, shoulders abducted, hands in functional position. Use splints. Encourage ROM exercises."
+            },
+            {
+                "id": 16,
+                "text": "Which is a sign of hypermagnesemia?",
+                "options": [
+                    "Hyperreflexia",
+                    "Decreased reflexes, respiratory depression",
+                    "Seizures",
+                    "Tachycardia"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Hypermagnesemia (>2.5): Decreased reflexes, lethargy, respiratory depression, bradycardia, hypotension. Causes: renal failure, excessive antacids. Give calcium gluconate."
+            },
+            {
+                "id": 17,
+                "text": "A client is hyperventilating due to anxiety. Which acid-base imbalance will occur?",
+                "options": [
+                    "Respiratory acidosis",
+                    "Respiratory alkalosis",
+                    "Metabolic acidosis",
+                    "Metabolic alkalosis"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Hyperventilation blows off CO2, causing respiratory alkalosis. Have client breathe into paper bag (rebreathe CO2) or use relaxation techniques."
+            },
+            {
+                "id": 18,
+                "text": "A burn client develops curling's ulcer. This is:",
+                "options": [
+                    "Kidney stone",
+                    "Stress ulcer in stomach",
+                    "Skin infection",
+                    "Contracture"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Curling's ulcer: Stress ulcer in burn clients. Prevent with H2 blockers or PPIs. Monitor for GI bleeding (coffee-ground emesis, melena)."
+            },
+            {
+                "id": 19,
+                "text": "Which electrolyte imbalance causes peaked T waves on ECG?",
+                "options": [
+                    "Hypokalemia",
+                    "Hyperkalemia",
+                    "Hypocalcemia",
+                    "Hyponatremia"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Hyperkalemia causes peaked T waves, widened QRS, eventually sine wave pattern. Life-threatening arrhythmias. Give calcium gluconate, insulin/glucose."
+            },
+            {
+                "id": 20,
+                "text": "A client with vomiting has which acid-base imbalance?",
+                "options": [
+                    "Metabolic acidosis",
+                    "Metabolic alkalosis",
+                    "Respiratory acidosis",
+                    "Respiratory alkalosis"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Vomiting causes loss of stomach acid (HCl), leading to metabolic alkalosis. ABG: High pH, high HCO3. Also causes hypokalemia, hypochloremia."
+            },
+            {
+                "id": 21,
+                "text": "A burn client needs escharotomy. This is done to:",
+                "options": [
+                    "Remove dead tissue",
+                    "Relieve compartment syndrome from circumferential burns",
+                    "Apply skin graft",
+                    "Prevent infection"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Escharotomy: Surgical incision through eschar to relieve compartment syndrome from circumferential full-thickness burns. Restores circulation."
+            },
+            {
+                "id": 22,
+                "text": "Which is a sign of hypokalemia on ECG?",
+                "options": [
+                    "Peaked T waves",
+                    "Flat T waves, U waves",
+                    "Widened QRS",
+                    "Shortened QT"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Hypokalemia: Flat/inverted T waves, prominent U waves, ST depression, prolonged QT. Risk of arrhythmias. Give potassium cautiously."
+            },
+            {
+                "id": 23,
+                "text": "A client with diarrhea has which acid-base imbalance?",
+                "options": [
+                    "Metabolic acidosis",
+                    "Metabolic alkalosis",
+                    "Respiratory acidosis",
+                    "Respiratory alkalosis"
+                ],
+                "correctAnswer": 0,
+                "explanation": "Diarrhea causes loss of bicarbonate, leading to metabolic acidosis. ABG: Low pH, low HCO3. Also causes dehydration, hypokalemia."
+            },
+            {
+                "id": 24,
+                "text": "A burn client should have urine output of at least:",
+                "options": [
+                    "10 mL/hr",
+                    "30-50 mL/hr",
+                    "100 mL/hr",
+                    "200 mL/hr"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Target urine output: 30-50 mL/hr (adults), 1 mL/kg/hr (children). Indicates adequate fluid resuscitation. Adjust IV fluids based on output."
+            },
+            {
+                "id": 25,
+                "text": "Which electrolyte imbalance causes prolonged QT interval?",
+                "options": [
+                    "Hyperkalemia",
+                    "Hypocalcemia",
+                    "Hypernatremia",
+                    "Hypermagnesemia"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Hypocalcemia causes prolonged QT interval, risk of torsades de pointes. Hypercalcemia causes shortened QT."
+            },
+            {
+                "id": 26,
+                "text": "A client with renal failure has which acid-base imbalance?",
+                "options": [
+                    "Metabolic acidosis",
+                    "Metabolic alkalosis",
+                    "Respiratory acidosis",
+                    "Respiratory alkalosis"
+                ],
+                "correctAnswer": 0,
+                "explanation": "Renal failure causes metabolic acidosis (can't excrete H+ or reabsorb HCO3). ABG: Low pH, low HCO3. May need dialysis."
+            },
+            {
+                "id": 27,
+                "text": "A burn client develops sepsis. What is the priority?",
+                "options": [
+                    "Pain management",
+                    "Broad-spectrum antibiotics and fluid resuscitation",
+                    "Wound care only",
+                    "Nutrition"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Sepsis: Broad-spectrum antibiotics, aggressive fluid resuscitation, vasopressors if needed. Monitor vitals, labs. Leading cause of death in burn clients."
+            },
+            {
+                "id": 28,
+                "text": "Which is a sign of hypophosphatemia?",
+                "options": [
+                    "Muscle weakness, confusion",
+                    "Hyperreflexia",
+                    "Constipation",
+                    "Bradycardia"
+                ],
+                "correctAnswer": 0,
+                "explanation": "Hypophosphatemia: Muscle weakness, confusion, respiratory failure, hemolytic anemia. Causes: refeeding syndrome, malnutrition, alcoholism."
+            },
+            {
+                "id": 29,
+                "text": "A client with NG suction has which acid-base imbalance?",
+                "options": [
+                    "Metabolic acidosis",
+                    "Metabolic alkalosis",
+                    "Respiratory acidosis",
+                    "Respiratory alkalosis"
+                ],
+                "correctAnswer": 1,
+                "explanation": "NG suction removes stomach acid, causing metabolic alkalosis. ABG: High pH, high HCO3. Also causes hypokalemia, hypochloremia."
+            },
+            {
+                "id": 30,
+                "text": "A burn client needs silver sulfadiazine (Silvadene). What should the nurse know?",
+                "options": [
+                    "Apply to face",
+                    "Avoid if sulfa allergy",
+                    "Use on full-thickness burns only",
+                    "Apply once weekly"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Silver sulfadiazine: Topical antimicrobial for partial-thickness burns. Avoid if sulfa allergy. Don't use on face. Apply 1-2x daily after cleaning."
+            },
+            {
+                "id": 31,
+                "text": "Which ABG indicates partially compensated respiratory acidosis?",
+                "options": [
+                    "pH 7.32, PaCO2 50, HCO3 28",
+                    "pH 7.40, PaCO2 50, HCO3 30",
+                    "pH 7.50, PaCO2 30, HCO3 24",
+                    "pH 7.30, PaCO2 50, HCO3 24"
+                ],
+                "correctAnswer": 0,
+                "explanation": "Partially compensated: pH abnormal, both PaCO2 and HCO3 abnormal. Respiratory acidosis with metabolic compensation (kidneys retaining HCO3)."
+            },
+            {
+                "id": 32,
+                "text": "A burn client develops contractures. Prevention includes:",
+                "options": [
+                    "Bed rest",
+                    "ROM exercises and splinting",
+                    "Avoiding all movement",
+                    "High-protein diet only"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Prevent contractures: ROM exercises, splinting, position of function, early mobilization. Occupational/physical therapy essential."
+            },
+            {
+                "id": 33,
+                "text": "Which is a sign of fluid overload?",
+                "options": [
+                    "Dry mucous membranes",
+                    "Crackles, JVD, edema",
+                    "Hypotension",
+                    "Decreased urine output"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Fluid overload: Crackles, JVD, peripheral edema, weight gain, hypertension. Give diuretics, restrict fluids/sodium."
+            },
+            {
+                "id": 34,
+                "text": "A client with hyperventilation has tingling in fingers. This is due to:",
+                "options": [
+                    "Hypoxia",
+                    "Respiratory alkalosis (low CO2)",
+                    "Hyperglycemia",
+                    "Infection"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Hyperventilation causes respiratory alkalosis, leading to paresthesias (tingling). Have client breathe into paper bag or use relaxation techniques."
+            },
+            {
+                "id": 35,
+                "text": "A burn client needs autograft. This is:",
+                "options": [
+                    "Skin from cadaver",
+                    "Client's own skin",
+                    "Synthetic skin",
+                    "Pig skin"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Autograft: Client's own skin (permanent). Allograft: Cadaver skin (temporary). Xenograft: Pig skin (temporary). Synthetic skin also available."
+            },
+            {
+                "id": 36,
+                "text": "Which electrolyte should be monitored closely with loop diuretics?",
+                "options": [
+                    "Calcium",
+                    "Potassium",
+                    "Phosphorus",
+                    "Chloride"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Loop diuretics (furosemide) cause potassium loss. Monitor for hypokalemia. Also lose calcium, magnesium. Thiazides are potassium-wasting too."
+            },
+            {
+                "id": 37,
+                "text": "A client with burns needs high-protein diet. This is because:",
+                "options": [
+                    "Prevents infection",
+                    "Promotes wound healing and prevents catabolism",
+                    "Lowers blood pressure",
+                    "No reason"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Burns cause hypermetabolism and catabolism. Need high-protein, high-calorie diet for wound healing. May need tube feeding or TPN."
+            },
+            {
+                "id": 38,
+                "text": "Which ABG indicates uncompensated metabolic acidosis?",
+                "options": [
+                    "pH 7.30, PaCO2 40, HCO3 18",
+                    "pH 7.35, PaCO2 30, HCO3 18",
+                    "pH 7.50, PaCO2 40, HCO3 30",
+                    "pH 7.40, PaCO2 35, HCO3 22"
+                ],
+                "correctAnswer": 0,
+                "explanation": "Uncompensated metabolic acidosis: pH <7.35, HCO3 <22, PaCO2 normal. No respiratory compensation yet."
+            },
+            {
+                "id": 39,
+                "text": "A burn client develops ARDS. This is:",
+                "options": [
+                    "Kidney failure",
+                    "Acute respiratory distress syndrome",
+                    "Infection",
+                    "Contracture"
+                ],
+                "correctAnswer": 1,
+                "explanation": "ARDS: Acute respiratory distress syndrome. Causes: inhalation injury, sepsis, fluid overload. Requires mechanical ventilation, PEEP."
+            },
+            {
+                "id": 40,
+                "text": "Which is the most important intervention for electrolyte imbalances?",
+                "options": [
+                    "Treat symptoms only",
+                    "Identify and treat underlying cause",
+                    "Ignore mild imbalances",
+                    "Give fluids only"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Always identify and treat underlying cause of electrolyte imbalances (medications, disease, diet). Correct imbalances cautiously to avoid complications."
             }
         ]
     },

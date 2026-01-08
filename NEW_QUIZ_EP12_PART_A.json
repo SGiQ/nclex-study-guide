@@ -1,0 +1,310 @@
+{
+    "id": 116,
+    "episodeId": 12,
+    "title": "Renal Pathophysiology - Part A",
+    "description": "AKI vs CKD, Pyelonephritis, Dialysis (Hemo vs Peritoneal)",
+    "questionCount": 25,
+    "color": "from-blue-600 to-blue-900",
+    "questions": [
+        {
+            "id": 1,
+            "text": "The primary difference between Cystitis and Pyelonephritis is:",
+            "options": [
+                "Cystitis is viral; Pyelonephritis is bacterial",
+                "Cystitis involves the bladder (lower tract); Pyelonephritis involves the kidney parenchyma (upper tract)",
+                "Pyelonephritis is less severe",
+                "Cystitis causes high fever"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Pyelonephritis is an organ-level infection that can lead to sepsis."
+        },
+        {
+            "id": 2,
+            "text": "Acute Kidney Injury (AKI) is often reversible if potential causes (Prerenal, Intrarenal, Postrenal) are addressed. What defines 'Prerenal' failure?",
+            "options": [
+                "Kidney stones",
+                "Decreased perfusion/blood flow to the kidney (e.g., dehydration, heart failure)",
+                "Toxic damage to nephrons",
+                "Infection"
+            ],
+            "correctAnswer": 1,
+            "explanation": "The 'pump' (heart/volume) fails to get blood to the filter."
+        },
+        {
+            "id": 3,
+            "text": "'Postrenal' failure is caused by:",
+            "options": [
+                "Obstruction of urine outflow (e.g., BPH, kidney stones)",
+                "Low blood pressure",
+                "Antibiotics",
+                "Trauma"
+            ],
+            "correctAnswer": 0,
+            "explanation": "Back-pressure from a blockage damages the kidney."
+        },
+        {
+            "id": 4,
+            "text": "Acute Tubular Necrosis (ATN) is a common cause of Intrarenal failure. It is triggered by:",
+            "options": [
+                "Drinking too much water",
+                "Ischemia or Nephrotoxins (contrast dye, certain antibiotics)",
+                "Kidney stones",
+                "High potassium"
+            ],
+            "correctAnswer": 1,
+            "explanation": "The cells inside the kidney die due to poisons or lack of oxygen."
+        },
+        {
+            "id": 5,
+            "text": "Chronic Kidney Disease (CKD) becomes noticeable when:",
+            "options": [
+                "Immediately",
+                ">50% of nephrons are permanently destroyed",
+                "After 1 week",
+                "When you turn 50"
+            ],
+            "correctAnswer": 1,
+            "explanation": "The kidneys are resilient; symptoms are late-stage."
+        },
+        {
+            "id": 6,
+            "text": "Why does renal failure cause Anemia?",
+            "options": [
+                "Bleeding",
+                "Lack of Erythropoietin (EPO) production by the kidney",
+                "Poor diet",
+                "Iron loss"
+            ],
+            "correctAnswer": 1,
+            "explanation": "The kidney signals the bone marrow to make RBCs. No kidney = No signal."
+        },
+        {
+            "id": 7,
+            "text": "Peritoneal Dialysis uses what as the filter membrane?",
+            "options": [
+                "A machine",
+                "The lining of the abdominal cavity (Peritoneum)",
+                "The liver",
+                "A mesh"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Dialysate sits in the abdomen, pulling waste across the membrane."
+        },
+        {
+            "id": 8,
+            "text": "The major risk with Peritoneal Dialysis is:",
+            "options": [
+                "Headache",
+                "Peritonitis (infection of the abdominal cavity)",
+                "Low blood sugar",
+                "Weight loss"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Bacteria can enter via the catheter, causing a serious infection. Cloudy outflow = Bad."
+        },
+        {
+            "id": 9,
+            "text": "Hemodialysis requires vascular access, typically an AV Fistula. What is a key assessment for a fistula?",
+            "options": [
+                "Check for a pulse",
+                "Feel the 'Thrill' (vibration) and hear the 'Bruit' (swishing sound)",
+                "Cover with a tight bandage",
+                "Draw blood from it daily"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Thrill and Bruit confirm patency and high flow."
+        },
+        {
+            "id": 10,
+            "text": "What is the single most important rule for Urinary Catheter care to prevent infection?",
+            "options": [
+                "Change it weekly",
+                "Keep the collection bag below the level of the bladder (maintain dependent flow)",
+                "Use scented wipes",
+                "Flush with water"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Prevent backflow of urine. Gravity is your friend."
+        },
+        {
+            "id": 11,
+            "text": "Securing the catheter to the leg prevents 'Pistoning', which is:",
+            "options": [
+                "Comfort",
+                "In-and-out movement that introduces bacteria into the urethra",
+                "Kinking",
+                "Leaking"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Micro-trauma creates entry points for germs."
+        },
+        {
+            "id": 12,
+            "text": "Uremic Syndrome (in End-Stage Renal Disease) affects:",
+            "options": [
+                "Only the kidneys",
+                "Every body system (Neuro, GI, Skin, Heme, Bone)",
+                "Only the bladder",
+                "Only the skin"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Waste products circulate everywhere, 'poisoning' the whole body."
+        },
+        {
+            "id": 13,
+            "text": "High Ammonia levels in liver/renal failure cause what skin sign?",
+            "options": [
+                "Uremic Frost",
+                "Hives",
+                "Acne",
+                "Sweating"
+            ],
+            "correctAnswer": 0,
+            "explanation": "(Note: Actually Uremic Frost is urea crystals, Ammonia causes encephalopathy. But Uremic Frost is the skin sign of severe ESRD)."
+        },
+        {
+            "id": 14,
+            "text": "Patients on Hemodialysis are at high risk for:",
+            "options": [
+                "Weight gain",
+                "Fluid shifts (Hypotension) and Fistula complications",
+                "Sleeping too much",
+                "Improved vision"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Rapid fluid removal can crash blood pressure."
+        },
+        {
+            "id": 15,
+            "text": "What does a 'Closed Drainage System' mean for a catheter?",
+            "options": [
+                "The bag is sealed",
+                "The connection between tube and bag is never broken to prevent bacteria entry",
+                "The patient cannot pee",
+                "It is disposable"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Breaking the seal invites bacteria."
+        },
+        {
+            "id": 16,
+            "text": "Rhabdomyolysis causes kidney damage via:",
+            "options": [
+                "High sugar",
+                "Myoglobin released from damaged muscle blocking renal tubules",
+                "Low BP",
+                "Infection"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Muscle protein is toxic to kidneys."
+        },
+        {
+            "id": 17,
+            "text": "A key sign of Rhabdomyolysis is:",
+            "options": [
+                "Clear urine",
+                "Dark, tea/cola-colored urine",
+                "Blue urine",
+                "Frequent urination"
+            ],
+            "correctAnswer": 1,
+            "explanation": "That's the myoglobin."
+        },
+        {
+            "id": 18,
+            "text": "Oliguria is defined as:",
+            "options": [
+                "No urine",
+                "Low urine output (<400ml/day)",
+                "High output",
+                "Painful urination"
+            ],
+            "correctAnswer": 1,
+            "explanation": "A sign of failing kidneys."
+        },
+        {
+            "id": 19,
+            "text": "Which electrolyte imbalance is life-threatening in Renal Failure?",
+            "options": [
+                "Hypernatremia",
+                "Hyperkalemia (High Potassium)",
+                "Hypocalcemia",
+                "Hypomagnesemia"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Kidneys can't excrete Potassium -> Arrhythmias -> Cardiac Arrest."
+        },
+        {
+            "id": 20,
+            "text": "Kayexalate is used to treat:",
+            "options": [
+                "High BP",
+                "High Potassium (Hyperkalemia)",
+                "Constipation",
+                "Pain"
+            ],
+            "correctAnswer": 1,
+            "explanation": "It binds potassium in the gut and excretes it via stool."
+        },
+        {
+            "id": 21,
+            "text": "Nephrotic Syndrome is characterized by massive loss of what in urine?",
+            "options": [
+                "Blood",
+                "Protein (Proteinuria)",
+                "Glucose",
+                "Bacteria"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Leaky glomerulus lets protein escape -> Oedema."
+        },
+        {
+            "id": 22,
+            "text": "In Hemodialysis, 'Disequilibrium Syndrome' is caused by:",
+            "options": [
+                "Eating too fast",
+                "Rapid removal of solutes causing cerebral edema (brain swelling)",
+                "Infection",
+                "Blood loss"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Fluid shifts into brain cells. Watch for LOC changes/seizures."
+        },
+        {
+            "id": 23,
+            "text": "Why do renal patients get bone disease (Renal Osteodystrophy)?",
+            "options": [
+                "Lack of exercise",
+                "Imbalanced Calcium/Phosphorus and lack of Vitamin D activation",
+                "Too much milk",
+                "Aging"
+            ],
+            "correctAnswer": 1,
+            "explanation": "High Phos pulls Calcium from bones."
+        },
+        {
+            "id": 24,
+            "text": "A suprapubic catheter is inserted:",
+            "options": [
+                "Through the urethra",
+                "Surgically through the abdominal wall directly into the bladder",
+                "Into the kidney",
+                "Into the ureter"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Bypasses the urethra."
+        },
+        {
+            "id": 25,
+            "text": "The diet for a Renal Failure patient typically restricts:",
+            "options": [
+                "Carbs",
+                "Protein, Potassium, Sodium, and Phosphorus",
+                "Fats",
+                "Fiber"
+            ],
+            "correctAnswer": 1,
+            "explanation": "The kidneys can't filter the byproducts of these."
+        }
+    ]
+}

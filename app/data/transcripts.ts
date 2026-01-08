@@ -8,6 +8,9 @@ export interface TranscriptSegment {
     speaker?: string;   // Optional speaker label
 }
 
+// Episode 1: Test-Taking Strategies
+import episode1Data from './episode-1-transcript.json';
+
 // Episode 2: Coordinated Care
 import episode2Data from './episode-2-transcript.json';
 
@@ -35,8 +38,15 @@ import episode9Data from './episode-9-transcript.json';
 // Episode 10: Respiratory, Neurological & Endocrine
 import episode10Data from './episode-10-transcript.json';
 
+// Episode 11: Physiological Adaptation (Heme/GI)
+import episode11Data from './episode-11-transcript.json';
+
+// Episode 12: Physiological Adaptation (Renal/Musculoskeletal)
+import episode12Data from './episode-12-transcript.json';
+
 // Transcript lookup by episode ID
 export const transcripts: Record<number, TranscriptSegment[]> = {
+    1: episode1Data as TranscriptSegment[],
     2: episode2Data as TranscriptSegment[],
     3: episode3Data as TranscriptSegment[],
     4: episode4Data as TranscriptSegment[],
@@ -46,6 +56,8 @@ export const transcripts: Record<number, TranscriptSegment[]> = {
     8: episode8Data as TranscriptSegment[],
     9: episode9Data as TranscriptSegment[],
     10: episode10Data as TranscriptSegment[],
+    11: episode11Data as TranscriptSegment[],
+    12: episode12Data as TranscriptSegment[],
     // Add more episodes as transcripts become available
 };
 

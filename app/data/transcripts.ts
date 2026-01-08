@@ -20,6 +20,9 @@ import episode4Data from './episode-4-transcript.json';
 // Episode 5: Psychosocial Integrity
 import episode5Data from './episode-5-transcript.json';
 
+// Episode 6: Basic Care & Comfort
+import episode6Data from './episode-6-transcript.json';
+
 // Episode 10: Respiratory, Neurological & Endocrine
 import episode10Data from './episode-10-transcript.json';
 
@@ -29,6 +32,7 @@ export const transcripts: Record<number, TranscriptSegment[]> = {
     3: episode3Data as TranscriptSegment[],
     4: episode4Data as TranscriptSegment[],
     5: episode5Data as TranscriptSegment[],
+    6: episode6Data as TranscriptSegment[],
     10: episode10Data as TranscriptSegment[],
     // Add more episodes as transcripts become available
 };

@@ -2891,432 +2891,622 @@
         ]
     },
     {
-        "id": 5,
+        "id": 106,
         "episodeId": 6,
-        "title": "Psychosocial Integrity",
-        "description": "Therapeutic Communication, Abuse Recognition, Grief, Mental Health",
-        "questionCount": 35,
-        "color": "from-purple-600 to-fuchsia-800",
+        "title": "Basic Care & Comfort - Part A",
+        "description": "Mobility, Rehab Settings, Assistive Devices, Gait Patterns",
+        "questionCount": 30,
+        "color": "from-teal-600 to-cyan-800",
         "questions": [
             {
                 "id": 1,
-                "text": "Which therapeutic communication technique is best for a grieving client?",
+                "text": "Which rehabilitation setting is appropriate for a patient on mechanical ventilation needing complex wound care?",
                 "options": [
-                    "Changing the subject",
-                    "Providing false reassurance",
-                    "Silence and active listening",
-                    "Giving advice"
+                    "Subacute Care",
+                    "Long Term Acute Care Hospital (LTACH)",
+                    "Outpatient Rehabilitation",
+                    "Assisted Living"
                 ],
-                "correctAnswer": 2,
-                "explanation": "Silence and active listening allow the client to express feelings without judgment or pressure, facilitating the grief process."
+                "correctAnswer": 1,
+                "explanation": "LTACHs are for medically fragile patients who still need intensive support like vents or complex wound care, but are transitioning from the ICU/Acute care."
             },
             {
                 "id": 2,
-                "text": "According to K\u00fcbler-Ross, what is the first stage of grief?",
+                "text": "What is the primary difference between Physical Therapy (PT) and Occupational Therapy (OT)?",
                 "options": [
-                    "Anger",
-                    "Denial",
-                    "Bargaining",
-                    "Depression"
+                    "PT is for legs, OT is for arms",
+                    "PT focuses on gross motor/mobility (walking), OT focuses on ADLs (bathing, dressing, living skills)",
+                    "PT is for hospital, OT is for home",
+                    "There is no difference"
                 ],
                 "correctAnswer": 1,
-                "explanation": "The five stages of grief are: Denial, Anger, Bargaining, Depression, and Acceptance (DABDA)."
+                "explanation": "PT targets big movements (mobility, ambulation), while OT targets 'occupations' of daily life (ADLs/IADLs like dressing, cooking)."
             },
             {
                 "id": 3,
-                "text": "A nurse suspects child abuse. What is the priority action?",
+                "text": "When fitting a cane or crutches, where should the top of the device line up?",
                 "options": [
-                    "Confront the parents",
-                    "Report to appropriate authorities per facility protocol",
-                    "Document suspicions in the chart only",
-                    "Wait for more evidence"
+                    "The hip bone",
+                    "The patient's wrist crease when standing straight",
+                    "The armpit",
+                    "The elbow"
                 ],
                 "correctAnswer": 1,
-                "explanation": "Nurses are mandated reporters. Suspected abuse must be reported immediately to child protective services or appropriate authorities."
+                "explanation": "The wrist crease is the correct landmark. This ensures a 15-degree elbow flexion for optimal leverage and stability."
             },
             {
                 "id": 4,
-                "text": "Which statement is an example of therapeutic communication?",
+                "text": "What does the 'Four-Point Gait' pattern look like?",
                 "options": [
-                    "Why did you do that?",
-                    "Everything will be fine.",
-                    "Tell me more about how you're feeling.",
-                    "You shouldn't feel that way."
+                    "Move both crutches then both legs",
+                    "Right crutch, Left foot, Left crutch, Right foot",
+                    "Move one crutch and opposite foot together",
+                    "Swing through"
                 ],
-                "correctAnswer": 2,
-                "explanation": "Open-ended questions like 'Tell me more...' encourage the client to express feelings and thoughts. 'Why' questions can be defensive."
+                "correctAnswer": 1,
+                "explanation": "Four-point gait is slow but stable: Right crutch, Left foot, Left crutch, Right foot. Used for patients who can bear weight on both legs."
             },
             {
                 "id": 5,
-                "text": "A client says 'I'm going to kill myself.' What is the nurse's priority response?",
+                "text": "Which gait pattern mimics normal walking rhythm?",
                 "options": [
-                    "Ask if the client has a specific plan",
-                    "Tell the client not to talk that way",
-                    "Leave to call the physician",
-                    "Reassure the client things will get better"
+                    "Three-point",
+                    "Two-point gait (Crutch and opposite foot move together)",
+                    "Four-point",
+                    "Swing-to"
                 ],
-                "correctAnswer": 0,
-                "explanation": "Assess suicide risk by asking about plan, means, and intent. Never leave a suicidal client alone; stay and call for help."
+                "correctAnswer": 1,
+                "explanation": "Two-point gait speeds things up by moving the crutch and opposite leg simultaneously, mimicking a natural arm-swing walking rhythm."
             },
             {
                 "id": 6,
-                "text": "Which finding is most indicative of elder abuse?",
+                "text": "A patient cannot bear weight on their left leg. Which gait pattern is appropriate?",
                 "options": [
-                    "Multiple bruises in various stages of healing",
-                    "Confusion and disorientation",
-                    "Weight loss",
-                    "Frequent UTIs"
+                    "Four-point",
+                    "Three-point gait",
+                    "Two-point",
+                    "Swing-through"
                 ],
-                "correctAnswer": 0,
-                "explanation": "Bruises in various stages of healing suggest repeated trauma and are a red flag for physical abuse."
+                "correctAnswer": 1,
+                "explanation": "Three-point gait is for non-weight bearing on one leg. Both crutches and the bad leg move forward, then the good leg follows."
             },
             {
                 "id": 7,
-                "text": "A client in the anger stage of grief yells at the nurse. What is the best response?",
+                "text": "What is the rule for going UP stairs with crutches?",
                 "options": [
-                    "Leave the room immediately",
-                    "Tell the client to calm down",
-                    "Remain calm and allow the client to express feelings",
-                    "Call security"
+                    "Up with the bad",
+                    "Up with the GOOD leg first",
+                    "Both legs together",
+                    "Crutches first"
                 ],
-                "correctAnswer": 2,
-                "explanation": "Anger is a normal grief stage. Remain calm, set boundaries if needed, and allow safe expression of feelings."
+                "correctAnswer": 1,
+                "explanation": "'Up with the Good, Down with the Bad.' The good leg goes up first to lift the body."
             },
             {
                 "id": 8,
-                "text": "Which communication technique should be AVOIDED?",
+                "text": "What is 'Scheduled Voiding' in bladder training?",
                 "options": [
-                    "Reflection",
-                    "Clarification",
-                    "False reassurance",
-                    "Open-ended questions"
+                    "Going when the patient feels the urge",
+                    "Toileting at fixed time intervals (e.g., every 3 hours) regardless of urge",
+                    "Using a catheter",
+                    "Asking the patient if they are dry"
                 ],
-                "correctAnswer": 2,
-                "explanation": "False reassurance (e.g., 'Everything will be fine') dismisses client concerns and blocks therapeutic communication."
+                "correctAnswer": 1,
+                "explanation": "Scheduled voiding is strictly clock-based to prevent accidents by emptying the bladder before it gets too full."
             },
             {
                 "id": 9,
-                "text": "A client with depression says 'I'm worthless.' What is the therapeutic response?",
+                "text": "What is 'The Knack' for stress incontinence?",
                 "options": [
-                    "You're not worthless.",
-                    "Why do you feel that way?",
-                    "You sound like you're feeling pretty low about yourself.",
-                    "Many people feel that way."
+                    "Identifying the bathroom location",
+                    "Consciously squeezing pelvic floor muscles BEFORE coughing or sneezing",
+                    "Crossing legs",
+                    "Holding breath"
                 ],
-                "correctAnswer": 2,
-                "explanation": "Reflection acknowledges feelings without judgment. Avoid 'why' questions and false reassurance."
+                "correctAnswer": 1,
+                "explanation": "The Knack is a pre-emptive pelvic floor contraction (Kegel) right before increasing abdominal pressure (cough/sneeze) to prevent leakage."
             },
             {
                 "id": 10,
-                "text": "Which behavior suggests a child is being sexually abused?",
+                "text": "Which type of fiber 'slows things down' by forming a gel?",
                 "options": [
-                    "Age-inappropriate sexual knowledge or behavior",
-                    "Bedwetting",
-                    "Nightmares",
-                    "Separation anxiety"
+                    "Insoluble fiber",
+                    "Soluble fiber (Oats, Beans, Apples)",
+                    "Protein",
+                    "Carbohydrates"
                 ],
-                "correctAnswer": 0,
-                "explanation": "Age-inappropriate sexual knowledge or behavior is a strong indicator of sexual abuse and requires immediate reporting."
+                "correctAnswer": 1,
+                "explanation": "Soluble fiber dissolves in water to form a gel, which can help manage diarrhea and regulate transit. Insoluble fiber adds bulk."
             },
             {
                 "id": 11,
-                "text": "A client in the bargaining stage of grief might say:",
+                "text": "What is the maximum angle for the head of the bed to prevent shear?",
                 "options": [
-                    "This can't be happening to me.",
-                    "If I pray more, maybe I'll get better.",
-                    "I'm so angry this happened.",
-                    "I just feel so sad all the time."
+                    "45 degrees",
+                    "30 degrees",
+                    "90 degrees",
+                    "Flat"
                 ],
                 "correctAnswer": 1,
-                "explanation": "Bargaining involves attempting to negotiate (often with a higher power) to change the outcome."
+                "explanation": "Keep the HOB at 30 degrees or less when possible to prevent gravity from pulling the skeleton down while skin sticks to sheets (shear)."
             },
             {
                 "id": 12,
-                "text": "Which is a priority assessment for a client with suicidal ideation?",
+                "text": "How often should a patient be repositioned in a CHAIR?",
                 "options": [
-                    "Sleep patterns",
-                    "Appetite",
-                    "Access to lethal means",
-                    "Social support"
+                    "Every 2 hours",
+                    "Every 15 minutes",
+                    "Every hour",
+                    "Every 30 minutes"
                 ],
-                "correctAnswer": 2,
-                "explanation": "Assessing access to lethal means (guns, pills, etc.) is critical for safety. Remove access to means if possible."
+                "correctAnswer": 1,
+                "explanation": "Chair sitting puts intense pressure on ischial tuberosities. Repositioning (weight shifting) is required every 15 minutes."
             },
             {
                 "id": 13,
-                "text": "A nurse observes a parent yelling and threatening a child. What should the nurse do?",
+                "text": "What defines a Stage 1 Pressure Injury?",
                 "options": [
-                    "Ignore it as a private family matter",
-                    "Intervene calmly and assess the situation",
-                    "Call the police immediately",
-                    "Document only"
+                    "Open blister",
+                    "Non-blanchable erythema (redness) of intact skin",
+                    "Exposed fat",
+                    "Deep purple bruise"
                 ],
                 "correctAnswer": 1,
-                "explanation": "Intervene to ensure child safety, assess the situation, and report per protocol. Emotional abuse is reportable."
+                "explanation": "Stage 1 is intact skin with redness that does not turn white (blanch) when pressed. It's the warning signal."
             },
             {
                 "id": 14,
-                "text": "Which statement demonstrates empathy?",
+                "text": "What does a 'Suspected Deep Tissue Injury' look like?",
                 "options": [
-                    "I know exactly how you feel.",
-                    "This must be very difficult for you.",
-                    "You'll feel better soon.",
-                    "Others have it worse."
+                    "Yellow slough",
+                    "Deep purple or maroon area of intact skin",
+                    "Red blister",
+                    "Black scab"
                 ],
                 "correctAnswer": 1,
-                "explanation": "Empathy acknowledges the client's feelings without claiming to know exactly how they feel or minimizing their experience."
+                "explanation": "DTI appears as a purple/maroon bruise on intact skin, indicating serious damage to underlying soft tissue from pressure/shear."
             },
             {
                 "id": 15,
-                "text": "A client with anxiety is hyperventilating. What is the priority intervention?",
+                "text": "What prevents staging a pressure ulcer?",
                 "options": [
-                    "Administer oxygen",
-                    "Have client breathe into a paper bag",
-                    "Coach slow, deep breathing",
-                    "Administer anti-anxiety medication"
+                    "It is too small",
+                    "The wound bed is covered by slough (yellow) or eschar (black)",
+                    "It is bleeding",
+                    "It is too deep"
                 ],
-                "correctAnswer": 2,
-                "explanation": "Coach slow, deep breathing to reduce hyperventilation. Paper bags are no longer recommended due to hypoxia risk."
+                "correctAnswer": 1,
+                "explanation": "If you cannot see the bottom of the wound due to necrotic tissue (slough/eschar), it is Unstageable."
             },
             {
                 "id": 16,
-                "text": "Which is a sign of domestic violence?",
+                "text": "What is the 30-degree lateral position?",
                 "options": [
-                    "Partner answers all questions for the client",
-                    "Client has a chronic illness",
-                    "Client is unemployed",
-                    "Client has children"
+                    "Lying completely on the side (90 degrees)",
+                    "Tilted 30 degrees to the side, supported by pillows, to stay off the sacrum AND hip bone",
+                    "Lying flat",
+                    "Sitting upright"
                 ],
-                "correctAnswer": 0,
-                "explanation": "Controlling behavior (partner answering for client, not allowing privacy) is a red flag for domestic violence."
+                "correctAnswer": 1,
+                "explanation": "This position offloads the sacrum without putting direct pressure on the greater trochanter (hip bone), unlike a full 90-degree turn."
             },
             {
                 "id": 17,
-                "text": "In the acceptance stage of grief, a client might say:",
+                "text": "How does TENS therapy work to relieve pain?",
                 "options": [
-                    "I can't believe this is real.",
-                    "Why is this happening to me?",
-                    "I'm ready to face what's ahead.",
-                    "If only I had done things differently."
+                    "It freezes the nerve",
+                    "It stimulates large nerve fibers to 'close the gate' on pain signals and releases endorphins",
+                    "It numbs the skin chemically",
+                    "It uses heat"
                 ],
-                "correctAnswer": 2,
-                "explanation": "Acceptance involves coming to terms with reality and finding peace with the situation."
+                "correctAnswer": 1,
+                "explanation": "TENS uses electrical impulses to block pain transmission (Gate Control Theory) and stimulate natural endorphins."
             },
             {
                 "id": 18,
-                "text": "A client with schizophrenia says 'The TV is sending me messages.' What is the therapeutic response?",
+                "text": "Why is St. John's Wort a safety concern?",
                 "options": [
-                    "That's not possible.",
-                    "I don't hear any messages, but I understand this is real to you.",
-                    "Let's turn off the TV.",
-                    "Why do you think that?"
+                    "It causes drowsiness",
+                    "It interacts with many drugs (anticoagulants, birth control) making them ineffective",
+                    "It raises blood pressure",
+                    "It causes addiction"
                 ],
                 "correctAnswer": 1,
-                "explanation": "Acknowledge the client's reality without reinforcing the delusion. Don't argue or agree with delusions."
+                "explanation": "St. John's Wort induces liver enzymes that metabolize drugs faster, reducing the effectiveness of critical meds like Warfarin and contraceptives."
             },
             {
                 "id": 19,
-                "text": "Which is a risk factor for suicide?",
+                "text": "What is Algor Mortis?",
                 "options": [
-                    "Recent marriage",
-                    "Previous suicide attempt",
-                    "Starting a new job",
-                    "Having young children"
+                    "Stiffening of muscles",
+                    "Cooling of the body after death",
+                    "pooling of blood",
+                    "Decomposition"
                 ],
                 "correctAnswer": 1,
-                "explanation": "Previous suicide attempt is the strongest predictor of future attempts. Other risks: depression, substance abuse, isolation, access to means."
+                "explanation": "Algor Mortis is the cooling of the body (~1 degree C per hour) until it matches room temperature."
             },
             {
                 "id": 20,
-                "text": "A nurse suspects a colleague is impaired by substances. What should the nurse do?",
+                "text": "What is Livor Mortis?",
                 "options": [
-                    "Confront the colleague privately",
-                    "Ignore it to avoid conflict",
-                    "Report to the nurse manager per facility policy",
-                    "Tell other staff members"
+                    "Stiffening",
+                    "Purple-red discoloration from blood settling (gravity)",
+                    "Cooling",
+                    "Pale skin"
                 ],
-                "correctAnswer": 2,
-                "explanation": "Patient safety is priority. Report suspected impairment to the nurse manager or appropriate authority per facility protocol."
+                "correctAnswer": 1,
+                "explanation": "Livor Mortis is the pooling of blood in dependent areas, causing discoloration. It becomes fixed after ~6 hours."
             },
             {
                 "id": 21,
-                "text": "Which communication technique involves restating the client's message?",
+                "text": "When does Rigor Mortis typically start?",
                 "options": [
-                    "Reflection",
-                    "Clarification",
-                    "Paraphrasing",
-                    "Summarizing"
+                    "Immediately",
+                    "2-4 hours after death, starting in small muscles",
+                    "24 hours after death",
+                    "1 week after death"
                 ],
-                "correctAnswer": 2,
-                "explanation": "Paraphrasing restates the client's message in the nurse's own words to ensure understanding."
+                "correctAnswer": 1,
+                "explanation": "Rigor (stiffening) begins in small muscles (jaw/neck) at 2-4 hours, peaks at 8-10 hours."
             },
             {
                 "id": 22,
-                "text": "A client with PTSD is experiencing a flashback. What is the priority intervention?",
+                "text": "What are the criteria for death pronouncement?",
                 "options": [
-                    "Leave the client alone",
-                    "Orient the client to the present",
-                    "Restrain the client",
-                    "Administer sedation"
+                    "Cold skin",
+                    "No pulse or respirations for 60 seconds, no pupil response, no reflexes",
+                    "No movement for 10 seconds",
+                    "Flat ECG only"
                 ],
                 "correctAnswer": 1,
-                "explanation": "During flashbacks, orient the client to the present using grounding techniques (e.g., 'You are safe. You are in the hospital.')."
+                "explanation": "Assessment requires checking for absence of pulse and breathing for a full 60 seconds, plus lack of responsiveness/reflexes."
             },
             {
                 "id": 23,
-                "text": "Which is a sign of neglect in an elderly client?",
+                "text": "How should a body be positioned post-mortem?",
                 "options": [
-                    "Poor hygiene and malnutrition",
-                    "Dementia",
-                    "Arthritis",
-                    "Living alone"
+                    "Face down",
+                    "Supine with head slightly elevated (prevent discoloration), eyes closed, dentures in",
+                    "Side lying",
+                    "Sitting up"
                 ],
-                "correctAnswer": 0,
-                "explanation": "Poor hygiene, malnutrition, untreated medical conditions, and unsafe living conditions indicate neglect."
+                "correctAnswer": 1,
+                "explanation": "Position naturally, head elevated to prevent pooling in face, close eyes, insert dentures (if policy allows/possible) for dignity."
             },
             {
                 "id": 24,
-                "text": "A client says 'I feel like I'm going crazy.' What is the best response?",
+                "text": "What is prompt voiding used for?",
                 "options": [
-                    "You're not crazy.",
-                    "Tell me what you mean by that.",
-                    "Everyone feels that way sometimes.",
-                    "You need to think positively."
+                    "Infants",
+                    "Patients with cognitive impairment",
+                    "Surgical patients",
+                    "Spinal cord injury"
                 ],
                 "correctAnswer": 1,
-                "explanation": "Clarification helps understand the client's meaning. Avoid false reassurance or dismissing feelings."
+                "explanation": "Prompted voiding works well for cognitive impairment: regular checks + asking 'Are you dry?' + positive reinforcement."
             },
             {
                 "id": 25,
-                "text": "Which is an appropriate intervention for a client with depression?",
+                "text": "What causes shearing force?",
                 "options": [
-                    "Encourage participation in activities",
-                    "Allow the client to sleep all day",
-                    "Tell the client to cheer up",
-                    "Isolate the client for rest"
+                    "Rubbing skin on sheets",
+                    "Skeleton sliding down while skin stays stuck to surface",
+                    " Blunt trauma",
+                    "Chemical burns"
                 ],
-                "correctAnswer": 0,
-                "explanation": "Encourage activity and socialization. Depression worsens with isolation and inactivity."
+                "correctAnswer": 1,
+                "explanation": "Shear is the mechanical force of parallel opposites: bone moves down (gravity), skin stays put (friction), tearing deep vessels."
             },
             {
                 "id": 26,
-                "text": "A client with mania is pacing and talking rapidly. What is the priority intervention?",
+                "text": "Which heat therapy effect promotes healing?",
                 "options": [
-                    "Engage in lengthy conversation",
-                    "Provide a quiet, low-stimulation environment",
-                    "Encourage group activities",
-                    "Ignore the behavior"
+                    "Vasoconstriction",
+                    "Vasodilation (increased blood flow)",
+                    "Numbing",
+                    "Reduced metabolism"
                 ],
                 "correctAnswer": 1,
-                "explanation": "Reduce stimulation to decrease agitation. Use short, simple statements. Ensure safety."
+                "explanation": "Heat causes vasodilation, bringing oxygen, nutrients, and immune cells to the area to speed healing."
             },
             {
                 "id": 27,
-                "text": "Which behavior suggests a therapeutic nurse-client relationship?",
+                "text": "What is the purpose of visualization in pain control?",
                 "options": [
-                    "Sharing personal phone number",
-                    "Maintaining professional boundaries",
-                    "Becoming friends on social media",
-                    "Visiting the client at home after discharge"
+                    "To sleep",
+                    "To distract the brain with sensory details, overriding pain signals",
+                    "To cure the cause",
+                    "To please the nurse"
                 ],
                 "correctAnswer": 1,
-                "explanation": "Professional boundaries protect both nurse and client. Avoid dual relationships and maintain therapeutic focus."
+                "explanation": "Detailed guided imagery creates a competing sensory input that can block or dampen pain perception."
             },
             {
                 "id": 28,
-                "text": "A client with anorexia nervosa is exercising excessively. What should the nurse do?",
+                "text": "What is a 'Subacute' care setting?",
                 "options": [
-                    "Allow exercise as a coping mechanism",
-                    "Set limits on exercise per treatment plan",
-                    "Encourage more exercise to build appetite",
-                    "Ignore the behavior"
+                    "ICU",
+                    "A bridge between hospital and home - skilled nursing but less intensive than LTACH",
+                    "Hospice",
+                    "Emergency Room"
                 ],
                 "correctAnswer": 1,
-                "explanation": "Excessive exercise is a compensatory behavior in eating disorders. Set limits and monitor per treatment plan."
+                "explanation": "Subacute care is for stable patients who still need daily skilled nursing/therapy but not the high-tech support of LTACH."
             },
             {
                 "id": 29,
-                "text": "Which is a therapeutic response to a client who is crying?",
+                "text": "What does a Stage 2 pressure injury involve?",
                 "options": [
-                    "Don't cry, things will get better.",
-                    "Sit quietly with the client.",
-                    "Leave to give privacy.",
-                    "Change the subject."
+                    "Intact skin",
+                    "Partial thickness loss (blister or shallow crater)",
+                    "Muscle exposure",
+                    "Bone exposure"
                 ],
                 "correctAnswer": 1,
-                "explanation": "Therapeutic presence (sitting quietly, offering tissues) shows support without interrupting the emotional release."
+                "explanation": "Stage 2 involves breaks in the skin (epidermis/dermis) presenting as a blister, abrasion, or shallow crater."
             },
             {
                 "id": 30,
-                "text": "A client with alcohol withdrawal is experiencing hallucinations. What is the priority?",
+                "text": "What is the nurse's role when family is viewing the body?",
                 "options": [
-                    "Argue that hallucinations aren't real",
-                    "Ensure safety and administer prescribed medications",
-                    "Restrain the client",
-                    "Leave the client alone"
+                    "Leave them alone immediately",
+                    "Prepare them for what to expect, provide privacy, be present for support",
+                    "Rushing them",
+                    "Explaining medical details"
                 ],
                 "correctAnswer": 1,
-                "explanation": "Alcohol withdrawal can cause delirium tremens with hallucinations. Ensure safety, administer benzodiazepines as ordered, monitor vital signs."
-            },
+                "explanation": "The nurse facilitates the process: preparing the body/room, explaining (simply) what they will see, and offering quiet support."
+            }
+        ]
+    },
+    {
+        "id": 107,
+        "episodeId": 6,
+        "title": "Basic Care & Comfort - Part B",
+        "description": "Skin Integrity, Pain Management, End of Life Care Scenarios",
+        "questionCount": 20,
+        "color": "from-teal-600 to-cyan-800",
+        "questions": [
             {
-                "id": 31,
-                "text": "Which statement indicates a client is in the depression stage of grief?",
+                "id": 1,
+                "text": "What characterizes a Stage 3 pressure injury?",
                 "options": [
-                    "I can't believe this is happening.",
-                    "I just want to be left alone. Nothing matters anymore.",
-                    "If I change my lifestyle, maybe I'll recover.",
-                    "I'm ready to move forward."
+                    "Exposed bone",
+                    "Full thickness skin loss involving damage to subcutaneous tissue (fat visible)",
+                    "Intact skin with redness",
+                    "Blister only"
                 ],
                 "correctAnswer": 1,
-                "explanation": "Depression stage involves sadness, withdrawal, and feelings of hopelessness about the loss."
+                "explanation": "Stage 3 extends into the subcutaneous tissue (fat is visible), but does NOT expose muscle, tendon, or bone (which would be Stage 4)."
             },
             {
-                "id": 32,
-                "text": "A client with OCD is washing hands repeatedly. What is the appropriate intervention?",
+                "id": 2,
+                "text": "Correctly identifying a Stage 4 pressure injury requires seeing:",
                 "options": [
-                    "Stop the behavior immediately",
-                    "Allow the behavior initially, then gradually set limits",
-                    "Ignore the behavior completely",
-                    "Punish the behavior"
+                    "Fat",
+                    "Exposed muscle, tendon, or bone",
+                    "A blister",
+                    "Slough"
                 ],
                 "correctAnswer": 1,
-                "explanation": "Don't abruptly stop compulsions (increases anxiety). Gradually set limits while teaching alternative coping strategies."
+                "explanation": "Stage 4 is the deepest injury, involving full-thickness loss with exposed support structures like muscle, tendon, or bone."
             },
             {
-                "id": 33,
-                "text": "Which is a priority when caring for a client in restraints?",
+                "id": 3,
+                "text": "What is the primary physiologic effect of Cold therapy?",
                 "options": [
-                    "Check circulation every 2 hours",
-                    "Leave restraints on continuously for 8 hours",
-                    "Document only at the end of shift",
-                    "Keep the client sedated"
-                ],
-                "correctAnswer": 0,
-                "explanation": "Monitor circulation, skin integrity, and vital signs every 15-30 minutes. Release restraints every 2 hours for ROM and toileting."
-            },
-            {
-                "id": 34,
-                "text": "A client says 'I hear voices telling me to hurt myself.' What is the priority action?",
-                "options": [
-                    "Ask what the voices are saying",
-                    "Ensure immediate safety and stay with the client",
-                    "Tell the client the voices aren't real",
-                    "Document and continue with care"
+                    "Vasodilation",
+                    "Vasoconstriction (decreased blood flow), reduced inflammation, numbing",
+                    "Increased metabolism",
+                    "Muscle relaxation"
                 ],
                 "correctAnswer": 1,
-                "explanation": "Command hallucinations to harm self or others require immediate safety measures. Stay with client, remove dangerous objects, notify provider."
+                "explanation": "Cold causes vasoconstriction, which limits swelling/inflammation and creates a local anesthetic (numbing) effect."
             },
             {
-                "id": 35,
-                "text": "Which intervention promotes a therapeutic environment for mental health clients?",
+                "id": 4,
+                "text": "How long should heat or cold therapy generally be applied to avoid tissue damage?",
                 "options": [
-                    "Strict rules with no flexibility",
-                    "Consistent routine and clear expectations",
-                    "Allowing clients to do whatever they want",
-                    "Isolating clients from each other"
+                    "1 hour",
+                    "15-20 minutes",
+                    "All night",
+                    "5 seconds"
                 ],
                 "correctAnswer": 1,
-                "explanation": "Structure, consistency, and clear expectations provide safety and reduce anxiety in therapeutic environments."
+                "explanation": "Limit application to 15-20 minutes to prevent rebound effects (vasodilation/constriction reversal) or tissue injury/burns."
+            },
+            {
+                "id": 5,
+                "text": "For a patient with cognitive impairment preventing bladder control, which intervention is best?",
+                "options": [
+                    "Indwelling catheter",
+                    "Prompted Voiding (timed checks + positive reinforcement)",
+                    "Diapers only",
+                    "Fluid restriction"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Prompted voiding is the evidence-based behavioral intervention for cognitive impairment, promoting continence creates dignity."
+            },
+            {
+                "id": 6,
+                "text": "When helping a patient with proper crutch fit stand up, the elbows should be flexed at:",
+                "options": [
+                    "45 degrees",
+                    "15-30 degrees",
+                    "0 degrees (straight)",
+                    "90 degrees"
+                ],
+                "correctAnswer": 1,
+                "explanation": "A 15-30 degree bend allows the arm muscles to effectively push down and lift the body weight during ambulation."
+            },
+            {
+                "id": 7,
+                "text": "A patient asks why they need to visualize 'smelling the ocean' during guided imagery. You explain:",
+                "options": [
+                    "It helps memory",
+                    "Detailed sensory input engages the brain, distracting it from processing pain signals",
+                    "It's just for fun",
+                    "Smells are powerful"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Multisensory detail (sight, sound, smell, feel) overloads the sensory pathways, competing with and dampening pain transmission."
+            },
+            {
+                "id": 8,
+                "text": "What differentiates Friction from Shear?",
+                "options": [
+                    "Friction is deeper",
+                    "Friction is surface rubbing (abrasion); Shear is deep tissue tearing from bone/skin moving opposite directions",
+                    "Shear is a burn",
+                    "They are the same"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Friction damages the surface (epidermis). Shear damages deep vessels at the bone interface, leading to deep tissue injury (DTI)."
+            },
+            {
+                "id": 9,
+                "text": "In the 'Gate Control Theory' of pain, what does TENS do?",
+                "options": [
+                    "Opens the gate",
+                    "Stimulates large non-pain fibers to 'close the gate', blocking pain signals to the brain",
+                    "Numbs the brain",
+                    "Removes the cause"
+                ],
+                "correctAnswer": 1,
+                "explanation": "TENS stimulates large A-beta fibers which inhibit (gate) the transmission of pain signals from smaller C-fibers to the brain."
+            },
+            {
+                "id": 10,
+                "text": "Before starting a post-mortem bed bath, the nurse should:",
+                "options": [
+                    "Call the funeral home",
+                    "Verify if the family has specific cultural/religious rituals for handling the body",
+                    "Remove all lines immediately",
+                    "Lock the room"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Cultural/religious needs take priority. Some cultures prohibit non-family touching the body or have specific washing rituals."
+            },
+            {
+                "id": 11,
+                "text": "How does 'Habit Training' differ from 'Scheduled Voiding'?",
+                "options": [
+                    "It uses a catheter",
+                    "It is based on the patient's OWN natural pattern (determined by logging) rather than a fixed arbitrary interval",
+                    "It is random",
+                    "It only works at night"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Habit training is personalized based on voiding logs, whereas scheduled voiding is acceptable for those who can't report but is rigid."
+            },
+            {
+                "id": 12,
+                "text": "Why are 'donuts' (ring cushions) contraindicated for pressure ulcer prevention?",
+                "options": [
+                    "They are too expensive",
+                    "They create a ring of high pressure that restricts blood flow to the center area",
+                    "They are uncomfortable",
+                    "Patients fall off"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Donut cushions cause venous congestion and ischemia in the center circle, worsening pressure risks rather than helping."
+            },
+            {
+                "id": 13,
+                "text": "What indicates a patient is using the 'Three-Point Gait' correctly?",
+                "options": [
+                    "They hop",
+                    "They advance both crutches and the weak leg together, then bring the strong leg forward",
+                    "They move opposite arm/leg",
+                    "They drag their feet"
+                ],
+                "correctAnswer": 1,
+                "explanation": "The signature of 3-point gait is moving the assistive device and the injured limb simultaneously to protect it from weight-bearing."
+            },
+            {
+                "id": 14,
+                "text": "When is an autopsy typically mandatory?",
+                "options": [
+                    "Always",
+                    "Unattended death, suspicious circumstances, or death within 24 hours of hospital admission",
+                    "If family requests",
+                    "For elderly patients"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Medical Examiner cases (homicide, suicide, accident, death <24hrs of admission) require autopsy by law; tubes/lines must remain in place."
+            },
+            {
+                "id": 15,
+                "text": "Why do we elevate the head slightly post-mortem?",
+                "options": [
+                    "For comfort",
+                    "To prevent blood from pooling in the face (discoloration)",
+                    "To help breathing",
+                    "It looks better"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Preventing Livor Mortis (discoloration) in visible areas like the face is a key part of maintaining dignity for viewing."
+            },
+            {
+                "id": 16,
+                "text": "What is the specific danger of herbal supplements like Ginkgo Biloba or Garlic?",
+                "options": [
+                    "They smell bad",
+                    "Increased bleeding risk (antiplatelet effects)",
+                    "Weight gain",
+                    "Hair loss"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Many 'G' herbs (Garlic, Ginger, Ginkgo, Ginseng) increase bleeding risk, which is critical to know before surgery."
+            },
+            {
+                "id": 17,
+                "text": "Which patient requires a 'mechanical lift' (Hoyer)?",
+                "options": [
+                    "Patient can stand but is weak",
+                    "Patient cannot bear weight and is unable to assist with transfer",
+                    "Patient is a child",
+                    "Patient works in OT"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Zero-lift policies protect staff. If a patient cannot bear weight or assist, a full mechanical lift is required to prevent back injury."
+            },
+            {
+                "id": 18,
+                "text": "What is the correct way to descend stairs with a cane?",
+                "options": [
+                    "Cane and strong leg first",
+                    "Cane and WEAK leg go down first",
+                    "Strong leg helps lowers the body",
+                    "Jump"
+                ],
+                "correctAnswer": 1,
+                "explanation": "The cane goes down with the weak leg to provide support, while the strong leg bends to lower the body weight securely."
+            },
+            {
+                "id": 19,
+                "text": "For a client with Right-sided weakness (stroke), where should the cane be held?",
+                "options": [
+                    "Right side (weak side)",
+                    "Left side (strong side)",
+                    "Both hands",
+                    "Doesn't matter"
+                ],
+                "correctAnswer": 1,
+                "explanation": "The cane is always held on the STRONG side (Left) to provide a wide base of support for the weak side (Right)."
+            },
+            {
+                "id": 20,
+                "text": "What is the main goal of Palliative Care vs Hospice?",
+                "options": [
+                    "No difference",
+                    "Palliative can occur alongside curative treatment; Hospice implies <6 months left and stopping curative treatment",
+                    "Hospice is only for cancer",
+                    "Palliative is only for elderly"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Palliative care focuses on symptom relief at ANY stage of illness. Hospice is a specific Medicare benefit for the end of life (<6mo) without curative intent."
             }
         ]
     },
@@ -7639,6 +7829,435 @@
                 ],
                 "correctAnswer": 0,
                 "explanation": "Explanation."
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "title": "Psychosocial Integrity (Unassigned)",
+        "description": "Therapeutic Communication, Abuse Recognition, Grief, Mental Health",
+        "questionCount": 35,
+        "color": "from-purple-600 to-fuchsia-800",
+        "questions": [
+            {
+                "id": 1,
+                "text": "Which therapeutic communication technique is best for a grieving client?",
+                "options": [
+                    "Changing the subject",
+                    "Providing false reassurance",
+                    "Silence and active listening",
+                    "Giving advice"
+                ],
+                "correctAnswer": 2,
+                "explanation": "Silence and active listening allow the client to express feelings without judgment or pressure, facilitating the grief process."
+            },
+            {
+                "id": 2,
+                "text": "According to K\u00fcbler-Ross, what is the first stage of grief?",
+                "options": [
+                    "Anger",
+                    "Denial",
+                    "Bargaining",
+                    "Depression"
+                ],
+                "correctAnswer": 1,
+                "explanation": "The five stages of grief are: Denial, Anger, Bargaining, Depression, and Acceptance (DABDA)."
+            },
+            {
+                "id": 3,
+                "text": "A nurse suspects child abuse. What is the priority action?",
+                "options": [
+                    "Confront the parents",
+                    "Report to appropriate authorities per facility protocol",
+                    "Document suspicions in the chart only",
+                    "Wait for more evidence"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Nurses are mandated reporters. Suspected abuse must be reported immediately to child protective services or appropriate authorities."
+            },
+            {
+                "id": 4,
+                "text": "Which statement is an example of therapeutic communication?",
+                "options": [
+                    "Why did you do that?",
+                    "Everything will be fine.",
+                    "Tell me more about how you're feeling.",
+                    "You shouldn't feel that way."
+                ],
+                "correctAnswer": 2,
+                "explanation": "Open-ended questions like 'Tell me more...' encourage the client to express feelings and thoughts. 'Why' questions can be defensive."
+            },
+            {
+                "id": 5,
+                "text": "A client says 'I'm going to kill myself.' What is the nurse's priority response?",
+                "options": [
+                    "Ask if the client has a specific plan",
+                    "Tell the client not to talk that way",
+                    "Leave to call the physician",
+                    "Reassure the client things will get better"
+                ],
+                "correctAnswer": 0,
+                "explanation": "Assess suicide risk by asking about plan, means, and intent. Never leave a suicidal client alone; stay and call for help."
+            },
+            {
+                "id": 6,
+                "text": "Which finding is most indicative of elder abuse?",
+                "options": [
+                    "Multiple bruises in various stages of healing",
+                    "Confusion and disorientation",
+                    "Weight loss",
+                    "Frequent UTIs"
+                ],
+                "correctAnswer": 0,
+                "explanation": "Bruises in various stages of healing suggest repeated trauma and are a red flag for physical abuse."
+            },
+            {
+                "id": 7,
+                "text": "A client in the anger stage of grief yells at the nurse. What is the best response?",
+                "options": [
+                    "Leave the room immediately",
+                    "Tell the client to calm down",
+                    "Remain calm and allow the client to express feelings",
+                    "Call security"
+                ],
+                "correctAnswer": 2,
+                "explanation": "Anger is a normal grief stage. Remain calm, set boundaries if needed, and allow safe expression of feelings."
+            },
+            {
+                "id": 8,
+                "text": "Which communication technique should be AVOIDED?",
+                "options": [
+                    "Reflection",
+                    "Clarification",
+                    "False reassurance",
+                    "Open-ended questions"
+                ],
+                "correctAnswer": 2,
+                "explanation": "False reassurance (e.g., 'Everything will be fine') dismisses client concerns and blocks therapeutic communication."
+            },
+            {
+                "id": 9,
+                "text": "A client with depression says 'I'm worthless.' What is the therapeutic response?",
+                "options": [
+                    "You're not worthless.",
+                    "Why do you feel that way?",
+                    "You sound like you're feeling pretty low about yourself.",
+                    "Many people feel that way."
+                ],
+                "correctAnswer": 2,
+                "explanation": "Reflection acknowledges feelings without judgment. Avoid 'why' questions and false reassurance."
+            },
+            {
+                "id": 10,
+                "text": "Which behavior suggests a child is being sexually abused?",
+                "options": [
+                    "Age-inappropriate sexual knowledge or behavior",
+                    "Bedwetting",
+                    "Nightmares",
+                    "Separation anxiety"
+                ],
+                "correctAnswer": 0,
+                "explanation": "Age-inappropriate sexual knowledge or behavior is a strong indicator of sexual abuse and requires immediate reporting."
+            },
+            {
+                "id": 11,
+                "text": "A client in the bargaining stage of grief might say:",
+                "options": [
+                    "This can't be happening to me.",
+                    "If I pray more, maybe I'll get better.",
+                    "I'm so angry this happened.",
+                    "I just feel so sad all the time."
+                ],
+                "correctAnswer": 1,
+                "explanation": "Bargaining involves attempting to negotiate (often with a higher power) to change the outcome."
+            },
+            {
+                "id": 12,
+                "text": "Which is a priority assessment for a client with suicidal ideation?",
+                "options": [
+                    "Sleep patterns",
+                    "Appetite",
+                    "Access to lethal means",
+                    "Social support"
+                ],
+                "correctAnswer": 2,
+                "explanation": "Assessing access to lethal means (guns, pills, etc.) is critical for safety. Remove access to means if possible."
+            },
+            {
+                "id": 13,
+                "text": "A nurse observes a parent yelling and threatening a child. What should the nurse do?",
+                "options": [
+                    "Ignore it as a private family matter",
+                    "Intervene calmly and assess the situation",
+                    "Call the police immediately",
+                    "Document only"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Intervene to ensure child safety, assess the situation, and report per protocol. Emotional abuse is reportable."
+            },
+            {
+                "id": 14,
+                "text": "Which statement demonstrates empathy?",
+                "options": [
+                    "I know exactly how you feel.",
+                    "This must be very difficult for you.",
+                    "You'll feel better soon.",
+                    "Others have it worse."
+                ],
+                "correctAnswer": 1,
+                "explanation": "Empathy acknowledges the client's feelings without claiming to know exactly how they feel or minimizing their experience."
+            },
+            {
+                "id": 15,
+                "text": "A client with anxiety is hyperventilating. What is the priority intervention?",
+                "options": [
+                    "Administer oxygen",
+                    "Have client breathe into a paper bag",
+                    "Coach slow, deep breathing",
+                    "Administer anti-anxiety medication"
+                ],
+                "correctAnswer": 2,
+                "explanation": "Coach slow, deep breathing to reduce hyperventilation. Paper bags are no longer recommended due to hypoxia risk."
+            },
+            {
+                "id": 16,
+                "text": "Which is a sign of domestic violence?",
+                "options": [
+                    "Partner answers all questions for the client",
+                    "Client has a chronic illness",
+                    "Client is unemployed",
+                    "Client has children"
+                ],
+                "correctAnswer": 0,
+                "explanation": "Controlling behavior (partner answering for client, not allowing privacy) is a red flag for domestic violence."
+            },
+            {
+                "id": 17,
+                "text": "In the acceptance stage of grief, a client might say:",
+                "options": [
+                    "I can't believe this is real.",
+                    "Why is this happening to me?",
+                    "I'm ready to face what's ahead.",
+                    "If only I had done things differently."
+                ],
+                "correctAnswer": 2,
+                "explanation": "Acceptance involves coming to terms with reality and finding peace with the situation."
+            },
+            {
+                "id": 18,
+                "text": "A client with schizophrenia says 'The TV is sending me messages.' What is the therapeutic response?",
+                "options": [
+                    "That's not possible.",
+                    "I don't hear any messages, but I understand this is real to you.",
+                    "Let's turn off the TV.",
+                    "Why do you think that?"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Acknowledge the client's reality without reinforcing the delusion. Don't argue or agree with delusions."
+            },
+            {
+                "id": 19,
+                "text": "Which is a risk factor for suicide?",
+                "options": [
+                    "Recent marriage",
+                    "Previous suicide attempt",
+                    "Starting a new job",
+                    "Having young children"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Previous suicide attempt is the strongest predictor of future attempts. Other risks: depression, substance abuse, isolation, access to means."
+            },
+            {
+                "id": 20,
+                "text": "A nurse suspects a colleague is impaired by substances. What should the nurse do?",
+                "options": [
+                    "Confront the colleague privately",
+                    "Ignore it to avoid conflict",
+                    "Report to the nurse manager per facility policy",
+                    "Tell other staff members"
+                ],
+                "correctAnswer": 2,
+                "explanation": "Patient safety is priority. Report suspected impairment to the nurse manager or appropriate authority per facility protocol."
+            },
+            {
+                "id": 21,
+                "text": "Which communication technique involves restating the client's message?",
+                "options": [
+                    "Reflection",
+                    "Clarification",
+                    "Paraphrasing",
+                    "Summarizing"
+                ],
+                "correctAnswer": 2,
+                "explanation": "Paraphrasing restates the client's message in the nurse's own words to ensure understanding."
+            },
+            {
+                "id": 22,
+                "text": "A client with PTSD is experiencing a flashback. What is the priority intervention?",
+                "options": [
+                    "Leave the client alone",
+                    "Orient the client to the present",
+                    "Restrain the client",
+                    "Administer sedation"
+                ],
+                "correctAnswer": 1,
+                "explanation": "During flashbacks, orient the client to the present using grounding techniques (e.g., 'You are safe. You are in the hospital.')."
+            },
+            {
+                "id": 23,
+                "text": "Which is a sign of neglect in an elderly client?",
+                "options": [
+                    "Poor hygiene and malnutrition",
+                    "Dementia",
+                    "Arthritis",
+                    "Living alone"
+                ],
+                "correctAnswer": 0,
+                "explanation": "Poor hygiene, malnutrition, untreated medical conditions, and unsafe living conditions indicate neglect."
+            },
+            {
+                "id": 24,
+                "text": "A client says 'I feel like I'm going crazy.' What is the best response?",
+                "options": [
+                    "You're not crazy.",
+                    "Tell me what you mean by that.",
+                    "Everyone feels that way sometimes.",
+                    "You need to think positively."
+                ],
+                "correctAnswer": 1,
+                "explanation": "Clarification helps understand the client's meaning. Avoid false reassurance or dismissing feelings."
+            },
+            {
+                "id": 25,
+                "text": "Which is an appropriate intervention for a client with depression?",
+                "options": [
+                    "Encourage participation in activities",
+                    "Allow the client to sleep all day",
+                    "Tell the client to cheer up",
+                    "Isolate the client for rest"
+                ],
+                "correctAnswer": 0,
+                "explanation": "Encourage activity and socialization. Depression worsens with isolation and inactivity."
+            },
+            {
+                "id": 26,
+                "text": "A client with mania is pacing and talking rapidly. What is the priority intervention?",
+                "options": [
+                    "Engage in lengthy conversation",
+                    "Provide a quiet, low-stimulation environment",
+                    "Encourage group activities",
+                    "Ignore the behavior"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Reduce stimulation to decrease agitation. Use short, simple statements. Ensure safety."
+            },
+            {
+                "id": 27,
+                "text": "Which behavior suggests a therapeutic nurse-client relationship?",
+                "options": [
+                    "Sharing personal phone number",
+                    "Maintaining professional boundaries",
+                    "Becoming friends on social media",
+                    "Visiting the client at home after discharge"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Professional boundaries protect both nurse and client. Avoid dual relationships and maintain therapeutic focus."
+            },
+            {
+                "id": 28,
+                "text": "A client with anorexia nervosa is exercising excessively. What should the nurse do?",
+                "options": [
+                    "Allow exercise as a coping mechanism",
+                    "Set limits on exercise per treatment plan",
+                    "Encourage more exercise to build appetite",
+                    "Ignore the behavior"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Excessive exercise is a compensatory behavior in eating disorders. Set limits and monitor per treatment plan."
+            },
+            {
+                "id": 29,
+                "text": "Which is a therapeutic response to a client who is crying?",
+                "options": [
+                    "Don't cry, things will get better.",
+                    "Sit quietly with the client.",
+                    "Leave to give privacy.",
+                    "Change the subject."
+                ],
+                "correctAnswer": 1,
+                "explanation": "Therapeutic presence (sitting quietly, offering tissues) shows support without interrupting the emotional release."
+            },
+            {
+                "id": 30,
+                "text": "A client with alcohol withdrawal is experiencing hallucinations. What is the priority?",
+                "options": [
+                    "Argue that hallucinations aren't real",
+                    "Ensure safety and administer prescribed medications",
+                    "Restrain the client",
+                    "Leave the client alone"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Alcohol withdrawal can cause delirium tremens with hallucinations. Ensure safety, administer benzodiazepines as ordered, monitor vital signs."
+            },
+            {
+                "id": 31,
+                "text": "Which statement indicates a client is in the depression stage of grief?",
+                "options": [
+                    "I can't believe this is happening.",
+                    "I just want to be left alone. Nothing matters anymore.",
+                    "If I change my lifestyle, maybe I'll recover.",
+                    "I'm ready to move forward."
+                ],
+                "correctAnswer": 1,
+                "explanation": "Depression stage involves sadness, withdrawal, and feelings of hopelessness about the loss."
+            },
+            {
+                "id": 32,
+                "text": "A client with OCD is washing hands repeatedly. What is the appropriate intervention?",
+                "options": [
+                    "Stop the behavior immediately",
+                    "Allow the behavior initially, then gradually set limits",
+                    "Ignore the behavior completely",
+                    "Punish the behavior"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Don't abruptly stop compulsions (increases anxiety). Gradually set limits while teaching alternative coping strategies."
+            },
+            {
+                "id": 33,
+                "text": "Which is a priority when caring for a client in restraints?",
+                "options": [
+                    "Check circulation every 2 hours",
+                    "Leave restraints on continuously for 8 hours",
+                    "Document only at the end of shift",
+                    "Keep the client sedated"
+                ],
+                "correctAnswer": 0,
+                "explanation": "Monitor circulation, skin integrity, and vital signs every 15-30 minutes. Release restraints every 2 hours for ROM and toileting."
+            },
+            {
+                "id": 34,
+                "text": "A client says 'I hear voices telling me to hurt myself.' What is the priority action?",
+                "options": [
+                    "Ask what the voices are saying",
+                    "Ensure immediate safety and stay with the client",
+                    "Tell the client the voices aren't real",
+                    "Document and continue with care"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Command hallucinations to harm self or others require immediate safety measures. Stay with client, remove dangerous objects, notify provider."
+            },
+            {
+                "id": 35,
+                "text": "Which intervention promotes a therapeutic environment for mental health clients?",
+                "options": [
+                    "Strict rules with no flexibility",
+                    "Consistent routine and clear expectations",
+                    "Allowing clients to do whatever they want",
+                    "Isolating clients from each other"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Structure, consistency, and clear expectations provide safety and reduce anxiety in therapeutic environments."
             }
         ]
     },

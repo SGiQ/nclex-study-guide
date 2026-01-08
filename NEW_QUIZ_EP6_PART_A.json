@@ -1,0 +1,370 @@
+{
+    "id": 106,
+    "episodeId": 6,
+    "title": "Basic Care & Comfort - Part A",
+    "description": "Mobility, Rehab Settings, Assistive Devices, Gait Patterns",
+    "questionCount": 30,
+    "color": "from-teal-600 to-cyan-800",
+    "questions": [
+        {
+            "id": 1,
+            "text": "Which rehabilitation setting is appropriate for a patient on mechanical ventilation needing complex wound care?",
+            "options": [
+                "Subacute Care",
+                "Long Term Acute Care Hospital (LTACH)",
+                "Outpatient Rehabilitation",
+                "Assisted Living"
+            ],
+            "correctAnswer": 1,
+            "explanation": "LTACHs are for medically fragile patients who still need intensive support like vents or complex wound care, but are transitioning from the ICU/Acute care."
+        },
+        {
+            "id": 2,
+            "text": "What is the primary difference between Physical Therapy (PT) and Occupational Therapy (OT)?",
+            "options": [
+                "PT is for legs, OT is for arms",
+                "PT focuses on gross motor/mobility (walking), OT focuses on ADLs (bathing, dressing, living skills)",
+                "PT is for hospital, OT is for home",
+                "There is no difference"
+            ],
+            "correctAnswer": 1,
+            "explanation": "PT targets big movements (mobility, ambulation), while OT targets 'occupations' of daily life (ADLs/IADLs like dressing, cooking)."
+        },
+        {
+            "id": 3,
+            "text": "When fitting a cane or crutches, where should the top of the device line up?",
+            "options": [
+                "The hip bone",
+                "The patient's wrist crease when standing straight",
+                "The armpit",
+                "The elbow"
+            ],
+            "correctAnswer": 1,
+            "explanation": "The wrist crease is the correct landmark. This ensures a 15-degree elbow flexion for optimal leverage and stability."
+        },
+        {
+            "id": 4,
+            "text": "What does the 'Four-Point Gait' pattern look like?",
+            "options": [
+                "Move both crutches then both legs",
+                "Right crutch, Left foot, Left crutch, Right foot",
+                "Move one crutch and opposite foot together",
+                "Swing through"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Four-point gait is slow but stable: Right crutch, Left foot, Left crutch, Right foot. Used for patients who can bear weight on both legs."
+        },
+        {
+            "id": 5,
+            "text": "Which gait pattern mimics normal walking rhythm?",
+            "options": [
+                "Three-point",
+                "Two-point gait (Crutch and opposite foot move together)",
+                "Four-point",
+                "Swing-to"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Two-point gait speeds things up by moving the crutch and opposite leg simultaneously, mimicking a natural arm-swing walking rhythm."
+        },
+        {
+            "id": 6,
+            "text": "A patient cannot bear weight on their left leg. Which gait pattern is appropriate?",
+            "options": [
+                "Four-point",
+                "Three-point gait",
+                "Two-point",
+                "Swing-through"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Three-point gait is for non-weight bearing on one leg. Both crutches and the bad leg move forward, then the good leg follows."
+        },
+        {
+            "id": 7,
+            "text": "What is the rule for going UP stairs with crutches?",
+            "options": [
+                "Up with the bad",
+                "Up with the GOOD leg first",
+                "Both legs together",
+                "Crutches first"
+            ],
+            "correctAnswer": 1,
+            "explanation": "'Up with the Good, Down with the Bad.' The good leg goes up first to lift the body."
+        },
+        {
+            "id": 8,
+            "text": "What is 'Scheduled Voiding' in bladder training?",
+            "options": [
+                "Going when the patient feels the urge",
+                "Toileting at fixed time intervals (e.g., every 3 hours) regardless of urge",
+                "Using a catheter",
+                "Asking the patient if they are dry"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Scheduled voiding is strictly clock-based to prevent accidents by emptying the bladder before it gets too full."
+        },
+        {
+            "id": 9,
+            "text": "What is 'The Knack' for stress incontinence?",
+            "options": [
+                "Identifying the bathroom location",
+                "Consciously squeezing pelvic floor muscles BEFORE coughing or sneezing",
+                "Crossing legs",
+                "Holding breath"
+            ],
+            "correctAnswer": 1,
+            "explanation": "The Knack is a pre-emptive pelvic floor contraction (Kegel) right before increasing abdominal pressure (cough/sneeze) to prevent leakage."
+        },
+        {
+            "id": 10,
+            "text": "Which type of fiber 'slows things down' by forming a gel?",
+            "options": [
+                "Insoluble fiber",
+                "Soluble fiber (Oats, Beans, Apples)",
+                "Protein",
+                "Carbohydrates"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Soluble fiber dissolves in water to form a gel, which can help manage diarrhea and regulate transit. Insoluble fiber adds bulk."
+        },
+        {
+            "id": 11,
+            "text": "What is the maximum angle for the head of the bed to prevent shear?",
+            "options": [
+                "45 degrees",
+                "30 degrees",
+                "90 degrees",
+                "Flat"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Keep the HOB at 30 degrees or less when possible to prevent gravity from pulling the skeleton down while skin sticks to sheets (shear)."
+        },
+        {
+            "id": 12,
+            "text": "How often should a patient be repositioned in a CHAIR?",
+            "options": [
+                "Every 2 hours",
+                "Every 15 minutes",
+                "Every hour",
+                "Every 30 minutes"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Chair sitting puts intense pressure on ischial tuberosities. Repositioning (weight shifting) is required every 15 minutes."
+        },
+        {
+            "id": 13,
+            "text": "What defines a Stage 1 Pressure Injury?",
+            "options": [
+                "Open blister",
+                "Non-blanchable erythema (redness) of intact skin",
+                "Exposed fat",
+                "Deep purple bruise"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Stage 1 is intact skin with redness that does not turn white (blanch) when pressed. It's the warning signal."
+        },
+        {
+            "id": 14,
+            "text": "What does a 'Suspected Deep Tissue Injury' look like?",
+            "options": [
+                "Yellow slough",
+                "Deep purple or maroon area of intact skin",
+                "Red blister",
+                "Black scab"
+            ],
+            "correctAnswer": 1,
+            "explanation": "DTI appears as a purple/maroon bruise on intact skin, indicating serious damage to underlying soft tissue from pressure/shear."
+        },
+        {
+            "id": 15,
+            "text": "What prevents staging a pressure ulcer?",
+            "options": [
+                "It is too small",
+                "The wound bed is covered by slough (yellow) or eschar (black)",
+                "It is bleeding",
+                "It is too deep"
+            ],
+            "correctAnswer": 1,
+            "explanation": "If you cannot see the bottom of the wound due to necrotic tissue (slough/eschar), it is Unstageable."
+        },
+        {
+            "id": 16,
+            "text": "What is the 30-degree lateral position?",
+            "options": [
+                "Lying completely on the side (90 degrees)",
+                "Tilted 30 degrees to the side, supported by pillows, to stay off the sacrum AND hip bone",
+                "Lying flat",
+                "Sitting upright"
+            ],
+            "correctAnswer": 1,
+            "explanation": "This position offloads the sacrum without putting direct pressure on the greater trochanter (hip bone), unlike a full 90-degree turn."
+        },
+        {
+            "id": 17,
+            "text": "How does TENS therapy work to relieve pain?",
+            "options": [
+                "It freezes the nerve",
+                "It stimulates large nerve fibers to 'close the gate' on pain signals and releases endorphins",
+                "It numbs the skin chemically",
+                "It uses heat"
+            ],
+            "correctAnswer": 1,
+            "explanation": "TENS uses electrical impulses to block pain transmission (Gate Control Theory) and stimulate natural endorphins."
+        },
+        {
+            "id": 18,
+            "text": "Why is St. John's Wort a safety concern?",
+            "options": [
+                "It causes drowsiness",
+                "It interacts with many drugs (anticoagulants, birth control) making them ineffective",
+                "It raises blood pressure",
+                "It causes addiction"
+            ],
+            "correctAnswer": 1,
+            "explanation": "St. John's Wort induces liver enzymes that metabolize drugs faster, reducing the effectiveness of critical meds like Warfarin and contraceptives."
+        },
+        {
+            "id": 19,
+            "text": "What is Algor Mortis?",
+            "options": [
+                "Stiffening of muscles",
+                "Cooling of the body after death",
+                "pooling of blood",
+                "Decomposition"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Algor Mortis is the cooling of the body (~1 degree C per hour) until it matches room temperature."
+        },
+        {
+            "id": 20,
+            "text": "What is Livor Mortis?",
+            "options": [
+                "Stiffening",
+                "Purple-red discoloration from blood settling (gravity)",
+                "Cooling",
+                "Pale skin"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Livor Mortis is the pooling of blood in dependent areas, causing discoloration. It becomes fixed after ~6 hours."
+        },
+        {
+            "id": 21,
+            "text": "When does Rigor Mortis typically start?",
+            "options": [
+                "Immediately",
+                "2-4 hours after death, starting in small muscles",
+                "24 hours after death",
+                "1 week after death"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Rigor (stiffening) begins in small muscles (jaw/neck) at 2-4 hours, peaks at 8-10 hours."
+        },
+        {
+            "id": 22,
+            "text": "What are the criteria for death pronouncement?",
+            "options": [
+                "Cold skin",
+                "No pulse or respirations for 60 seconds, no pupil response, no reflexes",
+                "No movement for 10 seconds",
+                "Flat ECG only"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Assessment requires checking for absence of pulse and breathing for a full 60 seconds, plus lack of responsiveness/reflexes."
+        },
+        {
+            "id": 23,
+            "text": "How should a body be positioned post-mortem?",
+            "options": [
+                "Face down",
+                "Supine with head slightly elevated (prevent discoloration), eyes closed, dentures in",
+                "Side lying",
+                "Sitting up"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Position naturally, head elevated to prevent pooling in face, close eyes, insert dentures (if policy allows/possible) for dignity."
+        },
+        {
+            "id": 24,
+            "text": "What is prompt voiding used for?",
+            "options": [
+                "Infants",
+                "Patients with cognitive impairment",
+                "Surgical patients",
+                "Spinal cord injury"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Prompted voiding works well for cognitive impairment: regular checks + asking 'Are you dry?' + positive reinforcement."
+        },
+        {
+            "id": 25,
+            "text": "What causes shearing force?",
+            "options": [
+                "Rubbing skin on sheets",
+                "Skeleton sliding down while skin stays stuck to surface",
+                " Blunt trauma",
+                "Chemical burns"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Shear is the mechanical force of parallel opposites: bone moves down (gravity), skin stays put (friction), tearing deep vessels."
+        },
+        {
+            "id": 26,
+            "text": "Which heat therapy effect promotes healing?",
+            "options": [
+                "Vasoconstriction",
+                "Vasodilation (increased blood flow)",
+                "Numbing",
+                "Reduced metabolism"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Heat causes vasodilation, bringing oxygen, nutrients, and immune cells to the area to speed healing."
+        },
+        {
+            "id": 27,
+            "text": "What is the purpose of visualization in pain control?",
+            "options": [
+                "To sleep",
+                "To distract the brain with sensory details, overriding pain signals",
+                "To cure the cause",
+                "To please the nurse"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Detailed guided imagery creates a competing sensory input that can block or dampen pain perception."
+        },
+        {
+            "id": 28,
+            "text": "What is a 'Subacute' care setting?",
+            "options": [
+                "ICU",
+                "A bridge between hospital and home - skilled nursing but less intensive than LTACH",
+                "Hospice",
+                "Emergency Room"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Subacute care is for stable patients who still need daily skilled nursing/therapy but not the high-tech support of LTACH."
+        },
+        {
+            "id": 29,
+            "text": "What does a Stage 2 pressure injury involve?",
+            "options": [
+                "Intact skin",
+                "Partial thickness loss (blister or shallow crater)",
+                "Muscle exposure",
+                "Bone exposure"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Stage 2 involves breaks in the skin (epidermis/dermis) presenting as a blister, abrasion, or shallow crater."
+        },
+        {
+            "id": 30,
+            "text": "What is the nurse's role when family is viewing the body?",
+            "options": [
+                "Leave them alone immediately",
+                "Prepare them for what to expect, provide privacy, be present for support",
+                "Rushing them",
+                "Explaining medical details"
+            ],
+            "correctAnswer": 1,
+            "explanation": "The nurse facilitates the process: preparing the body/room, explaining (simply) what they will see, and offering quiet support."
+        }
+    ]
+}

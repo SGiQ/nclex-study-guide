@@ -1,0 +1,250 @@
+{
+    "id": 107,
+    "episodeId": 6,
+    "title": "Basic Care & Comfort - Part B",
+    "description": "Skin Integrity, Pain Management, End of Life Care Scenarios",
+    "questionCount": 20,
+    "color": "from-teal-600 to-cyan-800",
+    "questions": [
+        {
+            "id": 1,
+            "text": "What characterizes a Stage 3 pressure injury?",
+            "options": [
+                "Exposed bone",
+                "Full thickness skin loss involving damage to subcutaneous tissue (fat visible)",
+                "Intact skin with redness",
+                "Blister only"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Stage 3 extends into the subcutaneous tissue (fat is visible), but does NOT expose muscle, tendon, or bone (which would be Stage 4)."
+        },
+        {
+            "id": 2,
+            "text": "Correctly identifying a Stage 4 pressure injury requires seeing:",
+            "options": [
+                "Fat",
+                "Exposed muscle, tendon, or bone",
+                "A blister",
+                "Slough"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Stage 4 is the deepest injury, involving full-thickness loss with exposed support structures like muscle, tendon, or bone."
+        },
+        {
+            "id": 3,
+            "text": "What is the primary physiologic effect of Cold therapy?",
+            "options": [
+                "Vasodilation",
+                "Vasoconstriction (decreased blood flow), reduced inflammation, numbing",
+                "Increased metabolism",
+                "Muscle relaxation"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Cold causes vasoconstriction, which limits swelling/inflammation and creates a local anesthetic (numbing) effect."
+        },
+        {
+            "id": 4,
+            "text": "How long should heat or cold therapy generally be applied to avoid tissue damage?",
+            "options": [
+                "1 hour",
+                "15-20 minutes",
+                "All night",
+                "5 seconds"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Limit application to 15-20 minutes to prevent rebound effects (vasodilation/constriction reversal) or tissue injury/burns."
+        },
+        {
+            "id": 5,
+            "text": "For a patient with cognitive impairment preventing bladder control, which intervention is best?",
+            "options": [
+                "Indwelling catheter",
+                "Prompted Voiding (timed checks + positive reinforcement)",
+                "Diapers only",
+                "Fluid restriction"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Prompted voiding is the evidence-based behavioral intervention for cognitive impairment, promoting continence creates dignity."
+        },
+        {
+            "id": 6,
+            "text": "When helping a patient with proper crutch fit stand up, the elbows should be flexed at:",
+            "options": [
+                "45 degrees",
+                "15-30 degrees",
+                "0 degrees (straight)",
+                "90 degrees"
+            ],
+            "correctAnswer": 1,
+            "explanation": "A 15-30 degree bend allows the arm muscles to effectively push down and lift the body weight during ambulation."
+        },
+        {
+            "id": 7,
+            "text": "A patient asks why they need to visualize 'smelling the ocean' during guided imagery. You explain:",
+            "options": [
+                "It helps memory",
+                "Detailed sensory input engages the brain, distracting it from processing pain signals",
+                "It's just for fun",
+                "Smells are powerful"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Multisensory detail (sight, sound, smell, feel) overloads the sensory pathways, competing with and dampening pain transmission."
+        },
+        {
+            "id": 8,
+            "text": "What differentiates Friction from Shear?",
+            "options": [
+                "Friction is deeper",
+                "Friction is surface rubbing (abrasion); Shear is deep tissue tearing from bone/skin moving opposite directions",
+                "Shear is a burn",
+                "They are the same"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Friction damages the surface (epidermis). Shear damages deep vessels at the bone interface, leading to deep tissue injury (DTI)."
+        },
+        {
+            "id": 9,
+            "text": "In the 'Gate Control Theory' of pain, what does TENS do?",
+            "options": [
+                "Opens the gate",
+                "Stimulates large non-pain fibers to 'close the gate', blocking pain signals to the brain",
+                "Numbs the brain",
+                "Removes the cause"
+            ],
+            "correctAnswer": 1,
+            "explanation": "TENS stimulates large A-beta fibers which inhibit (gate) the transmission of pain signals from smaller C-fibers to the brain."
+        },
+        {
+            "id": 10,
+            "text": "Before starting a post-mortem bed bath, the nurse should:",
+            "options": [
+                "Call the funeral home",
+                "Verify if the family has specific cultural/religious rituals for handling the body",
+                "Remove all lines immediately",
+                "Lock the room"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Cultural/religious needs take priority. Some cultures prohibit non-family touching the body or have specific washing rituals."
+        },
+        {
+            "id": 11,
+            "text": "How does 'Habit Training' differ from 'Scheduled Voiding'?",
+            "options": [
+                "It uses a catheter",
+                "It is based on the patient's OWN natural pattern (determined by logging) rather than a fixed arbitrary interval",
+                "It is random",
+                "It only works at night"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Habit training is personalized based on voiding logs, whereas scheduled voiding is acceptable for those who can't report but is rigid."
+        },
+        {
+            "id": 12,
+            "text": "Why are 'donuts' (ring cushions) contraindicated for pressure ulcer prevention?",
+            "options": [
+                "They are too expensive",
+                "They create a ring of high pressure that restricts blood flow to the center area",
+                "They are uncomfortable",
+                "Patients fall off"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Donut cushions cause venous congestion and ischemia in the center circle, worsening pressure risks rather than helping."
+        },
+        {
+            "id": 13,
+            "text": "What indicates a patient is using the 'Three-Point Gait' correctly?",
+            "options": [
+                "They hop",
+                "They advance both crutches and the weak leg together, then bring the strong leg forward",
+                "They move opposite arm/leg",
+                "They drag their feet"
+            ],
+            "correctAnswer": 1,
+            "explanation": "The signature of 3-point gait is moving the assistive device and the injured limb simultaneously to protect it from weight-bearing."
+        },
+        {
+            "id": 14,
+            "text": "When is an autopsy typically mandatory?",
+            "options": [
+                "Always",
+                "Unattended death, suspicious circumstances, or death within 24 hours of hospital admission",
+                "If family requests",
+                "For elderly patients"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Medical Examiner cases (homicide, suicide, accident, death <24hrs of admission) require autopsy by law; tubes/lines must remain in place."
+        },
+        {
+            "id": 15,
+            "text": "Why do we elevate the head slightly post-mortem?",
+            "options": [
+                "For comfort",
+                "To prevent blood from pooling in the face (discoloration)",
+                "To help breathing",
+                "It looks better"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Preventing Livor Mortis (discoloration) in visible areas like the face is a key part of maintaining dignity for viewing."
+        },
+        {
+            "id": 16,
+            "text": "What is the specific danger of herbal supplements like Ginkgo Biloba or Garlic?",
+            "options": [
+                "They smell bad",
+                "Increased bleeding risk (antiplatelet effects)",
+                "Weight gain",
+                "Hair loss"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Many 'G' herbs (Garlic, Ginger, Ginkgo, Ginseng) increase bleeding risk, which is critical to know before surgery."
+        },
+        {
+            "id": 17,
+            "text": "Which patient requires a 'mechanical lift' (Hoyer)?",
+            "options": [
+                "Patient can stand but is weak",
+                "Patient cannot bear weight and is unable to assist with transfer",
+                "Patient is a child",
+                "Patient works in OT"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Zero-lift policies protect staff. If a patient cannot bear weight or assist, a full mechanical lift is required to prevent back injury."
+        },
+        {
+            "id": 18,
+            "text": "What is the correct way to descend stairs with a cane?",
+            "options": [
+                "Cane and strong leg first",
+                "Cane and WEAK leg go down first",
+                "Strong leg helps lowers the body",
+                "Jump"
+            ],
+            "correctAnswer": 1,
+            "explanation": "The cane goes down with the weak leg to provide support, while the strong leg bends to lower the body weight securely."
+        },
+        {
+            "id": 19,
+            "text": "For a client with Right-sided weakness (stroke), where should the cane be held?",
+            "options": [
+                "Right side (weak side)",
+                "Left side (strong side)",
+                "Both hands",
+                "Doesn't matter"
+            ],
+            "correctAnswer": 1,
+            "explanation": "The cane is always held on the STRONG side (Left) to provide a wide base of support for the weak side (Right)."
+        },
+        {
+            "id": 20,
+            "text": "What is the main goal of Palliative Care vs Hospice?",
+            "options": [
+                "No difference",
+                "Palliative can occur alongside curative treatment; Hospice implies <6 months left and stopping curative treatment",
+                "Hospice is only for cancer",
+                "Palliative is only for elderly"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Palliative care focuses on symptom relief at ANY stage of illness. Hospice is a specific Medicare benefit for the end of life (<6mo) without curative intent."
+        }
+    ]
+}

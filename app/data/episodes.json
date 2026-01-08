@@ -56,13 +56,13 @@
   },
   {
     "id": 6,
-    "title": "Psychosocial Integrity",
-    "description": "Mental Health Concepts, Therapeutic Communication, Disorders",
-    "content": "Mental Health Concepts\nTherapeutic Communication\nDefense Mechanisms\nAnxiety Disorders\nMood Disorders\nPersonality Disorders\nSchizophrenia\nEating Disorders & Substance Abuse\nPsychopharmacology",
+    "title": "Basic Care & Comfort",
+    "description": "Mobility, Skin Integrity, Elimination, Pain Mgt, End of Life",
+    "content": "Mobility & Rehab Settings (LTACH, Subacute)\\nAssistive Devices & Gait Patterns\\nBladder & Bowel Elimination Training\\nSkin Integrity & Pressure Injuries\\nPain Management (Non-Pharm)\\nComplementary Therapies\\nPost-Mortem Care",
     "pages": "116-145",
     "duration": 980,
     "audioUrl": "/uploads/episode-6.mp3",
-    "category": "Psychosocial",
+    "category": "Basic Care",
     "order": 6
   },
   {

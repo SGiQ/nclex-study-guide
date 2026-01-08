@@ -155,24 +155,24 @@
   },
   {
     "id": 15,
-    "title": "Review & Final Tips",
-    "description": "Comprehensive Review, Final Tips, Q&A Strategy",
-    "content": "Comprehensive Review of Key Concepts\nPrioritization & Delegation Strategy\nFinal Tips for Test Day\nManaging Test Anxiety",
-    "pages": "341-350",
-    "duration": 600,
+    "title": "Practice Test Strategy",
+    "description": "Deep Dive into Practice Test 1: Case Studies, Prioritization, Procedures, Math",
+    "content": "Case Study 1: Small Bowel Obstruction (Clustering Technique)\\nCase Study 2: Preeclampsia/Mag Toxicity\\nCase Study 3: Acute Delirium & Safety\\nProcedures: NG Tube, Prosthetic Eye\\nMath: Dosage Calc & Conversions",
+    "pages": "341-360",
+    "duration": 780,
     "audioUrl": "/uploads/episode-15.mp3",
     "category": "Review",
     "order": 15
   },
   {
     "id": 16,
-    "title": "Bonus: Audio Mnemonics",
-    "description": "Key Mnemonics for Rapid Recall",
-    "content": "Pharmacology Mnemonics\nLab Value Mnemonics\nInfection Control Mnemonics",
-    "pages": "Bonus",
-    "duration": 480,
+    "title": "Final Readiness & Mental Strategy",
+    "description": "Managing Test Anxiety, Peak Performance, High-Yield Fact Review",
+    "content": "Test Anxiety: Causes & Management (Sleep, Nutrition, Mindset)\\nStudy Strategy: Pacing, Analyzing Errors (Knowledge vs Application)\\nHigh Yield Review: Delirium Safety, Infection Control (Rubella/Droplet), Chest Tubes, Diet Math",
+    "pages": "361-380",
+    "duration": 720,
     "audioUrl": "/uploads/episode-16.mp3",
-    "category": "Bonus",
+    "category": "Review",
     "order": 16
   }
 ]

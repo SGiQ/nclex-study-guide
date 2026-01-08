@@ -34,10 +34,10 @@
   },
   {
     "id": 4,
-    "title": "Health Promotion & Maintenance Part 1",
+    "title": "Health Promotion & Maintenance",
     "description": "Pediatrics, Growth & Development, Immunizations, Newborn Care",
-    "content": "Data Collection\nPhysical Assessment & Order of Assessment\nPediatrics: Growth and Development\nPediatrics: Immunization Schedule\nPediatrics Highlights",
-    "pages": "66-88",
+    "content": "Growth & Development Stages (Piaget, Erikson)\\nPediatric Milestones\\nImmunization Schedules\\nNewborn Assessment & Care",
+    "pages": "61-80",
     "duration": 1100,
     "audioUrl": "/uploads/episode-4.mp3",
     "category": "Health Promotion",

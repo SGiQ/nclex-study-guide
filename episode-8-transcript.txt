@@ -1,0 +1,218 @@
+[0:00] Speaker A: Welcome back to the Deep Dive. Today we are tackling a massive pharmacological stack.
+
+[0:05] Speaker B: We really are.
+
+[0:05] Speaker A: We're diving deep into some incredibly dense but essential how drugs settle your stomach, the complex mechanics of pharmacologic pain management, how psychiatric medications change brain chemistry, and critically, how all of this shifts when we're talking about treating older adults.
+
+[0:23] Speaker B: That's right. And this dive is challenging because we're crossing major therapeutic boundaries. The goal for you is to synthesize the critical information, not just the intended uses, but their specific mechanisms and I think most importantly, the key adverse effects.
+
+[0:38] Speaker A: The things that demand the most attention.
+
+[0:40] Speaker B: Exactly. For patient safety, for safe administration.
+
+[0:43] Speaker A: Okay, let's unpack this then. Starting with section one, gastrointestinal pharmacology. When we talk about reducing stomach acid, we have, well, two primary lines of defense.
+
+[0:53] Speaker B: Right.
+
+[0:53] Speaker A: And it helps to think of them not just by name, but by how dramatically they interrupt the acid production process. I'm thinking about H2 receptor antagonists and proton pump inhibitors, or PPIs.
+
+[1:06] Speaker B: Yeah. And they work on very different timelines through different means. H2 receptor antagonists, like the older cimetidine or the more common famotidine, they work by blocking the histamine 2 receptors on the parietal cells. On the parietal cells. Right. Histamine normally signals those cells to produce acid. So blocking the receptor is like. It's like turning the volume knob down on acid production.
+
+[1:29] Speaker A: Oh, a volume knob. I like that.
+
+[1:30] Speaker B: And a quick historical note from the material. Ranitidine, which was a big one in.
+
+[1:35] Speaker A: This class, was discontinued due to NDMA contamination concerns.
+
+[1:39] Speaker B: Yeah, and cimetidine is still relevant because it's a big culprit in drug interactions. It really messes with liver enzymes.
+
+[1:46] Speaker A: So the H2 blockers are the volume knobs, but the PPIs, I'm thinking drugs like omeprazole and lanceprazole. That feels more like flipping the main power switch off.
+
+[1:56] Speaker B: That's a perfect way to describe it. They directly inhibit the actual enzyme, the proton pump that produces the acid. They are incredibly effective for healing ulcers, for managing severe gerd, but they're not without serious considerations. Not at all. I mean, while common side effects are GI upset, maybe a headache or a rash, one long term concern your sources highlight is, is the potential increased risk of fracture.
+
+[2:21] Speaker A: A fracture from a stomach pill.
+
+[2:22] Speaker B: It's thought to be related to interference with calcium absorption over time. And that is exactly the kind of long term risk that demands regular review.
+
+[2:30] Speaker A: I appreciate that distinction. Speaking of quick relief, let's move to antacids. These are the fastest route because they just neutralize the acid that's already there.
+
+[2:38] Speaker B: And here we see a fantastic example of therapeutic balancing. So aluminum hydroxide and antacid. It's known for causing constipation. Right. But magnesium hydroxide, on the other hand, causes diarrhea. So what do many over the counter formulas do? They combine them, they pair them to get a more neutral effect on the bowel. But a critical caution here is for patients with renal impairment, magnesium products have to be used carefully because decreased kidney function can lead to magnesium accumulation.
+
+[3:08] Speaker A: And then you have specialized combos like Alka Seltzer, which throws in sodium bicarbonate and aspirin for pain and citric acid. Now the acid is under control. The next big issue is movement motility.
+
+[3:22] Speaker B: Right. How do we treat issues where the stomach is emptying too slowly or someone struggling with severe nausea?
+
+[3:27] Speaker A: Exactly.
+
+[3:28] Speaker B: For that, we use agents like midoclopramide, which promotes contraction in the GI tract. It's used for gard, or diabetic gastric paresis. For acute nausea and vomiting, especially from something harsh like chemotherapy, we use serotonin antagonists like granistron.
+
+[3:44] Speaker A: Okay, before we leave the GI system, let's quickly touch on antilipids. And then the ultimate issue of movement laxatives.
+
+[3:50] Speaker B: Briefly, statins, which are HMG, CoA reductase inhibitors like atorvastatin, are crucial for lowering cholesterol. Niacin is another one, though. Patient tolerance can be poor.
+
+[4:01] Speaker A: That's the one that causes that intense flushing, right?
+
+[4:03] Speaker B: Intense flushing. And sometimes it can elevate uric acid and lead to gout. Now let's talk about moving the bowel. Because not all laxatives are created equal, classifying them really helps you understand their impact.
+
+[4:14] Speaker A: Right. You need to know if you're getting, like, gentle bulk or a literal push.
+
+[4:18] Speaker B: Precisely. We can group them. Bulk formers like psyllium or the gentleist. They just add fiber and water lubricants like mineral oil. They coat the stool. Stool softeners or emollients like docusate reduce surface tension.
+
+[4:33] Speaker A: I think that's easier to pass.
+
+[4:35] Speaker B: Then you have the saline or hyperosmolar agents. These are fascinating. They draw water into the colon via osmosis. But there's a serious risk of dependence with this group if they're overused.
+
+[4:46] Speaker A: And finally, the heavy hitters, the stimulants.
+
+[4:49] Speaker B: Like Dulcolax, they increase intestinal motility directly by irritating the intestinal wall. They literally give the bowel a push. Okay. That's our deep dive on the GI tract. Now we have to transition to section two pharmacologic pain management. A field that has become incredibly structured.
+
+[5:06] Speaker A: Yeah. And what's fascinating here is how modern pain management is often framed by this standard, highly effective protocol, the three step WHO pain ladder.
+
+[5:16] Speaker B: And it provides a clear structure for treating pain progressively. It's useful for both adults and kids.
+
+[5:21] Speaker A: It brings clarity. So step one handles mild pain with non opioids. Step two escalates for mild to moderate pain by adding a mild opioid right.
+
+[5:30] Speaker B: On top of the non opioid.
+
+[5:31] Speaker A: And step three is for moderate to severe pain using strong opioids plus what they call adjuvant medications.
+
+[5:38] Speaker B: So starting with step one, non opioids, Acetaminophen is often the backbone for long term pain control, but we must always be vigilant about liver and kidney function, especially with high doses.
+
+[5:49] Speaker A: And then we have the NSAIDs, the nonsteroidal anti inflammatory drugs like ibuprofen and naproxen. I know they inhibit COX enzymes, but let's talk about why that mechanism translates directly into risk.
+
+[6:01] Speaker B: This is where understanding the system is so crucial. Cyclooxygenase, or COX, it comes in two main flavors, COX1 and KOX2.
+
+[6:09] Speaker A: Okay.
+
+[6:09] Speaker B: COX1 enzymes are responsible for the protective prostaglandins, the ones that protect your stomach lining and help with platelet aggregation. So if you inhibit COX1, you get.
+
+[6:18] Speaker A: GI bleeding and COX2.
+
+[6:19] Speaker B: COX2 enzymes are primarily responsible for the inflammatory response.
+
+[6:22] Speaker A: Okay, here's where it gets really interesting. With chronic use, if we shut down the pain and inflammation from COX2, but we do it non selectively or for a long time.
+
+[6:33] Speaker B: That's when you run into the systemic issues. The material highlights that chronic NSAID use, specifically over 18 months, is associated with increased cardiovascular risk.
+
+[6:43] Speaker A: How so?
+
+[6:44] Speaker B: If you inhibit COX2, you alter the balance of prothrombotic and antithrombotic signals in your body. It can tip the scales toward clot formation, increasing the risk of a heart attack or stroke.
+
+[6:56] Speaker A: That's a huge trade off for pain relief is. Before we get to opioids, we should briefly touch on local anesthetics.
+
+[7:02] Speaker B: Right. They stop nerve conduction locally. They block nerve function in a defined area. This is used in surgical contexts like regional blocks or topically. For example, EMLA cream. It's a combination anesthetic used before IV starts in kids, but you have to apply it a full one to two hours before.
+
+[7:17] Speaker A: So it has time to work.
+
+[7:18] Speaker B: Exactly.
+
+[7:19] Speaker A: Now we step up to the Opioids for chronic pain. The guidance is specific. Use long acting formulations on a scheduled basis. Short acting meds are reserved only for breakthrough pain.
+
+[7:30] Speaker B: And the systemic side effects are significant. When opioids activate those receptors, they depress the central nervous system. That means a real risk of respiratory depression and sedation.
+
+[7:40] Speaker A: And the GI tract?
+
+[7:42] Speaker B: Oh, they severely slow the GI tract, leading to profound constipation, which can be life threatening. Cardiovascularly, they can cause bradycardia and hypotension.
+
+[7:52] Speaker A: And there's huge variety in this class. Fentanyl, when delivered orally, has an incredibly fast onset relief in about five minutes, but it only lasts a couple of hours.
+
+[8:02] Speaker B: Contrast that with methadone. It has a notoriously long and variable half life, which makes it really challenging for chronic pain. That long half life though, is what makes it useful in addiction detox programs.
+
+[8:13] Speaker A: And you have to know what kind of breakthrough pain you're treating.
+
+[8:15] Speaker B: You do. It comes in three Incident pain, which is predictable like from a dressing change. Spontaneous pain, which is unpredictable, and end of dose failure when the scheduled medication just wears off too early.
+
+[8:28] Speaker A: And what about that specialized population with neuropathic pain, that nerve damage, pain that doesn't always respond to opioids?
+
+[8:34] Speaker B: For that we turn to adjuvants. These are drugs not typically classified as pain relievers, but which work on nerve signaling. Key examples are anticonvulsants like gabapentin and certain antidepressants like duloxetine.
+
+[8:48] Speaker A: Finally, especially in end of life care, clinicians have to distinguish between addiction and. And dependence.
+
+[8:54] Speaker B: We must. Tolerance is needing more drug for the same effect. Physical dependence means stopping will cause withdrawal. But the crucial distinction is pseudo addiction.
+
+[9:04] Speaker A: What's that?
+
+[9:05] Speaker B: This is drug seeking behavior like demanding pain meds aggressively, which is actually caused by the undertreatment of their pain. It's often mistaken for true addiction. Recognizing that difference is paramount to ethical care.
+
+[9:17] Speaker A: That distinction provides a huge amount of context. Let's shift gears completely now into section three, psychosocial pharmacology, where the side effect profile often dictates the entire treatment.
+
+[9:27] Speaker B: Antipsychotics are a perfect example of this. We have two main generations and each one trades one severe risk for another. The first generation, or typicals like haloperidol, have a very high risk of extrapyramidal effects or eps.
+
+[9:41] Speaker A: And eps sounds frightening because it is. We're talking about movement disorders. This includes akathisia, the inability to sit still, this terrifying internal restlessness.
+
+[9:52] Speaker B: Right. And dystonia, muscle rigidity and tardive dyskinesia. Which is uncontrolled repetitive movements of the face and limbs, and that can become irreversible.
+
+[10:01] Speaker A: So to mitigate that, we got the second generation.
+
+[10:03] Speaker B: Exactly. The second generation, or atypicals like olanzapine and risperidone, they have a lower incidence of eps, but the trade off is a significantly greater risk of metabolic syndrome.
+
+[10:15] Speaker A: That's a much more subtle silent risk compared to eps. What exactly defines metabolic syndrome here?
+
+[10:20] Speaker B: It's a cluster of conditions that increases the risk of heart disease and stroke. It's marked by significant weight gain, dyslipidemia, so abnormal cholesterol, and the rapid onset of type 2 diabetes.
+
+[10:31] Speaker A: So you're trading a visible severe movement disorder for a silent metabolic killer.
+
+[10:35] Speaker B: That is a heavy decision. Absolutely.
+
+[10:37] Speaker A: Moving on to antidepressants, we start with the Most common, the SSRIs, like fluoxetine or sertraline. When prescribing these, especially to younger patients, monitoring for increased depression and suicidal ideation.
+
+[10:49] Speaker B: Is mandatory, particularly in adolescents during the initial weeks.
+
+[10:53] Speaker A: Next are the tricyclic antidepressants, or TCAs like amitriptyline. Their common side effects are anticholinergic, dry mouth, blurred vision. But the real danger is the extreme cardiotoxicity risk if the patient overdoses.
+
+[11:08] Speaker B: This raises an important question. Given that cardiac risk, how is it managed?
+
+[11:13] Speaker A: Because of that high risk of fatal arrhythmias, baseline ECG monitoring is recommended for TCA patients, especially those over 40. The danger dictates vigilance.
+
+[11:22] Speaker B: And then we have the MAOI's, monoamine oxidase inhibitors like phenelzine.
+
+[11:26] Speaker A: What's fascinating here is the crucial dietary restriction. MAOIs inhibit the enzyme that breaks down tyramine, a compound in many aged and fermented foods.
+
+[11:35] Speaker B: So if a patient on an MAOI ingests tyramine rich foods, we're talking aged cheeses, cured meats, certain beers and wines. They can suffer a life threatening hypertensive.
+
+[11:44] Speaker A: Crisis, an uncontrolled extreme rise in blood pressure.
+
+[11:47] Speaker B: It sounds like being on an MAOI requires an entirely new lifestyle just to manage a single interaction.
+
+[11:53] Speaker A: Finally, for anti anxiety meds, the benzodiazepines like clonazepam, they enhance the inhibitory neurotransmitter gaba.
+
+[12:01] Speaker B: Their key side effects are drowsiness, a high risk of dependence, and critically, a high risk for profound cognitive impairment and falls in the elderly. Which is why alternatives like buspirone exist.
+
+[12:13] Speaker A: Right. No addiction potential avoids the cognitive risk. But the trade off is time.
+
+[12:18] Speaker B: It takes several weeks for the Effects to be realized. It's useless for an acute panic attack.
+
+[12:22] Speaker A: That brings us perfectly to our final and maybe most critical area, geriatric considerations. We save this for last because the elderly are affected by everything we just discussed, but exponentially more so.
+
+[12:35] Speaker B: Yeah. Consider the stat. Approximately 1/3 of hospitalizations in this population are drug related.
+
+[12:40] Speaker A: And adverse drug reactions are seven times more common.
+
+[12:43] Speaker B: That staggering number is rooted in age related changes to pharmacokinetics. How the body handles the drug. Drug levels are altered by four key changes. First, decreased absorption from less blood flow to the small intestine.
+
+[12:57] Speaker A: Okay.
+
+[12:57] Speaker B: Second, altered distribution. Older adults have less total body water and more relative body fat, which changes where a drug settles. Third, decreased metabolism because of reduced liver function.
+
+[13:09] Speaker A: And the fourth, which I gather is the biggest bottleneck, is elimination.
+
+[13:13] Speaker B: Absolutely. The most significant issue is decreased elimination due to reduced kidney function and lower creatinine clearance. When we say decreased elimination, what we mean is that a standard dose of a long acting drug, say a benzodiazepine that clears a 40 year old system in 12 hours, might still be significantly present in an 80 year old. 36 hours later the drugs just stay in the system longer, leading directly to toxicity.
+
+[13:36] Speaker A: This sounds like a recipe for compounding errors. Which leaves to polypharmacy the inappropriate use of multiple medications. How do clinicians fight this?
+
+[13:45] Speaker B: They fight it with tools and protocols. One vital tool is the Beers criteria. A clear list of medications generally considered inappropriate for use in older adults because the risks just outweigh the benefits. This helps clinicians avoid things like dafenhydramine or high dose ibuprofen.
+
+[14:02] Speaker A: And to combat polypharmacy directly, we rely on the core principles for rational prescribing. The master rules.
+
+[14:09] Speaker B: These six principles are the core tenets for safety. M is for minimizing the number of drugs. A is for altering alternatives. S is for start low and go slow, increase slowly.
+
+[14:20] Speaker A: Right.
+
+[14:21] Speaker B: T is for titrating the amount. E is for education of the patient and critically, R is for regular review of all drugs and doses. Following these rules is the primary way to minimize adverse interactions.
+
+[14:32] Speaker A: We've covered a remarkable distance from immediate neutralization of antacids to the complex balance of Cox inhibition. Identifying severe side effects of psych drugs, metabolic syndrome, hypertensive crisis, and landing on the absolute necessity of special consideration for older adults.
+
+[14:48] Speaker B: If we connect this to the bigger picture, the entire pharmacological landscape is a careful balance between therapeutic efficacy and minimizing harm. Every single drug carries a risk. The need for constant vigilance is the central theme that unites all of these.
+
+[15:02] Speaker A: Disparate fields we've explored the Master Rules for rational therapy designed to protect the elderly. Given how profoundly age affects drug processing, making drugs linger dangerously in the system, consider which of these six Master Rules becomes the most immediately critical action item when starting a new medication for a patient over 65, and why. The R is the key to minimizing the risk of polypharmacy over the long term. That's something to mull over until our next deep dive.
+

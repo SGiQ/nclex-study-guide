@@ -26,6 +26,9 @@ import episode6Data from './episode-6-transcript.json';
 // Episode 7: Pharmacological & Parenteral Therapies
 import episode7Data from './episode-7-transcript.json';
 
+// Episode 8: Pharmacology Part 2
+import episode8Data from './episode-8-transcript.json';
+
 // Episode 10: Respiratory, Neurological & Endocrine
 import episode10Data from './episode-10-transcript.json';
 
@@ -37,6 +40,7 @@ export const transcripts: Record<number, TranscriptSegment[]> = {
     5: episode5Data as TranscriptSegment[],
     6: episode6Data as TranscriptSegment[],
     7: episode7Data as TranscriptSegment[],
+    8: episode8Data as TranscriptSegment[],
     10: episode10Data as TranscriptSegment[],
     // Add more episodes as transcripts become available
 };

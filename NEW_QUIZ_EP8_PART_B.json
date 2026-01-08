@@ -1,0 +1,310 @@
+{
+    "id": 111,
+    "episodeId": 8,
+    "title": "Pharmacology Part B: Psych & Geriatrics",
+    "description": "Antipsychotics, Antidepressants, Beers Criteria, Polypharmacy",
+    "questionCount": 25,
+    "color": "from-purple-600 to-indigo-900",
+    "questions": [
+        {
+            "id": 1,
+            "text": "What is the primary risk of First Generation (Typical) Antipsychotics like Haloperidol?",
+            "options": [
+                "Weight gain",
+                "Extrapyramidal Symptoms (EPS)",
+                "Hypertension",
+                "Infection"
+            ],
+            "correctAnswer": 1,
+            "explanation": "EPS includes movement disorders like dystonia, akathisia, and Tardive Dyskinesia."
+        },
+        {
+            "id": 2,
+            "text": "Second Generation (Atypical) Antipsychotics (e.g., Olanzapine) lower EPS risk but increase risk of:",
+            "options": [
+                "Metabolic Syndrome (Weight gain, Diabetes, Dyslipidemia)",
+                "Seizures",
+                "Bleeding",
+                "Insomnia"
+            ],
+            "correctAnswer": 1,
+            "explanation": "The trade-off for less movement disorder is serious metabolic risk."
+        },
+        {
+            "id": 3,
+            "text": "Tardive Dyskinesia involves:",
+            "options": [
+                "Sleepiness",
+                "Uncontrolled, repetitive movements of the face and limbs (often irreversible)",
+                "Confusion",
+                "Weight loss"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Grimacing, lip smacking, tongue protrusion are classic signs."
+        },
+        {
+            "id": 4,
+            "text": "What is the 'Black Box Warning' for SSRIs (e.g., Fluoxetine) in adolescents?",
+            "options": [
+                "Liver failure",
+                "Increased risk of suicidal ideation",
+                "Heart attack",
+                "Stroke"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Paradoxically, as energy returns before mood improves, suicide risk can increase early in therapy."
+        },
+        {
+            "id": 5,
+            "text": "Tricyclic Antidepressants (TCAs) carry a high risk of _____ if overdosed.",
+            "options": [
+                "Liver failure",
+                "Fatal Cardiac Arrhythmias (Cardiotoxicity)",
+                "Kidney stones",
+                "Blindness"
+            ],
+            "correctAnswer": 1,
+            "explanation": "They widen the QRS complex. Overdose is often fatal and rapid."
+        },
+        {
+            "id": 6,
+            "text": "Patients on MAOIs (e.g., Phenelzine) must avoid Tyramine-rich foods to prevent:",
+            "options": [
+                "Gout",
+                "Hypertensive Crisis",
+                "Diarrhea",
+                "Rash"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Tyramine + MAOI releases massive adrenaline -> Blood pressure skyrockets -> Stroke."
+        },
+        {
+            "id": 7,
+            "text": "Which foods are high in Tyramine?",
+            "options": [
+                "Fresh vegetables",
+                "Aged cheeses, cured meats, fermented beverages (wine/beer)",
+                "Milk and eggs",
+                "Rice and beans"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Anything aged, pickled, fermented, or smoked usually has Tyramine."
+        },
+        {
+            "id": 8,
+            "text": "Benzodiazepines (e.g., Xanax, Valium) work by enhancing which neurotransmitter?",
+            "options": [
+                "Dopamine",
+                "GABA (Gamma-aminobutyric acid)",
+                "Serotonin",
+                "Acetylcholine"
+            ],
+            "correctAnswer": 1,
+            "explanation": "GABA is the 'brakes' of the brain. Benzos stomp on the brakes."
+        },
+        {
+            "id": 9,
+            "text": "Why are Benzodiazepines generally contraindicated in the elderly?",
+            "options": [
+                "They don't work",
+                "High risk of falls, confusion, and cognitive impairment",
+                "They cause hypertension",
+                "They are too expensive"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Elderly patients metabolize them slowly, leading to toxic accumulation and falls (broken hips)."
+        },
+        {
+            "id": 10,
+            "text": "Buspirone is an anxiolytic that differs from Benzos because:",
+            "options": [
+                "It works instantly",
+                "It has no addiction potential and no sedation (but takes weeks to work)",
+                "It is stronger",
+                "It is injected"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Good for chronic anxiety, bad for acute panic (too slow)."
+        },
+        {
+            "id": 11,
+            "text": "What is the 'Beers Criteria'?",
+            "options": [
+                "A list of alcohol",
+                "A list of medications potentially inappropriate for older adults",
+                "A diagnostic manual",
+                "A hospital protocol"
+            ],
+            "correctAnswer": 1,
+            "explanation": "The safety bible for Geriatric prescribing."
+        },
+        {
+            "id": 12,
+            "text": "Why is Drug Elimination often decreased in the elderly?",
+            "options": [
+                "Liver grows",
+                "Decreased kidney function (GFR)",
+                "Faster heart rate",
+                "More body water"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Kidneys wear out. Drugs clear slower, staying in the body longer."
+        },
+        {
+            "id": 13,
+            "text": "Polypharmacy is defined as:",
+            "options": [
+                "Using one pharmacy",
+                "The concurrent use of multiple medications (often inappropriate or excessive)",
+                "Using liquid meds",
+                "Buying drugs online"
+            ],
+            "correctAnswer": 1,
+            "explanation": "More drugs = More interactions = More errors."
+        },
+        {
+            "id": 14,
+            "text": "What physiological change in the elderly increases the risk of drug toxicity for fat-soluble drugs?",
+            "options": [
+                "More muscle",
+                "Increased relative body fat replaces lean muscle",
+                "More water",
+                "Thicker skin"
+            ],
+            "correctAnswer": 1,
+            "explanation": "More fat = Fat-soluble drugs (like Valium) get trapped and stay longer."
+        },
+        {
+            "id": 15,
+            "text": "Lithium toxicity can be triggered by a deficiency in:",
+            "options": [
+                "Calcium",
+                "Sodium (Hyponatremia)",
+                "Iron",
+                "Vitamin C"
+            ],
+            "correctAnswer": 1,
+            "explanation": "The kidneys think Lithium is Sodium. If sodium is low, they grab Lithium instead -> Toxicity."
+        },
+        {
+            "id": 16,
+            "text": "What is the 'Therapeutic Range' for Lithium?",
+            "options": [
+                "10-20",
+                "0.6 - 1.2 mEq/L",
+                "50-100",
+                "0-0.5"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Narrow window. >1.5 is toxic."
+        },
+        {
+            "id": 17,
+            "text": "What is 'Serotonin Syndrome'?",
+            "options": [
+                "Depression",
+                "A life-threatening excess of serotonin (Agitation, Fever, Rigidity, Seizures)",
+                "Sleepiness",
+                "Hunger"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Too much serotonin (e.g., SSRI + MAOI or St John's Wort) cooks the brain."
+        },
+        {
+            "id": 18,
+            "text": "Classic sign of Aspirin Toxicity (Salicylism) is:",
+            "options": [
+                "Tinnitus (Ringing in ears)",
+                "Blindness",
+                "Cough",
+                "Itching"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Ringing ears is the alarm bell for Aspirin overdose."
+        },
+        {
+            "id": 19,
+            "text": "Why avoid Diphenhydramine (Benadryl) in the elderly?",
+            "options": [
+                "It's too weak",
+                "High anticholinergic effects (Confusion, Urinary Retention, Falls)",
+                "It causes diarrhea",
+                "It stains teeth"
+            ],
+            "correctAnswer": 1,
+            "explanation": "It's on the Beers list. It dries them out and makes them confused."
+        },
+        {
+            "id": 20,
+            "text": "Start Low and Go Slow refers to:",
+            "options": [
+                "Driving",
+                "Prescribing for the elderly (start with lowest dose, titrate slowly)",
+                "Walking speed",
+                "IV rates"
+            ],
+            "correctAnswer": 1,
+            "explanation": "The Golden Rule of Geriatric Prescribing."
+        },
+        {
+            "id": 21,
+            "text": "Decreased albumin (protein) in the elderly affects drugs by:",
+            "options": [
+                "Doing nothing",
+                "Increasing the amount of 'Free Drug' circling (higher potency/toxicity)",
+                "Decreasing absorption",
+                "Stopping metabolism"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Protein-bound drugs hitch a ride on albumin. Less albumin = More free (active) drug."
+        },
+        {
+            "id": 22,
+            "text": "Disulfiram (Antabuse) is used for alcohol cessation by:",
+            "options": [
+                "Reducing cravings",
+                "Causing violent illness (vomiting) if alcohol is consumed",
+                "Sedating the patient",
+                "Blocking alcohol effect"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Aversion therapy. Even mouthwash can trigger it."
+        },
+        {
+            "id": 23,
+            "text": "Which herbal supplement is used for Benign Prostatic Hyperplasia (BPH)?",
+            "options": [
+                "Ginger",
+                "Saw Palmetto",
+                "Garlic",
+                "Ginseng"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Saw Palmetto treats BPH symptoms."
+        },
+        {
+            "id": 24,
+            "text": "Carbidopa-Levodopa is used for Parkinson's to:",
+            "options": [
+                "Cure it",
+                "Replace Dopamine in the brain (Levodopa cross BBB, Carbidopa prevents breakdown)",
+                "Stop tremors only",
+                "Sedate"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Dopamine can't cross the BBB. Levodopa can. Carbidopa is the bodyguard."
+        },
+        {
+            "id": 25,
+            "text": "What is the primary sign of 'Neuroleptic Malignant Syndrome' (NMS) from antipsychotics?",
+            "options": [
+                "Hunger",
+                "High Fever (Hyperpyrexia) and Muscle Rigidity",
+                "Low BP",
+                "Rash"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Life-threatening. Lead-pipe rigidity and soaring temp. Stop the med immediately."
+        }
+    ]
+}

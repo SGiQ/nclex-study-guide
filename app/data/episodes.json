@@ -78,9 +78,9 @@
   },
   {
     "id": 8,
-    "title": "Pharmacological Therapies Part 1",
-    "description": "General Principles, Cardiac, Respiratory, Endocrine Meds",
-    "content": "Pharmacology Basics & Calculations\nCardiac Medications (Antihypertensives, Diuretics, Antianginals)\nRespiratory Medications (Bronchodilators, Steroids)\nEndocrine Medications (Insulin, Thyroid, Steroids)",
+    "title": "Pharmacological Therapies Part 2",
+    "description": "GI, Pain Management, Psychopharmacology, Geriatrics",
+    "content": "GI Pharmacology (H2 Blockers, PPIs, Laxatives)\\nPain Management (WHO Ladder, NSAIDs, Opioids)\\nPsychopharmacology (Antipsychotics, SSRIs, MAOIs, Lithium)\\nGeriatric Considerations (Beers Criteria, Polypharmacy)",
     "pages": "171-195",
     "duration": 1300,
     "audioUrl": "/uploads/episode-8.mp3",

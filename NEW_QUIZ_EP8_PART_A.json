@@ -1,0 +1,370 @@
+{
+    "id": 110,
+    "episodeId": 8,
+    "title": "Pharmacology Part A: GI & Pain Management",
+    "description": "GI Meds (H2, PPIs, Laxatives) & Pain (NSAIDs, Opioids, Adjuvants)",
+    "questionCount": 30,
+    "color": "from-purple-600 to-indigo-900",
+    "questions": [
+        {
+            "id": 1,
+            "text": "How do H2 Receptor Antagonists (e.g., Famotidine) work?",
+            "options": [
+                "Neutralize acid individually",
+                "Block Histamine 2 receptors on parietal cells, 'turning down the volume' on acid production",
+                "Coat the stomach",
+                "Block proton pumps"
+            ],
+            "correctAnswer": 1,
+            "explanation": "H2 blockers stop the histamine signal to produce acid, effectively reducing production."
+        },
+        {
+            "id": 2,
+            "text": "Proton Pump Inhibitors (PPIs) like Omeprazole are more potent because they:",
+            "options": [
+                "Work instantly",
+                "Directly block the enzyme that pumps acid, 'shutting off the power'",
+                "Are alkalis",
+                "Increase motility"
+            ],
+            "correctAnswer": 1,
+            "explanation": "PPIs irreversibly block the proton pump itself, offering the strongest acid suppression."
+        },
+        {
+            "id": 3,
+            "text": "A long-term risk of chronic PPI use (e.g., Omeprazole) is:",
+            "options": [
+                "Weight gain",
+                "Increased risk of fractures (due to poor calcium absorption)",
+                "Vision loss",
+                "Insomnia"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Acid is needed to absorb calcium. Long-term suppression weakens bones."
+        },
+        {
+            "id": 4,
+            "text": "Magnesium-based antacids (e.g., Milk of Magnesia) often cause:",
+            "options": [
+                "Constipation",
+                "Diarrhea",
+                "Headache",
+                "Sleepiness"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Magnesium moves things (Diarrhea). Aluminum/Calcium constipate. That's why they are often combined."
+        },
+        {
+            "id": 5,
+            "text": "Which patient population must be careful with Magnesium-based antacids?",
+            "options": [
+                "Children",
+                "Renal (Kidney) Failure patients (risk of magnesium toxicity)",
+                "Pregnant women",
+                "Athletes"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Kidneys excrete magnesium. If kidneys fail, Mg accumulates to toxic levels."
+        },
+        {
+            "id": 6,
+            "text": "Metoclopramide (Reglan) is used for GERD and Gastroparesis because it:",
+            "options": [
+                "Stops acid",
+                "Promotes gastric motility (empties the stomach faster)",
+                "Soothes pain",
+                "Prevents gas"
+            ],
+            "correctAnswer": 1,
+            "explanation": "It's a pro-kinetic agent. It pushes food through the GI tract."
+        },
+        {
+            "id": 7,
+            "text": "Stimulant Laxatives (e.g., Dulcolax/Bisacodyl) work by:",
+            "options": [
+                "Adding fiber",
+                "Irritating the intestinal wall to trigger contractions (peristalsis)",
+                "Softening stool",
+                "Drawing water"
+            ],
+            "correctAnswer": 1,
+            "explanation": "They 'stimulate' the nerves in the gut wall. Effective but can cause dependence."
+        },
+        {
+            "id": 8,
+            "text": "According to the WHO Pain Ladder, Step 1 for mild pain involves:",
+            "options": [
+                "Morphine",
+                "Non-opioids (Acetaminophen, NSAIDs) +/- Adjuvants",
+                "Fentanyl",
+                "Surgery"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Start low: Tylenol or Motrin first."
+        },
+        {
+            "id": 9,
+            "text": "Acetaminophen (Tylenol) acts on pain but lacks this property found in NSAIDs:",
+            "options": [
+                "Fever reduction",
+                "Anti-inflammatory effect",
+                "Oral availability",
+                "Safety"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Acetaminophen is analgesic and antipyretic, but NOT anti-inflammatory."
+        },
+        {
+            "id": 10,
+            "text": "COX-1 enzymes (blocked by NSAIDs) are responsible for protecting the stomach lining. Blocking them causes:",
+            "options": [
+                "Better digestion",
+                "GI Bleeding and Ulcers",
+                "Sleepiness",
+                "Euphoria"
+            ],
+            "correctAnswer": 1,
+            "explanation": "The 'good' COX-1 protects the gut. NSAIDs block it, stripping that protection."
+        },
+        {
+            "id": 11,
+            "text": "Long-term use of NSAIDs (blocking COX-2) is associated with an increased risk of:",
+            "options": [
+                "Weight loss",
+                "Cardiovascular events (Heart Attack/Stroke)",
+                "Better hearing",
+                "Hair growth"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Chronic COX-2 inhibition upsets the clotting balance, increasing heart risks."
+        },
+        {
+            "id": 12,
+            "text": "The major deadly side effect of Opioids (e.g., Morphine) is:",
+            "options": [
+                "Constipation",
+                "Respiratory Depression",
+                "Itching",
+                "Euphoria"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Opioids tell the brainstem to stop caring about CO2, leading to stopped breathing."
+        },
+        {
+            "id": 13,
+            "text": "Fentanyl is a potent opioid that, when given IV/Mucosal, has an onset of:",
+            "options": [
+                "1 hour",
+                "Minutes (fast onset, short duration)",
+                "1 day",
+                "1 week"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Fentanyl is fast-on, fast-off (unless in a patch)."
+        },
+        {
+            "id": 14,
+            "text": "Methadone is used for chronic pain and detox primarily because of its:",
+            "options": [
+                "Low cost",
+                "Long and variable half-life",
+                "Sweet taste",
+                "Color"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Its long half-life prevents the daily up-and-down withdrawal cycle."
+        },
+        {
+            "id": 15,
+            "text": "What is 'Pseudo-addiction'?",
+            "options": [
+                "Faking pain",
+                "Drug-seeking behavior caused by UNDERTREATMENT of pain",
+                "Addiction to sugar",
+                "Recreational use"
+            ],
+            "correctAnswer": 1,
+            "explanation": "The patient looks like an addict (demanding meds), but they are actually just in pain. Treat the pain, and the behavior stops."
+        },
+        {
+            "id": 16,
+            "text": "Adjuvant medications for Neuropathic Pain include:",
+            "options": [
+                "Antibiotics",
+                "Anticonvulsants (Gabapentin) and Antidepressants (Duloxetine)",
+                "Vitamins",
+                "Laxatives"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Nerve pain doesn't respond well to opioids. Seizure and depression meds calm the nerves effectively."
+        },
+        {
+            "id": 17,
+            "text": "EMLA cream (local anesthetic) must be applied:",
+            "options": [
+                "Immediately before the stick",
+                "1-2 hours prior to the procedure",
+                "After the procedure",
+                "On open wounds"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Topical anesthetics need time to penetrate the skin to work."
+        },
+        {
+            "id": 18,
+            "text": "Which drug prevents Platelet Aggregation (blood thinning) by inhibiting COX-1?",
+            "options": [
+                "Acetaminophen",
+                "Aspirin",
+                "Morphine",
+                "Famotidine"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Aspirin permanently disables platelets for their life (7 days)."
+        },
+        {
+            "id": 19,
+            "text": "Sucralfate works for ulcers by:",
+            "options": [
+                "Stopping acid",
+                "Creating a physical protective barrier (coating) over the ulcer",
+                "Numbing the stomach",
+                "Killing bacteria"
+            ],
+            "correctAnswer": 1,
+            "explanation": "It's a 'band-aid' for the stomach."
+        },
+        {
+            "id": 20,
+            "text": "The antidote for Opioid Overdose is:",
+            "options": [
+                "Flumazenil",
+                "Naloxone (Narcan)",
+                "Atropine",
+                "Vitamin K"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Naloxone bumps the opioid off the receptor immediately."
+        },
+        {
+            "id": 21,
+            "text": "Which laxative is safest for daily use?",
+            "options": [
+                "Stimulants",
+                "Bulk-forming (Psyllium/Metamucil)",
+                "Enemas",
+                "Mineral Oil"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Bulk formers just add fiber and water, mimicking natural diet."
+        },
+        {
+            "id": 22,
+            "text": "Stool Softeners (Docusate) work by:",
+            "options": [
+                "Pushing stool",
+                "Lowering surface tension to let water penetrate the stool",
+                "Lubricating",
+                "Stopping absorption"
+            ],
+            "correctAnswer": 1,
+            "explanation": "They make the stool 'soggy' (softer) but don't force it out."
+        },
+        {
+            "id": 23,
+            "text": "Severe constipation from Opioids is due to:",
+            "options": [
+                "Dehydration",
+                "Slowed GI peristalsis (paralyzing the gut)",
+                "Lack of fiber",
+                "Allergy"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Opioids bind to the gut receptors and stop movement."
+        },
+        {
+            "id": 24,
+            "text": "What is the maximum daily dose of Acetaminophen for healthy adults?",
+            "options": [
+                "1000 mg",
+                "4000 mg (4g)",
+                "10,000 mg",
+                "200 mg"
+            ],
+            "correctAnswer": 1,
+            "explanation": "4g is the limit. Beyond that, the liver enzyme gets saturated and toxic metabolites form."
+        },
+        {
+            "id": 25,
+            "text": "Misoprostol is often given with NSAIDs to:",
+            "options": [
+                "Increase pain relief",
+                "Protect the stomach lining (synthetic prostaglandin)",
+                "Prevent diarrhea",
+                "Induce sleep"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Since NSAIDs remove protective prostaglandins, Misoprostol puts them back."
+        },
+        {
+            "id": 26,
+            "text": "Which pain type is 'Spontaneous Breakthrough Pain'?",
+            "options": [
+                "Expected pain",
+                "Unpredictable spikes in pain not related to activity",
+                "Pain when meds wear off",
+                "Fake pain"
+            ],
+            "correctAnswer": 1,
+            "explanation": "It happens out of nowhere, unlike Incident pain (movement) or End-of-Dose failure."
+        },
+        {
+            "id": 27,
+            "text": "Loperamide (Imodium) is an antidiarrheal that is structurally related to:",
+            "options": [
+                "Antibiotics",
+                "Opioids (but does not cross blood-brain barrier)",
+                "Laxatives",
+                "Steroids"
+            ],
+            "correctAnswer": 1,
+            "explanation": "It uses the 'constipating' side effect of opioids without the high."
+        },
+        {
+            "id": 28,
+            "text": "Ondansetron (Zofran) works for nausea by blocking:",
+            "options": [
+                "Dopamine",
+                "Serotonin (5-HT3) receptors",
+                "Histamine",
+                "Pain"
+            ],
+            "correctAnswer": 1,
+            "explanation": "It blocks the signal from the gut/brain to vomit."
+        },
+        {
+            "id": 29,
+            "text": "Atorvastatin (Lipitor) works by inhibiting HMG-CoA Reductase, which:",
+            "options": [
+                "Digests fat",
+                "Synthesizes cholesterol in the liver",
+                "Blocks sugar",
+                "Increases BP"
+            ],
+            "correctAnswer": 1,
+            "explanation": "It stops the factory line for cholesterol production."
+        },
+        {
+            "id": 30,
+            "text": "A common side effect of Niacin (Antilipidemic) is:",
+            "options": [
+                "Freezing",
+                "Intense cutaneous flushing (redness/heat)",
+                "Hair growth",
+                "Sleep"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Niacin causes vasodilation in the skin -> Flushing. Aspirin can help reduce this."
+        }
+    ]
+}

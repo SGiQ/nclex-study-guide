@@ -30,17 +30,17 @@ export default function MindMapsLibraryPage() {
     }, []);
 
     return (
-        <div className="min-h-dvh bg-[#0A0A0F] text-white font-sans p-6 pb-24">
+        <div className="min-h-dvh bg-gray-50 dark:bg-[#0A0A0F] text-gray-900 dark:text-white font-sans p-6 pb-24">
             {/* Header */}
             <header className="mb-8 flex items-center justify-between">
                 <div>
-                    <Link href="/dashboard" className="text-sm font-medium text-white/50 hover:text-white mb-2 block">
+                    <Link href="/dashboard" className="text-sm font-medium text-gray-600 dark:text-white/50 hover:text-gray-900 dark:hover:text-white mb-2 block">
                         ← Back to Dashboard
                     </Link>
                     <h1 className="text-3xl font-bold bg-gradient-to-r from-purple-400 to-violet-500 bg-clip-text text-transparent">
                         Mind Maps
                     </h1>
-                    <p className="text-white/60 text-sm mt-1">
+                    <p className="text-gray-600 dark:text-white/60 text-sm mt-1">
                         Visual concept maps for complex topics.
                     </p>
                 </div>
@@ -51,13 +51,13 @@ export default function MindMapsLibraryPage() {
                 {loading ? (
                     <div className="col-span-full text-center py-16">
                         <div className="text-4xl mb-4">⏳</div>
-                        <p className="text-white/50">Loading mind maps...</p>
+                        <p className="text-gray-600 dark:text-white/50">Loading mind maps...</p>
                     </div>
                 ) : mindmaps.length === 0 ? (
-                    <div className="col-span-full text-center py-16 bg-white/5 rounded-3xl border border-white/5 border-dashed">
+                    <div className="col-span-full text-center py-16 bg-gray-100 dark:bg-white/5 rounded-3xl border border-gray-200 dark:border-white/5 border-dashed">
                         <div className="text-6xl mb-4">🧠</div>
-                        <h3 className="text-xl font-bold text-white/80 mb-2">No Mind Maps Yet</h3>
-                        <p className="text-white/50 text-sm">
+                        <h3 className="text-xl font-bold text-gray-800 dark:text-white/80 mb-2">No Mind Maps Yet</h3>
+                        <p className="text-gray-600 dark:text-white/50 text-sm">
                             Mind maps will appear here once uploaded.
                         </p>
                     </div>
@@ -65,7 +65,7 @@ export default function MindMapsLibraryPage() {
                     mindmaps.map((item) => (
                         <div
                             key={item.id}
-                            className="group relative aspect-[4/3] bg-[#16161C] rounded-2xl overflow-hidden border border-white/5 hover:border-purple-500/50 transition-all"
+                            className="group relative aspect-[4/3] bg-white dark:bg-[#16161C] rounded-2xl overflow-hidden border border-gray-200 dark:border-white/5 hover:border-purple-500/50 transition-all shadow-sm dark:shadow-none"
                         >
                             <Link
                                 href={`/mindmaps/${item.id}`}
@@ -79,15 +79,15 @@ export default function MindMapsLibraryPage() {
                                 />
 
                                 {/* Gradient Overlay */}
-                                <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/30 to-transparent" />
+                                <div className="absolute inset-0 bg-gradient-to-t from-white/95 via-white/30 to-transparent dark:from-black/95 dark:via-black/30 dark:to-transparent" />
 
                                 {/* Title */}
                                 <div className="absolute bottom-0 left-0 right-0 p-4">
-                                    <h3 className="font-bold text-white text-lg line-clamp-2 drop-shadow-lg">
+                                    <h3 className="font-bold text-gray-900 dark:text-white text-lg line-clamp-2 drop-shadow-lg">
                                         {item.title}
                                     </h3>
                                     {item.episode_id && (
-                                        <p className="text-xs text-purple-300 mt-1">Episode {item.episode_id}</p>
+                                        <p className="text-xs text-purple-600 dark:text-purple-300 mt-1">Episode {item.episode_id}</p>
                                     )}
                                 </div>
                             </Link>

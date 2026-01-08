@@ -30,16 +30,16 @@ export default function InfographicsLibraryPage() {
     }, []);
 
     return (
-        <div className="min-h-dvh bg-[#0A0A0F] text-white font-sans p-6 pb-24">
+        <div className="min-h-dvh bg-gray-50 dark:bg-[#0A0A0F] text-gray-900 dark:text-white font-sans p-6 pb-24">
             <header className="mb-8 flex items-center justify-between">
                 <div>
-                    <Link href="/dashboard" className="text-sm font-medium text-white/50 hover:text-white mb-2 block">
+                    <Link href="/dashboard" className="text-sm font-medium text-gray-600 dark:text-white/50 hover:text-gray-900 dark:hover:text-white mb-2 block">
                         ← Back to Dashboard
                     </Link>
                     <h1 className="text-3xl font-bold bg-gradient-to-r from-pink-400 to-rose-500 bg-clip-text text-transparent">
                         Infographics
                     </h1>
-                    <p className="text-white/60 text-sm mt-1">
+                    <p className="text-gray-600 dark:text-white/60 text-sm mt-1">
                         Visual summaries and quick reference guides.
                     </p>
                 </div>
@@ -49,13 +49,13 @@ export default function InfographicsLibraryPage() {
                 {loading ? (
                     <div className="col-span-full text-center py-16">
                         <div className="text-4xl mb-4">⏳</div>
-                        <p className="text-white/50">Loading infographics...</p>
+                        <p className="text-gray-600 dark:text-white/50">Loading infographics...</p>
                     </div>
                 ) : infographics.length === 0 ? (
-                    <div className="col-span-full text-center py-16 bg-white/5 rounded-3xl border border-white/5 border-dashed">
+                    <div className="col-span-full text-center py-16 bg-gray-100 dark:bg-white/5 rounded-3xl border border-gray-200 dark:border-white/5 border-dashed">
                         <div className="text-6xl mb-4">📊</div>
-                        <h3 className="text-xl font-bold text-white/80 mb-2">No Infographics Yet</h3>
-                        <p className="text-white/50 text-sm">
+                        <h3 className="text-xl font-bold text-gray-800 dark:text-white/80 mb-2">No Infographics Yet</h3>
+                        <p className="text-gray-600 dark:text-white/50 text-sm">
                             Infographics will appear here once uploaded.
                         </p>
                     </div>
@@ -63,7 +63,7 @@ export default function InfographicsLibraryPage() {
                     infographics.map((item) => (
                         <div
                             key={item.id}
-                            className="group relative aspect-[4/3] bg-[#16161C] rounded-2xl overflow-hidden border border-white/5 hover:border-pink-500/50 transition-all"
+                            className="group relative aspect-[4/3] bg-white dark:bg-[#16161C] rounded-2xl overflow-hidden border border-gray-200 dark:border-white/5 hover:border-pink-500/50 transition-all shadow-sm dark:shadow-none"
                         >
                             <Link
                                 href={`/infographics/${item.id}`}
@@ -74,12 +74,12 @@ export default function InfographicsLibraryPage() {
                                     alt={item.title}
                                     className="absolute inset-0 w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-opacity duration-500"
                                 />
-                                <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/30 to-transparent" />
+                                <div className="absolute inset-0 bg-gradient-to-t from-white/95 via-white/30 to-transparent dark:from-black/95 dark:via-black/30 dark:to-transparent" />
                                 <div className="absolute bottom-0 left-0 right-0 p-5">
-                                    <h3 className="text-base font-bold leading-tight mb-2 text-white group-hover:text-pink-300 transition-colors line-clamp-2">
+                                    <h3 className="text-base font-bold leading-tight mb-2 text-gray-900 dark:text-white group-hover:text-pink-600 dark:group-hover:text-pink-300 transition-colors line-clamp-2">
                                         {item.title}
                                     </h3>
-                                    <p className="text-xs text-white/50 font-medium uppercase tracking-wider">
+                                    <p className="text-xs text-gray-600 dark:text-white/50 font-medium uppercase tracking-wider">
                                         {item.episode_id ? `Episode ${item.episode_id}` : 'Quick Reference'}
                                     </p>
                                 </div>

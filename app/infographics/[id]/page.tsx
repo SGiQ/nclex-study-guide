@@ -1,48 +1,119 @@
-import Link from 'next/link';
-import { notFound } from 'next/navigation';
-import fs from 'fs';
-import path from 'path';
-import { use } from 'react';
+'use client';
 
-function getInfographicById(id: number) {
-    const filePath = path.join(process.cwd(), 'app', 'data', 'infographics.json');
-    if (!fs.existsSync(filePath)) return null;
-    try {
-        const fileData = fs.readFileSync(filePath, 'utf8');
-        const items = JSON.parse(fileData);
-        return items.find((s: any) => s.id === id);
-    } catch (e) {
-        return null;
-    }
-}
+import { use, useState, useEffect } from 'react';
+import { notFound } from 'next/navigation';
+import Link from 'next/link';
+import { TransformWrapper, TransformComponent } from 'react-zoom-pan-pinch';
 
 export default function InfographicViewerPage({ params }: { params: Promise<{ id: string }> }) {
     const { id } = use(params);
-    const item = getInfographicById(parseInt(id));
+    const [infographic, setInfographic] = useState<any>(null);
+    const [loading, setLoading] = useState(true);
 
-    if (!item) return notFound();
+    useEffect(() => {
+        fetch('/api/infographics')
+            .then(r => r.json())
+            .then(data => {
+                const found = data.find((m: any) => m.id === parseInt(id));
+                if (found) {
+                    setInfographic(found);
+                }
+                setLoading(false);
+            })
+            .catch(() => setLoading(false));
+    }, [id]);
+
+    if (loading) {
+        return (
+            <div className="flex flex-col h-screen bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-white items-center justify-center">
+                <div className="text-4xl mb-4">📊</div>
+                <div className="text-gray-600 dark:text-white/60">Loading infographic...</div>
+            </div>
+        );
+    }
+
+    if (!infographic) return notFound();
 
     return (
-        <div className="flex flex-col h-dvh bg-[#0A0A0F] text-white overflow-hidden">
+        <div className="flex flex-col h-screen bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-white">
             {/* Header */}
-            <header className="h-16 flex items-center justify-between px-4 border-b border-white/10 bg-[#16161C] flex-shrink-0 z-20">
-                <Link href="/infographics" className="flex items-center gap-2 text-sm text-white/70 hover:text-white transition-colors">
-                    <span>←</span> Library
+            <header className="h-16 flex items-center justify-between px-4 border-b border-gray-200 dark:border-white/10 bg-white dark:bg-gray-800 flex-shrink-0 z-10">
+                <Link href="/infographics" className="flex items-center gap-2 text-sm text-gray-600 dark:text-white/70 hover:text-gray-900 dark:hover:text-white transition-colors">
+                    <span>←</span> Back to Infographics
                 </Link>
-                <div className="font-bold text-sm truncate max-w-[200px]">
-                    {item.title}
+                <div className="font-bold text-sm truncate max-w-[300px]">
+                    {infographic.title}
                 </div>
-                <div className="w-16"></div> {/* Spacer */}
+                <a
+                    href={`/api/infographics/${id}/image`}
+                    download={`${infographic.title}.png`}
+                    className="flex items-center gap-2 px-4 py-2 bg-pink-600 hover:bg-pink-500 rounded-lg text-sm font-semibold transition-colors text-white"
+                >
+                    <span>📥</span> Download
+                </a>
             </header>
 
-            {/* Image Viewer */}
-            <main className="flex-1 w-full relative overflow-auto bg-black flex items-center justify-center p-4">
-                <img
-                    src={`/uploads/infographics/${item.fileName}`}
-                    alt={item.title}
-                    className="max-w-full max-h-full object-contain shadow-2xl rounded-lg"
-                />
+            {/* Interactive Infographic Viewer */}
+            <main className="flex-1 overflow-hidden bg-gray-100 dark:bg-gray-900">
+                <TransformWrapper
+                    initialScale={1}
+                    minScale={0.1}
+                    maxScale={4}
+                    centerOnInit={true}
+                    centerZoomedOut={true}
+                    limitToBounds={false}
+                    panning={{ disabled: false }}
+                    wheel={{ step: 0.1 }}
+                    doubleClick={{ disabled: false, mode: 'zoomIn', step: 0.5 }}
+                >
+                    {({ zoomIn, zoomOut, resetTransform }) => (
+                        <>
+                            {/* Zoom Controls */}
+                            <div className="absolute top-4 right-4 z-20 flex flex-col gap-2">
+                                <button
+                                    onClick={() => zoomIn()}
+                                    className="w-10 h-10 bg-white dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg flex items-center justify-center text-xl border border-gray-300 dark:border-white/10 transition-colors"
+                                    title="Zoom In"
+                                >
+                                    +
+                                </button>
+                                <button
+                                    onClick={() => zoomOut()}
+                                    className="w-10 h-10 bg-white dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg flex items-center justify-center text-xl border border-gray-300 dark:border-white/10 transition-colors"
+                                    title="Zoom Out"
+                                >
+                                    −
+                                </button>
+                                <button
+                                    onClick={() => resetTransform()}
+                                    className="w-10 h-10 bg-white dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg flex items-center justify-center text-sm border border-gray-300 dark:border-white/10 transition-colors"
+                                    title="Reset View"
+                                >
+                                    ⟲
+                                </button>
+                            </div>
+
+                            {/* Image Container */}
+                            <TransformComponent
+                                wrapperClass="w-full h-full"
+                                contentClass="w-full h-full flex items-center justify-center"
+                            >
+                                <img
+                                    src={`/api/infographics/${id}/image`}
+                                    alt={infographic.title}
+                                    className="max-w-full max-h-full object-contain cursor-move"
+                                    draggable={false}
+                                />
+                            </TransformComponent>
+                        </>
+                    )}
+                </TransformWrapper>
             </main>
+
+            {/* Instructions */}
+            <div className="px-4 py-2 bg-white dark:bg-gray-800 border-t border-gray-200 dark:border-white/10 text-xs text-gray-600 dark:text-white/50 text-center">
+                💡 Scroll to zoom • Drag to pan • Double-click to zoom in • Click reset to fit
+            </div>
         </div>
     );
 }

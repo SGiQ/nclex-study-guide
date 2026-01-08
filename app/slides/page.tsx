@@ -30,16 +30,16 @@ export default function SlidesLibraryPage() {
     }, []);
 
     return (
-        <div className="min-h-dvh bg-[#0A0A0F] text-white font-sans p-6 pb-24">
+        <div className="min-h-dvh bg-gray-50 dark:bg-[#0A0A0F] text-gray-900 dark:text-white font-sans p-6 pb-24">
             <header className="mb-8 flex items-center justify-between">
                 <div>
-                    <Link href="/" className="text-sm font-medium text-white/50 hover:text-white mb-2 block">
+                    <Link href="/dashboard" className="text-sm font-medium text-gray-600 dark:text-white/50 hover:text-gray-900 dark:hover:text-white mb-2 block">
                         ← Back Home
                     </Link>
                     <h1 className="text-3xl font-bold bg-gradient-to-r from-blue-400 to-indigo-500 bg-clip-text text-transparent">
                         Slide Decks
                     </h1>
-                    <p className="text-white/60 text-sm mt-1">
+                    <p className="text-gray-600 dark:text-white/60 text-sm mt-1">
                         Review detailed notes and diagrams.
                     </p>
                 </div>
@@ -49,13 +49,13 @@ export default function SlidesLibraryPage() {
                 {loading ? (
                     <div className="col-span-full text-center py-12">
                         <div className="text-4xl mb-4">⏳</div>
-                        <p className="text-white/50">Loading slide decks...</p>
+                        <p className="text-gray-600 dark:text-white/50">Loading slide decks...</p>
                     </div>
                 ) : slides.length === 0 ? (
-                    <div className="col-span-full text-center py-12 bg-white/5 rounded-3xl border border-white/5 border-dashed">
+                    <div className="col-span-full text-center py-12 bg-gray-100 dark:bg-white/5 rounded-3xl border border-gray-200 dark:border-white/5 border-dashed">
                         <div className="text-4xl mb-4">📂</div>
-                        <h3 className="text-lg font-bold text-white/80">No Slide Decks Yet</h3>
-                        <p className="text-white/50 text-sm mt-2">
+                        <h3 className="text-lg font-bold text-gray-800 dark:text-white/80">No Slide Decks Yet</h3>
+                        <p className="text-gray-600 dark:text-white/50 text-sm mt-2">
                             Check back later or upload one in Admin.
                         </p>
                     </div>
@@ -63,13 +63,13 @@ export default function SlidesLibraryPage() {
                     slides.map((deck) => (
                         <div
                             key={deck.id}
-                            className="group relative bg-[#16161C] rounded-2xl p-5 border border-white/5 hover:border-blue-500/50 transition-all"
+                            className="group relative bg-white dark:bg-[#16161C] rounded-2xl p-5 border border-gray-200 dark:border-white/5 hover:border-blue-500/50 transition-all shadow-sm dark:shadow-none"
                         >
                             <Link
                                 href={`/slides/${deck.id}`}
                                 className="block hover:-translate-y-1 active:scale-[0.99] transition-all"
                             >
-                                <div className="absolute top-4 right-4 w-8 h-8 rounded-full bg-blue-500/10 flex items-center justify-center text-blue-400 group-hover:bg-blue-500 group-hover:text-white transition-colors">
+                                <div className="absolute top-4 right-4 w-8 h-8 rounded-full bg-blue-500/10 flex items-center justify-center text-blue-600 dark:text-blue-400 group-hover:bg-blue-500 group-hover:text-white transition-colors">
                                     ↗
                                 </div>
 
@@ -77,14 +77,14 @@ export default function SlidesLibraryPage() {
                                     📊
                                 </div>
 
-                                <h3 className="text-lg font-bold leading-tight mb-1 group-hover:text-blue-400 transition-colors">
+                                <h3 className="text-lg font-bold leading-tight mb-1 text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
                                     {deck.title}
                                 </h3>
-                                <p className="text-xs text-white/40 font-medium uppercase tracking-wider">
+                                <p className="text-xs text-gray-600 dark:text-white/40 font-medium uppercase tracking-wider">
                                     {deck.episode_id ? `Episode ${deck.episode_id}` : 'Slide Deck'}
                                 </p>
 
-                                <div className="mt-4 flex items-center gap-2 text-xs text-white/30">
+                                <div className="mt-4 flex items-center gap-2 text-xs text-gray-500 dark:text-white/30">
                                     <span>PDF</span>
                                     <span>•</span>
                                     <span>{new Date(deck.created_at).toLocaleDateString()}</span>

@@ -24,7 +24,7 @@ export default function SlideViewerPage({ params }: { params: Promise<{ id: stri
 
     if (loading) {
         return (
-            <div className="flex flex-col h-dvh bg-[#0A0A0F] text-white items-center justify-center">
+            <div className="flex flex-col h-dvh bg-gray-50 dark:bg-[#0A0A0F] text-gray-900 dark:text-white overflow-hidden items-center justify-center">
                 <div className="text-4xl mb-4">📊</div>
                 <div className="text-white/60">Loading slide deck...</div>
             </div>
@@ -36,8 +36,8 @@ export default function SlideViewerPage({ params }: { params: Promise<{ id: stri
     return (
         <div className="flex flex-col h-dvh bg-[#0A0A0F] text-white">
             {/* Header */}
-            <header className="h-16 flex items-center justify-between px-4 border-b border-white/10 bg-[#16161C] flex-shrink-0 z-10">
-                <Link href="/slides" className="flex items-center gap-2 text-sm text-white/70 hover:text-white transition-colors">
+            <header className="h-16 flex items-center justify-between px-4 border-b border-gray-200 dark:border-white/10 bg-white dark:bg-[#16161C] flex-shrink-0 z-20">
+                <Link href="/slides" className="flex items-center gap-2 text-sm text-gray-600 dark:text-white/70 hover:text-gray-900 dark:hover:text-white transition-colors">
                     <span>←</span> Library
                 </Link>
                 <div className="font-bold text-sm truncate max-w-[200px]">
@@ -47,7 +47,7 @@ export default function SlideViewerPage({ params }: { params: Promise<{ id: stri
             </header>
 
             {/* PDF Viewer */}
-            <main className="flex-1 w-full bg-[#2A2A35] relative">
+            <main className="flex-1 w-full relative overflow-auto bg-gray-100 dark:bg-black flex items-center justify-center p-4">
                 <iframe
                     src={`/api/slides/${id}/pdf#toolbar=0&navpanes=0&scrollbar=0`}
                     className="w-full h-full border-0"

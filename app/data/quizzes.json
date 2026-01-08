@@ -1,253 +1,5 @@
 [
     {
-        "id": 101,
-        "episodeId": 1,
-        "title": "NCLEX Strategies & Study Skills",
-        "description": "Test-Taking Keys, Study Planning, Question Analysis",
-        "questionCount": 20,
-        "color": "from-blue-600 to-blue-900",
-        "questions": [
-            {
-                "id": 1,
-                "text": "According to 'Secret Key #1', how long should an effective study sprint last?",
-                "options": [
-                    "2 hours",
-                    "45 minutes",
-                    "15 minutes",
-                    "4 hours"
-                ],
-                "correctAnswer": 1,
-                "explanation": "Working memory effectiveness drops off significantly after 45 minutes."
-            },
-            {
-                "id": 2,
-                "text": "What is the 'active retention' strategy suggested for solidifying understanding?",
-                "options": [
-                    "Re-reading the chapter",
-                    "Highlighting every line",
-                    "Explaining the concept out loud to an imaginary patient",
-                    "Listening to music"
-                ],
-                "correctAnswer": 2,
-                "explanation": "Forcing retrieval and articulation creates actual learning, unlike passive reading."
-            },
-            {
-                "id": 3,
-                "text": "When analyzing practice tests, which three groups of questions need special attention?",
-                "options": [
-                    "Wrong answers, Guessed answers, and Slow/Difficult answers",
-                    "Only wrong answers",
-                    "Only correct answers",
-                    "First 10 and Last 10"
-                ],
-                "correctAnswer": 0,
-                "explanation": "Guessed answers (lucky hits) and slow answers (weakness/lack of fluency) are just as important as wrong ones."
-            },
-            {
-                "id": 4,
-                "text": "What is the recommended average time per question on the NCLEX-PN to 'bank time'?",
-                "options": [
-                    "60 seconds",
-                    "30 seconds",
-                    "90 seconds",
-                    "10 seconds"
-                ],
-                "correctAnswer": 1,
-                "explanation": "30 seconds allows you to bank time for complex case studies."
-            },
-            {
-                "id": 5,
-                "text": "What is the '$5 Challenge' used for?",
-                "options": [
-                    "Buying snacks",
-                    "Eliminating wrong answers with confidence",
-                    "Betting on your score",
-                    "Paying for the exam"
-                ],
-                "correctAnswer": 1,
-                "explanation": "If you are confident enough to bet money an option is wrong, cross it off immediately to narrow choices."
-            },
-            {
-                "id": 6,
-                "text": "What is a 'Switchback Word' in a question stem?",
-                "options": [
-                    "And / Also",
-                    "But / However / Yet",
-                    "Therefore",
-                    "Because"
-                ],
-                "correctAnswer": 1,
-                "explanation": "It signals a contradiction or shift in priority that often holds the key to the question."
-            },
-            {
-                "id": 7,
-                "text": "True or False: 'Extreme Statements' containing words like ALL, NEVER, or ALWAYS are usually correct.",
-                "options": [
-                    "True",
-                    "False"
-                ],
-                "correctAnswer": 1,
-                "explanation": "False. Medicine rarely has absolutes. These are usually traps."
-            },
-            {
-                "id": 8,
-                "text": "What is a 'Fact Trap'?",
-                "options": [
-                    "A lie in the answer choices",
-                    "A statement that is factually true but does not answer the specific question asked",
-                    "A difficult conversion",
-                    "A typo"
-                ],
-                "correctAnswer": 1,
-                "explanation": "It lures you in because you recognize the fact, but you must ask: 'Does this answer the question?'."
-            },
-            {
-                "id": 9,
-                "text": "Phase 1 of the practice test strategy involves:",
-                "options": [
-                    "Timed, Closed Book",
-                    "Untimed, Open Book",
-                    "Timed, Open Book",
-                    "Group study"
-                ],
-                "correctAnswer": 1,
-                "explanation": "Start with no pressure to learn the strategies/logic first."
-            },
-            {
-                "id": 10,
-                "text": "In the 5-Week Study Plan, why does Week 1 start with Safety & Infection Control?",
-                "options": [
-                    "It's the easiest",
-                    "It's the foundation for all safe, effective care environments",
-                    "It's alphabetical",
-                    "It's the hardest"
-                ],
-                "correctAnswer": 1,
-                "explanation": "Safety is the lens through which you must view every other topic."
-            },
-            {
-                "id": 11,
-                "text": "Which learning modality benefits most from role-playing or using hands to trace flowcharts?",
-                "options": [
-                    "Visual",
-                    "Auditory",
-                    "Kinesthetic",
-                    "Reading/Writing"
-                ],
-                "correctAnswer": 2,
-                "explanation": "Kinesthetic learners learn by *doing* and moving."
-            },
-            {
-                "id": 12,
-                "text": "What does a 'Hedge Word' (e.g., generally, usually) imply?",
-                "options": [
-                    "Uncertainty",
-                    "A likely correct answer because it allows for exceptions",
-                    "An incorrect answer",
-                    "A trick"
-                ],
-                "correctAnswer": 1,
-                "explanation": "Nursing care often requires clinical judgment, so 'generally' is often safer than 'always'."
-            },
-            {
-                "id": 13,
-                "text": "If a question is too difficult and you are stuck, you should:",
-                "options": [
-                    "Spend 5 minutes figuring it out",
-                    "Make an educated guess, bookmark it mentally, and move on immediately",
-                    "Panic",
-                    "Ask a friend"
-                ],
-                "correctAnswer": 1,
-                "explanation": "Never let one hard question derail your pace or morale."
-            },
-            {
-                "id": 14,
-                "text": "Why is 'Cramming' (long study sessions) counterproductive?",
-                "options": [
-                    "It's boring",
-                    "Lasting retention drops significantly after the first hour",
-                    "You get hungry",
-                    "It's expensive"
-                ],
-                "correctAnswer": 1,
-                "explanation": "Your brain can't encode long-term memories effectively in marathon sessions."
-            },
-            {
-                "id": 15,
-                "text": "Week 5 of the study plan is dedicated entirely to:",
-                "options": [
-                    "Learning new content",
-                    "Simulated Practice Tests (Stamina & Strategy)",
-                    "Relaxing",
-                    "Flashcards"
-                ],
-                "correctAnswer": 1,
-                "explanation": "The final week is for dress rehearsal - simulating the exam environment."
-            },
-            {
-                "id": 16,
-                "text": "Answering a question correctly by guessing means:",
-                "options": [
-                    "You know the material",
-                    "You got lucky, and you still need to review that topic",
-                    "You are a genius",
-                    "The test is easy"
-                ],
-                "correctAnswer": 1,
-                "explanation": "Don't count lucky guesses as knowledge. Review them!"
-            },
-            {
-                "id": 17,
-                "text": "If you are 'Kinesthetic', what is a good study tool?",
-                "options": [
-                    "Podcasts only",
-                    "Physical Flashcards (flipping/sorting)",
-                    "Silent reading",
-                    "Lectures"
-                ],
-                "correctAnswer": 1,
-                "explanation": "The physical act helps bind the memory."
-            },
-            {
-                "id": 18,
-                "text": "The 'Predetermined Answer' rule (e.g., picking the first remaining option) is designed to:",
-                "options": [
-                    "Save time",
-                    "Prevent 'analysis paralysis' and emotional second-guessing",
-                    "Trick the computer",
-                    "Increase randomness"
-                ],
-                "correctAnswer": 1,
-                "explanation": "Have a system to break ties so you don't agonize over 50/50 choices."
-            },
-            {
-                "id": 19,
-                "text": "Post-Op care would fall under which Study Week category?",
-                "options": [
-                    "Week 1: Safety",
-                    "Week 3: Basic Care & Comfort / Physiological",
-                    "Week 2: Psychosocial",
-                    "Week 5: Practice"
-                ],
-                "correctAnswer": 1,
-                "explanation": "Basic Care and Physiological Adaptation cover physical care."
-            },
-            {
-                "id": 20,
-                "text": "The ultimate goal of the study plan is:",
-                "options": [
-                    "To memorize everything",
-                    "To build confidence and tactical awareness strategies",
-                    "To be fast",
-                    "To read 10 books"
-                ],
-                "correctAnswer": 1,
-                "explanation": "Knowledge + Strategy + Confidence = Passing."
-            }
-        ]
-    },
-    {
         "id": 2,
         "episodeId": 2,
         "title": "Management Quiz",
@@ -6599,492 +6351,682 @@
         ]
     },
     {
-        "id": 10,
+        "id": 114,
         "episodeId": 11,
-        "title": "Respiratory, Neurological & Endocrine",
-        "description": "COPD, Asthma, Stroke, Seizures, Diabetes, Thyroid, ABGs",
-        "questionCount": 40,
-        "color": "from-rose-600 to-pink-900",
+        "title": "Heme & GI Pathologies - Part A",
+        "description": "Anemia, Sickle Cell, Coagulation Disorders (DIC, HIT, Hemophilia)",
+        "questionCount": 30,
+        "color": "from-red-600 to-red-900",
         "questions": [
             {
                 "id": 1,
-                "text": "A client with COPD should be positioned:",
+                "text": "What is the primary cause of pain in a Sickle Cell Vaso-Occlusive Crisis?",
                 "options": [
-                    "Supine",
-                    "High Fowler's",
-                    "Trendelenburg",
-                    "Prone"
+                    "Infection",
+                    "Tissue Ischemia caused by sickled cells blocking blood flow",
+                    "Bone fractures",
+                    "High BP"
                 ],
                 "correctAnswer": 1,
-                "explanation": "High Fowler's (sitting upright) maximizes lung expansion and eases breathing in COPD. Also use pursed-lip breathing."
+                "explanation": "Sickled cells plug small vessels, starving tissues of oxygen."
             },
             {
                 "id": 2,
-                "text": "What oxygen level is appropriate for a client with COPD?",
+                "text": "What is a 'Vaso-Occlusive Crisis'?",
                 "options": [
-                    "100% oxygen",
-                    "1-3 L/min via nasal cannula",
-                    "10 L/min via mask",
-                    "No oxygen needed"
+                    "A panic attack",
+                    "Severe pain episode due to sickled cells blocking microcirculation",
+                    "A bleeding event",
+                    "A stroke"
                 ],
                 "correctAnswer": 1,
-                "explanation": "COPD clients need low-flow oxygen (1-3 L/min) to maintain hypoxic drive. High oxygen can suppress respiratory drive."
+                "explanation": "The hallmark emergency of Sickle Cell Disease."
             },
             {
                 "id": 3,
-                "text": "A client having a tonic-clonic seizure. What is the priority action?",
+                "text": "Which condition is characterized by a deficiency in Factor VIII?",
                 "options": [
-                    "Restrain the client",
-                    "Insert a tongue blade",
-                    "Protect from injury and turn to side",
-                    "Give oral medications"
+                    "Hemophilia A",
+                    "Hemophilia B",
+                    "Von Willebrand Disease",
+                    "DIC"
                 ],
-                "correctAnswer": 2,
-                "explanation": "Protect from injury, turn to side (prevents aspiration), loosen clothing. Never restrain or put anything in mouth. Time the seizure."
+                "correctAnswer": 0,
+                "explanation": "Classic Hemophilia (A) = Factor Eight (Eight sounds like A)."
             },
             {
                 "id": 4,
-                "text": "Which ABG indicates respiratory acidosis?",
+                "text": "Hemophilia B is a deficiency in:",
                 "options": [
-                    "pH 7.50, PaCO2 30, HCO3 24",
-                    "pH 7.30, PaCO2 50, HCO3 24",
-                    "pH 7.50, PaCO2 40, HCO3 30",
-                    "pH 7.30, PaCO2 40, HCO3 18"
+                    "Factor VIII",
+                    "Factor IX",
+                    "Platelets",
+                    "Calcium"
                 ],
                 "correctAnswer": 1,
-                "explanation": "Respiratory acidosis: pH <7.35, PaCO2 >45 (retaining CO2). Causes: COPD, hypoventilation, respiratory depression."
+                "explanation": "Christmas Disease = Factor IX."
             },
             {
                 "id": 5,
-                "text": "A client with diabetes has blood glucose of 45 mg/dL. What should the nurse do?",
+                "text": "What is the classic sign of deep bleeding in Hemophilia?",
                 "options": [
-                    "Give insulin",
-                    "Give 15g simple carbohydrate",
-                    "Call the provider only",
-                    "Recheck in 2 hours"
+                    "Nosebleeds",
+                    "Hemarthrosis (Bleeding into joints)",
+                    "Petechiae",
+                    "Hematemesis"
                 ],
                 "correctAnswer": 1,
-                "explanation": "Hypoglycemia (<70 mg/dL): Give 15g simple carbs (juice, glucose tablets), recheck in 15 min. If unconscious, give glucagon or D50W IV."
+                "explanation": "Repeated joint bleeds cause chronic deformity and pain."
             },
             {
                 "id": 6,
-                "text": "A client with asthma is wheezing. Which medication provides quickest relief?",
+                "text": "Von Willebrand Disease is a defect in:",
                 "options": [
-                    "Inhaled corticosteroid",
-                    "Albuterol (bronchodilator)",
-                    "Oral prednisone",
-                    "Antibiotic"
+                    "Red Blood Cells",
+                    "Platelet Adhesion (The 'glue' helps platelets stick)",
+                    "White Blood Cells",
+                    "Potassium"
                 ],
                 "correctAnswer": 1,
-                "explanation": "Albuterol (beta-2 agonist) provides quick relief of bronchospasm. Corticosteroids reduce inflammation but take hours/days to work."
+                "explanation": "VWF binds platelets to the vessel wall injury."
             },
             {
                 "id": 7,
-                "text": "Which sign indicates increased intracranial pressure?",
+                "text": "What is the paradox of HIT (Heparin Induced Thrombocytopenia)?",
                 "options": [
-                    "Decreased blood pressure",
-                    "Widening pulse pressure",
-                    "Tachycardia",
-                    "Constricted pupils"
+                    "Bleeding stops",
+                    "Low platelets but widespread CLOTTING (Thrombosis)",
+                    "High platelets but bleeding",
+                    "No symptoms"
                 ],
                 "correctAnswer": 1,
-                "explanation": "Cushing's triad (late ICP sign): Widening pulse pressure, bradycardia, irregular respirations. Also: decreased LOC, headache, vomiting, dilated pupils."
+                "explanation": "Antibodies activate platelets, causing them to clump (clot) and get used up (low count)."
             },
             {
                 "id": 8,
-                "text": "A client with hypothyroidism will have:",
+                "text": "The immediate intervention for HIT is:",
                 "options": [
-                    "Weight loss and tachycardia",
-                    "Weight gain and bradycardia",
-                    "Exophthalmos",
-                    "Heat intolerance"
+                    "Give more Heparin",
+                    "Stop Heparin immediately and switch to a direct thrombin inhibitor (e.g., Argatroban)",
+                    "Give Platelets",
+                    "Wait"
                 ],
                 "correctAnswer": 1,
-                "explanation": "Hypothyroidism: Weight gain, bradycardia, fatigue, cold intolerance, constipation, depression. Treat with levothyroxine."
+                "explanation": "Stop the trigger. Never give platelets (feeds the fire)."
             },
             {
                 "id": 9,
-                "text": "Which ABG indicates metabolic alkalosis?",
+                "text": "DIC (Disseminated Intravascular Coagulation) is typically triggered by:",
                 "options": [
-                    "pH 7.30, PaCO2 50, HCO3 24",
-                    "pH 7.50, PaCO2 40, HCO3 30",
-                    "pH 7.30, PaCO2 40, HCO3 18",
-                    "pH 7.50, PaCO2 30, HCO3 24"
+                    "Eating poorly",
+                    "Severe Sepsis, Trauma, or Obstetric complications",
+                    "Mild virus",
+                    "Stress"
                 ],
                 "correctAnswer": 1,
-                "explanation": "Metabolic alkalosis: pH >7.45, HCO3 >26. Causes: vomiting, NG suction, excess antacids, diuretics."
+                "explanation": "It's a secondary complication of a major shock to the system."
             },
             {
                 "id": 10,
-                "text": "A client with pneumonia should:",
+                "text": "In DIC, patients are at risk for:",
                 "options": [
-                    "Avoid coughing",
-                    "Cough and deep breathe every 2 hours",
-                    "Restrict fluids",
-                    "Stay on bed rest"
+                    "Only bleeding",
+                    "Only clotting",
+                    "Both massive Clotting and massive Hemorrhage simultaneously",
+                    "None"
                 ],
-                "correctAnswer": 1,
-                "explanation": "Encourage coughing/deep breathing, incentive spirometer, fluids (thins secretions), ambulation. Monitor for respiratory distress."
+                "correctAnswer": 2,
+                "explanation": "Clotting factors are used up in micro-clots, leading to bleeding everywhere else."
             },
             {
                 "id": 11,
-                "text": "A client post-stroke has left-sided weakness. Where should the nurse stand during ambulation?",
+                "text": "Common signs of anemia include:",
                 "options": [
-                    "On the left (weak) side",
-                    "On the right (strong) side",
-                    "In front",
-                    "Behind"
+                    "Fever",
+                    "Pallor, Fatigue, Dyspnea, Tachycardia",
+                    "High BP",
+                    "Rash"
                 ],
-                "correctAnswer": 0,
-                "explanation": "Stand on the weaker side to provide support and prevent falls. Use gait belt for safety."
+                "correctAnswer": 1,
+                "explanation": "Lack of RBCs means lack of Oxygen -> Heart beats faster to compensate."
             },
             {
                 "id": 12,
-                "text": "Which finding indicates DKA (diabetic ketoacidosis)?",
+                "text": "Neutropenia is defined as an Absolute Neutrophil Count (ANC) below:",
                 "options": [
-                    "Blood glucose 45 mg/dL",
-                    "Blood glucose 600 mg/dL with fruity breath",
-                    "Normal glucose with confusion",
-                    "Glucose 150 mg/dL"
+                    "5000",
+                    "1500",
+                    "500 (Severe)",
+                    "10000"
                 ],
-                "correctAnswer": 1,
-                "explanation": "DKA: Hyperglycemia (>250), ketones, fruity breath, Kussmaul respirations, dehydration. Treat with IV insulin and fluids."
+                "correctAnswer": 2,
+                "explanation": "< 500 is critical neutropenia. Infection risk is extreme."
             },
             {
                 "id": 13,
-                "text": "A client with COPD is receiving oxygen. Which finding is concerning?",
+                "text": "For a neutropenic patient, a fever is:",
                 "options": [
-                    "SpO2 90%",
-                    "Respiratory rate 12",
-                    "Respiratory rate 8",
-                    "Pink mucous membranes"
+                    "Normal",
+                    "A medical emergency requiring immediate antibiotics",
+                    "Wait and see",
+                    "Treat with Tylenol only"
                 ],
-                "correctAnswer": 2,
-                "explanation": "Respiratory rate <12 indicates respiratory depression from too much oxygen (suppressed hypoxic drive). Reduce oxygen, stimulate breathing."
+                "correctAnswer": 1,
+                "explanation": "They have no immune system to fight. Sepsis can kill in hours."
             },
             {
                 "id": 14,
-                "text": "Which medication prevents seizures?",
+                "text": "What type of blood product is used for clotting factor deficiencies (like bleeding in DIC)?",
                 "options": [
-                    "Phenytoin (Dilantin)",
-                    "Albuterol",
-                    "Insulin",
-                    "Furosemide"
+                    "Packed RBCs",
+                    "Fresh Frozen Plasma (FFP) or Cryoprecipitate",
+                    "Albumin",
+                    "Saline"
                 ],
-                "correctAnswer": 0,
-                "explanation": "Anticonvulsants (phenytoin, valproic acid, carbamazepine) prevent seizures. Monitor drug levels, don't stop abruptly."
+                "correctAnswer": 1,
+                "explanation": "FFP contains all clotting factors. Cryo is concentrated Fibrinogen/Factor VIII."
             },
             {
                 "id": 15,
-                "text": "A client with hyperthyroidism will have:",
+                "text": "How long can a unit of PRBCs hang for transfusion before it must be taken down?",
                 "options": [
-                    "Weight gain and lethargy",
-                    "Weight loss and tachycardia",
-                    "Bradycardia",
-                    "Cold intolerance"
+                    "2 hours",
+                    "4 hours max",
+                    "6 hours",
+                    "12 hours"
                 ],
                 "correctAnswer": 1,
-                "explanation": "Hyperthyroidism (Graves' disease): Weight loss, tachycardia, heat intolerance, exophthalmos, tremors, anxiety. Treat with antithyroid drugs or radioactive iodine."
+                "explanation": "After 4 hours, bacterial growth risk increases significantly."
             },
             {
                 "id": 16,
-                "text": "Which ABG indicates respiratory alkalosis?",
+                "text": "The most common congenital immunodeficiency is:",
                 "options": [
-                    "pH 7.50, PaCO2 30, HCO3 24",
-                    "pH 7.30, PaCO2 50, HCO3 24",
-                    "pH 7.50, PaCO2 40, HCO3 30",
-                    "pH 7.30, PaCO2 40, HCO3 18"
+                    "SCID",
+                    "Selective IgA Deficiency",
+                    "HIV",
+                    "Lupus"
                 ],
-                "correctAnswer": 0,
-                "explanation": "Respiratory alkalosis: pH >7.45, PaCO2 <35 (blowing off CO2). Causes: hyperventilation, anxiety, pain, fever."
+                "correctAnswer": 1,
+                "explanation": "Often asymptomatic but carries risk of anaphylaxis with infusions."
             },
             {
                 "id": 17,
-                "text": "A client with asthma should avoid:",
+                "text": "Patients with IgA deficiency are at high risk for what during blood transfusion?",
                 "options": [
-                    "Exercise",
-                    "Triggers (smoke, allergens, cold air)",
-                    "Fluids",
-                    "All medications"
+                    "Fever",
+                    "Anaphylaxis",
+                    "Volume overload",
+                    "Iron overload"
                 ],
                 "correctAnswer": 1,
-                "explanation": "Avoid asthma triggers: smoke, allergens, cold air, exercise (without pre-medication). Use peak flow meter to monitor."
+                "explanation": "Their body attacks the IgA in the donor blood."
             },
             {
                 "id": 18,
-                "text": "A client post-stroke has difficulty swallowing. What is the priority?",
+                "text": "What is TRALI?",
                 "options": [
-                    "Give oral medications",
-                    "NPO until swallow evaluation",
-                    "Give thin liquids",
-                    "Force feed"
+                    "Transfusion Related Acute Lung Injury",
+                    "A minor rash",
+                    "Low BP",
+                    "Infection"
                 ],
-                "correctAnswer": 1,
-                "explanation": "Dysphagia increases aspiration risk. Keep NPO until swallow study. Elevate HOB 30-90\u00b0, thicken liquids if cleared."
+                "correctAnswer": 0,
+                "explanation": "Sudden pulmonary edema after transfusion (non-cardiac origin)."
             },
             {
                 "id": 19,
-                "text": "Which sign indicates hypoglycemia?",
+                "text": "What is the first nursing action if a transfusion reaction is suspected?",
                 "options": [
-                    "Fruity breath",
-                    "Shakiness, sweating, confusion",
-                    "Polyuria",
-                    "Dry skin"
+                    "Call the doctor",
+                    "Stop the transfusion immediately",
+                    "Slow the rate",
+                    "Give Benadryl"
                 ],
                 "correctAnswer": 1,
-                "explanation": "Hypoglycemia: Shakiness, sweating, tachycardia, confusion, hunger. Treat immediately with 15g simple carbs. Hyperglycemia: polyuria, polydipsia, dry skin."
+                "explanation": "Stop the input of the allergen/toxin first."
             },
             {
                 "id": 20,
-                "text": "Which ABG indicates metabolic acidosis?",
+                "text": "Iron Overload (Hemosiderosis) is a complication of:",
                 "options": [
-                    "pH 7.30, PaCO2 40, HCO3 18",
-                    "pH 7.50, PaCO2 40, HCO3 30",
-                    "pH 7.30, PaCO2 50, HCO3 24",
-                    "pH 7.50, PaCO2 30, HCO3 24"
+                    "Diet",
+                    "Chronic Transfusions (e.g., in Sickle Cell/Thalassemia)",
+                    "Bleeding",
+                    "Infection"
                 ],
-                "correctAnswer": 0,
-                "explanation": "Metabolic acidosis: pH <7.35, HCO3 <22. Causes: DKA, renal failure, diarrhea, lactic acidosis."
+                "correctAnswer": 1,
+                "explanation": "The body has no way to excrete excess iron from transfused cells."
             },
             {
                 "id": 21,
-                "text": "A client with COPD should use which breathing technique?",
+                "text": "What medication is used for Iron Overload?",
                 "options": [
-                    "Rapid shallow breathing",
-                    "Pursed-lip breathing",
-                    "Mouth breathing only",
-                    "Holding breath"
+                    "Iron supplements",
+                    "Chelation Therapy (e.g., Deferoxamine)",
+                    "Heparin",
+                    "Steroids"
                 ],
                 "correctAnswer": 1,
-                "explanation": "Pursed-lip breathing: Inhale through nose, exhale slowly through pursed lips. Prevents airway collapse, improves gas exchange."
+                "explanation": "Chelators bind the iron so it can be excreted."
             },
             {
                 "id": 22,
-                "text": "A client with increased ICP should avoid:",
+                "text": "ITP (Immune Thrombocytopenic Purpura) is caused by:",
                 "options": [
-                    "Elevating head of bed 30\u00b0",
-                    "Valsalva maneuver (straining)",
-                    "Turning every 2 hours",
-                    "Quiet environment"
+                    "Bacteria",
+                    "Autoimmune destruction of platelets",
+                    "Bone marrow failure",
+                    "Loss of blood"
                 ],
                 "correctAnswer": 1,
-                "explanation": "Avoid Valsalva, hip flexion, coughing (increases ICP). Elevate HOB 30\u00b0, keep head midline, prevent constipation, minimize stimulation."
+                "explanation": "The spleen destroys antibody-coated platelets."
             },
             {
                 "id": 23,
-                "text": "Which is a sign of thyroid storm?",
+                "text": "Why are platelet transfusions generally AVOIDED in ITP unless life-threatening?",
                 "options": [
-                    "Bradycardia and hypothermia",
-                    "Severe tachycardia and hyperthermia",
-                    "Weight gain",
-                    "Lethargy"
+                    "They are expensive",
+                    "The antibodies will just destroy the new platelets immediately",
+                    "Patients don't need them",
+                    "They cause pain"
                 ],
                 "correctAnswer": 1,
-                "explanation": "Thyroid storm (hyperthyroid crisis): Severe tachycardia, hyperthermia, agitation, delirium. Life-threatening. Give antithyroid drugs, beta blockers, cooling measures."
+                "explanation": "It's like pouring water into a bucket with a hole. You treat the immune system instead (Steroids/IVIG)."
             },
             {
                 "id": 24,
-                "text": "A client with pneumonia has rusty-colored sputum. This indicates:",
+                "text": "What gauge IV is preferred for blood transfusion?",
                 "options": [
-                    "Viral pneumonia",
-                    "Bacterial pneumonia (pneumococcal)",
-                    "Tuberculosis",
-                    "Normal finding"
+                    "24g",
+                    "22g",
+                    "18g or 20g",
+                    "Central line only"
                 ],
-                "correctAnswer": 1,
-                "explanation": "Rusty/blood-tinged sputum suggests bacterial pneumonia (Streptococcus pneumoniae). Green sputum = Pseudomonas. Treat with antibiotics."
+                "correctAnswer": 2,
+                "explanation": "Larger bore prevents hemolysis (destruction) of red cells during infusion."
             },
             {
                 "id": 25,
-                "text": "A client post-seizure is confused and sleepy. This is called:",
+                "text": "Which saline is the ONLY compatible fluid with blood products?",
                 "options": [
-                    "Aura",
-                    "Postictal state",
-                    "Status epilepticus",
-                    "Tonic phase"
+                    "Lactated Ringer's",
+                    "Dextrose 5%",
+                    "0.9% Normal Saline",
+                    "Sterile Water"
                 ],
-                "correctAnswer": 1,
-                "explanation": "Postictal state: Confusion, drowsiness, headache after seizure. Provide safety, reorient, allow rest. Document seizure characteristics."
+                "correctAnswer": 2,
+                "explanation": "Dextrose causes hemolysis. Calcium in LR causes clotting."
             },
             {
                 "id": 26,
-                "text": "Which insulin should be given for DKA?",
+                "text": "What is polycythemia?",
                 "options": [
-                    "NPH",
-                    "Glargine (Lantus)",
-                    "Regular insulin IV",
-                    "No insulin needed"
+                    "Low RBCs",
+                    "Too many Red Blood Cells (Thick blood)",
+                    "Low platelets",
+                    "Low WBCs"
                 ],
-                "correctAnswer": 2,
-                "explanation": "DKA requires regular insulin IV drip (only insulin that can be given IV). Also give IV fluids, monitor potassium, treat underlying cause."
+                "correctAnswer": 1,
+                "explanation": "Viscous blood risks clotting. Treat with phlebotomy."
             },
             {
                 "id": 27,
-                "text": "A client with asthma has a peak flow reading in the red zone. This means:",
+                "text": "Pancytopenia means:",
                 "options": [
-                    "Good control",
-                    "Caution needed",
-                    "Medical emergency",
-                    "Normal finding"
+                    "Low platelets only",
+                    "Low RBCs, Low WBCs, and Low Platelets (All cell lines low)",
+                    "High cells",
+                    "Infection"
                 ],
-                "correctAnswer": 2,
-                "explanation": "Peak flow zones: Green (80-100% = good), Yellow (50-80% = caution), Red (<50% = emergency). Red zone requires immediate treatment."
+                "correctAnswer": 1,
+                "explanation": "Bone marrow failure (Aplastic Anemia)."
             },
             {
                 "id": 28,
-                "text": "Which position is best for a client with increased ICP?",
+                "text": "The Schilling Test is used to diagnose:",
                 "options": [
-                    "Flat supine",
-                    "Head elevated 30\u00b0",
-                    "Trendelenburg",
-                    "Prone"
+                    "Sickle Cell",
+                    "Pernicious Anemia (B12 deficiency)",
+                    "Iron deficiency",
+                    "Leukemia"
                 ],
                 "correctAnswer": 1,
-                "explanation": "Elevate HOB 30\u00b0 to promote venous drainage and reduce ICP. Keep head midline (avoid neck flexion/rotation)."
+                "explanation": "Tests B12 absorption."
             },
             {
                 "id": 29,
-                "text": "A client with diabetes is NPO for surgery. What should the nurse do with morning insulin?",
+                "text": "What is the priority instruction for a patient taking liquid iron supplements?",
                 "options": [
-                    "Give full dose",
-                    "Hold all insulin",
-                    "Give half dose or per protocol",
-                    "Give double dose"
+                    "Take with milk",
+                    "Drink through a straw to prevent staining teeth",
+                    "Chew it",
+                    "Take on empty stomach"
                 ],
-                "correctAnswer": 2,
-                "explanation": "NPO: Usually give half dose long-acting insulin or per facility protocol. Monitor glucose closely. Don't give rapid-acting insulin without food."
+                "correctAnswer": 1,
+                "explanation": "Iron stains teeth black."
             },
             {
                 "id": 30,
-                "text": "Which finding indicates status epilepticus?",
+                "text": "Taking Iron with Vitamin C (Orange Juice) helps with:",
                 "options": [
-                    "Single seizure lasting 2 minutes",
-                    "Continuous seizures >5 minutes",
-                    "Postictal confusion",
-                    "Aura before seizure"
-                ],
-                "correctAnswer": 1,
-                "explanation": "Status epilepticus: Continuous seizure >5 min or repeated seizures without regaining consciousness. Medical emergency. Give IV benzodiazepines."
-            },
-            {
-                "id": 31,
-                "text": "A client with COPD should receive which vaccine?",
-                "options": [
-                    "MMR",
-                    "Pneumococcal and influenza",
-                    "Varicella",
-                    "No vaccines needed"
-                ],
-                "correctAnswer": 1,
-                "explanation": "COPD clients need pneumococcal vaccine and annual flu vaccine to prevent respiratory infections."
-            },
-            {
-                "id": 32,
-                "text": "Which cranial nerve is assessed by having the client smile and frown?",
-                "options": [
-                    "CN II (Optic)",
-                    "CN VII (Facial)",
-                    "CN IX (Glossopharyngeal)",
-                    "CN XII (Hypoglossal)"
-                ],
-                "correctAnswer": 1,
-                "explanation": "CN VII (Facial) controls facial expressions. Bell's palsy affects CN VII causing facial drooping. Stroke can also cause facial asymmetry."
-            },
-            {
-                "id": 33,
-                "text": "Which is a sign of hyperglycemia?",
-                "options": [
-                    "Shakiness and sweating",
-                    "Polyuria, polydipsia, polyphagia",
-                    "Bradycardia",
-                    "Hypertension"
-                ],
-                "correctAnswer": 1,
-                "explanation": "Hyperglycemia: 3 P's (Polyuria, Polydipsia, Polyphagia), blurred vision, fatigue, dry skin. Chronic hyperglycemia causes complications."
-            },
-            {
-                "id": 34,
-                "text": "A client with pneumonia has decreased breath sounds in right lower lobe. This indicates:",
-                "options": [
-                    "Normal finding",
-                    "Consolidation/fluid in that area",
-                    "Hyperventilation",
-                    "Asthma"
-                ],
-                "correctAnswer": 1,
-                "explanation": "Decreased/absent breath sounds indicate consolidation, fluid, or collapsed lung. Pneumonia causes consolidation. Also assess for dullness to percussion."
-            },
-            {
-                "id": 35,
-                "text": "Which is the first step in ABG interpretation?",
-                "options": [
-                    "Look at PaCO2",
-                    "Look at HCO3",
-                    "Look at pH",
-                    "Look at PaO2"
-                ],
-                "correctAnswer": 2,
-                "explanation": "ABG steps: 1) pH (acidosis <7.35 or alkalosis >7.45), 2) PaCO2 (respiratory), 3) HCO3 (metabolic), 4) Determine if compensated."
-            },
-            {
-                "id": 36,
-                "text": "A client with stroke has aphasia. This means:",
-                "options": [
-                    "Difficulty swallowing",
-                    "Difficulty speaking or understanding language",
-                    "Paralysis",
-                    "Vision loss"
-                ],
-                "correctAnswer": 1,
-                "explanation": "Aphasia: Language impairment. Expressive = can't speak, Receptive = can't understand, Global = both. Dysphagia = swallowing difficulty."
-            },
-            {
-                "id": 37,
-                "text": "Which medication treats hyperthyroidism?",
-                "options": [
-                    "Levothyroxine",
-                    "Methimazole (Tapazole)",
-                    "Insulin",
-                    "Prednisone"
-                ],
-                "correctAnswer": 1,
-                "explanation": "Antithyroid drugs (methimazole, PTU) treat hyperthyroidism. Also: radioactive iodine or thyroidectomy. Levothyroxine treats hypothyroidism."
-            },
-            {
-                "id": 38,
-                "text": "A client with asthma is using a metered-dose inhaler. What should the nurse teach?",
-                "options": [
-                    "Inhale quickly",
-                    "Shake inhaler, exhale, inhale slowly while pressing canister",
-                    "Hold breath 5 seconds",
-                    "Use without spacer"
-                ],
-                "correctAnswer": 1,
-                "explanation": "MDI technique: Shake, exhale fully, press canister while inhaling slowly, hold breath 10 seconds. Use spacer for better delivery."
-            },
-            {
-                "id": 39,
-                "text": "Which is a late sign of increased ICP?",
-                "options": [
-                    "Headache",
-                    "Restlessness",
-                    "Cushing's triad",
+                    "Taste",
+                    "Absorption",
+                    "Digestion",
                     "Nausea"
                 ],
-                "correctAnswer": 2,
-                "explanation": "Early ICP signs: Headache, nausea, restlessness, decreased LOC. Late signs: Cushing's triad (widening pulse pressure, bradycardia, irregular respirations), dilated pupils."
-            },
+                "correctAnswer": 1,
+                "explanation": "Acidic environment increases Iron absorption."
+            }
+        ]
+    },
+    {
+        "id": 115,
+        "episodeId": 11,
+        "title": "GI & Hepatic Pathologies - Part B",
+        "description": "IBD (UC vs Crohn's), Liver Cirrhosis, Biliary Atresia, Peritonitis",
+        "questionCount": 25,
+        "color": "from-yellow-600 to-yellow-900",
+        "questions": [
             {
-                "id": 40,
-                "text": "A client with diabetes has HbA1c of 9%. This indicates:",
+                "id": 1,
+                "text": "The key anatomical difference between Ulcerative Colitis (UC) and Crohn's Disease is:",
                 "options": [
-                    "Good glucose control",
-                    "Poor glucose control",
-                    "Hypoglycemia",
-                    "Normal finding"
+                    "UC is widespread; Crohn's is local",
+                    "UC is continuous inflammation of the colon/rectum (mucosal layer); Crohn's is 'skip lesions' anywhere in GI tract (transmural)",
+                    "UC affects the mouth; Crohn's affects the stomach",
+                    "There is no difference"
                 ],
                 "correctAnswer": 1,
-                "explanation": "HbA1c goal: <7% for most diabetics. 9% indicates poor control over past 2-3 months. Adjust medications, reinforce diet/exercise."
+                "explanation": "UC = Colon only, superficial. Crohn's = Mouth to Anus, deep fissures."
+            },
+            {
+                "id": 2,
+                "text": "A life-threatening complication of Ulcerative Colitis causing rapid colon dilation is:",
+                "options": [
+                    "Toxic Megacolon",
+                    "Constipation",
+                    "Gastritis",
+                    "Reflux"
+                ],
+                "correctAnswer": 0,
+                "explanation": "The colon dilates, paralyzes, and can rupture. Emergency."
+            },
+            {
+                "id": 3,
+                "text": "Because Crohn's Disease is transmural (goes through the wall), patients are at high risk for:",
+                "options": [
+                    "Fistulas (tunnels) and Abscesses",
+                    "Weight gain",
+                    "Hiatal hernia",
+                    "Clear skin"
+                ],
+                "correctAnswer": 0,
+                "explanation": "Deep inflammation creates tunnels between loops of bowel or to the skin/bladder."
+            },
+            {
+                "id": 4,
+                "text": "The classic triad of signs for Biliary Atresia in infants includes:",
+                "options": [
+                    "Fever, Cough, Rash",
+                    "Jaundice (>2 weeks), Dark Urine, and Light/Clay-colored Stools",
+                    "Crying, Sleeping, Eating",
+                    "Diarrhea, Vomiting, Pain"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Bile is blocked from entering the gut (pale stool) and backs up into blood (jaundice/dark urine)."
+            },
+            {
+                "id": 5,
+                "text": "Biliary Atresia requires which surgical intervention?",
+                "options": [
+                    "Appendectomy",
+                    "Kasai Procedure (Hepatoportoenterostomy) or Liver Transplant",
+                    "Whipple",
+                    "Tonsillectomy"
+                ],
+                "correctAnswer": 1,
+                "explanation": "The Kasai procedure connects the bowel directly to the liver to drain bile."
+            },
+            {
+                "id": 6,
+                "text": "Hepatic Encephalopathy in cirrhosis is caused by high levels of:",
+                "options": [
+                    "Glucose",
+                    "Ammonia",
+                    "Potassium",
+                    "Sodium"
+                ],
+                "correctAnswer": 1,
+                "explanation": "The liver can't convert ammonia (toxic) to urea. Ammonia crosses the Blood-Brain Barrier."
+            },
+            {
+                "id": 7,
+                "text": "The primary medication used to treat Hepatic Encephalopathy by trapping ammonia is:",
+                "options": [
+                    "Lactulose",
+                    "Lisinopril",
+                    "Lasix",
+                    "Lithium"
+                ],
+                "correctAnswer": 0,
+                "explanation": "Lactulose causes diarrhea, excreting ammonia in the stool."
+            },
+            {
+                "id": 8,
+                "text": "What is the hallmark sign of Peritonitis (Acute Abdomen)?",
+                "options": [
+                    "Hunger",
+                    "Rigid, board-like abdomen and rebound tenderness",
+                    "Soft belly",
+                    "Hyperactive bowel sounds"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Severe inflammation of the lining causes muscles to spasm (guarding/rigidity)."
+            },
+            {
+                "id": 9,
+                "text": "Esophageal Varices are caused by:",
+                "options": [
+                    "Eating spicy food",
+                    "Portal Hypertension (High pressure in liver veins backing up)",
+                    "Smoking",
+                    "Vomiting"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Cirrhotic liver increases pressure, blowing up collateral veins in the throat."
+            },
+            {
+                "id": 10,
+                "text": "If Esophageal Varices rupture, the priority is:",
+                "options": [
+                    "Offer water",
+                    "Airway protection and Hemodynamic stability (Shock management)",
+                    "Pain meds",
+                    "Antibiotics"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Massive hemorrhage + Airway threat. Life-threatening."
+            },
+            {
+                "id": 11,
+                "text": "Which diet is recommended during an acute exacerbation of IBD (Crohn's/UC)?",
+                "options": [
+                    "High Fiber",
+                    "Low Residue/Low Fiber, High Protein, High Calorie",
+                    "Liquid only",
+                    "Spicy"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Rest the bowel. Avoid fiber which increases bulk and work."
+            },
+            {
+                "id": 12,
+                "text": "Ascites in liver failure is primarily caused by:",
+                "options": [
+                    "Drinking water",
+                    "Portal Hypertension and Low Albumin (decreased oncotic pressure)",
+                    "High sodium",
+                    "Infection"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Fluid pushes out due to pressure and isn't pulled back in due to lack of protein."
+            },
+            {
+                "id": 13,
+                "text": "A Sengstaken-Blakemore tube is used for:",
+                "options": [
+                    "Feeding",
+                    "Compressing bleeding Esophageal Varices (Tamponade)",
+                    "Draining urine",
+                    "Breathing"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Emergency temporary measure to stop bleeding varices via balloon pressure."
+            },
+            {
+                "id": 14,
+                "text": "Asterixis ('Liver Flap') is a sign of:",
+                "options": [
+                    "Parkinson's",
+                    "Hepatic Encephalopathy (High Ammonia)",
+                    "Stroke",
+                    "Withdrawal"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Hand-flapping tremor when wrist is extended."
+            },
+            {
+                "id": 15,
+                "text": "Which position is best for a patient after a Liver Biopsy?",
+                "options": [
+                    "Left Side",
+                    "Right Side (to compress the puncture site)",
+                    "Prone",
+                    "Supine"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Liver is on the right. Lying on it applies pressure to stop bleeding."
+            },
+            {
+                "id": 16,
+                "text": "Spider Angiomas and Palmar Erythema are skin signs of:",
+                "options": [
+                    "Cirrhosis / Liver Failure",
+                    "Kidney Failure",
+                    "Lupus",
+                    "Allergy"
+                ],
+                "correctAnswer": 0,
+                "explanation": "Caused by high estrogen levels that the liver fails to metabolize."
+            },
+            {
+                "id": 17,
+                "text": "Murphy's Sign (pain on inspiration with RUQ palpation) suggests:",
+                "options": [
+                    "Appendicitis",
+                    "Cholecystitis (Gallbladder inflammation)",
+                    "Pancreatitis",
+                    "Gastritis"
+                ],
+                "correctAnswer": 1,
+                "explanation": "The diaphragm pushes the inflamed gallbladder down into your fingers."
+            },
+            {
+                "id": 18,
+                "text": "McBurney's Point is associated with:",
+                "options": [
+                    "Liver",
+                    "Appendicitis (RLQ pain)",
+                    "Spleen",
+                    "Kidney"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Classic location for Appendix pain."
+            },
+            {
+                "id": 19,
+                "text": "Cullen's Sign (blue discoloration around umbilicus) indicates:",
+                "options": [
+                    "Pregnancy",
+                    "Intra-abdominal bleeding (typically Pancreatitis)",
+                    "Bruise",
+                    "Hernia"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Hemoperitoneum."
+            },
+            {
+                "id": 20,
+                "text": "Steatorrhea (fatty, foul-smelling stool) is a sign of:",
+                "options": [
+                    "Constipation",
+                    "Malabsorption (e.g., Celiac or Pancreatitis)",
+                    "Bleeding",
+                    "Infection"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Fat is not being digested/absorbed."
+            },
+            {
+                "id": 21,
+                "text": "Pancreatitis pain is typically described as:",
+                "options": [
+                    "Cramping",
+                    "Severe, boring pain radiating to the back",
+                    "Burning",
+                    "Coming and going"
+                ],
+                "correctAnswer": 1,
+                "explanation": "The pancreas is retroperitoneal, so pain goes straight through to the back."
+            },
+            {
+                "id": 22,
+                "text": "In Pyloric Stenosis (infants), the classic symptom is:",
+                "options": [
+                    "Diarrhea",
+                    "Projectile Vomiting",
+                    "Fever",
+                    "Rash"
+                ],
+                "correctAnswer": 1,
+                "explanation": "The muscular ring closes off the stomach exit, ejecting food forcefully."
+            },
+            {
+                "id": 23,
+                "text": "Olive-shaped mass in the RUQ is pathognomonic for:",
+                "options": [
+                    "Hernia",
+                    "Pyloric Stenosis",
+                    "Tumor",
+                    "Intussusception"
+                ],
+                "correctAnswer": 1,
+                "explanation": "The hypertrophied pyloric muscle feels like an olive."
+            },
+            {
+                "id": 24,
+                "text": "Intussusception (telescoping bowel) usually presents with:",
+                "options": [
+                    "Constipation",
+                    "Currant-Jelly Stool (blood + mucus) and sausage-shaped mass",
+                    "Clear vomit",
+                    "High fever"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Classic pediatric emergency signs."
+            },
+            {
+                "id": 25,
+                "text": "Hirschsprung's Disease is characterized by:",
+                "options": [
+                    "Diarrhea",
+                    "Megacolon due to lack of nerve cells (aganglionic section) causing constipation/ribbon stools",
+                    "Vomiting",
+                    "Ulcers"
+                ],
+                "correctAnswer": 1,
+                "explanation": "No nerves = No peristalsis = Blockage."
             }
         ]
     },
@@ -11521,6 +11463,495 @@
                 ],
                 "correctAnswer": 2,
                 "explanation": "Critical thrombocytopenia: <20,000/mm\u00b3 (spontaneous bleeding risk). <50,000 = bleeding precautions. Avoid IM injections, rectal temps, aspirin."
+            }
+        ]
+    },
+    {
+        "id": 10,
+        "title": "Respiratory, Neurological & Endocrine",
+        "description": "COPD, Asthma, Stroke, Seizures, Diabetes, Thyroid, ABGs",
+        "questionCount": 40,
+        "color": "from-rose-600 to-pink-900",
+        "questions": [
+            {
+                "id": 1,
+                "text": "A client with COPD should be positioned:",
+                "options": [
+                    "Supine",
+                    "High Fowler's",
+                    "Trendelenburg",
+                    "Prone"
+                ],
+                "correctAnswer": 1,
+                "explanation": "High Fowler's (sitting upright) maximizes lung expansion and eases breathing in COPD. Also use pursed-lip breathing."
+            },
+            {
+                "id": 2,
+                "text": "What oxygen level is appropriate for a client with COPD?",
+                "options": [
+                    "100% oxygen",
+                    "1-3 L/min via nasal cannula",
+                    "10 L/min via mask",
+                    "No oxygen needed"
+                ],
+                "correctAnswer": 1,
+                "explanation": "COPD clients need low-flow oxygen (1-3 L/min) to maintain hypoxic drive. High oxygen can suppress respiratory drive."
+            },
+            {
+                "id": 3,
+                "text": "A client having a tonic-clonic seizure. What is the priority action?",
+                "options": [
+                    "Restrain the client",
+                    "Insert a tongue blade",
+                    "Protect from injury and turn to side",
+                    "Give oral medications"
+                ],
+                "correctAnswer": 2,
+                "explanation": "Protect from injury, turn to side (prevents aspiration), loosen clothing. Never restrain or put anything in mouth. Time the seizure."
+            },
+            {
+                "id": 4,
+                "text": "Which ABG indicates respiratory acidosis?",
+                "options": [
+                    "pH 7.50, PaCO2 30, HCO3 24",
+                    "pH 7.30, PaCO2 50, HCO3 24",
+                    "pH 7.50, PaCO2 40, HCO3 30",
+                    "pH 7.30, PaCO2 40, HCO3 18"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Respiratory acidosis: pH <7.35, PaCO2 >45 (retaining CO2). Causes: COPD, hypoventilation, respiratory depression."
+            },
+            {
+                "id": 5,
+                "text": "A client with diabetes has blood glucose of 45 mg/dL. What should the nurse do?",
+                "options": [
+                    "Give insulin",
+                    "Give 15g simple carbohydrate",
+                    "Call the provider only",
+                    "Recheck in 2 hours"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Hypoglycemia (<70 mg/dL): Give 15g simple carbs (juice, glucose tablets), recheck in 15 min. If unconscious, give glucagon or D50W IV."
+            },
+            {
+                "id": 6,
+                "text": "A client with asthma is wheezing. Which medication provides quickest relief?",
+                "options": [
+                    "Inhaled corticosteroid",
+                    "Albuterol (bronchodilator)",
+                    "Oral prednisone",
+                    "Antibiotic"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Albuterol (beta-2 agonist) provides quick relief of bronchospasm. Corticosteroids reduce inflammation but take hours/days to work."
+            },
+            {
+                "id": 7,
+                "text": "Which sign indicates increased intracranial pressure?",
+                "options": [
+                    "Decreased blood pressure",
+                    "Widening pulse pressure",
+                    "Tachycardia",
+                    "Constricted pupils"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Cushing's triad (late ICP sign): Widening pulse pressure, bradycardia, irregular respirations. Also: decreased LOC, headache, vomiting, dilated pupils."
+            },
+            {
+                "id": 8,
+                "text": "A client with hypothyroidism will have:",
+                "options": [
+                    "Weight loss and tachycardia",
+                    "Weight gain and bradycardia",
+                    "Exophthalmos",
+                    "Heat intolerance"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Hypothyroidism: Weight gain, bradycardia, fatigue, cold intolerance, constipation, depression. Treat with levothyroxine."
+            },
+            {
+                "id": 9,
+                "text": "Which ABG indicates metabolic alkalosis?",
+                "options": [
+                    "pH 7.30, PaCO2 50, HCO3 24",
+                    "pH 7.50, PaCO2 40, HCO3 30",
+                    "pH 7.30, PaCO2 40, HCO3 18",
+                    "pH 7.50, PaCO2 30, HCO3 24"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Metabolic alkalosis: pH >7.45, HCO3 >26. Causes: vomiting, NG suction, excess antacids, diuretics."
+            },
+            {
+                "id": 10,
+                "text": "A client with pneumonia should:",
+                "options": [
+                    "Avoid coughing",
+                    "Cough and deep breathe every 2 hours",
+                    "Restrict fluids",
+                    "Stay on bed rest"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Encourage coughing/deep breathing, incentive spirometer, fluids (thins secretions), ambulation. Monitor for respiratory distress."
+            },
+            {
+                "id": 11,
+                "text": "A client post-stroke has left-sided weakness. Where should the nurse stand during ambulation?",
+                "options": [
+                    "On the left (weak) side",
+                    "On the right (strong) side",
+                    "In front",
+                    "Behind"
+                ],
+                "correctAnswer": 0,
+                "explanation": "Stand on the weaker side to provide support and prevent falls. Use gait belt for safety."
+            },
+            {
+                "id": 12,
+                "text": "Which finding indicates DKA (diabetic ketoacidosis)?",
+                "options": [
+                    "Blood glucose 45 mg/dL",
+                    "Blood glucose 600 mg/dL with fruity breath",
+                    "Normal glucose with confusion",
+                    "Glucose 150 mg/dL"
+                ],
+                "correctAnswer": 1,
+                "explanation": "DKA: Hyperglycemia (>250), ketones, fruity breath, Kussmaul respirations, dehydration. Treat with IV insulin and fluids."
+            },
+            {
+                "id": 13,
+                "text": "A client with COPD is receiving oxygen. Which finding is concerning?",
+                "options": [
+                    "SpO2 90%",
+                    "Respiratory rate 12",
+                    "Respiratory rate 8",
+                    "Pink mucous membranes"
+                ],
+                "correctAnswer": 2,
+                "explanation": "Respiratory rate <12 indicates respiratory depression from too much oxygen (suppressed hypoxic drive). Reduce oxygen, stimulate breathing."
+            },
+            {
+                "id": 14,
+                "text": "Which medication prevents seizures?",
+                "options": [
+                    "Phenytoin (Dilantin)",
+                    "Albuterol",
+                    "Insulin",
+                    "Furosemide"
+                ],
+                "correctAnswer": 0,
+                "explanation": "Anticonvulsants (phenytoin, valproic acid, carbamazepine) prevent seizures. Monitor drug levels, don't stop abruptly."
+            },
+            {
+                "id": 15,
+                "text": "A client with hyperthyroidism will have:",
+                "options": [
+                    "Weight gain and lethargy",
+                    "Weight loss and tachycardia",
+                    "Bradycardia",
+                    "Cold intolerance"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Hyperthyroidism (Graves' disease): Weight loss, tachycardia, heat intolerance, exophthalmos, tremors, anxiety. Treat with antithyroid drugs or radioactive iodine."
+            },
+            {
+                "id": 16,
+                "text": "Which ABG indicates respiratory alkalosis?",
+                "options": [
+                    "pH 7.50, PaCO2 30, HCO3 24",
+                    "pH 7.30, PaCO2 50, HCO3 24",
+                    "pH 7.50, PaCO2 40, HCO3 30",
+                    "pH 7.30, PaCO2 40, HCO3 18"
+                ],
+                "correctAnswer": 0,
+                "explanation": "Respiratory alkalosis: pH >7.45, PaCO2 <35 (blowing off CO2). Causes: hyperventilation, anxiety, pain, fever."
+            },
+            {
+                "id": 17,
+                "text": "A client with asthma should avoid:",
+                "options": [
+                    "Exercise",
+                    "Triggers (smoke, allergens, cold air)",
+                    "Fluids",
+                    "All medications"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Avoid asthma triggers: smoke, allergens, cold air, exercise (without pre-medication). Use peak flow meter to monitor."
+            },
+            {
+                "id": 18,
+                "text": "A client post-stroke has difficulty swallowing. What is the priority?",
+                "options": [
+                    "Give oral medications",
+                    "NPO until swallow evaluation",
+                    "Give thin liquids",
+                    "Force feed"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Dysphagia increases aspiration risk. Keep NPO until swallow study. Elevate HOB 30-90\u00b0, thicken liquids if cleared."
+            },
+            {
+                "id": 19,
+                "text": "Which sign indicates hypoglycemia?",
+                "options": [
+                    "Fruity breath",
+                    "Shakiness, sweating, confusion",
+                    "Polyuria",
+                    "Dry skin"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Hypoglycemia: Shakiness, sweating, tachycardia, confusion, hunger. Treat immediately with 15g simple carbs. Hyperglycemia: polyuria, polydipsia, dry skin."
+            },
+            {
+                "id": 20,
+                "text": "Which ABG indicates metabolic acidosis?",
+                "options": [
+                    "pH 7.30, PaCO2 40, HCO3 18",
+                    "pH 7.50, PaCO2 40, HCO3 30",
+                    "pH 7.30, PaCO2 50, HCO3 24",
+                    "pH 7.50, PaCO2 30, HCO3 24"
+                ],
+                "correctAnswer": 0,
+                "explanation": "Metabolic acidosis: pH <7.35, HCO3 <22. Causes: DKA, renal failure, diarrhea, lactic acidosis."
+            },
+            {
+                "id": 21,
+                "text": "A client with COPD should use which breathing technique?",
+                "options": [
+                    "Rapid shallow breathing",
+                    "Pursed-lip breathing",
+                    "Mouth breathing only",
+                    "Holding breath"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Pursed-lip breathing: Inhale through nose, exhale slowly through pursed lips. Prevents airway collapse, improves gas exchange."
+            },
+            {
+                "id": 22,
+                "text": "A client with increased ICP should avoid:",
+                "options": [
+                    "Elevating head of bed 30\u00b0",
+                    "Valsalva maneuver (straining)",
+                    "Turning every 2 hours",
+                    "Quiet environment"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Avoid Valsalva, hip flexion, coughing (increases ICP). Elevate HOB 30\u00b0, keep head midline, prevent constipation, minimize stimulation."
+            },
+            {
+                "id": 23,
+                "text": "Which is a sign of thyroid storm?",
+                "options": [
+                    "Bradycardia and hypothermia",
+                    "Severe tachycardia and hyperthermia",
+                    "Weight gain",
+                    "Lethargy"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Thyroid storm (hyperthyroid crisis): Severe tachycardia, hyperthermia, agitation, delirium. Life-threatening. Give antithyroid drugs, beta blockers, cooling measures."
+            },
+            {
+                "id": 24,
+                "text": "A client with pneumonia has rusty-colored sputum. This indicates:",
+                "options": [
+                    "Viral pneumonia",
+                    "Bacterial pneumonia (pneumococcal)",
+                    "Tuberculosis",
+                    "Normal finding"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Rusty/blood-tinged sputum suggests bacterial pneumonia (Streptococcus pneumoniae). Green sputum = Pseudomonas. Treat with antibiotics."
+            },
+            {
+                "id": 25,
+                "text": "A client post-seizure is confused and sleepy. This is called:",
+                "options": [
+                    "Aura",
+                    "Postictal state",
+                    "Status epilepticus",
+                    "Tonic phase"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Postictal state: Confusion, drowsiness, headache after seizure. Provide safety, reorient, allow rest. Document seizure characteristics."
+            },
+            {
+                "id": 26,
+                "text": "Which insulin should be given for DKA?",
+                "options": [
+                    "NPH",
+                    "Glargine (Lantus)",
+                    "Regular insulin IV",
+                    "No insulin needed"
+                ],
+                "correctAnswer": 2,
+                "explanation": "DKA requires regular insulin IV drip (only insulin that can be given IV). Also give IV fluids, monitor potassium, treat underlying cause."
+            },
+            {
+                "id": 27,
+                "text": "A client with asthma has a peak flow reading in the red zone. This means:",
+                "options": [
+                    "Good control",
+                    "Caution needed",
+                    "Medical emergency",
+                    "Normal finding"
+                ],
+                "correctAnswer": 2,
+                "explanation": "Peak flow zones: Green (80-100% = good), Yellow (50-80% = caution), Red (<50% = emergency). Red zone requires immediate treatment."
+            },
+            {
+                "id": 28,
+                "text": "Which position is best for a client with increased ICP?",
+                "options": [
+                    "Flat supine",
+                    "Head elevated 30\u00b0",
+                    "Trendelenburg",
+                    "Prone"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Elevate HOB 30\u00b0 to promote venous drainage and reduce ICP. Keep head midline (avoid neck flexion/rotation)."
+            },
+            {
+                "id": 29,
+                "text": "A client with diabetes is NPO for surgery. What should the nurse do with morning insulin?",
+                "options": [
+                    "Give full dose",
+                    "Hold all insulin",
+                    "Give half dose or per protocol",
+                    "Give double dose"
+                ],
+                "correctAnswer": 2,
+                "explanation": "NPO: Usually give half dose long-acting insulin or per facility protocol. Monitor glucose closely. Don't give rapid-acting insulin without food."
+            },
+            {
+                "id": 30,
+                "text": "Which finding indicates status epilepticus?",
+                "options": [
+                    "Single seizure lasting 2 minutes",
+                    "Continuous seizures >5 minutes",
+                    "Postictal confusion",
+                    "Aura before seizure"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Status epilepticus: Continuous seizure >5 min or repeated seizures without regaining consciousness. Medical emergency. Give IV benzodiazepines."
+            },
+            {
+                "id": 31,
+                "text": "A client with COPD should receive which vaccine?",
+                "options": [
+                    "MMR",
+                    "Pneumococcal and influenza",
+                    "Varicella",
+                    "No vaccines needed"
+                ],
+                "correctAnswer": 1,
+                "explanation": "COPD clients need pneumococcal vaccine and annual flu vaccine to prevent respiratory infections."
+            },
+            {
+                "id": 32,
+                "text": "Which cranial nerve is assessed by having the client smile and frown?",
+                "options": [
+                    "CN II (Optic)",
+                    "CN VII (Facial)",
+                    "CN IX (Glossopharyngeal)",
+                    "CN XII (Hypoglossal)"
+                ],
+                "correctAnswer": 1,
+                "explanation": "CN VII (Facial) controls facial expressions. Bell's palsy affects CN VII causing facial drooping. Stroke can also cause facial asymmetry."
+            },
+            {
+                "id": 33,
+                "text": "Which is a sign of hyperglycemia?",
+                "options": [
+                    "Shakiness and sweating",
+                    "Polyuria, polydipsia, polyphagia",
+                    "Bradycardia",
+                    "Hypertension"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Hyperglycemia: 3 P's (Polyuria, Polydipsia, Polyphagia), blurred vision, fatigue, dry skin. Chronic hyperglycemia causes complications."
+            },
+            {
+                "id": 34,
+                "text": "A client with pneumonia has decreased breath sounds in right lower lobe. This indicates:",
+                "options": [
+                    "Normal finding",
+                    "Consolidation/fluid in that area",
+                    "Hyperventilation",
+                    "Asthma"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Decreased/absent breath sounds indicate consolidation, fluid, or collapsed lung. Pneumonia causes consolidation. Also assess for dullness to percussion."
+            },
+            {
+                "id": 35,
+                "text": "Which is the first step in ABG interpretation?",
+                "options": [
+                    "Look at PaCO2",
+                    "Look at HCO3",
+                    "Look at pH",
+                    "Look at PaO2"
+                ],
+                "correctAnswer": 2,
+                "explanation": "ABG steps: 1) pH (acidosis <7.35 or alkalosis >7.45), 2) PaCO2 (respiratory), 3) HCO3 (metabolic), 4) Determine if compensated."
+            },
+            {
+                "id": 36,
+                "text": "A client with stroke has aphasia. This means:",
+                "options": [
+                    "Difficulty swallowing",
+                    "Difficulty speaking or understanding language",
+                    "Paralysis",
+                    "Vision loss"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Aphasia: Language impairment. Expressive = can't speak, Receptive = can't understand, Global = both. Dysphagia = swallowing difficulty."
+            },
+            {
+                "id": 37,
+                "text": "Which medication treats hyperthyroidism?",
+                "options": [
+                    "Levothyroxine",
+                    "Methimazole (Tapazole)",
+                    "Insulin",
+                    "Prednisone"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Antithyroid drugs (methimazole, PTU) treat hyperthyroidism. Also: radioactive iodine or thyroidectomy. Levothyroxine treats hypothyroidism."
+            },
+            {
+                "id": 38,
+                "text": "A client with asthma is using a metered-dose inhaler. What should the nurse teach?",
+                "options": [
+                    "Inhale quickly",
+                    "Shake inhaler, exhale, inhale slowly while pressing canister",
+                    "Hold breath 5 seconds",
+                    "Use without spacer"
+                ],
+                "correctAnswer": 1,
+                "explanation": "MDI technique: Shake, exhale fully, press canister while inhaling slowly, hold breath 10 seconds. Use spacer for better delivery."
+            },
+            {
+                "id": 39,
+                "text": "Which is a late sign of increased ICP?",
+                "options": [
+                    "Headache",
+                    "Restlessness",
+                    "Cushing's triad",
+                    "Nausea"
+                ],
+                "correctAnswer": 2,
+                "explanation": "Early ICP signs: Headache, nausea, restlessness, decreased LOC. Late signs: Cushing's triad (widening pulse pressure, bradycardia, irregular respirations), dilated pupils."
+            },
+            {
+                "id": 40,
+                "text": "A client with diabetes has HbA1c of 9%. This indicates:",
+                "options": [
+                    "Good glucose control",
+                    "Poor glucose control",
+                    "Hypoglycemia",
+                    "Normal finding"
+                ],
+                "correctAnswer": 1,
+                "explanation": "HbA1c goal: <7% for most diabetics. 9% indicates poor control over past 2-3 months. Adjust medications, reinforce diet/exercise."
             }
         ]
     },

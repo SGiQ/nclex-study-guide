@@ -111,13 +111,13 @@
   },
   {
     "id": 11,
-    "title": "Reduction of Risk Potential Part 2",
-    "description": "Pathophysiology GI, Neuro, Endocrine, Procedures",
-    "content": "Pathophysiology: Gastrointestinal System\nPathophysiology: Neurological System\nPathophysiology: Endocrine System\nPerioperative Nursing Care",
+    "title": "Physiological Adaptation: Hematology & GI",
+    "description": "Anemia, Clotting Disorders, Blood Transfusions, GI Pathologies",
+    "content": "Hematology: Anemia, Sickle Cell, Hemophilia, DIC, HIT\\nBlood Transfusions & Reactions\\nGI System: IBD (Chrons vs UC), Liver Failure (Cirrhosis), Biliary Atresia",
     "pages": "246-270",
     "duration": 1080,
     "audioUrl": "/uploads/episode-11.mp3",
-    "category": "Risk Reduction",
+    "category": "Physiological",
     "order": 11
   },
   {

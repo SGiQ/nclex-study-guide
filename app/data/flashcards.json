@@ -2102,282 +2102,157 @@
     {
         "episodeId": 11,
         "title": "Episode 11 Flashcards",
-        "description": "Flashcards for Episode 11",
+        "description": "Physiological Adaptation: Heme & GI",
         "cards": [
             {
                 "id": 1,
-                "front": "What is the primary physiological deficit in anemia?",
-                "back": "An insufficient number of red blood cells to adequately oxygenate the body's tissues."
+                "front": "What defines a Sickle Cell Vaso-Occlusive Crisis?",
+                "back": "Severe pain and ischemia caused by sickled RBCs obstructing blood flow in small vessels."
             },
             {
                 "id": 2,
-                "front": "What are the hallmark signs and symptoms of anemia related to decreased oxygenation?",
-                "back": "\"Pallor, fatigue, hypotension, weakness, and mental status changes.\""
+                "front": "What is the primary intervention for a Sickle Cell Crisis?",
+                "back": "Hydration, Oxygenation, and Pain Management."
             },
             {
                 "id": 3,
-                "front": "Prophylactic _____ is recommended for children with sickle cell disease from 2 months to 5 years to prevent pneumococcal sepsis.",
-                "back": "penicillin"
+                "front": "Hemophilia A is a deficiency of:",
+                "back": "Factor VIII."
             },
             {
                 "id": 4,
-                "front": "What is the only curative treatment for sickle cell disease?",
-                "back": "Hematopoietic stem cell transplantation."
+                "front": "Hemophilia B is a deficiency of:",
+                "back": "Factor IX."
             },
             {
                 "id": 5,
-                "front": "\"In patients with Von Willebrand disease",
-                "back": "what clotting mechanism is impaired?\",The ability of platelets to create a clot and prevent hemorrhage."
+                "front": "What is Von Willebrand Disease?",
+                "back": "A deficiency in Von Willebrand Factor (vWF), which affects platelet adhesion."
             },
             {
                 "id": 6,
-                "front": "What medication is used to stimulate production of clotting factor for mild cases of both Von Willebrand disease and Hemophilia A?",
-                "back": "Desmopressin acetate (DDAVP)."
+                "front": "What is 'DIC' (Disseminated Intravascular Coagulation)?",
+                "back": "A condition causing simultaneous widespread clotting and massive bleeding due to consumption of clotting factors."
             },
             {
                 "id": 7,
-                "front": "Hemophilia is an inherited disorder in which the person lacks adequate _____.",
-                "back": "clotting factors"
+                "front": "What activates HIT (Heparin Induced Thrombocytopenia)?",
+                "back": "Antibodies against the Heparin-Platelet Factor 4 complex, causing platelet activation (clotting) and destruction (low count)."
             },
             {
                 "id": 8,
-                "front": "Disseminated intravascular coagulation (DIC) is a secondary disorder triggered by serious illnesses such as _____.",
-                "back": "\"sepsis, shock, trauma, and infections\""
+                "front": "What is the critical ANC threshold for Neutropenia?",
+                "back": "Below 500 cells/mm\u00b3."
             },
             {
                 "id": 9,
-                "front": "What are the paradoxical effects of DIC on the body's clotting system?",
-                "back": "It triggers both coagulation (forming microthrombi) and hemorrhage simultaneously."
+                "front": "What is a major risk for patients with Selective IgA Deficiency receiving blood?",
+                "back": "Anaphylaxis (reaction to IgA in donor blood)."
             },
             {
                 "id": 10,
-                "front": "Which two lab values are characteristically prolonged in a patient with DIC?",
-                "back": "Prothrombin time (PT) and partial thromboplastin time (PTT)."
+                "front": "What is TRALI?",
+                "back": "Transfusion-Related Acute Lung Injury; sudden non-cardiogenic pulmonary edema."
             },
             {
                 "id": 11,
-                "front": "What is the primary nursing intervention for a patient with DIC?",
-                "back": "Identifying and treating the underlying cause."
+                "front": "What happens in Iron Overload (Hemosiderosis)?",
+                "back": "Excess iron from chronic transfusions deposits in organs (heart, liver); treated with Chelation Therapy."
             },
             {
                 "id": 12,
-                "front": "Thrombocytopenia is defined as a deficiency of circulating _____ in the blood.",
-                "back": "platelets"
+                "front": "Why is 0.9% Normal Saline the only fluid used with blood transfusions?",
+                "back": "Other fluids can cause hemolysis (Dextrose) or clotting (Lactated Ringer's)."
             },
             {
                 "id": 13,
-                "front": "\"What are petechiae and ecchymosis",
-                "back": "often seen in thrombocytopenia?\",\"Petechiae are small, pinpoint hemorrhages, while ecchymosis refers to bruising.\""
+                "front": "What is the difference between Ulcerative Colitis and Crohn's Disease?",
+                "back": "UC = Continuous, Colon-only, Mucosal layer. Crohn's = Skip lesions, Mouth-to-Anus, Transmural (fistulas)."
             },
             {
                 "id": 14,
-                "front": "\"In Immune Thrombocytopenic Purpura (ITP)",
-                "back": "what is the cause of the decreased platelet count?\",An autoimmune response where the body's immune system destroys its own platelets."
+                "front": "What is the classic triad of Biliary Atresia?",
+                "back": "Jaundice (>2 weeks), Dark Urine, Light/Clay-colored Stools."
             },
             {
                 "id": 15,
-                "front": "What class of medications is the primary treatment for ITP to suppress the immune response?",
-                "back": "Corticosteroids."
+                "front": "What causes Hepatic Encephalopathy?",
+                "back": "Accumulation of Ammonia due to liver failure."
             },
             {
                 "id": 16,
-                "front": "What distinguishes Type II Heparin-Induced Thrombocytopenia and Thrombosis Syndrome (HITTS) from Type I?",
-                "back": "\"Type II is an immune-mediated disorder causing a severe drop in platelets and a high risk of thrombosis, unlike the transient Type I.\""
-            },
-            {
-                "id": 17,
-                "front": "A patient on heparin develops a platelet count drop of more than 50%. What condition should the nurse suspect?",
-                "back": "Type II Heparin-Induced Thrombocytopenia and Thrombosis Syndrome (HITTS)."
-            },
-            {
-                "id": 18,
-                "front": "What is the priority nursing action if HITTS is suspected?",
-                "back": "Immediately discontinue all forms of heparin and notify the provider."
-            },
-            {
-                "id": 19,
-                "front": "What is the primary indication for transfusing packed red blood cells (PRBCs)?",
-                "back": "To increase oxygen-carrying capacity in patients with anemia or significant blood loss."
-            },
-            {
-                "id": 20,
-                "front": "Fresh frozen plasma (FFP) is administered to correct deficiencies in what?",
-                "back": "Coagulation factors."
-            },
-            {
-                "id": 21,
-                "front": "What is a critical nursing assessment that must be performed immediately before starting a blood transfusion?",
-                "back": "Obtaining a baseline set of vital signs."
-            },
-            {
-                "id": 22,
-                "front": "How frequently should a nurse monitor a patient's vital signs during the first hour of a blood transfusion?",
-                "back": "\"After the first 15 minutes, and then at least every 30 minutes to one hour post-transfusion.\""
-            },
-            {
-                "id": 23,
-                "front": "What life-threatening transfusion complication is characterized by non-cardiogenic pulmonary edema and severe dyspnea?",
-                "back": "Transfusion-related acute lung injury (TRALI)."
-            },
-            {
-                "id": 24,
-                "front": "What are the cardinal symptoms of peritonitis?",
-                "back": "\"Diffuse abdominal pain with rebound tenderness, abdominal rigidity, and paralytic ileus.\""
-            },
-            {
-                "id": 25,
-                "front": "A key nursing intervention for peritonitis involves administering intravenous fluids and _____.",
-                "back": "broad-spectrum antibiotics"
-            },
-            {
-                "id": 26,
-                "front": "What is the pathophysiology of appendicitis?",
-                "back": "\"Inflammation of the appendix, often caused by luminal obstruction, which leads to increased intraluminal pressure and compromised blood flow.\""
-            },
-            {
-                "id": 27,
-                "front": "What is the classic presentation of pain in a patient with appendicitis?",
-                "back": "\"The pain is typically periumbilical initially, then localizes to the right lower quadrant.\""
-            },
-            {
-                "id": 28,
-                "front": "Obstruction of the _____ duct is the most common cause of acute cholecystitis.",
-                "back": "cystic"
-            },
-            {
-                "id": 29,
-                "front": "\"What is Murphy's sign",
-                "back": "a diagnostic indicator for cholecystitis?\",Inspiratory arrest that occurs upon palpation of the right upper quadrant."
-            },
-            {
-                "id": 30,
-                "front": "Which bacteria is the primary cause of nonerosive gastritis and peptic ulcer disease?",
-                "back": "Helicobacter pylori (H. pylori)."
-            },
-            {
-                "id": 31,
-                "front": "\"What is the most common cause of viral gastroenteritis",
-                "back": "often associated with outbreaks on cruise ships or in schools?\",Norovirus."
-            },
-            {
-                "id": 32,
-                "front": "\"A specific strain of E. coli",
-                "back": "O157:H7, can cause what life-threatening complication, especially in children?\",Hemolytic uremic syndrome (HUS)."
-            },
-            {
-                "id": 33,
-                "front": "What is the primary treatment for most cases of bacterial gastroenteritis?",
-                "back": "Supportive care with hydration and electrolyte replacement."
-            },
-            {
-                "id": 34,
-                "front": "What is the main nursing priority for a patient with a suspected bowel obstruction?",
-                "back": "\"Treatment includes NPO status, insertion of an NG tube for decompression, IV fluids, and careful monitoring.\""
-            },
-            {
-                "id": 35,
-                "front": "What is intestinal perforation?",
-                "back": "\"A full-thickness tear in the intestinal wall, leading to leakage of intestinal contents into the peritoneum.\""
-            },
-            {
-                "id": 36,
-                "front": "What lifestyle modification is essential for patients with Gastroesophageal Reflux Disease (GERD)?",
-                "back": "\"Elevating the head of the bed and avoiding trigger foods like caffeine, alcohol, and highly acidic foods.\""
-            },
-            {
-                "id": 37,
-                "front": "The primary treatment for H. pylori-induced peptic ulcer disease includes antibiotics and what other class of medication?",
-                "back": "\"Proton pump inhibitors (e.g., omeprazole).\""
-            },
-            {
-                "id": 38,
-                "front": "Ulcerative colitis is characterized by superficial inflammation primarily affecting which part of the GI tract?",
-                "back": "The mucosa of the colon and rectum."
-            },
-            {
-                "id": 39,
-                "front": "\"A major potential complication of severe",
-                "back": "fulminant ulcerative colitis is _____.\",toxic megacolon and perforation"
-            },
-            {
-                "id": 40,
-                "front": "How does the inflammatory pattern of Crohn's disease differ from that of ulcerative colitis?",
-                "back": "\"Crohn's disease is transmural (affects all layers of the bowel wall) and can occur anywhere in the GI tract, often in a discontinuous, 'cobblestone' pattern.\""
-            },
-            {
-                "id": 41,
-                "front": "What is the primary symptom that differentiates diverticulitis from diverticulosis?",
-                "back": "\"Steady pain, typically in the left lower quadrant, which indicates inflammation of the diverticula.\""
-            },
-            {
-                "id": 42,
-                "front": "What defines decompensated cirrhosis?",
-                "back": "\"The liver can no longer adequately synthesize proteins or clotting factors, leading to symptoms like jaundice, ascites, and encephalopathy.\""
-            },
-            {
-                "id": 43,
-                "front": "\"What is the definitive",
-                "back": "curative treatment for end-stage liver disease or decompensated cirrhosis?\",Liver transplant."
-            },
-            {
-                "id": 44,
-                "front": "What is the primary cause of portal hypertension in patients with cirrhosis?",
-                "back": "\"Obstructed blood flow through the fibrotic liver, which increases pressure throughout the portal venous system.\""
-            },
-            {
-                "id": 45,
-                "front": "What is the most significant and life-threatening complication of portal hypertension?",
-                "back": "\"The development and potential rupture of esophageal varices, causing massive hemorrhage.\""
-            },
-            {
-                "id": 46,
-                "front": "A patient with ruptured esophageal varices requires emergent fluid and blood replacement and may be treated with _____ to decrease venous pressure.",
-                "back": "octreotide"
-            },
-            {
-                "id": 47,
-                "front": "What is a Transjugular Intrahepatic Portosystemic Shunt (TIPS) procedure used for?",
-                "back": "To create a channel between the systemic and portal venous systems to reduce portal hypertension."
-            },
-            {
-                "id": 48,
-                "front": "Hepatic encephalopathy results from the liver's inability to remove what neurotoxic substance from the blood?",
-                "back": "Ammonia."
-            },
-            {
-                "id": 49,
-                "front": "What are the hallmark signs and symptoms of hepatic encephalopathy?",
-                "back": "\"Altered mental status, personality changes, poor judgment, agitation, disorientation, and eventually coma.\""
-            },
-            {
-                "id": 50,
-                "front": "What medication is commonly administered to reduce serum ammonia levels in patients with hepatic encephalopathy?",
+                "front": "What medication treats Hepatic Encephalopathy by trapping ammonia?",
                 "back": "Lactulose."
             },
             {
-                "id": 51,
-                "front": "What condition occurs when a hernia's contents become trapped and blood supply is cut off?",
-                "back": "A strangulated hernia."
+                "id": 17,
+                "front": "What are Esophageal Varices?",
+                "back": "Dilated veins in the esophagus caused by Portal Hypertension; risk of massive rupture."
             },
             {
-                "id": 52,
-                "front": "\"In sickle cell disease",
-                "back": "the abnormal hemoglobin causes red blood cells to become _____-shaped and inflexible.\",sickle"
+                "id": 18,
+                "front": "What is Toxic Megacolon?",
+                "back": "A life-threatening dilation of the colon seen in Ulcerative Colitis; risk of perforation."
             },
             {
-                "id": 53,
-                "front": "What is the main focus of treatment for aplastic anemia?",
-                "back": "Bone marrow transplant or immunosuppressive therapy."
+                "id": 19,
+                "front": "What are the signs of Peritonitis?",
+                "back": "Rigid/Board-like abdomen, Rebound Tenderness, Fever."
             },
             {
-                "id": 54,
-                "front": "\"Severe bleeding after minor trauma",
-                "back": "unexplained bruising, and swelling in the joints are characteristic symptoms of what hematologic disorder?\",Hemophilia."
+                "id": 20,
+                "front": "What is McBurney's Point?",
+                "back": "The site of tenderness in RLQ associated with Appendicitis."
             },
             {
-                "id": 55,
-                "front": "What is the nursing priority when caring for a patient experiencing a sickle cell crisis?",
-                "back": "\"Management of severe pain, hydration with intravenous fluids, and oxygen administration.\""
+                "id": 21,
+                "front": "What is Murphy's Sign?",
+                "back": "Pain on deep inspiration during RUQ palpation; indicates Cholecystitis."
+            },
+            {
+                "id": 22,
+                "front": "What does 'Currant-Jelly Stool' indicate?",
+                "back": "Intussusception."
+            },
+            {
+                "id": 23,
+                "front": "What does a 'Sausage-Shaped Mass' in the abdomen indicate?",
+                "back": "Intussusception."
+            },
+            {
+                "id": 24,
+                "front": "What is the hallmark symptom of Pyloric Stenosis?",
+                "back": "Projectile Vomiting (non-bilious) and an olive-shaped mass."
+            },
+            {
+                "id": 25,
+                "front": "What is Cullen's Sign?",
+                "back": "Blue discoloration around the umbilicus, indicating intra-abdominal bleeding (Pancreatitis)."
+            },
+            {
+                "id": 26,
+                "front": "What is Grey Turner's Sign?",
+                "back": "Bruising of the flanks (sides), indicating retroperitoneal bleeding (Pancreatitis)."
+            },
+            {
+                "id": 27,
+                "front": "What is Asterixis?",
+                "back": "Flapping tremor of the hands; a sign of high ammonia/liver failure."
+            },
+            {
+                "id": 28,
+                "front": "Patients with Celiac Disease must avoid:",
+                "back": "Gluten (Wheat, Barley, Rye, Oats*)."
+            },
+            {
+                "id": 29,
+                "front": "What is the primary treatment for Hirschsprung's Disease?",
+                "back": "Surgical removal of the aganglionic (nerve-dead) section of bowel."
+            },
+            {
+                "id": 30,
+                "front": "What are the signs of a Hemolytic Transfusion Reaction?",
+                "back": "Back pain, Hypotension, Tachycardia, Fever, Chills."
             }
         ]
     },

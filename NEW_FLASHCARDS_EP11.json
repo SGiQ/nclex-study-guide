@@ -1,0 +1,157 @@
+{
+    "episodeId": 11,
+    "title": "Episode 11 Flashcards",
+    "description": "Physiological Adaptation: Heme & GI",
+    "cards": [
+        {
+            "id": 1,
+            "front": "What defines a Sickle Cell Vaso-Occlusive Crisis?",
+            "back": "Severe pain and ischemia caused by sickled RBCs obstructing blood flow in small vessels."
+        },
+        {
+            "id": 2,
+            "front": "What is the primary intervention for a Sickle Cell Crisis?",
+            "back": "Hydration, Oxygenation, and Pain Management."
+        },
+        {
+            "id": 3,
+            "front": "Hemophilia A is a deficiency of:",
+            "back": "Factor VIII."
+        },
+        {
+            "id": 4,
+            "front": "Hemophilia B is a deficiency of:",
+            "back": "Factor IX."
+        },
+        {
+            "id": 5,
+            "front": "What is Von Willebrand Disease?",
+            "back": "A deficiency in Von Willebrand Factor (vWF), which affects platelet adhesion."
+        },
+        {
+            "id": 6,
+            "front": "What is 'DIC' (Disseminated Intravascular Coagulation)?",
+            "back": "A condition causing simultaneous widespread clotting and massive bleeding due to consumption of clotting factors."
+        },
+        {
+            "id": 7,
+            "front": "What activates HIT (Heparin Induced Thrombocytopenia)?",
+            "back": "Antibodies against the Heparin-Platelet Factor 4 complex, causing platelet activation (clotting) and destruction (low count)."
+        },
+        {
+            "id": 8,
+            "front": "What is the critical ANC threshold for Neutropenia?",
+            "back": "Below 500 cells/mm³."
+        },
+        {
+            "id": 9,
+            "front": "What is a major risk for patients with Selective IgA Deficiency receiving blood?",
+            "back": "Anaphylaxis (reaction to IgA in donor blood)."
+        },
+        {
+            "id": 10,
+            "front": "What is TRALI?",
+            "back": "Transfusion-Related Acute Lung Injury; sudden non-cardiogenic pulmonary edema."
+        },
+        {
+            "id": 11,
+            "front": "What happens in Iron Overload (Hemosiderosis)?",
+            "back": "Excess iron from chronic transfusions deposits in organs (heart, liver); treated with Chelation Therapy."
+        },
+        {
+            "id": 12,
+            "front": "Why is 0.9% Normal Saline the only fluid used with blood transfusions?",
+            "back": "Other fluids can cause hemolysis (Dextrose) or clotting (Lactated Ringer's)."
+        },
+        {
+            "id": 13,
+            "front": "What is the difference between Ulcerative Colitis and Crohn's Disease?",
+            "back": "UC = Continuous, Colon-only, Mucosal layer. Crohn's = Skip lesions, Mouth-to-Anus, Transmural (fistulas)."
+        },
+        {
+            "id": 14,
+            "front": "What is the classic triad of Biliary Atresia?",
+            "back": "Jaundice (>2 weeks), Dark Urine, Light/Clay-colored Stools."
+        },
+        {
+            "id": 15,
+            "front": "What causes Hepatic Encephalopathy?",
+            "back": "Accumulation of Ammonia due to liver failure."
+        },
+        {
+            "id": 16,
+            "front": "What medication treats Hepatic Encephalopathy by trapping ammonia?",
+            "back": "Lactulose."
+        },
+        {
+            "id": 17,
+            "front": "What are Esophageal Varices?",
+            "back": "Dilated veins in the esophagus caused by Portal Hypertension; risk of massive rupture."
+        },
+        {
+            "id": 18,
+            "front": "What is Toxic Megacolon?",
+            "back": "A life-threatening dilation of the colon seen in Ulcerative Colitis; risk of perforation."
+        },
+        {
+            "id": 19,
+            "front": "What are the signs of Peritonitis?",
+            "back": "Rigid/Board-like abdomen, Rebound Tenderness, Fever."
+        },
+        {
+            "id": 20,
+            "front": "What is McBurney's Point?",
+            "back": "The site of tenderness in RLQ associated with Appendicitis."
+        },
+        {
+            "id": 21,
+            "front": "What is Murphy's Sign?",
+            "back": "Pain on deep inspiration during RUQ palpation; indicates Cholecystitis."
+        },
+        {
+            "id": 22,
+            "front": "What does 'Currant-Jelly Stool' indicate?",
+            "back": "Intussusception."
+        },
+        {
+            "id": 23,
+            "front": "What does a 'Sausage-Shaped Mass' in the abdomen indicate?",
+            "back": "Intussusception."
+        },
+        {
+            "id": 24,
+            "front": "What is the hallmark symptom of Pyloric Stenosis?",
+            "back": "Projectile Vomiting (non-bilious) and an olive-shaped mass."
+        },
+        {
+            "id": 25,
+            "front": "What is Cullen's Sign?",
+            "back": "Blue discoloration around the umbilicus, indicating intra-abdominal bleeding (Pancreatitis)."
+        },
+        {
+            "id": 26,
+            "front": "What is Grey Turner's Sign?",
+            "back": "Bruising of the flanks (sides), indicating retroperitoneal bleeding (Pancreatitis)."
+        },
+        {
+            "id": 27,
+            "front": "What is Asterixis?",
+            "back": "Flapping tremor of the hands; a sign of high ammonia/liver failure."
+        },
+        {
+            "id": 28,
+            "front": "Patients with Celiac Disease must avoid:",
+            "back": "Gluten (Wheat, Barley, Rye, Oats*)."
+        },
+        {
+            "id": 29,
+            "front": "What is the primary treatment for Hirschsprung's Disease?",
+            "back": "Surgical removal of the aganglionic (nerve-dead) section of bowel."
+        },
+        {
+            "id": 30,
+            "front": "What are the signs of a Hemolytic Transfusion Reaction?",
+            "back": "Back pain, Hypotension, Tachycardia, Fever, Chills."
+        }
+    ]
+}

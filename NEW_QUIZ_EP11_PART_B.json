@@ -1,0 +1,310 @@
+{
+    "id": 115,
+    "episodeId": 11,
+    "title": "GI & Hepatic Pathologies - Part B",
+    "description": "IBD (UC vs Crohn's), Liver Cirrhosis, Biliary Atresia, Peritonitis",
+    "questionCount": 25,
+    "color": "from-yellow-600 to-yellow-900",
+    "questions": [
+        {
+            "id": 1,
+            "text": "The key anatomical difference between Ulcerative Colitis (UC) and Crohn's Disease is:",
+            "options": [
+                "UC is widespread; Crohn's is local",
+                "UC is continuous inflammation of the colon/rectum (mucosal layer); Crohn's is 'skip lesions' anywhere in GI tract (transmural)",
+                "UC affects the mouth; Crohn's affects the stomach",
+                "There is no difference"
+            ],
+            "correctAnswer": 1,
+            "explanation": "UC = Colon only, superficial. Crohn's = Mouth to Anus, deep fissures."
+        },
+        {
+            "id": 2,
+            "text": "A life-threatening complication of Ulcerative Colitis causing rapid colon dilation is:",
+            "options": [
+                "Toxic Megacolon",
+                "Constipation",
+                "Gastritis",
+                "Reflux"
+            ],
+            "correctAnswer": 0,
+            "explanation": "The colon dilates, paralyzes, and can rupture. Emergency."
+        },
+        {
+            "id": 3,
+            "text": "Because Crohn's Disease is transmural (goes through the wall), patients are at high risk for:",
+            "options": [
+                "Fistulas (tunnels) and Abscesses",
+                "Weight gain",
+                "Hiatal hernia",
+                "Clear skin"
+            ],
+            "correctAnswer": 0,
+            "explanation": "Deep inflammation creates tunnels between loops of bowel or to the skin/bladder."
+        },
+        {
+            "id": 4,
+            "text": "The classic triad of signs for Biliary Atresia in infants includes:",
+            "options": [
+                "Fever, Cough, Rash",
+                "Jaundice (>2 weeks), Dark Urine, and Light/Clay-colored Stools",
+                "Crying, Sleeping, Eating",
+                "Diarrhea, Vomiting, Pain"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Bile is blocked from entering the gut (pale stool) and backs up into blood (jaundice/dark urine)."
+        },
+        {
+            "id": 5,
+            "text": "Biliary Atresia requires which surgical intervention?",
+            "options": [
+                "Appendectomy",
+                "Kasai Procedure (Hepatoportoenterostomy) or Liver Transplant",
+                "Whipple",
+                "Tonsillectomy"
+            ],
+            "correctAnswer": 1,
+            "explanation": "The Kasai procedure connects the bowel directly to the liver to drain bile."
+        },
+        {
+            "id": 6,
+            "text": "Hepatic Encephalopathy in cirrhosis is caused by high levels of:",
+            "options": [
+                "Glucose",
+                "Ammonia",
+                "Potassium",
+                "Sodium"
+            ],
+            "correctAnswer": 1,
+            "explanation": "The liver can't convert ammonia (toxic) to urea. Ammonia crosses the Blood-Brain Barrier."
+        },
+        {
+            "id": 7,
+            "text": "The primary medication used to treat Hepatic Encephalopathy by trapping ammonia is:",
+            "options": [
+                "Lactulose",
+                "Lisinopril",
+                "Lasix",
+                "Lithium"
+            ],
+            "correctAnswer": 0,
+            "explanation": "Lactulose causes diarrhea, excreting ammonia in the stool."
+        },
+        {
+            "id": 8,
+            "text": "What is the hallmark sign of Peritonitis (Acute Abdomen)?",
+            "options": [
+                "Hunger",
+                "Rigid, board-like abdomen and rebound tenderness",
+                "Soft belly",
+                "Hyperactive bowel sounds"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Severe inflammation of the lining causes muscles to spasm (guarding/rigidity)."
+        },
+        {
+            "id": 9,
+            "text": "Esophageal Varices are caused by:",
+            "options": [
+                "Eating spicy food",
+                "Portal Hypertension (High pressure in liver veins backing up)",
+                "Smoking",
+                "Vomiting"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Cirrhotic liver increases pressure, blowing up collateral veins in the throat."
+        },
+        {
+            "id": 10,
+            "text": "If Esophageal Varices rupture, the priority is:",
+            "options": [
+                "Offer water",
+                "Airway protection and Hemodynamic stability (Shock management)",
+                "Pain meds",
+                "Antibiotics"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Massive hemorrhage + Airway threat. Life-threatening."
+        },
+        {
+            "id": 11,
+            "text": "Which diet is recommended during an acute exacerbation of IBD (Crohn's/UC)?",
+            "options": [
+                "High Fiber",
+                "Low Residue/Low Fiber, High Protein, High Calorie",
+                "Liquid only",
+                "Spicy"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Rest the bowel. Avoid fiber which increases bulk and work."
+        },
+        {
+            "id": 12,
+            "text": "Ascites in liver failure is primarily caused by:",
+            "options": [
+                "Drinking water",
+                "Portal Hypertension and Low Albumin (decreased oncotic pressure)",
+                "High sodium",
+                "Infection"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Fluid pushes out due to pressure and isn't pulled back in due to lack of protein."
+        },
+        {
+            "id": 13,
+            "text": "A Sengstaken-Blakemore tube is used for:",
+            "options": [
+                "Feeding",
+                "Compressing bleeding Esophageal Varices (Tamponade)",
+                "Draining urine",
+                "Breathing"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Emergency temporary measure to stop bleeding varices via balloon pressure."
+        },
+        {
+            "id": 14,
+            "text": "Asterixis ('Liver Flap') is a sign of:",
+            "options": [
+                "Parkinson's",
+                "Hepatic Encephalopathy (High Ammonia)",
+                "Stroke",
+                "Withdrawal"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Hand-flapping tremor when wrist is extended."
+        },
+        {
+            "id": 15,
+            "text": "Which position is best for a patient after a Liver Biopsy?",
+            "options": [
+                "Left Side",
+                "Right Side (to compress the puncture site)",
+                "Prone",
+                "Supine"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Liver is on the right. Lying on it applies pressure to stop bleeding."
+        },
+        {
+            "id": 16,
+            "text": "Spider Angiomas and Palmar Erythema are skin signs of:",
+            "options": [
+                "Cirrhosis / Liver Failure",
+                "Kidney Failure",
+                "Lupus",
+                "Allergy"
+            ],
+            "correctAnswer": 0,
+            "explanation": "Caused by high estrogen levels that the liver fails to metabolize."
+        },
+        {
+            "id": 17,
+            "text": "Murphy's Sign (pain on inspiration with RUQ palpation) suggests:",
+            "options": [
+                "Appendicitis",
+                "Cholecystitis (Gallbladder inflammation)",
+                "Pancreatitis",
+                "Gastritis"
+            ],
+            "correctAnswer": 1,
+            "explanation": "The diaphragm pushes the inflamed gallbladder down into your fingers."
+        },
+        {
+            "id": 18,
+            "text": "McBurney's Point is associated with:",
+            "options": [
+                "Liver",
+                "Appendicitis (RLQ pain)",
+                "Spleen",
+                "Kidney"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Classic location for Appendix pain."
+        },
+        {
+            "id": 19,
+            "text": "Cullen's Sign (blue discoloration around umbilicus) indicates:",
+            "options": [
+                "Pregnancy",
+                "Intra-abdominal bleeding (typically Pancreatitis)",
+                "Bruise",
+                "Hernia"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Hemoperitoneum."
+        },
+        {
+            "id": 20,
+            "text": "Steatorrhea (fatty, foul-smelling stool) is a sign of:",
+            "options": [
+                "Constipation",
+                "Malabsorption (e.g., Celiac or Pancreatitis)",
+                "Bleeding",
+                "Infection"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Fat is not being digested/absorbed."
+        },
+        {
+            "id": 21,
+            "text": "Pancreatitis pain is typically described as:",
+            "options": [
+                "Cramping",
+                "Severe, boring pain radiating to the back",
+                "Burning",
+                "Coming and going"
+            ],
+            "correctAnswer": 1,
+            "explanation": "The pancreas is retroperitoneal, so pain goes straight through to the back."
+        },
+        {
+            "id": 22,
+            "text": "In Pyloric Stenosis (infants), the classic symptom is:",
+            "options": [
+                "Diarrhea",
+                "Projectile Vomiting",
+                "Fever",
+                "Rash"
+            ],
+            "correctAnswer": 1,
+            "explanation": "The muscular ring closes off the stomach exit, ejecting food forcefully."
+        },
+        {
+            "id": 23,
+            "text": "Olive-shaped mass in the RUQ is pathognomonic for:",
+            "options": [
+                "Hernia",
+                "Pyloric Stenosis",
+                "Tumor",
+                "Intussusception"
+            ],
+            "correctAnswer": 1,
+            "explanation": "The hypertrophied pyloric muscle feels like an olive."
+        },
+        {
+            "id": 24,
+            "text": "Intussusception (telescoping bowel) usually presents with:",
+            "options": [
+                "Constipation",
+                "Currant-Jelly Stool (blood + mucus) and sausage-shaped mass",
+                "Clear vomit",
+                "High fever"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Classic pediatric emergency signs."
+        },
+        {
+            "id": 25,
+            "text": "Hirschsprung's Disease is characterized by:",
+            "options": [
+                "Diarrhea",
+                "Megacolon due to lack of nerve cells (aganglionic section) causing constipation/ribbon stools",
+                "Vomiting",
+                "Ulcers"
+            ],
+            "correctAnswer": 1,
+            "explanation": "No nerves = No peristalsis = Blockage."
+        }
+    ]
+}

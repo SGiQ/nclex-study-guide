@@ -90,12 +90,12 @@ export default function MindMapViewerPage({ params }: { params: Promise<{ id: st
             <main className="p-6 overflow-auto">
                 <div className="max-w-7xl mx-auto">
                     <div className="bg-white/5 rounded-2xl p-8 border border-white/10">
-                        <div className="overflow-auto">
+                        <div className="w-full h-[calc(100vh-200px)] flex items-center justify-center">
                             <img
                                 src={`/api/mindmaps/${id}/image`}
                                 alt={mindmap.title}
-                                style={{ transform: `scale(${zoom / 100})`, transformOrigin: 'top left' }}
-                                className="max-w-none transition-transform duration-200"
+                                style={{ transform: `scale(${zoom / 100})`, transformOrigin: 'center' }}
+                                className="max-w-full max-h-full object-contain transition-transform duration-200"
                             />
                         </div>
                     </div>

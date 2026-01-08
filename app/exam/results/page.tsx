@@ -3,6 +3,8 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
+import { useProgress } from '@/app/context/ProgressContext';
+import { useAchievements } from '@/app/context/AchievementContext';
 
 interface ExamResults {
     totalQuestions: number;
@@ -13,6 +15,8 @@ interface ExamResults {
     questions: any[];
     answers: Record<number, number>;
     examMode: 'realistic' | 'practice';
+    startTime?: number; // Added to assume uniqueness
+    savedToStats?: boolean;
 }
 
 export default function ExamResultsPage() {
@@ -21,14 +25,47 @@ export default function ExamResultsPage() {
     const [showReview, setShowReview] = useState(false);
     const [reviewQuestion, setReviewQuestion] = useState(0);
 
+    const { saveQuizResult } = useProgress();
+    const { updateStats, checkAndUnlockBadges } = useAchievements();
+
     useEffect(() => {
-        const savedResults = localStorage.getItem('examResults');
-        if (!savedResults) {
+        const savedResultsStr = localStorage.getItem('examResults');
+        if (!savedResultsStr) {
             router.push('/exam/setup');
             return;
         }
-        setResults(JSON.parse(savedResults));
-    }, [router]);
+
+        const savedResults: ExamResults = JSON.parse(savedResultsStr);
+
+        // If not saved to stats yet, do it now
+        if (!savedResults.savedToStats) {
+            // Use startTime as a unique ID for this exam session, or Date.now() if missing
+            const uniqueId = savedResults.startTime || Date.now();
+
+            // Save to Progress Context (DB & Analytics)
+            // We use the uniqueId as the pseudo-episodeId to ensure each exam counts separately
+            saveQuizResult(uniqueId, savedResults.correctAnswers, savedResults.totalQuestions);
+
+            // Update Achievement Stats
+            updateStats({
+                questionsAnswered: savedResults.totalQuestions,
+                quizzesCompleted: 1, // Count exams as quizzes for now
+                bestQuizScore: savedResults.percentage, // This tracks global best
+                totalStudyTime: Math.round(savedResults.timeTaken / 1000)
+            });
+
+            // Mark as saved so we don't count it again on reload
+            savedResults.savedToStats = true;
+            localStorage.setItem('examResults', JSON.stringify(savedResults));
+
+            // Check badges after a short delay
+            setTimeout(() => {
+                checkAndUnlockBadges();
+            }, 500);
+        }
+
+        setResults(savedResults);
+    }, [router, saveQuizResult, updateStats, checkAndUnlockBadges]);
 
     const formatTime = (ms: number) => {
         const hours = Math.floor(ms / (1000 * 60 * 60));
@@ -167,8 +204,8 @@ export default function ExamResultsPage() {
             <div className="max-w-4xl mx-auto px-4 py-8">
                 {/* Pass/Fail Header */}
                 <div className={`text-center p-12 rounded-3xl mb-8 ${results.passed
-                        ? 'bg-gradient-to-br from-green-500/20 to-emerald-500/20 border-2 border-green-500/30'
-                        : 'bg-gradient-to-br from-red-500/20 to-orange-500/20 border-2 border-red-500/30'
+                    ? 'bg-gradient-to-br from-green-500/20 to-emerald-500/20 border-2 border-green-500/30'
+                    : 'bg-gradient-to-br from-red-500/20 to-orange-500/20 border-2 border-red-500/30'
                     }`}>
                     <div className="text-7xl mb-4">{results.passed ? '🎉' : '📚'}</div>
                     <h1 className={`text-5xl font-black mb-4 ${results.passed ? 'text-green-400' : 'text-red-400'}`}>

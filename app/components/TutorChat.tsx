@@ -19,10 +19,14 @@ export default function TutorChat() {
     const [input, setInput] = useState("");
     const [isLoading, setIsLoading] = useState(false);
 
+    // Draggable State
+    const [position, setPosition] = useState({ x: -25, y: -100 }); // Initial Offset
+    const [isDragging, setIsDragging] = useState(false);
+    const dragStartRef = useRef<{ x: number, y: number } | null>(null);
+
     // User Context
     const { currentStreak, hasCheckedInToday } = useStreak();
     const { currentEpisode } = usePlayer();
-    // Getting all quiz results just to summarize stats
     const { getQuizResult } = useProgress();
 
     const messagesEndRef = useRef<HTMLDivElement>(null);
@@ -35,6 +39,58 @@ export default function TutorChat() {
         scrollToBottom();
     }, [messages, isOpen]);
 
+    // Drag Handlers
+    const handleMouseDown = (e: React.MouseEvent | React.TouchEvent) => {
+        e.stopPropagation();
+        setIsDragging(true);
+
+        const clientX = 'touches' in e ? e.touches[0].clientX : (e as React.MouseEvent).clientX;
+        const clientY = 'touches' in e ? e.touches[0].clientY : (e as React.MouseEvent).clientY;
+
+        dragStartRef.current = {
+            x: clientX - position.x,
+            y: clientY - position.y
+        };
+    };
+
+    const handleMouseMove = (e: MouseEvent | TouchEvent) => {
+        if (!isDragging || !dragStartRef.current) return;
+        e.preventDefault();
+
+        const clientX = 'touches' in e ? e.touches[0].clientX : (e as MouseEvent).clientX;
+        const clientY = 'touches' in e ? e.touches[0].clientY : (e as MouseEvent).clientY;
+
+        setPosition({
+            x: clientX - dragStartRef.current.x,
+            y: clientY - dragStartRef.current.y
+        });
+    };
+
+    const handleMouseUp = () => {
+        setIsDragging(false);
+        dragStartRef.current = null;
+    };
+
+    useEffect(() => {
+        if (isDragging) {
+            window.addEventListener('mousemove', handleMouseMove);
+            window.addEventListener('mouseup', handleMouseUp);
+            window.addEventListener('touchmove', handleMouseMove, { passive: false });
+            window.addEventListener('touchend', handleMouseUp);
+        } else {
+            window.removeEventListener('mousemove', handleMouseMove);
+            window.removeEventListener('mouseup', handleMouseUp);
+            window.removeEventListener('touchmove', handleMouseMove);
+            window.removeEventListener('touchend', handleMouseUp);
+        }
+        return () => {
+            window.removeEventListener('mousemove', handleMouseMove);
+            window.removeEventListener('mouseup', handleMouseUp);
+            window.removeEventListener('touchmove', handleMouseMove);
+            window.removeEventListener('touchend', handleMouseUp);
+        };
+    }, [isDragging]);
+
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
         if (!input.trim() || isLoading) return;
@@ -45,12 +101,10 @@ export default function TutorChat() {
         setIsLoading(true);
 
         try {
-            // Prepare User Context to send to AI
             const userContext = {
                 streak: currentStreak,
                 checkedIn: hasCheckedInToday,
                 currentEpisode: currentEpisode?.title || "None",
-                // Simple summary of quiz performance if needed
             };
 
             const response = await fetch('/api/tutor', {
@@ -64,7 +118,6 @@ export default function TutorChat() {
 
             if (!response.body) throw new Error("No response body");
 
-            // Streaming Logic
             const reader = response.body.getReader();
             const decoder = new TextDecoder();
             let assistantMessage = "";
@@ -87,13 +140,8 @@ export default function TutorChat() {
 
         } catch (error: any) {
             console.error('Tutor chat error:', error);
-
             let errorMsg = "I'm having trouble connecting to the Tutor right now.";
-
-            // Try to get more specific error info
-            if (error?.message) {
-                errorMsg += ` Error: ${error.message}`;
-            }
+            if (error?.message) errorMsg += ` Error: ${error.message}`;
 
             setMessages(prev => [...prev, {
                 role: 'assistant',
@@ -104,35 +152,56 @@ export default function TutorChat() {
         }
     };
 
+    // Style logic: Use fixed position. 
+    // If x/y are negative, treat as distance from right/bottom.
+    // If positive, treat as distance from left/top.
+    const style: React.CSSProperties = {
+        position: 'fixed',
+        zIndex: 100,
+        left: position.x >= 0 ? position.x : undefined,
+        top: position.y >= 0 ? position.y : undefined,
+        right: position.x < 0 ? Math.abs(position.x) : undefined,
+        bottom: position.y < 0 ? Math.abs(position.y) : undefined,
+        touchAction: 'none'
+    };
+
     return (
         <>
-            {/* FAB (Floating Action Button) */}
+            {/* FAB (Floating Action Button) - Wrapper for Drag */}
             {!isOpen && (
-                <button
-                    onClick={() => setIsOpen(true)}
-                    className="fixed bottom-24 right-4 z-40 h-14 px-5 rounded-full bg-indigo-600 text-white shadow-lg flex items-center gap-2 hover:bg-indigo-500 hover:scale-105 active:scale-95 transition-all animate-bounce-in"
-                    aria-label="Ask Tutor"
+                <div
+                    style={style}
+                    onMouseDown={handleMouseDown}
+                    onTouchStart={handleMouseDown}
+                    className="cursor-move touch-none"
+                    title="Drag to move"
                 >
-                    <span className="font-bold text-sm tracking-wide">Ask AI</span>
-                    <span className="text-2xl">🤖</span>
-                </button>
+                    <button
+                        onClick={(e) => {
+                            if (!isDragging) setIsOpen(true);
+                        }}
+                        className="h-14 px-5 rounded-full bg-indigo-600 text-white shadow-lg flex items-center gap-2 hover:bg-indigo-500 hover:scale-105 active:scale-95 transition-transform animate-bounce-in ring-2 ring-white/20"
+                        aria-label="Ask Tutor"
+                        style={{ pointerEvents: isDragging ? 'none' : 'auto' }}
+                    >
+                        <span className="font-bold text-sm tracking-wide">Ask AI</span>
+                        <span className="text-2xl">🤖</span>
+                    </button>
+                </div>
             )}
 
-            {/* Chat Sheet / Overlay */}
+            {/* Chat Window */}
             {isOpen && (
                 <div className="fixed inset-0 z-[100] flex flex-col justify-end sm:items-end sm:justify-end sm:p-4">
-                    {/* Backdrop for mobile */}
                     <div
                         className="fixed inset-0 bg-black/40 sm:bg-transparent transition-opacity"
                         onClick={() => setIsOpen(false)}
                     />
 
-                    {/* Chat Window */}
                     <div
                         className="relative z-10 w-full h-[80vh] sm:h-[600px] sm:w-[400px] bg-white dark:bg-[#1C1C1E] border-t sm:border border-white/20 sm:rounded-2xl shadow-2xl flex flex-col overflow-hidden animate-slide-up-fast"
                         onClick={(e) => e.stopPropagation()}
                     >
-
                         {/* Header */}
                         <div className="p-4 border-b border-gray-100 dark:border-white/10 flex items-center justify-between bg-white/95 dark:bg-[#2C2C2E] backdrop-blur">
                             <div className="flex items-center gap-3">
@@ -210,7 +279,6 @@ export default function TutorChat() {
                                 </button>
                             </div>
                         </form>
-
                     </div>
                 </div>
             )}

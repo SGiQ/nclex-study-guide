@@ -16,7 +16,7 @@ interface TranscriptViewerProps {
 }
 
 export default function TranscriptViewer({ segments, currentTime, onSeek }: TranscriptViewerProps) {
-    const [isExpanded, setIsExpanded] = useState(false);
+    const [isExpanded, setIsExpanded] = useState(true);
     const activeSegmentRef = useRef<HTMLDivElement>(null);
 
     // Find current active segment
@@ -89,8 +89,8 @@ export default function TranscriptViewer({ segments, currentTime, onSeek }: Tran
                                     ref={isActive ? activeSegmentRef : null}
                                     onClick={() => onSeek(segment.start)}
                                     className={`p-4 rounded-lg cursor-pointer transition-all ${isActive
-                                            ? 'bg-indigo-500/20 border border-indigo-500/30'
-                                            : 'bg-surface/5 hover:bg-surface/10 border border-transparent'
+                                        ? 'bg-indigo-500/20 border border-indigo-500/30'
+                                        : 'bg-surface/5 hover:bg-surface/10 border border-transparent'
                                         }`}
                                 >
                                     <div className="flex items-start gap-3">

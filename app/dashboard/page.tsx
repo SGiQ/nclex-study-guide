@@ -103,53 +103,55 @@ export default function DashboardPage() {
             <main className="mx-auto max-w-md px-5 pb-[180px] pt-4 stagger-1">
 
                 {/* Achievements Section */}
-                {unlockedBadges.length > 0 && (
-                    <div className="mb-6 animate-slide-up">
-                        <div className="flex items-center justify-between mb-2 px-1">
-                            <h2 className="text-sm font-bold text-yellow-400 flex items-center gap-2">
-                                <span>🏆</span> Recent Achievements
-                            </h2>
-                            <Link href="/achievements" className="text-[10px] uppercase font-bold text-yellow-400/70 tracking-wider hover:text-yellow-400">
-                                View All →
-                            </Link>
-                        </div>
-
-                        <Link
-                            href="/achievements"
-                            className="group block relative overflow-hidden rounded-2xl bg-gradient-to-br from-yellow-900/40 to-orange-900/40 border border-yellow-500/20 p-4 transition-all hover:border-yellow-500/40"
-                        >
-                            <div className="flex items-center justify-between mb-3">
-                                <div>
-                                    <div className="text-3xl font-black text-yellow-400">{unlockedBadges.length}/{totalBadges}</div>
-                                    <div className="text-xs text-yellow-400/70">Badges Unlocked</div>
-                                </div>
-                                <div className="h-12 w-12 rounded-xl bg-yellow-500/20 flex items-center justify-center text-yellow-400 group-hover:scale-110 transition-transform">
-                                    🏆
-                                </div>
-                            </div>
-
-                            {/* Progress Bar */}
-                            <div className="h-2 bg-background/30 rounded-full overflow-hidden mb-3">
-                                <div
-                                    className="h-full bg-gradient-to-r from-yellow-500 to-orange-500 transition-all duration-500"
-                                    style={{ width: `${achievementProgress}%` }}
-                                />
-                            </div>
-
-                            {/* Recent Badges */}
-                            {recentBadges.length > 0 && (
-                                <div className="grid grid-cols-3 gap-2">
-                                    {recentBadges.map(badge => (
-                                        <div key={badge.id} className="text-center">
-                                            <div className="text-2xl mb-1">{badge.icon}</div>
-                                            <div className="text-[9px] text-yellow-400/70 font-medium truncate">{badge.name}</div>
-                                        </div>
-                                    ))}
-                                </div>
-                            )}
+                <div className="mb-6 animate-slide-up">
+                    <div className="flex items-center justify-between mb-2 px-1">
+                        <h2 className="text-sm font-bold text-yellow-400 flex items-center gap-2">
+                            <span>🏆</span> Achievements
+                        </h2>
+                        <Link href="/achievements" className="text-[10px] uppercase font-bold text-yellow-400/70 tracking-wider hover:text-yellow-400">
+                            View All →
                         </Link>
                     </div>
-                )}
+
+                    <Link
+                        href="/achievements"
+                        className="group block relative overflow-hidden rounded-2xl bg-gradient-to-br from-yellow-900/40 to-orange-900/40 border border-yellow-500/20 p-4 transition-all hover:border-yellow-500/40"
+                    >
+                        <div className="flex items-center justify-between mb-3">
+                            <div>
+                                <div className="text-3xl font-black text-yellow-400">{unlockedBadges.length}/{totalBadges}</div>
+                                <div className="text-xs text-yellow-400/70">Badges Unlocked</div>
+                            </div>
+                            <div className="h-12 w-12 rounded-xl bg-yellow-500/20 flex items-center justify-center text-yellow-400 group-hover:scale-110 transition-transform">
+                                🏆
+                            </div>
+                        </div>
+
+                        {/* Progress Bar */}
+                        <div className="h-2 bg-background/30 rounded-full overflow-hidden mb-3">
+                            <div
+                                className="h-full bg-gradient-to-r from-yellow-500 to-orange-500 transition-all duration-500"
+                                style={{ width: `${achievementProgress}%` }}
+                            />
+                        </div>
+
+                        {/* Recent Badges */}
+                        {recentBadges.length > 0 ? (
+                            <div className="grid grid-cols-3 gap-2">
+                                {recentBadges.map(badge => (
+                                    <div key={badge.id} className="text-center">
+                                        <div className="text-2xl mb-1">{badge.icon}</div>
+                                        <div className="text-[9px] text-yellow-400/70 font-medium truncate">{badge.name}</div>
+                                    </div>
+                                ))}
+                            </div>
+                        ) : (
+                            <div className="text-center py-2">
+                                <span className="text-xs text-yellow-400/50 italic">Complete quizzes to unlock badges!</span>
+                            </div>
+                        )}
+                    </Link>
+                </div>
 
                 {/* Weakness Targeting Alert */}
                 {suggestedReview && (
@@ -181,41 +183,41 @@ export default function DashboardPage() {
                 {/* SRS Daily Review Widget */}
                 <div className="mb-6 animate-slide-up">
                     <div className="flex items-center justify-between mb-2 px-1">
-                        <h2 className="text-sm font-bold text-indigo-400 flex items-center gap-2">
+                        <h2 className="text-sm font-bold text-indigo-300 flex items-center gap-2">
                             <span>📚</span> Daily Reviews
                         </h2>
-                        <Link href="/reviews" className="text-[10px] uppercase font-bold text-indigo-400/70 tracking-wider hover:text-indigo-400">
+                        <Link href="/reviews" className="text-[10px] uppercase font-bold text-indigo-300/70 tracking-wider hover:text-indigo-300">
                             View All →
                         </Link>
                     </div>
 
                     <Link
                         href="/reviews"
-                        className="group block relative overflow-hidden rounded-2xl bg-gradient-to-br from-indigo-900/40 to-purple-900/40 border border-indigo-500/20 p-4 transition-all hover:border-indigo-500/40"
+                        className="group block relative overflow-hidden rounded-2xl bg-gradient-to-br from-indigo-900/60 to-purple-900/60 border border-indigo-500/30 p-4 transition-all hover:border-indigo-500/50"
                     >
                         <div className="flex items-center justify-between mb-3">
                             <div>
-                                <div className="text-3xl font-black text-indigo-400">{getDueCount()}</div>
-                                <div className="text-xs text-indigo-400/70">Cards Due Today</div>
+                                <div className="text-3xl font-black text-white">{getDueCount()}</div>
+                                <div className="text-xs text-indigo-200">Cards Due Today</div>
                             </div>
-                            <div className="h-12 w-12 rounded-xl bg-indigo-500/20 flex items-center justify-center text-indigo-400 group-hover:scale-110 transition-transform">
+                            <div className="h-12 w-12 rounded-xl bg-indigo-500/30 flex items-center justify-center text-indigo-200 group-hover:scale-110 transition-transform">
                                 🔄
                             </div>
                         </div>
 
                         <div className="flex items-center gap-4 text-xs">
                             <div>
-                                <span className="text-green-400 font-bold">{getMasteredCount()}</span>
-                                <span className="text-foreground/40"> Mastered</span>
+                                <span className="text-emerald-400 font-bold">{getMasteredCount()}</span>
+                                <span className="text-indigo-200/60"> Mastered</span>
                             </div>
                             <div>
-                                <span className="text-yellow-400 font-bold">{getLearningCount()}</span>
-                                <span className="text-foreground/40"> Learning</span>
+                                <span className="text-amber-400 font-bold">{getLearningCount()}</span>
+                                <span className="text-indigo-200/60"> Learning</span>
                             </div>
                         </div>
 
                         {getDueCount() > 0 && (
-                            <div className="mt-3 text-xs text-indigo-400 font-bold">
+                            <div className="mt-3 text-xs text-white font-bold bg-indigo-500/20 py-2 px-3 rounded-lg inline-block">
                                 → Start Review Session
                             </div>
                         )}

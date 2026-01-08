@@ -108,18 +108,52 @@ export default function QuizListPage() {
                                         </div>
                                     )}
 
-                                    {!isCompleted && (
-                                        <div className="mb-4 flex items-center gap-2">
-                                            {quiz.episodeId && (
-                                                <span className="text-[10px] font-bold uppercase tracking-wider bg-indigo-500/20 text-indigo-400 px-2 py-1 rounded-md border border-indigo-500/30">
-                                                    Episode {quiz.episodeId}
-                                                </span>
-                                            )}
-                                            <span className="text-[10px] font-bold uppercase tracking-wider bg-surface/10 px-2 py-1 rounded-md text-foreground/60">
-                                                {quiz.questionCount} Questions
-                                            </span>
-                                        </div>
-                                    )}
+                                    {!isCompleted && (() => {
+                                        // Check for in-progress quiz
+                                        const savedProgressStr = typeof window !== 'undefined' ? localStorage.getItem(`quiz_progress_${quiz.id}`) : null;
+                                        let inProgress = false;
+                                        let currentQuestion = 0;
+
+                                        if (savedProgressStr) {
+                                            try {
+                                                const savedProgress = JSON.parse(savedProgressStr);
+                                                if (savedProgress.currentQuestionIndex > 0 || savedProgress.score > 0) {
+                                                    inProgress = true;
+                                                    currentQuestion = savedProgress.currentQuestionIndex + 1;
+                                                }
+                                            } catch (e) { }
+                                        }
+
+                                        return (
+                                            <div className="mb-4">
+                                                {inProgress ? (
+                                                    <>
+                                                        <div className="flex justify-between text-xs font-bold uppercase tracking-wider mb-1">
+                                                            <span className="text-yellow-500">📝 In Progress</span>
+                                                            <span className="text-foreground/40">Question {currentQuestion}/{quiz.questionCount}</span>
+                                                        </div>
+                                                        <div className="h-2 w-full bg-surface/10 rounded-full overflow-hidden">
+                                                            <div
+                                                                className="h-full rounded-full bg-yellow-500"
+                                                                style={{ width: `${(currentQuestion / quiz.questionCount) * 100}%` }}
+                                                            />
+                                                        </div>
+                                                    </>
+                                                ) : (
+                                                    <div className="flex items-center gap-2">
+                                                        {quiz.episodeId && (
+                                                            <span className="text-[10px] font-bold uppercase tracking-wider bg-indigo-500/20 text-indigo-400 px-2 py-1 rounded-md border border-indigo-500/30">
+                                                                Episode {quiz.episodeId}
+                                                            </span>
+                                                        )}
+                                                        <span className="text-[10px] font-bold uppercase tracking-wider bg-surface/10 px-2 py-1 rounded-md text-foreground/60">
+                                                            {quiz.questionCount} Questions
+                                                        </span>
+                                                    </div>
+                                                )}
+                                            </div>
+                                        );
+                                    })()}
 
                                     <h3 className="text-lg font-bold mb-2 leading-tight text-foreground group-hover:text-purple-400 transition-colors">
                                         {quiz.title}

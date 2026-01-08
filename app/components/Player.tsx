@@ -55,6 +55,16 @@ export default function Player() {
             }
 
             setProgress((current / total) * 100);
+
+            // Save progress to localStorage every 5 seconds
+            if (currentEpisode && Math.floor(current) % 5 === 0) {
+                const progressData = {
+                    currentTime: current,
+                    duration: total,
+                    lastUpdated: Date.now()
+                };
+                localStorage.setItem(`audio_progress_${currentEpisode.id}`, JSON.stringify(progressData));
+            }
         }
     };
 

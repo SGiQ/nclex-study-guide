@@ -116,6 +116,33 @@ export default function AudioParams() {
                                     <span className="text-[10px] font-bold border border-foreground/10 px-1.5 py-0.5 rounded text-foreground/40 uppercase tracking-wider">
                                         {formatTime(episode.duration)}
                                     </span>
+                                    {(() => {
+                                        // Check for listen progress
+                                        const progressKey = `audio_progress_${episode.id}`;
+                                        const savedProgress = typeof window !== 'undefined' ? localStorage.getItem(progressKey) : null;
+
+                                        if (savedProgress) {
+                                            try {
+                                                const { currentTime, duration } = JSON.parse(savedProgress);
+                                                const percentComplete = Math.round((currentTime / duration) * 100);
+
+                                                if (percentComplete >= 95) {
+                                                    return (
+                                                        <span className="text-[10px] font-bold bg-emerald-500/20 text-emerald-400 px-1.5 py-0.5 rounded border border-emerald-500/30 uppercase tracking-wider">
+                                                            ✓ Completed
+                                                        </span>
+                                                    );
+                                                } else if (percentComplete > 0) {
+                                                    return (
+                                                        <span className="text-[10px] font-bold bg-yellow-500/20 text-yellow-400 px-1.5 py-0.5 rounded border border-yellow-500/30 uppercase tracking-wider">
+                                                            {percentComplete}% Listened
+                                                        </span>
+                                                    );
+                                                }
+                                            } catch (e) { }
+                                        }
+                                        return null;
+                                    })()}
                                 </div>
                             </div>
 

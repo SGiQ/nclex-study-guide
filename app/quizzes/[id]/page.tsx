@@ -6,17 +6,43 @@ import Link from 'next/link';
 import quizzes from '@/app/data/quizzes.json';
 import { useProgress } from '@/app/context/ProgressContext';
 
+// Types for quiz progress
+interface QuizProgress {
+    currentQuestionIndex: number;
+    score: number;
+    answeredQuestions: number[];
+}
+
 export default function QuizRunnerPage({ params }: { params: Promise<{ id: string }> }) {
     const { id } = use(params);
     const quizId = parseInt(id);
     const quiz = quizzes.find((q) => q.id === quizId);
 
+    // Helper function to load saved progress
+    const loadSavedProgress = (): QuizProgress | null => {
+        if (typeof window === 'undefined') return null;
+        try {
+            const savedProgressStr = localStorage.getItem(`quiz_progress_${quizId}`);
+            if (savedProgressStr) {
+                return JSON.parse(savedProgressStr);
+            }
+        } catch (error) {
+            console.error('Failed to load quiz progress:', error);
+        }
+        return null;
+    };
+
+    const savedProgress = loadSavedProgress();
+    const hasSavedProgress = savedProgress && (savedProgress.currentQuestionIndex > 0 || savedProgress.score > 0);
+
+    // Initialize state with saved progress if available and user wants to resume
+    const [showResumePrompt, setShowResumePrompt] = useState(hasSavedProgress);
     const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
+    const [score, setScore] = useState(0);
     const [selectedOption, setSelectedOption] = useState<number | null>(null);
     const [isAnswered, setIsAnswered] = useState(false);
-    const [score, setScore] = useState(0);
-    const [showExplanation, setShowExplanation] = useState(false); // Used for POST-ANSWER feedback
-    const [showHint, setShowHint] = useState(false); // Used for PRE-ANSWER hint toggle
+    const [showExplanation, setShowExplanation] = useState(false);
+    const [showHint, setShowHint] = useState(false);
     const [quizCompleted, setQuizCompleted] = useState(false);
     const [attemptNumber, setAttemptNumber] = useState(1);
     const [bestScore, setBestScore] = useState(0);
@@ -34,8 +60,54 @@ export default function QuizRunnerPage({ params }: { params: Promise<{ id: strin
     const currentQuestion = quiz.questions[currentQuestionIndex];
     const progress = ((currentQuestionIndex + 1) / quiz.questions.length) * 100;
 
+    // Save progress whenever it changes
+    useEffect(() => {
+        if (quizCompleted || showResumePrompt) return;
+
+        const progressData: QuizProgress = {
+            currentQuestionIndex,
+            score,
+            answeredQuestions: []
+        };
+
+        localStorage.setItem(`quiz_progress_${quizId}`, JSON.stringify(progressData));
+    }, [currentQuestionIndex, score, quizId, quizCompleted, showResumePrompt]);
+
+    // Clear progress when quiz is completed
+    useEffect(() => {
+        if (quizCompleted) {
+            localStorage.removeItem(`quiz_progress_${quizId}`);
+            setAttemptNumber(currentAttemptCount + 1);
+            setBestScore(Math.max(currentBestScore, Math.round((score / quiz.questions.length) * 100)));
+            saveQuizResult(quizId, score, quiz.questions.length);
+        }
+    }, [quizCompleted, quizId, score, quiz.questions.length, saveQuizResult, currentAttemptCount, currentBestScore]);
+
+    const handleResumeQuiz = () => {
+        if (savedProgress) {
+            setCurrentQuestionIndex(savedProgress.currentQuestionIndex);
+            setScore(savedProgress.score);
+            setSelectedOption(null);
+            setIsAnswered(false);
+            setShowExplanation(false);
+            setShowHint(false);
+        }
+        setShowResumePrompt(false);
+    };
+
+    const handleStartOver = () => {
+        localStorage.removeItem(`quiz_progress_${quizId}`);
+        setCurrentQuestionIndex(0);
+        setScore(0);
+        setSelectedOption(null);
+        setIsAnswered(false);
+        setShowExplanation(false);
+        setShowHint(false);
+        setShowResumePrompt(false);
+    };
+
     const handleOptionClick = (index: number) => {
-        if (isAnswered) return; // Prevent changing after answer
+        if (isAnswered) return;
         setSelectedOption(index);
     };
 
@@ -59,28 +131,61 @@ export default function QuizRunnerPage({ params }: { params: Promise<{ id: strin
             setShowHint(false);
         } else {
             setQuizCompleted(true);
-            saveQuizResult(quizId, score + (selectedOption === currentQuestion.correctAnswer ? 0 : 0), quiz.questions.length);
-            // Note: score state is already updated for previous questions. 
-            // Wait, score update for LAST question happens in checkAnswer, which is BEFORE nextQuestion is called?
-            // Yes, user clicks Check Answer (score updates), then Next Question.
-            // So 'score' is up to date here.
         }
     };
 
-    // Effect to trigger save when completed? 
-    // better to do it synchronously in the event handler to ensure it runs before render change if possible, 
-    // but state 'score' might be stale in a closure? 
-    // Actually, 'score' is state. Accessing it in nextQuestion should be fine if it was updated in checkAnswer.
-    // BUT checkAnswer runs, then wait for user to click Next. So re-render happened. 'score' is fresh.
+    // Show resume prompt if saved progress exists
+    if (showResumePrompt) {
+        const savedProgressStr = localStorage.getItem(`quiz_progress_${quizId}`);
+        const savedProgress: QuizProgress | null = savedProgressStr ? JSON.parse(savedProgressStr) : null;
 
-    useEffect(() => {
-        if (quizCompleted) {
-            setAttemptNumber(currentAttemptCount + 1);
-            setBestScore(Math.max(currentBestScore, Math.round((score / quiz.questions.length) * 100)));
-            saveQuizResult(quizId, score, quiz.questions.length);
-        }
-    }, [quizCompleted, quizId, score, quiz.questions.length, saveQuizResult, currentAttemptCount, currentBestScore]);
+        return (
+            <div className="min-h-dvh bg-[#0A0A0F] text-white flex items-center justify-center p-6">
+                <div className="max-w-md w-full bg-[#1A1A20] rounded-3xl p-8 border border-white/10 shadow-2xl">
+                    <div className="w-20 h-20 bg-gradient-to-br from-purple-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <span className="text-4xl">📝</span>
+                    </div>
+                    <h1 className="text-2xl font-bold mb-3 text-center">Resume Quiz?</h1>
+                    <p className="text-white/60 mb-6 text-center">
+                        You have an unfinished quiz. Would you like to continue where you left off?
+                    </p>
 
+                    {savedProgress && (
+                        <div className="bg-black/30 rounded-xl p-4 mb-6 text-center">
+                            <div className="text-sm text-white/50 mb-1">Your Progress</div>
+                            <div className="text-2xl font-bold text-purple-400">
+                                Question {savedProgress.currentQuestionIndex + 1} of {quiz.questions.length}
+                            </div>
+                            <div className="text-sm text-emerald-400 mt-1">
+                                {savedProgress.score} correct so far
+                            </div>
+                        </div>
+                    )}
+
+                    <div className="flex flex-col gap-3">
+                        <button
+                            onClick={handleResumeQuiz}
+                            className="w-full py-4 bg-purple-600 text-white font-bold rounded-xl hover:bg-purple-500 active:bg-purple-700 transition-colors"
+                        >
+                            Resume Quiz
+                        </button>
+                        <button
+                            onClick={handleStartOver}
+                            className="w-full py-4 bg-white/10 text-white font-bold rounded-xl hover:bg-white/20 active:bg-white/5 transition-colors"
+                        >
+                            Start Over
+                        </button>
+                        <Link
+                            href="/quizzes"
+                            className="w-full py-3 text-center text-white/50 hover:text-white transition-colors text-sm"
+                        >
+                            Back to Quizzes
+                        </Link>
+                    </div>
+                </div>
+            </div>
+        );
+    }
 
     if (quizCompleted) {
         const scorePercentage = Math.round((score / quiz.questions.length) * 100);

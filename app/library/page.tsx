@@ -37,7 +37,7 @@ export default function LibraryPage() {
     };
 
     return (
-        <div className="min-h-dvh bg-background text-foreground pb-40">
+        <div className="min-h-dvh bg-background text-foreground pb-[180px]">
             {/* Header */}
             <header className="sticky top-0 z-30 bg-background/80 backdrop-blur border-b border-nav-border animate-in">
                 <div className="mx-auto max-w-2xl px-4 pt-4 pb-3">

@@ -246,7 +246,7 @@ export default function ExamPage() {
             </div>
 
             {/* Main Content */}
-            <div className="flex-1 overflow-y-auto pb-32">
+            <div className="flex-1 overflow-y-auto pb-[180px]">
                 <div className="max-w-4xl mx-auto px-4 py-8">
                     {/* Question */}
                     <div className="mb-8">

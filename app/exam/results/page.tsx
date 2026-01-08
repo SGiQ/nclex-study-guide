@@ -74,7 +74,7 @@ export default function ExamResultsPage() {
         const isCorrect = userAnswer === q.correctAnswer;
 
         return (
-            <div className="min-h-screen bg-background text-foreground pb-32">
+            <div className="min-h-screen bg-background text-foreground pb-[180px]">
                 <div className="sticky top-0 z-10 bg-background/95 backdrop-blur-md border-b border-nav-border px-4 py-3">
                     <div className="max-w-4xl mx-auto flex items-center justify-between">
                         <button
@@ -163,7 +163,7 @@ export default function ExamResultsPage() {
     }
 
     return (
-        <div className="min-h-screen bg-background text-foreground pb-32">
+        <div className="min-h-screen bg-background text-foreground pb-[180px]">
             <div className="max-w-4xl mx-auto px-4 py-8">
                 {/* Pass/Fail Header */}
                 <div className={`text-center p-12 rounded-3xl mb-8 ${results.passed

@@ -100,7 +100,7 @@ export default function DashboardPage() {
             </header>
 
             {/* Content */}
-            <main className="mx-auto max-w-md px-5 pb-40 pt-4 stagger-1">
+            <main className="mx-auto max-w-md px-5 pb-[180px] pt-4 stagger-1">
 
                 {/* Achievements Section */}
                 {unlockedBadges.length > 0 && (

@@ -51,7 +51,7 @@ export default function AudioParams() {
     };
 
     return (
-        <div className="pb-32 bg-background min-h-screen text-foreground">
+        <div className="pb-[180px] bg-background min-h-screen text-foreground">
             {/* Header */}
             <div className="sticky top-0 z-10 bg-background/80 backdrop-blur-md border-b border-nav-border px-4 py-4">
                 <div className="flex items-center gap-4 mb-4">

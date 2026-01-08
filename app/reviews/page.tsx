@@ -25,7 +25,7 @@ export default function ReviewsPage() {
     }, {} as Record<number, typeof dueCards>);
 
     return (
-        <div className="min-h-screen bg-background text-foreground pb-32">
+        <div className="min-h-screen bg-background text-foreground pb-[180px]">
             {/* Header */}
             <div className="sticky top-0 z-10 bg-background/80 backdrop-blur-md border-b border-nav-border px-4 py-4">
                 <div className="flex items-center gap-4 mb-4">

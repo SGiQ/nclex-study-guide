@@ -44,7 +44,7 @@ export default function QuizListPage() {
                 </div>
             </header>
 
-            <main className="mx-auto max-w-2xl px-6 py-8 pb-32">
+            <main className="mx-auto max-w-2xl px-6 py-8 pb-[180px]">
                 <div className="mb-8">
                     <h2 className="text-2xl font-bold mb-2">Practice Tests</h2>
                     <p className="text-foreground/60">Select a topic to begin a focused practice session. Immediate feedback provided.</p>

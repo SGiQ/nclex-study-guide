@@ -31,19 +31,31 @@ export default function AdminMindMapsPage() {
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
-        if (!file || !title) return;
+
+        // Strict validation
+        if (!file) {
+            alert('Please select an image file');
+            return;
+        }
+        if (!title || title.trim() === '') {
+            alert('Please enter a title');
+            return;
+        }
 
         setIsUploading(true);
-        const formData = new FormData();
-        formData.append('file', file);
-        formData.append('title', title);
-        formData.append('episodeId', episodeId);
 
         try {
+            const formData = new FormData();
+            formData.append('file', file);
+            formData.append('title', title.trim());
+            formData.append('episodeId', episodeId || '');
+
             const res = await fetch('/api/mindmaps', {
                 method: 'POST',
                 body: formData,
             });
+
+            const data = await res.json();
 
             if (res.ok) {
                 alert('Mind Map Uploaded Successfully!');
@@ -53,11 +65,11 @@ export default function AdminMindMapsPage() {
                 setPreviewUrl(null);
                 router.refresh();
             } else {
-                alert('Failed to upload.');
+                alert(`Failed to upload: ${data.error || 'Unknown error'}`);
             }
         } catch (error) {
-            console.error(error);
-            alert('Error uploading file.');
+            console.error('Upload error:', error);
+            alert('Error uploading file. Please try again.');
         } finally {
             setIsUploading(false);
         }

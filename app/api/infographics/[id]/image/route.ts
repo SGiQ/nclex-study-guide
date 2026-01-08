@@ -9,7 +9,7 @@ export async function GET(
     try {
         const result = await pool.query(
             'SELECT file_data, file_type, file_name FROM infographics WHERE id = $1',
-            [params.id]
+            [id]
         );
 
         if (result.rows.length === 0) {

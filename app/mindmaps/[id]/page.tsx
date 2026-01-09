@@ -4,7 +4,6 @@ import { use, useState, useEffect } from 'react';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import { TransformWrapper, TransformComponent } from 'react-zoom-pan-pinch';
-import mindmapsData from '@/app/data/mindmaps.json';
 
 export default function MindMapViewerPage({ params }: { params: Promise<{ id: string }> }) {
     const { id } = use(params);
@@ -12,10 +11,23 @@ export default function MindMapViewerPage({ params }: { params: Promise<{ id: st
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        // Find mindmap by Episode ID
-        const found = mindmapsData.find((m: any) => m.episodeId === parseInt(id));
-        setMindmap(found || null);
-        setLoading(false);
+        fetch('/api/mindmaps')
+            .then(r => r.json())
+            .then(data => {
+                // Find mindmap by Episode ID (preferred) or ID
+                const epId = parseInt(id);
+                // API returns snake_case episode_id
+                const found = data.find((m: any) => m.episode_id === epId || m.id === epId);
+
+                if (found) {
+                    setMindmap(found);
+                }
+                setLoading(false);
+            })
+            .catch((e) => {
+                console.error("Error loading mindmap:", e);
+                setLoading(false);
+            });
     }, [id]);
 
     if (loading) {
@@ -40,7 +52,7 @@ export default function MindMapViewerPage({ params }: { params: Promise<{ id: st
                     {mindmap.title}
                 </div>
                 <a
-                    href={mindmap.url}
+                    href={`/api/mindmaps/${mindmap.id}/image`}
                     download={`${mindmap.title}.png`}
                     className="flex items-center gap-2 px-4 py-2 bg-purple-600 hover:bg-purple-500 rounded-lg text-sm font-semibold transition-colors text-white"
                 >
@@ -94,7 +106,7 @@ export default function MindMapViewerPage({ params }: { params: Promise<{ id: st
                                 contentClass="w-full h-full flex items-center justify-center"
                             >
                                 <img
-                                    src={mindmap.url}
+                                    src={`/api/mindmaps/${mindmap.id}/image`}
                                     alt={mindmap.title}
                                     className="max-w-full max-h-full object-contain cursor-move"
                                     draggable={false}

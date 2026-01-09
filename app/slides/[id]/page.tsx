@@ -3,7 +3,6 @@
 import { use, useState, useEffect } from 'react';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
-import slidesData from '@/app/data/slides.json';
 
 export default function SlideViewerPage({ params }: { params: Promise<{ id: string }> }) {
     const { id } = use(params);
@@ -11,10 +10,23 @@ export default function SlideViewerPage({ params }: { params: Promise<{ id: stri
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        // Find slide deck by Episode ID
-        const found = slidesData.find((s: any) => s.episodeId === parseInt(id));
-        setDeck(found || null);
-        setLoading(false);
+        fetch('/api/slides')
+            .then(r => r.json())
+            .then(data => {
+                // Find slide deck by Episode ID (preferred) or ID
+                const epId = parseInt(id);
+                // API returns snake_case episode_id
+                const found = data.find((s: any) => s.episode_id === epId || s.id === epId);
+
+                if (found) {
+                    setDeck(found);
+                }
+                setLoading(false);
+            })
+            .catch((e) => {
+                console.error("Error loading slides:", e);
+                setLoading(false);
+            });
     }, [id]);
 
     if (loading) {
@@ -44,7 +56,7 @@ export default function SlideViewerPage({ params }: { params: Promise<{ id: stri
             {/* PDF Viewer */}
             <main className="flex-1 w-full relative overflow-auto bg-gray-100 dark:bg-black flex items-center justify-center p-4">
                 <iframe
-                    src={`${deck.url}#toolbar=0&navpanes=0&scrollbar=0`}
+                    src={`/api/slides/${deck.id}/pdf#toolbar=0&navpanes=0&scrollbar=0`}
                     className="w-full h-full border-0"
                     title={deck.title}
                 />

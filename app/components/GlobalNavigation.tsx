@@ -10,6 +10,8 @@ export default function GlobalNavigation() {
     const { toggleNotes } = useNotes();
     const { theme, toggleTheme } = useTheme();
 
+    if (pathname === '/landing') return null;
+
     const navItems = [
         { label: "Home", icon: "⌂", href: "/" },
         { label: "Notes", icon: "📝", action: toggleNotes },

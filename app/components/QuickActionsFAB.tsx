@@ -2,18 +2,21 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { useRouter } from 'next/navigation';
+import { useRouter, usePathname } from 'next/navigation';
 import { useSRS } from '@/app/context/SRSContext';
 import { useProgress } from '@/app/context/ProgressContext';
 import quizzes from '@/app/data/quizzes.json';
 
 export default function QuickActionsFAB() {
     const router = useRouter();
+    const pathname = usePathname();
     const [isOpen, setIsOpen] = useState(false);
     const { getDueCount } = useSRS();
     const { quizResults } = useProgress();
 
     const dueCards = getDueCount();
+
+    if (pathname === '/landing') return null;
 
     // Get weak categories for random quiz
     const quizScores = Object.values(quizResults);

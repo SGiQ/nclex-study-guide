@@ -84,7 +84,7 @@ export default function StudyGuidePage({ params }: { params: Promise<{ id: strin
 
             <div className="max-w-4xl mx-auto p-6 space-y-8">
                 {/* Short Answer Questions */}
-                <section className="bg-white dark:bg-[#16161C] rounded-2xl p-6 border border-gray-200 dark:border-white/5 shadow-sm dark:shadow-none">
+                <section className="bg-white dark:bg-[#16161C] rounded-lg p-6 border border-gray-200 dark:border-white/5 shadow-sm dark:shadow-none">
                     <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-4 flex items-center gap-2">
                         <span>📋</span> Short-Answer Quiz
                     </h2>
@@ -115,7 +115,7 @@ export default function StudyGuidePage({ params }: { params: Promise<{ id: strin
                 </section>
 
                 {/* Essay Questions */}
-                <section className="bg-white dark:bg-[#16161C] rounded-2xl p-6 border border-gray-200 dark:border-white/5 shadow-sm dark:shadow-none">
+                <section className="bg-white dark:bg-[#16161C] rounded-lg p-6 border border-gray-200 dark:border-white/5 shadow-sm dark:shadow-none">
                     <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-4 flex items-center gap-2">
                         <span>✍️</span> Essay Questions
                     </h2>
@@ -138,7 +138,7 @@ export default function StudyGuidePage({ params }: { params: Promise<{ id: strin
                 </section>
 
                 {/* Glossary */}
-                <section className="bg-white dark:bg-[#16161C] rounded-2xl p-6 border border-gray-200 dark:border-white/5 shadow-sm dark:shadow-none">
+                <section className="bg-white dark:bg-[#16161C] rounded-lg p-6 border border-gray-200 dark:border-white/5 shadow-sm dark:shadow-none">
                     <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-4 flex items-center gap-2">
                         <span>📖</span> Glossary of Key Terms
                     </h2>

@@ -112,26 +112,26 @@ export default function AdminUsersPage() {
 
                 {/* Summary Cards */}
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-8">
-                    <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6">
+                    <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg p-6">
                         <div className="text-gray-400 text-sm mb-1">Total Users</div>
                         <div className="text-3xl font-bold text-white">{totalUsers}</div>
                     </div>
-                    <div className="bg-purple-500/10 backdrop-blur-sm border border-purple-500/20 rounded-xl p-6">
+                    <div className="bg-purple-500/10 backdrop-blur-sm border border-purple-500/20 rounded-lg p-6">
                         <div className="text-purple-300 text-sm mb-1">💎 Premium</div>
                         <div className="text-3xl font-bold text-white">{premiumUsers}</div>
                     </div>
-                    <div className="bg-yellow-500/10 backdrop-blur-sm border border-yellow-500/20 rounded-xl p-6">
+                    <div className="bg-yellow-500/10 backdrop-blur-sm border border-yellow-500/20 rounded-lg p-6">
                         <div className="text-yellow-300 text-sm mb-1">👑 Lifetime</div>
                         <div className="text-3xl font-bold text-white">{lifetimeUsers}</div>
                     </div>
-                    <div className="bg-gray-500/10 backdrop-blur-sm border border-gray-500/20 rounded-xl p-6">
+                    <div className="bg-gray-500/10 backdrop-blur-sm border border-gray-500/20 rounded-lg p-6">
                         <div className="text-gray-300 text-sm mb-1">🆓 Free</div>
                         <div className="text-3xl font-bold text-white">{freeUsers}</div>
                     </div>
                 </div>
 
                 {/* Filters */}
-                <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 mb-6">
+                <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg p-6 mb-6">
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                         <div>
                             <label className="block text-sm font-medium text-gray-300 mb-2">Search</label>
@@ -173,7 +173,7 @@ export default function AdminUsersPage() {
                 </div>
 
                 {/* Users Table */}
-                <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl overflow-hidden">
+                <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg overflow-hidden">
                     <div className="overflow-x-auto">
                         <table className="w-full">
                             <thead className="bg-white/5 border-b border-white/10">

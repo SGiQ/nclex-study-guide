@@ -75,7 +75,7 @@ export default function AdminInfographicsPage() {
                     </h1>
                 </div>
 
-                <div className="bg-[#16161C] p-8 rounded-3xl border border-white/10 shadow-2xl">
+                <div className="bg-[#16161C] p-8 rounded-lg border border-white/10 shadow-2xl">
                     <form onSubmit={handleSubmit} className="space-y-6">
 
                         {/* Title Input */}
@@ -87,7 +87,7 @@ export default function AdminInfographicsPage() {
                                 type="text"
                                 value={title}
                                 onChange={(e) => setTitle(e.target.value)}
-                                className="w-full bg-black/20 border border-white/10 rounded-xl px-4 py-3 text-white focus:border-pink-500 outline-none transition-colors"
+                                className="w-full bg-black/20 border border-white/10 rounded-lg px-4 py-3 text-white focus:border-pink-500 outline-none transition-colors"
                                 placeholder="e.g. Insulin Types Chart"
                                 required
                             />
@@ -102,7 +102,7 @@ export default function AdminInfographicsPage() {
                                 type="number"
                                 value={episodeId}
                                 onChange={(e) => setEpisodeId(e.target.value)}
-                                className="w-full bg-black/20 border border-white/10 rounded-xl px-4 py-3 text-white focus:border-pink-500 outline-none transition-colors"
+                                className="w-full bg-black/20 border border-white/10 rounded-lg px-4 py-3 text-white focus:border-pink-500 outline-none transition-colors"
                                 placeholder="e.g. 2"
                             />
                         </div>
@@ -119,7 +119,7 @@ export default function AdminInfographicsPage() {
                                     onChange={handleFileChange}
                                     className="absolute inset-0 w-full h-full opacity-0 cursor-pointer z-10"
                                 />
-                                <div className="border-2 border-dashed border-white/10 rounded-xl p-8 text-center group-hover:border-pink-500/50 group-hover:bg-pink-500/5 transition-all overflow-hidden relative">
+                                <div className="border-2 border-dashed border-white/10 rounded-lg p-8 text-center group-hover:border-pink-500/50 group-hover:bg-pink-500/5 transition-all overflow-hidden relative">
                                     {previewUrl ? (
                                         <div className="relative z-20">
                                             <img src={previewUrl} alt="Preview" className="max-h-48 mx-auto rounded-lg shadow-lg mb-2" />
@@ -141,7 +141,7 @@ export default function AdminInfographicsPage() {
                         <button
                             type="submit"
                             disabled={isUploading || !file}
-                            className="w-full bg-gradient-to-r from-pink-600 to-rose-600 hover:from-pink-500 hover:to-rose-500 disabled:opacity-50 disabled:cursor-not-allowed text-white font-bold py-4 rounded-xl transition-all shadow-lg shadow-pink-900/20"
+                            className="w-full bg-gradient-to-r from-pink-600 to-rose-600 hover:from-pink-500 hover:to-rose-500 disabled:opacity-50 disabled:cursor-not-allowed text-white font-bold py-4 rounded-lg transition-all shadow-lg shadow-pink-900/20"
                         >
                             {isUploading ? 'Uploading...' : 'Save Infographic'}
                         </button>

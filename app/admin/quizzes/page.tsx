@@ -168,7 +168,7 @@ export default function AdminQuizPage() {
 
                         <div className="space-y-6">
                             {questions.map((q, qIdx) => (
-                                <div key={qIdx} className="bg-[#1A1A20] rounded-xl border border-white/10 p-6 relative group">
+                                <div key={qIdx} className="bg-[#1A1A20] rounded-lg border border-white/10 p-6 relative group">
 
                                     {/* Delete Button */}
                                     <button

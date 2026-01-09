@@ -120,12 +120,12 @@ export default function OnboardingPage() {
                             onChange={(e) => setExamDate(e.target.value)}
                             min={minDate}
                             max={maxDate}
-                            className="w-full max-w-md mx-auto px-6 py-4 rounded-xl bg-card border border-card-border text-center text-xl font-semibold mb-8"
+                            className="w-full max-w-md mx-auto px-6 py-4 rounded-lg bg-card border border-card-border text-center text-xl font-semibold mb-8"
                         />
                         <button
                             onClick={handleNext}
                             disabled={!examDate}
-                            className="px-8 py-4 rounded-xl bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500 disabled:opacity-50 disabled:cursor-not-allowed font-bold text-lg transition-all"
+                            className="px-8 py-4 rounded-lg bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500 disabled:opacity-50 disabled:cursor-not-allowed font-bold text-lg transition-all"
                         >
                             Continue →
                         </button>
@@ -157,7 +157,7 @@ export default function OnboardingPage() {
                         </div>
                         <button
                             onClick={handleNext}
-                            className="px-8 py-4 rounded-xl bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500 font-bold text-lg transition-all"
+                            className="px-8 py-4 rounded-lg bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500 font-bold text-lg transition-all"
                         >
                             Continue →
                         </button>
@@ -189,7 +189,7 @@ export default function OnboardingPage() {
                                             <button
                                                 key={idx}
                                                 onClick={() => selectDiagnosticAnswer(idx)}
-                                                className="w-full text-left p-4 rounded-xl border-2 border-card-border bg-card hover:border-indigo-500 transition-all"
+                                                className="w-full text-left p-4 rounded-lg border-2 border-card-border bg-card hover:border-indigo-500 transition-all"
                                             >
                                                 {option}
                                             </button>
@@ -202,7 +202,7 @@ export default function OnboardingPage() {
                                 <p className="text-lg mb-6">All questions answered!</p>
                                 <button
                                     onClick={handleNext}
-                                    className="px-8 py-4 rounded-xl bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500 font-bold text-lg transition-all"
+                                    className="px-8 py-4 rounded-lg bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500 font-bold text-lg transition-all"
                                 >
                                     See Results →
                                 </button>
@@ -216,7 +216,7 @@ export default function OnboardingPage() {
                     <div className="text-center">
                         <div className="text-6xl mb-6">📚</div>
                         <h1 className="text-4xl font-black mb-4">Your Personalized Study Plan</h1>
-                        <div className="p-6 rounded-2xl bg-gradient-to-br from-green-500/20 to-emerald-500/20 border border-green-500/30 mb-6">
+                        <div className="p-6 rounded-lg bg-gradient-to-br from-green-500/20 to-emerald-500/20 border border-green-500/30 mb-6">
                             <div className="text-6xl font-black text-green-400 mb-2">
                                 {preferences.diagnosticScore}%
                             </div>
@@ -225,7 +225,7 @@ export default function OnboardingPage() {
                         <p className="text-foreground/80 mb-6">
                             We've created a {preferences.studyPlan.length}-day study plan tailored to your schedule and weak areas.
                         </p>
-                        <div className="text-left max-w-md mx-auto mb-8 p-4 rounded-xl bg-card border border-card-border">
+                        <div className="text-left max-w-md mx-auto mb-8 p-4 rounded-lg bg-card border border-card-border">
                             <h3 className="font-bold mb-3">Your Daily Schedule:</h3>
                             <ul className="space-y-2 text-sm">
                                 <li>📖 Audio lessons ({Math.round(studyHours * 60 / 7 * 0.5)} min/day)</li>
@@ -235,7 +235,7 @@ export default function OnboardingPage() {
                         </div>
                         <button
                             onClick={handleNext}
-                            className="px-8 py-4 rounded-xl bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500 font-bold text-lg transition-all"
+                            className="px-8 py-4 rounded-lg bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500 font-bold text-lg transition-all"
                         >
                             Continue →
                         </button>
@@ -251,22 +251,22 @@ export default function OnboardingPage() {
                             Here's what you can do in the app:
                         </p>
                         <div className="grid md:grid-cols-2 gap-4 mb-8">
-                            <div className="p-4 rounded-xl bg-card border border-card-border text-left">
+                            <div className="p-4 rounded-lg bg-card border border-card-border text-left">
                                 <div className="text-3xl mb-2">📊</div>
                                 <h3 className="font-bold mb-1">Track Progress</h3>
                                 <p className="text-sm text-foreground/60">See your readiness score and analytics</p>
                             </div>
-                            <div className="p-4 rounded-xl bg-card border border-card-border text-left">
+                            <div className="p-4 rounded-lg bg-card border border-card-border text-left">
                                 <div className="text-3xl mb-2">🎯</div>
                                 <h3 className="font-bold mb-1">Take Exams</h3>
                                 <p className="text-sm text-foreground/60">Practice with realistic NCLEX simulations</p>
                             </div>
-                            <div className="p-4 rounded-xl bg-card border border-card-border text-left">
+                            <div className="p-4 rounded-lg bg-card border border-card-border text-left">
                                 <div className="text-3xl mb-2">🗂️</div>
                                 <h3 className="font-bold mb-1">Review Cards</h3>
                                 <p className="text-sm text-foreground/60">Spaced repetition for better retention</p>
                             </div>
-                            <div className="p-4 rounded-xl bg-card border border-card-border text-left">
+                            <div className="p-4 rounded-lg bg-card border border-card-border text-left">
                                 <div className="text-3xl mb-2">📅</div>
                                 <h3 className="font-bold mb-1">Follow Your Plan</h3>
                                 <p className="text-sm text-foreground/60">Daily tasks customized for you</p>
@@ -274,7 +274,7 @@ export default function OnboardingPage() {
                         </div>
                         <button
                             onClick={handleNext}
-                            className="px-8 py-4 rounded-xl bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500 font-bold text-lg transition-all"
+                            className="px-8 py-4 rounded-lg bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500 font-bold text-lg transition-all"
                         >
                             Start Studying →
                         </button>

@@ -42,19 +42,19 @@ export default function ReviewsPage() {
             {/* Stats Overview */}
             <div className="px-4 py-6">
                 <div className="grid grid-cols-2 gap-4 mb-6">
-                    <div className="p-4 rounded-2xl bg-gradient-to-br from-red-500/10 to-red-500/5 border border-red-500/20">
+                    <div className="p-4 rounded-lg bg-gradient-to-br from-red-500/10 to-red-500/5 border border-red-500/20">
                         <div className="text-3xl font-black text-red-400">{dueCount}</div>
                         <div className="text-xs font-bold text-red-400/70 uppercase tracking-wider">Due Today</div>
                     </div>
-                    <div className="p-4 rounded-2xl bg-gradient-to-br from-green-500/10 to-green-500/5 border border-green-500/20">
+                    <div className="p-4 rounded-lg bg-gradient-to-br from-green-500/10 to-green-500/5 border border-green-500/20">
                         <div className="text-3xl font-black text-green-400">{masteredCount}</div>
                         <div className="text-xs font-bold text-green-400/70 uppercase tracking-wider">Mastered</div>
                     </div>
-                    <div className="p-4 rounded-2xl bg-gradient-to-br from-yellow-500/10 to-yellow-500/5 border border-yellow-500/20">
+                    <div className="p-4 rounded-lg bg-gradient-to-br from-yellow-500/10 to-yellow-500/5 border border-yellow-500/20">
                         <div className="text-3xl font-black text-yellow-400">{learningCount}</div>
                         <div className="text-xs font-bold text-yellow-400/70 uppercase tracking-wider">Learning</div>
                     </div>
-                    <div className="p-4 rounded-2xl bg-gradient-to-br from-blue-500/10 to-blue-500/5 border border-blue-500/20">
+                    <div className="p-4 rounded-lg bg-gradient-to-br from-blue-500/10 to-blue-500/5 border border-blue-500/20">
                         <div className="text-3xl font-black text-blue-400">{newCount}</div>
                         <div className="text-xs font-bold text-blue-400/70 uppercase tracking-wider">New Cards</div>
                     </div>
@@ -97,7 +97,7 @@ export default function ReviewsPage() {
                                     <Link
                                         key={episodeId}
                                         href={`/flashcards/${episodeId}`}
-                                        className="block p-4 rounded-xl bg-card border border-card-border hover:border-indigo-500/50 transition-all group"
+                                        className="block p-4 rounded-lg bg-card border border-card-border hover:border-indigo-500/50 transition-all group"
                                     >
                                         <div className="flex items-center justify-between">
                                             <div>
@@ -125,7 +125,7 @@ export default function ReviewsPage() {
                         {/* Start Review Button */}
                         <Link
                             href={`/flashcards/${Object.keys(cardsByEpisode)[0]}`}
-                            className="mt-6 block w-full py-4 rounded-xl bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500 transition-all font-bold text-center shadow-lg shadow-indigo-500/50"
+                            className="mt-6 block w-full py-4 rounded-lg bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500 transition-all font-bold text-center shadow-lg shadow-indigo-500/50"
                         >
                             Start Daily Review ({dueCount} cards)
                         </Link>
@@ -147,7 +147,7 @@ export default function ReviewsPage() {
                 )}
 
                 {/* How SRS Works */}
-                <div className="mt-12 p-6 rounded-2xl bg-gradient-to-br from-indigo-500/10 to-purple-500/10 border border-indigo-500/20">
+                <div className="mt-12 p-6 rounded-lg bg-gradient-to-br from-indigo-500/10 to-purple-500/10 border border-indigo-500/20">
                     <h3 className="font-bold text-lg mb-3 flex items-center gap-2">
                         <span>💡</span> How Spaced Repetition Works
                     </h3>

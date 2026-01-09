@@ -64,7 +64,7 @@ export default function ScoreHistoryModal({ quizId, quizTitle, isOpen, onClose }
 
     return (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm animate-in fade-in">
-            <div className="bg-[#1A1A20] rounded-3xl p-6 max-w-md w-full border border-white/10 shadow-2xl animate-in slide-in-from-bottom-4">
+            <div className="bg-[#1A1A20] rounded-lg p-6 max-w-md w-full border border-white/10 shadow-2xl animate-in slide-in-from-bottom-4">
                 {/* Header */}
                 <div className="flex items-center justify-between mb-6">
                     <div>
@@ -87,15 +87,15 @@ export default function ScoreHistoryModal({ quizId, quizTitle, isOpen, onClose }
                     <>
                         {/* Stats */}
                         <div className="grid grid-cols-3 gap-3 mb-6">
-                            <div className="bg-black/30 rounded-xl p-3 text-center">
+                            <div className="bg-black/30 rounded-lg p-3 text-center">
                                 <div className="text-xs text-white/50 mb-1">Best</div>
                                 <div className="text-xl font-bold text-emerald-400">{bestScore}%</div>
                             </div>
-                            <div className="bg-black/30 rounded-xl p-3 text-center">
+                            <div className="bg-black/30 rounded-lg p-3 text-center">
                                 <div className="text-xs text-white/50 mb-1">Average</div>
                                 <div className="text-xl font-bold text-white">{average}%</div>
                             </div>
-                            <div className="bg-black/30 rounded-xl p-3 text-center">
+                            <div className="bg-black/30 rounded-lg p-3 text-center">
                                 <div className="text-xs text-white/50 mb-1">Improvement</div>
                                 <div className={`text-xl font-bold ${improvement >= 0 ? 'text-emerald-400' : 'text-red-400'}`}>
                                     {improvement >= 0 ? '+' : ''}{improvement}%
@@ -117,7 +117,7 @@ export default function ScoreHistoryModal({ quizId, quizTitle, isOpen, onClose }
                                 return (
                                     <div
                                         key={attempt.id}
-                                        className={`p-4 rounded-xl border transition-colors ${isBest
+                                        className={`p-4 rounded-lg border transition-colors ${isBest
                                                 ? 'bg-emerald-500/10 border-emerald-500/30'
                                                 : 'bg-white/5 border-white/10'
                                             }`}
@@ -152,7 +152,7 @@ export default function ScoreHistoryModal({ quizId, quizTitle, isOpen, onClose }
                 {/* Close Button */}
                 <button
                     onClick={onClose}
-                    className="w-full mt-6 py-3 bg-white text-black font-bold rounded-xl hover:scale-[1.02] active:scale-[0.98] transition-transform"
+                    className="w-full mt-6 py-3 bg-white text-black font-bold rounded-lg hover:scale-[1.02] active:scale-[0.98] transition-transform"
                 >
                     Close
                 </button>

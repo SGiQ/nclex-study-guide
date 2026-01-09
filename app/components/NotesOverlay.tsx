@@ -87,7 +87,7 @@ export default function NotesOverlay() {
                                     value={newNoteContent}
                                     onChange={(e) => setNewNoteContent(e.target.value)}
                                     rows={10}
-                                    className="w-full bg-surface/5 rounded-xl border border-card-border p-4 text-foreground text-base focus:border-emerald-500 outline-none resize-none"
+                                    className="w-full bg-surface/5 rounded-lg border border-card-border p-4 text-foreground text-base focus:border-emerald-500 outline-none resize-none"
                                     placeholder="Type your notes here..."
                                     autoFocus
                                 />
@@ -96,7 +96,7 @@ export default function NotesOverlay() {
                             <button
                                 onClick={handleSave}
                                 disabled={isLoading || !newNoteContent.trim()}
-                                className="w-full bg-emerald-600 hover:bg-emerald-500 disabled:opacity-50 disabled:cursor-not-allowed text-white font-bold py-3 rounded-xl transition-colors"
+                                className="w-full bg-emerald-600 hover:bg-emerald-500 disabled:opacity-50 disabled:cursor-not-allowed text-white font-bold py-3 rounded-lg transition-colors"
                             >
                                 {isLoading ? 'Saving...' : 'Save Note'}
                             </button>
@@ -111,7 +111,7 @@ export default function NotesOverlay() {
                                 </div>
                             ) : (
                                 notes.map(note => (
-                                    <div key={note.id} className="bg-surface/5 rounded-xl p-4 border border-card-border hover:border-card-border/50 transition-colors">
+                                    <div key={note.id} className="bg-surface/5 rounded-lg p-4 border border-card-border hover:border-card-border/50 transition-colors">
                                         <div className="flex items-center justify-between mb-2">
                                             <span className="bg-surface/10 text-foreground/60 px-2 py-0.5 rounded text-[10px] uppercase font-bold tracking-wider">
                                                 {note.label}

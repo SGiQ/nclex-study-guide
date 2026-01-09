@@ -72,7 +72,7 @@ export default function AudioParams() {
                         placeholder="Find in episodes..."
                         value={searchTerm}
                         onChange={(e) => setSearchTerm(e.target.value)}
-                        className="w-full h-11 pl-10 pr-4 rounded-xl bg-surface/5 border border-nav-border focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all placeholder:text-foreground/30 text-sm font-medium"
+                        className="w-full h-11 pl-10 pr-4 rounded-lg bg-surface/5 border border-nav-border focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all placeholder:text-foreground/30 text-sm font-medium"
                     />
                 </div>
             </div>

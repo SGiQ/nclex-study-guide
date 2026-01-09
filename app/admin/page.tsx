@@ -104,7 +104,7 @@ export default function AdminPage() {
             <header className="bg-black/30 backdrop-blur-xl border-b border-white/10 sticky top-0 z-50">
                 <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
                     <div className="flex items-center gap-4">
-                        <div className="h-10 w-10 rounded-xl bg-gradient-to-br from-purple-500 to-indigo-600 flex items-center justify-center shadow-lg shadow-purple-500/50">
+                        <div className="h-10 w-10 rounded-lg bg-gradient-to-br from-purple-500 to-indigo-600 flex items-center justify-center shadow-lg shadow-purple-500/50">
                             <span className="text-xl">🔐</span>
                         </div>
                         <div>
@@ -131,7 +131,7 @@ export default function AdminPage() {
 
             <main className="max-w-7xl mx-auto px-6 py-8">
                 {message && (
-                    <div className={`p-4 rounded-xl mb-6 border ${message.type === 'success' ? 'bg-green-500/10 border-green-500/30 text-green-400' : 'bg-red-500/10 border-red-500/30 text-red-400'}`}>
+                    <div className={`p-4 rounded-lg mb-6 border ${message.type === 'success' ? 'bg-green-500/10 border-green-500/30 text-green-400' : 'bg-red-500/10 border-red-500/30 text-red-400'}`}>
                         {message.text}
                     </div>
                 )}
@@ -142,7 +142,7 @@ export default function AdminPage() {
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                         <Link
                             href="/admin/users"
-                            className="group flex flex-col items-center justify-center p-8 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 hover:border-purple-500/50 hover:bg-white/10 transition-all"
+                            className="group flex flex-col items-center justify-center p-8 bg-white/5 backdrop-blur-sm rounded-lg border border-white/10 hover:border-purple-500/50 hover:bg-white/10 transition-all"
                         >
                             <span className="text-5xl mb-4 group-hover:scale-110 transition-transform">👥</span>
                             <h3 className="text-lg font-bold text-white group-hover:text-purple-400 transition-colors">Users</h3>
@@ -150,7 +150,7 @@ export default function AdminPage() {
                         </Link>
                         <Link
                             href="/admin/view-database"
-                            className="group flex flex-col items-center justify-center p-8 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 hover:border-green-500/50 hover:bg-white/10 transition-all"
+                            className="group flex flex-col items-center justify-center p-8 bg-white/5 backdrop-blur-sm rounded-lg border border-white/10 hover:border-green-500/50 hover:bg-white/10 transition-all"
                         >
                             <span className="text-5xl mb-4 group-hover:scale-110 transition-transform">🗄️</span>
                             <h3 className="text-lg font-bold text-white group-hover:text-green-400 transition-colors">View Database</h3>
@@ -158,7 +158,7 @@ export default function AdminPage() {
                         </Link>
                         <Link
                             href="/admin/upload-docx"
-                            className="group flex flex-col items-center justify-center p-8 bg-gradient-to-br from-purple-500/10 to-indigo-500/10 backdrop-blur-sm rounded-2xl border-2 border-purple-500/30 hover:border-purple-500/60 hover:bg-purple-500/20 transition-all shadow-lg shadow-purple-500/20"
+                            className="group flex flex-col items-center justify-center p-8 bg-gradient-to-br from-purple-500/10 to-indigo-500/10 backdrop-blur-sm rounded-lg border-2 border-purple-500/30 hover:border-purple-500/60 hover:bg-purple-500/20 transition-all shadow-lg shadow-purple-500/20"
                         >
                             <span className="text-5xl mb-4 group-hover:scale-110 transition-transform">📄</span>
                             <h3 className="text-lg font-bold text-white group-hover:text-purple-300 transition-colors">Upload DOCX</h3>
@@ -166,7 +166,7 @@ export default function AdminPage() {
                         </Link>
                         <Link
                             href="/admin/quizzes"
-                            className="group flex flex-col items-center justify-center p-8 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 hover:border-purple-500/50 hover:bg-white/10 transition-all"
+                            className="group flex flex-col items-center justify-center p-8 bg-white/5 backdrop-blur-sm rounded-lg border border-white/10 hover:border-purple-500/50 hover:bg-white/10 transition-all"
                         >
                             <span className="text-5xl mb-4 group-hover:scale-110 transition-transform">📝</span>
                             <h3 className="text-lg font-bold text-white group-hover:text-purple-400 transition-colors">Quizzes</h3>
@@ -175,7 +175,7 @@ export default function AdminPage() {
 
                         <Link
                             href="/admin/flashcards"
-                            className="group flex flex-col items-center justify-center p-8 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 hover:border-indigo-500/50 hover:bg-white/10 transition-all"
+                            className="group flex flex-col items-center justify-center p-8 bg-white/5 backdrop-blur-sm rounded-lg border border-white/10 hover:border-indigo-500/50 hover:bg-white/10 transition-all"
                         >
                             <span className="text-5xl mb-4 group-hover:scale-110 transition-transform">🗂️</span>
                             <h3 className="text-lg font-bold text-white group-hover:text-indigo-400 transition-colors">Flashcards</h3>
@@ -184,7 +184,7 @@ export default function AdminPage() {
 
                         <Link
                             href="/admin/slides"
-                            className="group flex flex-col items-center justify-center p-8 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 hover:border-emerald-500/50 hover:bg-white/10 transition-all"
+                            className="group flex flex-col items-center justify-center p-8 bg-white/5 backdrop-blur-sm rounded-lg border border-white/10 hover:border-emerald-500/50 hover:bg-white/10 transition-all"
                         >
                             <span className="text-5xl mb-4 group-hover:scale-110 transition-transform">📊</span>
                             <h3 className="text-lg font-bold text-white group-hover:text-emerald-400 transition-colors">Slide Decks</h3>
@@ -193,7 +193,7 @@ export default function AdminPage() {
 
                         <Link
                             href="/admin/infographics"
-                            className="group flex flex-col items-center justify-center p-8 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 hover:border-pink-500/50 hover:bg-white/10 transition-all"
+                            className="group flex flex-col items-center justify-center p-8 bg-white/5 backdrop-blur-sm rounded-lg border border-white/10 hover:border-pink-500/50 hover:bg-white/10 transition-all"
                         >
                             <span className="text-5xl mb-4 group-hover:scale-110 transition-transform">🖼️</span>
                             <h3 className="text-lg font-bold text-white group-hover:text-pink-400 transition-colors">Infographics</h3>
@@ -202,14 +202,14 @@ export default function AdminPage() {
 
                         <Link
                             href="/admin/mindmaps"
-                            className="group flex flex-col items-center justify-center p-8 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 hover:border-cyan-500/50 hover:bg-white/10 transition-all"
+                            className="group flex flex-col items-center justify-center p-8 bg-white/5 backdrop-blur-sm rounded-lg border border-white/10 hover:border-cyan-500/50 hover:bg-white/10 transition-all"
                         >
                             <span className="text-5xl mb-4 group-hover:scale-110 transition-transform">🧠</span>
                             <h3 className="text-lg font-bold text-white group-hover:text-cyan-400 transition-colors">Mind Maps</h3>
                             <p className="text-white/40 text-sm mt-2">Upload Concept Maps</p>
                         </Link>
 
-                        <div className="group flex flex-col items-center justify-center p-8 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 hover:border-blue-500/50 hover:bg-white/10 transition-all">
+                        <div className="group flex flex-col items-center justify-center p-8 bg-white/5 backdrop-blur-sm rounded-lg border border-white/10 hover:border-blue-500/50 hover:bg-white/10 transition-all">
                             <span className="text-5xl mb-4 group-hover:scale-110 transition-transform">🎧</span>
                             <h3 className="text-lg font-bold text-white group-hover:text-blue-400 transition-colors">Audio Episodes</h3>
                             <p className="text-white/40 text-sm mt-2">Manage Below ↓</p>
@@ -222,7 +222,7 @@ export default function AdminPage() {
                     <h2 className="text-2xl font-bold mb-6">Audio Episodes Manager</h2>
                     <div className="space-y-3">
                         {episodes.map((episode) => (
-                            <div key={episode.id} className="bg-white/5 backdrop-blur-sm border border-white/10 p-5 rounded-xl flex items-center justify-between hover:bg-white/10 transition-all">
+                            <div key={episode.id} className="bg-white/5 backdrop-blur-sm border border-white/10 p-5 rounded-lg flex items-center justify-between hover:bg-white/10 transition-all">
                                 <div>
                                     <h3 className="font-semibold text-lg">{episode.title}</h3>
                                     <div className="flex items-center gap-2 mt-1">

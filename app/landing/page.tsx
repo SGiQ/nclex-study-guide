@@ -123,13 +123,13 @@ export default function LandingPage() {
                     <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
                         <button
                             onClick={() => setShowSignup(true)}
-                            className="px-8 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-xl font-bold text-lg hover:from-indigo-500 hover:to-purple-500 transition-all shadow-2xl shadow-indigo-500/50 w-full sm:w-auto"
+                            className="px-8 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-lg font-bold text-lg hover:from-indigo-500 hover:to-purple-500 transition-all shadow-2xl shadow-indigo-500/50 w-full sm:w-auto"
                         >
                             Start 7-Day Free Trial
                         </button>
                         <Link
                             href="/audio"
-                            className="px-8 py-4 bg-white/10 backdrop-blur-sm rounded-xl font-bold text-lg hover:bg-white/20 transition-all border border-white/20 w-full sm:w-auto"
+                            className="px-8 py-4 bg-white/10 backdrop-blur-sm rounded-lg font-bold text-lg hover:bg-white/20 transition-all border border-white/20 w-full sm:w-auto"
                         >
                             Try Demo →
                         </Link>
@@ -206,7 +206,7 @@ export default function LandingPage() {
                         ].map((feature, i) => (
                             <div
                                 key={i}
-                                className="p-6 rounded-2xl bg-gradient-to-br from-white/5 to-white/0 border border-white/10 hover:border-indigo-500/50 transition-all group"
+                                className="p-6 rounded-lg bg-gradient-to-br from-white/5 to-white/0 border border-white/10 hover:border-indigo-500/50 transition-all group"
                             >
                                 <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">{feature.icon}</div>
                                 <h3 className="text-xl font-bold mb-2">{feature.title}</h3>
@@ -277,7 +277,7 @@ export default function LandingPage() {
 
                     <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
                         {/* Free */}
-                        <div className="p-8 rounded-2xl bg-white/5 border border-white/10">
+                        <div className="p-8 rounded-lg bg-white/5 border border-white/10">
                             <h3 className="text-2xl font-bold mb-2">Free</h3>
                             <div className="text-4xl font-black mb-6">$0<span className="text-lg text-white/60">/month</span></div>
                             <ul className="space-y-3 mb-8">
@@ -294,7 +294,7 @@ export default function LandingPage() {
                         </div>
 
                         {/* Premium */}
-                        <div className="p-8 rounded-2xl bg-gradient-to-br from-indigo-600/20 to-purple-600/20 border-2 border-indigo-500 relative">
+                        <div className="p-8 rounded-lg bg-gradient-to-br from-indigo-600/20 to-purple-600/20 border-2 border-indigo-500 relative">
                             <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-full text-sm font-bold">
                                 MOST POPULAR
                             </div>
@@ -317,7 +317,7 @@ export default function LandingPage() {
                         </div>
 
                         {/* Lifetime */}
-                        <div className="p-8 rounded-2xl bg-white/5 border border-white/10">
+                        <div className="p-8 rounded-lg bg-white/5 border border-white/10">
                             <h3 className="text-2xl font-bold mb-2">Lifetime</h3>
                             <div className="text-4xl font-black mb-6">$399<span className="text-lg text-white/60"> once</span></div>
                             <ul className="space-y-3 mb-8">
@@ -369,7 +369,7 @@ export default function LandingPage() {
                                 rating: 5
                             }
                         ].map((testimonial, i) => (
-                            <div key={i} className="p-6 rounded-2xl bg-white/5 border border-white/10">
+                            <div key={i} className="p-6 rounded-lg bg-white/5 border border-white/10">
                                 <div className="flex gap-1 mb-4">
                                     {[...Array(testimonial.rating)].map((_, i) => (
                                         <span key={i} className="text-yellow-400">⭐</span>
@@ -395,7 +395,7 @@ export default function LandingPage() {
                     </p>
                     <button
                         onClick={() => setShowSignup(true)}
-                        className="px-12 py-4 bg-white text-indigo-600 rounded-xl font-bold text-lg hover:bg-gray-100 transition-all shadow-2xl"
+                        className="px-12 py-4 bg-white text-indigo-600 rounded-lg font-bold text-lg hover:bg-gray-100 transition-all shadow-2xl"
                     >
                         Start Your Free Trial Now →
                     </button>
@@ -454,7 +454,7 @@ export default function LandingPage() {
             {/* Signup Modal */}
             {showSignup && (
                 <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm">
-                    <div className="bg-gradient-to-br from-gray-900 to-black border border-white/10 rounded-2xl p-8 max-w-md w-full max-h-[90vh] overflow-y-auto">
+                    <div className="bg-gradient-to-br from-gray-900 to-black border border-white/10 rounded-lg p-8 max-w-md w-full max-h-[90vh] overflow-y-auto">
                         <div className="flex items-center justify-between mb-6">
                             <h3 className="text-2xl font-bold">Create Account</h3>
                             <button
@@ -561,7 +561,7 @@ export default function LandingPage() {
             {/* Login Modal */}
             {showLogin && (
                 <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm">
-                    <div className="bg-gradient-to-br from-gray-900 to-black border border-white/10 rounded-2xl p-8 max-w-md w-full">
+                    <div className="bg-gradient-to-br from-gray-900 to-black border border-white/10 rounded-lg p-8 max-w-md w-full">
                         <div className="flex items-center justify-between mb-6">
                             <h3 className="text-2xl font-bold">Welcome Back</h3>
                             <button

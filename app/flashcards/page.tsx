@@ -32,7 +32,7 @@ export default function FlashcardsListPage() {
                         <Link
                             key={deck.episodeId}
                             href={`/flashcards/${deck.episodeId}`}
-                            className="group relative overflow-hidden rounded-2xl bg-card hover:bg-surface/5 transition-all duration-300 border border-card-border hover:border-border hover:shadow-2xl hover:-translate-y-1 block"
+                            className="group relative overflow-hidden rounded-lg bg-card hover:bg-surface/5 transition-all duration-300 border border-card-border hover:border-border hover:shadow-2xl hover:-translate-y-1 block"
                         >
                             {/* Decorative Background */}
                             <div className="absolute inset-0 opacity-10 group-hover:opacity-20 transition-opacity bg-gradient-to-br from-purple-500 to-indigo-600" />

@@ -259,7 +259,7 @@ export default function ExamPage() {
                                 <button
                                     key={idx}
                                     onClick={() => selectAnswer(idx)}
-                                    className={`w-full text-left p-4 rounded-xl border-2 transition-all ${selectedAnswer === idx
+                                    className={`w-full text-left p-4 rounded-lg border-2 transition-all ${selectedAnswer === idx
                                         ? 'border-indigo-500 bg-indigo-500/10'
                                         : 'border-card-border bg-card hover:border-indigo-500/50'
                                         }`}
@@ -326,7 +326,7 @@ export default function ExamPage() {
             {/* Submit Confirmation Modal */}
             {showSubmitConfirm && (
                 <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm">
-                    <div className="bg-card border border-card-border rounded-2xl p-8 max-w-md w-full">
+                    <div className="bg-card border border-card-border rounded-lg p-8 max-w-md w-full">
                         <h3 className="text-2xl font-bold mb-4">Submit Exam?</h3>
                         <div className="space-y-3 mb-6 text-foreground/80">
                             <p>
@@ -360,7 +360,7 @@ export default function ExamPage() {
             {/* Time Warning Modal */}
             {showTimeWarning && (
                 <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm">
-                    <div className="bg-card border border-yellow-500/30 rounded-2xl p-8 max-w-md w-full">
+                    <div className="bg-card border border-yellow-500/30 rounded-lg p-8 max-w-md w-full">
                         <div className="text-center">
                             <div className="text-5xl mb-4">⏰</div>
                             <h3 className="text-2xl font-bold mb-2">30 Minutes Remaining</h3>

@@ -212,7 +212,7 @@ export default function Player() {
 
                     {/* Flexible Album Art Container - Fix Overlap */}
                     <div className="flex-1 min-h-0 flex items-center justify-center py-2 mb-4">
-                        <div className="aspect-square h-full max-h-[35vh] w-auto rounded-xl bg-gradient-to-br from-red-500 to-orange-600 shadow-2xl flex items-center justify-center relative overflow-hidden ring-1 ring-white/10">
+                        <div className="aspect-square h-full max-h-[35vh] w-auto rounded-lg bg-gradient-to-br from-red-500 to-orange-600 shadow-2xl flex items-center justify-center relative overflow-hidden ring-1 ring-white/10">
                             <div className="text-center p-6 w-full">
                                 <h2 className="text-2xl sm:text-3xl font-black leading-tight tracking-tight mb-2 text-white drop-shadow-md break-words">
                                     {currentEpisode.title}

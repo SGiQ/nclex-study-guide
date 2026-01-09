@@ -45,7 +45,7 @@ export default function AchievementsPage() {
 
             <div className="px-4 py-6 max-w-2xl mx-auto space-y-6">
                 {/* Progress Overview */}
-                <div className="p-6 rounded-2xl bg-gradient-to-br from-indigo-500/20 to-purple-500/20 border border-indigo-500/30">
+                <div className="p-6 rounded-lg bg-gradient-to-br from-indigo-500/20 to-purple-500/20 border border-indigo-500/30">
                     <div className="text-center mb-4">
                         <div className="text-6xl font-black text-indigo-400 mb-2">
                             {completionPercentage}%
@@ -98,19 +98,19 @@ export default function AchievementsPage() {
                         <span>📊</span> Your Stats
                     </h2>
                     <div className="grid grid-cols-2 gap-3">
-                        <div className="p-4 rounded-xl bg-card border border-card-border">
+                        <div className="p-4 rounded-lg bg-card border border-card-border">
                             <div className="text-2xl font-black text-indigo-400">{stats.questionsAnswered}</div>
                             <div className="text-xs text-foreground/60">Questions Answered</div>
                         </div>
-                        <div className="p-4 rounded-xl bg-card border border-card-border">
+                        <div className="p-4 rounded-lg bg-card border border-card-border">
                             <div className="text-2xl font-black text-purple-400">{stats.quizzesCompleted}</div>
                             <div className="text-xs text-foreground/60">Quizzes Completed</div>
                         </div>
-                        <div className="p-4 rounded-xl bg-card border border-card-border">
+                        <div className="p-4 rounded-lg bg-card border border-card-border">
                             <div className="text-2xl font-black text-orange-400">{stats.currentStreak}</div>
                             <div className="text-xs text-foreground/60">Day Streak</div>
                         </div>
-                        <div className="p-4 rounded-xl bg-card border border-card-border">
+                        <div className="p-4 rounded-lg bg-card border border-card-border">
                             <div className="text-2xl font-black text-green-400">{stats.audioCompleted}</div>
                             <div className="text-xs text-foreground/60">Episodes Listened</div>
                         </div>
@@ -167,7 +167,7 @@ export default function AchievementsPage() {
 
                 {/* Motivational Message */}
                 {unlockedCount > 0 && unlockedCount < totalBadges && (
-                    <div className="p-4 rounded-xl bg-gradient-to-br from-indigo-500/10 to-purple-500/10 border border-indigo-500/20">
+                    <div className="p-4 rounded-lg bg-gradient-to-br from-indigo-500/10 to-purple-500/10 border border-indigo-500/20">
                         <div className="text-sm text-foreground/80">
                             <strong>💡 Keep Going!</strong> You've unlocked {unlockedCount} out of {totalBadges} achievements.
                             {lockedBadges.length > 0 && ` ${lockedBadges.length} more to go!`}
@@ -177,7 +177,7 @@ export default function AchievementsPage() {
 
                 {/* All Unlocked Celebration */}
                 {unlockedCount === totalBadges && (
-                    <div className="p-6 rounded-xl bg-gradient-to-br from-yellow-500/20 to-orange-500/20 border border-yellow-500/30 text-center">
+                    <div className="p-6 rounded-lg bg-gradient-to-br from-yellow-500/20 to-orange-500/20 border border-yellow-500/30 text-center">
                         <div className="text-6xl mb-3">🎉</div>
                         <h2 className="text-2xl font-bold mb-2">Achievement Master!</h2>
                         <p className="text-foreground/70">

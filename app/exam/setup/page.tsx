@@ -31,7 +31,7 @@ export default function ExamSetupPage() {
                 <div className="grid md:grid-cols-2 gap-4 mb-8">
                     <button
                         onClick={() => setExamMode('realistic')}
-                        className={`p-6 rounded-2xl border-2 transition-all ${examMode === 'realistic'
+                        className={`p-6 rounded-lg border-2 transition-all ${examMode === 'realistic'
                                 ? 'border-indigo-500 bg-indigo-500/10'
                                 : 'border-card-border bg-card hover:border-indigo-500/50'
                             }`}
@@ -49,7 +49,7 @@ export default function ExamSetupPage() {
 
                     <button
                         onClick={() => setExamMode('practice')}
-                        className={`p-6 rounded-2xl border-2 transition-all ${examMode === 'practice'
+                        className={`p-6 rounded-lg border-2 transition-all ${examMode === 'practice'
                                 ? 'border-purple-500 bg-purple-500/10'
                                 : 'border-card-border bg-card hover:border-purple-500/50'
                             }`}
@@ -67,7 +67,7 @@ export default function ExamSetupPage() {
                 </div>
 
                 {/* Instructions */}
-                <div className="p-6 rounded-2xl bg-card border border-card-border mb-8">
+                <div className="p-6 rounded-lg bg-card border border-card-border mb-8">
                     <h3 className="font-bold text-lg mb-4 flex items-center gap-2">
                         <span>📋</span> Exam Instructions
                     </h3>
@@ -95,7 +95,7 @@ export default function ExamSetupPage() {
                 </div>
 
                 {/* Tips */}
-                <div className="p-6 rounded-2xl bg-gradient-to-br from-indigo-500/10 to-purple-500/10 border border-indigo-500/20 mb-8">
+                <div className="p-6 rounded-lg bg-gradient-to-br from-indigo-500/10 to-purple-500/10 border border-indigo-500/20 mb-8">
                     <h3 className="font-bold mb-3 flex items-center gap-2">
                         <span>💡</span> Exam Tips
                     </h3>
@@ -112,13 +112,13 @@ export default function ExamSetupPage() {
                 <div className="flex gap-4">
                     <Link
                         href="/dashboard"
-                        className="flex-1 py-4 rounded-xl bg-surface/10 hover:bg-surface/20 transition-colors text-center font-semibold"
+                        className="flex-1 py-4 rounded-lg bg-surface/10 hover:bg-surface/20 transition-colors text-center font-semibold"
                     >
                         Cancel
                     </Link>
                     <button
                         onClick={startExam}
-                        className="flex-1 py-4 rounded-xl bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500 transition-all font-bold shadow-lg shadow-indigo-500/50"
+                        className="flex-1 py-4 rounded-lg bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500 transition-all font-bold shadow-lg shadow-indigo-500/50"
                     >
                         Start Exam →
                     </button>

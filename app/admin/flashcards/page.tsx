@@ -90,7 +90,7 @@ export default function AdminFlashcardsPage() {
 
                     {/* Input Section */}
                     <div className="space-y-6">
-                        <div className="bg-[#1A1A20] p-6 rounded-xl border border-white/10">
+                        <div className="bg-[#1A1A20] p-6 rounded-lg border border-white/10">
                             <label className="block text-sm font-bold text-white/60 mb-2">Target Episode ID</label>
                             <input
                                 type="number"
@@ -100,7 +100,7 @@ export default function AdminFlashcardsPage() {
                             />
                         </div>
 
-                        <div className="bg-[#1A1A20] p-6 rounded-xl border border-white/10">
+                        <div className="bg-[#1A1A20] p-6 rounded-lg border border-white/10">
                             <div className="flex justify-between items-center mb-2">
                                 <label className="block text-sm font-bold text-white/60">Paste CSV Content</label>
                                 <div className="relative">
@@ -133,7 +133,7 @@ export default function AdminFlashcardsPage() {
                         </div>
                     </div>
                     {/* Preview Section */}
-                    <div className={`bg-[#1A1A20] rounded-xl border border-white/10 flex flex-col ${preview.length === 0 ? 'items-center justify-center opacity-50' : ''}`}>
+                    <div className={`bg-[#1A1A20] rounded-lg border border-white/10 flex flex-col ${preview.length === 0 ? 'items-center justify-center opacity-50' : ''}`}>
 
                         {preview.length === 0 ? (
                             <div className="text-center p-12">

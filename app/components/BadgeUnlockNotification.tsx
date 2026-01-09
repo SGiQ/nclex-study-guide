@@ -59,7 +59,7 @@ export default function BadgeUnlockNotification({ badge, onDismiss }: BadgeUnloc
             <div
                 className={`
                     relative pointer-events-auto max-w-sm w-full
-                    bg-background rounded-3xl border-2 border-white/20 shadow-2xl
+                    bg-background rounded-lg border-2 border-white/20 shadow-2xl
                     transition-all duration-500 transform
                     ${isVisible && !isExiting
                         ? 'scale-100 opacity-100 translate-y-0'
@@ -68,7 +68,7 @@ export default function BadgeUnlockNotification({ badge, onDismiss }: BadgeUnloc
                 `}
             >
                 {/* Confetti Background */}
-                <div className="absolute inset-0 overflow-hidden rounded-3xl">
+                <div className="absolute inset-0 overflow-hidden rounded-lg">
                     {[...Array(20)].map((_, i) => (
                         <div
                             key={i}
@@ -120,7 +120,7 @@ export default function BadgeUnlockNotification({ badge, onDismiss }: BadgeUnloc
                     <button
                         onClick={handleDismiss}
                         className={`
-                            px-6 py-3 rounded-xl font-bold text-white
+                            px-6 py-3 rounded-lg font-bold text-white
                             bg-gradient-to-r ${gradientColor}
                             hover:shadow-lg hover:scale-105
                             active:scale-95 transition-all duration-200
@@ -131,7 +131,7 @@ export default function BadgeUnlockNotification({ badge, onDismiss }: BadgeUnloc
                 </div>
 
                 {/* Glow Effect */}
-                <div className={`absolute inset-0 rounded-3xl bg-gradient-to-r ${gradientColor} opacity-20 blur-2xl -z-10`} />
+                <div className={`absolute inset-0 rounded-lg bg-gradient-to-r ${gradientColor} opacity-20 blur-2xl -z-10`} />
             </div>
         </div>
     );

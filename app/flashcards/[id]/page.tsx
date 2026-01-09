@@ -192,7 +192,7 @@ export default function FlashcardRunnerPage({ params }: { params: Promise<{ id: 
 
                             {/* FRONT */}
                             <div
-                                className="absolute inset-0 backface-hidden bg-card rounded-2xl sm:rounded-3xl border border-card-border p-8 sm:p-12 flex flex-col items-center justify-center text-center shadow-2xl group-hover:border-card-border/70 transition-colors"
+                                className="absolute inset-0 backface-hidden bg-card rounded-lg sm:rounded-lg border border-card-border p-8 sm:p-12 flex flex-col items-center justify-center text-center shadow-2xl group-hover:border-card-border/70 transition-colors"
                             >
                                 <span className="text-sm uppercase font-bold text-blue-500 tracking-wider mb-6 sm:mb-8">Question</span>
                                 <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold leading-relaxed text-foreground px-4">
@@ -205,7 +205,7 @@ export default function FlashcardRunnerPage({ params }: { params: Promise<{ id: 
 
                             {/* BACK */}
                             <div
-                                className="absolute inset-0 backface-hidden bg-card rounded-2xl sm:rounded-3xl border border-purple-500/30 p-8 sm:p-12 flex flex-col items-center justify-center text-center shadow-2xl rotate-y-180"
+                                className="absolute inset-0 backface-hidden bg-card rounded-lg sm:rounded-lg border border-purple-500/30 p-8 sm:p-12 flex flex-col items-center justify-center text-center shadow-2xl rotate-y-180"
                             >
                                 <span className="text-sm uppercase font-bold text-purple-500 tracking-wider mb-6 sm:mb-8">Answer</span>
                                 <p className="text-xl sm:text-2xl md:text-3xl font-medium text-foreground/90 leading-relaxed px-4">
@@ -293,7 +293,7 @@ export default function FlashcardRunnerPage({ params }: { params: Promise<{ id: 
                             <div className="space-y-4">
                                 {/* User Bubble */}
                                 <div className="flex justify-end">
-                                    <div className="bg-surface/10 text-foreground rounded-2xl rounded-tr-sm px-4 py-2 text-sm max-w-[80%]">
+                                    <div className="bg-surface/10 text-foreground rounded-lg rounded-tr-sm px-4 py-2 text-sm max-w-[80%]">
                                         Explain this concept simply.
                                     </div>
                                 </div>
@@ -303,7 +303,7 @@ export default function FlashcardRunnerPage({ params }: { params: Promise<{ id: 
                                     <div className="w-8 h-8 rounded-full bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center text-xs font-bold shadow-lg text-white">
                                         AI
                                     </div>
-                                    <div className="bg-indigo-500/10 border border-indigo-500/20 text-foreground/90 rounded-2xl rounded-tl-sm px-5 py-3 text-sm leading-relaxed max-w-[90%] shadow-sm">
+                                    <div className="bg-indigo-500/10 border border-indigo-500/20 text-foreground/90 rounded-lg rounded-tl-sm px-5 py-3 text-sm leading-relaxed max-w-[90%] shadow-sm">
                                         {loadingExplain ? (
                                             <div className="flex gap-1 items-center h-6">
                                                 <span className="w-1.5 h-1.5 bg-indigo-400 rounded-full animate-bounce" style={{ animationDelay: '0ms' }} />

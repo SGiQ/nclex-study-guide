@@ -199,7 +199,7 @@ export default function TutorChat() {
                     />
 
                     <div
-                        className="relative z-10 w-full h-[80vh] sm:h-[600px] sm:w-[400px] bg-white dark:bg-[#1C1C1E] border-t sm:border border-white/20 sm:rounded-2xl shadow-2xl flex flex-col overflow-hidden animate-slide-up-fast"
+                        className="relative z-10 w-full h-[80vh] sm:h-[600px] sm:w-[400px] bg-white dark:bg-[#1C1C1E] border-t sm:border border-white/20 sm:rounded-lg shadow-2xl flex flex-col overflow-hidden animate-slide-up-fast"
                         onClick={(e) => e.stopPropagation()}
                     >
                         {/* Header */}
@@ -230,7 +230,7 @@ export default function TutorChat() {
                                     className={`flex ${msg.role === 'user' ? 'justify-end' : 'justify-start'}`}
                                 >
                                     <div
-                                        className={`max-w-[85%] rounded-2xl px-4 py-2.5 text-sm leading-relaxed shadow-sm ${msg.role === 'user'
+                                        className={`max-w-[85%] rounded-lg px-4 py-2.5 text-sm leading-relaxed shadow-sm ${msg.role === 'user'
                                             ? 'bg-indigo-600 text-white rounded-tr-none'
                                             : 'bg-white dark:bg-[#1C1C1E] text-black dark:text-white border border-gray-200 dark:border-white/10 rounded-tl-none'
                                             }`}
@@ -250,7 +250,7 @@ export default function TutorChat() {
                             ))}
                             {isLoading && (
                                 <div className="flex justify-start">
-                                    <div className="bg-white dark:bg-[#1C1C1E] border border-gray-200 dark:border-white/10 px-4 py-3 rounded-2xl rounded-tl-none flex gap-1 items-center">
+                                    <div className="bg-white dark:bg-[#1C1C1E] border border-gray-200 dark:border-white/10 px-4 py-3 rounded-lg rounded-tl-none flex gap-1 items-center">
                                         <span className="w-2 h-2 bg-indigo-400 rounded-full animate-bounce" style={{ animationDelay: '0ms' }} />
                                         <span className="w-2 h-2 bg-indigo-400 rounded-full animate-bounce" style={{ animationDelay: '150ms' }} />
                                         <span className="w-2 h-2 bg-indigo-400 rounded-full animate-bounce" style={{ animationDelay: '300ms' }} />

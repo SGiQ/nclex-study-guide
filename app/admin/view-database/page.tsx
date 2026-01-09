@@ -88,7 +88,7 @@ export default function ViewDatabasePage() {
                 </div>
 
                 {/* Summary */}
-                <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 mb-6">
+                <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg p-6 mb-6">
                     <h2 className="text-xl font-bold text-white mb-4">Summary</h2>
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                         <div>
@@ -115,7 +115,7 @@ export default function ViewDatabasePage() {
                 {/* Files Grouped by Source */}
                 <div className="space-y-4">
                     {Object.entries(groupedBySource).map(([source, docs]) => (
-                        <div key={source} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6">
+                        <div key={source} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg p-6">
                             <div className="flex items-center justify-between mb-4">
                                 <div>
                                     <h3 className="text-lg font-bold text-white">{source}</h3>

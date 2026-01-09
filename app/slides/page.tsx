@@ -52,7 +52,7 @@ export default function SlidesLibraryPage() {
                         <p className="text-gray-600 dark:text-white/50">Loading slide decks...</p>
                     </div>
                 ) : slides.length === 0 ? (
-                    <div className="col-span-full text-center py-12 bg-gray-100 dark:bg-white/5 rounded-3xl border border-gray-200 dark:border-white/5 border-dashed">
+                    <div className="col-span-full text-center py-12 bg-gray-100 dark:bg-white/5 rounded-lg border border-gray-200 dark:border-white/5 border-dashed">
                         <div className="text-4xl mb-4">📂</div>
                         <h3 className="text-lg font-bold text-gray-800 dark:text-white/80">No Slide Decks Yet</h3>
                         <p className="text-gray-600 dark:text-white/50 text-sm mt-2">
@@ -63,7 +63,7 @@ export default function SlidesLibraryPage() {
                     slides.map((deck) => (
                         <div
                             key={deck.id}
-                            className="group relative bg-white dark:bg-[#16161C] rounded-2xl p-5 border border-gray-200 dark:border-white/5 hover:border-blue-500/50 transition-all shadow-sm dark:shadow-none"
+                            className="group relative bg-white dark:bg-[#16161C] rounded-lg p-5 border border-gray-200 dark:border-white/5 hover:border-blue-500/50 transition-all shadow-sm dark:shadow-none"
                         >
                             <Link
                                 href={`/slides/${deck.id}`}
@@ -73,7 +73,7 @@ export default function SlidesLibraryPage() {
                                     ↗
                                 </div>
 
-                                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-600 to-indigo-700 flex items-center justify-center text-xl shadow-lg mb-4">
+                                <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-blue-600 to-indigo-700 flex items-center justify-center text-xl shadow-lg mb-4">
                                     📊
                                 </div>
 

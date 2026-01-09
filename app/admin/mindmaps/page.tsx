@@ -87,7 +87,7 @@ export default function AdminMindMapsPage() {
                     </h1>
                 </div>
 
-                <div className="bg-[#16161C] p-8 rounded-3xl border border-white/10 shadow-2xl">
+                <div className="bg-[#16161C] p-8 rounded-lg border border-white/10 shadow-2xl">
                     <form onSubmit={handleSubmit} className="space-y-6">
 
                         {/* Title Input */}
@@ -99,7 +99,7 @@ export default function AdminMindMapsPage() {
                                 type="text"
                                 value={title}
                                 onChange={(e) => setTitle(e.target.value)}
-                                className="w-full bg-black/20 border border-white/10 rounded-xl px-4 py-3 text-white focus:border-purple-500 outline-none transition-colors"
+                                className="w-full bg-black/20 border border-white/10 rounded-lg px-4 py-3 text-white focus:border-purple-500 outline-none transition-colors"
                                 placeholder="e.g. Heart Failure Diagram"
                                 required
                             />
@@ -114,7 +114,7 @@ export default function AdminMindMapsPage() {
                                 type="number"
                                 value={episodeId}
                                 onChange={(e) => setEpisodeId(e.target.value)}
-                                className="w-full bg-black/20 border border-white/10 rounded-xl px-4 py-3 text-white focus:border-purple-500 outline-none transition-colors"
+                                className="w-full bg-black/20 border border-white/10 rounded-lg px-4 py-3 text-white focus:border-purple-500 outline-none transition-colors"
                                 placeholder="e.g. 3"
                             />
                         </div>
@@ -131,7 +131,7 @@ export default function AdminMindMapsPage() {
                                     onChange={handleFileChange}
                                     className="absolute inset-0 w-full h-full opacity-0 cursor-pointer z-10"
                                 />
-                                <div className="border-2 border-dashed border-white/10 rounded-xl p-8 text-center group-hover:border-purple-500/50 group-hover:bg-purple-500/5 transition-all overflow-hidden relative">
+                                <div className="border-2 border-dashed border-white/10 rounded-lg p-8 text-center group-hover:border-purple-500/50 group-hover:bg-purple-500/5 transition-all overflow-hidden relative">
                                     {previewUrl ? (
                                         <div className="relative z-20">
                                             <img src={previewUrl} alt="Preview" className="max-h-48 mx-auto rounded-lg shadow-lg mb-2" />
@@ -153,7 +153,7 @@ export default function AdminMindMapsPage() {
                         <button
                             type="submit"
                             disabled={isUploading || !file}
-                            className="w-full bg-gradient-to-r from-purple-600 to-violet-600 hover:from-purple-500 hover:to-violet-500 disabled:opacity-50 disabled:cursor-not-allowed text-white font-bold py-4 rounded-xl transition-all shadow-lg shadow-purple-900/20"
+                            className="w-full bg-gradient-to-r from-purple-600 to-violet-600 hover:from-purple-500 hover:to-violet-500 disabled:opacity-50 disabled:cursor-not-allowed text-white font-bold py-4 rounded-lg transition-all shadow-lg shadow-purple-900/20"
                         >
                             {isUploading ? 'Uploading...' : 'Save Mind Map'}
                         </button>

@@ -52,7 +52,7 @@ export default function StudyGuidesPage() {
                         <p className="text-gray-600 dark:text-white/50">Loading study guides...</p>
                     </div>
                 ) : studyGuides.length === 0 ? (
-                    <div className="col-span-full text-center py-16 bg-gray-100 dark:bg-white/5 rounded-3xl border border-gray-200 dark:border-white/5 border-dashed">
+                    <div className="col-span-full text-center py-16 bg-gray-100 dark:bg-white/5 rounded-lg border border-gray-200 dark:border-white/5 border-dashed">
                         <div className="text-6xl mb-4">📝</div>
                         <h3 className="text-xl font-bold text-gray-800 dark:text-white/80 mb-2">No Study Guides Yet</h3>
                         <p className="text-gray-600 dark:text-white/50 text-sm">
@@ -64,10 +64,10 @@ export default function StudyGuidesPage() {
                         <Link
                             key={guide.id}
                             href={`/study-guides/${guide.id}`}
-                            className="group relative bg-white dark:bg-[#16161C] rounded-2xl p-6 border border-gray-200 dark:border-white/5 hover:border-green-500/50 transition-all hover:-translate-y-1 hover:shadow-xl hover:shadow-green-900/20 active:scale-[0.99] shadow-sm dark:shadow-none"
+                            className="group relative bg-white dark:bg-[#16161C] rounded-lg p-6 border border-gray-200 dark:border-white/5 hover:border-green-500/50 transition-all hover:-translate-y-1 hover:shadow-xl hover:shadow-green-900/20 active:scale-[0.99] shadow-sm dark:shadow-none"
                         >
                             {/* Icon */}
-                            <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-green-600 to-emerald-700 flex items-center justify-center text-2xl shadow-lg mb-4">
+                            <div className="w-14 h-14 rounded-lg bg-gradient-to-br from-green-600 to-emerald-700 flex items-center justify-center text-2xl shadow-lg mb-4">
                                 📝
                             </div>
 

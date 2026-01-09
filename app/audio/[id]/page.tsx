@@ -59,7 +59,7 @@ export default function AudioLessonPage({ params }: { params: Promise<{ id: stri
                 <div className="flex flex-col md:flex-row gap-6 items-start">
                     {/* Art / Play Button */}
                     <div className="w-full md:w-64 shrink-0">
-                        <div className="aspect-square rounded-2xl bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center relative overflow-hidden group">
+                        <div className="aspect-square rounded-lg bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center relative overflow-hidden group">
                             <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/20 to-purple-500/20 opacity-50" />
                             <button
                                 onClick={handlePlayPause}
@@ -92,7 +92,7 @@ export default function AudioLessonPage({ params }: { params: Promise<{ id: stri
                         <div className="pt-4">
                             <Link
                                 href={`/quizzes/${episodeId}`}
-                                className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-purple-600 to-indigo-600 text-white font-bold hover:opacity-90 transition-opacity shadow-lg shadow-indigo-500/20"
+                                className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-gradient-to-r from-purple-600 to-indigo-600 text-white font-bold hover:opacity-90 transition-opacity shadow-lg shadow-indigo-500/20"
                             >
                                 <span>📝 Take Quiz for this Episode</span>
                                 <span>→</span>
@@ -107,7 +107,7 @@ export default function AudioLessonPage({ params }: { params: Promise<{ id: stri
                         <span>📄</span> Transcript
                     </h2>
 
-                    <div className="bg-surface/5 rounded-2xl border border-nav-border overflow-hidden min-h-[400px]">
+                    <div className="bg-surface/5 rounded-lg border border-nav-border overflow-hidden min-h-[400px]">
                         <TranscriptViewer
                             segments={segments}
                             currentTime={effectiveTime}

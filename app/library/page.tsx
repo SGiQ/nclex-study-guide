@@ -68,7 +68,7 @@ export default function LibraryPage() {
                     return (
                         <div
                             key={episode.id}
-                            className="group bg-card border border-card-border rounded-2xl p-4 hover:border-border transition-all hover:shadow-lg"
+                            className="group bg-card border border-card-border rounded-lg p-4 hover:border-border transition-all hover:shadow-lg"
                         >
                             {/* Episode Header */}
                             <div className="flex items-start gap-3 mb-3">
@@ -107,7 +107,7 @@ export default function LibraryPage() {
                             <div className="flex items-center gap-2">
                                 <button
                                     onClick={() => handlePlayEpisode(episode)}
-                                    className="flex-1 flex items-center justify-center gap-2 px-4 py-2.5 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl font-semibold text-sm transition-colors"
+                                    className="flex-1 flex items-center justify-center gap-2 px-4 py-2.5 bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg font-semibold text-sm transition-colors"
                                 >
                                     <span>▶</span>
                                     <span>Play Audio</span>
@@ -116,7 +116,7 @@ export default function LibraryPage() {
                                 {hasFlashcards && (
                                     <Link
                                         href={`/flashcards/${episode.id}`}
-                                        className="px-4 py-2.5 bg-purple-500/10 hover:bg-purple-500/20 text-purple-500 rounded-xl font-semibold text-sm transition-colors"
+                                        className="px-4 py-2.5 bg-purple-500/10 hover:bg-purple-500/20 text-purple-500 rounded-lg font-semibold text-sm transition-colors"
                                     >
                                         🗂️
                                     </Link>
@@ -125,7 +125,7 @@ export default function LibraryPage() {
                                 {hasQuiz && (
                                     <Link
                                         href={`/quizzes/${episode.id}`}
-                                        className="px-4 py-2.5 bg-slate-500/10 hover:bg-slate-500/20 text-slate-400 rounded-xl font-semibold text-sm transition-colors"
+                                        className="px-4 py-2.5 bg-slate-500/10 hover:bg-slate-500/20 text-slate-400 rounded-lg font-semibold text-sm transition-colors"
                                     >
                                         📝
                                     </Link>
@@ -133,7 +133,7 @@ export default function LibraryPage() {
 
                                 <Link
                                     href={`/library/${episode.id}`}
-                                    className="px-4 py-2.5 bg-surface/10 hover:bg-surface/20 text-foreground rounded-xl font-semibold text-sm transition-colors"
+                                    className="px-4 py-2.5 bg-surface/10 hover:bg-surface/20 text-foreground rounded-lg font-semibold text-sm transition-colors"
                                 >
                                     →
                                 </Link>

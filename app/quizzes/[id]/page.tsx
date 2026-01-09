@@ -160,7 +160,7 @@ export default function QuizRunnerPage({ params }: { params: Promise<{ id: strin
 
         return (
             <div className="min-h-dvh bg-[#0A0A0F] text-white flex items-center justify-center p-6">
-                <div className="max-w-md w-full bg-[#1A1A20] rounded-3xl p-8 border border-white/10 shadow-2xl">
+                <div className="max-w-md w-full bg-[#1A1A20] rounded-lg p-8 border border-white/10 shadow-2xl">
                     <div className="w-20 h-20 bg-gradient-to-br from-purple-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
                         <span className="text-4xl">📝</span>
                     </div>
@@ -170,7 +170,7 @@ export default function QuizRunnerPage({ params }: { params: Promise<{ id: strin
                     </p>
 
                     {savedProgress && (
-                        <div className="bg-black/30 rounded-xl p-4 mb-6 text-center">
+                        <div className="bg-black/30 rounded-lg p-4 mb-6 text-center">
                             <div className="text-sm text-white/50 mb-1">Your Progress</div>
                             <div className="text-2xl font-bold text-purple-400">
                                 Question {savedProgress.currentQuestionIndex + 1} of {quiz.questions.length}
@@ -184,13 +184,13 @@ export default function QuizRunnerPage({ params }: { params: Promise<{ id: strin
                     <div className="flex flex-col gap-3">
                         <button
                             onClick={handleResumeQuiz}
-                            className="w-full py-4 bg-purple-600 text-white font-bold rounded-xl hover:bg-purple-500 active:bg-purple-700 transition-colors"
+                            className="w-full py-4 bg-purple-600 text-white font-bold rounded-lg hover:bg-purple-500 active:bg-purple-700 transition-colors"
                         >
                             Resume Quiz
                         </button>
                         <button
                             onClick={handleStartOver}
-                            className="w-full py-4 bg-white/10 text-white font-bold rounded-xl hover:bg-white/20 active:bg-white/5 transition-colors"
+                            className="w-full py-4 bg-white/10 text-white font-bold rounded-lg hover:bg-white/20 active:bg-white/5 transition-colors"
                         >
                             Start Over
                         </button>
@@ -212,7 +212,7 @@ export default function QuizRunnerPage({ params }: { params: Promise<{ id: strin
 
         return (
             <div className="min-h-dvh bg-[#0A0A0F] text-white flex items-center justify-center p-6">
-                <div className="max-w-md w-full bg-[#1A1A20] rounded-3xl p-8 border border-white/10 text-center shadow-2xl">
+                <div className="max-w-md w-full bg-[#1A1A20] rounded-lg p-8 border border-white/10 text-center shadow-2xl">
                     <div className="w-24 h-24 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-full flex items-center justify-center mx-auto mb-6 shadow-glow">
                         <span className="text-4xl">🏆</span>
                     </div>
@@ -220,14 +220,14 @@ export default function QuizRunnerPage({ params }: { params: Promise<{ id: strin
                     <p className="text-white/60 mb-2">You successfully finished {quiz.title}.</p>
                     <p className="text-white/40 text-sm mb-8">Attempt #{attemptNumber}</p>
 
-                    <div className="bg-black/30 rounded-2xl p-6 mb-4">
+                    <div className="bg-black/30 rounded-lg p-6 mb-4">
                         <div className="text-xs uppercase tracking-widest text-white/50 mb-1">Your Score</div>
                         <div className="text-5xl font-black text-white">{scorePercentage}%</div>
                         <div className="text-sm text-emerald-400 font-bold mt-2">{score} / {quiz.questions.length} Correct</div>
                     </div>
 
                     {bestScore > 0 && (
-                        <div className="bg-emerald-500/10 border border-emerald-500/30 rounded-xl p-4 mb-6">
+                        <div className="bg-emerald-500/10 border border-emerald-500/30 rounded-lg p-4 mb-6">
                             <div className="flex items-center justify-center gap-2">
                                 <span className="text-lg">⭐</span>
                                 <div>
@@ -242,7 +242,7 @@ export default function QuizRunnerPage({ params }: { params: Promise<{ id: strin
                     )}
 
                     <div className="flex gap-3">
-                        <Link href="/quizzes" className="flex-1 py-4 bg-white text-black font-bold rounded-xl hover:scale-[1.02] active:scale-[0.98] transition-transform">
+                        <Link href="/quizzes" className="flex-1 py-4 bg-white text-black font-bold rounded-lg hover:scale-[1.02] active:scale-[0.98] transition-transform">
                             Back to Library
                         </Link>
                     </div>
@@ -299,7 +299,7 @@ export default function QuizRunnerPage({ params }: { params: Promise<{ id: strin
                                     <span className="font-medium">Show Hint</span>
                                 </button>
                             ) : (
-                                <div className="p-4 rounded-xl bg-yellow-500/10 border border-yellow-500/20 animate-in slide-in-from-top-2 fade-in duration-300">
+                                <div className="p-4 rounded-lg bg-yellow-500/10 border border-yellow-500/20 animate-in slide-in-from-top-2 fade-in duration-300">
                                     <div className="flex items-start gap-2">
                                         <span className="text-lg flex-shrink-0">💡</span>
                                         <p className="text-sm text-yellow-100/90 leading-relaxed">
@@ -334,7 +334,7 @@ export default function QuizRunnerPage({ params }: { params: Promise<{ id: strin
                                     key={index}
                                     onClick={() => handleOptionClick(index)}
                                     disabled={isAnswered}
-                                    className={`text-left p-4 rounded-xl border transition-all duration-200 font-medium text-base sm:text-lg leading-snug items-center flex gap-3 ${stateStyle}`}
+                                    className={`text-left p-4 rounded-lg border transition-all duration-200 font-medium text-base sm:text-lg leading-snug items-center flex gap-3 ${stateStyle}`}
                                 >
                                     <div className={`w-8 h-8 rounded-full border-2 flex items-center justify-center flex-shrink-0 transition-colors
                            ${selectedOption === index ? 'border-purple-500' : 'border-white/20'}
@@ -356,14 +356,14 @@ export default function QuizRunnerPage({ params }: { params: Promise<{ id: strin
                             <button
                                 onClick={checkAnswer}
                                 disabled={selectedOption === null}
-                                className="w-full py-4 rounded-xl bg-white text-black font-bold text-lg disabled:opacity-30 disabled:cursor-not-allowed hover:scale-[1.01] active:scale-[0.99] transition-all"
+                                className="w-full py-4 rounded-lg bg-white text-black font-bold text-lg disabled:opacity-30 disabled:cursor-not-allowed hover:scale-[1.01] active:scale-[0.99] transition-all"
                             >
                                 Check Answer
                             </button>
                         ) : (
                             // Feedback Mode
                             <div className="animate-in slide-in-from-bottom-5 fade-in duration-300">
-                                <div className={`p-4 rounded-xl mb-4 border ${selectedOption === currentQuestion.correctAnswer
+                                <div className={`p-4 rounded-lg mb-4 border ${selectedOption === currentQuestion.correctAnswer
                                     ? 'bg-emerald-500/10 border-emerald-500/30'
                                     : 'bg-red-500/10 border-red-500/30'
                                     }`}>
@@ -381,7 +381,7 @@ export default function QuizRunnerPage({ params }: { params: Promise<{ id: strin
 
                                 <button
                                     onClick={nextQuestion}
-                                    className="w-full py-4 rounded-xl bg-purple-600 text-white font-bold text-lg hover:bg-purple-500 active:bg-purple-700 transition-colors shadow-lg shadow-purple-900/20"
+                                    className="w-full py-4 rounded-lg bg-purple-600 text-white font-bold text-lg hover:bg-purple-500 active:bg-purple-700 transition-colors shadow-lg shadow-purple-900/20"
                                 >
                                     {currentQuestionIndex < quiz.questions.length - 1 ? 'Next Question →' : 'Finish Quiz'}
                                 </button>

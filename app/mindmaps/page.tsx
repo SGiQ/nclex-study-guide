@@ -54,7 +54,7 @@ export default function MindMapsLibraryPage() {
                         <p className="text-gray-600 dark:text-white/50">Loading mind maps...</p>
                     </div>
                 ) : mindmaps.length === 0 ? (
-                    <div className="col-span-full text-center py-16 bg-gray-100 dark:bg-white/5 rounded-3xl border border-gray-200 dark:border-white/5 border-dashed">
+                    <div className="col-span-full text-center py-16 bg-gray-100 dark:bg-white/5 rounded-lg border border-gray-200 dark:border-white/5 border-dashed">
                         <div className="text-6xl mb-4">🧠</div>
                         <h3 className="text-xl font-bold text-gray-800 dark:text-white/80 mb-2">No Mind Maps Yet</h3>
                         <p className="text-gray-600 dark:text-white/50 text-sm">
@@ -65,7 +65,7 @@ export default function MindMapsLibraryPage() {
                     mindmaps.map((item) => (
                         <div
                             key={item.id}
-                            className="group relative aspect-[4/3] bg-white dark:bg-[#16161C] rounded-2xl overflow-hidden border border-gray-200 dark:border-white/5 hover:border-purple-500/50 transition-all shadow-sm dark:shadow-none"
+                            className="group relative aspect-[4/3] bg-white dark:bg-[#16161C] rounded-lg overflow-hidden border border-gray-200 dark:border-white/5 hover:border-purple-500/50 transition-all shadow-sm dark:shadow-none"
                         >
                             <Link
                                 href={`/mindmaps/${item.id}`}

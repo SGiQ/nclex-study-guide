@@ -143,9 +143,9 @@ export default function EpisodeDetailPage({ params }: { params: Promise<{ id: st
                             <Link
                                 key={res.type}
                                 href={res.href}
-                                className="group relative overflow-hidden rounded-2xl bg-card border border-card-border p-4 shadow-sm hover:border-foreground/20 transition-all active:scale-95"
+                                className="group relative overflow-hidden rounded-lg bg-card border border-card-border p-4 shadow-sm hover:border-foreground/20 transition-all active:scale-95"
                             >
-                                <div className={`w-10 h-10 rounded-xl mb-3 flex items-center justify-center text-xl shadow-sm ${res.bg}`}>
+                                <div className={`w-10 h-10 rounded-lg mb-3 flex items-center justify-center text-xl shadow-sm ${res.bg}`}>
                                     {res.icon}
                                 </div>
                                 <h3 className="font-bold text-foreground group-hover:text-blue-500 transition-colors">
@@ -158,9 +158,9 @@ export default function EpisodeDetailPage({ params }: { params: Promise<{ id: st
                         ) : (
                             <div
                                 key={res.type}
-                                className="group relative overflow-hidden rounded-2xl bg-surface/5 border border-transparent p-4 opacity-50 cursor-not-allowed grayscale"
+                                className="group relative overflow-hidden rounded-lg bg-surface/5 border border-transparent p-4 opacity-50 cursor-not-allowed grayscale"
                             >
-                                <div className="w-10 h-10 rounded-xl mb-3 flex items-center justify-center text-xl bg-surface/10 text-foreground/30">
+                                <div className="w-10 h-10 rounded-lg mb-3 flex items-center justify-center text-xl bg-surface/10 text-foreground/30">
                                     {res.icon}
                                 </div>
                                 <h3 className="font-bold text-foreground/40">

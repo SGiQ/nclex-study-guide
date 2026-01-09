@@ -74,7 +74,7 @@ export default function QuickActionsFAB() {
                                 action.onClick();
                                 setIsOpen(false);
                             }}
-                            className="flex items-center gap-3 px-4 py-3 rounded-xl bg-card border border-card-border hover:border-indigo-500 shadow-lg transition-all hover:scale-105 min-w-[200px]"
+                            className="flex items-center gap-3 px-4 py-3 rounded-lg bg-card border border-card-border hover:border-indigo-500 shadow-lg transition-all hover:scale-105 min-w-[200px]"
                             style={{ animationDelay: `${idx * 50}ms` }}
                         >
                             <div className="text-2xl">{action.icon}</div>

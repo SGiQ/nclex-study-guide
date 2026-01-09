@@ -76,7 +76,7 @@ export default function BadgeCard({ badge, size = 'medium', showDescription = tr
     return (
         <div
             className={`
-                relative rounded-2xl border transition-all duration-300
+                relative rounded-lg border transition-all duration-300
                 ${sizeStyle.container}
                 ${isLocked
                     ? 'bg-surface/5 border-surface/10 opacity-50'
@@ -132,7 +132,7 @@ export default function BadgeCard({ badge, size = 'medium', showDescription = tr
 
             {/* Shimmer Effect for Unlocked Badges */}
             {!isLocked && (
-                <div className="absolute inset-0 rounded-2xl overflow-hidden pointer-events-none">
+                <div className="absolute inset-0 rounded-lg overflow-hidden pointer-events-none">
                     <div className="absolute -inset-full animate-shimmer bg-gradient-to-r from-transparent via-white/10 to-transparent"
                         style={{ animationDuration: '3s' }} />
                 </div>

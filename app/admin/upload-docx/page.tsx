@@ -79,10 +79,10 @@ export default function UploadDocxPage() {
                 </div>
 
                 {/* Upload Area */}
-                <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-8 mb-6">
+                <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg p-8 mb-6">
                     <div className="text-center">
                         <div className="mb-6">
-                            <div className="inline-flex h-20 w-20 rounded-2xl bg-gradient-to-br from-purple-500 to-indigo-600 items-center justify-center mb-4 shadow-2xl shadow-purple-500/50">
+                            <div className="inline-flex h-20 w-20 rounded-lg bg-gradient-to-br from-purple-500 to-indigo-600 items-center justify-center mb-4 shadow-2xl shadow-purple-500/50">
                                 <span className="text-4xl">📄</span>
                             </div>
                             <h2 className="text-2xl font-bold text-white mb-2">Upload DOCX File</h2>
@@ -112,7 +112,7 @@ export default function UploadDocxPage() {
 
                 {/* Error Message */}
                 {error && (
-                    <div className="bg-red-500/10 border border-red-500/30 rounded-xl p-6 mb-6">
+                    <div className="bg-red-500/10 border border-red-500/30 rounded-lg p-6 mb-6">
                         <div className="flex items-start gap-3">
                             <span className="text-2xl">❌</span>
                             <div>
@@ -125,7 +125,7 @@ export default function UploadDocxPage() {
 
                 {/* Success Result */}
                 {result && (
-                    <div className="bg-green-500/10 border border-green-500/30 rounded-xl p-6 mb-6">
+                    <div className="bg-green-500/10 border border-green-500/30 rounded-lg p-6 mb-6">
                         <div className="flex items-start gap-3 mb-4">
                             <span className="text-2xl">✅</span>
                             <div>
@@ -171,7 +171,7 @@ export default function UploadDocxPage() {
                 )}
 
                 {/* Instructions */}
-                <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6">
+                <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg p-6">
                     <h3 className="text-lg font-bold text-white mb-4">📋 How It Works</h3>
                     <ol className="space-y-3 text-gray-300">
                         <li className="flex gap-3">

@@ -104,7 +104,7 @@ export default function AnalyticsPage() {
             <div className="px-4 py-6 max-w-2xl mx-auto space-y-6">
 
                 {/* Readiness Score Card */}
-                <div className={`p-6 rounded-2xl bg-gradient-to-br ${readinessColor.bg} border ${readinessColor.border}`}>
+                <div className={`p-6 rounded-lg bg-gradient-to-br ${readinessColor.bg} border ${readinessColor.border}`}>
                     <div className="text-center">
                         <div className="text-sm font-bold text-foreground/60 uppercase tracking-wider mb-2">
                             NCLEX Readiness Score
@@ -158,19 +158,19 @@ export default function AnalyticsPage() {
                         <span>📊</span> Study Statistics
                     </h2>
                     <div className="grid grid-cols-2 gap-3">
-                        <div className="p-4 rounded-xl bg-card border border-card-border">
+                        <div className="p-4 rounded-lg bg-card border border-card-border">
                             <div className="text-3xl font-black text-indigo-400">{totalQuestionsAnswered}</div>
                             <div className="text-xs text-foreground/60">Questions Answered</div>
                         </div>
-                        <div className="p-4 rounded-xl bg-card border border-card-border">
+                        <div className="p-4 rounded-lg bg-card border border-card-border">
                             <div className="text-3xl font-black text-purple-400">{getMasteredCount()}</div>
                             <div className="text-xs text-foreground/60">Cards Mastered</div>
                         </div>
-                        <div className="p-4 rounded-xl bg-card border border-card-border">
+                        <div className="p-4 rounded-lg bg-card border border-card-border">
                             <div className="text-3xl font-black text-orange-400">{currentStreak}</div>
                             <div className="text-xs text-foreground/60">Day Streak</div>
                         </div>
-                        <div className="p-4 rounded-xl bg-card border border-card-border">
+                        <div className="p-4 rounded-lg bg-card border border-card-border">
                             <div className="text-3xl font-black text-green-400">{quizScores.length}</div>
                             <div className="text-xs text-foreground/60">Quizzes Completed</div>
                         </div>
@@ -185,7 +185,7 @@ export default function AnalyticsPage() {
                         </h2>
                         <div className="space-y-3">
                             {categories.map((category) => (
-                                <div key={category.name} className="p-4 rounded-xl bg-card border border-card-border">
+                                <div key={category.name} className="p-4 rounded-lg bg-card border border-card-border">
                                     <div className="flex items-center justify-between mb-2">
                                         <div>
                                             <div className="font-bold text-foreground">{category.name}</div>
@@ -213,7 +213,7 @@ export default function AnalyticsPage() {
                         <h2 className="text-lg font-bold mb-3 flex items-center gap-2">
                             <span>⚠️</span> Areas Needing Attention
                         </h2>
-                        <div className="p-4 rounded-xl bg-gradient-to-br from-red-500/10 to-orange-500/10 border border-red-500/20">
+                        <div className="p-4 rounded-lg bg-gradient-to-br from-red-500/10 to-orange-500/10 border border-red-500/20">
                             <p className="text-sm text-foreground/80 mb-3">
                                 Focus on these categories to improve your readiness score:
                             </p>
@@ -254,7 +254,7 @@ export default function AnalyticsPage() {
 
                 {/* Motivational Message */}
                 {quizScores.length > 0 && (
-                    <div className="p-4 rounded-xl bg-gradient-to-br from-indigo-500/10 to-purple-500/10 border border-indigo-500/20">
+                    <div className="p-4 rounded-lg bg-gradient-to-br from-indigo-500/10 to-purple-500/10 border border-indigo-500/20">
                         <div className="text-sm text-foreground/80">
                             <strong>💡 Tip:</strong> Aim for 80%+ readiness score before your exam.
                             Focus on weak categories and maintain your study streak for best results!

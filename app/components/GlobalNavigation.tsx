@@ -29,7 +29,7 @@ export default function GlobalNavigation() {
                                 <button
                                     key={item.label}
                                     onClick={item.action}
-                                    className="flex flex-col items-center gap-1 rounded-xl px-2 py-2 text-foreground/50 hover:bg-surface/10 hover:text-foreground transition-colors"
+                                    className="flex flex-col items-center gap-1 rounded-lg px-2 py-2 text-foreground/50 hover:bg-surface/10 hover:text-foreground transition-colors"
                                 >
                                     <span className="text-xl leading-none">{item.icon}</span>
                                     <span className="text-[10px] font-medium">{item.label}</span>
@@ -42,7 +42,7 @@ export default function GlobalNavigation() {
                             <Link
                                 key={item.label}
                                 href={item.href || '#'}
-                                className={`flex flex-col items-center gap-1 rounded-xl px-2 py-2 transition-colors ${isActive ? 'text-foreground bg-surface/10' : 'text-foreground/50 hover:bg-surface/10 hover:text-foreground'
+                                className={`flex flex-col items-center gap-1 rounded-lg px-2 py-2 transition-colors ${isActive ? 'text-foreground bg-surface/10' : 'text-foreground/50 hover:bg-surface/10 hover:text-foreground'
                                     }`}
                             >
                                 <span className="text-xl leading-none">{item.icon}</span>
@@ -54,7 +54,7 @@ export default function GlobalNavigation() {
                     {/* Theme Toggle */}
                     <button
                         onClick={toggleTheme}
-                        className="flex flex-col items-center gap-1 rounded-xl px-2 py-2 text-foreground/50 hover:bg-surface/10 hover:text-foreground transition-colors"
+                        className="flex flex-col items-center gap-1 rounded-lg px-2 py-2 text-foreground/50 hover:bg-surface/10 hover:text-foreground transition-colors"
                     >
                         <span className="text-xl leading-none">
                             {theme === 'dark' ? '☀' : '☾'}

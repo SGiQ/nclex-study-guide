@@ -69,7 +69,7 @@ export default function AdminSlidesPage() {
                     </h1>
                 </div>
 
-                <div className="bg-[#16161C] p-8 rounded-3xl border border-white/10 shadow-2xl">
+                <div className="bg-[#16161C] p-8 rounded-lg border border-white/10 shadow-2xl">
                     <form onSubmit={handleSubmit} className="space-y-6">
 
                         {/* Title Input */}
@@ -81,7 +81,7 @@ export default function AdminSlidesPage() {
                                 type="text"
                                 value={title}
                                 onChange={(e) => setTitle(e.target.value)}
-                                className="w-full bg-black/20 border border-white/10 rounded-xl px-4 py-3 text-white focus:border-emerald-500 outline-none transition-colors"
+                                className="w-full bg-black/20 border border-white/10 rounded-lg px-4 py-3 text-white focus:border-emerald-500 outline-none transition-colors"
                                 placeholder="e.g. Respiratory System Overview"
                                 required
                             />
@@ -96,7 +96,7 @@ export default function AdminSlidesPage() {
                                 type="number"
                                 value={episodeId}
                                 onChange={(e) => setEpisodeId(e.target.value)}
-                                className="w-full bg-black/20 border border-white/10 rounded-xl px-4 py-3 text-white focus:border-emerald-500 outline-none transition-colors"
+                                className="w-full bg-black/20 border border-white/10 rounded-lg px-4 py-3 text-white focus:border-emerald-500 outline-none transition-colors"
                                 placeholder="e.g. 2"
                             />
                         </div>
@@ -113,7 +113,7 @@ export default function AdminSlidesPage() {
                                     onChange={handleFileChange}
                                     className="absolute inset-0 w-full h-full opacity-0 cursor-pointer z-10"
                                 />
-                                <div className="border-2 border-dashed border-white/10 rounded-xl p-8 text-center group-hover:border-emerald-500/50 group-hover:bg-emerald-500/5 transition-all">
+                                <div className="border-2 border-dashed border-white/10 rounded-lg p-8 text-center group-hover:border-emerald-500/50 group-hover:bg-emerald-500/5 transition-all">
                                     {file ? (
                                         <div className="text-emerald-400 font-bold flex items-center justify-center gap-2">
                                             📄 {file.name}
@@ -132,7 +132,7 @@ export default function AdminSlidesPage() {
                         <button
                             type="submit"
                             disabled={isUploading || !file}
-                            className="w-full bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 disabled:opacity-50 disabled:cursor-not-allowed text-white font-bold py-4 rounded-xl transition-all shadow-lg shadow-emerald-900/20"
+                            className="w-full bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 disabled:opacity-50 disabled:cursor-not-allowed text-white font-bold py-4 rounded-lg transition-all shadow-lg shadow-emerald-900/20"
                         >
                             {isUploading ? 'Uploading...' : 'Save Slide Deck'}
                         </button>

@@ -138,7 +138,7 @@ export default function ExamResultsPage() {
                                 const isUserAnswer = userAnswer === idx;
                                 const isCorrectAnswer = q.correctAnswer === idx;
 
-                                let className = 'w-full text-left p-4 rounded-xl border-2 ';
+                                let className = 'w-full text-left p-4 rounded-lg border-2 ';
                                 if (isCorrectAnswer) {
                                     className += 'border-green-500 bg-green-500/10';
                                 } else if (isUserAnswer && !isCorrect) {
@@ -169,7 +169,7 @@ export default function ExamResultsPage() {
                         </div>
 
                         {/* Explanation */}
-                        <div className="p-6 rounded-xl bg-indigo-500/10 border border-indigo-500/20">
+                        <div className="p-6 rounded-lg bg-indigo-500/10 border border-indigo-500/20">
                             <h3 className="font-bold mb-2 flex items-center gap-2">
                                 <span>💡</span> Explanation
                             </h3>
@@ -203,7 +203,7 @@ export default function ExamResultsPage() {
         <div className="min-h-screen bg-background text-foreground pb-[180px]">
             <div className="max-w-4xl mx-auto px-4 py-8">
                 {/* Pass/Fail Header */}
-                <div className={`text-center p-12 rounded-3xl mb-8 ${results.passed
+                <div className={`text-center p-12 rounded-lg mb-8 ${results.passed
                     ? 'bg-gradient-to-br from-green-500/20 to-emerald-500/20 border-2 border-green-500/30'
                     : 'bg-gradient-to-br from-red-500/20 to-orange-500/20 border-2 border-red-500/30'
                     }`}>
@@ -228,15 +228,15 @@ export default function ExamResultsPage() {
 
                 {/* Score Breakdown */}
                 <div className="grid md:grid-cols-3 gap-4 mb-8">
-                    <div className="p-6 rounded-xl bg-card border border-card-border">
+                    <div className="p-6 rounded-lg bg-card border border-card-border">
                         <div className="text-3xl font-black text-indigo-400">{results.percentage}%</div>
                         <div className="text-sm text-foreground/60">Overall Score</div>
                     </div>
-                    <div className="p-6 rounded-xl bg-card border border-card-border">
+                    <div className="p-6 rounded-lg bg-card border border-card-border">
                         <div className="text-3xl font-black text-purple-400">{formatTime(results.timeTaken)}</div>
                         <div className="text-sm text-foreground/60">Time Taken</div>
                     </div>
-                    <div className="p-6 rounded-xl bg-card border border-card-border">
+                    <div className="p-6 rounded-lg bg-card border border-card-border">
                         <div className="text-3xl font-black text-pink-400">
                             {Math.round(results.timeTaken / results.totalQuestions / 1000)}s
                         </div>
@@ -249,7 +249,7 @@ export default function ExamResultsPage() {
                     <h2 className="text-2xl font-bold mb-4">Category Performance</h2>
                     <div className="space-y-3">
                         {categories.map(cat => (
-                            <div key={cat.name} className="p-4 rounded-xl bg-card border border-card-border">
+                            <div key={cat.name} className="p-4 rounded-lg bg-card border border-card-border">
                                 <div className="flex items-center justify-between mb-2">
                                     <div>
                                         <div className="font-bold">{cat.name}</div>
@@ -276,7 +276,7 @@ export default function ExamResultsPage() {
 
                 {/* Weak Areas */}
                 {categories.filter(c => c.percentage < 75).length > 0 && (
-                    <div className="p-6 rounded-xl bg-gradient-to-br from-red-500/10 to-orange-500/10 border border-red-500/20 mb-8">
+                    <div className="p-6 rounded-lg bg-gradient-to-br from-red-500/10 to-orange-500/10 border border-red-500/20 mb-8">
                         <h3 className="font-bold text-lg mb-3 flex items-center gap-2">
                             <span>⚠️</span> Areas to Improve
                         </h3>
@@ -298,19 +298,19 @@ export default function ExamResultsPage() {
                 <div className="flex flex-col sm:flex-row gap-4">
                     <button
                         onClick={() => setShowReview(true)}
-                        className="flex-1 py-4 rounded-xl bg-indigo-600 hover:bg-indigo-500 font-bold transition-colors"
+                        className="flex-1 py-4 rounded-lg bg-indigo-600 hover:bg-indigo-500 font-bold transition-colors"
                     >
                         Review Questions
                     </button>
                     <button
                         onClick={retakeExam}
-                        className="flex-1 py-4 rounded-xl bg-purple-600 hover:bg-purple-500 font-bold transition-colors"
+                        className="flex-1 py-4 rounded-lg bg-purple-600 hover:bg-purple-500 font-bold transition-colors"
                     >
                         Retake Exam
                     </button>
                     <Link
                         href="/dashboard"
-                        className="flex-1 py-4 rounded-xl bg-surface/10 hover:bg-surface/20 font-semibold transition-colors text-center"
+                        className="flex-1 py-4 rounded-lg bg-surface/10 hover:bg-surface/20 font-semibold transition-colors text-center"
                     >
                         Back to Dashboard
                     </Link>

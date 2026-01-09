@@ -115,14 +115,14 @@ export default function DashboardPage() {
 
                     <Link
                         href="/achievements"
-                        className="group block relative overflow-hidden rounded-2xl bg-gradient-to-br from-yellow-900/40 to-orange-900/40 border border-yellow-500/20 p-4 transition-all hover:border-yellow-500/40"
+                        className="group block relative overflow-hidden rounded-lg bg-gradient-to-br from-yellow-900/40 to-orange-900/40 border border-yellow-500/20 p-4 transition-all hover:border-yellow-500/40"
                     >
                         <div className="flex items-center justify-between mb-3">
                             <div>
                                 <div className="text-3xl font-black text-yellow-400">{unlockedBadges.length}/{totalBadges}</div>
                                 <div className="text-xs text-yellow-400/70">Badges Unlocked</div>
                             </div>
-                            <div className="h-12 w-12 rounded-xl bg-yellow-500/20 flex items-center justify-center text-yellow-400 group-hover:scale-110 transition-transform">
+                            <div className="h-12 w-12 rounded-lg bg-yellow-500/20 flex items-center justify-center text-yellow-400 group-hover:scale-110 transition-transform">
                                 🏆
                             </div>
                         </div>
@@ -165,10 +165,10 @@ export default function DashboardPage() {
 
                         <Link
                             href={`/audio`}
-                            className="group block relative overflow-hidden rounded-2xl bg-gradient-to-br from-red-900/40 to-black/40 border border-red-500/20 p-4 transition-all hover:border-red-500/40"
+                            className="group block relative overflow-hidden rounded-lg bg-gradient-to-br from-red-900/40 to-black/40 border border-red-500/20 p-4 transition-all hover:border-red-500/40"
                         >
                             <div className="flex items-center gap-4">
-                                <div className="h-12 w-12 rounded-xl bg-red-500/20 flex items-center justify-center text-red-400 group-hover:scale-110 transition-transform">
+                                <div className="h-12 w-12 rounded-lg bg-red-500/20 flex items-center justify-center text-red-400 group-hover:scale-110 transition-transform">
                                     ▶
                                 </div>
                                 <div>
@@ -193,14 +193,14 @@ export default function DashboardPage() {
 
                     <Link
                         href="/reviews"
-                        className="group block relative overflow-hidden rounded-2xl bg-gradient-to-br from-indigo-900/60 to-purple-900/60 border border-indigo-500/30 p-4 transition-all hover:border-indigo-500/50"
+                        className="group block relative overflow-hidden rounded-lg bg-gradient-to-br from-indigo-900/60 to-purple-900/60 border border-indigo-500/30 p-4 transition-all hover:border-indigo-500/50"
                     >
                         <div className="flex items-center justify-between mb-3">
                             <div>
                                 <div className="text-3xl font-black text-white">{getDueCount()}</div>
                                 <div className="text-xs text-indigo-200">Cards Due Today</div>
                             </div>
-                            <div className="h-12 w-12 rounded-xl bg-indigo-500/30 flex items-center justify-center text-indigo-200 group-hover:scale-110 transition-transform">
+                            <div className="h-12 w-12 rounded-lg bg-indigo-500/30 flex items-center justify-center text-indigo-200 group-hover:scale-110 transition-transform">
                                 🔄
                             </div>
                         </div>
@@ -230,7 +230,7 @@ export default function DashboardPage() {
                             <Link
                                 key={c.title}
                                 href={c.href}
-                                className="animate-enter relative aspect-square w-full overflow-hidden rounded-3xl shadow-sm transition-transform duration-200 hover:-translate-y-1 active:translate-y-0 text-white block group backdrop-blur-md"
+                                className="animate-enter relative aspect-square w-full overflow-hidden rounded-lg shadow-sm transition-transform duration-200 hover:-translate-y-1 active:translate-y-0 text-white block group backdrop-blur-md"
                                 style={{
                                     background: `linear-gradient(to bottom right, ${c.from}CC, ${c.to}CC)`
                                 }}
@@ -253,7 +253,7 @@ export default function DashboardPage() {
                                         <span className="text-xs font-medium text-white/85">
                                             {c.cta}
                                         </span>
-                                        <span className="grid h-9 w-9 place-items-center rounded-xl bg-black/25 group-hover:bg-black/30 transition-colors">
+                                        <span className="grid h-9 w-9 place-items-center rounded-lg bg-black/25 group-hover:bg-black/30 transition-colors">
                                             {c.icon}
                                         </span>
                                     </div>

@@ -43,7 +43,7 @@ export default function AdminLoginPage() {
             <div className="max-w-md w-full">
                 {/* Logo/Header */}
                 <div className="text-center mb-8">
-                    <div className="inline-flex h-16 w-16 rounded-2xl bg-gradient-to-br from-purple-500 to-indigo-600 items-center justify-center mb-4 shadow-2xl shadow-purple-500/50">
+                    <div className="inline-flex h-16 w-16 rounded-lg bg-gradient-to-br from-purple-500 to-indigo-600 items-center justify-center mb-4 shadow-2xl shadow-purple-500/50">
                         <span className="text-3xl">🔐</span>
                     </div>
                     <h1 className="text-3xl font-black text-white mb-2">Admin Access</h1>
@@ -51,7 +51,7 @@ export default function AdminLoginPage() {
                 </div>
 
                 {/* Login Form */}
-                <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-8 shadow-2xl">
+                <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-lg p-8 shadow-2xl">
                     <form onSubmit={handleLogin} className="space-y-6">
                         <div>
                             <label className="block text-sm font-medium text-white/80 mb-2">

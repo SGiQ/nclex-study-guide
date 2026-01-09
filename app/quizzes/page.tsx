@@ -70,7 +70,7 @@ export default function QuizListPage() {
                                 <Link
                                     key={quiz.id}
                                     href={`/quizzes/${quiz.id}`}
-                                    className="group relative overflow-hidden rounded-2xl bg-card hover:bg-surface/5 transition-all duration-300 border border-card-border hover:border-border hover:shadow-2xl hover:-translate-y-1 block"
+                                    className="group relative overflow-hidden rounded-lg bg-card hover:bg-surface/5 transition-all duration-300 border border-card-border hover:border-border hover:shadow-2xl hover:-translate-y-1 block"
                                 >
                                     {/* Decorative Gradient Background */}
                                     <div className={`absolute inset-0 opacity-10 group-hover:opacity-20 transition-opacity bg-gradient-to-br ${quiz.color}`} />
@@ -196,7 +196,7 @@ export default function QuizListPage() {
                 </div>
 
                 {/* Coming Soon Section */}
-                <div className="mt-12 p-6 rounded-2xl border border-dashed border-white/10 text-center">
+                <div className="mt-12 p-6 rounded-lg border border-dashed border-white/10 text-center">
                     <p className="text-white/40 text-sm">More categories coming soon...</p>
                 </div>
             </main>

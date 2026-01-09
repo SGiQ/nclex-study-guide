@@ -230,47 +230,26 @@ export default function DashboardPage() {
                             <Link
                                 key={c.title}
                                 href={c.href}
-                                className="animate-enter relative aspect-square w-full overflow-hidden rounded-lg shadow-sm transition-transform duration-200 hover:-translate-y-1 active:translate-y-0 text-white block group backdrop-blur-md"
-                                style={{
-                                    background: (c as any).image ? 'none' : `linear-gradient(to bottom right, ${c.from}CC, ${c.to}CC)`
-                                }}
+                                className="animate-enter relative aspect-square w-full overflow-hidden rounded-xl bg-gradient-to-br from-[#3e3e42] to-[#1c1c1e] border-t border-white/10 border-b border-black/50 shadow-xl transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl active:scale-95 group"
                             >
-                                {(c as any).image && (
-                                    <>
-                                        <div className="absolute inset-0">
-                                            <img
-                                                src={(c as any).image}
-                                                alt={c.title}
-                                                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                                            />
-                                        </div>
-                                        <div className="absolute inset-0 bg-black/30 group-hover:bg-black/20 transition-colors" />
-                                    </>
-                                )}
+                                {/* Soft inner glow/highlight on hover */}
+                                <div className="absolute inset-0 bg-white/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
-                                {!(c as any).image && (
-                                    <div className="absolute inset-0 opacity-20">
-                                        <div className="absolute -right-10 -top-10 h-32 w-32 rounded-full bg-white/30 blur-2xl" />
-                                    </div>
-                                )}
-
-                                <div className="relative flex h-full flex-col justify-between p-4 z-10">
-                                    <div className="text-left">
-                                        <div className="text-[11px] font-semibold text-white/80 drop-shadow-md">
-                                            NCLEX
-                                        </div>
-                                        <div className="mt-1 text-lg font-bold leading-tight drop-shadow-md">
-                                            {c.title}
-                                        </div>
+                                <div className="relative z-10 flex flex-col items-center justify-center h-full p-4 text-center gap-4">
+                                    {/* Icon */}
+                                    <div
+                                        className="text-5xl drop-shadow-[0_4px_8px_rgba(0,0,0,0.5)] transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3"
+                                        style={{ color: c.from }}
+                                    >
+                                        {c.icon}
                                     </div>
 
-                                    <div className="flex items-center justify-between">
-                                        <span className="text-xs font-medium text-white/95 drop-shadow-md">
-                                            {c.cta}
-                                        </span>
-                                        <span className="grid h-9 w-9 place-items-center rounded-lg bg-black/25 group-hover:bg-black/30 transition-colors backdrop-blur-sm">
-                                            {c.icon}
-                                        </span>
+                                    {/* Title */}
+                                    <div
+                                        className="text-lg font-bold tracking-wide drop-shadow-md"
+                                        style={{ color: c.from }}
+                                    >
+                                        {c.title}
                                     </div>
                                 </div>
                             </Link>

@@ -4,6 +4,7 @@ import { use, useState, useEffect } from 'react';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import { TransformWrapper, TransformComponent } from 'react-zoom-pan-pinch';
+import mindmapsData from '@/app/data/mindmaps.json';
 
 export default function MindMapViewerPage({ params }: { params: Promise<{ id: string }> }) {
     const { id } = use(params);
@@ -11,16 +12,10 @@ export default function MindMapViewerPage({ params }: { params: Promise<{ id: st
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        fetch('/api/mindmaps')
-            .then(r => r.json())
-            .then(data => {
-                const found = data.find((m: any) => m.id === parseInt(id));
-                if (found) {
-                    setMindmap(found);
-                }
-                setLoading(false);
-            })
-            .catch(() => setLoading(false));
+        // Find mindmap by Episode ID
+        const found = mindmapsData.find((m: any) => m.episodeId === parseInt(id));
+        setMindmap(found || null);
+        setLoading(false);
     }, [id]);
 
     if (loading) {
@@ -38,14 +33,14 @@ export default function MindMapViewerPage({ params }: { params: Promise<{ id: st
         <div className="flex flex-col h-screen bg-gray-900 text-white">
             {/* Header */}
             <header className="h-16 flex items-center justify-between px-4 border-b border-gray-200 dark:border-white/10 bg-white dark:bg-gray-800 flex-shrink-0 z-10">
-                <Link href="/mindmaps" className="flex items-center gap-2 text-sm text-gray-600 dark:text-white/70 hover:text-gray-900 dark:hover:text-white transition-colors">
-                    <span>←</span> Back to Mind Maps
+                <Link href="/library" className="flex items-center gap-2 text-sm text-gray-600 dark:text-white/70 hover:text-gray-900 dark:hover:text-white transition-colors">
+                    <span>←</span> Library
                 </Link>
                 <div className="font-bold text-sm truncate max-w-[300px]">
                     {mindmap.title}
                 </div>
                 <a
-                    href={`/api/mindmaps/${id}/image`}
+                    href={mindmap.url}
                     download={`${mindmap.title}.png`}
                     className="flex items-center gap-2 px-4 py-2 bg-purple-600 hover:bg-purple-500 rounded-lg text-sm font-semibold transition-colors text-white"
                 >
@@ -99,7 +94,7 @@ export default function MindMapViewerPage({ params }: { params: Promise<{ id: st
                                 contentClass="w-full h-full flex items-center justify-center"
                             >
                                 <img
-                                    src={`/api/mindmaps/${id}/image`}
+                                    src={mindmap.url}
                                     alt={mindmap.title}
                                     className="max-w-full max-h-full object-contain cursor-move"
                                     draggable={false}

@@ -11,7 +11,7 @@ import quizzesData from '@/app/data/quizzes.json';
 // Import others if they have content, currently strict on types so using 'any' safely or checking structure
 import slidesData from '@/app/data/slides.json';
 // import infographicsData from '@/app/data/infographics.json';
-// import mindmapsData from '@/app/data/mindmaps.json';
+import mindmapsData from '@/app/data/mindmaps.json';
 
 export default function EpisodeDetailPage({ params }: { params: Promise<{ id: string }> }) {
     const { id } = use(params);
@@ -31,9 +31,8 @@ export default function EpisodeDetailPage({ params }: { params: Promise<{ id: st
     // Assuming standard structure based on files seen.
     const hasSlides = (slidesData as any[]).some((s) => s.episodeId === episodeId);
     // const hasInfographics = (infographicsData as any[]).some((i) => i.episodeId === episodeId);
-    // const hasMindMap = (mindmapsData as any[]).some((m) => m.episodeId === episodeId);
+    const hasMindMap = (mindmapsData as any[]).some((m) => m.episodeId === episodeId);
     const hasInfographics = false; // TODO: Connect real data when populated
-    const hasMindMap = false;      // TODO: Connect real data when populated
 
 
     const resources = [

@@ -108,7 +108,7 @@ export default function LandingPage() {
             <section className="pt-32 pb-20 px-4">
                 <div className="max-w-7xl mx-auto text-center">
                     <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-indigo-500/10 border border-indigo-500/20 mb-8">
-                        <span className="text-sm font-semibold text-indigo-400">🎉 440+ NCLEX Questions Now Available</span>
+                        <span className="text-sm font-semibold text-indigo-400">🎉 800+ NCLEX Questions Now Available</span>
                     </div>
 
                     <h1 className="text-5xl md:text-7xl font-black mb-6 bg-gradient-to-r from-white via-indigo-200 to-purple-200 bg-clip-text text-transparent leading-tight">
@@ -116,7 +116,7 @@ export default function LandingPage() {
                     </h1>
 
                     <p className="text-xl md:text-2xl text-white/70 mb-12 max-w-3xl mx-auto">
-                        The complete study platform with AI-powered tutoring, 440+ practice questions,
+                        The complete study platform with AI-powered tutoring, 800+ practice questions,
                         and multi-modal learning designed specifically for NCLEX-PN success.
                     </p>
 
@@ -160,7 +160,7 @@ export default function LandingPage() {
                         {[
                             {
                                 icon: "🎯",
-                                title: "440+ Practice Questions",
+                                title: "800+ Practice Questions",
                                 description: "Comprehensive NCLEX-style questions covering all categories with detailed explanations"
                             },
                             {
@@ -175,7 +175,7 @@ export default function LandingPage() {
                             },
                             {
                                 icon: "🗂️",
-                                title: "750+ Flashcards",
+                                title: "650+ Flashcards",
                                 description: "Spaced repetition flashcards covering all 16 episodes for maximum retention"
                             },
                             {
@@ -302,8 +302,8 @@ export default function LandingPage() {
                             <div className="text-4xl font-black mb-6">$29<span className="text-lg text-white/60">/month</span></div>
                             <ul className="space-y-3 mb-8">
                                 <li className="flex items-center gap-2">✅ All 16 Episodes</li>
-                                <li className="flex items-center gap-2">✅ 440+ Practice Questions</li>
-                                <li className="flex items-center gap-2">✅ 750+ Flashcards</li>
+                                <li className="flex items-center gap-2">✅ 800+ Practice Questions</li>
+                                <li className="flex items-center gap-2">✅ 650+ Flashcards</li>
                                 <li className="flex items-center gap-2">✅ Unlimited AI Tutor</li>
                                 <li className="flex items-center gap-2">✅ Full Exam Simulation</li>
                                 <li className="flex items-center gap-2">✅ Performance Analytics</li>

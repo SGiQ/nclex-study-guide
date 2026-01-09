@@ -182,7 +182,7 @@ export default function FlashcardRunnerPage({ params }: { params: Promise<{ id: 
                 <div className="flex-1 flex flex-col items-center justify-center w-full max-w-3xl mx-4">
                     {/* 3D Flip Card Container */}
                     <div
-                        className="relative w-full aspect-[16/10] max-h-[65vh] cursor-pointer group"
+                        className="relative w-full aspect-[4/5] sm:aspect-[16/10] max-h-[65vh] cursor-pointer group"
                         onClick={() => setIsFlipped(!isFlipped)}
                     >
                         <div
@@ -192,56 +192,76 @@ export default function FlashcardRunnerPage({ params }: { params: Promise<{ id: 
 
                             {/* FRONT */}
                             <div
-                                className="absolute inset-0 backface-hidden bg-card rounded-xl border border-card-border p-6 sm:p-10 flex flex-col items-center justify-center text-center shadow-2xl group-hover:border-card-border/70 transition-colors"
+                                className="absolute inset-0 backface-hidden bg-card rounded-xl border border-card-border p-6 sm:p-10 flex flex-col justify-between items-center text-center shadow-2xl group-hover:border-card-border/70 transition-colors"
                             >
-                                <span className="text-xs uppercase font-bold text-blue-500 tracking-wider mb-4 sm:mb-6">Question</span>
-                                <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-relaxed text-foreground px-4 overflow-y-auto max-h-full scrollbar-hide">
-                                    {currentCard.front}
-                                </h2>
-                                <div className="absolute bottom-6 text-foreground/40 text-[10px] sm:text-xs font-bold tracking-widest animate-pulse">
+                                <div className="flex-none">
+                                    <span className="text-xs uppercase font-bold text-blue-500 tracking-wider">Question</span>
+                                </div>
+                                <div className="flex-1 flex items-center justify-center w-full min-h-0 py-4">
+                                    <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-relaxed text-foreground px-2 overflow-y-auto max-h-full scrollbar-hide">
+                                        {currentCard.front}
+                                    </h2>
+                                </div>
+                                <div className="flex-none text-foreground/40 text-[10px] sm:text-xs font-bold tracking-widest animate-pulse">
                                     CLICK OR SPACE FOR ANSWER
                                 </div>
                             </div>
 
                             {/* BACK */}
                             <div
-                                className="absolute inset-0 backface-hidden bg-card rounded-xl border border-purple-500/30 p-6 sm:p-10 flex flex-col items-center justify-center text-center shadow-2xl rotate-y-180"
+                                className="absolute inset-0 backface-hidden bg-card rounded-xl border border-purple-500/30 p-6 sm:p-10 flex flex-col justify-between items-center text-center shadow-2xl rotate-y-180"
                             >
-                                <span className="text-xs uppercase font-bold text-purple-500 tracking-wider mb-4 sm:mb-6">Answer</span>
-                                <p className="text-lg sm:text-xl md:text-2xl font-medium text-foreground/90 leading-relaxed px-4 overflow-y-auto max-h-[60%] scrollbar-hide">
-                                    {currentCard.back}
-                                </p>
+                                <div className="flex-none w-full relative">
+                                    <span className="text-xs uppercase font-bold text-purple-500 tracking-wider block mb-1">Answer</span>
 
-                                {/* SRS Difficulty Buttons */}
-                                <div className="absolute bottom-6 w-full px-6" onClick={(e) => e.stopPropagation()}>
-                                    <div className="text-[9px] text-foreground/40 text-center mb-2 font-bold tracking-widest">
+                                    {/* Explain Button - Header Position */}
+                                    <button
+                                        onClick={(e) => {
+                                            e.stopPropagation();
+                                            handleExplain();
+                                        }}
+                                        className="absolute right-0 top-0 px-2.5 py-1 rounded-full bg-indigo-500/10 text-indigo-500 hover:bg-indigo-500/20 text-[10px] font-bold flex items-center gap-1 transition-colors border border-indigo-500/10"
+                                    >
+                                        <span>✨</span> <span className="hidden sm:inline">Explain</span>
+                                    </button>
+                                </div>
+
+                                <div className="flex-1 flex items-center justify-center w-full min-h-0 py-4">
+                                    <p className="text-lg sm:text-xl md:text-2xl font-medium text-foreground/90 leading-relaxed px-2 overflow-y-auto max-h-full scrollbar-hide">
+                                        {currentCard.back}
+                                    </p>
+                                </div>
+
+                                {/* SRS Difficulty Buttons - Footer Position */}
+                                <div className="flex-none w-full px-2 sm:px-6" onClick={(e) => e.stopPropagation()}>
+                                    <div className="text-[9px] text-foreground/40 text-center mb-3 font-bold tracking-widest">
                                         HOW WELL DID YOU KNOW THIS?
                                     </div>
-                                    <div className="grid grid-cols-4 gap-2 max-w-md mx-auto">
+                                    <div className="grid grid-cols-4 gap-2 w-full max-w-md mx-auto">
                                         <button
                                             onClick={() => handleDifficulty('again')}
-                                            className="px-2 py-2 rounded-lg bg-red-500/10 text-red-500 hover:bg-red-500/20 text-xs font-bold transition-colors border border-red-500/20"
+                                            className="px-1 py-3 rounded-lg bg-red-500/10 text-red-500 hover:bg-red-500/20 text-xs font-bold transition-colors border border-red-500/20 flex flex-col items-center justify-center gap-1"
                                         >
                                             <div>Again</div>
                                             <div className="text-[9px] opacity-60 hidden sm:block">&lt;1m</div>
                                         </button>
                                         <button
                                             onClick={() => handleDifficulty('hard')}
-                                            className="px-2 py-2 rounded-lg bg-orange-500/10 text-orange-500 hover:bg-orange-500/20 text-xs font-bold transition-colors border border-orange-500/20"
+                                            className="px-1 py-3 rounded-lg bg-orange-500/10 text-orange-500 hover:bg-orange-500/20 text-xs font-bold transition-colors border border-orange-500/20 flex flex-col items-center justify-center gap-1"
                                         >
                                             <div>Hard</div>
                                             <div className="text-[9px] opacity-60 hidden sm:block">&lt;10m</div>
                                         </button>
                                         <button
                                             onClick={() => handleDifficulty('good')}
-                                            className="px-2 py-2 rounded-lg bg-green-500/10 text-green-500 hover:bg-green-500/20 text-xs font-bold transition-colors border border-green-500/20"
+                                            className="px-1 py-3 rounded-lg bg-green-500/10 text-green-500 hover:bg-green-500/20 text-xs font-bold transition-colors border border-green-500/20 flex flex-col items-center justify-center gap-1"
                                         >
                                             <div>Good</div>
                                             <div className="text-[9px] opacity-60 hidden sm:block">1d</div>
                                         </button>
                                         <button
                                             onClick={() => handleDifficulty('easy')}
-                                            className="px-2 py-2 rounded-lg bg-blue-500/10 text-blue-500 hover:bg-blue-500/20 text-xs font-bold transition-colors border border-blue-500/20"
+                                            className="px-1 py-3 rounded-lg bg-blue-500/10 text-blue-500 hover:bg-blue-500/20 text-xs font-bold transition-colors border border-blue-500/20 flex flex-col items-center justify-center gap-1"
                                         >
                                             <div>Easy</div>
                                             <div className="text-[9px] opacity-60 hidden sm:block">4d</div>
@@ -252,15 +272,7 @@ export default function FlashcardRunnerPage({ params }: { params: Promise<{ id: 
                                     </div>
                                 </div>
 
-                                {/* Explain Button */}
-                                <div className="absolute top-4 right-4" onClick={(e) => e.stopPropagation()}>
-                                    <button
-                                        onClick={handleExplain}
-                                        className="px-3 py-1.5 rounded-full bg-indigo-500/10 text-indigo-500 hover:bg-indigo-500/20 text-xs font-bold flex items-center gap-2 transition-colors border border-indigo-500/10"
-                                    >
-                                        <span className="text-base">✨</span> <span className="hidden sm:inline">Explain</span>
-                                    </button>
-                                </div>
+                                {/* Removed absolute explain button since it's now in header */}
                             </div>
 
                         </div>

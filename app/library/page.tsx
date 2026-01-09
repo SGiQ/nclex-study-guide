@@ -61,7 +61,7 @@ export default function LibraryPage() {
 
             <main className="mx-auto max-w-2xl px-5 pt-6 space-y-4">
                 {episodesData.map((episode) => {
-                    const hasQuiz = quizzesData.some(q => q.id === episode.id);
+                    const hasQuiz = quizzesData.some(q => q.episodeId === episode.id);
                     const hasFlashcards = flashcardsData.some(f => f.episodeId === episode.id);
                     const isEpisodeSaved = isSaved(episode.id, 'episode');
 
@@ -85,8 +85,8 @@ export default function LibraryPage() {
                                 <button
                                     onClick={(e) => toggleSaveEpisode(e, episode)}
                                     className={`h-8 w-8 grid place-items-center rounded-full transition-colors ${isEpisodeSaved
-                                            ? 'bg-indigo-500/20 text-indigo-500'
-                                            : 'bg-surface/10 text-muted-foreground hover:bg-surface/20'
+                                        ? 'bg-indigo-500/20 text-indigo-500'
+                                        : 'bg-surface/10 text-muted-foreground hover:bg-surface/20'
                                         }`}
                                 >
                                     <span className="text-sm">{isEpisodeSaved ? '🔖' : '🏷️'}</span>

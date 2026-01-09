@@ -42,8 +42,8 @@ export default function DashboardPage() {
         : null;
 
     const cards = [
-        { title: "Audio Lessons", from: "#2563eb", to: "#1d4ed8", href: "/audio", icon: "▶", cta: "Listen Now" },
-        { title: "Quizzes", from: "#475569", to: "#334155", href: "/quizzes", icon: "📝", cta: "Start Quiz" },
+        { title: "Audio Lessons", from: "#2563eb", to: "#1d4ed8", href: "/audio", icon: "▶", cta: "Listen Now", image: "/images/dashboard/audio-lessons-card.jpg" },
+        { title: "Quizzes", from: "#475569", to: "#334155", href: "/quizzes", icon: "📝", cta: "Start Quiz", image: "/images/dashboard/quizzes-card.jpg" },
         { title: "Flashcards", from: "#9333ea", to: "#7e22ce", href: "/flashcards", icon: "🗂️", cta: "Practice" },
         { title: "Study Guides", from: "#10b981", to: "#059669", href: "/study-guides", icon: "📝", cta: "Study" },
         { title: "Exam Mode", from: "#10b981", to: "#059669", href: "/exam/setup", icon: "🎯", cta: "Take Exam" },
@@ -232,28 +232,43 @@ export default function DashboardPage() {
                                 href={c.href}
                                 className="animate-enter relative aspect-square w-full overflow-hidden rounded-lg shadow-sm transition-transform duration-200 hover:-translate-y-1 active:translate-y-0 text-white block group backdrop-blur-md"
                                 style={{
-                                    background: `linear-gradient(to bottom right, ${c.from}CC, ${c.to}CC)`
+                                    background: (c as any).image ? 'none' : `linear-gradient(to bottom right, ${c.from}CC, ${c.to}CC)`
                                 }}
                             >
-                                <div className="absolute inset-0 opacity-20">
-                                    <div className="absolute -right-10 -top-10 h-32 w-32 rounded-full bg-white/30 blur-2xl" />
-                                </div>
+                                {(c as any).image && (
+                                    <>
+                                        <div className="absolute inset-0">
+                                            <img
+                                                src={(c as any).image}
+                                                alt={c.title}
+                                                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                            />
+                                        </div>
+                                        <div className="absolute inset-0 bg-black/30 group-hover:bg-black/20 transition-colors" />
+                                    </>
+                                )}
 
-                                <div className="relative flex h-full flex-col justify-between p-4">
+                                {!(c as any).image && (
+                                    <div className="absolute inset-0 opacity-20">
+                                        <div className="absolute -right-10 -top-10 h-32 w-32 rounded-full bg-white/30 blur-2xl" />
+                                    </div>
+                                )}
+
+                                <div className="relative flex h-full flex-col justify-between p-4 z-10">
                                     <div className="text-left">
-                                        <div className="text-[11px] font-semibold text-white/80">
+                                        <div className="text-[11px] font-semibold text-white/80 drop-shadow-md">
                                             NCLEX
                                         </div>
-                                        <div className="mt-1 text-lg font-bold leading-tight">
+                                        <div className="mt-1 text-lg font-bold leading-tight drop-shadow-md">
                                             {c.title}
                                         </div>
                                     </div>
 
                                     <div className="flex items-center justify-between">
-                                        <span className="text-xs font-medium text-white/85">
+                                        <span className="text-xs font-medium text-white/95 drop-shadow-md">
                                             {c.cta}
                                         </span>
-                                        <span className="grid h-9 w-9 place-items-center rounded-lg bg-black/25 group-hover:bg-black/30 transition-colors">
+                                        <span className="grid h-9 w-9 place-items-center rounded-lg bg-black/25 group-hover:bg-black/30 transition-colors backdrop-blur-sm">
                                             {c.icon}
                                         </span>
                                     </div>

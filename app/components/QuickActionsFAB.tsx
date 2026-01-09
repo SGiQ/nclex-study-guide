@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { useSRS } from '@/app/context/SRSContext';
 import { useProgress } from '@/app/context/ProgressContext';
+import quizzes from '@/app/data/quizzes.json';
 
 export default function QuickActionsFAB() {
     const router = useRouter();
@@ -26,10 +27,20 @@ export default function QuickActionsFAB() {
             label: 'Quick Quiz',
             subtitle: 'From weak areas',
             onClick: () => {
-                const episodeId = weakEpisodes.length > 0
-                    ? weakEpisodes[Math.floor(Math.random() * weakEpisodes.length)]
-                    : Math.floor(Math.random() * 15) + 1;
-                router.push(`/quizzes/${episodeId}`);
+                // Find quizzes that match the user's weak episodes
+                const weakQuizzes = quizzes.filter(q => weakEpisodes.includes(q.episodeId));
+
+                let targetQuizId;
+
+                if (weakQuizzes.length > 0) {
+                    // Pick a random quiz from weak areas
+                    targetQuizId = weakQuizzes[Math.floor(Math.random() * weakQuizzes.length)].id;
+                } else {
+                    // Fallback: Pick any random available quiz
+                    targetQuizId = quizzes[Math.floor(Math.random() * quizzes.length)].id;
+                }
+
+                router.push(`/quizzes/${targetQuizId}`);
             }
         },
         {

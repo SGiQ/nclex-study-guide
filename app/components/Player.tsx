@@ -125,7 +125,7 @@ export default function Player() {
             {/* Mini Player */}
             {!isExpanded && (
                 <div
-                    className="fixed bottom-[74px] left-0 right-0 mx-auto w-[calc(100%-1rem)] max-w-2xl z-40 bg-[rgba(28,28,30,0.6)] backdrop-blur-xl border border-white/10 rounded-lg p-2 shadow-lg hover:bg-[rgba(44,44,46,0.7)] transition-colors"
+                    className="fixed bottom-[74px] left-0 right-0 mx-auto w-[calc(100%-1rem)] max-w-2xl z-40 bg-[rgba(28,28,30,0.3)] backdrop-blur-xl border border-white/10 rounded-lg py-3 px-3 shadow-lg hover:bg-[rgba(44,44,46,0.5)] transition-colors"
                 >
                     <div className="flex items-center gap-3">
                         {/* Thumbnail / Number */}

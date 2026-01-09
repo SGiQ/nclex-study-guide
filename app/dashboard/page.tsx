@@ -230,25 +230,22 @@ export default function DashboardPage() {
                             <Link
                                 key={c.title}
                                 href={c.href}
-                                className="animate-enter relative aspect-square w-full overflow-hidden rounded-xl bg-gradient-to-br from-[#3e3e42] to-[#1c1c1e] border-t border-white/10 border-b border-black/50 shadow-xl transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl active:scale-95 group"
+                                className="relative aspect-square w-full overflow-hidden rounded-[2rem] border-[6px] border-white/10 shadow-[0_8px_20px_rgba(0,0,0,0.4),_inset_0_2px_4px_rgba(255,255,255,0.3)] transition-all duration-300 hover:scale-[1.02] active:scale-95 group"
+                                style={{
+                                    background: `linear-gradient(145deg, ${c.from}, ${c.to})`
+                                }}
                             >
-                                {/* Soft inner glow/highlight on hover */}
-                                <div className="absolute inset-0 bg-white/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                                {/* Gloss Sheen */}
+                                <div className="absolute inset-x-0 top-0 h-[45%] bg-gradient-to-b from-white/20 to-transparent pointer-events-none" />
 
-                                <div className="relative z-10 flex flex-col items-center justify-center h-full p-4 text-center gap-4">
+                                <div className="relative z-10 flex flex-col items-center justify-center h-full p-2 text-center gap-2">
                                     {/* Icon */}
-                                    <div
-                                        className="text-5xl drop-shadow-[0_4px_8px_rgba(0,0,0,0.5)] transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3"
-                                        style={{ color: c.from }}
-                                    >
+                                    <div className="text-5xl text-white drop-shadow-[0_4px_6px_rgba(0,0,0,0.4)] mb-1 filter transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3">
                                         {c.icon}
                                     </div>
 
                                     {/* Title */}
-                                    <div
-                                        className="text-lg font-bold tracking-wide drop-shadow-md"
-                                        style={{ color: c.from }}
-                                    >
+                                    <div className="text-lg font-bold text-white tracking-wide drop-shadow-md px-2 leading-tight">
                                         {c.title}
                                     </div>
                                 </div>

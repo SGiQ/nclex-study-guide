@@ -28,7 +28,7 @@ export default function QuickActionsFAB() {
             subtitle: 'From weak areas',
             onClick: () => {
                 // Find quizzes that match the user's weak episodes
-                const weakQuizzes = quizzes.filter(q => weakEpisodes.includes(q.episodeId));
+                const weakQuizzes = quizzes.filter(q => typeof q.episodeId === 'number' && weakEpisodes.includes(q.episodeId));
 
                 let targetQuizId;
 

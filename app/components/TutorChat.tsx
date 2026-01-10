@@ -23,6 +23,7 @@ export default function TutorChat() {
     const [position, setPosition] = useState({ x: -25, y: -100 }); // Initial Offset
     const [isDragging, setIsDragging] = useState(false);
     const dragStartRef = useRef<{ x: number, y: number } | null>(null);
+    const hasDragged = useRef(false);
 
     // User Context
     const { currentStreak, hasCheckedInToday } = useStreak();
@@ -43,6 +44,7 @@ export default function TutorChat() {
     const handleMouseDown = (e: React.MouseEvent | React.TouchEvent) => {
         e.stopPropagation();
         setIsDragging(true);
+        hasDragged.current = false;
 
         const clientX = 'touches' in e ? e.touches[0].clientX : (e as React.MouseEvent).clientX;
         const clientY = 'touches' in e ? e.touches[0].clientY : (e as React.MouseEvent).clientY;
@@ -56,6 +58,7 @@ export default function TutorChat() {
     const handleMouseMove = (e: MouseEvent | TouchEvent) => {
         if (!isDragging || !dragStartRef.current) return;
         e.preventDefault();
+        hasDragged.current = true;
 
         const clientX = 'touches' in e ? e.touches[0].clientX : (e as MouseEvent).clientX;
         const clientY = 'touches' in e ? e.touches[0].clientY : (e as MouseEvent).clientY;
@@ -178,11 +181,10 @@ export default function TutorChat() {
                 >
                     <button
                         onClick={(e) => {
-                            if (!isDragging) setIsOpen(true);
+                            if (!hasDragged.current) setIsOpen(true);
                         }}
                         className="h-14 px-5 rounded-full bg-indigo-600 text-white shadow-lg flex items-center gap-2 hover:bg-indigo-500 hover:scale-105 active:scale-95 transition-transform animate-bounce-in ring-2 ring-white/20"
                         aria-label="Ask Tutor"
-                        style={{ pointerEvents: isDragging ? 'none' : 'auto' }}
                     >
                         <span className="font-bold text-sm tracking-wide">Ask AI</span>
                         <span className="text-2xl">🤖</span>

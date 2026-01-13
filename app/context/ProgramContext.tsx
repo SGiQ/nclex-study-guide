@@ -48,10 +48,6 @@ export function ProgramProvider({ children }: { children: ReactNode }) {
         }
     };
 
-    if (!mounted) {
-        return <>{children}</>;
-    }
-
     return (
         <ProgramContext.Provider value={{ activeProgram, availablePrograms: PROGRAMS, switchProgram }}>
             {children}

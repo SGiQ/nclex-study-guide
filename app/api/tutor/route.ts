@@ -53,22 +53,32 @@ export async function POST(req: NextRequest) {
         // Get the last user message
         const lastUserMessage = messages[messages.length - 1]?.content || '';
 
-        // 1. Generate embedding for user's question
-        console.log("Generating embedding for user question...");
-        const { generateEmbedding } = await import('@/utils/embeddings');
-        const questionEmbedding = await generateEmbedding(lastUserMessage);
+        // 2. Search for relevant chunks from the book (with offline fallback)
+        let bookContext = "";
+        try {
+            console.log("Searching for relevant content...");
+            const { generateEmbedding } = await import('@/utils/embeddings');
+            const { searchSimilar } = await import('@/utils/vector-store');
 
-        // 2. Search for relevant chunks from the book
-        console.log("Searching for relevant content...");
-        const { searchSimilar } = await import('@/utils/vector-store');
-        const relevantChunks = await searchSimilar(questionEmbedding, 5);
+            // Set a timeout for DB operations so we don't hang efficiently
+            const timeoutPromise = new Promise((_, reject) => setTimeout(() => reject(new Error('DB Timeout')), 3000));
+            const searchPromise = async () => {
+                const questionEmbedding = await generateEmbedding(lastUserMessage);
+                return await searchSimilar(questionEmbedding, 5);
+            };
 
-        console.log(`Found ${relevantChunks.length} relevant chunks`);
+            const relevantChunks = await Promise.race([searchPromise(), timeoutPromise]) as any[];
 
-        // 3. Build context from relevant chunks
-        const bookContext = relevantChunks
-            .map((chunk, i) => `[Source ${i + 1}]: ${chunk.content}`)
-            .join('\n\n');
+            console.log(`Found ${relevantChunks.length} relevant chunks`);
+
+            // 3. Build context from relevant chunks
+            bookContext = relevantChunks
+                .map((chunk, i) => `[Source ${i + 1}]: ${chunk.content}`)
+                .join('\n\n');
+        } catch (dbError) {
+            console.warn("Vector search failed (likely offline DB), falling back to base knowledge:", dbError);
+            bookContext = "NOTE: The study guide database is currently offline. Please answer based on your general nursing knowledge/internal training data.";
+        }
 
         // 4. Initialize OpenAI
         const openai = new OpenAI({

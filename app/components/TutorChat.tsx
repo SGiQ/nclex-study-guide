@@ -5,6 +5,7 @@ import ReactMarkdown from 'react-markdown';
 import { useStreak } from '../context/StreakContext';
 import { useProgress } from '../context/ProgressContext';
 import { usePlayer } from '../context/PlayerContext';
+import { useTutor } from '../context/TutorContext';
 
 interface Message {
     role: 'user' | 'assistant';
@@ -12,12 +13,72 @@ interface Message {
 }
 
 export default function TutorChat() {
-    const [isOpen, setIsOpen] = useState(false);
+    const { isOpen, setIsOpen, context, setContext } = useTutor();
     const [messages, setMessages] = useState<Message[]>([
         { role: 'assistant', content: "Hi! I'm your NCLEX Tutor. I've read your entire review book. Ask me anything!" }
     ]);
     const [input, setInput] = useState("");
     const [isLoading, setIsLoading] = useState(false);
+
+    // Context Injection
+    useEffect(() => {
+        if (context) {
+            setMessages(prev => [...prev, { role: 'user', content: context }]);
+            // Auto-submit? Or just pre-fill?
+            // Let's treat it as a sent message and trigger the API
+            triggerChat(context);
+            setContext(null);
+        }
+    }, [context]);
+
+    const triggerChat = async (userMessage: string) => {
+        setIsLoading(true);
+        try {
+            const userContext = {
+                streak: currentStreak,
+                checkedIn: hasCheckedInToday,
+                currentEpisode: currentEpisode?.title || "None",
+            };
+
+            const response = await fetch('/api/tutor', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    messages: [...messages, { role: 'user', content: userMessage }],
+                    userContext
+                })
+            });
+
+            if (!response.body) throw new Error("No response body");
+
+            const reader = response.body.getReader();
+            const decoder = new TextDecoder();
+            let assistantMessage = "";
+
+            setMessages(prev => [...prev, { role: 'assistant', content: "" }]);
+
+            while (true) {
+                const { done, value } = await reader.read();
+                if (done) break;
+
+                const chunk = decoder.decode(value);
+                assistantMessage += chunk;
+
+                setMessages(prev => {
+                    const newMsgs = [...prev];
+                    newMsgs[newMsgs.length - 1].content = assistantMessage;
+                    return newMsgs;
+                });
+            }
+
+        } catch (error: any) {
+            console.error('Tutor chat error:', error);
+            let errorMsg = "I'm having trouble connecting to the Tutor right now.";
+            setMessages(prev => [...prev, { role: 'assistant', content: errorMsg }]);
+        } finally {
+            setIsLoading(false);
+        }
+    }
 
     // Draggable State
     const [position, setPosition] = useState({ x: -25, y: -100 }); // Initial Offset
@@ -101,58 +162,8 @@ export default function TutorChat() {
         const userMessage = input.trim();
         setInput("");
         setMessages(prev => [...prev, { role: 'user', content: userMessage }]);
-        setIsLoading(true);
 
-        try {
-            const userContext = {
-                streak: currentStreak,
-                checkedIn: hasCheckedInToday,
-                currentEpisode: currentEpisode?.title || "None",
-            };
-
-            const response = await fetch('/api/tutor', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-                    messages: [...messages, { role: 'user', content: userMessage }],
-                    userContext
-                })
-            });
-
-            if (!response.body) throw new Error("No response body");
-
-            const reader = response.body.getReader();
-            const decoder = new TextDecoder();
-            let assistantMessage = "";
-
-            setMessages(prev => [...prev, { role: 'assistant', content: "" }]);
-
-            while (true) {
-                const { done, value } = await reader.read();
-                if (done) break;
-
-                const chunk = decoder.decode(value);
-                assistantMessage += chunk;
-
-                setMessages(prev => {
-                    const newMsgs = [...prev];
-                    newMsgs[newMsgs.length - 1].content = assistantMessage;
-                    return newMsgs;
-                });
-            }
-
-        } catch (error: any) {
-            console.error('Tutor chat error:', error);
-            let errorMsg = "I'm having trouble connecting to the Tutor right now.";
-            if (error?.message) errorMsg += ` Error: ${error.message}`;
-
-            setMessages(prev => [...prev, {
-                role: 'assistant',
-                content: `${errorMsg}\n\nPlease check:\n- Your GEMINI_API_KEY is set correctly\n- The API key has Gemini API enabled\n- Try refreshing the page`
-            }]);
-        } finally {
-            setIsLoading(false);
-        }
+        await triggerChat(userMessage);
     };
 
     // Style logic: Use fixed position. 

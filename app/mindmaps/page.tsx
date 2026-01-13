@@ -20,7 +20,12 @@ export default function MindMapsLibraryPage() {
         fetch('/api/mindmaps')
             .then(res => res.json())
             .then(data => {
-                setMindmaps(data);
+                if (Array.isArray(data)) {
+                    setMindmaps(data);
+                } else {
+                    console.error('Expected array but got:', data);
+                    setMindmaps([]);
+                }
                 setLoading(false);
             })
             .catch(err => {

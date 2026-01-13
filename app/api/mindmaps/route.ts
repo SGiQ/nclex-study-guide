@@ -3,13 +3,23 @@ import { pool } from '@/lib/db';
 
 export async function GET() {
     try {
+        // Try to select with new columns
         const result = await pool.query(
-            'SELECT id, episode_id, title, file_name, file_type, created_at FROM mindmaps ORDER BY created_at DESC'
+            'SELECT id, episode_id, title, file_name, file_type, created_at, nodes, edges FROM mindmaps ORDER BY created_at DESC'
         );
         return NextResponse.json(result.rows);
-    } catch (error) {
-        console.error('Error fetching mindmaps:', error);
-        return NextResponse.json({ error: 'Failed to fetch mindmaps' }, { status: 500 });
+    } catch (error: any) {
+        console.warn('Using fallback query for mindmaps:', error.message);
+        try {
+            const result = await pool.query(
+                'SELECT id, episode_id, title, file_name, file_type, created_at FROM mindmaps ORDER BY created_at DESC'
+            );
+            const rows = result.rows.map(row => ({ ...row, nodes: [], edges: [] }));
+            return NextResponse.json(rows);
+        } catch (fallbackError) {
+            console.error('Fallback failed:', fallbackError);
+            return NextResponse.json([], { status: 200 }); // Return empty array even on critical failure
+        }
     }
 }
 

@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import initialQuizzes from '@/app/data/quizzes.json';
 import Link from 'next/link';
 
@@ -20,14 +20,39 @@ interface Quiz {
 }
 
 export default function AdminQuizPage() {
+    const [selectedProgram, setSelectedProgram] = useState('nclex-pn');
+    const programs = [
+        { name: 'NCLEX-PN', slug: 'nclex-pn' },
+        { name: 'NCLEX-RN', slug: 'nclex-rn' },
+        { name: 'HESI A2', slug: 'hesi-a2' },
+        { name: 'ATI TEAS', slug: 'ati-teas' }
+    ];
+
     const [quizzes, setQuizzes] = useState<Quiz[]>(initialQuizzes as unknown as Quiz[]);
     const [selectedQuizId, setSelectedQuizId] = useState<number>(initialQuizzes[0].id);
+    const [questions, setQuestions] = useState<Question[]>([]);
     const [isSaving, setIsSaving] = useState(false);
     const [saveStatus, setSaveStatus] = useState<string | null>(null);
 
+    // Fetch quizzes when program changes
+    useEffect(() => {
+        fetch(`/api/quizzes?program=${selectedProgram}`)
+            .then(res => res.json())
+            .then(data => {
+                setQuizzes(data || []);
+                // Reset selected quiz to first one or null
+                if (data && data.length > 0) {
+                    setSelectedQuizId(data[0].id);
+                    setQuestions(data[0].questions);
+                } else {
+                    setQuestions([]);
+                }
+            });
+    }, [selectedProgram]);
+
     // Derived state for the active quiz
-    const activeQuiz = quizzes.find(q => q.id === selectedQuizId) || quizzes[0];
-    const [questions, setQuestions] = useState<Question[]>(activeQuiz.questions);
+    const activeQuiz = quizzes.find(q => q.id === selectedQuizId) || (quizzes.length > 0 ? quizzes[0] : { title: 'No Quiz Selected', questions: [] });
+    // Note: questions state is managed separately to allow editing
 
     // --- Handlers ---
 
@@ -83,7 +108,8 @@ export default function AdminQuizPage() {
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
                     quizId: selectedQuizId,
-                    questions: questions
+                    questions: questions,
+                    program: selectedProgram
                 }),
             });
 
@@ -113,6 +139,16 @@ export default function AdminQuizPage() {
                 <div className="flex items-center gap-4">
                     <Link href="/admin" className="text-white/50 hover:text-white">← Back</Link>
                     <h1 className="text-xl font-bold">Quiz Editor</h1>
+                    <select
+                        aria-label="Select Program"
+                        value={selectedProgram}
+                        onChange={(e) => setSelectedProgram(e.target.value)}
+                        className="ml-4 bg-[#111] border border-white/10 rounded px-2 py-1 text-xs text-white outline-none focus:border-purple-500"
+                    >
+                        {programs.map(p => (
+                            <option key={p.slug} value={p.slug}>{p.name}</option>
+                        ))}
+                    </select>
                 </div>
                 <div className="flex items-center gap-4">
                     {saveStatus === 'success' && <span className="text-emerald-400 font-bold text-sm">✓ Saved!</span>}

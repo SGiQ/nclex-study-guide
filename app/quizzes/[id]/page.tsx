@@ -3,7 +3,7 @@
 import { useState, useEffect, use } from 'react';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
-import quizzes from '@/app/data/quizzes.json';
+
 import { useProgress } from '@/app/context/ProgressContext';
 import { useAchievements } from '@/app/context/AchievementContext';
 
@@ -14,10 +14,33 @@ interface QuizProgress {
     answeredQuestions: number[];
 }
 
+// Update imports at the top
+// Remove: import quizzes from '@/app/data/quizzes.json';
+
 export default function QuizRunnerPage({ params }: { params: Promise<{ id: string }> }) {
     const { id } = use(params);
     const quizId = parseInt(id);
-    const quiz = quizzes.find((q) => q.id === quizId);
+    const [quiz, setQuiz] = useState<any>(null);
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+        fetch(`/api/quizzes?id=${quizId}`)
+            .then(res => {
+                if (!res.ok) throw new Error('Quiz not found');
+                return res.json();
+            })
+            .then(data => {
+                setQuiz(data);
+                setLoading(false);
+            })
+            .catch(err => {
+                console.error(err);
+                setLoading(false);
+            });
+    }, [quizId]);
+
+    // Update conditional checks down below to handle loading state
+
 
     // Helper function to load saved progress
     const loadSavedProgress = (): QuizProgress | null => {
@@ -51,8 +74,13 @@ export default function QuizRunnerPage({ params }: { params: Promise<{ id: strin
     const { saveQuizResult, getQuizResult } = useProgress();
     const { updateStats, checkAndUnlockBadges } = useAchievements();
 
+    if (loading) {
+        return <div className="min-h-screen flex items-center justify-center bg-[#0A0A0F] text-white">Loading Quiz...</div>;
+    }
+
     if (!quiz) {
-        return notFound();
+        // return notFound(); // Cannot use notFound in async fetch like this easily, or just show error
+        return <div className="min-h-screen flex items-center justify-center bg-[#0A0A0F] text-white">Quiz not found</div>;
     }
 
     // Get current quiz result for attempt number and best score

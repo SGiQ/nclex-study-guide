@@ -1,0 +1,24 @@
+[
+    {
+        "id": 101,
+        "episodeId": 101,
+        "title": "RN Practice: Vent Management",
+        "description": "Assess your knowledge of ventilator modes and weaning.",
+        "questionCount": 5,
+        "color": "from-red-600 to-rose-800",
+        "questions": [
+            {
+                "id": 1,
+                "text": "Which ventilator mode allows the patient to breathe spontaneously between mandatory breaths?",
+                "options": [
+                    "AC",
+                    "SIMV",
+                    "CMV",
+                    "PEEP"
+                ],
+                "correctAnswer": 1,
+                "explanation": "SIMV allows spontaneous breaths."
+            }
+        ]
+    }
+]

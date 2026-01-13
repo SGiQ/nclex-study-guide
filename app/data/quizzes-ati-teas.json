@@ -1,0 +1,24 @@
+[
+    {
+        "id": 301,
+        "episodeId": 301,
+        "title": "ATI TEAS Reading Practice",
+        "description": "Practice for ATI TEAS Reading.",
+        "questionCount": 5,
+        "color": "from-blue-600 to-indigo-800",
+        "questions": [
+            {
+                "id": 1,
+                "text": "What is the main idea of a passage?",
+                "options": [
+                    "The specific details",
+                    "The author's opinion",
+                    "The primary point the author is making",
+                    "The conclusion"
+                ],
+                "correctAnswer": 2,
+                "explanation": "The main idea is the central point."
+            }
+        ]
+    }
+]

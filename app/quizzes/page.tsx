@@ -1,17 +1,25 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import quizzes from '@/app/data/quizzes.json';
 import { useLibrary } from '@/app/context/LibraryContext';
 import { useProgress } from '@/app/context/ProgressContext';
+import { useProgram } from '@/app/context/ProgramContext';
 import ScoreHistoryModal from '@/app/components/ScoreHistoryModal';
 
 export default function QuizListPage() {
     const { getQuizResult } = useProgress();
     const { isSaved, saveItem, removeItem } = useLibrary();
+    const { activeProgram } = useProgram();
+    const [quizzes, setQuizzes] = useState<any[]>([]);
     const [historyQuizId, setHistoryQuizId] = useState<number | null>(null);
     const [historyQuizTitle, setHistoryQuizTitle] = useState<string>('');
+
+    useEffect(() => {
+        fetch(`/api/quizzes?program=${activeProgram.slug}`)
+            .then(res => res.json())
+            .then(data => setQuizzes(data));
+    }, [activeProgram.slug]);
 
     const handleToggleSave = (e: React.MouseEvent, quiz: any) => {
         e.preventDefault(); // Prevent navigation
@@ -39,7 +47,7 @@ export default function QuizListPage() {
                         >
                             ←
                         </Link>
-                        <h1 className="text-xl font-semibold leading-none">Quizzes</h1>
+                        <h1 className="text-xl font-semibold leading-none">{activeProgram.name} Quizzes</h1>
                     </div>
                 </div>
             </header>

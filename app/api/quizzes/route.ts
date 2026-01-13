@@ -1,6 +1,20 @@
-import { NextResponse } from 'next/server';
+import { NextRequest, NextResponse } from 'next/server';
 import fs from 'fs';
 import path from 'path';
+import quizzesPN from '@/app/data/quizzes.json';
+import quizzesRN from '@/app/data/quizzes-rn.json';
+
+export async function GET(request: NextRequest) {
+    const searchParams = request.nextUrl.searchParams;
+    const program = searchParams.get('program');
+
+    if (program === 'nclex-rn') {
+        return NextResponse.json(quizzesRN);
+    }
+
+    // Default to PN
+    return NextResponse.json(quizzesPN);
+}
 
 export async function POST(request: Request) {
     try {

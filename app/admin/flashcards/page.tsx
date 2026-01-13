@@ -10,13 +10,22 @@ export default function AdminFlashcardsPage() {
     const [isSaving, setIsSaving] = useState(false);
     const [saveStatus, setSaveStatus] = useState<string | null>(null);
 
+    // Add Program State
+    const [selectedProgram, setSelectedProgram] = useState('nclex-pn');
+    const programs = [
+        { name: 'NCLEX-PN', slug: 'nclex-pn' },
+        { name: 'NCLEX-RN', slug: 'nclex-rn' },
+        { name: 'HESI A2', slug: 'hesi-a2' },
+        { name: 'ATI TEAS', slug: 'ati-teas' }
+    ];
+
     // Simple CSV Parser: Assumes "Front, Back" or "Front|Back" or Tab separated
     const handlePreview = () => {
+        // ... (existing parser logic is fine, no changes needed to parser itself)
         if (!csvContent.trim()) return;
 
         const lines = csvContent.split('\n');
         const parsed = lines.map((line, idx) => {
-            // Try comma first, then pipe, then tab
             let parts = line.split(',');
             if (parts.length < 2) parts = line.split('|');
             if (parts.length < 2) parts = line.split('\t');
@@ -25,7 +34,7 @@ export default function AdminFlashcardsPage() {
                 return {
                     id: idx,
                     front: parts[0].trim(),
-                    back: parts.slice(1).join(',').trim() // Re-join rest in case answers have commas
+                    back: parts.slice(1).join(',').trim()
                 };
             }
             return null;
@@ -43,6 +52,7 @@ export default function AdminFlashcardsPage() {
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
                     episodeId,
+                    program: selectedProgram, // Pass program
                     title: `Episode ${episodeId} Flashcards`,
                     cards: preview
                 }),
@@ -90,14 +100,29 @@ export default function AdminFlashcardsPage() {
 
                     {/* Input Section */}
                     <div className="space-y-6">
-                        <div className="bg-[#1A1A20] p-6 rounded-lg border border-white/10">
-                            <label className="block text-sm font-bold text-white/60 mb-2">Target Episode ID</label>
-                            <input
-                                type="number"
-                                value={episodeId}
-                                onChange={(e) => setEpisodeId(parseInt(e.target.value))}
-                                className="w-full bg-[#111] border border-white/10 rounded-lg p-3 text-white focus:border-purple-500 outline-none"
-                            />
+                        <div className="bg-[#1A1A20] p-6 rounded-lg border border-white/10 space-y-4">
+                            <div>
+                                <label className="block text-sm font-bold text-white/60 mb-2">Target Program</label>
+                                <select
+                                    value={selectedProgram}
+                                    onChange={(e) => setSelectedProgram(e.target.value)}
+                                    className="w-full bg-[#111] border border-white/10 rounded-lg p-3 text-white focus:border-purple-500 outline-none"
+                                >
+                                    {programs.map(p => (
+                                        <option key={p.slug} value={p.slug}>{p.name}</option>
+                                    ))}
+                                </select>
+                            </div>
+
+                            <div>
+                                <label className="block text-sm font-bold text-white/60 mb-2">Target Episode ID</label>
+                                <input
+                                    type="number"
+                                    value={episodeId}
+                                    onChange={(e) => setEpisodeId(parseInt(e.target.value))}
+                                    className="w-full bg-[#111] border border-white/10 rounded-lg p-3 text-white focus:border-purple-500 outline-none"
+                                />
+                            </div>
                         </div>
 
                         <div className="bg-[#1A1A20] p-6 rounded-lg border border-white/10">

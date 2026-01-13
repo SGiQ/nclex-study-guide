@@ -13,24 +13,28 @@ interface Episode {
     order: number;
 }
 
+import { useProgram } from '@/app/context/ProgramContext';
+
 export default function AudioParams() {
     const { playEpisode, loadEpisode, currentEpisode, isPlaying } = usePlayer();
+    const { activeProgram } = useProgram();
     const [episodes, setEpisodes] = useState<Episode[]>([]);
     const [filteredEpisodes, setFilteredEpisodes] = useState<Episode[]>([]);
     const [searchTerm, setSearchTerm] = useState('');
 
     useEffect(() => {
-        fetch('/api/episodes')
+        fetch(`/api/episodes?program=${activeProgram.slug}`)
             .then(res => res.json())
             .then(data => {
                 setEpisodes(data);
                 setFilteredEpisodes(data);
                 // Auto-select first episode if none selected
+                // NOTE: We might not want to auto-select if switching programs to avoid auto-playing
                 if (!currentEpisode && data.length > 0) {
-                    loadEpisode(data[0]);
+                    // loadEpisode(data[0]); 
                 }
             });
-    }, []);
+    }, [activeProgram.slug]);
 
     // Better Approach: Handle this in the Context Provider to load initial state?
     // Or just let's add a "Load" effect here that selects the first one but `isPlaying: false`.
@@ -60,7 +64,7 @@ export default function AudioParams() {
                     </Link>
                     <div>
                         <h1 className="text-2xl font-black tracking-tight">Audio Lessons</h1>
-                        <p className="text-xs font-medium opacity-60">16 Episodes • NCLEX Prep</p>
+                        <p className="text-xs font-medium opacity-60">{episodes.length} Episodes • {activeProgram.name}</p>
                     </div>
                 </div>
 

@@ -1,0 +1,24 @@
+[
+    {
+        "id": 201,
+        "episodeId": 201,
+        "title": "HESI Biology Practice",
+        "description": "Practice questions for HESI A2 Biology.",
+        "questionCount": 5,
+        "color": "from-green-600 to-emerald-800",
+        "questions": [
+            {
+                "id": 1,
+                "text": "Which organelle is known as the powerhouse of the cell?",
+                "options": [
+                    "Nucleus",
+                    "Mitochondria",
+                    "Ribosome",
+                    "Golgi Apparatus"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Mitochondria generate most of the chemical energy."
+            }
+        ]
+    }
+]

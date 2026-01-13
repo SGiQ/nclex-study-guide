@@ -17,6 +17,16 @@ export default function AdminPage() {
     const [message, setMessage] = useState<{ text: string, type: 'success' | 'error' } | null>(null);
     const [isAuthenticated, setIsAuthenticated] = useState(false);
 
+    // Add Program State (defaulting to PN)
+    const [selectedProgram, setSelectedProgram] = useState('nclex-pn');
+
+    const programs = [
+        { name: 'NCLEX-PN', slug: 'nclex-pn' },
+        { name: 'NCLEX-RN', slug: 'nclex-rn' },
+        { name: 'HESI A2', slug: 'hesi-a2' },
+        { name: 'ATI TEAS', slug: 'ati-teas' }
+    ];
+
     useEffect(() => {
         // Check authentication with server
         const verifyAuth = async () => {
@@ -39,7 +49,6 @@ export default function AdminPage() {
 
                 if (data.authenticated) {
                     setIsAuthenticated(true);
-                    fetchEpisodes();
                 } else {
                     localStorage.removeItem('adminToken');
                     router.push('/admin/login');
@@ -53,10 +62,17 @@ export default function AdminPage() {
         verifyAuth();
     }, [router]);
 
+    // Fetch episodes whenever selectedProgram changes
+    useEffect(() => {
+        if (isAuthenticated) {
+            fetchEpisodes();
+        }
+    }, [selectedProgram, isAuthenticated]);
+
     const fetchEpisodes = () => {
-        fetch('/api/episodes')
+        fetch(`/api/episodes?program=${selectedProgram}`)
             .then(res => res.json())
-            .then(data => setEpisodes(data));
+            .then(data => setEpisodes(data || []));
     };
 
     const handleUpload = async (episodeId: number, file: File) => {
@@ -66,8 +82,10 @@ export default function AdminPage() {
         const formData = new FormData();
         formData.append('file', file);
         formData.append('episodeId', episodeId.toString());
+        formData.append('program', selectedProgram); // Pass selected program
 
         try {
+            // ...
             const res = await fetch('/api/upload', {
                 method: 'POST',
                 body: formData,
@@ -109,7 +127,18 @@ export default function AdminPage() {
                         </div>
                         <div>
                             <h1 className="text-xl font-bold">Admin Dashboard</h1>
-                            <p className="text-xs text-white/60">NCLEX Study Guide</p>
+                            <div className="flex items-center gap-2">
+                                <span className="text-xs text-white/60">Managing:</span>
+                                <select
+                                    value={selectedProgram}
+                                    onChange={(e) => setSelectedProgram(e.target.value)}
+                                    className="bg-black/30 border border-white/10 rounded px-2 py-1 text-xs text-white outline-none focus:border-purple-500"
+                                >
+                                    {programs.map(p => (
+                                        <option key={p.slug} value={p.slug}>{p.name}</option>
+                                    ))}
+                                </select>
+                            </div>
                         </div>
                     </div>
                     <div className="flex items-center gap-4">

@@ -2,7 +2,7 @@
 
 import { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 
-export type ProgramSlug = 'nclex-pn' | 'nclex-rn';
+export type ProgramSlug = 'nclex-pn' | 'nclex-rn' | 'hesi-a2' | 'ati-teas';
 
 interface Program {
     id: number;
@@ -12,7 +12,9 @@ interface Program {
 
 const PROGRAMS: Program[] = [
     { id: 1, name: 'NCLEX-PN', slug: 'nclex-pn' },
-    { id: 2, name: 'NCLEX-RN', slug: 'nclex-rn' }
+    { id: 2, name: 'NCLEX-RN', slug: 'nclex-rn' },
+    { id: 3, name: 'HESI A2', slug: 'hesi-a2' },
+    { id: 4, name: 'ATI TEAS', slug: 'ati-teas' }
 ];
 
 interface ProgramContextType {

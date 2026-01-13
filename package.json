@@ -4,8 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "npm run migrate && next build --webpack",
-    "start": "next start",
+    "build": "next build --webpack",
+    "start": "npm run migrate && next start",
     "lint": "eslint",
     "ingest-pdfs": "node scripts/ingest-pdfs.js",
     "migrate": "npx tsx scripts/migrations/run-migration.ts"

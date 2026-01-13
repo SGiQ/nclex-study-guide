@@ -340,7 +340,7 @@ export default function QuizRunnerPage({ params }: { params: Promise<{ id: strin
                     )}
 
                     <div className="grid gap-3">
-                        {currentQuestion.options.map((option, index) => {
+                        {currentQuestion.options.map((option: string, index: number) => {
                             let stateStyle = "bg-[#1A1A20] border-white/10 hover:border-white/30 text-white/80";
 
                             if (selectedOption === index) {

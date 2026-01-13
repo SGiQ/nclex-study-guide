@@ -144,17 +144,7 @@ export default function MindMapViewerPage({ params }: { params: Promise<{ id: st
         }
     };
 
-    // Auto-generate effect
-    useEffect(() => {
-        if (mindmap && !loading && !generating && !autoGenTriggered) {
-            const hasData = mindmap.nodes && mindmap.nodes.length > 0;
-            if (!hasData) {
-                console.log("Auto-triggering generation...");
-                setAutoGenTriggered(true); // Prevent tight loop
-                handleGenerate();
-            }
-        }
-    }, [mindmap, loading, generating, autoGenTriggered]);
+
 
     if (loading) {
         return (
@@ -184,10 +174,10 @@ export default function MindMapViewerPage({ params }: { params: Promise<{ id: st
                     {!hasInteractiveData && (
                         <button
                             onClick={handleGenerate}
-                            disabled={true} // Always disabled as it auto-runs now
-                            className="flex items-center gap-2 px-4 py-2 bg-indigo-600/50 rounded-lg text-sm font-semibold transition-colors text-white animate-pulse"
+                            disabled={generating}
+                            className={`flex items-center gap-2 px-4 py-2 bg-indigo-600 hover:bg-indigo-500 rounded-lg text-sm font-semibold transition-colors text-white ${generating ? 'opacity-50 cursor-not-allowed animate-pulse' : ''}`}
                         >
-                            ✨ Generating...
+                            {generating ? '✨ Generating...' : '✨ Make Interactive'}
                         </button>
                     )}
                     <a

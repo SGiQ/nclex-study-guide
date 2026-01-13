@@ -7,7 +7,9 @@ import { useProgress } from '@/app/context/ProgressContext';
 import { useSRS } from '@/app/context/SRSContext';
 import { useAchievements } from '@/app/context/AchievementContext';
 import BadgeCard from '@/app/components/BadgeCard';
-import episodes from '@/app/data/episodes.json';
+import { useProgram } from '@/app/context/ProgramContext';
+import episodesPN from '@/app/data/episodes.json';
+import episodesRN from '@/app/data/episodes-rn.json';
 import { useRouter } from 'next/navigation';
 
 export default function DashboardPage() {
@@ -16,7 +18,11 @@ export default function DashboardPage() {
     const { quizResults } = useProgress();
     const { getDueCount, getMasteredCount, getLearningCount } = useSRS();
     const { badges } = useAchievements();
+    const { activeProgram, switchProgram, availablePrograms } = useProgram();
     const router = useRouter();
+
+    // Select content based on active program
+    const episodes = activeProgram.slug === 'nclex-rn' ? episodesRN : episodesPN;
 
     // Achievement data
     const unlockedBadges = badges.filter(b => b.unlocked);
@@ -37,6 +43,8 @@ export default function DashboardPage() {
         .filter(r => (r.score / r.total) < 0.7)
         .map(r => r.episodeId);
 
+    // Filter suggested review to valid IDs for the CURRENT program
+    // (This prevents showing a PN weakness while studying RN)
     const suggestedReview = weakEpisodeIds.length > 0
         ? episodes.find(e => e.id === weakEpisodeIds[0])
         : null;
@@ -67,9 +75,29 @@ export default function DashboardPage() {
                             ←
                         </button>
                         <div className="flex-1">
-                            <h1 className="text-2xl font-semibold leading-none">
-                                Welcome, {user.name}!
-                            </h1>
+                            <div className="flex items-center gap-2">
+                                <h1 className="text-xl font-semibold leading-none truncate">
+                                    {user.name}
+                                </h1>
+                                {/* Exam Switcher Badge */}
+                                <div className="relative group">
+                                    <button className="flex items-center gap-1 px-2 py-0.5 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-[10px] font-bold text-indigo-500 uppercase tracking-wide hover:bg-indigo-500/20 transition-colors">
+                                        {activeProgram.name} ▾
+                                    </button>
+                                    {/* Dropdown Menu */}
+                                    <div className="absolute top-full left-0 mt-1 w-32 py-1 bg-white dark:bg-gray-800 rounded-lg shadow-xl border border-gray-200 dark:border-gray-700 hidden group-hover:block z-50">
+                                        {availablePrograms.map(prog => (
+                                            <button
+                                                key={prog.id}
+                                                onClick={() => switchProgram(prog.slug as any)}
+                                                className={`w-full text-left px-3 py-2 text-xs font-medium hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors ${activeProgram.id === prog.id ? 'text-indigo-500 bg-indigo-50 dark:bg-indigo-900/20' : 'text-gray-700 dark:text-gray-300'}`}
+                                            >
+                                                {prog.name}
+                                            </button>
+                                        ))}
+                                    </div>
+                                </div>
+                            </div>
                             <p className="text-xs text-foreground/60 mt-1">
                                 {user.plan === 'free' ? '🆓 Free Plan' : user.plan === 'premium' ? '⭐ Premium' : '💎 Lifetime Access'}
                             </p>
@@ -94,7 +122,7 @@ export default function DashboardPage() {
                     </div>
 
                     <div className="pt-3">
-                        <p className="text-sm font-medium text-foreground/70">Study Categories</p>
+                        <p className="text-sm font-medium text-foreground/70">{activeProgram.name} Categories</p>
                     </div>
                 </div>
             </header>

@@ -1,0 +1,24 @@
+[
+    {
+        "id": 101,
+        "title": "RN Critical Care: Vent Management",
+        "description": "RN Exclusive: Ventilator modes, ABG interpretation, and weaning protocols.",
+        "content": "Modes: SIMV vs AC vs PSV\\nHigh Pressure vs Low Pressure Alarms\\nWeaning Criteria",
+        "pages": "RN-101",
+        "duration": 1500,
+        "audioUrl": "/uploads/rn-demo-1.mp3",
+        "category": "Critical Care",
+        "order": 1
+    },
+    {
+        "id": 102,
+        "title": "RN Leadership & Delegation",
+        "description": "RN vs LPN vs UAP scopes of practice. Complex delegation scenarios.",
+        "content": "5 Rights of Delegation\\nScope: Assess, Teach, Evaluate (RN Only)\\nLPN Scope: Stable patients, sterile dressing (some states)",
+        "pages": "RN-102",
+        "duration": 1200,
+        "audioUrl": "/uploads/rn-demo-2.mp3",
+        "category": "Leadership",
+        "order": 2
+    }
+]

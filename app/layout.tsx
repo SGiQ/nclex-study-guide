@@ -19,6 +19,7 @@ import { AchievementProvider } from '@/app/context/AchievementContext';
 import QuickActionsFAB from '@/app/components/QuickActionsFAB';
 import AchievementNotificationWrapper from '@/app/components/AchievementNotificationWrapper';
 import { TutorProvider } from '@/app/context/TutorContext';
+import { ProgramProvider } from '@/app/context/ProgramContext';
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -62,13 +63,15 @@ export default function RootLayout({
                         <ProgressProvider>
                           <AchievementProvider>
                             <TutorProvider>
-                              <AchievementNotificationWrapper />
-                              {children}
-                              <Player />
-                              <TutorChat />
-                              <NotesOverlay />
-                              <GlobalNavigation />
-                              <QuickActionsFAB />
+                              <ProgramProvider>
+                                <AchievementNotificationWrapper />
+                                {children}
+                                <Player />
+                                <TutorChat />
+                                <NotesOverlay />
+                                <GlobalNavigation />
+                                <QuickActionsFAB />
+                              </ProgramProvider>
                             </TutorProvider>
                           </AchievementProvider>
                         </ProgressProvider>

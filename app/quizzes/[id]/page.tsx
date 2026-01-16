@@ -7,6 +7,20 @@ import Link from 'next/link';
 import { useProgress } from '@/app/context/ProgressContext';
 import { useAchievements } from '@/app/context/AchievementContext';
 
+
+// Types for quiz data
+interface Question {
+    text: string;
+    explanation: string;
+    options: string[];
+    correctAnswer: number;
+}
+
+interface Quiz {
+    title: string;
+    questions: Question[];
+}
+
 // Types for quiz progress
 interface QuizProgress {
     currentQuestionIndex: number;
@@ -20,7 +34,7 @@ interface QuizProgress {
 export default function QuizRunnerPage({ params }: { params: Promise<{ id: string }> }) {
     const { id } = use(params);
     const quizId = parseInt(id);
-    const [quiz, setQuiz] = useState<any>(null);
+    const [quiz, setQuiz] = useState<Quiz | null>(null);
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {

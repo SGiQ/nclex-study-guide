@@ -88,22 +88,10 @@ export default function QuizRunnerPage({ params }: { params: Promise<{ id: strin
     const { saveQuizResult, getQuizResult } = useProgress();
     const { updateStats, checkAndUnlockBadges } = useAchievements();
 
-    if (loading) {
-        return <div className="min-h-screen flex items-center justify-center bg-[#0A0A0F] text-white">Loading Quiz...</div>;
-    }
-
-    if (!quiz || !quiz.questions) {
-        // return notFound(); // Cannot use notFound in async fetch like this easily, or just show error
-        return <div className="min-h-screen flex items-center justify-center bg-[#0A0A0F] text-white">Quiz data incomplete or not found</div>;
-    }
-
     // Get current quiz result for attempt number and best score
     const currentResult = getQuizResult(quizId);
     const currentAttemptCount = currentResult?.attemptCount || 0;
     const currentBestScore = currentResult?.bestScore || 0;
-
-    const currentQuestion = quiz.questions[currentQuestionIndex];
-    const progress = ((currentQuestionIndex + 1) / quiz.questions.length) * 100;
 
     // Save progress whenever it changes
     useEffect(() => {
@@ -120,7 +108,7 @@ export default function QuizRunnerPage({ params }: { params: Promise<{ id: strin
 
     // Clear progress when quiz is completed
     useEffect(() => {
-        if (quizCompleted) {
+        if (quizCompleted && quiz?.questions) {
             localStorage.removeItem(`quiz_progress_${quizId}`);
             setAttemptNumber(currentAttemptCount + 1);
             setBestScore(Math.max(currentBestScore, Math.round((score / quiz.questions.length) * 100)));
@@ -142,7 +130,25 @@ export default function QuizRunnerPage({ params }: { params: Promise<{ id: strin
                 checkAndUnlockBadges();
             }, 500);
         }
-    }, [quizCompleted, quizId, score, quiz.questions.length, saveQuizResult, currentAttemptCount, currentBestScore, quizStartTime, updateStats, checkAndUnlockBadges]);
+    }, [quizCompleted, quizId, score, quiz?.questions?.length, saveQuizResult, currentAttemptCount, currentBestScore, quizStartTime, updateStats, checkAndUnlockBadges]);
+
+    if (loading) {
+        return <div className="min-h-screen flex items-center justify-center bg-[#0A0A0F] text-white">Loading Quiz...</div>;
+    }
+
+    if (!quiz || !quiz.questions) {
+        // return notFound(); // Cannot use notFound in async fetch like this easily, or just show error
+        return <div className="min-h-screen flex items-center justify-center bg-[#0A0A0F] text-white">Quiz data incomplete or not found</div>;
+    }
+
+
+
+    const currentQuestion = quiz.questions[currentQuestionIndex];
+    const progress = ((currentQuestionIndex + 1) / quiz.questions.length) * 100;
+
+
+
+
 
     const handleResumeQuiz = () => {
         if (savedProgress) {

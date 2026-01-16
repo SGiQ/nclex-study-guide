@@ -8,12 +8,18 @@ export async function GET(request: NextRequest) {
     const searchParams = request.nextUrl.searchParams;
     const program = searchParams.get('program');
 
-    if (program === 'nclex-rn') {
-        return NextResponse.json(quizzesRN);
+    const quizzes = program === 'nclex-rn' ? quizzesRN : quizzesPN;
+    const id = searchParams.get('id');
+
+    if (id) {
+        const quiz = (quizzes as any[]).find((q: any) => q.id === parseInt(id));
+        if (!quiz) {
+            return NextResponse.json({ error: 'Quiz not found' }, { status: 404 });
+        }
+        return NextResponse.json(quiz);
     }
 
-    // Default to PN
-    return NextResponse.json(quizzesPN);
+    return NextResponse.json(quizzes);
 }
 
 export async function POST(request: Request) {

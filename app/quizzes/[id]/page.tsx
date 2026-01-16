@@ -328,10 +328,10 @@ export default function QuizRunnerPage({ params }: { params: Promise<{ id: strin
             </div>
 
             {/* Main Content */}
-            <main className="flex-1 flex flex-col max-w-2xl mx-auto w-full p-4 sm:p-6 pb-24">
+            <main className="flex-1 flex flex-col max-w-2xl mx-auto w-full p-4 sm:p-6 pb-40">
                 <div className="flex-1 flex flex-col justify-start pt-4">
                     <span className="text-emerald-500 font-bold text-sm tracking-wider mb-4 block">QUESTION {currentQuestionIndex + 1} OF {quiz.questions.length}</span>
-                    <h2 className="text-xl sm:text-2xl font-bold leading-tight mb-4">
+                    <h2 className="text-lg sm:text-xl font-bold leading-tight mb-4">
                         {currentQuestion.text}
                     </h2>
 
@@ -382,7 +382,7 @@ export default function QuizRunnerPage({ params }: { params: Promise<{ id: strin
                                     key={index}
                                     onClick={() => handleOptionClick(index)}
                                     disabled={isAnswered}
-                                    className={`text-left p-4 rounded-lg border transition-all duration-200 font-medium text-base sm:text-lg leading-snug items-center flex gap-3 ${stateStyle}`}
+                                    className={`text-left p-4 rounded-lg border transition-all duration-200 font-medium text-sm sm:text-base leading-snug items-center flex gap-3 ${stateStyle}`}
                                 >
                                     <div className={`w-8 h-8 rounded-full border-2 flex items-center justify-center flex-shrink-0 transition-colors
                            ${selectedOption === index ? 'border-purple-500' : 'border-white/20'}

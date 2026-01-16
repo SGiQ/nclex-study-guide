@@ -91,7 +91,7 @@ export default function QuizRunnerPage({ params }: { params: Promise<{ id: strin
     // Get current quiz result for attempt number and best score
     const currentResult = getQuizResult(quizId);
     const currentAttemptCount = currentResult?.attemptCount || 0;
-    const currentBestScore = currentResult?.bestScore || 0;
+    const currentBestScoreRaw = currentResult?.bestScore || 0;
 
     // Save progress whenever it changes
     useEffect(() => {
@@ -111,7 +111,7 @@ export default function QuizRunnerPage({ params }: { params: Promise<{ id: strin
         if (quizCompleted && quiz?.questions) {
             localStorage.removeItem(`quiz_progress_${quizId}`);
             setAttemptNumber(currentAttemptCount + 1);
-            setBestScore(Math.max(currentBestScore, Math.round((score / quiz.questions.length) * 100)));
+            setBestScore(Math.max(Math.round((currentBestScoreRaw / quiz.questions.length) * 100), Math.round((score / quiz.questions.length) * 100)));
             saveQuizResult(quizId, score, quiz.questions.length);
 
             // Update achievement stats
@@ -121,7 +121,7 @@ export default function QuizRunnerPage({ params }: { params: Promise<{ id: strin
             updateStats({
                 questionsAnswered: quiz.questions.length,
                 quizzesCompleted: 1,
-                bestQuizScore: Math.max(currentBestScore, Math.round((score / quiz.questions.length) * 100)),
+                bestQuizScore: Math.max(Math.round((currentBestScoreRaw / quiz.questions.length) * 100), Math.round((score / quiz.questions.length) * 100)),
                 totalStudyTime: Math.round(quizDuration)
             });
 
@@ -130,7 +130,7 @@ export default function QuizRunnerPage({ params }: { params: Promise<{ id: strin
                 checkAndUnlockBadges();
             }, 500);
         }
-    }, [quizCompleted, quizId, score, quiz?.questions?.length, saveQuizResult, currentAttemptCount, currentBestScore, quizStartTime, updateStats, checkAndUnlockBadges]);
+    }, [quizCompleted, quizId, score, quiz?.questions?.length, saveQuizResult, currentAttemptCount, currentBestScoreRaw, quizStartTime, updateStats, checkAndUnlockBadges]);
 
     if (loading) {
         return <div className="min-h-screen flex items-center justify-center bg-[#0A0A0F] text-white">Loading Quiz...</div>;

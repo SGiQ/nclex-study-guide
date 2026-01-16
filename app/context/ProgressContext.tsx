@@ -85,7 +85,7 @@ export function ProgressProvider({ children }: { children: React.ReactNode }) {
         const token = getAuthToken();
         if (token) {
             try {
-                await fetch('/api/progress', {
+                const response = await fetch('/api/progress', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
@@ -99,6 +99,23 @@ export function ProgressProvider({ children }: { children: React.ReactNode }) {
                         total
                     })
                 });
+
+                if (response.ok) {
+                    const data = await response.json();
+                    if (data.success && data.progress) {
+                        const p = data.progress;
+                        const validResult: QuizResult = {
+                            episodeId: parseInt(p.content_id),
+                            score: p.score || 0,
+                            total: p.total || 0,
+                            completedAt: p.completed_at,
+                            bestScore: p.best_score,
+                            attemptCount: p.attempt_count
+                        };
+                        // Update local state with server response (inclusive of valid bestScore)
+                        setQuizResults(prev => ({ ...prev, [episodeId]: validResult }));
+                    }
+                }
             } catch (error) {
                 console.error('Failed to save progress:', error);
             }

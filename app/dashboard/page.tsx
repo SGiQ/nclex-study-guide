@@ -1,16 +1,19 @@
 'use client';
 
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import { useAuth } from '@/app/context/AuthContext';
 import { useStreak } from '@/app/context/StreakContext';
 import { useProgress } from '@/app/context/ProgressContext';
 import { useSRS } from '@/app/context/SRSContext';
 import { useAchievements } from '@/app/context/AchievementContext';
 import BadgeCard from '@/app/components/BadgeCard';
+import ReadinessScoreCard from '@/app/components/ReadinessScoreCard';
 import { useProgram } from '@/app/context/ProgramContext';
 import episodesPN from '@/app/data/episodes.json';
 import episodesRN from '@/app/data/episodes-rn.json';
-import { useRouter } from 'next/navigation';
+import quizzesPN from '@/app/data/quizzes.json';
+import quizzesRN from '@/app/data/quizzes-rn.json';
 
 export default function DashboardPage() {
     const { user, logout } = useAuth();
@@ -23,6 +26,8 @@ export default function DashboardPage() {
 
     // Select content based on active program
     const episodes = activeProgram.slug === 'nclex-rn' ? episodesRN : episodesPN;
+    const quizzes = activeProgram.slug === 'nclex-rn' ? quizzesRN : quizzesPN;
+
 
     // Achievement data
     const unlockedBadges = badges.filter(b => b.unlocked);
@@ -129,6 +134,26 @@ export default function DashboardPage() {
 
             {/* Content */}
             <main className="mx-auto max-w-md px-5 pb-[180px] pt-4 stagger-1">
+
+                {/* Readiness Score Card */}
+                <div className="animate-slide-up">
+                    <ReadinessScoreCard
+                        score={
+                            quizResults && Object.keys(quizResults).length > 0
+                                ? Math.round(
+                                    Object.values(quizResults).reduce((acc, curr) => {
+                                        const bestRaw = curr.bestScore !== undefined ? curr.bestScore : curr.score;
+                                        const percentage = (bestRaw / curr.total) * 100;
+                                        return acc + percentage;
+                                    }, 0) /
+                                    Object.values(quizResults).length
+                                )
+                                : 0
+                        }
+                        totalQuestions={quizzes.reduce((acc, curr) => acc + (curr.questionCount || 0), 0)}
+                        questionsAttempted={Object.values(quizResults).reduce((acc, curr) => acc + curr.total, 0)}
+                    />
+                </div>
 
                 {/* Achievements Section */}
                 <div className="mb-6 animate-slide-up">

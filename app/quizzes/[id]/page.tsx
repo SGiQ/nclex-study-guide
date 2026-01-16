@@ -92,9 +92,9 @@ export default function QuizRunnerPage({ params }: { params: Promise<{ id: strin
         return <div className="min-h-screen flex items-center justify-center bg-[#0A0A0F] text-white">Loading Quiz...</div>;
     }
 
-    if (!quiz) {
+    if (!quiz || !quiz.questions) {
         // return notFound(); // Cannot use notFound in async fetch like this easily, or just show error
-        return <div className="min-h-screen flex items-center justify-center bg-[#0A0A0F] text-white">Quiz not found</div>;
+        return <div className="min-h-screen flex items-center justify-center bg-[#0A0A0F] text-white">Quiz data incomplete or not found</div>;
     }
 
     // Get current quiz result for attempt number and best score

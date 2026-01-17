@@ -19,6 +19,7 @@ export async function GET() {
         COUNT(DISTINCT CASE WHEN up.content_type = 'quiz' AND up.completed = true THEN up.id END) as quizzes_completed,
         COUNT(DISTINCT CASE WHEN up.content_type = 'flashcard' AND up.completed = true THEN up.id END) as flashcards_completed,
         COUNT(DISTINCT CASE WHEN up.content_type = 'lesson' AND up.completed = true THEN up.id END) as lessons_completed,
+        COUNT(DISTINCT CASE WHEN up.content_type = 'episode' AND up.completed = true THEN up.id END) as episodes_listened,
         COALESCE(s.current_streak, 0) as current_streak,
         COALESCE(s.longest_streak, 0) as longest_streak,
         s.last_study_date
@@ -39,6 +40,7 @@ export async function GET() {
             quizzesCompleted: parseInt(row.quizzes_completed) || 0,
             flashcardsCompleted: parseInt(row.flashcards_completed) || 0,
             lessonsCompleted: parseInt(row.lessons_completed) || 0,
+            episodesListened: parseInt(row.episodes_listened) || 0,
             currentStreak: row.current_streak,
             longestStreak: row.longest_streak,
             lastActive: row.last_study_date || row.created_at

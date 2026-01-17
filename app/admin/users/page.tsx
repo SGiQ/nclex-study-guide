@@ -11,6 +11,7 @@ interface UserWithProgress {
     examDate?: string;
     createdAt: string;
     quizzesCompleted: number;
+    episodesListened: number;
     lastActive: string;
 }
 
@@ -194,6 +195,9 @@ export default function AdminUsersPage() {
                                         Quizzes
                                     </th>
                                     <th className="px-6 py-4 text-left text-xs font-medium text-gray-400 uppercase tracking-wider">
+                                        Episodes
+                                    </th>
+                                    <th className="px-6 py-4 text-left text-xs font-medium text-gray-400 uppercase tracking-wider">
                                         Created
                                     </th>
                                 </tr>
@@ -201,7 +205,7 @@ export default function AdminUsersPage() {
                             <tbody className="divide-y divide-white/10">
                                 {filteredUsers.length === 0 ? (
                                     <tr>
-                                        <td colSpan={6} className="px-6 py-12 text-center text-gray-400">
+                                        <td colSpan={7} className="px-6 py-12 text-center text-gray-400">
                                             No users found
                                         </td>
                                     </tr>
@@ -224,6 +228,9 @@ export default function AdminUsersPage() {
                                             </td>
                                             <td className="px-6 py-4 whitespace-nowrap">
                                                 <div className="text-sm text-white">{user.quizzesCompleted}</div>
+                                            </td>
+                                            <td className="px-6 py-4 whitespace-nowrap">
+                                                <div className="text-sm text-white">{user.episodesListened}</div>
                                             </td>
                                             <td className="px-6 py-4 whitespace-nowrap">
                                                 <div className="text-sm text-gray-400">{formatDate(user.createdAt)}</div>

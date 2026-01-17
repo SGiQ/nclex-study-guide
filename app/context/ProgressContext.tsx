@@ -1,7 +1,7 @@
 'use client';
 
 import React, { createContext, useContext, useEffect, useState } from 'react';
-import { getAuthToken } from './AuthContext';
+import { getAuthToken, useAuth } from './AuthContext';
 
 interface QuizResult {
     episodeId: number;
@@ -25,14 +25,65 @@ export function ProgressProvider({ children }: { children: React.ReactNode }) {
     const [quizResults, setQuizResults] = useState<Record<number, QuizResult>>({});
     const [isLoading, setIsLoading] = useState(true);
 
-    // Load progress from database on mount
-    useEffect(() => {
-        loadProgress();
-    }, []);
+    const { user } = useAuth();
+    const resultsRef = React.useRef(quizResults);
 
-    const loadProgress = async () => {
-        const token = getAuthToken();
-        if (!token) {
+    // Keep ref updated
+    useEffect(() => {
+        resultsRef.current = quizResults;
+    }, [quizResults]);
+
+    // Load progress from database on mount or auth change
+    useEffect(() => {
+        const initProgress = async () => {
+            const token = getAuthToken();
+            if (!token) {
+                // If logging out, maybe clear progress? Or keep it? 
+                // For now, if no token, we assume guest mode or logout.
+                // If we want to support guest mode persistence across reloads, we'd need localStorage here.
+                // But for now, just stop loading.
+                setIsLoading(false);
+                return;
+            }
+
+            // Sync existing guest data if any
+            const localData = resultsRef.current;
+            if (Object.keys(localData).length > 0) {
+                // We have data in memory. Determine if it needs syncing.
+                // Simple heuristic: If we just logged in (token exists) and have data, 
+                // we push it to server to be safe. Upsert handles duplicates.
+                await syncGuestProgress(localData, token);
+            }
+
+            await loadProgress(token);
+        };
+
+        initProgress();
+    }, [user]);
+
+    const syncGuestProgress = async (data: Record<number, QuizResult>, token: string) => {
+        const promises = Object.values(data).map(result => {
+            return fetch('/api/progress', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': `Bearer ${token}`
+                },
+                body: JSON.stringify({
+                    contentType: 'quiz',
+                    contentId: result.episodeId.toString(),
+                    completed: true,
+                    score: result.score,
+                    total: result.total
+                })
+            }).catch(e => console.error('Sync error:', e));
+        });
+        await Promise.all(promises);
+    };
+
+    const loadProgress = async (token?: string) => {
+        const authToken = token || getAuthToken();
+        if (!authToken) {
             setIsLoading(false);
             return;
         }
@@ -40,7 +91,7 @@ export function ProgressProvider({ children }: { children: React.ReactNode }) {
         try {
             const response = await fetch('/api/progress', {
                 headers: {
-                    'Authorization': `Bearer ${token}`
+                    'Authorization': `Bearer ${authToken}`
                 }
             });
 

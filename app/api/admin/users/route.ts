@@ -15,7 +15,9 @@ export async function GET() {
         u.name,
         u.plan,
         u.exam_date,
+
         u.created_at,
+        u.promo_code,
         COUNT(DISTINCT CASE WHEN up.content_type = 'quiz' AND up.completed = true THEN up.id END) as quizzes_completed,
         COUNT(DISTINCT CASE WHEN up.content_type = 'flashcard' AND up.completed = true THEN up.id END) as flashcards_completed,
         COUNT(DISTINCT CASE WHEN up.content_type = 'lesson' AND up.completed = true THEN up.id END) as lessons_completed,
@@ -26,7 +28,7 @@ export async function GET() {
       FROM users u
       LEFT JOIN user_progress up ON u.id = up.user_id
       LEFT JOIN user_streaks s ON u.id = s.user_id
-      GROUP BY u.id, u.email, u.name, u.plan, u.exam_date, u.created_at, s.current_streak, s.longest_streak, s.last_study_date
+      GROUP BY u.id, u.email, u.name, u.plan, u.exam_date, u.created_at, u.promo_code, s.current_streak, s.longest_streak, s.last_study_date
       ORDER BY u.created_at DESC
     `);
 
@@ -37,6 +39,7 @@ export async function GET() {
             plan: row.plan,
             examDate: row.exam_date,
             createdAt: row.created_at,
+            promoCode: row.promo_code,
             quizzesCompleted: parseInt(row.quizzes_completed) || 0,
             flashcardsCompleted: parseInt(row.flashcards_completed) || 0,
             lessonsCompleted: parseInt(row.lessons_completed) || 0,

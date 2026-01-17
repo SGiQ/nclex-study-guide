@@ -40,15 +40,12 @@ export default function LandingPage() {
         setIsLoading(true);
 
         try {
-            await signup(signupName, signupEmail, signupPassword, signupExamDate);
+            // Determine plan based on coupon
+            const plan = (signupCoupon && validCoupons[signupCoupon.toUpperCase() as keyof typeof validCoupons])
+                ? 'lifetime'
+                : 'premium';
 
-            // Check if coupon code is valid
-            if (signupCoupon && validCoupons[signupCoupon.toUpperCase() as keyof typeof validCoupons]) {
-                // Upgrade to lifetime
-                const user = JSON.parse(localStorage.getItem('user') || '{}');
-                user.plan = 'lifetime';
-                localStorage.setItem('user', JSON.stringify(user));
-            }
+            await signup(signupName, signupEmail, signupPassword, plan, signupExamDate, signupCoupon);
 
             // Redirect to onboarding for new users
             router.push('/onboarding');

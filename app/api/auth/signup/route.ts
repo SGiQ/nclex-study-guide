@@ -8,7 +8,7 @@ import { hashPassword, generateToken } from '@/lib/auth';
  */
 export async function POST(request: Request) {
     try {
-        const { email, password, name, plan = 'free', examDate } = await request.json();
+        const { email, password, name, plan = 'free', examDate, promoCode } = await request.json();
 
         // Validate input
         if (!email || !password || !name) {
@@ -36,10 +36,10 @@ export async function POST(request: Request) {
 
         // Create user
         const result = await pool.query(
-            `INSERT INTO users (email, password_hash, name, plan, exam_date)
-       VALUES ($1, $2, $3, $4, $5)
+            `INSERT INTO users (email, password_hash, name, plan, exam_date, promo_code)
+       VALUES ($1, $2, $3, $4, $5, $6)
        RETURNING id, email, name, plan, exam_date, created_at`,
-            [email, passwordHash, name, plan, examDate || null]
+            [email, passwordHash, name, plan, examDate || null, promoCode || null]
         );
 
         const user = result.rows[0];

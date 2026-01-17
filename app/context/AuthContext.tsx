@@ -15,7 +15,7 @@ interface AuthContextType {
     user: User | null;
     isLoading: boolean;
     login: (email: string, password: string) => Promise<void>;
-    signup: (name: string, email: string, password: string, plan?: string, examDate?: string) => Promise<void>;
+    signup: (name: string, email: string, password: string, plan?: string, examDate?: string, promoCode?: string) => Promise<void>;
     logout: () => void;
     isPremium: boolean;
 }
@@ -124,12 +124,12 @@ export function AuthProvider({ children }: { children: ReactNode }) {
         localStorage.setItem('users', JSON.stringify(users));
     };
 
-    const signup = async (name: string, email: string, password: string, plan: string = 'premium', examDate?: string) => {
+    const signup = async (name: string, email: string, password: string, plan: string = 'premium', examDate?: string, promoCode?: string) => {
         try {
             const response = await fetch('/api/auth/signup', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ name, email, password, plan, examDate })
+                body: JSON.stringify({ name, email, password, plan, examDate, promoCode })
             });
 
             if (response.ok) {

@@ -16,7 +16,7 @@ export default function QuickActionsFAB() {
 
     const dueCards = getDueCount();
 
-    if (pathname === '/landing') return null;
+    if (pathname === '/landing' || pathname.startsWith('/exam')) return null;
 
     // Get weak categories for random quiz
     const quizScores = Object.values(quizResults);

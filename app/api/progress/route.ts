@@ -39,17 +39,22 @@ export async function POST(request: Request) {
         // For quizzes, save to quiz_attempts table and track best score
         if (contentType === 'quiz' && completed && score !== undefined && total !== undefined) {
             const percentage = Math.round((score / total) * 100);
+            const contentIdNum = parseInt(contentId);
 
-            // Save attempt to quiz_attempts table
-            try {
-                await pool.query(
-                    `INSERT INTO quiz_attempts (user_id, quiz_id, score, total, percentage)
-                     VALUES ($1, $2, $3, $4, $5)`,
-                    [payload.userId, parseInt(contentId), score, total, percentage]
-                );
-            } catch (err) {
-                // Table might not exist yet, continue with regular flow
-                console.warn('quiz_attempts table not found, skipping attempt save');
+            // Only save to quiz_attempts if it's a regular quiz (small ID)
+            // Exams use timestamp IDs which are very large and don't match the quizzes table
+            if (contentIdNum < 1000000) {
+                // Save attempt to quiz_attempts table
+                try {
+                    await pool.query(
+                        `INSERT INTO quiz_attempts (user_id, quiz_id, score, total, percentage)
+                         VALUES ($1, $2, $3, $4, $5)`,
+                        [payload.userId, contentIdNum, score, total, percentage]
+                    );
+                } catch (err) {
+                    // Table might not exist yet or FK violation, continue with regular flow
+                    console.warn('quiz_attempts save failed:', err);
+                }
             }
 
             // Get current progress to check best score

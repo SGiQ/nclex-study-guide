@@ -39,46 +39,55 @@ export default function Player() {
     const isEpisodeSaved = currentEpisode ? isSaved(currentEpisode.id, 'episode') : false;
 
     useEffect(() => {
-        if (audioRef.current) {
-            if (isPlaying) {
-                // Try to initialize Web Audio API for waveform visualization
-                if (!audioContextRef.current) {
-                    try {
-                        audioContextRef.current = new (window.AudioContext || (window as any).webkitAudioContext)();
-                        const analyser = audioContextRef.current.createAnalyser();
-                        analyser.fftSize = 256;
-                        sourceRef.current = audioContextRef.current.createMediaElementSource(audioRef.current);
-                        sourceRef.current.connect(analyser);
-                        analyser.connect(audioContextRef.current.destination);
-                        setAnalyser(analyser);
-                    } catch (e) {
-                        console.warn('Web Audio API unavailable (waveform disabled, audio still plays):', e);
-                        audioContextRef.current = null;
+        if (!audioRef.current) return;
+
+        if (isPlaying) {
+            // Try to initialize Web Audio API for waveform visualization
+            if (!audioContextRef.current) {
+                try {
+                    const AudioContextClass = window.AudioContext || (window as any).webkitAudioContext;
+                    if (AudioContextClass) {
+                        const ctx = new AudioContextClass();
+                        audioContextRef.current = ctx;
+                        
+                        const analyserNode = ctx.createAnalyser();
+                        analyserNode.fftSize = 256;
+                        
+                        const sourceNode = ctx.createMediaElementSource(audioRef.current);
+                        sourceRef.current = sourceNode;
+                        
+                        // Split the signal: one path to speakers, one path to visualizer
+                        sourceNode.connect(ctx.destination);
+                        sourceNode.connect(analyserNode);
+                        setAnalyser(analyserNode);
                     }
+                } catch (e) {
+                    console.warn('Web Audio API initialization failed:', e);
+                    audioContextRef.current = null;
+                    sourceRef.current = null;
                 }
+            }
 
-                if (audioContextRef.current?.state === 'suspended') {
-                    audioContextRef.current.resume().catch(() => {});
-                }
+            if (audioContextRef.current?.state === 'suspended') {
+                audioContextRef.current.resume().catch(() => {});
+            }
 
-                // If the audio element hasn't loaded its src yet (readyState 0 = HAVE_NOTHING),
-                // mark as pending and wait for onCanPlay to actually call .play()
-                if (audioRef.current.readyState === 0) {
-                    pendingPlayRef.current = true;
-                    audioRef.current.load();
-                } else {
-                    pendingPlayRef.current = false;
-                    audioRef.current.play().catch((e) => {
-                        console.warn("Playback prevented:", e);
-                        setIsPlaying(false);
-                    });
-                }
+            // Handle actual playback
+            if (audioRef.current.readyState === 0) {
+                pendingPlayRef.current = true;
+                audioRef.current.load();
             } else {
                 pendingPlayRef.current = false;
-                audioRef.current.pause();
+                audioRef.current.play().catch((e) => {
+                    console.warn("Playback prevented:", e);
+                    setIsPlaying(false);
+                });
             }
+        } else {
+            pendingPlayRef.current = false;
+            audioRef.current.pause();
         }
-    }, [isPlaying, currentEpisode, setIsPlaying, setAnalyser]);
+    }, [isPlaying, currentEpisode?.id, setIsPlaying, setAnalyser]);
 
     useEffect(() => {
         if (audioRef.current) {
@@ -192,6 +201,13 @@ export default function Player() {
             audioRef.current.currentTime = time;
             setProgress(parseFloat(e.target.value));
         }
+    };
+
+    const handleTogglePlay = () => {
+        if (audioContextRef.current?.state === 'suspended') {
+            audioContextRef.current.resume();
+        }
+        togglePlay();
     };
 
     const skipRequest = (seconds: number) => {
@@ -450,7 +466,7 @@ export default function Player() {
                                 </button>
 
                                 <button
-                                    onClick={togglePlay}
+                                    onClick={handleTogglePlay}
                                     className="h-16 w-16 flex items-center justify-center rounded-full bg-white text-black hover:scale-105 active:scale-95 transition-all shadow-lg"
                                 >
                                     {isPlaying ? (

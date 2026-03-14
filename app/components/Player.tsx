@@ -496,6 +496,7 @@ export default function Player() {
                 <audio
                     ref={audioRef}
                     src={currentEpisode.audioUrl}
+                    crossOrigin="anonymous"
                     onTimeUpdate={handleTimeUpdate}
                     onLoadedMetadata={handleLoadedMetadata}
                     onEnded={handleEnded}

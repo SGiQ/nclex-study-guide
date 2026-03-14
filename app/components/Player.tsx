@@ -34,6 +34,7 @@ export default function Player() {
     const [playbackRate, setPlaybackRate] = useState(1);
     const [error, setError] = useState<string | null>(null);
     const [showEndModal, setShowEndModal] = useState(false);
+    const pendingPlayRef = useRef(false);
 
     const isEpisodeSaved = currentEpisode ? isSaved(currentEpisode.id, 'episode') : false;
 
@@ -41,8 +42,6 @@ export default function Player() {
         if (audioRef.current) {
             if (isPlaying) {
                 // Try to initialize Web Audio API for waveform visualization
-                // Wrapped in try/catch — if it fails for any reason (CORS taint, browser policy),
-                // audio playback still works normally, just without the waveform.
                 if (!audioContextRef.current) {
                     try {
                         audioContextRef.current = new (window.AudioContext || (window as any).webkitAudioContext)();
@@ -54,7 +53,6 @@ export default function Player() {
                         setAnalyser(analyser);
                     } catch (e) {
                         console.warn('Web Audio API unavailable (waveform disabled, audio still plays):', e);
-                        // Null out so we don't retry
                         audioContextRef.current = null;
                     }
                 }
@@ -63,11 +61,20 @@ export default function Player() {
                     audioContextRef.current.resume().catch(() => {});
                 }
 
-                audioRef.current.play().catch((e) => {
-                    console.warn("Playback prevented:", e);
-                    setIsPlaying(false);
-                });
+                // If the audio element hasn't loaded its src yet (readyState 0 = HAVE_NOTHING),
+                // mark as pending and wait for onCanPlay to actually call .play()
+                if (audioRef.current.readyState === 0) {
+                    pendingPlayRef.current = true;
+                    audioRef.current.load();
+                } else {
+                    pendingPlayRef.current = false;
+                    audioRef.current.play().catch((e) => {
+                        console.warn("Playback prevented:", e);
+                        setIsPlaying(false);
+                    });
+                }
             } else {
+                pendingPlayRef.current = false;
                 audioRef.current.pause();
             }
         }
@@ -515,6 +522,15 @@ export default function Player() {
                     ref={audioRef}
                     crossOrigin="anonymous"
                     src={currentEpisode.audioUrl}
+                    onCanPlay={() => {
+                        if (pendingPlayRef.current && audioRef.current) {
+                            pendingPlayRef.current = false;
+                            audioRef.current.play().catch((e) => {
+                                console.warn("Deferred playback prevented:", e);
+                                setIsPlaying(false);
+                            });
+                        }
+                    }}
                     onTimeUpdate={handleTimeUpdate}
                     onLoadedMetadata={handleLoadedMetadata}
                     onEnded={handleEnded}

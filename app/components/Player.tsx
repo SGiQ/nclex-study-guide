@@ -79,13 +79,22 @@ export default function Player() {
         }
     }, [playbackRate]);
 
+    // When episode changes, tear down the AudioContext so it gets rebuilt fresh
+    // with the new element that has crossOrigin set correctly from the start.
     useEffect(() => {
         setProgress(0);
         setError(null);
         if (currentEpisode?.duration) {
             setDuration(currentEpisode.duration);
         }
-    }, [currentEpisode]);
+        // Close old audio graph on episode switch
+        if (audioContextRef.current) {
+            audioContextRef.current.close().catch(() => {});
+            audioContextRef.current = null;
+            sourceRef.current = null;
+            setAnalyser(null);
+        }
+    }, [currentEpisode?.id]);
 
     const handleTimeUpdate = () => {
         if (audioRef.current) {
@@ -502,9 +511,10 @@ export default function Player() {
                 </div>
 
                 <audio
+                    key={currentEpisode.id}
                     ref={audioRef}
-                    src={currentEpisode.audioUrl}
                     crossOrigin="anonymous"
+                    src={currentEpisode.audioUrl}
                     onTimeUpdate={handleTimeUpdate}
                     onLoadedMetadata={handleLoadedMetadata}
                     onEnded={handleEnded}

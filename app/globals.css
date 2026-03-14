@@ -1,3 +1,5 @@
+@import "tailwindcss";
+
 @theme {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -10,46 +12,15 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&display=swap');
 
-/* Default to Dark Mode (Current App Style) */
 :root {
-  color-scheme: dark;
-
-  /* Backgrounds */
   --background: #0A0A0F;
-  --card: #16161C;
-  --nav: #0A0A0F;
-
-  /* Text */
   --foreground: #FFFFFF;
-
-  /* Borders */
+  --card: #16161C;
   --card-border: rgba(255, 255, 255, 0.05);
-  /* white/5 */
+  --nav: #0A0A0F;
   --nav-border: rgba(255, 255, 255, 0.1);
-  /* white/10 */
-}
-
-/* Light Mode (Warm/Stone) */
-.light {
-  color-scheme: light;
-
-  /* Backgrounds */
-  --background: #F5F5F4;
-  /* Stone-100 */
-  --card: #FFFFFF;
-  /* White Cards */
-  --nav: #FAFAF9;
-  /* Stone-50 */
-
-  /* Text */
-  --foreground: #1C1917;
-  /* Stone-900 */
-
-  /* Borders */
-  --card-border: rgba(0, 0, 0, 0.05);
-  /* black/5 */
-  --nav-border: rgba(0, 0, 0, 0.1);
-  /* black/10 */
+  --primary: #257bf4;
+  color-scheme: dark;
 }
 
 html,
@@ -57,8 +28,8 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
-  background-color: var(--background);
-  color: var(--foreground);
+  background-color: #0A0A0F !important;
+  color: #FFFFFF !important;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
@@ -68,10 +39,16 @@ body {
 }
 
 @layer utilities {
-  .glass {
-    background: rgba(255, 255, 255, 0.03);
+  .glass-card {
+    background: rgba(27, 32, 39, 0.6);
     backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .waveform-bar {
+    width: 3px;
+    border-radius: 1px;
+    background: linear-gradient(to top, #257bf4, #6366f1);
   }
 
   /* Material Symbols FILL support */
@@ -186,6 +163,58 @@ body {
 .animate-enter {
   opacity: 0;
   animation: slide-up 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Neon Scrolling Border Animation */
+@keyframes neon-spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.neon-border-wrapper {
+  position: relative;
+  /* Add an explicit large radius here if inherit fails, 
+     but inherit should work if the parent has rounded-3xl */
+  border-radius: 1.5rem; /* Matches Tailwind's rounded-3xl */
+  overflow: hidden;
+  padding: 2px; /* Set thickness via padding instead of inset */
+}
+
+/* Background gradient for the wrapper */
+.neon-border-wrapper::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: conic-gradient(
+    transparent, 
+    transparent, 
+    transparent, 
+    #257bf4, 
+    #a855f7, 
+    transparent
+  );
+  animation: neon-spin 4s linear infinite;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.neon-border-wrapper.is-playing::before {
+  opacity: 1;
+}
+
+/* The dark center area */
+.neon-border-inner {
+  position: relative;
+  background: #0A0A0F; /* Match dashboard/audio bg */
+  border-radius: calc(1.5rem - 2px); /* Slightly smaller than outer wrapper */
+  z-index: 1;
+  width: 100%;
+  height: 100%;
 }
 
 /* Achievement System Animations */

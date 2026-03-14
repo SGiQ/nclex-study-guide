@@ -98,7 +98,9 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
                 if (existingUser) {
                     setUser(existingUser);
+                    setToken('mock_token');
                     localStorage.setItem('user', JSON.stringify(existingUser));
+                    localStorage.setItem('auth_token', 'mock_token');
                     return;
                 }
             } catch (e) {
@@ -116,7 +118,9 @@ export function AuthProvider({ children }: { children: ReactNode }) {
             createdAt: new Date().toISOString()
         };
         setUser(tempUser);
+        setToken('mock_token');
         localStorage.setItem('user', JSON.stringify(tempUser));
+        localStorage.setItem('auth_token', 'mock_token');
 
         // Also save to users array
         const users = storedUsers ? JSON.parse(storedUsers) : [];
@@ -154,7 +158,9 @@ export function AuthProvider({ children }: { children: ReactNode }) {
         };
 
         setUser(mockUser);
+        setToken('mock_token');
         localStorage.setItem('user', JSON.stringify(mockUser));
+        localStorage.setItem('auth_token', 'mock_token');
 
         // Also store in users array
         const storedUsers = localStorage.getItem('users');
@@ -166,7 +172,25 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     const logout = () => {
         setUser(null);
         setToken(null);
-        localStorage.removeItem('auth_token');
+        if (typeof window !== 'undefined') {
+            // Clear core auth
+            localStorage.removeItem('auth_token');
+            localStorage.removeItem('user');
+            
+            // Clear progress data managed by ProgressContext
+            localStorage.removeItem('quiz_results');
+            localStorage.removeItem('audio_progress');
+            
+            // Clear audio state managed by PlayerContext & Player
+            localStorage.removeItem('nclex_last_episode');
+            
+            // Clear all episode-specific positions and bests
+            Object.keys(localStorage).forEach(key => {
+                if (key.startsWith('audio_progress_') || key.startsWith('audio_best_')) {
+                    localStorage.removeItem(key);
+                }
+            });
+        }
     };
 
     const isPremium = user?.plan === 'premium' || user?.plan === 'lifetime';

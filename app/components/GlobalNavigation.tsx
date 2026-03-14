@@ -13,50 +13,36 @@ export default function GlobalNavigation() {
     if (pathname === '/landing' || pathname === '/exam') return null;
 
     const navItems = [
-        { label: "Home", icon: "home", href: "/" },
-        { label: "Library", icon: "menu_book", href: "/library" },
-        { label: "Notes", icon: "edit_note", action: toggleNotes },
-        { label: "Exam", icon: "timer", href: "/exam/setup" },
+        { label: 'Home', path: '/dashboard', icon: 'home' },
+        { label: 'Library', path: '/library', icon: 'library_books' },
+        { label: 'Notes', path: '/notes', icon: 'description' },
+        { label: 'Exam', path: '/quizzes', icon: 'quiz' },
+        { label: 'Profile', path: '/profile', icon: 'person' },
     ];
 
     return (
-        <nav className="fixed bottom-6 left-1/2 -translate-x-1/2 w-[95%] max-w-md glass rounded-full px-2 py-2 flex items-center justify-between z-[100] shadow-2xl transition-all duration-300">
+        <nav className="fixed bottom-6 left-1/2 -translate-x-1/2 w-[95%] max-w-lg glass rounded-2xl px-2 py-2 flex items-center justify-around z-[100] shadow-2xl transition-all duration-300 border border-white/10 backdrop-blur-xl">
             {navItems.map((item) => {
-                const isActive = item.href === pathname;
-
-                if (item.action) {
-                    return (
-                        <button
-                            key={item.label}
-                            onClick={item.action}
-                            className="flex flex-col items-center justify-center size-12 rounded-full text-slate-400 hover:text-white hover:bg-white/10 transition-all font-display"
-                        >
-                            <span className="material-symbols-outlined text-2xl">{item.icon}</span>
-                        </button>
-                    );
-                }
-
+                const isActive = pathname === item.path || (item.path !== '/dashboard' && pathname.startsWith(item.path));
                 return (
                     <Link
-                        key={item.label}
-                        href={item.href || '#'}
-                        className={`flex flex-col items-center justify-center size-12 rounded-full transition-all font-display ${
-                            isActive 
-                                ? 'bg-primary text-white shadow-lg shadow-primary/30' 
-                                : 'text-slate-400 hover:text-white hover:bg-white/10'
-                        }`}
+                        key={item.path}
+                        href={item.path}
+                        className={`flex flex-col items-center justify-center size-12 rounded-xl transition-all duration-300 ${isActive ? 'text-primary bg-primary/10' : 'text-slate-500 hover:text-slate-300 hover:bg-white/5'}`}
                     >
-                        <span className={`material-symbols-outlined text-2xl ${isActive ? 'fill-1' : ''}`}>
+                        <span className={`material-symbols-outlined ${isActive ? 'fill-1' : ''}`} style={{ fontSize: '24px' }}>
                             {item.icon}
                         </span>
                     </Link>
                 );
             })}
 
+            <div className="w-[1px] h-6 bg-white/10 mx-1"></div>
+
             {/* Theme Toggle */}
             <button
                 onClick={toggleTheme}
-                className="flex flex-col items-center justify-center size-12 rounded-full text-slate-400 hover:text-white hover:bg-white/10 transition-all font-display"
+                className="flex flex-col items-center justify-center size-12 rounded-xl text-slate-500 hover:text-white hover:bg-white/5 transition-all"
                 title="Toggle Theme"
             >
                 <span className="material-symbols-outlined text-2xl">

@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import { usePlayer } from '@/app/context/PlayerContext';
 
 interface Episode {
@@ -16,11 +17,13 @@ interface Episode {
 import { useProgram } from '@/app/context/ProgramContext';
 
 export default function AudioParams() {
-    const { playEpisode, loadEpisode, currentEpisode, isPlaying } = usePlayer();
+    const router = useRouter();
+    const { playEpisode, loadEpisode, currentEpisode, isPlaying, analyser } = usePlayer();
     const { activeProgram } = useProgram();
     const [episodes, setEpisodes] = useState<Episode[]>([]);
     const [filteredEpisodes, setFilteredEpisodes] = useState<Episode[]>([]);
     const [searchTerm, setSearchTerm] = useState('');
+    const [freqData, setFreqData] = useState<Uint8Array>(new Uint8Array(0));
 
     useEffect(() => {
         fetch(`/api/episodes?program=${activeProgram.slug}`)
@@ -28,17 +31,8 @@ export default function AudioParams() {
             .then(data => {
                 setEpisodes(data);
                 setFilteredEpisodes(data);
-                // Auto-select first episode if none selected
-                // NOTE: We might not want to auto-select if switching programs to avoid auto-playing
-                if (!currentEpisode && data.length > 0) {
-                    // loadEpisode(data[0]); 
-                }
             });
     }, [activeProgram.slug]);
-
-    // Better Approach: Handle this in the Context Provider to load initial state?
-    // Or just let's add a "Load" effect here that selects the first one but `isPlaying: false`.
-    // I need to check PlayerContext again.
 
     useEffect(() => {
         const filtered = episodes.filter(ep =>
@@ -48,6 +42,29 @@ export default function AudioParams() {
         setFilteredEpisodes(filtered);
     }, [searchTerm, episodes]);
 
+    // Live Waveform Logic
+    useEffect(() => {
+        if (!analyser || !isPlaying) return;
+
+        let animationFrameId: number;
+        const dataArray = new Uint8Array(analyser.frequencyBinCount);
+
+        const updateWaveform = () => {
+            analyser.getByteFrequencyData(dataArray);
+            // We only need a subset of frequencies for our 10 bars
+            const step = Math.floor(dataArray.length / 10);
+            const sampledData = new Uint8Array(10);
+            for (let i = 0; i < 10; i++) {
+                sampledData[i] = dataArray[i * step];
+            }
+            setFreqData(new Uint8Array(sampledData));
+            animationFrameId = requestAnimationFrame(updateWaveform);
+        };
+
+        updateWaveform();
+        return () => cancelAnimationFrame(animationFrameId);
+    }, [analyser, isPlaying]);
+
     const formatTime = (seconds: number) => {
         const min = Math.floor(seconds / 60);
         const sec = seconds % 60;
@@ -55,125 +72,168 @@ export default function AudioParams() {
     };
 
     return (
-        <div className="pb-mini-player bg-background min-h-dvh text-foreground">
-            {/* Header */}
-            <div className="sticky top-0 z-10 bg-background/80 backdrop-blur-md border-b border-nav-border">
-                <div className="mx-auto max-w-md px-4 py-4">
-                <div className="flex items-center gap-4 mb-4">
-                    <Link href="/" className="h-8 w-8 flex items-center justify-center rounded-full bg-surface/10 hover:bg-surface/20 transition-colors">
-                        ←
-                    </Link>
-                    <div>
-                        <h1 className="text-2xl font-black tracking-tight">Audio Lessons</h1>
-                        <p className="text-xs font-medium opacity-60">{episodes.length} Episodes • {activeProgram.name}</p>
-                    </div>
-                </div>
-
-                {/* Search */}
-                <div className="relative">
-                    <span className="absolute left-3 top-1/2 -translate-y-1/2 text-lg opacity-40">⌕</span>
-                    <input
-                        type="text"
-                        placeholder="Find in episodes..."
-                        value={searchTerm}
-                        onChange={(e) => setSearchTerm(e.target.value)}
-                        className="w-full h-11 pl-10 pr-4 rounded-lg bg-surface/5 border border-nav-border focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all placeholder:text-foreground/30 text-sm font-medium"
-                    />
-                </div>
-                </div>
-            </div>
-
-            {/* Episode List */}
-            <div className="mx-auto max-w-md divide-y divide-nav-border stagger-1">
-                {filteredEpisodes.map((episode) => {
-                    const isCurrent = currentEpisode?.id === episode.id;
-
-                    return (
-                        <Link
-                            key={episode.id}
-                            href={`/audio/${episode.id}`}
-                            className={`block animate-enter p-4 flex items-center gap-4 cursor-pointer hover:bg-surface/5 active:scale-[0.99] transition-all ${isCurrent ? 'bg-indigo-500/10 border-l-4 border-indigo-500' : 'border-l-4 border-transparent'}`}
-                        >
-                            {/* Number Box */}
-                            <div className={`h-12 w-12 rounded-lg shrink-0 flex items-center justify-center shadow-sm transition-colors ${isCurrent ? 'bg-indigo-600 text-white' : 'bg-blue-600 text-white'}`}>
-                                {isCurrent && isPlaying ? (
-                                    <div className="flex gap-[2px] h-4 items-end">
-                                        <div className="w-1 bg-white animate-[bounce_1s_infinite] h-2"></div>
-                                        <div className="w-1 bg-white animate-[bounce_1.2s_infinite] h-4"></div>
-                                        <div className="w-1 bg-white animate-[bounce_0.8s_infinite] h-3"></div>
-                                    </div>
-                                ) : (
-                                    <div className="flex flex-col items-center justify-center leading-none">
-                                        <span className="text-[10px] font-bold opacity-60 uppercase">EP</span>
-                                        <span className="text-lg font-bold">{episode.order}</span>
-                                    </div>
-                                )}
-                            </div>
-
-                            {/* Content */}
-                            <div className="flex-1 min-w-0">
-                                <h3 className={`font-bold text-base mb-0.5 truncate ${isCurrent ? 'text-indigo-400' : 'text-foreground'}`}>
-                                    {episode.title}
-                                </h3>
-                                <p className="text-xs text-foreground/60 line-clamp-2 leading-relaxed">
-                                    {episode.description}
-                                </p>
-                                <div className="flex items-center gap-3 mt-2">
-                                    <span className="text-[10px] font-bold border border-foreground/10 px-1.5 py-0.5 rounded text-foreground/40 uppercase tracking-wider">
-                                        {formatTime(episode.duration)}
-                                    </span>
-                                    {(() => {
-                                        // Check for listen progress
-                                        const progressKey = `audio_progress_${episode.id}`;
-                                        const savedProgress = typeof window !== 'undefined' ? localStorage.getItem(progressKey) : null;
-
-                                        if (savedProgress) {
-                                            try {
-                                                const { currentTime, duration } = JSON.parse(savedProgress);
-                                                const percentComplete = Math.round((currentTime / duration) * 100);
-
-                                                if (percentComplete >= 95) {
-                                                    return (
-                                                        <span className="text-[10px] font-bold bg-emerald-500/20 text-emerald-400 px-1.5 py-0.5 rounded border border-emerald-500/30 uppercase tracking-wider">
-                                                            ✓ Completed
-                                                        </span>
-                                                    );
-                                                } else if (percentComplete > 0) {
-                                                    return (
-                                                        <span className="text-[10px] font-bold bg-yellow-500/20 text-yellow-400 px-1.5 py-0.5 rounded border border-yellow-500/30 uppercase tracking-wider">
-                                                            {percentComplete}% Listened
-                                                        </span>
-                                                    );
-                                                }
-                                            } catch (e) { }
-                                        }
-                                        return null;
-                                    })()}
-                                </div>
-                            </div>
-
-                            {/* Play Action */}
-                            <button
-                                onClick={(e) => {
-                                    e.preventDefault();
-                                    e.stopPropagation();
-                                    playEpisode(episode);
-                                }}
-                                className={`h-8 w-8 flex items-center justify-center rounded-full border transition-colors hover:bg-surface/20 ${isCurrent ? 'border-indigo-500/30 text-indigo-400' : 'border-foreground/10 text-foreground/20'}`}
-                            >
-                                {isCurrent && isPlaying ? '⏸' : '▶'}
-                            </button>
+        <div className="pb-mini-player bg-background text-foreground font-display min-h-screen flex flex-col transition-colors duration-300 items-center">
+            <div className="w-full max-w-2xl flex flex-col h-full bg-[#0A0A0F]">
+                {/* Header */}
+                <header className="sticky top-0 z-50 w-full glass-card border-b border-white/5 px-4 py-3 flex items-center justify-between">
+                    <div className="flex items-center gap-3">
+                        <Link href="/dashboard" className="p-2 rounded-lg bg-primary/10 text-primary hover:bg-primary/20 transition-colors">
+                            <span className="material-symbols-outlined">menu</span>
                         </Link>
-                    );
-                })}
-
-
-                {/* Empty State */}
-                {filteredEpisodes.length === 0 && (
-                    <div className="p-8 text-center opacity-40">
-                        <p>No episodes found matching "{searchTerm}"</p>
+                        <h1 className="text-lg font-bold tracking-tight">Audio Lessons</h1>
                     </div>
-                )}
+                    <div className="flex items-center gap-2">
+                        <button className="p-2 rounded-full hover:bg-white/5 text-slate-400">
+                            <span className="material-symbols-outlined">search</span>
+                        </button>
+                        <button className="p-2 rounded-full hover:bg-white/5 text-slate-400">
+                            <span className="material-symbols-outlined">notifications</span>
+                        </button>
+                    </div>
+                </header>
+
+                <main className="flex-1 overflow-y-auto p-4 space-y-6">
+                    {/* Search Bar */}
+                    <div className="relative mb-6">
+                        <span className="absolute left-3 top-1/2 -translate-y-1/2 material-symbols-outlined text-slate-500">search</span>
+                        <input
+                            type="text"
+                            placeholder="Search episodes..."
+                            value={searchTerm}
+                            onChange={(e) => setSearchTerm(e.target.value)}
+                            className="w-full h-11 pl-10 pr-4 rounded-xl bg-white/5 border border-white/5 focus:border-primary outline-none transition-all text-sm"
+                        />
+                    </div>
+
+                    {/* Featured/Active Lesson Section */}
+                    <section>
+                        <h2 className="text-[10px] font-black uppercase tracking-[0.2em] text-primary mb-4">Currently Studying</h2>
+                        {/* Always show the full-height card — empty state uses same dimensions */}
+                    <div className={`neon-border-wrapper rounded-[1.5rem] ${currentEpisode && isPlaying ? 'is-playing shadow-[0_0_80px_-15px_rgba(37,123,244,0.5)]' : ''}`}>
+                        <div className="glass-card rounded-[calc(1.5rem-2px)] p-8 relative overflow-hidden group border border-transparent min-h-[280px] flex flex-col justify-center z-10 w-full h-full bg-[#0A0A0F]">
+
+                            <div className="absolute -right-10 -top-10 w-48 h-48 bg-primary/20 blur-3xl rounded-full"></div>
+                            
+                            {currentEpisode ? (
+                                <div className="flex gap-8 items-center relative z-20">
+                                    <div className="relative flex-shrink-0">
+                                        <div className="w-40 h-40 rounded-2xl bg-slate-900 flex items-center justify-center overflow-hidden border border-white/5 shadow-inner">
+                                            <span className="text-4xl font-black text-primary/60 tracking-tighter">EP{currentEpisode.order}</span>
+                                        </div>
+                                        <button 
+                                            onClick={() => playEpisode(currentEpisode)}
+                                            className="absolute -bottom-4 -right-4 w-16 h-16 rounded-full bg-gradient-to-br from-primary to-indigo-600 flex items-center justify-center shadow-xl shadow-primary/40 hover:scale-105 transition-transform"
+                                        >
+                                            <span className="material-symbols-outlined text-white text-3xl">
+                                                {isPlaying ? 'pause' : 'play_arrow'}
+                                            </span>
+                                        </button>
+                                    </div>
+                                    
+                                    <div className="flex-1 min-w-0 flex flex-col h-40">
+                                        <div className="flex justify-between items-start mb-2">
+                                            <div className="min-w-0">
+                                                <p className="text-xs font-black text-primary uppercase tracking-widest truncate mb-2">
+                                                    {activeProgram.name} • EP {currentEpisode.order}
+                                                </p>
+                                                <h3 className="text-3xl font-black leading-tight uppercase tracking-tight line-clamp-2">
+                                                    {currentEpisode.title}
+                                                </h3>
+                                            </div>
+                                        </div>
+                                        
+                                        {/* Live Audio Waveform */}
+                                        <div className="flex items-end gap-1 h-20 mt-auto opacity-80">
+                                            {(freqData.length > 0 ? Array.from(freqData) : [10, 20, 15, 25, 10, 20, 30, 15, 25, 10]).map((val, i) => (
+                                                <div 
+                                                    key={i} 
+                                                    className="waveform-bar transition-all duration-75 w-full max-w-[8px] rounded-t-sm" 
+                                                    style={{ 
+                                                        height: `${isPlaying ? (val / 255) * 100 + 10 : 15}%`,
+                                                        opacity: isPlaying ? 1 : 0.3
+                                                    }} 
+                                                />
+                                            ))}
+                                        </div>
+                                    </div>
+                                </div>
+                            ) : (
+                                /* Empty state — same height, placeholder layout */
+                                <div className="flex gap-8 items-center relative z-20">
+                                    <div className="relative flex-shrink-0">
+                                        <div className="w-40 h-40 rounded-2xl bg-slate-900/60 flex items-center justify-center overflow-hidden border border-white/5 shadow-inner">
+                                            <span className="material-symbols-outlined text-5xl text-slate-700">headphones</span>
+                                        </div>
+                                    </div>
+                                    <div className="flex-1 min-w-0 flex flex-col h-40 justify-center">
+                                        <p className="text-xs font-black text-slate-600 uppercase tracking-widest mb-3">Audio Lessons</p>
+                                        <h3 className="text-2xl font-black leading-tight uppercase tracking-tight text-slate-500">
+                                            No Episode Selected
+                                        </h3>
+                                        <p className="text-[10px] font-bold uppercase tracking-widest text-slate-600 mt-3">
+                                            Tap an episode below to start
+                                        </p>
+                                    </div>
+                                </div>
+                            )}
+                        </div>
+                    </div>
+                    </section>
+
+                {/* Up Next List */}
+                <section>
+                    <div className="flex items-center justify-between mb-4">
+                        <h2 className="text-[10px] font-black uppercase tracking-[0.2em] text-slate-500">Episode Library</h2>
+                        <span className="text-[10px] font-bold text-primary">{filteredEpisodes.length} Episodes</span>
+                    </div>
+
+                    <div className="space-y-3">
+                        {filteredEpisodes.map((episode) => {
+                            const isCurrent = currentEpisode?.id === episode.id;
+                            return (
+                                <div 
+                                    key={episode.id}
+                                    onClick={() => router.push(`/library/episodes/${episode.id}`)}
+                                    className={`glass-card rounded-2xl p-4 flex items-center gap-4 border transition-all cursor-pointer group hover:bg-white/5 ${isCurrent ? 'border-primary/40 bg-primary/5' : 'border-white/5'}`}
+                                >
+                                    <div className="w-12 h-12 rounded-xl bg-slate-900 flex items-center justify-center flex-shrink-0">
+                                        {isCurrent ? (
+                                            <span className="material-symbols-outlined text-xl text-primary">graphic_eq</span>
+                                        ) : (
+                                            <span className="text-xs font-black text-slate-500">{episode.order}</span>
+                                        )}
+                                    </div>
+                                    <div className="flex-1 min-w-0">
+                                        <h4 className={`text-sm font-black uppercase tracking-tight truncate ${isCurrent ? 'text-primary' : ''}`}>
+                                            {episode.title}
+                                        </h4>
+                                        <p className="text-[10px] font-bold text-slate-500 uppercase tracking-widest">
+                                            {formatTime(episode.duration)} • EP {episode.order}
+                                        </p>
+                                    </div>
+                                    <button 
+                                        onClick={(e) => {
+                                            e.stopPropagation();
+                                            playEpisode(episode);
+                                        }}
+                                        className={`w-9 h-9 rounded-full flex items-center justify-center transition-all ${isCurrent && isPlaying ? 'bg-primary text-white shadow-lg shadow-primary/30' : 'bg-white/5 text-slate-400 hover:bg-white/10'}`}
+                                    >
+                                        <span className="material-symbols-outlined text-sm">
+                                            {isCurrent && isPlaying ? 'pause' : 'play_arrow'}
+                                        </span>
+                                    </button>
+                                </div>
+                            );
+                        })}
+
+                        {filteredEpisodes.length === 0 && (
+                            <div className="text-center py-12 opacity-40">
+                                <p className="text-xs font-bold uppercase tracking-widest">No episodes found</p>
+                            </div>
+                        )}
+                    </div>
+                </section>
+                </main>
             </div>
         </div>
     );

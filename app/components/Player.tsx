@@ -1,30 +1,60 @@
 'use client';
 
 import Link from 'next/link';
+import { usePathname, useRouter } from 'next/navigation';
 import { usePlayer } from '@/app/context/PlayerContext';
 import { useLibrary } from '@/app/context/LibraryContext';
 import { useAuth } from '@/app/context/AuthContext';
+import { useProgress } from '@/app/context/ProgressContext';
+import { useProgram } from '@/app/context/ProgramContext';
 import { useRef, useEffect, useState } from 'react';
 import TranscriptViewer from './TranscriptViewer';
 import { getTranscript } from '@/app/data/transcripts';
+import episodesPN from '@/app/data/episodes.json';
+import episodesRN from '@/app/data/episodes-rn.json';
 
 export default function Player() {
-    const { currentEpisode, isPlaying, setIsPlaying, togglePlay, closePlayer, setCurrentTime } = usePlayer();
+    const pathname = usePathname();
+    const router = useRouter();
+    const { currentEpisode, isPlaying, isDismissed, setIsPlaying, togglePlay, closePlayer, setCurrentTime, playNextEpisode, signalEpisodeEnded } = usePlayer();
     const { saveItem, removeItem, isSaved } = useLibrary();
     const { user } = useAuth();
+    const { saveAudioProgress } = useProgress();
+    const { activeProgram } = useProgram();
+    const allEpisodes = activeProgram.slug === 'nclex-rn' ? episodesRN : episodesPN;
 
     const audioRef = useRef<HTMLAudioElement>(null);
+    const audioContextRef = useRef<AudioContext | null>(null);
+    const sourceRef = useRef<MediaElementAudioSourceNode | null>(null);
+    const { setAnalyser } = usePlayer();
+
     const [progress, setProgress] = useState(0);
     const [duration, setDuration] = useState(0);
     const [isExpanded, setIsExpanded] = useState(false);
     const [playbackRate, setPlaybackRate] = useState(1);
     const [error, setError] = useState<string | null>(null);
+    const [showEndModal, setShowEndModal] = useState(false);
 
     const isEpisodeSaved = currentEpisode ? isSaved(currentEpisode.id, 'episode') : false;
 
     useEffect(() => {
         if (audioRef.current) {
             if (isPlaying) {
+                // Initialize Audio Context and Analyser on play
+                if (!audioContextRef.current) {
+                    audioContextRef.current = new (window.AudioContext || (window as any).webkitAudioContext)();
+                    const analyser = audioContextRef.current.createAnalyser();
+                    analyser.fftSize = 256;
+                    sourceRef.current = audioContextRef.current.createMediaElementSource(audioRef.current);
+                    sourceRef.current.connect(analyser);
+                    analyser.connect(audioContextRef.current.destination);
+                    setAnalyser(analyser);
+                }
+                
+                if (audioContextRef.current.state === 'suspended') {
+                    audioContextRef.current.resume();
+                }
+
                 audioRef.current.play().catch((e) => {
                     console.warn("Playback prevented:", e);
                     setIsPlaying(false);
@@ -33,7 +63,7 @@ export default function Player() {
                 audioRef.current.pause();
             }
         }
-    }, [isPlaying, currentEpisode, setIsPlaying]);
+    }, [isPlaying, currentEpisode, setIsPlaying, setAnalyser]);
 
     useEffect(() => {
         if (audioRef.current) {
@@ -61,46 +91,74 @@ export default function Player() {
 
             setProgress((current / total) * 100);
 
-            // Save progress to localStorage and cloud every 10 seconds (less frequent for cloud)
             if (currentEpisode && Math.floor(current) % 5 === 0) {
-                const progressData = {
-                    currentTime: current,
-                    duration: total,
-                    lastUpdated: Date.now()
-                };
-                localStorage.setItem(`audio_progress_${currentEpisode.id}`, JSON.stringify(progressData));
-                
-                // Sync to cloud less frequently
-                if (user && Math.floor(current) % 20 === 0) {
-                    const syncToCloud = async () => {
-                        const authToken = localStorage.getItem('auth_token');
-                        if (!authToken) return;
-                        try {
-                            const percent = (current / total) * 100;
-                            await fetch('/api/progress', {
-                                method: 'POST',
-                                headers: {
-                                    'Content-Type': 'application/json',
-                                    'Authorization': `Bearer ${authToken}`
-                                },
-                                body: JSON.stringify({
-                                    contentType: 'audio',
-                                    contentId: currentEpisode.id.toString(),
-                                    completed: percent >= 95,
-                                    metadata: progressData
-                                })
-                            });
-                        } catch (e) { }
+                // Track best (furthest) position — never go backward
+                const bestKey = `audio_best_${currentEpisode.id}`;
+                const savedBest = (() => {
+                    try { return JSON.parse(localStorage.getItem(bestKey) || '{}'); } catch { return {}; }
+                })();
+                const bestTime = savedBest.currentTime || 0;
+
+                // Only update saved position if we've gone further than before
+                if (current > bestTime) {
+                    const progressData = {
+                        currentTime: current,
+                        duration: total,
+                        lastUpdated: Date.now()
                     };
-                    syncToCloud();
+                    localStorage.setItem(bestKey, JSON.stringify(progressData));
+                    // Also update the general audio_progress key used for restoring on reload
+                    localStorage.setItem(`audio_progress_${currentEpisode.id}`, JSON.stringify(progressData));
+
+                    const percent = (current / total) * 100;
+                    const isCompleted = percent >= 95;
+
+                    // Sync to cloud less frequently
+                    if (user && Math.floor(current) % 10 === 0) {
+                        saveAudioProgress(currentEpisode.id, isCompleted, progressData);
+                    }
                 }
             }
         }
     };
 
+    // Called when audio reaches the end — definitively mark as completed
+    const handleEnded = () => {
+        setIsPlaying(false);
+        if (currentEpisode) {
+            const progressData = {
+                currentTime: duration,
+                duration,
+                lastUpdated: Date.now()
+            };
+            localStorage.setItem(`audio_progress_${currentEpisode.id}`, JSON.stringify(progressData));
+            saveAudioProgress(currentEpisode.id, true, progressData);
+        }
+        // Signal episode ended for SRS/context consumers, and show the end modal
+        signalEpisodeEnded();
+        setShowEndModal(true);
+        setIsExpanded(false);
+    };
+
     const handleLoadedMetadata = () => {
-        if (audioRef.current?.duration) {
-            setDuration(audioRef.current.duration);
+        if (audioRef.current) {
+            const actualDuration = audioRef.current.duration;
+            if (actualDuration) setDuration(actualDuration);
+
+            // Restore saved playback position
+            if (currentEpisode) {
+                const saved = localStorage.getItem(`audio_progress_${currentEpisode.id}`);
+                if (saved) {
+                    try {
+                        const data = JSON.parse(saved);
+                        // Don't restore if episode was completed (within 5s of end)
+                        if (data.currentTime && data.currentTime > 5 && actualDuration && data.currentTime < actualDuration - 5) {
+                            audioRef.current.currentTime = data.currentTime;
+                            setProgress((data.currentTime / actualDuration) * 100);
+                        }
+                    } catch { /* ignore */ }
+                }
+            }
         }
     };
 
@@ -145,10 +203,75 @@ export default function Player() {
         return `${min}:${sec.toString().padStart(2, '0')}`;
     };
 
+    const hasNextEpisode = currentEpisode ? allEpisodes.some(e => e.order === currentEpisode.order + 1) : false;
+
     if (!currentEpisode) return null;
+    if (pathname === '/landing') return null;
+    if (isDismissed && !showEndModal) return null;
 
     return (
         <>
+            {/* Post-Episode Completion Modal */}
+            {showEndModal && currentEpisode && (
+                <div className="fixed inset-0 z-[200] flex items-end justify-center p-4 pb-8">
+                    {/* Backdrop */}
+                    <div
+                        className="absolute inset-0 bg-black/70 backdrop-blur-md"
+                        onClick={() => setShowEndModal(false)}
+                    />
+                    {/* Modal Card */}
+                    <div className="relative w-full max-w-md bg-[#0F0F14] border border-white/10 rounded-[9px] p-6 shadow-2xl flex flex-col gap-5 animate-in slide-in-from-bottom-4 duration-300">
+                        {/* Header */}
+                        <div className="flex items-center gap-4">
+                            <div className="w-12 h-12 rounded-[9px] bg-emerald-500/20 flex items-center justify-center">
+                                <span className="material-symbols-outlined text-emerald-400 text-2xl">check_circle</span>
+                            </div>
+                            <div>
+                                <p className="text-[9px] font-black uppercase tracking-[0.2em] text-emerald-400">Episode Complete</p>
+                                <h3 className="text-base font-black uppercase tracking-tight text-white leading-tight line-clamp-1">{currentEpisode.title}</h3>
+                            </div>
+                        </div>
+
+                        {/* Actions */}
+                        <div className="flex flex-col gap-3">
+                            {/* Take Quiz */}
+                            <button
+                                onClick={() => {
+                                    setShowEndModal(false);
+                                    router.push(`/library/episodes/${currentEpisode.id}`);
+                                }}
+                                className="w-full py-3.5 rounded-[9px] bg-primary hover:bg-primary/90 text-white font-black uppercase tracking-widest text-[10px] transition-all flex items-center justify-center gap-2 shadow-lg shadow-primary/20"
+                            >
+                                <span className="material-symbols-outlined text-sm">quiz</span>
+                                Take Episode Quiz
+                            </button>
+
+                            {/* Play Next */}
+                            {hasNextEpisode && (
+                                <button
+                                    onClick={() => {
+                                        setShowEndModal(false);
+                                        playNextEpisode(allEpisodes as any);
+                                    }}
+                                    className="w-full py-3.5 rounded-[9px] bg-white/10 hover:bg-white/15 text-white font-black uppercase tracking-widest text-[10px] transition-all flex items-center justify-center gap-2"
+                                >
+                                    <span className="material-symbols-outlined text-sm">skip_next</span>
+                                    Play Next Episode
+                                </button>
+                            )}
+
+                            {/* Dismiss */}
+                            <button
+                                onClick={() => setShowEndModal(false)}
+                                className="text-[9px] font-bold uppercase tracking-widest text-slate-600 hover:text-slate-400 transition-colors text-center"
+                            >
+                                Dismiss
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            )}
+
             {/* Mini Player */}
             {!isExpanded && (
                 <div
@@ -375,7 +498,7 @@ export default function Player() {
                     src={currentEpisode.audioUrl}
                     onTimeUpdate={handleTimeUpdate}
                     onLoadedMetadata={handleLoadedMetadata}
-                    onEnded={() => setIsPlaying(false)}
+                    onEnded={handleEnded}
                     onPause={() => setIsPlaying(false)}
                     onPlay={() => setIsPlaying(true)}
                 />

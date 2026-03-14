@@ -14,13 +14,15 @@ export default function FlashcardRunnerPage({ params }: { params: Promise<{ id: 
 
     if (!flashcardSet) {
         return (
-            <div className="min-h-screen bg-[#0A0A0F] text-white flex items-center justify-center flex-col gap-4">
-                <h1 className="text-2xl font-bold">No Flashcards Found</h1>
-                <p className="text-white/50">There are no flashcards for this episode yet.</p>
-                <Link href="/admin/flashcards" className="text-blue-400 hover:underline">
-                    Go to Admin to Import Cards
-                </Link>
-                <Link href="/" className="px-6 py-2 bg-white/10 rounded-full hover:bg-white/20 transition-colors">
+            <div className="min-h-dvh bg-background text-foreground flex items-center justify-center flex-col gap-6 text-center px-6">
+                <div className="w-24 h-24 rounded-full bg-white/5 flex items-center justify-center text-white/20 mb-2 border border-white/10">
+                    <span className="material-symbols-outlined text-5xl">style</span>
+                </div>
+                <div>
+                    <h1 className="text-2xl font-black uppercase tracking-tight">No Flashcards Found</h1>
+                    <p className="text-[10px] font-bold opacity-40 uppercase tracking-widest mt-2">There are no flashcards for this episode yet.</p>
+                </div>
+                <Link href="/" className="px-8 py-4 bg-white text-black font-black uppercase tracking-widest text-[10px] rounded-xl hover:scale-105 active:scale-95 transition-all">
                     Back Home
                 </Link>
             </div>
@@ -142,18 +144,19 @@ export default function FlashcardRunnerPage({ params }: { params: Promise<{ id: 
         <div className="min-h-dvh bg-background text-foreground flex flex-col font-sans overflow-hidden relative transition-colors duration-300">
 
             {/* Top Bar */}
-            <div className="px-6 py-4 flex items-center justify-between bg-nav/80 backdrop-blur-sm sticky top-0 z-50 border-b border-nav-border">
-                <Link href="/" className="text-foreground/50 hover:text-foreground transition-colors text-sm font-medium">
-                    ✕ Quit
-                </Link>
-                <div className="flex items-center gap-2">
-                    <div className="text-xs font-bold text-foreground/30 uppercase tracking-widest">
-                        {flashcardSet.title}
+            <header className="px-6 py-4 flex items-center justify-between bg-background/80 backdrop-blur-md sticky top-0 z-50 border-b border-white/5">
+                <div className="mx-auto w-full max-w-2xl flex items-center justify-between">
+                    <Link href="/" className="grid h-10 w-10 place-items-center rounded-2xl glass border border-white/5 hover:bg-white/10 active:scale-95 transition-all text-foreground">
+                        <span className="material-symbols-outlined">close</span>
+                    </Link>
+                    <div className="flex items-center gap-3">
+                        <div className="text-[10px] font-black text-foreground uppercase tracking-widest truncate max-w-[120px]">
+                            {flashcardSet.title}
+                        </div>
+                        {getStatusBadge()}
                     </div>
-                    {getStatusBadge()}
                 </div>
-                <div className="w-8"></div> {/* Spacer for centering */}
-            </div>
+            </header>
 
             {/* Main Content Area - Optimized for Mobile */}
             <main className="flex-1 flex items-center justify-center px-2 sm:px-6 py-4 relative perspective-1000">
@@ -172,14 +175,14 @@ export default function FlashcardRunnerPage({ params }: { params: Promise<{ id: 
                 <button
                     onClick={prevCard}
                     disabled={currentIndex === 0}
-                    className="h-12 w-12 sm:h-16 sm:w-16 rounded-full bg-surface/10 hover:bg-surface/20 disabled:opacity-20 disabled:hover:bg-surface/10 transition-colors text-foreground shadow-lg flex items-center justify-center text-xl sm:text-2xl z-10 shrink-0"
+                    className="absolute left-4 sm:relative sm:left-0 h-12 w-12 sm:h-16 sm:w-16 rounded-2xl glass hover:bg-white/10 disabled:opacity-20 disabled:hover:bg-black/20 transition-all text-foreground border border-white/5 flex items-center justify-center z-30 shrink-0"
                     aria-label="Previous Card"
                 >
-                    ←
+                    <span className="material-symbols-outlined text-2xl">chevron_left</span>
                 </button>
 
                 {/* Card Container */}
-                <div className="flex-1 flex flex-col items-center justify-center w-full max-w-3xl mx-4">
+                <div className="flex-1 flex flex-col items-center justify-center w-full max-w-2xl mx-auto">
                     {/* 3D Flip Card Container */}
                     <div
                         className="relative w-full aspect-[4/5] sm:aspect-[16/10] max-h-[65vh] cursor-pointer group"
@@ -192,27 +195,34 @@ export default function FlashcardRunnerPage({ params }: { params: Promise<{ id: 
 
                             {/* FRONT */}
                             <div
-                                className="absolute inset-0 backface-hidden bg-card rounded-xl border border-card-border p-6 sm:p-10 flex flex-col justify-between items-center text-center shadow-2xl group-hover:border-card-border/70 transition-colors"
+                                className="absolute inset-0 backface-hidden glass rounded-4xl border border-white/10 p-6 sm:p-10 flex flex-col justify-between items-center text-center shadow-2xl group-hover:border-white/20 transition-all"
                             >
                                 <div className="flex-none">
-                                    <span className="text-xs uppercase font-bold text-blue-500 tracking-wider">Question</span>
+                                    <div className="w-8 h-8 rounded-full bg-blue-500/10 text-blue-400 flex items-center justify-center mx-auto mb-2 border border-blue-500/20">
+                                        <span className="material-symbols-outlined text-sm">question_mark</span>
+                                    </div>
+                                    <span className="text-[10px] uppercase font-black text-blue-400 tracking-widest">Question</span>
                                 </div>
-                                <div className="flex-1 flex items-center justify-center w-full min-h-0 py-4">
-                                    <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-relaxed text-foreground px-2 overflow-y-auto max-h-full scrollbar-hide">
+                                <div className="flex-1 flex items-center justify-center w-full min-h-0 py-6">
+                                    <h2 className="text-xl sm:text-2xl font-black uppercase tracking-tight leading-relaxed text-foreground px-4 overflow-y-auto max-h-full no-scrollbar">
                                         {currentCard.front}
                                     </h2>
                                 </div>
-                                <div className="flex-none text-foreground/40 text-[10px] sm:text-xs font-bold tracking-widest animate-pulse">
-                                    CLICK OR SPACE FOR ANSWER
+                                <div className="flex-none text-foreground/40 text-[10px] font-bold uppercase tracking-[0.3em] flex items-center gap-2 animate-pulse">
+                                    <span className="material-symbols-outlined text-sm">touch_app</span>
+                                    Tap to flip
                                 </div>
                             </div>
 
                             {/* BACK */}
                             <div
-                                className="absolute inset-0 backface-hidden bg-card rounded-xl border border-purple-500/30 p-6 sm:p-10 flex flex-col justify-between items-center text-center shadow-2xl rotate-y-180"
+                                className="absolute inset-0 backface-hidden glass rounded-4xl border border-purple-500/30 p-6 sm:p-10 flex flex-col justify-between items-center text-center shadow-2xl rotate-y-180 transition-all pb-32"
                             >
-                                <div className="flex-none w-full relative">
-                                    <span className="text-xs uppercase font-bold text-purple-500 tracking-wider block mb-1">Answer</span>
+                                <div className="flex-none w-full relative flex flex-col items-center">
+                                    <div className="w-8 h-8 rounded-full bg-purple-500/10 text-purple-400 flex items-center justify-center mx-auto mb-2 border border-purple-500/20">
+                                        <span className="material-symbols-outlined text-sm">lightbulb</span>
+                                    </div>
+                                    <span className="text-[10px] uppercase font-black text-purple-400 tracking-widest block mb-1">Answer</span>
 
                                     {/* Explain Button - Header Position */}
                                     <button
@@ -220,55 +230,52 @@ export default function FlashcardRunnerPage({ params }: { params: Promise<{ id: 
                                             e.stopPropagation();
                                             handleExplain();
                                         }}
-                                        className="absolute right-0 top-0 px-2.5 py-1 rounded-full bg-indigo-500/10 text-indigo-500 hover:bg-indigo-500/20 text-[10px] font-bold flex items-center gap-1 transition-colors border border-indigo-500/10"
+                                        className="absolute right-0 top-0 px-3 py-1.5 rounded-full bg-indigo-500/10 text-indigo-400 hover:bg-indigo-500/20 text-[10px] font-black uppercase tracking-widest flex items-center gap-1.5 transition-all border border-indigo-500/20"
                                     >
-                                        <span>✨</span> <span className="hidden sm:inline">Explain</span>
+                                        <span className="material-symbols-outlined text-sm">psychology</span> <span className="hidden sm:inline">Explain</span>
                                     </button>
                                 </div>
 
                                 <div className="flex-1 flex items-center justify-center w-full min-h-0 py-4">
-                                    <p className="text-lg sm:text-xl md:text-2xl font-medium text-foreground/90 leading-relaxed px-2 overflow-y-auto max-h-full scrollbar-hide">
+                                    <p className="text-base sm:text-lg font-bold text-foreground/90 leading-relaxed px-4 overflow-y-auto max-h-full no-scrollbar">
                                         {currentCard.back}
                                     </p>
                                 </div>
 
                                 {/* SRS Difficulty Buttons - Footer Position */}
-                                <div className="flex-none w-full px-2 sm:px-6" onClick={(e) => e.stopPropagation()}>
-                                    <div className="text-[9px] text-foreground/40 text-center mb-3 font-bold tracking-widest">
-                                        HOW WELL DID YOU KNOW THIS?
+                                <div className="absolute bottom-6 left-0 right-0 px-4 sm:px-6 w-full" onClick={(e) => e.stopPropagation()}>
+                                    <div className="text-[10px] text-foreground/40 text-center mb-3 font-black uppercase tracking-[0.2em]">
+                                        How well did you know this?
                                     </div>
-                                    <div className="grid grid-cols-4 gap-2 w-full max-w-md mx-auto">
+                                    <div className="grid grid-cols-4 gap-2 w-full max-w-[400px] mx-auto">
                                         <button
                                             onClick={() => handleDifficulty('again')}
-                                            className="px-1 py-3 rounded-lg bg-red-500/10 text-red-500 hover:bg-red-500/20 text-xs font-bold transition-colors border border-red-500/20 flex flex-col items-center justify-center gap-1"
+                                            className="px-1 py-3 rounded-2xl glass border border-red-500/20 text-red-500 hover:bg-red-500/10 active:scale-95 transition-all flex flex-col items-center justify-center gap-1 group"
                                         >
-                                            <div>Again</div>
-                                            <div className="text-[9px] opacity-60 hidden sm:block">&lt;1m</div>
+                                            <div className="text-[10px] font-black uppercase tracking-widest group-hover:scale-110 transition-transform">Again</div>
+                                            <div className="text-[9px] opacity-60 font-bold hidden sm:block">&lt;1m</div>
                                         </button>
                                         <button
                                             onClick={() => handleDifficulty('hard')}
-                                            className="px-1 py-3 rounded-lg bg-orange-500/10 text-orange-500 hover:bg-orange-500/20 text-xs font-bold transition-colors border border-orange-500/20 flex flex-col items-center justify-center gap-1"
+                                            className="px-1 py-3 rounded-2xl glass border border-orange-500/20 text-orange-500 hover:bg-orange-500/10 active:scale-95 transition-all flex flex-col items-center justify-center gap-1 group"
                                         >
-                                            <div>Hard</div>
-                                            <div className="text-[9px] opacity-60 hidden sm:block">&lt;10m</div>
+                                            <div className="text-[10px] font-black uppercase tracking-widest group-hover:scale-110 transition-transform">Hard</div>
+                                            <div className="text-[9px] opacity-60 font-bold hidden sm:block">&lt;10m</div>
                                         </button>
                                         <button
                                             onClick={() => handleDifficulty('good')}
-                                            className="px-1 py-3 rounded-lg bg-green-500/10 text-green-500 hover:bg-green-500/20 text-xs font-bold transition-colors border border-green-500/20 flex flex-col items-center justify-center gap-1"
+                                            className="px-1 py-3 rounded-2xl glass border border-green-500/20 text-green-500 hover:bg-green-500/10 active:scale-95 transition-all flex flex-col items-center justify-center gap-1 group"
                                         >
-                                            <div>Good</div>
-                                            <div className="text-[9px] opacity-60 hidden sm:block">1d</div>
+                                            <div className="text-[10px] font-black uppercase tracking-widest group-hover:scale-110 transition-transform">Good</div>
+                                            <div className="text-[9px] opacity-60 font-bold hidden sm:block">1d</div>
                                         </button>
                                         <button
                                             onClick={() => handleDifficulty('easy')}
-                                            className="px-1 py-3 rounded-lg bg-blue-500/10 text-blue-500 hover:bg-blue-500/20 text-xs font-bold transition-colors border border-blue-500/20 flex flex-col items-center justify-center gap-1"
+                                            className="px-1 py-3 rounded-2xl glass border border-blue-500/20 text-blue-500 hover:bg-blue-500/10 active:scale-95 transition-all flex flex-col items-center justify-center gap-1 group"
                                         >
-                                            <div>Easy</div>
-                                            <div className="text-[9px] opacity-60 hidden sm:block">4d</div>
+                                            <div className="text-[10px] font-black uppercase tracking-widest group-hover:scale-110 transition-transform">Easy</div>
+                                            <div className="text-[9px] opacity-60 font-bold hidden sm:block">4d</div>
                                         </button>
-                                    </div>
-                                    <div className="hidden sm:block text-[9px] text-foreground/30 text-center mt-2">
-                                        Press 1-4 or click
                                     </div>
                                 </div>
 
@@ -283,10 +290,10 @@ export default function FlashcardRunnerPage({ params }: { params: Promise<{ id: 
                 <button
                     onClick={nextCard}
                     disabled={currentIndex === totalCards - 1}
-                    className="h-12 w-12 sm:h-16 sm:w-16 rounded-full bg-surface/10 hover:bg-surface/20 disabled:opacity-20 disabled:hover:bg-surface/10 transition-colors text-foreground shadow-lg flex items-center justify-center text-xl sm:text-2xl z-10 shrink-0"
+                    className="absolute right-4 sm:relative sm:right-0 h-12 w-12 sm:h-16 sm:w-16 rounded-2xl glass hover:bg-white/10 disabled:opacity-20 disabled:hover:bg-black/20 transition-all text-foreground border border-white/5 flex items-center justify-center z-30 shrink-0"
                     aria-label="Next Card"
                 >
-                    →
+                    <span className="material-symbols-outlined text-2xl">chevron_right</span>
                 </button>
             </main>
 

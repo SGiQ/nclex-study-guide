@@ -38,24 +38,24 @@ export default function QuizListPage() {
     return (
         <div className="min-h-dvh bg-background text-foreground transition-colors duration-300">
             {/* Header */}
-            <header className="sticky top-0 z-30 bg-background/80 backdrop-blur border-b border-nav-border animate-in">
-                <div className="mx-auto max-w-md px-4 py-3">
+            <header className="sticky top-0 z-50 bg-background/80 backdrop-blur-md border-b border-white/5 animate-in">
+                <div className="mx-auto max-w-2xl px-6 py-4">
                     <div className="flex items-center gap-3">
                         <Link
                             href="/dashboard"
-                            className="grid h-10 w-10 place-items-center rounded-full bg-surface/10 hover:bg-surface/20 active:bg-surface/30 text-foreground"
+                            className="flex h-10 w-10 items-center justify-center rounded-2xl bg-white/5 hover:bg-white/10 active:bg-white/5 border border-white/5 transition-colors"
                         >
-                            ←
+                            <span className="material-symbols-outlined text-xl">arrow_back</span>
                         </Link>
-                        <h1 className="text-xl font-semibold leading-none">{activeProgram.name} Quizzes</h1>
+                        <h1 className="text-xl font-black uppercase tracking-tight leading-none text-slate-100">{activeProgram.name} Quizzes</h1>
                     </div>
                 </div>
             </header>
 
-            <main className="mx-auto max-w-md px-6 py-8 pb-mini-player">
+            <main className="mx-auto max-w-2xl px-6 py-8 pb-mini-player">
                 <div className="mb-8">
-                    <h2 className="text-2xl font-bold mb-2">Practice Tests</h2>
-                    <p className="text-foreground/60">Select a topic to begin a focused practice session. Immediate feedback provided.</p>
+                    <h2 className="text-[10px] font-black uppercase tracking-[0.3em] text-slate-400 mb-2">Practice Tests</h2>
+                    <p className="text-[10px] font-bold uppercase tracking-widest text-slate-500">Select a topic to begin a focused practice session.</p>
                 </div>
 
                 <div className="grid gap-4 sm:grid-cols-2">
@@ -78,24 +78,24 @@ export default function QuizListPage() {
                                 <Link
                                     key={quiz.id}
                                     href={`/quizzes/${quiz.id}`}
-                                    className="group relative overflow-hidden rounded-lg bg-card hover:bg-surface/5 transition-all duration-300 border border-card-border hover:border-border hover:shadow-2xl hover:-translate-y-1 block"
+                                    className="group relative overflow-hidden rounded-3xl glass hover:bg-white/10 transition-all duration-300 border border-white/5 hover:border-white/20 block"
                                 >
                                     {/* Decorative Gradient Background */}
                                     <div className={`absolute inset-0 opacity-10 group-hover:opacity-20 transition-opacity bg-gradient-to-br ${quiz.color}`} />
 
                                     <div className="relative p-6 h-full flex flex-col">
                                         <div className="flex items-start justify-between mb-4">
-                                            <div className={`h-10 w-10 rounded-lg bg-gradient-to-br ${quiz.color} flex items-center justify-center shadow-lg text-white`}>
-                                                <span className="text-lg font-bold">?</span>
+                                            <div className={`h-12 w-12 rounded-2xl bg-gradient-to-br ${quiz.color} flex items-center justify-center border border-white/10 text-white`}>
+                                                <span className="material-symbols-outlined text-2xl group-hover:scale-110 transition-transform">quiz</span>
                                             </div>
 
                                             <div className="flex items-center gap-2">
                                                 {/* Save Button */}
                                                 <button
                                                     onClick={(e) => handleToggleSave(e, quiz)}
-                                                    className={`h-8 w-8 grid place-items-center rounded-full transition-colors ${isBookmarked ? 'bg-indigo-500/20 text-indigo-500' : 'bg-surface/10 text-muted-foreground hover:bg-surface/20'}`}
+                                                    className={`h-10 w-10 flex items-center justify-center rounded-xl transition-colors ${isBookmarked ? 'bg-indigo-500/20 text-indigo-500 border border-indigo-500/20' : 'bg-white/5 text-slate-400 hover:bg-white/10 border border-white/5'}`}
                                                 >
-                                                    <span className="text-sm">{isBookmarked ? '🔖' : '🏷️'}</span>
+                                                    <span className="material-symbols-outlined text-xl">{isBookmarked ? 'bookmark_added' : 'bookmark_add'}</span>
                                                 </button>
                                             </div>
                                         </div>
@@ -170,19 +170,17 @@ export default function QuizListPage() {
                                             );
                                         })()}
 
-                                        <h3 className="text-lg font-bold mb-2 leading-tight text-foreground group-hover:text-purple-400 transition-colors">
+                                        <h3 className="text-lg font-black uppercase tracking-tight leading-tight text-white group-hover:text-primary transition-colors mb-2">
                                             {quiz.title}
                                         </h3>
-                                        <p className="text-sm text-foreground/50 mb-6 flex-1">
+                                        <p className="text-[10px] font-bold uppercase tracking-widest text-slate-400 mb-6 flex-1 line-clamp-2">
                                             {quiz.description}
                                         </p>
 
                                         <div className="flex items-center justify-between">
-                                            <div className="flex items-center gap-2 text-sm font-semibold text-purple-500 group-hover:text-purple-400">
+                                            <div className="flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-primary group-hover:text-white transition-colors">
                                                 <span>{isCompleted ? 'Retake Quiz' : 'Start Quiz'}</span>
-                                                <svg className="w-4 h-4 transition-transform group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                                                    <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14M12 5l7 7-7 7" />
-                                                </svg>
+                                                <span className="material-symbols-outlined text-sm transition-transform group-hover:translate-x-1">arrow_forward</span>
                                             </div>
                                             {isCompleted && attemptCount > 0 && (
                                                 <button
@@ -191,9 +189,9 @@ export default function QuizListPage() {
                                                         setHistoryQuizId(quiz.id);
                                                         setHistoryQuizTitle(quiz.title);
                                                     }}
-                                                    className="text-xs text-indigo-400 hover:text-indigo-300 transition-colors"
+                                                    className="flex items-center gap-1 text-[10px] font-bold uppercase tracking-widest text-slate-500 hover:text-white transition-colors"
                                                 >
-                                                    📊 History
+                                                    <span className="material-symbols-outlined text-sm">bar_chart</span>
                                                 </button>
                                             )}
                                         </div>

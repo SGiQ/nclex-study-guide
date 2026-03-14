@@ -6,7 +6,7 @@
         "content": "Modes: SIMV vs AC vs PSV\\nHigh Pressure vs Low Pressure Alarms\\nWeaning Criteria",
         "pages": "RN-101",
         "duration": 1500,
-        "audioUrl": "/uploads/rn-demo-1.mp3",
+        "audioUrl": "https://pub-2b82d106a2e24d02864c89dc4b308d5c.r2.dev/rn-demo-1.mp3",
         "category": "Critical Care",
         "order": 1
     },
@@ -17,7 +17,7 @@
         "content": "5 Rights of Delegation\\nScope: Assess, Teach, Evaluate (RN Only)\\nLPN Scope: Stable patients, sterile dressing (some states)",
         "pages": "RN-102",
         "duration": 1200,
-        "audioUrl": "/uploads/rn-demo-2.mp3",
+        "audioUrl": "https://pub-2b82d106a2e24d02864c89dc4b308d5c.r2.dev/rn-demo-2.mp3",
         "category": "Leadership",
         "order": 2
     }

@@ -107,8 +107,8 @@ export function ProgressProvider({ children }: { children: React.ReactNode }) {
                             score: p.score || 0,
                             total: p.total || 0,
                             completedAt: p.completed_at,
-                            bestScore: p.best_score,
-                            attemptCount: p.attempt_count
+                            bestScore: (p.best_score !== null && p.best_score !== undefined) ? p.best_score : (p.score || 0),
+                            attemptCount: p.attempt_count || 1
                         };
                     });
 

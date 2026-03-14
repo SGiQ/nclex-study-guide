@@ -24,9 +24,6 @@ export default function Player() {
     const allEpisodes = activeProgram.slug === 'nclex-rn' ? episodesRN : episodesPN;
 
     const audioRef = useRef<HTMLAudioElement>(null);
-    const audioContextRef = useRef<AudioContext | null>(null);
-    const sourceRef = useRef<MediaElementAudioSourceNode | null>(null);
-    const { setAnalyser } = usePlayer();
 
     const [progress, setProgress] = useState(0);
     const [duration, setDuration] = useState(0);
@@ -42,37 +39,6 @@ export default function Player() {
         if (!audioRef.current) return;
 
         if (isPlaying) {
-            // Try to initialize Web Audio API for waveform visualization
-            if (!audioContextRef.current) {
-                try {
-                    const AudioContextClass = window.AudioContext || (window as any).webkitAudioContext;
-                    if (AudioContextClass) {
-                        const ctx = new AudioContextClass();
-                        audioContextRef.current = ctx;
-                        
-                        const analyserNode = ctx.createAnalyser();
-                        analyserNode.fftSize = 256;
-                        
-                        const sourceNode = ctx.createMediaElementSource(audioRef.current);
-                        sourceRef.current = sourceNode;
-                        
-                        // Split the signal: one path to speakers, one path to visualizer
-                        sourceNode.connect(ctx.destination);
-                        sourceNode.connect(analyserNode);
-                        setAnalyser(analyserNode);
-                    }
-                } catch (e) {
-                    console.warn('Web Audio API initialization failed:', e);
-                    audioContextRef.current = null;
-                    sourceRef.current = null;
-                }
-            }
-
-            if (audioContextRef.current?.state === 'suspended') {
-                audioContextRef.current.resume().catch(() => {});
-            }
-
-            // Handle actual playback
             if (audioRef.current.readyState === 0) {
                 pendingPlayRef.current = true;
                 audioRef.current.load();
@@ -87,7 +53,7 @@ export default function Player() {
             pendingPlayRef.current = false;
             audioRef.current.pause();
         }
-    }, [isPlaying, currentEpisode?.id, setIsPlaying, setAnalyser]);
+    }, [isPlaying, currentEpisode?.id, setIsPlaying]);
 
     useEffect(() => {
         if (audioRef.current) {
@@ -95,20 +61,11 @@ export default function Player() {
         }
     }, [playbackRate]);
 
-    // When episode changes, tear down the AudioContext so it gets rebuilt fresh
-    // with the new element that has crossOrigin set correctly from the start.
     useEffect(() => {
         setProgress(0);
         setError(null);
         if (currentEpisode?.duration) {
             setDuration(currentEpisode.duration);
-        }
-        // Close old audio graph on episode switch
-        if (audioContextRef.current) {
-            audioContextRef.current.close().catch(() => {});
-            audioContextRef.current = null;
-            sourceRef.current = null;
-            setAnalyser(null);
         }
     }, [currentEpisode?.id]);
 
@@ -204,9 +161,6 @@ export default function Player() {
     };
 
     const handleTogglePlay = () => {
-        if (audioContextRef.current?.state === 'suspended') {
-            audioContextRef.current.resume();
-        }
         togglePlay();
     };
 
@@ -536,7 +490,6 @@ export default function Player() {
                 <audio
                     key={currentEpisode.id}
                     ref={audioRef}
-                    crossOrigin="anonymous"
                     src={currentEpisode.audioUrl}
                     onCanPlay={() => {
                         if (pendingPlayRef.current && audioRef.current) {

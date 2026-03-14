@@ -15,41 +15,18 @@ import { useProgram } from '@/app/context/ProgramContext';
 export default function EpisodeDetailPage() {
     const params = useParams();
     const router = useRouter();
-    const { playEpisode, currentEpisode, isPlaying, analyser } = usePlayer();
+    const { playEpisode, currentEpisode, isPlaying } = usePlayer();
     const { audioProgress, quizResults } = useProgress();
     const { activeProgram } = useProgram();
-    const [freqData, setFreqData] = useState<Uint8Array>(new Uint8Array(0));
     
+
     const episodeId = parseInt(params.id as string);
     const episode = episodesData.find(e => e.id === episodeId);
     
     const isActuallyPlaying = isPlaying && currentEpisode?.id === episodeId;
 
-    // Live Waveform Logic
-    useEffect(() => {
-        if (!analyser || !isActuallyPlaying) {
-            setFreqData(new Uint8Array(0));
-            return;
-        }
 
-        let animationFrameId: number;
-        const dataArray = new Uint8Array(analyser.frequencyBinCount);
 
-        const updateWaveform = () => {
-            analyser.getByteFrequencyData(dataArray);
-            const step = Math.floor(dataArray.length / 10);
-            const sampledData = new Uint8Array(10);
-            for (let i = 0; i < 10; i++) {
-                sampledData[i] = dataArray[i * step];
-            }
-            setFreqData(new Uint8Array(sampledData));
-            animationFrameId = requestAnimationFrame(updateWaveform);
-        };
-
-        updateWaveform();
-        return () => cancelAnimationFrame(animationFrameId);
-    }, [analyser, isActuallyPlaying]);
-    
     if (!episode) {
         return (
             <div className="min-h-screen bg-background flex flex-col items-center justify-center p-6 text-center">
@@ -140,16 +117,18 @@ export default function EpisodeDetailPage() {
                                     {episode.description}
                                 </p>
                                 
-                                {/* Live Audio Waveform */}
+                                {/* CSS Animated Audio Waveform */}
                                 <div className="flex items-end gap-1.5 h-16 w-full max-w-[200px] opacity-80">
-                                    {(freqData.length > 0 ? Array.from(freqData) : [10, 20, 15, 25, 10, 20, 30, 15, 25, 10]).map((val, i) => (
-                                        <div 
-                                            key={i} 
-                                            className="waveform-bar transition-all duration-75 w-full rounded-t-lg bg-primary" 
-                                            style={{ 
-                                                height: `${isActuallyPlaying ? (val / 255) * 100 + 10 : 15}%`,
-                                                opacity: isActuallyPlaying ? 1 : 0.2
-                                            }} 
+                                    {[0.4, 0.7, 0.5, 0.9, 0.6, 0.8, 0.5, 1.0, 0.7, 0.4].map((scale, i) => (
+                                        <div
+                                            key={i}
+                                            className="waveform-bar w-full rounded-t-lg bg-primary"
+                                            style={{
+                                                height: isActuallyPlaying ? `${scale * 80 + 10}%` : '15%',
+                                                opacity: isActuallyPlaying ? 1 : 0.2,
+                                                animation: isActuallyPlaying ? `waveform-bounce ${0.6 + i * 0.1}s ease-in-out infinite alternate` : 'none',
+                                                animationDelay: `${i * 60}ms`,
+                                            }}
                                         />
                                     ))}
                                 </div>

@@ -48,6 +48,7 @@ body {
     width: 3px;
     border-radius: 1px;
     background: linear-gradient(to top, #257bf4, #6366f1);
+    transform-origin: bottom;
   }
 
   /* Material Symbols FILL support */
@@ -156,6 +157,11 @@ body {
   to {
     opacity: 1;
   }
+}
+
+@keyframes waveform-bounce {
+  from { transform: scaleY(0.4); }
+  to   { transform: scaleY(1.0); }
 }
 
 /* Base styles for animated elements (hidden initially) */

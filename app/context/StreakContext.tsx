@@ -1,6 +1,7 @@
 'use client';
 
 import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
+import { useAuth } from './AuthContext';
 
 interface StreakData {
     currentStreak: number;
@@ -15,6 +16,7 @@ interface StreakContextType {
 const StreakContext = createContext<StreakContextType | undefined>(undefined);
 
 export function StreakProvider({ children }: { children: ReactNode }) {
+    const { user } = useAuth();
     const [currentStreak, setCurrentStreak] = useState(0);
     const [hasCheckedInToday, setHasCheckedInToday] = useState(false);
 
@@ -51,6 +53,68 @@ export function StreakProvider({ children }: { children: ReactNode }) {
             setHasCheckedInToday(true);
         }
     }, []);
+
+    // Load from cloud on login
+    useEffect(() => {
+        const loadStreakSync = async () => {
+            const authToken = localStorage.getItem('auth_token');
+            if (!authToken) return;
+
+            try {
+                const response = await fetch('/api/progress', {
+                    headers: { 'Authorization': `Bearer ${authToken}` }
+                });
+                if (response.ok) {
+                    const data = await response.json();
+                    const streakEntry = data.progress.find((p: any) => p.content_type === 'user_streak');
+                    if (streakEntry && streakEntry.metadata) {
+                        const cloudStreak = streakEntry.metadata.currentStreak;
+                        if (cloudStreak > currentStreak) {
+                            setCurrentStreak(cloudStreak);
+                            // Also update localStorage to stay in sync
+                            const stored = localStorage.getItem('studyStreak');
+                            const streakData = stored ? JSON.parse(stored) : { currentStreak: 0, lastVisitDate: null };
+                            streakData.currentStreak = cloudStreak;
+                            localStorage.setItem('studyStreak', JSON.stringify(streakData));
+                        }
+                    }
+                }
+            } catch (error) {
+                console.error('Failed to load streak from cloud:', error);
+            }
+        };
+
+        if (user) loadStreakSync();
+    }, [user, currentStreak]);
+
+    // Save to cloud on change
+    useEffect(() => {
+        const saveStreakSync = async () => {
+            const authToken = localStorage.getItem('auth_token');
+            if (!authToken) return;
+
+            try {
+                await fetch('/api/progress', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Authorization': `Bearer ${authToken}`
+                    },
+                    body: JSON.stringify({
+                        contentType: 'user_streak',
+                        contentId: 'global',
+                        metadata: { currentStreak, lastVisitDate: new Date().toISOString().split('T')[0] }
+                    })
+                });
+            } catch (error) {
+                console.error('Failed to save streak to cloud:', error);
+            }
+        };
+
+        if (user && currentStreak > 0) {
+            saveStreakSync();
+        }
+    }, [currentStreak, user]);
 
     return (
         <StreakContext.Provider value={{ currentStreak, hasCheckedInToday }}>

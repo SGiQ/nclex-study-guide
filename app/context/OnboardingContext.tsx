@@ -1,6 +1,7 @@
 'use client';
 
 import { createContext, useContext, useState, useEffect, ReactNode } from 'react';
+import { useAuth } from './AuthContext';
 
 interface DailyTask {
     type: 'episode' | 'quiz' | 'flashcards' | 'review';
@@ -38,6 +39,7 @@ const defaultPreferences: UserPreferences = {
 };
 
 export function OnboardingProvider({ children }: { children: ReactNode }) {
+    const { user } = useAuth();
     const [preferences, setPreferences] = useState<UserPreferences>(defaultPreferences);
 
     useEffect(() => {
@@ -46,6 +48,68 @@ export function OnboardingProvider({ children }: { children: ReactNode }) {
             setPreferences(JSON.parse(saved));
         }
     }, []);
+
+    // Load from cloud on login
+    useEffect(() => {
+        const loadPreferencesSync = async () => {
+            const authToken = localStorage.getItem('auth_token');
+            if (!authToken) return;
+
+            try {
+                const response = await fetch('/api/progress', {
+                    headers: { 'Authorization': `Bearer ${authToken}` }
+                });
+                if (response.ok) {
+                    const data = await response.json();
+                    const prefEntry = data.progress.find((p: any) => p.content_type === 'user_preferences');
+                    if (prefEntry && prefEntry.metadata) {
+                        setPreferences(prev => ({
+                            ...prev,
+                            ...prefEntry.metadata
+                        }));
+                    }
+                }
+            } catch (error) {
+                console.error('Failed to load preferences from cloud:', error);
+            }
+        };
+
+        if (user) loadPreferencesSync();
+    }, [user]);
+
+    // Save to cloud on change
+    useEffect(() => {
+        if (typeof window !== 'undefined') {
+            localStorage.setItem('userPreferences', JSON.stringify(preferences));
+        }
+
+        const saveToCloud = async () => {
+            const authToken = localStorage.getItem('auth_token');
+            if (!authToken) return;
+
+            try {
+                await fetch('/api/progress', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Authorization': `Bearer ${authToken}`
+                    },
+                    body: JSON.stringify({
+                        contentType: 'user_preferences',
+                        contentId: 'global',
+                        metadata: preferences
+                    })
+                });
+            } catch (error) {
+                console.error('Failed to save preferences to cloud:', error);
+            }
+        };
+
+        if (user) {
+            const timer = setTimeout(saveToCloud, 5000); // Debounce
+            return () => clearTimeout(timer);
+        }
+    }, [preferences, user]);
 
     const updatePreferences = (updates: Partial<UserPreferences>) => {
         setPreferences(prev => {

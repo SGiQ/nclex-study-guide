@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { usePlayer } from '@/app/context/PlayerContext';
 import { useLibrary } from '@/app/context/LibraryContext';
+import { useAuth } from '@/app/context/AuthContext';
 import { useRef, useEffect, useState } from 'react';
 import TranscriptViewer from './TranscriptViewer';
 import { getTranscript } from '@/app/data/transcripts';
@@ -10,6 +11,7 @@ import { getTranscript } from '@/app/data/transcripts';
 export default function Player() {
     const { currentEpisode, isPlaying, setIsPlaying, togglePlay, closePlayer, setCurrentTime } = usePlayer();
     const { saveItem, removeItem, isSaved } = useLibrary();
+    const { user } = useAuth();
 
     const audioRef = useRef<HTMLAudioElement>(null);
     const [progress, setProgress] = useState(0);
@@ -59,7 +61,7 @@ export default function Player() {
 
             setProgress((current / total) * 100);
 
-            // Save progress to localStorage every 5 seconds
+            // Save progress to localStorage and cloud every 10 seconds (less frequent for cloud)
             if (currentEpisode && Math.floor(current) % 5 === 0) {
                 const progressData = {
                     currentTime: current,
@@ -67,6 +69,31 @@ export default function Player() {
                     lastUpdated: Date.now()
                 };
                 localStorage.setItem(`audio_progress_${currentEpisode.id}`, JSON.stringify(progressData));
+                
+                // Sync to cloud less frequently
+                if (user && Math.floor(current) % 20 === 0) {
+                    const syncToCloud = async () => {
+                        const authToken = localStorage.getItem('auth_token');
+                        if (!authToken) return;
+                        try {
+                            const percent = (current / total) * 100;
+                            await fetch('/api/progress', {
+                                method: 'POST',
+                                headers: {
+                                    'Content-Type': 'application/json',
+                                    'Authorization': `Bearer ${authToken}`
+                                },
+                                body: JSON.stringify({
+                                    contentType: 'audio',
+                                    contentId: currentEpisode.id.toString(),
+                                    completed: percent >= 95,
+                                    metadata: progressData
+                                })
+                            });
+                        } catch (e) { }
+                    };
+                    syncToCloud();
+                }
             }
         }
     };

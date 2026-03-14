@@ -2,6 +2,7 @@
 
 import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 import { useProgress } from './ProgressContext';
+import { useAuth } from './AuthContext';
 
 export interface Badge {
     id: string;
@@ -127,6 +128,8 @@ const BADGE_DEFINITIONS: Omit<Badge, 'unlocked' | 'unlockedAt'>[] = [
 export function AchievementProvider({ children }: { children: ReactNode }) {
     const { quizResults } = useProgress();
 
+    const { user } = useAuth();
+
     const [badges, setBadges] = useState<Badge[]>(() => {
         if (typeof window === 'undefined') return BADGE_DEFINITIONS.map(b => ({ ...b, unlocked: false }));
 
@@ -173,6 +176,64 @@ export function AchievementProvider({ children }: { children: ReactNode }) {
             lastStudyDate: ''
         };
     });
+
+    // Load from cloud on login
+    useEffect(() => {
+        const loadStatsSync = async () => {
+            const authToken = localStorage.getItem('auth_token');
+            if (!authToken) return;
+
+            try {
+                const response = await fetch('/api/progress', {
+                    headers: { 'Authorization': `Bearer ${authToken}` }
+                });
+                if (response.ok) {
+                    const data = await response.json();
+                    const statsEntry = data.progress.find((p: any) => p.content_type === 'achievement_stats');
+                    if (statsEntry && statsEntry.metadata) {
+                        setStats(prev => ({
+                            ...prev,
+                            ...statsEntry.metadata
+                        }));
+                    }
+                }
+            } catch (error) {
+                console.error('Failed to load stats from cloud:', error);
+            }
+        };
+
+        if (user) loadStatsSync();
+    }, [user]);
+
+    // Save to cloud on change
+    useEffect(() => {
+        const saveStatsSync = async () => {
+            const authToken = localStorage.getItem('auth_token');
+            if (!authToken) return;
+
+            try {
+                await fetch('/api/progress', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Authorization': `Bearer ${authToken}`
+                    },
+                    body: JSON.stringify({
+                        contentType: 'achievement_stats',
+                        contentId: 'global',
+                        metadata: stats
+                    })
+                });
+            } catch (error) {
+                console.error('Failed to save stats to cloud:', error);
+            }
+        };
+
+        if (user) {
+            const timer = setTimeout(saveStatsSync, 5000); // Debounce
+            return () => clearTimeout(timer);
+        }
+    }, [stats, user]);
 
     const [recentlyUnlocked, setRecentlyUnlocked] = useState<Badge | null>(null);
 

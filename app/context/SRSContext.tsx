@@ -1,6 +1,7 @@
 'use client';
 
 import { createContext, useContext, useState, useEffect, ReactNode } from 'react';
+import { useAuth } from './AuthContext';
 
 // SM-2 Algorithm Implementation
 interface ReviewData {
@@ -30,20 +31,83 @@ interface SRSContextType {
 const SRSContext = createContext<SRSContextType | undefined>(undefined);
 
 export function SRSProvider({ children }: { children: ReactNode }) {
-    const [reviewData, setReviewData] = useState<Record<string, ReviewData>>({});
-
-    // Load from localStorage on mount
-    useEffect(() => {
-        const stored = localStorage.getItem('srs-review-data');
-        if (stored) {
-            setReviewData(JSON.parse(stored));
+    const [reviewData, setReviewData] = useState<Record<string, ReviewData>>(() => {
+        if (typeof window !== 'undefined') {
+            const stored = localStorage.getItem('srs-review-data');
+            if (stored) {
+                try {
+                    return JSON.parse(stored);
+                } catch (e) {
+                    return {};
+                }
+            }
         }
-    }, []);
+        return {};
+    });
 
-    // Save to localStorage on change
+    const { user } = useAuth();
+
+    // Load from database on login
     useEffect(() => {
-        localStorage.setItem('srs-review-data', JSON.stringify(reviewData));
-    }, [reviewData]);
+        const loadSRSSync = async () => {
+            const authToken = localStorage.getItem('auth_token');
+            if (!authToken) return;
+
+            try {
+                const response = await fetch('/api/progress', {
+                    headers: { 'Authorization': `Bearer ${authToken}` }
+                });
+                if (response.ok) {
+                    const data = await response.json();
+                    const srsEntry = data.progress.find((p: any) => p.content_type === 'srs_system');
+                    if (srsEntry && srsEntry.metadata) {
+                        setReviewData(prev => ({
+                            ...prev,
+                            ...srsEntry.metadata
+                        }));
+                    }
+                }
+            } catch (error) {
+                console.error('Failed to load SRS from cloud:', error);
+            }
+        };
+
+        if (user) loadSRSSync();
+    }, [user]);
+
+    // Save to localStorage AND cloud on change
+    useEffect(() => {
+        if (typeof window !== 'undefined') {
+            localStorage.setItem('srs-review-data', JSON.stringify(reviewData));
+        }
+
+        const saveToCloud = async () => {
+            const authToken = localStorage.getItem('auth_token');
+            if (!authToken || Object.keys(reviewData).length === 0) return;
+
+            try {
+                await fetch('/api/progress', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Authorization': `Bearer ${authToken}`
+                    },
+                    body: JSON.stringify({
+                        contentType: 'srs_system',
+                        contentId: 'global',
+                        metadata: reviewData
+                    })
+                });
+            } catch (error) {
+                console.error('Failed to save SRS to cloud:', error);
+            }
+        };
+
+        if (user) {
+            const timer = setTimeout(saveToCloud, 2000); // Debounce
+            return () => clearTimeout(timer);
+        }
+    }, [reviewData, user]);
 
     // Initialize a new card
     const initializeCard = (cardId: string, cardType: 'flashcard' | 'quiz', episodeId?: number) => {

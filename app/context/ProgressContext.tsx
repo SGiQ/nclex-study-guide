@@ -22,14 +22,30 @@ interface ProgressContextType {
 const ProgressContext = createContext<ProgressContextType | undefined>(undefined);
 
 export function ProgressProvider({ children }: { children: React.ReactNode }) {
-    const [quizResults, setQuizResults] = useState<Record<number, QuizResult>>({});
+    const [quizResults, setQuizResults] = useState<Record<number, QuizResult>>(() => {
+        if (typeof window !== 'undefined') {
+            const saved = localStorage.getItem('quiz_results');
+            if (saved) {
+                try {
+                    return JSON.parse(saved);
+                } catch (e) {
+                    return {};
+                }
+            }
+        }
+        return {};
+    });
     const [isLoading, setIsLoading] = useState(true);
 
     const { user } = useAuth();
     const resultsRef = React.useRef(quizResults);
 
     // Keep ref updated
+    // Save to localStorage on change (for guest support)
     useEffect(() => {
+        if (typeof window !== 'undefined') {
+            localStorage.setItem('quiz_results', JSON.stringify(quizResults));
+        }
         resultsRef.current = quizResults;
     }, [quizResults]);
 

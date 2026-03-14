@@ -1,42 +1,52 @@
 import { NextResponse } from 'next/server';
-import fs from 'fs';
-import path from 'path';
+import { Pool } from 'pg';
+import jwt from 'jsonwebtoken';
 
-const filePath = path.join(process.cwd(), 'app', 'data', 'notes.json');
+const pool = new Pool({
+    connectionString: process.env.DATABASE_URL,
+    ssl: { rejectUnauthorized: false }
+});
 
-function getNotes() {
-    if (!fs.existsSync(filePath)) return [];
+const JWT_SECRET = process.env.JWT_SECRET || 'your-secret-key';
+
+async function getUserId(request: Request) {
+    const authHeader = request.headers.get('Authorization');
+    if (!authHeader || !authHeader.startsWith('Bearer ')) return null;
+    const token = authHeader.split(' ')[1];
     try {
-        const fileData = fs.readFileSync(filePath, 'utf8');
-        return JSON.parse(fileData);
+        const decoded = jwt.verify(token, JWT_SECRET) as { userId: number };
+        return decoded.userId;
     } catch (e) {
-        return [];
+        return null;
     }
 }
 
-export async function GET() {
-    return NextResponse.json(getNotes());
+export async function GET(request: Request) {
+    const userId = await getUserId(request);
+    if (!userId) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+
+    try {
+        const result = await pool.query(
+            'SELECT id, label, content, context, created_at as timestamp FROM notes WHERE user_id = $1 ORDER BY created_at DESC',
+            [userId]
+        );
+        return NextResponse.json(result.rows);
+    } catch (e) {
+        return NextResponse.json({ error: 'Failed to fetch notes' }, { status: 500 });
+    }
 }
 
 export async function POST(request: Request) {
+    const userId = await getUserId(request);
+    if (!userId) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+
     try {
-        const body = await request.json();
-        const { label, content, context } = body;
-
-        const notes = getNotes();
-        const newNote = {
-            id: Date.now(),
-            label: label || 'General',
-            content,
-            context: context || 'General',
-            timestamp: new Date().toISOString()
-        };
-
-        notes.unshift(newNote); // Add to top
-
-        fs.writeFileSync(filePath, JSON.stringify(notes, null, 2));
-        return NextResponse.json({ success: true, note: newNote });
-
+        const { label, content, context } = await request.json();
+        const result = await pool.query(
+            'INSERT INTO notes (user_id, label, content, context) VALUES ($1, $2, $3, $4) RETURNING id, label, content, context, created_at as timestamp',
+            [userId, label || 'General', content, context || 'General']
+        );
+        return NextResponse.json({ success: true, note: result.rows[0] });
     } catch (error) {
         return NextResponse.json({ error: 'Failed to save note' }, { status: 500 });
     }

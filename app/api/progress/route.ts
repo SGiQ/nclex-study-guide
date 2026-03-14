@@ -26,7 +26,7 @@ export async function POST(request: Request) {
             );
         }
 
-        const { contentType, contentId, completed, score, total } = await request.json();
+        const { contentType, contentId, completed, score, total, metadata } = await request.json();
 
         // Validate input
         if (!contentType || !contentId) {
@@ -70,8 +70,8 @@ export async function POST(request: Request) {
 
             // Upsert progress with best score and attempt count
             const result = await pool.query(
-                `INSERT INTO user_progress (user_id, content_type, content_id, completed, score, total, best_score, attempt_count, completed_at)
-                 VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9)
+                `INSERT INTO user_progress (user_id, content_type, content_id, completed, score, total, best_score, attempt_count, completed_at, metadata)
+                 VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10)
                  ON CONFLICT (user_id, content_type, content_id)
                  DO UPDATE SET
                    completed = $4,
@@ -79,7 +79,8 @@ export async function POST(request: Request) {
                    total = $6,
                    best_score = GREATEST(COALESCE(user_progress.best_score, 0), $7),
                    attempt_count = COALESCE(user_progress.attempt_count, 0) + 1,
-                   completed_at = $9
+                   completed_at = $9,
+                   metadata = COALESCE(user_progress.metadata, '{}'::jsonb) || $10
                  RETURNING *`,
                 [
                     payload.userId,
@@ -90,7 +91,8 @@ export async function POST(request: Request) {
                     total,
                     newBest,
                     1, // This will be incremented in DO UPDATE
-                    new Date()
+                    new Date(),
+                    metadata || {}
                 ]
             );
 
@@ -103,14 +105,15 @@ export async function POST(request: Request) {
         } else {
             // For non-quiz content, use original logic
             const result = await pool.query(
-                `INSERT INTO user_progress (user_id, content_type, content_id, completed, score, total, completed_at)
-                 VALUES ($1, $2, $3, $4, $5, $6, $7)
+                `INSERT INTO user_progress (user_id, content_type, content_id, completed, score, total, completed_at, metadata)
+                 VALUES ($1, $2, $3, $4, $5, $6, $7, $8)
                  ON CONFLICT (user_id, content_type, content_id)
                  DO UPDATE SET
                    completed = $4,
                    score = $5,
                    total = $6,
-                   completed_at = $7
+                   completed_at = $7,
+                   metadata = COALESCE(user_progress.metadata, '{}'::jsonb) || $8
                  RETURNING *`,
                 [
                     payload.userId,
@@ -119,7 +122,8 @@ export async function POST(request: Request) {
                     completed || false,
                     score || null,
                     total || null,
-                    completed ? new Date() : null
+                    completed ? new Date() : null,
+                    metadata || {}
                 ]
             );
 

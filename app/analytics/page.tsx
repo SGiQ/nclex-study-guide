@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useMemo } from 'react';
+import React, { useMemo, useState, useEffect } from 'react';
 import { useProgress } from '@/app/context/ProgressContext';
 import { useSRS } from '@/app/context/SRSContext';
 import { useStreak } from '@/app/context/StreakContext';
@@ -16,6 +16,11 @@ export default function AnalyticsPage() {
     const { getMasteredCount, getLearningCount, getNewCount, getDueCount, reviewData } = useSRS();
     const { currentStreak } = useStreak();
     const router = useRouter();
+    const [isMounted, setIsMounted] = useState(false);
+
+    useEffect(() => {
+        setIsMounted(true);
+    }, []);
 
     const quizzes = quizzesData as QuizEntry[];
     const episodes = episodesData as EpEntry[];
@@ -61,18 +66,22 @@ export default function AnalyticsPage() {
     };
 
     const getScoreBg = (pct: number | null) => {
-        if (pct === null) return 'border-white/5';
+        if (!isMounted || pct === null) return 'border-white/5';
         if (pct >= 80) return 'border-emerald-500/20';
         if (pct >= 70) return 'border-amber-500/20';
         return 'border-red-500/20';
     };
 
     const getBarColor = (pct: number | null) => {
-        if (pct === null) return 'bg-slate-700';
+        if (!isMounted || pct === null) return 'bg-slate-700';
         if (pct >= 80) return 'bg-emerald-500';
         if (pct >= 70) return 'bg-amber-500';
         return 'bg-red-500';
     };
+
+    if (!isMounted) {
+        return <div className="min-h-screen bg-background" />;
+    }
 
     return (
         <div className="min-h-screen bg-background text-foreground pb-32">

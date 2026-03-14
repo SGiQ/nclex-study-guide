@@ -13,58 +13,56 @@ export default function GlobalNavigation() {
     if (pathname === '/landing' || pathname === '/exam') return null;
 
     const navItems = [
-        { label: "Home", icon: "⌂", href: "/" },
-        { label: "Notes", icon: "📝", action: toggleNotes },
-        { label: "Library", icon: "▤", href: "/library" }, // Placeholder
+        { label: "Home", icon: "home", href: "/" },
+        { label: "Library", icon: "menu_book", href: "/library" },
+        { label: "Notes", icon: "edit_note", action: toggleNotes },
+        { label: "Exam", icon: "timer", href: "/exam/setup" },
     ];
 
     return (
-        <nav className="fixed bottom-0 left-0 right-0 z-50 border-t border-nav-border bg-nav/90 backdrop-blur-md safe-area-pb transition-colors duration-300">
-            <div className="mx-auto max-w-md px-2 py-2">
-                <div className="grid grid-cols-4">
-                    {navItems.map((item) => {
-                        const isActive = item.href === pathname;
+        <nav className="fixed bottom-6 left-1/2 -translate-x-1/2 w-[95%] max-w-md glass rounded-full px-2 py-2 flex items-center justify-between z-[100] shadow-2xl transition-all duration-300">
+            {navItems.map((item) => {
+                const isActive = item.href === pathname;
 
-                        // Render Button if Action (Notes)
-                        if (item.action) {
-                            return (
-                                <button
-                                    key={item.label}
-                                    onClick={item.action}
-                                    className="flex flex-col items-center gap-1 rounded-lg px-2 py-2 text-foreground/50 hover:bg-surface/10 hover:text-foreground transition-colors"
-                                >
-                                    <span className="text-xl leading-none">{item.icon}</span>
-                                    <span className="text-[10px] font-medium">{item.label}</span>
-                                </button>
-                            );
-                        }
+                if (item.action) {
+                    return (
+                        <button
+                            key={item.label}
+                            onClick={item.action}
+                            className="flex flex-col items-center justify-center size-12 rounded-full text-slate-400 hover:text-white hover:bg-white/10 transition-all font-display"
+                        >
+                            <span className="material-symbols-outlined text-2xl">{item.icon}</span>
+                        </button>
+                    );
+                }
 
-                        // Render Link otherwise
-                        return (
-                            <Link
-                                key={item.label}
-                                href={item.href || '#'}
-                                className={`flex flex-col items-center gap-1 rounded-lg px-2 py-2 transition-colors ${isActive ? 'text-foreground bg-surface/10' : 'text-foreground/50 hover:bg-surface/10 hover:text-foreground'
-                                    }`}
-                            >
-                                <span className="text-xl leading-none">{item.icon}</span>
-                                <span className="text-[10px] font-medium">{item.label}</span>
-                            </Link>
-                        );
-                    })}
-
-                    {/* Theme Toggle */}
-                    <button
-                        onClick={toggleTheme}
-                        className="flex flex-col items-center gap-1 rounded-lg px-2 py-2 text-foreground/50 hover:bg-surface/10 hover:text-foreground transition-colors"
+                return (
+                    <Link
+                        key={item.label}
+                        href={item.href || '#'}
+                        className={`flex flex-col items-center justify-center size-12 rounded-full transition-all font-display ${
+                            isActive 
+                                ? 'bg-primary text-white shadow-lg shadow-primary/30' 
+                                : 'text-slate-400 hover:text-white hover:bg-white/10'
+                        }`}
                     >
-                        <span className="text-xl leading-none">
-                            {theme === 'dark' ? '☀' : '☾'}
+                        <span className={`material-symbols-outlined text-2xl ${isActive ? 'fill-1' : ''}`}>
+                            {item.icon}
                         </span>
-                        <span className="text-[10px] font-medium">Theme</span>
-                    </button>
-                </div>
-            </div>
+                    </Link>
+                );
+            })}
+
+            {/* Theme Toggle */}
+            <button
+                onClick={toggleTheme}
+                className="flex flex-col items-center justify-center size-12 rounded-full text-slate-400 hover:text-white hover:bg-white/10 transition-all font-display"
+                title="Toggle Theme"
+            >
+                <span className="material-symbols-outlined text-2xl">
+                    {theme === 'dark' ? 'light_mode' : 'dark_mode'}
+                </span>
+            </button>
         </nav>
     );
 }

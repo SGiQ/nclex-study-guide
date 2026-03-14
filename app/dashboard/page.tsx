@@ -1,5 +1,6 @@
 'use client';
 
+import React from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { useAuth } from '@/app/context/AuthContext';
@@ -7,8 +8,6 @@ import { useStreak } from '@/app/context/StreakContext';
 import { useProgress } from '@/app/context/ProgressContext';
 import { useSRS } from '@/app/context/SRSContext';
 import { useAchievements } from '@/app/context/AchievementContext';
-import BadgeCard from '@/app/components/BadgeCard';
-import ReadinessScoreCard from '@/app/components/ReadinessScoreCard';
 import { useProgram } from '@/app/context/ProgramContext';
 import episodesPN from '@/app/data/episodes.json';
 import episodesRN from '@/app/data/episodes-rn.json';
@@ -19,309 +18,266 @@ export default function DashboardPage() {
     const { user, logout } = useAuth();
     const { currentStreak, hasCheckedInToday } = useStreak();
     const { quizResults } = useProgress();
-    const { getDueCount, getMasteredCount, getLearningCount } = useSRS();
+    const { getDueCount } = useSRS();
     const { badges } = useAchievements();
     const { activeProgram, switchProgram, availablePrograms } = useProgram();
     const router = useRouter();
 
-    // Select content based on active program
     const episodes = activeProgram.slug === 'nclex-rn' ? episodesRN : episodesPN;
     const quizzes = activeProgram.slug === 'nclex-rn' ? quizzesRN : quizzesPN;
 
-
-    // Achievement data
     const unlockedBadges = badges.filter(b => b.unlocked);
     const recentBadges = [...unlockedBadges]
         .sort((a, b) => (b.unlockedAt || 0) - (a.unlockedAt || 0))
-        .slice(0, 3);
-    const totalBadges = badges.length;
-    const achievementProgress = Math.round((unlockedBadges.length / totalBadges) * 100);
+        .slice(0, 4);
 
-    // Redirect if not logged in
     if (!user) {
         router.push('/landing');
         return null;
     }
 
-    // Weakness Targeting Logic
-    const weakEpisodeIds = Object.values(quizResults)
-        .filter(r => (r.score / r.total) < 0.7)
-        .map(r => r.episodeId);
+    // Readiness Score Calculation
+    const readinessScore = (() => {
+        const currentProgramQuizIds = new Set(quizzes.map(q => q.id));
+        const relevantResults = Object.values(quizResults).filter(r =>
+            currentProgramQuizIds.has(r.episodeId)
+        );
+        if (relevantResults.length === 0) return 0;
+        const totalPercentage = relevantResults.reduce((acc, curr) => {
+            const bestRaw = (curr.bestScore !== undefined && curr.bestScore !== null) ? curr.bestScore : curr.score;
+            if (!curr.total || curr.total === 0) return acc;
+            return acc + ((bestRaw / curr.total) * 100);
+        }, 0);
+        return Math.round(totalPercentage / relevantResults.length);
+    })();
 
-    // Filter suggested review to valid IDs for the CURRENT program
-    // (This prevents showing a PN weakness while studying RN)
-    const suggestedReview = weakEpisodeIds.length > 0
-        ? episodes.find(e => e.id === weakEpisodeIds[0])
-        : null;
+    const questionsAttempted = Object.values(quizResults)
+        .filter(r => new Set(quizzes.map(q => q.id)).has(r.episodeId))
+        .reduce((acc, curr) => acc + curr.total, 0);
 
-    const cards = [
-        { title: "Audio Lessons", from: "#2563eb", to: "#1d4ed8", href: "/audio", icon: "▶", cta: "Listen Now", image: "/images/dashboard/audio-lessons-card.jpg" },
-        { title: "Quizzes", from: "#475569", to: "#334155", href: "/quizzes", icon: "📝", cta: "Start Quiz", image: "/images/dashboard/quizzes-card.jpg" },
-        { title: "Flashcards", from: "#9333ea", to: "#7e22ce", href: "/flashcards", icon: "🗂️", cta: "Practice" },
-        { title: "Study Guides", from: "#10b981", to: "#059669", href: "/study-guides", icon: "📝", cta: "Study" },
-        { title: "Exam Mode", from: "#10b981", to: "#059669", href: "/exam/setup", icon: "🎯", cta: "Take Exam" },
-        { title: "Analytics", from: "#ec4899", to: "#db2777", href: "/analytics", icon: "📊", cta: "View Stats" },
-        { title: "Mind Maps", from: "#0891b2", to: "#0e7490", href: "/mindmaps", icon: "🧠", cta: "Explore" },
-        { title: "Infographics", from: "#db2777", to: "#be185d", href: "/infographics", icon: "🖼️", cta: "Visuals" },
-        { title: "Slide Decks", from: "#4f46e5", to: "#4338ca", href: "/slides", icon: "📄", cta: "Review" },
-    ];
+    // AI Needs Review Logic
+    const weakEpisodes = episodes.filter(ep => {
+        const result = quizResults[ep.id];
+        return result && (result.score / result.total) < 0.7;
+    }).map(ep => ({
+        ...ep,
+        score: Math.round((quizResults[ep.id].score / quizResults[ep.id].total) * 100),
+        status: (quizResults[ep.id].score / quizResults[ep.id].total) < 0.5 ? 'CRITICAL' : 'MEDIUM'
+    }));
 
     return (
-        <div className="min-h-dvh bg-background text-foreground transition-colors duration-300">
-            {/* Header */}
-            <header className="sticky top-0 z-30 bg-background/80 backdrop-blur border-b border-nav-border animate-in">
-                <div className="mx-auto max-w-md px-4 pt-4 pb-3">
-                    <div className="flex items-center gap-3">
-                        <button
-                            onClick={() => router.push('/landing')}
-                            aria-label="Back"
-                            className="grid h-10 w-10 place-items-center rounded-full bg-surface/10 hover:bg-surface/20 active:bg-surface/30 text-foreground"
-                        >
-                            ←
-                        </button>
-                        <div className="flex-1">
-                            <div className="flex items-center gap-2">
-                                <h1 className="text-xl font-semibold leading-none truncate">
-                                    {user.name}
-                                </h1>
-                                {/* Exam Switcher Badge */}
-                                <div className="relative group">
-                                    <button className="flex items-center gap-1 px-2 py-0.5 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-[10px] font-bold text-indigo-500 uppercase tracking-wide hover:bg-indigo-500/20 transition-colors">
-                                        {activeProgram.name} ▾
-                                    </button>
-                                    {/* Dropdown Menu */}
-                                    <div className="absolute top-full left-0 mt-1 w-32 py-1 bg-white dark:bg-gray-800 rounded-lg shadow-xl border border-gray-200 dark:border-gray-700 hidden group-hover:block z-50">
-                                        {availablePrograms.map(prog => (
-                                            <button
-                                                key={prog.id}
-                                                onClick={() => switchProgram(prog.slug as any)}
-                                                className={`w-full text-left px-3 py-2 text-xs font-medium hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors ${activeProgram.id === prog.id ? 'text-indigo-500 bg-indigo-50 dark:bg-indigo-900/20' : 'text-gray-700 dark:text-gray-300'}`}
-                                            >
-                                                {prog.name}
-                                            </button>
-                                        ))}
-                                    </div>
-                                </div>
-                            </div>
-                            <p className="text-xs text-foreground/60 mt-1">
-                                {user.plan === 'free' ? '🆓 Free Plan' : user.plan === 'premium' ? '⭐ Premium' : '💎 Lifetime Access'}
-                            </p>
-                        </div>
-                        {/* Streak Counter */}
-                        <div className="flex items-center gap-2">
-                            <Link href="/library" className="grid h-9 w-9 place-items-center rounded-full bg-indigo-500/10 text-indigo-500 hover:bg-indigo-500/20 active:scale-95 transition-all">
-                                🔖
-                            </Link>
-                            <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-orange-500/10 border border-orange-500/20">
-                                <span className={`text-sm ${hasCheckedInToday ? 'animate-bounce' : ''}`}>🔥</span>
-                                <span className="text-sm font-bold text-orange-500">{currentStreak}</span>
-                            </div>
-                            <button
-                                onClick={logout}
-                                className="grid h-9 w-9 place-items-center rounded-full bg-red-500/10 text-red-500 hover:bg-red-500/20 active:scale-95 transition-all"
-                                title="Logout"
-                            >
-                                🚪
+        <div className="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen pb-32 transition-colors duration-300">
+            {/* Top Bar */}
+            <header className="flex items-center justify-between px-6 py-5 sticky top-0 z-50 glass">
+                <div className="flex items-center gap-3">
+                    <div className="p-2 rounded-lg bg-primary/10">
+                        <span className="material-symbols-outlined text-primary">medical_services</span>
+                    </div>
+                    <div>
+                        <h2 className="text-sm font-medium text-slate-400 uppercase tracking-wider">Program</h2>
+                        <div className="relative group">
+                            <button className="text-lg font-bold flex items-center gap-1 hover:text-primary transition-colors">
+                                {activeProgram.name} <span className="text-xs">▾</span>
                             </button>
+                            <div className="absolute top-full left-0 mt-1 w-48 py-2 bg-slate-900 border border-white/10 rounded-xl shadow-2xl opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto transition-all z-50">
+                                {availablePrograms.map(prog => (
+                                    <button
+                                        key={prog.id}
+                                        onClick={() => switchProgram(prog.slug as any)}
+                                        className={`w-full text-left px-4 py-2 hover:bg-white/5 transition-colors ${activeProgram.id === prog.id ? 'text-primary font-bold' : 'text-white/70 font-medium'}`}
+                                    >
+                                        {prog.name}
+                                    </button>
+                                ))}
+                            </div>
                         </div>
                     </div>
-
-                    <div className="pt-3">
-                        <p className="text-sm font-medium text-foreground/70">{activeProgram.name} Categories</p>
+                </div>
+                <div className="flex items-center gap-4">
+                    <div className="flex items-center gap-2 bg-orange-500/10 px-3 py-1.5 rounded-full border border-orange-500/20">
+                        <span className={`material-symbols-outlined text-orange-500 text-sm fill-1 ${hasCheckedInToday ? 'animate-bounce' : ''}`}>local_fire_department</span>
+                        <span className="text-orange-500 font-bold text-sm">{currentStreak} Day Streak</span>
                     </div>
+                    <button onClick={logout} className="p-2 rounded-full hover:bg-red-500/10 text-red-500 transition-colors" title="Logout">
+                        <span className="material-symbols-outlined">logout</span>
+                    </button>
                 </div>
             </header>
 
-            {/* Content */}
-            <main className="mx-auto max-w-4xl px-5 pb-[180px] pt-4 stagger-1">
+            <main className="max-w-4xl mx-auto px-6 pt-6 flex flex-col gap-8 animate-in">
+                {/* Readiness Score Ring */}
+                <section className="flex flex-col items-center justify-center py-8">
+                    <div className="relative flex items-center justify-center w-48 h-48">
+                        {/* Background track circle */}
+                        <svg className="w-full h-full transform -rotate-90">
+                            <circle
+                                cx="96"
+                                cy="96"
+                                r="85"
+                                stroke="currentColor"
+                                strokeWidth="12"
+                                fill="transparent"
+                                className="text-slate-800/50"
+                            />
+                            {/* Progress circle */}
+                            <circle
+                                cx="96"
+                                cy="96"
+                                r="85"
+                                stroke="currentColor"
+                                strokeWidth="12"
+                                fill="transparent"
+                                strokeDasharray={2 * Math.PI * 85}
+                                strokeDashoffset={2 * Math.PI * 85 * (1 - readinessScore / 100)}
+                                strokeLinecap="round"
+                                className="text-primary transition-all duration-1000 ease-out"
+                                style={{ filter: 'drop-shadow(0 0 8px rgba(37, 123, 244, 0.5))' }}
+                            />
+                        </svg>
+                        
+                        <div className="absolute inset-0 flex flex-col items-center justify-center">
+                            <span className="text-5xl font-bold tracking-tighter">{readinessScore}%</span>
+                            <span className="text-xs font-semibold text-slate-400 uppercase tracking-widest mt-1">Readiness</span>
+                        </div>
+                        
+                        {/* Outer Glow */}
+                        <div className="absolute inset-0 rounded-full shadow-[0_0_40px_-10px_rgba(37,123,244,0.3)] pointer-events-none"></div>
+                    </div>
+                    <div className="mt-6 text-center">
+                        <p className={`font-medium flex items-center gap-2 ${readinessScore >= 75 ? 'text-emerald-400' : readinessScore >= 50 ? 'text-yellow-400' : 'text-red-400'}`}>
+                            <span className="material-symbols-outlined text-sm">
+                                {readinessScore >= 75 ? 'verified' : 'info'}
+                            </span>
+                            {readinessScore >= 75 ? 'High Probability of Passing' : readinessScore >= 50 ? 'Steady Progress' : 'More Practice Needed'}
+                        </p>
+                        <p className="text-slate-500 text-xs mt-1">Based on {questionsAttempted} simulated questions</p>
+                    </div>
+                </section>
 
-                {/* Readiness Score Card */}
-                <div className="animate-slide-up">
-                    <ReadinessScoreCard
-                        score={(() => {
-                            // Filter results to only those that belong to the CURRENT program
-                            const currentProgramQuizIds = new Set(quizzes.map(q => q.id));
-                            const relevantResults = Object.values(quizResults).filter(r => 
-                                currentProgramQuizIds.has(r.episodeId)
-                            );
+                {/* Main Action Buttons */}
+                <section className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <button 
+                        onClick={() => router.push('/quizzes')}
+                        className="w-full py-4 px-6 rounded-xl bg-gradient-to-r from-primary to-blue-600 flex items-center justify-between shadow-lg shadow-primary/20 hover:opacity-90 transition-opacity group"
+                    >
+                        <div className="flex items-center gap-4">
+                            <span className="material-symbols-outlined text-white">play_circle</span>
+                            <div className="text-left">
+                                <span className="block text-white font-bold text-lg">Start Quick Quiz</span>
+                                <span className="block text-white/70 text-xs">Test your knowledge now</span>
+                            </div>
+                        </div>
+                        <span className="material-symbols-outlined text-white/50 group-hover:text-white transition-colors">chevron_right</span>
+                    </button>
+                    
+                    <button 
+                        onClick={() => router.push('/audio')}
+                        className="w-full py-4 px-6 rounded-xl glass flex items-center justify-between hover:bg-white/5 transition-colors group"
+                    >
+                        <div className="flex items-center gap-4">
+                            <span className="material-symbols-outlined text-indigo-400">graphic_eq</span>
+                            <div className="text-left">
+                                <span className="block font-bold text-lg">Start Audio Lesson</span>
+                                <span className="block text-slate-400 text-xs text-indigo-200/60">Study while you move</span>
+                            </div>
+                        </div>
+                        <span className="material-symbols-outlined text-slate-500 group-hover:text-white transition-colors">chevron_right</span>
+                    </button>
+                </section>
 
-                            if (relevantResults.length === 0) return 0;
-
-                            const totalPercentage = relevantResults.reduce((acc, curr) => {
-                                const bestRaw = (curr.bestScore !== undefined && curr.bestScore !== null) 
-                                    ? curr.bestScore 
-                                    : curr.score;
-                                
-                                // Avoid division by zero
-                                if (!curr.total || curr.total === 0) return acc;
-                                
-                                const percentage = (bestRaw / curr.total) * 100;
-                                return acc + percentage;
-                            }, 0);
-
-                            return Math.round(totalPercentage / relevantResults.length);
-                        })()}
-                        totalQuestions={quizzes.reduce((acc, curr) => acc + (curr.questionCount || 0), 0)}
-                        questionsAttempted={(() => {
-                             const currentProgramQuizIds = new Set(quizzes.map(q => q.id));
-                             return Object.values(quizResults)
-                                .filter(r => currentProgramQuizIds.has(r.episodeId))
-                                .reduce((acc, curr) => acc + curr.total, 0);
-                        })()}
-                    />
-                </div>
+                {/* SRS Mini-Widget */}
+                <Link href="/reviews" className="glass rounded-xl p-5 flex items-center justify-between hover:bg-white/5 transition-all group">
+                    <div className="flex items-center gap-4">
+                        <div className="size-10 rounded-lg bg-indigo-500/20 flex items-center justify-center group-hover:scale-110 transition-transform">
+                            <span className="material-symbols-outlined text-indigo-400">layers</span>
+                        </div>
+                        <div>
+                            <h3 className="font-bold">SRS Flashcards</h3>
+                            <p className="text-slate-400 text-xs">Daily Spaced Repetition</p>
+                        </div>
+                    </div>
+                    <div className="bg-indigo-500/10 border border-indigo-500/30 px-3 py-1 rounded-lg">
+                        <span className="text-indigo-400 font-bold text-sm tracking-wide">{getDueCount()} due</span>
+                    </div>
+                </Link>
 
                 {/* Achievements Section */}
-                <div className="mb-6 animate-slide-up">
-                    <div className="flex items-center justify-between mb-2 px-1">
-                        <h2 className="text-sm font-bold text-yellow-400 flex items-center gap-2">
-                            <span>🏆</span> Achievements
-                        </h2>
-                        <Link href="/achievements" className="text-[10px] uppercase font-bold text-yellow-400/70 tracking-wider hover:text-yellow-400">
-                            View All →
-                        </Link>
+                <section className="flex flex-col gap-4">
+                    <div className="flex items-center justify-between px-1">
+                        <h3 className="text-lg font-bold tracking-tight">Recent Achievements</h3>
+                        <Link className="text-primary text-sm font-medium hover:underline" href="/achievements">View All</Link>
                     </div>
-
-                    <Link
-                        href="/achievements"
-                        className="group block relative overflow-hidden rounded-lg bg-gradient-to-br from-yellow-900/40 to-orange-900/40 border border-yellow-500/20 p-4 transition-all hover:border-yellow-500/40"
-                    >
-                        <div className="flex items-center justify-between mb-3">
-                            <div>
-                                <div className="text-3xl font-black text-yellow-400">{unlockedBadges.length}/{totalBadges}</div>
-                                <div className="text-xs text-yellow-400/70">Badges Unlocked</div>
+                    <div className="flex overflow-x-auto gap-6 pb-2 snap-x hide-scrollbar">
+                        {unlockedBadges.length > 0 ? recentBadges.map(badge => (
+                            <div key={badge.id} className="flex flex-col items-center gap-2 min-w-[100px] snap-center">
+                                <div className={`size-16 rounded-full glass flex items-center justify-center border transition-all hover:scale-110 ${
+                                    badge.rarity === 'legendary' ? 'badge-glow-orange border-orange-500/20' :
+                                    badge.rarity === 'epic' ? 'badge-glow-purple border-purple-500/20' :
+                                    badge.rarity === 'rare' ? 'badge-glow-blue border-primary/20' :
+                                    'badge-glow-emerald border-emerald-500/20'
+                                }`}>
+                                    <span className="text-3xl">{badge.icon}</span>
+                                </div>
+                                <span className="text-[10px] font-bold text-slate-400 uppercase tracking-tighter text-center max-w-[80px] truncate">{badge.name}</span>
                             </div>
-                            <div className="h-12 w-12 rounded-lg bg-yellow-500/20 flex items-center justify-center text-yellow-400 group-hover:scale-110 transition-transform">
-                                🏆
-                            </div>
-                        </div>
-
-                        {/* Progress Bar */}
-                        <div className="h-2 bg-background/30 rounded-full overflow-hidden mb-3">
-                            <div
-                                className="h-full bg-gradient-to-r from-yellow-500 to-orange-500 transition-all duration-500"
-                                style={{ width: `${achievementProgress}%` }}
-                            />
-                        </div>
-
-                        {/* Recent Badges */}
-                        {recentBadges.length > 0 ? (
-                            <div className="grid grid-cols-3 gap-2">
-                                {recentBadges.map(badge => (
-                                    <div key={badge.id} className="text-center">
-                                        <div className="text-2xl mb-1">{badge.icon}</div>
-                                        <div className="text-[9px] text-yellow-400/70 font-medium truncate">{badge.name}</div>
-                                    </div>
-                                ))}
-                            </div>
-                        ) : (
-                            <div className="text-center py-2">
-                                <span className="text-xs text-yellow-400/50 italic">Complete quizzes to unlock badges!</span>
+                        )) : (
+                            <div className="w-full text-center py-4 bg-white/5 rounded-xl border border-white/5">
+                                <p className="text-slate-500 text-xs italic">Complete quizzes to unlock badges!</p>
                             </div>
                         )}
-                    </Link>
-                </div>
+                    </div>
+                </section>
 
-                {/* Weakness Targeting Alert */}
-                {suggestedReview && (
-                    <div className="mb-6 animate-slide-up">
-                        <div className="flex items-center justify-between mb-2 px-1">
-                            <h2 className="text-sm font-bold text-red-400 flex items-center gap-2">
-                                <span>⚠️</span> Needs Review
-                            </h2>
-                            <span className="text-[10px] uppercase font-bold text-red-400/70 tracking-wider">Score &lt; 70%</span>
-                        </div>
-
-                        <Link
-                            href={`/audio`}
-                            className="group block relative overflow-hidden rounded-lg bg-gradient-to-br from-red-900/40 to-black/40 border border-red-500/20 p-4 transition-all hover:border-red-500/40"
-                        >
-                            <div className="flex items-center gap-4">
-                                <div className="h-12 w-12 rounded-lg bg-red-500/20 flex items-center justify-center text-red-400 group-hover:scale-110 transition-transform">
-                                    ▶
+                {/* AI Needs Review Section */}
+                <section className="flex flex-col gap-4">
+                    <div className="flex items-center justify-between px-1">
+                        <h3 className="text-lg font-bold tracking-tight">AI Needs Review</h3>
+                        <p className="text-slate-400 text-xs">Based on your quiz performance</p>
+                    </div>
+                    <div className="flex overflow-x-auto gap-4 pb-4 snap-x hide-scrollbar">
+                        {weakEpisodes.length > 0 ? weakEpisodes.map(ep => (
+                            <Link key={ep.id} href="/audio" className="min-w-[240px] snap-start glass rounded-xl p-4 flex flex-col gap-4 hover:bg-white/5 transition-all group">
+                                <div className="w-full h-32 rounded-lg bg-slate-800 overflow-hidden relative">
+                                    <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent flex items-center justify-center">
+                                        <span className="material-symbols-outlined text-white/20 text-5xl group-hover:scale-125 transition-transform">warning</span>
+                                    </div>
+                                    <div className={`absolute bottom-2 left-2 text-white text-[10px] font-bold px-2 py-0.5 rounded ${ep.status === 'CRITICAL' ? 'bg-red-500/80' : 'bg-orange-500/80'}`}>
+                                        {ep.status}
+                                    </div>
                                 </div>
                                 <div>
-                                    <div className="text-xs font-bold text-red-400 uppercase tracking-widest mb-1">Recommended</div>
-                                    <h3 className="font-bold text-white leading-tight">{suggestedReview.title}</h3>
-                                </div>
-                            </div>
-                        </Link>
-                    </div>
-                )}
-
-                {/* SRS Daily Review Widget */}
-                <div className="mb-6 animate-slide-up">
-                    <div className="flex items-center justify-between mb-2 px-1">
-                        <h2 className="text-sm font-bold text-indigo-300 flex items-center gap-2">
-                            <span>📚</span> Daily Reviews
-                        </h2>
-                        <Link href="/reviews" className="text-[10px] uppercase font-bold text-indigo-300/70 tracking-wider hover:text-indigo-300">
-                            View All →
-                        </Link>
-                    </div>
-
-                    <Link
-                        href="/reviews"
-                        className="group block relative overflow-hidden rounded-lg bg-gradient-to-br from-indigo-900/60 to-purple-900/60 border border-indigo-500/30 p-4 transition-all hover:border-indigo-500/50"
-                    >
-                        <div className="flex items-center justify-between mb-3">
-                            <div>
-                                <div className="text-3xl font-black text-white">{getDueCount()}</div>
-                                <div className="text-xs text-indigo-200">Cards Due Today</div>
-                            </div>
-                            <div className="h-12 w-12 rounded-lg bg-indigo-500/30 flex items-center justify-center text-indigo-200 group-hover:scale-110 transition-transform">
-                                🔄
-                            </div>
-                        </div>
-
-                        <div className="flex items-center gap-4 text-xs">
-                            <div>
-                                <span className="text-emerald-400 font-bold">{getMasteredCount()}</span>
-                                <span className="text-indigo-200/60"> Mastered</span>
-                            </div>
-                            <div>
-                                <span className="text-amber-400 font-bold">{getLearningCount()}</span>
-                                <span className="text-indigo-200/60"> Learning</span>
-                            </div>
-                        </div>
-
-                        {getDueCount() > 0 && (
-                            <div className="mt-3 text-xs text-white font-bold bg-indigo-500/20 py-2 px-3 rounded-lg inline-block">
-                                → Start Review Session
-                            </div>
-                        )}
-                    </Link>
-                </div>
-
-                <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-                    {cards.map((c) => {
-                        return (
-                            <Link
-                                key={c.title}
-                                href={c.href}
-                                className="relative aspect-square w-full overflow-hidden rounded-[2rem] border-[6px] border-white/10 shadow-[0_8px_20px_rgba(0,0,0,0.4),_inset_0_2px_4px_rgba(255,255,255,0.3)] transition-all duration-300 hover:scale-[1.02] active:scale-95 group"
-                                style={{
-                                    background: `linear-gradient(145deg, ${c.from}, ${c.to})`
-                                }}
-                            >
-                                {/* Gloss Sheen */}
-                                <div className="absolute inset-x-0 top-0 h-[45%] bg-gradient-to-b from-white/20 to-transparent pointer-events-none" />
-
-                                <div className="relative z-10 flex flex-col items-center justify-center h-full p-2 text-center gap-2">
-                                    {/* Icon */}
-                                    <div className="text-5xl text-white drop-shadow-[0_4px_6px_rgba(0,0,0,0.4)] mb-1 filter transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3">
-                                        {c.icon}
-                                    </div>
-
-                                    {/* Title */}
-                                    <div className="text-lg font-bold text-white tracking-wide drop-shadow-md px-2 leading-tight">
-                                        {c.title}
-                                    </div>
+                                    <p className="font-bold text-base line-clamp-1">{ep.title}</p>
+                                    <p className="text-slate-400 text-xs font-medium">Last score: {ep.score}%</p>
                                 </div>
                             </Link>
-                        );
-                    })}
-                </div>
+                        )) : (
+                            <div className="w-full flex items-center gap-4 glass p-6 rounded-xl">
+                                <span className="material-symbols-outlined text-emerald-400 text-4xl">check_circle</span>
+                                <div>
+                                    <p className="font-bold">Looking Good!</p>
+                                    <p className="text-slate-400 text-xs">No critical weak areas identified yet. Keep it up!</p>
+                                </div>
+                            </div>
+                        )}
+                    </div>
+                </section>
+
+                {/* Quick Access Grid */}
+                <section className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 pb-12">
+                    {[
+                        { title: "Mind Maps", icon: "psychology", color: "text-emerald-400", href: "/mindmaps" },
+                        { title: "Infographics", icon: "image", color: "text-pink-400", href: "/infographics" },
+                        { title: "Slide Decks", icon: "presentation_play", color: "text-indigo-400", href: "/slides" },
+                        { title: "Analytics", icon: "bar_chart", color: "text-blue-400", href: "/analytics" },
+                        { title: "Exam Mode", icon: "assignment_late", color: "text-red-400", href: "/exam/setup" },
+                        { title: "Study Guides", icon: "description", color: "text-amber-400", href: "/study-guides" },
+                    ].map(item => (
+                        <Link key={item.title} href={item.href} className="glass rounded-xl p-4 flex flex-col items-center gap-3 hover:bg-white/5 transition-all text-center group">
+                            <span className={`material-symbols-outlined text-3xl ${item.color} group-hover:scale-110 transition-transform`}>{item.icon}</span>
+                            <span className="text-xs font-bold uppercase tracking-tight">{item.title}</span>
+                        </Link>
+                    ))}
+                </section>
             </main>
         </div>
     );

@@ -6,7 +6,7 @@ import path from 'path';
 
 // Initialize OpenAI client
 const openai = new OpenAI({
-    apiKey: process.env.OPENAI_API_KEY,
+    apiKey: process.env.OPENAI_API_KEY || 'build-time-fallback',
 });
 
 export async function POST(request: Request) {

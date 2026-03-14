@@ -22,6 +22,8 @@ CREATE TABLE IF NOT EXISTS user_progress (
   completed BOOLEAN DEFAULT FALSE,
   score INTEGER,
   total INTEGER,
+  best_score INTEGER,
+  attempt_count INTEGER DEFAULT 1,
   completed_at TIMESTAMP,
   created_at TIMESTAMP DEFAULT NOW(),
   UNIQUE(user_id, content_type, content_id)

@@ -40,19 +40,27 @@ export default function Player() {
     useEffect(() => {
         if (audioRef.current) {
             if (isPlaying) {
-                // Initialize Audio Context and Analyser on play
+                // Try to initialize Web Audio API for waveform visualization
+                // Wrapped in try/catch — if it fails for any reason (CORS taint, browser policy),
+                // audio playback still works normally, just without the waveform.
                 if (!audioContextRef.current) {
-                    audioContextRef.current = new (window.AudioContext || (window as any).webkitAudioContext)();
-                    const analyser = audioContextRef.current.createAnalyser();
-                    analyser.fftSize = 256;
-                    sourceRef.current = audioContextRef.current.createMediaElementSource(audioRef.current);
-                    sourceRef.current.connect(analyser);
-                    analyser.connect(audioContextRef.current.destination);
-                    setAnalyser(analyser);
+                    try {
+                        audioContextRef.current = new (window.AudioContext || (window as any).webkitAudioContext)();
+                        const analyser = audioContextRef.current.createAnalyser();
+                        analyser.fftSize = 256;
+                        sourceRef.current = audioContextRef.current.createMediaElementSource(audioRef.current);
+                        sourceRef.current.connect(analyser);
+                        analyser.connect(audioContextRef.current.destination);
+                        setAnalyser(analyser);
+                    } catch (e) {
+                        console.warn('Web Audio API unavailable (waveform disabled, audio still plays):', e);
+                        // Null out so we don't retry
+                        audioContextRef.current = null;
+                    }
                 }
-                
-                if (audioContextRef.current.state === 'suspended') {
-                    audioContextRef.current.resume();
+
+                if (audioContextRef.current?.state === 'suspended') {
+                    audioContextRef.current.resume().catch(() => {});
                 }
 
                 audioRef.current.play().catch((e) => {

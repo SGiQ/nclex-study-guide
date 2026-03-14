@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect, use } from 'react';
+import React, { useState, useEffect, use } from 'react';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 
@@ -106,9 +106,12 @@ export default function QuizRunnerPage({ params }: { params: Promise<{ id: strin
         localStorage.setItem(`quiz_progress_${quizId}`, JSON.stringify(progressData));
     }, [currentQuestionIndex, score, quizId, quizCompleted, showResumePrompt]);
 
+    const hasUpdatedStats = React.useRef(false);
+
     // Clear progress when quiz is completed
     useEffect(() => {
-        if (quizCompleted && quiz?.questions) {
+        if (quizCompleted && quiz?.questions && !hasUpdatedStats.current) {
+            hasUpdatedStats.current = true;
             localStorage.removeItem(`quiz_progress_${quizId}`);
             setAttemptNumber(currentAttemptCount + 1);
             setBestScore(Math.max(Math.round((currentBestScoreRaw / quiz.questions.length) * 100), Math.round((score / quiz.questions.length) * 100)));

@@ -133,7 +133,7 @@ export default function DashboardPage() {
             </header>
 
             {/* Content */}
-            <main className="mx-auto max-w-md px-5 pb-[180px] pt-4 stagger-1">
+            <main className="mx-auto max-w-4xl px-5 pb-[180px] pt-4 stagger-1">
 
                 {/* Readiness Score Card */}
                 <div className="animate-slide-up">
@@ -293,7 +293,7 @@ export default function DashboardPage() {
                     </Link>
                 </div>
 
-                <div className="grid grid-cols-2 gap-4">
+                <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
                     {cards.map((c) => {
                         return (
                             <Link

@@ -238,11 +238,29 @@ export default function AdminPage() {
                             <p className="text-white/40 text-sm mt-2">Upload Concept Maps</p>
                         </Link>
 
-                        <div className="group flex flex-col items-center justify-center p-8 bg-white/5 backdrop-blur-sm rounded-lg border border-white/10 hover:border-blue-500/50 hover:bg-white/10 transition-all">
-                            <span className="text-5xl mb-4 group-hover:scale-110 transition-transform">🎧</span>
-                            <h3 className="text-lg font-bold text-white group-hover:text-blue-400 transition-colors">Audio Episodes</h3>
-                            <p className="text-white/40 text-sm mt-2">Manage Below ↓</p>
-                        </div>
+                        <button
+                            onClick={async () => {
+                                if (confirm('This will recalculate all user statistics from raw progress data. Proceed?')) {
+                                    const token = localStorage.getItem('token') || localStorage.getItem('adminToken');
+                                    try {
+                                        const res = await fetch('/api/repair-stats', {
+                                            method: 'POST',
+                                            headers: { 'Authorization': `Bearer ${token}` }
+                                        });
+                                        const data = await res.json();
+                                        if (res.ok) alert('Stats repaired successfully!');
+                                        else alert('Failed: ' + data.error);
+                                    } catch (e) {
+                                        alert('Error repairing stats');
+                                    }
+                                }
+                            }}
+                            className="group flex flex-col items-center justify-center p-8 bg-white/5 backdrop-blur-sm rounded-lg border border-white/10 hover:border-orange-500/50 hover:bg-white/10 transition-all"
+                        >
+                            <span className="text-5xl mb-4 group-hover:scale-110 transition-transform">🛠️</span>
+                            <h3 className="text-lg font-bold text-white group-hover:text-orange-400 transition-colors">Repair Stats</h3>
+                            <p className="text-white/40 text-sm mt-2">Fix Inflated Statistics</p>
+                        </button>
                     </div>
                 </div>
 

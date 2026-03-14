@@ -1,6 +1,6 @@
 'use client';
 
-import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
+import React, { createContext, useContext, useState, useEffect, useCallback, useMemo, ReactNode } from 'react';
 import { useProgress } from './ProgressContext';
 import { useAuth } from './AuthContext';
 
@@ -252,7 +252,7 @@ export function AchievementProvider({ children }: { children: ReactNode }) {
     }, [stats]);
 
 
-    const updateStats = (updates: Partial<Stats>) => {
+    const updateStats = useCallback((updates: Partial<Stats>) => {
         setStats(prev => {
             const newStats = { ...prev };
 
@@ -288,7 +288,7 @@ export function AchievementProvider({ children }: { children: ReactNode }) {
 
             return newStats;
         });
-    };
+    }, []);
 
     const unlockBadge = (badgeId: string): Badge | null => {
         let unlockedBadge: Badge | null = null;
@@ -306,7 +306,7 @@ export function AchievementProvider({ children }: { children: ReactNode }) {
         setRecentlyUnlocked(null);
     };
 
-    const checkAndUnlockBadges = (): Badge[] => {
+    const checkAndUnlockBadges = useCallback((): Badge[] => {
         const completedQuizzes = Object.values(quizResults).filter(r => r && r.score > 0);
         const newlyUnlocked: Badge[] = [];
 
@@ -367,7 +367,7 @@ export function AchievementProvider({ children }: { children: ReactNode }) {
         }
 
         return newlyUnlocked;
-    };
+    }, [quizResults, stats, recentlyUnlocked]);
 
     const getCompletionRate = (type: 'quiz' | 'audio' | 'overall'): number => {
         if (type === 'quiz') {
@@ -445,17 +445,19 @@ export function AchievementProvider({ children }: { children: ReactNode }) {
         checkAndUnlockBadges();
     }, [stats, quizResults]);
 
+    const value = useMemo(() => ({
+        badges,
+        stats,
+        recentlyUnlocked,
+        checkAndUnlockBadges,
+        updateStats,
+        getCompletionRate,
+        dismissNotification,
+        getNextBadge
+    }), [badges, stats, recentlyUnlocked, checkAndUnlockBadges, updateStats]);
+
     return (
-        <AchievementContext.Provider value={{
-            badges,
-            stats,
-            recentlyUnlocked,
-            checkAndUnlockBadges,
-            updateStats,
-            getCompletionRate,
-            dismissNotification,
-            getNextBadge
-        }}>
+        <AchievementContext.Provider value={value}>
             {children}
         </AchievementContext.Provider>
     );

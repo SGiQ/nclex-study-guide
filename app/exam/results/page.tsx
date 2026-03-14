@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { useProgress } from '@/app/context/ProgressContext';
@@ -28,6 +28,8 @@ export default function ExamResultsPage() {
     const { saveQuizResult } = useProgress();
     const { updateStats, checkAndUnlockBadges } = useAchievements();
 
+    const hasSavedStats = React.useRef(false);
+
     useEffect(() => {
         const savedResultsStr = localStorage.getItem('examResults');
         if (!savedResultsStr) {
@@ -38,7 +40,8 @@ export default function ExamResultsPage() {
         const savedResults: ExamResults = JSON.parse(savedResultsStr);
 
         // If not saved to stats yet, do it now
-        if (!savedResults.savedToStats) {
+        if (!savedResults.savedToStats && !hasSavedStats.current) {
+            hasSavedStats.current = true;
             // Use startTime as a unique ID for this exam session, or Date.now() if missing
             const uniqueId = savedResults.startTime || Date.now();
 

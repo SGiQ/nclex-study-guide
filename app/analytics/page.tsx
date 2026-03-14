@@ -1,266 +1,207 @@
 'use client';
 
-import Link from 'next/link';
+import React, { useMemo } from 'react';
 import { useProgress } from '@/app/context/ProgressContext';
 import { useSRS } from '@/app/context/SRSContext';
 import { useStreak } from '@/app/context/StreakContext';
-import episodes from '@/app/data/episodes.json';
-import quizzes from '@/app/data/quizzes.json';
+import { useRouter } from 'next/navigation';
+import quizzesData from '@/app/data/quizzes.json';
+import episodesData from '@/app/data/episodes.json';
+
+type QuizEntry = { id: number; episodeId: number; title: string; description: string; questionCount: number };
+type EpEntry = { id: number; title: string; description: string };
 
 export default function AnalyticsPage() {
-    const { quizResults } = useProgress();
-    const { getMasteredCount, getLearningCount, getNewCount, reviewData } = useSRS();
+    const { quizResults, audioProgress } = useProgress();
+    const { getMasteredCount, getLearningCount, getNewCount, getDueCount, reviewData } = useSRS();
     const { currentStreak } = useStreak();
+    const router = useRouter();
 
-    // Calculate Quiz Performance (40% weight)
-    const quizScores = Object.values(quizResults);
-    const avgQuizScore = quizScores.length > 0
-        ? quizScores.reduce((sum, r) => sum + (r.score / r.total), 0) / quizScores.length
-        : 0;
-    const quizPerformance = avgQuizScore * 100;
+    const quizzes = quizzesData as QuizEntry[];
+    const episodes = episodesData as EpEntry[];
 
-    // Calculate Flashcard Mastery (30% weight)
-    const totalCards = getMasteredCount() + getLearningCount() + getNewCount();
-    const flashcardMastery = totalCards > 0
-        ? (getMasteredCount() / totalCards) * 100
-        : 0;
+    // Build per-episode stats (topic by topic)
+    const episodeStats = useMemo(() => {
+        return episodes.map(ep => {
+            const epQuizzes = quizzes.filter(q => q.episodeId === ep.id);
+            // Try episode ID directly, then check all quiz IDs for that episode
+            const results = epQuizzes.map(q => quizResults[q.id] || quizResults[ep.id]).filter(Boolean);
 
-    // Calculate Study Consistency (20% weight)
-    const studyConsistency = Math.min(currentStreak * 5, 100); // 20 days = 100%
+            const hasAudio = Object.values(audioProgress || {}).some(a => a.episodeId === ep.id && a.completed);
 
-    // Calculate Weak Area Improvement (10% weight)
-    const weakAreas = quizScores.filter(r => (r.score / r.total) < 0.7);
-    const weakAreaImprovement = weakAreas.length === 0 ? 100 : Math.max(0, 100 - (weakAreas.length * 10));
+            let bestPct: number | null = null;
+            if (results.length > 0) {
+                const scores = results.map(r => {
+                    const best = (r.bestScore !== undefined && r.bestScore !== null) ? r.bestScore : r.score;
+                    return r.total > 0 ? (best / r.total) * 100 : 0;
+                });
+                bestPct = Math.round(Math.max(...scores));
+            }
 
-    // READINESS SCORE (0-100%)
-    const readinessScore = Math.round(
-        quizPerformance * 0.40 +
-        flashcardMastery * 0.30 +
-        studyConsistency * 0.20 +
-        weakAreaImprovement * 0.10
-    );
+            return { ep, hasAudio, bestPct, quizCount: epQuizzes.length, resultCount: results.length };
+        });
+    }, [episodes, quizzes, quizResults, audioProgress]);
 
-    // Category Performance
-    const categoryPerformance: Record<string, { total: number; correct: number; count: number }> = {};
+    const attempted = episodeStats.filter(s => s.bestPct !== null);
+    const avgScore = attempted.length > 0
+        ? Math.round(attempted.reduce((acc, s) => acc + (s.bestPct ?? 0), 0) / attempted.length)
+        : null;
 
-    quizScores.forEach(result => {
-        const quiz = quizzes.find(q => q.episodeId === result.episodeId);
-        const episode = episodes.find(e => e.id === result.episodeId);
-        const category = episode?.category || 'Other';
-
-        if (!categoryPerformance[category]) {
-            categoryPerformance[category] = { total: 0, correct: 0, count: 0 };
-        }
-
-        categoryPerformance[category].total += result.total;
-        categoryPerformance[category].correct += result.score;
-        categoryPerformance[category].count += 1;
-    });
-
-    const categories = Object.entries(categoryPerformance).map(([name, data]) => ({
-        name,
-        percentage: Math.round((data.correct / data.total) * 100),
-        questionsAnswered: data.total,
-    })).sort((a, b) => b.percentage - a.percentage);
-
-    // Study Statistics
-    const totalQuestionsAnswered = quizScores.reduce((sum, r) => sum + r.total, 0);
+    const strong = attempted.filter(s => (s.bestPct ?? 0) >= 80);
+    const needsWork = attempted.filter(s => (s.bestPct ?? 0) < 70);
+    const audioCompleted = Object.values(audioProgress || {}).filter(a => a.completed).length;
+    const totalQuestionsAnswered = Object.values(quizResults).reduce((sum, r) => sum + (r.total || 0), 0);
     const totalFlashcardsReviewed = Object.keys(reviewData).length;
 
-    // Get readiness color
-    const getReadinessColor = (score: number) => {
-        if (score >= 80) return { bg: 'from-green-500/20 to-emerald-500/20', border: 'border-green-500/30', text: 'text-green-400' };
-        if (score >= 60) return { bg: 'from-yellow-500/20 to-orange-500/20', border: 'border-yellow-500/30', text: 'text-yellow-400' };
-        return { bg: 'from-red-500/20 to-pink-500/20', border: 'border-red-500/30', text: 'text-red-400' };
+    const getScoreColor = (pct: number | null) => {
+        if (pct === null) return 'text-slate-600';
+        if (pct >= 80) return 'text-emerald-400';
+        if (pct >= 70) return 'text-amber-400';
+        return 'text-red-400';
     };
 
-    const readinessColor = getReadinessColor(readinessScore);
+    const getScoreBg = (pct: number | null) => {
+        if (pct === null) return 'border-white/5';
+        if (pct >= 80) return 'border-emerald-500/20';
+        if (pct >= 70) return 'border-amber-500/20';
+        return 'border-red-500/20';
+    };
 
-    // Get category color
-    const getCategoryColor = (percentage: number) => {
-        if (percentage >= 80) return 'bg-green-500';
-        if (percentage >= 70) return 'bg-yellow-500';
+    const getBarColor = (pct: number | null) => {
+        if (pct === null) return 'bg-slate-700';
+        if (pct >= 80) return 'bg-emerald-500';
+        if (pct >= 70) return 'bg-amber-500';
         return 'bg-red-500';
     };
 
-    // Identify weak areas
-    const weakCategories = categories.filter(c => c.percentage < 70);
-
     return (
-        <div className="min-h-screen bg-background text-foreground pb-[180px]">
-            {/* Header */}
-            <div className="sticky top-0 z-10 bg-background/80 backdrop-blur-md border-b border-nav-border px-4 py-4">
-                <div className="flex items-center gap-4">
-                    <Link href="/dashboard" className="h-8 w-8 flex items-center justify-center rounded-full bg-surface/10 hover:bg-surface/20 transition-colors">
-                        ←
-                    </Link>
-                    <div>
-                        <h1 className="text-2xl font-black tracking-tight">Performance Analytics</h1>
-                        <p className="text-xs font-medium opacity-60">Track your NCLEX readiness</p>
-                    </div>
+        <div className="min-h-screen bg-background text-foreground pb-32">
+            <div className="max-w-2xl mx-auto px-5 pt-12 pb-6">
+                {/* Header */}
+                <div className="mb-8">
+                    <h1 className="text-3xl font-black uppercase tracking-tight">Performance</h1>
+                    <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-slate-500 mt-1">Your NCLEX Exam Analytics</p>
                 </div>
-            </div>
 
-            <div className="px-4 py-6 max-w-2xl mx-auto space-y-6">
-
-                {/* Readiness Score Card */}
-                <div className={`p-6 rounded-lg bg-gradient-to-br ${readinessColor.bg} border ${readinessColor.border}`}>
-                    <div className="text-center">
-                        <div className="text-sm font-bold text-foreground/60 uppercase tracking-wider mb-2">
-                            NCLEX Readiness Score
+                {/* Top KPI Cards */}
+                <div className="grid grid-cols-2 gap-3 mb-6">
+                    <div className="glass-card rounded-[9px] p-5 border border-white/5 col-span-2 flex items-center gap-6">
+                        <div className="text-center">
+                            <p className={`text-4xl font-black ${avgScore !== null ? getScoreColor(avgScore) : 'text-slate-700'}`}>
+                                {avgScore !== null ? `${avgScore}%` : '—'}
+                            </p>
+                            <p className="text-[8px] font-black uppercase text-slate-500 tracking-wider mt-1">Avg Quiz Score</p>
                         </div>
-                        <div className={`text-7xl font-black ${readinessColor.text} mb-2`}>
-                            {readinessScore}%
-                        </div>
-                        <div className="text-sm text-foreground/70 mb-4">
-                            {readinessScore >= 80 && "🎉 You're ready to pass!"}
-                            {readinessScore >= 60 && readinessScore < 80 && "📚 Almost there! Keep studying."}
-                            {readinessScore < 60 && "💪 Keep going! You're making progress."}
-                        </div>
-
-                        {/* Progress Bar */}
-                        <div className="h-3 bg-background/30 rounded-full overflow-hidden">
-                            <div
-                                className={`h-full ${readinessScore >= 80 ? 'bg-green-500' : readinessScore >= 60 ? 'bg-yellow-500' : 'bg-red-500'} transition-all duration-500`}
-                                style={{ width: `${readinessScore}%` }}
-                            />
-                        </div>
-
-                        {/* Score Breakdown */}
-                        <div className="grid grid-cols-2 gap-3 mt-6">
-                            <div className="p-3 rounded-lg bg-background/30">
-                                <div className="text-xs text-foreground/60">Quiz Performance</div>
-                                <div className="text-lg font-bold">{Math.round(quizPerformance)}%</div>
-                                <div className="text-[10px] text-foreground/40">40% weight</div>
+                        <div className="flex-1 grid grid-cols-3 gap-4 text-center">
+                            <div>
+                                <p className="text-xl font-black text-orange-400">{currentStreak}</p>
+                                <p className="text-[8px] font-black uppercase text-slate-600 tracking-wider mt-1">Day Streak</p>
                             </div>
-                            <div className="p-3 rounded-lg bg-background/30">
-                                <div className="text-xs text-foreground/60">Card Mastery</div>
-                                <div className="text-lg font-bold">{Math.round(flashcardMastery)}%</div>
-                                <div className="text-[10px] text-foreground/40">30% weight</div>
+                            <div>
+                                <p className="text-xl font-black text-indigo-400">{audioCompleted}/{episodes.length}</p>
+                                <p className="text-[8px] font-black uppercase text-slate-600 tracking-wider mt-1">Listened</p>
                             </div>
-                            <div className="p-3 rounded-lg bg-background/30">
-                                <div className="text-xs text-foreground/60">Consistency</div>
-                                <div className="text-lg font-bold">{Math.round(studyConsistency)}%</div>
-                                <div className="text-[10px] text-foreground/40">20% weight</div>
-                            </div>
-                            <div className="p-3 rounded-lg bg-background/30">
-                                <div className="text-xs text-foreground/60">Improvement</div>
-                                <div className="text-lg font-bold">{Math.round(weakAreaImprovement)}%</div>
-                                <div className="text-[10px] text-foreground/40">10% weight</div>
+                            <div>
+                                <p className="text-xl font-black text-slate-300">{totalQuestionsAnswered}</p>
+                                <p className="text-[8px] font-black uppercase text-slate-600 tracking-wider mt-1">Q Answered</p>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                {/* Study Statistics */}
-                <div>
-                    <h2 className="text-lg font-bold mb-3 flex items-center gap-2">
-                        <span>📊</span> Study Statistics
-                    </h2>
-                    <div className="grid grid-cols-2 gap-3">
-                        <div className="p-4 rounded-lg bg-card border border-card-border">
-                            <div className="text-3xl font-black text-indigo-400">{totalQuestionsAnswered}</div>
-                            <div className="text-xs text-foreground/60">Questions Answered</div>
+                {/* SRS Cards */}
+                <div className="glass-card rounded-[9px] p-5 border border-white/5 mb-6">
+                    <h2 className="text-[9px] font-black uppercase tracking-[0.2em] text-slate-500 mb-4">Flashcard Mastery (SRS)</h2>
+                    <div className="grid grid-cols-4 gap-3 text-center">
+                        <div>
+                            <p className="text-xl font-black text-emerald-400">{getMasteredCount()}</p>
+                            <p className="text-[8px] font-black uppercase text-slate-600 mt-1">Mastered</p>
                         </div>
-                        <div className="p-4 rounded-lg bg-card border border-card-border">
-                            <div className="text-3xl font-black text-purple-400">{getMasteredCount()}</div>
-                            <div className="text-xs text-foreground/60">Cards Mastered</div>
+                        <div>
+                            <p className="text-xl font-black text-amber-400">{getLearningCount()}</p>
+                            <p className="text-[8px] font-black uppercase text-slate-600 mt-1">Learning</p>
                         </div>
-                        <div className="p-4 rounded-lg bg-card border border-card-border">
-                            <div className="text-3xl font-black text-orange-400">{currentStreak}</div>
-                            <div className="text-xs text-foreground/60">Day Streak</div>
+                        <div>
+                            <p className="text-xl font-black text-slate-400">{getNewCount()}</p>
+                            <p className="text-[8px] font-black uppercase text-slate-600 mt-1">New</p>
                         </div>
-                        <div className="p-4 rounded-lg bg-card border border-card-border">
-                            <div className="text-3xl font-black text-green-400">{quizScores.length}</div>
-                            <div className="text-xs text-foreground/60">Quizzes Completed</div>
+                        <div>
+                            <p className="text-xl font-black text-pink-400">{getDueCount()}</p>
+                            <p className="text-[8px] font-black uppercase text-slate-600 mt-1">Due Today</p>
                         </div>
                     </div>
+                    {getDueCount() > 0 && (
+                        <button onClick={() => router.push('/reviews')} className="mt-4 w-full py-2.5 rounded-[9px] bg-pink-500/15 border border-pink-500/25 text-pink-400 text-[10px] font-black uppercase tracking-widest hover:bg-pink-500/20 transition-colors">
+                            Review {getDueCount()} Due Cards Now →
+                        </button>
+                    )}
                 </div>
 
-                {/* Category Performance */}
-                {categories.length > 0 && (
-                    <div>
-                        <h2 className="text-lg font-bold mb-3 flex items-center gap-2">
-                            <span>🎯</span> Category Performance
-                        </h2>
-                        <div className="space-y-3">
-                            {categories.map((category) => (
-                                <div key={category.name} className="p-4 rounded-lg bg-card border border-card-border">
-                                    <div className="flex items-center justify-between mb-2">
-                                        <div>
-                                            <div className="font-bold text-foreground">{category.name}</div>
-                                            <div className="text-xs text-foreground/60">{category.questionsAnswered} questions</div>
-                                        </div>
-                                        <div className="text-2xl font-black" style={{ color: category.percentage >= 80 ? '#4ade80' : category.percentage >= 70 ? '#fbbf24' : '#f87171' }}>
-                                            {category.percentage}%
-                                        </div>
-                                    </div>
-                                    <div className="h-2 bg-surface/10 rounded-full overflow-hidden">
-                                        <div
-                                            className={`h-full ${getCategoryColor(category.percentage)} transition-all duration-500`}
-                                            style={{ width: `${category.percentage}%` }}
-                                        />
-                                    </div>
-                                </div>
+                {/* Needs Work Alert */}
+                {needsWork.length > 0 && (
+                    <div className="rounded-[9px] border border-red-500/30 bg-red-500/5 p-5 mb-4">
+                        <h2 className="text-[9px] font-black uppercase tracking-widest text-red-400 mb-3">⚠️ Needs Improvement — {needsWork.length} topic{needsWork.length !== 1 ? 's' : ''}</h2>
+                        <div className="flex flex-wrap gap-2">
+                            {needsWork.map(s => (
+                                <button key={s.ep.id} onClick={() => router.push(`/library/episodes/${s.ep.id}`)}
+                                    className="px-3 py-1.5 rounded-[6px] bg-red-500/15 border border-red-500/25 text-red-300 text-[10px] font-bold uppercase tracking-wider hover:bg-red-500/25 transition-colors">
+                                    {s.ep.title.split(':')[0].trim()} · {s.bestPct}%
+                                </button>
                             ))}
                         </div>
                     </div>
                 )}
 
-                {/* Weak Areas */}
-                {weakCategories.length > 0 && (
-                    <div>
-                        <h2 className="text-lg font-bold mb-3 flex items-center gap-2">
-                            <span>⚠️</span> Areas Needing Attention
-                        </h2>
-                        <div className="p-4 rounded-lg bg-gradient-to-br from-red-500/10 to-orange-500/10 border border-red-500/20">
-                            <p className="text-sm text-foreground/80 mb-3">
-                                Focus on these categories to improve your readiness score:
-                            </p>
-                            <div className="space-y-2">
-                                {weakCategories.map((category) => (
-                                    <div key={category.name} className="flex items-center justify-between text-sm">
-                                        <span className="font-medium text-red-400">{category.name}</span>
-                                        <span className="text-red-400/70">{category.percentage}%</span>
-                                    </div>
-                                ))}
-                            </div>
-                            <Link
-                                href="/quizzes"
-                                className="mt-4 block w-full py-2 rounded-lg bg-red-500/20 hover:bg-red-500/30 transition-colors text-center text-sm font-bold text-red-400"
-                            >
-                                Practice Weak Areas →
-                            </Link>
+                {/* Strong Areas */}
+                {strong.length > 0 && (
+                    <div className="rounded-[9px] border border-emerald-500/25 bg-emerald-500/5 p-5 mb-4">
+                        <h2 className="text-[9px] font-black uppercase tracking-widest text-emerald-400 mb-3">✅ Strong Areas — {strong.length} topic{strong.length !== 1 ? 's' : ''}</h2>
+                        <div className="flex flex-wrap gap-2">
+                            {strong.map(s => (
+                                <span key={s.ep.id} className="px-3 py-1.5 rounded-[6px] bg-emerald-500/15 border border-emerald-500/25 text-emerald-300 text-[10px] font-bold uppercase tracking-wider">
+                                    {s.ep.title.split(':')[0].trim()} · {s.bestPct}%
+                                </span>
+                            ))}
                         </div>
                     </div>
                 )}
 
                 {/* Empty State */}
-                {quizScores.length === 0 && (
-                    <div className="text-center py-12">
-                        <div className="text-6xl mb-4">📊</div>
-                        <h2 className="text-2xl font-bold mb-2">No Data Yet</h2>
-                        <p className="text-foreground/60 mb-6">
-                            Complete some quizzes and review flashcards to see your analytics!
-                        </p>
-                        <Link
-                            href="/quizzes"
-                            className="inline-block px-6 py-3 rounded-lg bg-indigo-600 hover:bg-indigo-500 transition-colors font-semibold"
-                        >
-                            Start a Quiz
-                        </Link>
+                {attempted.length === 0 && (
+                    <div className="glass-card rounded-[9px] border border-white/5 p-16 text-center mb-4">
+                        <span className="material-symbols-outlined text-5xl text-slate-700 block mb-4">bar_chart</span>
+                        <p className="text-[10px] font-black uppercase text-slate-600 tracking-widest">No quiz data yet</p>
+                        <p className="text-[9px] text-slate-700 mt-2">Take a quiz to see your performance breakdown</p>
+                        <button onClick={() => router.push('/audio')} className="mt-6 px-6 py-2.5 rounded-[9px] bg-primary/20 border border-primary/30 text-primary text-[10px] font-black uppercase tracking-widest">
+                            Start Studying →
+                        </button>
                     </div>
                 )}
 
-                {/* Motivational Message */}
-                {quizScores.length > 0 && (
-                    <div className="p-4 rounded-lg bg-gradient-to-br from-indigo-500/10 to-purple-500/10 border border-indigo-500/20">
-                        <div className="text-sm text-foreground/80">
-                            <strong>💡 Tip:</strong> Aim for 80%+ readiness score before your exam.
-                            Focus on weak categories and maintain your study streak for best results!
+                {/* Full Topic Breakdown */}
+                <div className="space-y-2.5">
+                    <h2 className="text-[9px] font-black uppercase tracking-[0.2em] text-slate-500 ml-1 mb-3">All Topics</h2>
+                    {episodeStats.map(({ ep, hasAudio, bestPct, quizCount, resultCount }) => (
+                        <div key={ep.id} onClick={() => router.push(`/library/episodes/${ep.id}`)}
+                            className={`glass-card rounded-[9px] p-4 border cursor-pointer hover:border-white/10 transition-all ${getScoreBg(bestPct)}`}>
+                            <div className="flex items-center justify-between mb-2">
+                                <div className="flex items-center gap-2 flex-1 min-w-0">
+                                    <div className={`w-2 h-2 rounded-full flex-shrink-0 ${hasAudio ? 'bg-indigo-400' : 'bg-slate-800'}`} />
+                                    <span className="text-[10px] font-black uppercase tracking-tight truncate">{ep.title}</span>
+                                </div>
+                                <div className="flex items-center gap-3 flex-shrink-0 ml-2">
+                                    <span className="text-[9px] font-bold text-slate-600">{resultCount}/{quizCount}</span>
+                                    <span className={`text-sm font-black w-10 text-right ${getScoreColor(bestPct)}`}>
+                                        {bestPct !== null ? `${bestPct}%` : '—'}
+                                    </span>
+                                </div>
+                            </div>
+                            <div className="w-full h-1 bg-white/5 rounded-full overflow-hidden">
+                                <div className={`h-full rounded-full transition-all ${getBarColor(bestPct)}`} style={{ width: `${bestPct ?? 0}%` }} />
+                            </div>
                         </div>
-                    </div>
-                )}
+                    ))}
+                </div>
             </div>
         </div>
     );

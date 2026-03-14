@@ -117,11 +117,11 @@ ${bookContext}
 
         // 7. Create streaming response
         const stream = await openai.chat.completions.create({
-            model: 'gpt-4-turbo-preview',
+            model: 'gpt-4o-mini', // Fast, affordable, highly capable
             messages: [systemMessage, ...formattedMessages],
             stream: true,
-            temperature: 0.7,
-            max_tokens: 2000,
+            temperature: 0.6,
+            max_tokens: 1500,
         });
 
         // 8. Stream response to client

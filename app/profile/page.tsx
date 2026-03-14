@@ -73,6 +73,24 @@ export default function ProfilePage() {
                     ))}
                 </section>
 
+                {/* Analytics Link */}
+                <section>
+                    <button
+                        onClick={() => router.push('/analytics')}
+                        className="w-full py-5 px-6 rounded-[9px] glass border border-white/5 text-foreground flex items-center gap-4 hover:bg-white/5 active:scale-95 transition-all group overflow-hidden relative"
+                    >
+                        <div className="absolute inset-0 bg-primary/5 group-hover:bg-primary/10 transition-colors" />
+                        <div className="h-12 w-12 rounded-[9px] bg-primary/10 text-primary border border-primary/20 flex items-center justify-center flex-shrink-0 relative z-10">
+                            <span className="material-symbols-outlined text-2xl group-hover:scale-110 transition-transform">bar_chart</span>
+                        </div>
+                        <div className="text-left flex-1 relative z-10">
+                            <h3 className="text-lg font-black uppercase tracking-tight">Performance Analytics</h3>
+                            <p className="text-[10px] font-bold opacity-50 uppercase tracking-widest mt-0.5">View your topic breakdown</p>
+                        </div>
+                        <span className="material-symbols-outlined text-xl opacity-30 group-hover:translate-x-1 transition-all relative z-10">arrow_forward_ios</span>
+                    </button>
+                </section>
+
                 {/* Account Settings */}
                 <section className="space-y-3">
                     <h2 className="text-[10px] font-black uppercase tracking-[0.2em] text-slate-500 ml-1">Account Settings</h2>

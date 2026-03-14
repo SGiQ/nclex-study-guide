@@ -138,20 +138,36 @@ export default function DashboardPage() {
                 {/* Readiness Score Card */}
                 <div className="animate-slide-up">
                     <ReadinessScoreCard
-                        score={
-                            quizResults && Object.keys(quizResults).length > 0
-                                ? Math.round(
-                                    Object.values(quizResults).reduce((acc, curr) => {
-                                        const bestRaw = curr.bestScore !== undefined ? curr.bestScore : curr.score;
-                                        const percentage = (bestRaw / curr.total) * 100;
-                                        return acc + percentage;
-                                    }, 0) /
-                                    Object.values(quizResults).length
-                                )
-                                : 0
-                        }
+                        score={(() => {
+                            // Filter results to only those that belong to the CURRENT program
+                            const currentProgramQuizIds = new Set(quizzes.map(q => q.id));
+                            const relevantResults = Object.values(quizResults).filter(r => 
+                                currentProgramQuizIds.has(r.episodeId)
+                            );
+
+                            if (relevantResults.length === 0) return 0;
+
+                            const totalPercentage = relevantResults.reduce((acc, curr) => {
+                                const bestRaw = (curr.bestScore !== undefined && curr.bestScore !== null) 
+                                    ? curr.bestScore 
+                                    : curr.score;
+                                
+                                // Avoid division by zero
+                                if (!curr.total || curr.total === 0) return acc;
+                                
+                                const percentage = (bestRaw / curr.total) * 100;
+                                return acc + percentage;
+                            }, 0);
+
+                            return Math.round(totalPercentage / relevantResults.length);
+                        })()}
                         totalQuestions={quizzes.reduce((acc, curr) => acc + (curr.questionCount || 0), 0)}
-                        questionsAttempted={Object.values(quizResults).reduce((acc, curr) => acc + curr.total, 0)}
+                        questionsAttempted={(() => {
+                             const currentProgramQuizIds = new Set(quizzes.map(q => q.id));
+                             return Object.values(quizResults)
+                                .filter(r => currentProgramQuizIds.has(r.episodeId))
+                                .reduce((acc, curr) => acc + curr.total, 0);
+                        })()}
                     />
                 </div>
 

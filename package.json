@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev --webpack",
     "build": "next build --webpack",
-    "start": "npm run migrate && next start",
+    "start": "next start",
     "lint": "eslint",
     "ingest-pdfs": "node scripts/ingest-pdfs.js",
     "migrate": "npx tsx scripts/migrations/run-migration.ts"

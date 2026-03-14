@@ -39,7 +39,7 @@ export default function QuizListPage() {
         <div className="min-h-dvh bg-background text-foreground transition-colors duration-300">
             {/* Header */}
             <header className="sticky top-0 z-30 bg-background/80 backdrop-blur border-b border-nav-border animate-in">
-                <div className="mx-auto max-w-2xl px-4 py-3">
+                <div className="mx-auto max-w-md px-4 py-3">
                     <div className="flex items-center gap-3">
                         <Link
                             href="/dashboard"
@@ -52,7 +52,7 @@ export default function QuizListPage() {
                 </div>
             </header>
 
-            <main className="mx-auto max-w-2xl px-6 py-8 pb-[180px]">
+            <main className="mx-auto max-w-md px-6 py-8 pb-mini-player">
                 <div className="mb-8">
                     <h2 className="text-2xl font-bold mb-2">Practice Tests</h2>
                     <p className="text-foreground/60">Select a topic to begin a focused practice session. Immediate feedback provided.</p>

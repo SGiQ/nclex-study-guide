@@ -37,10 +37,10 @@ export default function LibraryPage() {
     };
 
     return (
-        <div className="min-h-dvh bg-background text-foreground pb-[180px]">
+        <div className="min-h-dvh bg-background text-foreground pb-mini-player">
             {/* Header */}
             <header className="sticky top-0 z-30 bg-background/80 backdrop-blur border-b border-nav-border animate-in">
-                <div className="mx-auto max-w-2xl px-4 pt-4 pb-3">
+                <div className="mx-auto max-w-md px-4 pt-4 pb-3">
                     <div className="flex items-center gap-3">
                         <Link
                             href="/"
@@ -59,7 +59,7 @@ export default function LibraryPage() {
                 </div>
             </header>
 
-            <main className="mx-auto max-w-2xl px-5 pt-6 space-y-4">
+            <main className="mx-auto max-w-md px-5 pt-6 space-y-4">
                 {episodesData.map((episode) => {
                     const hasQuiz = quizzesData.some(q => q.episodeId === episode.id);
                     const hasFlashcards = flashcardsData.some(f => f.episodeId === episode.id);

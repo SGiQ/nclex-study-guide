@@ -55,9 +55,10 @@ export default function AudioParams() {
     };
 
     return (
-        <div className="pb-[180px] bg-background min-h-screen text-foreground">
+        <div className="pb-mini-player bg-background min-h-dvh text-foreground">
             {/* Header */}
-            <div className="sticky top-0 z-10 bg-background/80 backdrop-blur-md border-b border-nav-border px-4 py-4">
+            <div className="sticky top-0 z-10 bg-background/80 backdrop-blur-md border-b border-nav-border">
+                <div className="mx-auto max-w-md px-4 py-4">
                 <div className="flex items-center gap-4 mb-4">
                     <Link href="/" className="h-8 w-8 flex items-center justify-center rounded-full bg-surface/10 hover:bg-surface/20 transition-colors">
                         ←
@@ -79,10 +80,11 @@ export default function AudioParams() {
                         className="w-full h-11 pl-10 pr-4 rounded-lg bg-surface/5 border border-nav-border focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all placeholder:text-foreground/30 text-sm font-medium"
                     />
                 </div>
+                </div>
             </div>
 
             {/* Episode List */}
-            <div className="divide-y divide-nav-border stagger-1">
+            <div className="mx-auto max-w-md divide-y divide-nav-border stagger-1">
                 {filteredEpisodes.map((episode) => {
                     const isCurrent = currentEpisode?.id === episode.id;
 

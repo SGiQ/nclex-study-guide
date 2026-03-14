@@ -1,6 +1,0 @@
-Migration failed: Error: read ECONNRESET
-{
-  "errno": -4077,
-  "code": "ECONNRESET",
-  "syscall": "read"
-}

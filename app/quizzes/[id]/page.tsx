@@ -207,7 +207,7 @@ export default function QuizRunnerPage({ params }: { params: Promise<{ id: strin
         const savedProgress: QuizProgress | null = savedProgressStr ? JSON.parse(savedProgressStr) : null;
 
         return (
-            <div className="min-h-dvh bg-[#0A0A0F] text-white flex items-center justify-center p-6">
+            <div className="min-h-dvh bg-[#0A0A0F] text-white flex items-center justify-center p-6 relative z-[60] pb-mini-player">
                 <div className="max-w-md w-full bg-[#1A1A20] rounded-lg p-8 border border-white/10 shadow-2xl">
                     <div className="w-20 h-20 bg-gradient-to-br from-purple-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
                         <span className="text-4xl">📝</span>
@@ -232,21 +232,21 @@ export default function QuizRunnerPage({ params }: { params: Promise<{ id: strin
                     <div className="flex flex-col gap-3">
                         <button
                             onClick={handleResumeQuiz}
-                            className="w-full py-4 bg-purple-600 text-white font-bold rounded-lg hover:bg-purple-500 active:bg-purple-700 transition-colors"
+                            className="w-full py-4 bg-purple-600 text-white font-bold rounded-lg hover:bg-purple-500 hover:scale-[1.02] active:scale-[0.98] transition-all"
                         >
                             Resume Quiz
                         </button>
                         <button
                             onClick={handleStartOver}
-                            className="w-full py-4 bg-white/10 text-white font-bold rounded-lg hover:bg-white/20 active:bg-white/5 transition-colors"
+                            className="w-full py-4 bg-white/10 text-white font-bold rounded-lg hover:bg-white/20 hover:scale-[1.02] active:scale-[0.98] transition-all"
                         >
                             Start Over
                         </button>
                         <Link
-                            href="/quizzes"
+                            href="/library"
                             className="w-full py-3 text-center text-white/50 hover:text-white transition-colors text-sm"
                         >
-                            Back to Quizzes
+                            Back to Library
                         </Link>
                     </div>
                 </div>
@@ -259,7 +259,7 @@ export default function QuizRunnerPage({ params }: { params: Promise<{ id: strin
         const isNewBest = scorePercentage > bestScore;
 
         return (
-            <div className="min-h-dvh bg-[#0A0A0F] text-white flex items-center justify-center p-6">
+            <div className="min-h-dvh bg-[#0A0A0F] text-white flex items-center justify-center p-6 pb-mini-player relative z-[60]">
                 <div className="max-w-md w-full bg-[#1A1A20] rounded-lg p-8 border border-white/10 text-center shadow-2xl">
                     <div className="w-24 h-24 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-full flex items-center justify-center mx-auto mb-6 shadow-glow">
                         <span className="text-4xl">🏆</span>
@@ -289,10 +289,16 @@ export default function QuizRunnerPage({ params }: { params: Promise<{ id: strin
                         </div>
                     )}
 
-                    <div className="flex gap-3">
-                        <Link href="/quizzes" className="flex-1 py-4 bg-white text-black font-bold rounded-lg hover:scale-[1.02] active:scale-[0.98] transition-transform">
+                    <div className="flex flex-col gap-3">
+                        <Link href="/library" className="w-full py-4 bg-white text-black font-bold rounded-lg hover:scale-[1.02] active:scale-[0.98] transition-transform text-center">
                             Back to Library
                         </Link>
+                        <button
+                            onClick={handleStartOver}
+                            className="w-full py-4 bg-white/10 text-white font-bold rounded-lg hover:bg-white/20 active:bg-white/5 transition-colors"
+                        >
+                            Try Again
+                        </button>
                     </div>
                 </div>
             </div>
@@ -300,7 +306,7 @@ export default function QuizRunnerPage({ params }: { params: Promise<{ id: strin
     }
 
     return (
-        <div className="min-h-dvh bg-[#0A0A0F] text-white flex flex-col font-sans">
+        <div className="min-h-dvh bg-[#0A0A0F] text-white flex flex-col font-sans relative z-0">
 
             {/* Top Bar */}
             <div className="px-6 py-4 flex items-center justify-between">
@@ -328,7 +334,7 @@ export default function QuizRunnerPage({ params }: { params: Promise<{ id: strin
             </div>
 
             {/* Main Content */}
-            <main className="flex-1 flex flex-col max-w-2xl mx-auto w-full p-4 sm:p-6 pb-40">
+            <main className="flex-1 flex flex-col max-w-md mx-auto w-full p-4 sm:p-6 pb-mini-player">
                 <div className="flex-1 flex flex-col justify-start pt-4">
                     <span className="text-emerald-500 font-bold text-sm tracking-wider mb-4 block">QUESTION {currentQuestionIndex + 1} OF {quiz.questions.length}</span>
                     <h2 className="text-lg sm:text-xl font-bold leading-tight mb-4">
@@ -429,7 +435,7 @@ export default function QuizRunnerPage({ params }: { params: Promise<{ id: strin
 
                                 <button
                                     onClick={nextQuestion}
-                                    className="w-full py-4 rounded-lg bg-purple-600 text-white font-bold text-lg hover:bg-purple-500 active:bg-purple-700 transition-colors shadow-lg shadow-purple-900/20"
+                                    className="w-full py-4 rounded-lg bg-purple-600 text-white font-bold text-lg hover:bg-purple-500 hover:scale-[1.01] active:scale-[0.99] transition-all shadow-lg shadow-purple-900/20"
                                 >
                                     {currentQuestionIndex < quiz.questions.length - 1 ? 'Next Question →' : 'Finish Quiz'}
                                 </button>

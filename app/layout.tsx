@@ -16,7 +16,6 @@ import { AuthProvider } from '@/app/context/AuthContext';
 import { SRSProvider } from '@/app/context/SRSContext';
 import { OnboardingProvider } from '@/app/context/OnboardingContext';
 import { AchievementProvider } from '@/app/context/AchievementContext';
-import QuickActionsFAB from '@/app/components/QuickActionsFAB';
 import AchievementNotificationWrapper from '@/app/components/AchievementNotificationWrapper';
 import { TutorProvider } from '@/app/context/TutorContext';
 import { ProgramProvider } from '@/app/context/ProgramContext';
@@ -75,7 +74,6 @@ export default function RootLayout({
                                 <TutorChat />
                                 <NotesOverlay />
                                 <GlobalNavigation />
-                                <QuickActionsFAB />
                               </ProgramProvider>
                             </TutorProvider>
                           </AchievementProvider>

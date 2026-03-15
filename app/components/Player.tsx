@@ -341,10 +341,10 @@ export default function Player() {
                         {/* Thumbnail / Number */}
                         <div
                             onClick={() => setIsExpanded(true)}
-                            className="h-10 w-10 rounded bg-indigo-600 flex flex-col items-center justify-center text-xs font-bold text-white shrink-0 leading-none cursor-pointer"
+                            className="h-8 w-8 rounded bg-indigo-600 flex flex-col items-center justify-center text-xs font-bold text-white shrink-0 leading-none cursor-pointer"
                         >
-                            <span className="text-[7px] opacity-70 uppercase tracking-wider">EP</span>
-                            <span className="text-sm">{currentEpisode.order}</span>
+                            <span className="text-[6px] opacity-70 uppercase tracking-wider">EP</span>
+                            <span className="text-xs">{currentEpisode.order}</span>
                         </div>
 
                         {/* Text Info */}
@@ -352,8 +352,8 @@ export default function Player() {
                             onClick={() => setIsExpanded(true)}
                             className="flex-1 min-w-0 flex flex-col justify-center cursor-pointer"
                         >
-                            <h4 className="text-sm font-bold text-white leading-tight truncate">{currentEpisode.title}</h4>
-                            <p className="text-[10px] text-indigo-400 font-medium uppercase tracking-wide">
+                            <h4 className="text-xs font-bold text-white leading-tight truncate">{currentEpisode.title}</h4>
+                            <p className="text-[9px] text-indigo-400 font-medium uppercase tracking-wide">
                                 {isPlaying ? 'Now Playing' : 'Paused'}
                             </p>
                         </div>
@@ -363,12 +363,12 @@ export default function Player() {
                             {/* Play/Pause Button */}
                             <button
                                 onClick={(e) => { e.stopPropagation(); togglePlay(); }}
-                                className="h-10 w-10 flex items-center justify-center rounded-full bg-indigo-600 text-white hover:bg-indigo-700 hover:scale-105 active:scale-95 transition-all shadow-lg"
+                                className="h-8 w-8 flex items-center justify-center rounded-full bg-indigo-600 text-white hover:bg-indigo-700 hover:scale-105 active:scale-95 transition-all shadow-lg"
                             >
                                 {isPlaying ? (
-                                    <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z" /></svg>
+                                    <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z" /></svg>
                                 ) : (
-                                    <svg className="w-5 h-5 fill-current ml-0.5" viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg>
+                                    <svg className="w-4 h-4 fill-current ml-0.5" viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg>
                                 )}
                             </button>
 

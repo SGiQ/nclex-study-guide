@@ -71,102 +71,44 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     };
 
     const login = async (email: string, password: string) => {
-        try {
-            const response = await fetch('/api/auth/login', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ email, password })
-            });
+        const response = await fetch('/api/auth/login', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ email, password })
+        });
 
-            if (response.ok) {
-                const data = await response.json();
-                setUser(data.user);
-                setToken(data.token);
-                localStorage.setItem('auth_token', data.token);
-                return;
-            }
-        } catch (error) {
-            console.warn('Database login failed, trying localStorage fallback');
+        const data = await response.json();
+
+        if (!response.ok) {
+            throw new Error(data.error || 'Login failed. Please try again.');
         }
 
-        // Fallback: Try localStorage (old system)
-        const storedUsers = localStorage.getItem('users');
-        if (storedUsers) {
-            try {
-                const users = JSON.parse(storedUsers);
-                const existingUser = users.find((u: any) => u.email === email);
-
-                if (existingUser) {
-                    setUser(existingUser);
-                    setToken('mock_token');
-                    localStorage.setItem('user', JSON.stringify(existingUser));
-                    localStorage.setItem('auth_token', 'mock_token');
-                    return;
-                }
-            } catch (e) {
-                console.error('localStorage fallback failed');
-            }
-        }
-
-        // If no user found in localStorage, create a temporary one for testing
-        console.warn('Creating temporary user for testing - database not set up yet');
-        const tempUser = {
-            id: Date.now(),
-            name: email.split('@')[0],
-            email,
-            plan: 'premium' as const,
-            createdAt: new Date().toISOString()
-        };
-        setUser(tempUser);
-        setToken('mock_token');
-        localStorage.setItem('user', JSON.stringify(tempUser));
-        localStorage.setItem('auth_token', 'mock_token');
-
-        // Also save to users array
-        const users = storedUsers ? JSON.parse(storedUsers) : [];
-        users.push(tempUser);
-        localStorage.setItem('users', JSON.stringify(users));
+        setUser(data.user);
+        setToken(data.token);
+        localStorage.setItem('auth_token', data.token);
     };
 
     const signup = async (name: string, email: string, password: string, plan: string = 'premium', examDate?: string, promoCode?: string) => {
-        try {
-            const response = await fetch('/api/auth/signup', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ name, email, password, plan, examDate, promoCode })
-            });
-
-            if (response.ok) {
-                const data = await response.json();
-                setUser(data.user);
-                setToken(data.token);
-                localStorage.setItem('auth_token', data.token);
-                return;
-            }
-        } catch (error) {
-            console.warn('Database signup failed, using localStorage fallback');
+        // Enforce minimum password length
+        if (password.length < 8) {
+            throw new Error('Password must be at least 8 characters.');
         }
 
-        // Fallback: Use localStorage (old system)
-        const mockUser = {
-            id: Date.now(),
-            name,
-            email,
-            plan: plan as 'free' | 'premium' | 'lifetime',
-            examDate,
-            createdAt: new Date().toISOString()
-        };
+        const response = await fetch('/api/auth/signup', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ name, email, password, plan, examDate, promoCode })
+        });
 
-        setUser(mockUser);
-        setToken('mock_token');
-        localStorage.setItem('user', JSON.stringify(mockUser));
-        localStorage.setItem('auth_token', 'mock_token');
+        const data = await response.json();
 
-        // Also store in users array
-        const storedUsers = localStorage.getItem('users');
-        let users = storedUsers ? JSON.parse(storedUsers) : [];
-        users.push(mockUser);
-        localStorage.setItem('users', JSON.stringify(users));
+        if (!response.ok) {
+            throw new Error(data.error || 'Signup failed. Please try again.');
+        }
+
+        setUser(data.user);
+        setToken(data.token);
+        localStorage.setItem('auth_token', data.token);
     };
 
     const logout = () => {

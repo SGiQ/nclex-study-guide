@@ -49,7 +49,7 @@ async function uploadDir(localDir: string, r2Prefix: string) {
         })
       );
       console.log(`Successfully uploaded ${file}`);
-    } catch (err) {
+    } catch (err: any) {
       console.error(`Failed to upload ${file}:`, err);
     }
   }

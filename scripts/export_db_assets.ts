@@ -36,7 +36,7 @@ async function extractAssets() {
     }
 
     console.log('\nExtraction Complete!');
-  } catch (err) {
+  } catch (err: any) {
     console.error('Extraction Error:', err);
   } finally {
     await pool.end();

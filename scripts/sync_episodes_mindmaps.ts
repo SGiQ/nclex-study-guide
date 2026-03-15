@@ -17,7 +17,7 @@ async function run() {
     console.log('Starting DB sync...');
 
     // 1. Sync episodes table
-    for (const ep of episodesJson) {
+    for (const ep of episodesJson as any[]) {
       const exists = await pool.query('SELECT id FROM episodes WHERE id = $1', [ep.id]);
       if (exists.rows.length > 0) {
         // Use correct column names: id, episode_number, title, description, duration, audio_url
@@ -36,7 +36,7 @@ async function run() {
     }
 
     // 2. Fix Mindmaps mapping
-    const ep17 = episodesJson.find(e => e.id === 17);
+    const ep17 = (episodesJson as any[]).find(e => e.id === 17);
     await pool.query(
       'UPDATE mindmaps SET episode_id = 17, title = $1, file_name = $2 WHERE id = 23',
       [ep17.title + ' Mind Map', ep17.title + '.png']
@@ -44,7 +44,7 @@ async function run() {
     console.log(`Re-mapped Mindmap 23 to Episode 17`);
 
     // 3. Insert Missing Episode 16 Mindmap in DB
-    const ep16 = episodesJson.find(e => e.id === 16);
+    const ep16 = (episodesJson as any[]).find(e => e.id === 16);
     // Check if it already exists to avoid duplicates
     const mindmapExists = await pool.query('SELECT id FROM mindmaps WHERE episode_id = 16');
     if (mindmapExists.rows.length === 0) {
@@ -58,7 +58,7 @@ async function run() {
     }
 
     // 4. Update all Mindmap titles in DB to descriptive names
-    for (const ep of episodesJson) {
+    for (const ep of episodesJson as any[]) {
       await pool.query(
         'UPDATE mindmaps SET title = $1, file_name = $2 WHERE episode_id = $3',
         [ep.title + ' Mind Map', ep.title + '.png', ep.id]
@@ -71,7 +71,7 @@ async function run() {
     const dbMindmaps = result.rows;
 
     // 6. Update mindmaps.json
-    const mindmapsJson = dbMindmaps.map(m => ({
+    const mindmapsJson = dbMindmaps.map((m: any) => ({
       id: m.id,
       episodeId: m.episode_id,
       title: m.title, // Now is descriptive

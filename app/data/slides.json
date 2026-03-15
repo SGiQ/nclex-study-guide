@@ -1,130 +1,138 @@
 [
-  {
-    "id": 1,
-    "episodeId": 1,
-    "title": "Test-Taking Strategy Slides",
-    "fileName": "The_Four_Pillars_of_Care_Excellence.pdf",
-    "url": "/uploads/slides/1767674739987-The_Four_Pillars_of_Care_Excellence.pdf",
-    "uploadedAt": "2026-01-06T04:45:39.996Z"
-  },
-  {
-    "id": 2,
-    "episodeId": 2,
-    "title": "Coordinated Care Slides",
-    "fileName": "The_Four_Pillars_of_Care_Excellence.pdf",
-    "url": "/uploads/slides/1767674739987-The_Four_Pillars_of_Care_Excellence.pdf",
-    "uploadedAt": "2026-01-06T04:45:39.996Z"
-  },
-  {
-    "id": 3,
-    "episodeId": 3,
-    "title": "Safety & Infection Control Slides",
-    "fileName": "The_Four_Pillars_of_Care_Excellence.pdf",
-    "url": "/uploads/slides/1767674739987-The_Four_Pillars_of_Care_Excellence.pdf",
-    "uploadedAt": "2026-01-06T04:45:39.996Z"
-  },
-  {
-    "id": 4,
-    "episodeId": 4,
-    "title": "Health Promotion Slides",
-    "fileName": "The_Four_Pillars_of_Care_Excellence.pdf",
-    "url": "/uploads/slides/1767674739987-The_Four_Pillars_of_Care_Excellence.pdf",
-    "uploadedAt": "2026-01-06T04:45:39.996Z"
-  },
-  {
-    "id": 5,
-    "episodeId": 5,
-    "title": "Psychosocial Integrity Slides",
-    "fileName": "The_Four_Pillars_of_Care_Excellence.pdf",
-    "url": "/uploads/slides/1767674739987-The_Four_Pillars_of_Care_Excellence.pdf",
-    "uploadedAt": "2026-01-06T04:45:39.996Z"
-  },
-  {
-    "id": 6,
-    "episodeId": 6,
-    "title": "Basic Care Slides",
-    "fileName": "The_Four_Pillars_of_Care_Excellence.pdf",
-    "url": "/uploads/slides/1767674739987-The_Four_Pillars_of_Care_Excellence.pdf",
-    "uploadedAt": "2026-01-06T04:45:39.996Z"
-  },
-  {
-    "id": 7,
-    "episodeId": 7,
-    "title": "Pharmacology I Slides",
-    "fileName": "The_Four_Pillars_of_Care_Excellence.pdf",
-    "url": "/uploads/slides/1767674739987-The_Four_Pillars_of_Care_Excellence.pdf",
-    "uploadedAt": "2026-01-06T04:45:39.996Z"
-  },
-  {
-    "id": 8,
-    "episodeId": 8,
-    "title": "Pharmacology II Slides",
-    "fileName": "The_Four_Pillars_of_Care_Excellence.pdf",
-    "url": "/uploads/slides/1767674739987-The_Four_Pillars_of_Care_Excellence.pdf",
-    "uploadedAt": "2026-01-06T04:45:39.996Z"
-  },
-  {
-    "id": 9,
-    "episodeId": 9,
-    "title": "Risk Reduction I Slides",
-    "fileName": "The_Four_Pillars_of_Care_Excellence.pdf",
-    "url": "/uploads/slides/1767674739987-The_Four_Pillars_of_Care_Excellence.pdf",
-    "uploadedAt": "2026-01-06T04:45:39.996Z"
-  },
-  {
-    "id": 10,
-    "episodeId": 10,
-    "title": "Risk Reduction II Slides",
-    "fileName": "The_Four_Pillars_of_Care_Excellence.pdf",
-    "url": "/uploads/slides/1767674739987-The_Four_Pillars_of_Care_Excellence.pdf",
-    "uploadedAt": "2026-01-06T04:45:39.996Z"
-  },
-  {
-    "id": 11,
-    "episodeId": 11,
-    "title": "Physiological Adaptation I Slides",
-    "fileName": "The_Four_Pillars_of_Care_Excellence.pdf",
-    "url": "/uploads/slides/1767674739987-The_Four_Pillars_of_Care_Excellence.pdf",
-    "uploadedAt": "2026-01-06T04:45:39.996Z"
-  },
-  {
-    "id": 12,
-    "episodeId": 12,
-    "title": "Physiological Adaptation II Slides",
-    "fileName": "The_Four_Pillars_of_Care_Excellence.pdf",
-    "url": "/uploads/slides/1767674739987-The_Four_Pillars_of_Care_Excellence.pdf",
-    "uploadedAt": "2026-01-06T04:45:39.996Z"
-  },
-  {
-    "id": 13,
-    "episodeId": 13,
-    "title": "Physiological Adaptation III Slides",
-    "fileName": "The_Four_Pillars_of_Care_Excellence.pdf",
-    "url": "/uploads/slides/1767674739987-The_Four_Pillars_of_Care_Excellence.pdf",
-    "uploadedAt": "2026-01-06T04:45:39.996Z"
-  },
-  {
-    "id": 14,
-    "episodeId": 14,
-    "title": "Complex Care Slides",
-    "fileName": "The_Four_Pillars_of_Care_Excellence.pdf",
-    "url": "/uploads/slides/1767674739987-The_Four_Pillars_of_Care_Excellence.pdf",
-    "uploadedAt": "2026-01-06T04:45:39.996Z"
-  },
-  {
-    "id": 15,
-    "episodeId": 15,
-    "title": "Practice Test Slides",
-    "fileName": "The_Four_Pillars_of_Care_Excellence.pdf",
-    "url": "/uploads/slides/1767674739987-The_Four_Pillars_of_Care_Excellence.pdf",
-    "uploadedAt": "2026-01-06T04:45:39.996Z"
-  },
-  {
-    "id": 16,
-    "episodeId": 16,
-    "title": "Final Prep Slides",
-    "fileName": "The_Four_Pillars_of_Care_Excellence.pdf",
-    "url": "/uploads/slides/1767674739987-The_Four_Pillars_of_Care_Excellence.pdf",
-    "uploadedAt": "2026-01-06T04:45:39.996Z"
-  }
+    {
+        "id": 1,
+        "episodeId": 1,
+        "title": "Test-Taking Strategy Slides",
+        "fileName": "The_Four_Pillars_of_Care_Excellence.pdf",
+        "url": "https://pub-2b82d106a2e24d02864c89dc4b308d5c.r2.dev/uploads/slides/The_Four_Pillars_of_Care_Excellence.pdf",
+        "uploadedAt": "2026-01-06T04:45:39.996Z"
+    },
+    {
+        "id": 2,
+        "episodeId": 2,
+        "title": "Coordinated Care Slides",
+        "fileName": "The_Four_Pillars_of_Care_Excellence.pdf",
+        "url": "https://pub-2b82d106a2e24d02864c89dc4b308d5c.r2.dev/uploads/slides/The_Four_Pillars_of_Care_Excellence.pdf",
+        "uploadedAt": "2026-01-06T04:45:39.996Z"
+    },
+    {
+        "id": 3,
+        "episodeId": 3,
+        "title": "Safety & Infection Control Slides",
+        "fileName": "The_Four_Pillars_of_Care_Excellence.pdf",
+        "url": "https://pub-2b82d106a2e24d02864c89dc4b308d5c.r2.dev/uploads/slides/The_Four_Pillars_of_Care_Excellence.pdf",
+        "uploadedAt": "2026-01-06T04:45:39.996Z"
+    },
+    {
+        "id": 4,
+        "episodeId": 4,
+        "title": "Health Promotion Slides",
+        "fileName": "The_Four_Pillars_of_Care_Excellence.pdf",
+        "url": "https://pub-2b82d106a2e24d02864c89dc4b308d5c.r2.dev/uploads/slides/The_Four_Pillars_of_Care_Excellence.pdf",
+        "uploadedAt": "2026-01-06T04:45:39.996Z"
+    },
+    {
+        "id": 5,
+        "episodeId": 5,
+        "title": "Psychosocial Integrity Slides",
+        "fileName": "The_Four_Pillars_of_Care_Excellence.pdf",
+        "url": "https://pub-2b82d106a2e24d02864c89dc4b308d5c.r2.dev/uploads/slides/The_Four_Pillars_of_Care_Excellence.pdf",
+        "uploadedAt": "2026-01-06T04:45:39.996Z"
+    },
+    {
+        "id": 6,
+        "episodeId": 6,
+        "title": "Basic Care Slides",
+        "fileName": "The_Four_Pillars_of_Care_Excellence.pdf",
+        "url": "https://pub-2b82d106a2e24d02864c89dc4b308d5c.r2.dev/uploads/slides/The_Four_Pillars_of_Care_Excellence.pdf",
+        "uploadedAt": "2026-01-06T04:45:39.996Z"
+    },
+    {
+        "id": 7,
+        "episodeId": 7,
+        "title": "Pharmacology I Slides",
+        "fileName": "The_Four_Pillars_of_Care_Excellence.pdf",
+        "url": "https://pub-2b82d106a2e24d02864c89dc4b308d5c.r2.dev/uploads/slides/The_Four_Pillars_of_Care_Excellence.pdf",
+        "uploadedAt": "2026-01-06T04:45:39.996Z"
+    },
+    {
+        "id": 8,
+        "episodeId": 8,
+        "title": "Pharmacology II Slides",
+        "fileName": "The_Four_Pillars_of_Care_Excellence.pdf",
+        "url": "https://pub-2b82d106a2e24d02864c89dc4b308d5c.r2.dev/uploads/slides/The_Four_Pillars_of_Care_Excellence.pdf",
+        "uploadedAt": "2026-01-06T04:45:39.996Z"
+    },
+    {
+        "id": 9,
+        "episodeId": 9,
+        "title": "Risk Reduction I Slides",
+        "fileName": "The_Four_Pillars_of_Care_Excellence.pdf",
+        "url": "https://pub-2b82d106a2e24d02864c89dc4b308d5c.r2.dev/uploads/slides/The_Four_Pillars_of_Care_Excellence.pdf",
+        "uploadedAt": "2026-01-06T04:45:39.996Z"
+    },
+    {
+        "id": 10,
+        "episodeId": 10,
+        "title": "Risk Reduction II Slides",
+        "fileName": "The_Four_Pillars_of_Care_Excellence.pdf",
+        "url": "https://pub-2b82d106a2e24d02864c89dc4b308d5c.r2.dev/uploads/slides/The_Four_Pillars_of_Care_Excellence.pdf",
+        "uploadedAt": "2026-01-06T04:45:39.996Z"
+    },
+    {
+        "id": 11,
+        "episodeId": 11,
+        "title": "Physiological Adaptation I Slides",
+        "fileName": "The_Four_Pillars_of_Care_Excellence.pdf",
+        "url": "https://pub-2b82d106a2e24d02864c89dc4b308d5c.r2.dev/uploads/slides/The_Four_Pillars_of_Care_Excellence.pdf",
+        "uploadedAt": "2026-01-06T04:45:39.996Z"
+    },
+    {
+        "id": 12,
+        "episodeId": 12,
+        "title": "Physiological Adaptation II Slides",
+        "fileName": "The_Four_Pillars_of_Care_Excellence.pdf",
+        "url": "https://pub-2b82d106a2e24d02864c89dc4b308d5c.r2.dev/uploads/slides/The_Four_Pillars_of_Care_Excellence.pdf",
+        "uploadedAt": "2026-01-06T04:45:39.996Z"
+    },
+    {
+        "id": 13,
+        "episodeId": 13,
+        "title": "Physiological Adaptation III Slides",
+        "fileName": "The_Four_Pillars_of_Care_Excellence.pdf",
+        "url": "https://pub-2b82d106a2e24d02864c89dc4b308d5c.r2.dev/uploads/slides/The_Four_Pillars_of_Care_Excellence.pdf",
+        "uploadedAt": "2026-01-06T04:45:39.996Z"
+    },
+    {
+        "id": 14,
+        "episodeId": 14,
+        "title": "Complex Care Slides",
+        "fileName": "The_Four_Pillars_of_Care_Excellence.pdf",
+        "url": "https://pub-2b82d106a2e24d02864c89dc4b308d5c.r2.dev/uploads/slides/The_Four_Pillars_of_Care_Excellence.pdf",
+        "uploadedAt": "2026-01-06T04:45:39.996Z"
+    },
+    {
+        "id": 15,
+        "episodeId": 15,
+        "title": "Practice Test Slides",
+        "fileName": "The_Four_Pillars_of_Care_Excellence.pdf",
+        "url": "https://pub-2b82d106a2e24d02864c89dc4b308d5c.r2.dev/uploads/slides/The_Four_Pillars_of_Care_Excellence.pdf",
+        "uploadedAt": "2026-01-06T04:45:39.996Z"
+    },
+    {
+        "id": 16,
+        "episodeId": 16,
+        "title": "Biological Mechanics of Pregnancy and Birth Slides",
+        "fileName": "The_Four_Pillars_of_Care_Excellence.pdf",
+        "url": "https://pub-2b82d106a2e24d02864c89dc4b308d5c.r2.dev/uploads/slides/The_Four_Pillars_of_Care_Excellence.pdf",
+        "uploadedAt": "2026-03-15T17:48:24.000Z"
+    },
+    {
+        "id": 17,
+        "episodeId": 17,
+        "title": "Final Prep Slides",
+        "fileName": "The_Four_Pillars_of_Care_Excellence.pdf",
+        "url": "https://pub-2b82d106a2e24d02864c89dc4b308d5c.r2.dev/uploads/slides/The_Four_Pillars_of_Care_Excellence.pdf",
+        "uploadedAt": "2026-01-06T04:45:39.996Z"
+    }
 ]

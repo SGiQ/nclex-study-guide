@@ -1,1 +1,58 @@
-[]
+[
+    {
+        "id": 1,
+        "episodeId": 16,
+        "title": "VEAL CHOP Mnemonic",
+        "description": "Used for fetal heart rate monitoring: Variable = Cord compression, Early = Head compression, Accelerations = Okay, Late = Placental insufficiency.",
+        "icon": "monitor_heart",
+        "url": "https://pub-2b82d106a2e24d02864c89dc4b308d5c.r2.dev/uploads/infographics/VEAL%20CHOP%20Mnemonic.png"
+    },
+    {
+        "id": 2,
+        "episodeId": 16,
+        "title": "GTPAL Obstetric History",
+        "description": "Records reproductive history: Gravida (total pregnancies), Term births (>37 weeks), Preterm births (20-36 weeks), Abortions (<20 weeks), and Living children.",
+        "icon": "format_list_numbered",
+        "url": "https://pub-2b82d106a2e24d02864c89dc4b308d5c.r2.dev/uploads/infographics/GTPAL%20Obstetric%20History.png"
+    },
+    {
+        "id": 3,
+        "episodeId": 16,
+        "title": "APGAR Scoring System",
+        "description": "Evaluates newborn health at 1 and 5 minutes based on Activity, Pulse, Grimace, Appearance, and Respiration. Scores of 7-10 indicate good overall health.",
+        "icon": "child_care",
+        "url": "https://pub-2b82d106a2e24d02864c89dc4b308d5c.r2.dev/uploads/infographics/APGAR%20Scoring%20System.png"
+    },
+    {
+        "id": 4,
+        "episodeId": 16,
+        "title": "The 4 Stages of Labor",
+        "description": "Stage 1: Onset to full cervical dilation (10 cm). Stage 2: Full dilation to birth. Stage 3: Birth to placental expulsion. Stage 4: First 4 hours of postpartum stabilization.",
+        "icon": "pregnant_woman",
+        "url": "https://pub-2b82d106a2e24d02864c89dc4b308d5c.r2.dev/uploads/infographics/The%204%20Stages%20of%20Labor.png"
+    },
+    {
+        "id": 5,
+        "episodeId": 16,
+        "title": "Postpartum Hemorrhage (PPH) Metrics",
+        "description": "PPH is defined as a blood loss of more than 500 mL following a vaginal delivery, or more than 1,000 mL following a cesarean delivery within 24 hours.",
+        "icon": "warning",
+        "url": "https://pub-2b82d106a2e24d02864c89dc4b308d5c.r2.dev/uploads/infographics/Postpartum%20Hemorrhage%20(PPH)%20Metrics.png"
+    },
+    {
+        "id": 6,
+        "episodeId": 16,
+        "title": "Naegele's Rule",
+        "description": "A formula to estimate the delivery date: Count backward 3 months from the first day of the woman's last menstrual period, then add 7 days.",
+        "icon": "calendar_month",
+        "url": "https://pub-2b82d106a2e24d02864c89dc4b308d5c.r2.dev/uploads/infographics/Naegele's%20Rule.png"
+    },
+    {
+        "id": 7,
+        "episodeId": 16,
+        "title": "Normal Fetal Heart Rate",
+        "description": "A healthy, normal fetal heart rate ranges between 120 and 160 beats per minute.",
+        "icon": "favorite",
+        "url": "https://pub-2b82d106a2e24d02864c89dc4b308d5c.r2.dev/uploads/infographics/Normal%20Fetal%20Heart%20Rate.png"
+    }
+]

@@ -178,15 +178,11 @@ export default function LibraryPage() {
                             </div>
                             <div className="text-right">
                                 <p className="text-[9px] text-slate-400 font-bold uppercase tracking-[0.2em] mb-1">{stats.maps.total} Maps</p>
-                                <p className="text-purple-400 font-black text-xs uppercase tracking-wider">{stats.maps.perc}% Completed</p>
                             </div>
                         </div>
                         <div>
                             <h3 className="text-xl font-black uppercase tracking-tight text-white mb-2">Mind Maps</h3>
                             <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest leading-relaxed mb-6">Visualize complex disease processes and systemic interventions.</p>
-                            <div className="w-full bg-slate-900/80 h-1.5 rounded-full overflow-hidden border border-white/5">
-                                <div className="bg-purple-500 h-full rounded-full w-full origin-left transition-transform duration-1000" style={{ transform: `scaleX(${stats.maps.perc / 100})` }}></div>
-                            </div>
                         </div>
                     </div>
 
@@ -201,15 +197,11 @@ export default function LibraryPage() {
                             </div>
                             <div className="text-right">
                                 <p className="text-[9px] text-slate-400 font-bold uppercase tracking-[0.2em] mb-1">{stats.info.total} Sheets</p>
-                                <p className="text-pink-400 font-black text-xs uppercase tracking-wider">{stats.info.perc}% Completed</p>
                             </div>
                         </div>
                         <div>
                             <h3 className="text-xl font-black uppercase tracking-tight text-white mb-2">Infographics</h3>
                             <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest leading-relaxed mb-6">High-yield cheat sheets for vital signs, lab values, and EKG patterns.</p>
-                            <div className="w-full bg-slate-900/80 h-1.5 rounded-full overflow-hidden border border-white/5">
-                                <div className="bg-pink-500 h-full rounded-full w-full origin-left transition-transform duration-1000" style={{ transform: `scaleX(${stats.info.perc / 100})` }}></div>
-                            </div>
                         </div>
                     </div>
 
@@ -224,15 +216,11 @@ export default function LibraryPage() {
                             </div>
                             <div className="text-right">
                                 <p className="text-[9px] text-slate-400 font-bold uppercase tracking-[0.2em] mb-1">{stats.slides.total} Decks</p>
-                                <p className="text-emerald-400 font-black text-xs uppercase tracking-wider">{stats.slides.perc}% Completed</p>
                             </div>
                         </div>
                         <div>
                             <h3 className="text-xl font-black uppercase tracking-tight text-white mb-2">Slide Decks</h3>
                             <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest leading-relaxed mb-6">Comprehensive lecture slides covering all NCLEX test plan areas.</p>
-                            <div className="w-full bg-slate-900/80 h-1.5 rounded-full overflow-hidden border border-white/5">
-                                <div className="bg-emerald-500 h-full rounded-full w-full origin-left transition-transform duration-1000" style={{ transform: `scaleX(${stats.slides.perc / 100})` }}></div>
-                            </div>
                         </div>
                     </div>
                 </div>

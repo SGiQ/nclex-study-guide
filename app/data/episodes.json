@@ -177,36 +177,36 @@
         "slideDeck": {
             "slides": [
                 {
-                    "title": "Obstetric History & The GTPAL System",
-                    "content": "A comprehensive obstetric history is evaluated using the GTPAL system: Gravida (number of pregnancies), Term births (37+ weeks), Preterm births (20-36 weeks), Abortions (losses before 20 weeks), and Living children. This establishes baseline data to predict and manage pregnancy risks."
+                    "title": "Fertilization and Implantation",
+                    "content": "• Fertilization occurs in the fallopian tube when a mature ovum and spermatozoon unite to form a zygote with 46 chromosomes.\n• The zygote undergoes rapid cellular division to become a blastocyst during its journey to the uterus.\n• Implantation of the blastocyst into the uterine endometrium takes place approximately 8 to 10 days post-fertilization."
                 },
                 {
-                    "title": "The Four Stages of Labor",
-                    "content": "Labor consists of four stages: the First Stage (onset of true contractions until full 10 cm cervical dilation), the Second Stage (full dilation until the infant's birth), the Third Stage (delivery of the placenta), and the Fourth Stage (the critical 1 to 4 hours of immediate postpartum maternal stabilization)."
+                    "title": "Placental and Early Fetal Development",
+                    "content": "• Formed from trophoblast tissues, the placenta transports oxygen and nutrients while secreting human chorionic gonadotropin, estrogen, and progesterone.\n• Major organogenesis takes place during the first trimester of pregnancy.\n• The amniotic sac protects the developing fetus from physical trauma and regulates its temperature."
                 },
                 {
-                    "title": "Fetal Heart Rate Monitoring (VEAL CHOP)",
-                    "content": "The VEAL CHOP mnemonic guides fetal heart rate interpretation: Variable decelerations indicate Cord compression; Early decelerations signify Head compression; Accelerations mean Okay (normal fetal movement); and Late decelerations indicate Placental insufficiency, requiring immediate intervention."
+                    "title": "Maternal Reproductive Adaptations",
+                    "content": "• The maternal uterus expands significantly to accommodate the growing fetus.\n• Breasts undergo enlargement and become more vascularized.\n• Under the influence of changing hormones, the breasts begin producing colostrum to prepare for infant feeding."
                 },
                 {
-                    "title": "Placental Complications in Pregnancy",
-                    "content": "Placenta Previa occurs when the placenta partially or completely covers the cervical os, characterized by painless, bright red bleeding. In contrast, Abruptio Placentae is the premature separation of the placenta, presenting with severe abdominal pain, dark bleeding, and a board-like, rigid uterus."
+                    "title": "Maternal Cardiovascular Adaptations",
+                    "content": "• Maternal cardiac output dramatically increases by 25 to 50 percent to support the presidency.\n• The maternal heart rate becomes elevated alongside an expansion of blood volume up to 5,250 mL.\n• These cardiovascular shifts are essential to ensure effective placental exchange."
                 },
                 {
-                    "title": "Pregnancy-Induced Hypertension (PIH) & Preeclampsia",
-                    "content": "PIH involves maternal vasospasm. Preeclampsia presents with the classic triad of hypertension, edema, and proteinuria. If uncontrolled, it can progress to life-threatening Eclampsia (marked by seizures or coma) or HELLP syndrome (hemolysis, elevated liver enzymes, and low platelets)."
+                    "title": "Maternal Endocrine and Musculoskeletal Adaptations",
+                    "content": "• Progesterone and relaxin work together to inhibit uterine motility during gestation.\n• These hormones soften the cervix and relax the cartilage of the pelvic joints and symphysis pubis.\n• This relaxation facilitates the eventual passage of the fetus through the birth canal."
                 },
                 {
-                    "title": "Intrapartum Complications & Dystocia",
-                    "content": "Dystocia (dysfunctional labor) can result from ineffective uterine contractions (hypertonic or hypotonic), fetal macrosomia, or cephalopelvic disproportion. Emergencies like shoulder dystocia require immediate interventions, such as the McRobert's maneuver, to safely deliver the infant and prevent brachial plexus injury."
+                    "title": "Mechanics of Birth: First Stage",
+                    "content": "• Labor is driven by rhythmic uterine contractions that lead to progressive cervical effacement and dilation.\n• The first stage begins with true labor contractions and continues until the cervix is fully dilated.\n• Full cervical dilation is achieved at 10 centimeters."
                 },
                 {
-                    "title": "Postpartum Hemorrhage (PPH)",
-                    "content": "PPH is defined as blood loss over 500 mL after a vaginal birth or 1000 mL after a cesarean within 24 hours. The leading cause is uterine atony (failure of the uterus to contract). Primary management includes immediate fundal massage, intravenous fluids, and uterotonic medications like Oxytocin."
+                    "title": "Fetal Navigation and Second Stage",
+                    "content": "• The fetus navigates the pelvic canal via a specific sequence: engagement, descent and flexion, internal rotation, extension, external rotation, restitution, and expulsion.\n• The second stage of labor involves maternal abdominal muscles assisting involuntary contractions to push the fetus.\n• This stage concludes with the successful delivery of the neonate."
                 },
                 {
-                    "title": "Immediate Newborn Assessment & Care",
-                    "content": "Newborn transition is evaluated at 1 and 5 minutes of life using the APGAR score (Activity, Pulse, Grimace, Appearance, Respiration). Neuromuscular health is also verified by testing innate survival reflexes, including the Moro (startle), rooting, sucking, palmar grasp, and Babinski reflexes."
+                    "title": "Mechanics of Birth: Third Stage",
+                    "content": "• The third stage is defined by the separation and expulsion of the placenta.\n• The hormone oxytocin plays a critical role in stimulating continued uterine contractions after the neonate is delivered.\n• These continuous post-delivery contractions are essential for preventing postpartum bleeding."
                 }
             ]
         },

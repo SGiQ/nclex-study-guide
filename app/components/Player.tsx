@@ -20,7 +20,7 @@ export default function Player() {
     const { currentEpisode, isPlaying, isDismissed, setIsPlaying, togglePlay, closePlayer, setCurrentTime, playNextEpisode, signalEpisodeEnded, analyser, setAnalyser } = usePlayer();
     const { saveItem, removeItem, isSaved } = useLibrary();
     const { user } = useAuth();
-    const { saveAudioProgress } = useProgress();
+    const { saveAudioProgress, getAudioProgress } = useProgress();
     const { activeProgram } = useProgram();
     const allEpisodes = activeProgram.slug === 'nclex-rn' ? episodesRN : episodesPN;
 
@@ -164,16 +164,33 @@ export default function Player() {
 
             // Restore saved playback position
             if (currentEpisode) {
+                // 1. Try localStorage first (fastest, most recent)
                 const saved = localStorage.getItem(`audio_progress_${currentEpisode.id}`);
+                let restoreTime: number | null = null;
+
                 if (saved) {
                     try {
                         const data = JSON.parse(saved);
-                        // Don't restore if episode was completed (within 5s of end)
                         if (data.currentTime && data.currentTime > 5 && actualDuration && data.currentTime < actualDuration - 5) {
-                            audioRef.current.currentTime = data.currentTime;
-                            setProgress((data.currentTime / actualDuration) * 100);
+                            restoreTime = data.currentTime;
                         }
                     } catch { /* ignore */ }
+                }
+
+                // 2. Fall back to DB-synced metadata (cross-device support)
+                if (restoreTime === null) {
+                    const dbProgress = getAudioProgress(currentEpisode.id);
+                    if (dbProgress?.metadata?.currentTime) {
+                        const t = dbProgress.metadata.currentTime;
+                        if (t > 5 && actualDuration && t < actualDuration - 5) {
+                            restoreTime = t;
+                        }
+                    }
+                }
+
+                if (restoreTime !== null && audioRef.current) {
+                    audioRef.current.currentTime = restoreTime;
+                    setProgress((restoreTime / (actualDuration || 1)) * 100);
                 }
             }
         }

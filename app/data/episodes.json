@@ -173,7 +173,7 @@
     "duration": 720,
     "audioUrl": "https://pub-2b82d106a2e24d02864c89dc4b308d5c.r2.dev/uploads/episode-16.mp3",
     "category": "Review",
-    "order": 16
+    "order": 17
   },
   {
     "id": 17,
@@ -182,8 +182,82 @@
     "content": "The biological mechanics of pregnancy begin with fertilization, which occurs when a mature ovum and a spermatozoon unite in the fallopian tube to form a zygote containing 46 chromosomes. This zygote undergoes rapid cellular division as it travels toward the uterus, transforming into a blastocyst that implants into the uterine endometrium approximately 8 to 10 days after fertilization. To sustain the developing embryo, the placenta forms from trophoblast tissues to facilitate the transport of oxygen, nutrients, and waste, while also secreting essential pregnancy hormones such as human chorionic gonadotropin, estrogen, and progesterone. Organogenesis takes place during the first trimester, and the fetus continues to mature within the amniotic sac, which regulates temperature and provides protection against physical trauma.\n\nTo support fetal growth and prepare for delivery, the maternal body undergoes profound physiological adaptations. The uterus expands significantly to accommodate the fetus, while the breasts enlarge, become more vascular, and begin producing colostrum under the influence of changing hormones. Cardiovascular mechanics shift dramatically, featuring a 25 to 50 percent increase in cardiac output, an elevated heart rate, and an expansion of maternal blood volume up to 5,250 mL to ensure effective placental exchange. Furthermore, endocrine changes involving relaxin and progesterone inhibit uterine motility during gestation while softening the cervix and relaxing the cartilage of the pelvic joints and symphysis pubis to facilitate the eventual passage of the fetus.\n\nThe biological mechanics of birth, or labor, are driven by rhythmic uterine contractions that cause the progressive effacement and dilation of the cervix. The physical mechanics of delivery require the fetus to navigate the pelvic canal through a specific sequence of positional changes: engagement, descent and flexion, internal rotation, extension, external rotation, restitution, and expulsion. This birth process is divided into distinct stages, starting with true labor contractions and full cervical dilation up to 10 centimeters in the first stage, followed by the second stage where maternal abdominal muscles assist involuntary uterine contractions to push and deliver the neonate. The third stage concludes the mechanics of childbirth with the separation and expulsion of the placenta, aided by the hormone oxytocin, which stimulates continued uterine contractions to prevent postpartum bleeding.",
     "pages": "Maternity-1",
     "duration": 600,
-    "audioUrl": "/uploads/episode-maternity.mp3",
+    "audioUrl": "https://pub-2b82d106a2e24d02864c89dc4b308d5c.r2.dev/uploads/episode-maternity.mp3",
     "category": "Maternity",
-    "order": 17
+    "order": 16,
+    "slideDeck": {
+      "slides": [
+        {
+          "title": "Obstetric History & The GTPAL System",
+          "content": "A comprehensive obstetric history is evaluated using the GTPAL system: Gravida (number of pregnancies), Term births (37+ weeks), Preterm births (20-36 weeks), Abortions (losses before 20 weeks), and Living children. This establishes baseline data to predict and manage pregnancy risks."
+        },
+        {
+          "title": "The Four Stages of Labor",
+          "content": "Labor consists of four stages: the First Stage (onset of true contractions until full 10 cm cervical dilation), the Second Stage (full dilation until the infant's birth), the Third Stage (delivery of the placenta), and the Fourth Stage (the critical 1 to 4 hours of immediate postpartum maternal stabilization)."
+        },
+        {
+          "title": "Fetal Heart Rate Monitoring (VEAL CHOP)",
+          "content": "The VEAL CHOP mnemonic guides fetal heart rate interpretation: Variable decelerations indicate Cord compression; Early decelerations signify Head compression; Accelerations mean Okay (normal fetal movement); and Late decelerations indicate Placental insufficiency, requiring immediate intervention."
+        },
+        {
+          "title": "Placental Complications in Pregnancy",
+          "content": "Placenta Previa occurs when the placenta partially or completely covers the cervical os, characterized by painless, bright red bleeding. In contrast, Abruptio Placentae is the premature separation of the placenta, presenting with severe abdominal pain, dark bleeding, and a board-like, rigid uterus."
+        },
+        {
+          "title": "Pregnancy-Induced Hypertension (PIH) & Preeclampsia",
+          "content": "PIH involves maternal vasospasm. Preeclampsia presents with the classic triad of hypertension, edema, and proteinuria. If uncontrolled, it can progress to life-threatening Eclampsia (marked by seizures or coma) or HELLP syndrome (hemolysis, elevated liver enzymes, and low platelets)."
+        },
+        {
+          "title": "Intrapartum Complications & Dystocia",
+          "content": "Dystocia (dysfunctional labor) can result from ineffective uterine contractions (hypertonic or hypotonic), fetal macrosomia, or cephalopelvic disproportion. Emergencies like shoulder dystocia require immediate interventions, such as the McRobert's maneuver, to safely deliver the infant and prevent brachial plexus injury."
+        },
+        {
+          "title": "Postpartum Hemorrhage (PPH)",
+          "content": "PPH is defined as blood loss over 500 mL after a vaginal birth or 1000 mL after a cesarean within 24 hours. The leading cause is uterine atony (failure of the uterus to contract). Primary management includes immediate fundal massage, intravenous fluids, and uterotonic medications like Oxytocin."
+        },
+        {
+          "title": "Immediate Newborn Assessment & Care",
+          "content": "Newborn transition is evaluated at 1 and 5 minutes of life using the APGAR score (Activity, Pulse, Grimace, Appearance, Respiration). Neuromuscular health is also verified by testing innate survival reflexes, including the Moro (startle), rooting, sucking, palmar grasp, and Babinski reflexes."
+        }
+      ]
+    },
+    "infographicData": [
+      {
+        "title": "VEAL CHOP Mnemonic",
+        "description": "Used for fetal heart rate monitoring: Variable = Cord compression, Early = Head compression, Accelerations = Okay, Late = Placental insufficiency.",
+        "icon": "monitor_heart"
+      },
+      {
+        "title": "GTPAL Obstetric History",
+        "description": "Records reproductive history: Gravida (total pregnancies), Term births (>37 weeks), Preterm births (20-36 weeks), Abortions (<20 weeks), and Living children.",
+        "icon": "format_list_numbered"
+      },
+      {
+        "title": "APGAR Scoring System",
+        "description": "Evaluates newborn health at 1 and 5 minutes based on Activity, Pulse, Grimace, Appearance, and Respiration. Scores of 7-10 indicate good overall health.",
+        "icon": "child_care"
+      },
+      {
+        "title": "The 4 Stages of Labor",
+        "description": "Stage 1: Onset to full cervical dilation (10 cm). Stage 2: Full dilation to birth. Stage 3: Birth to placental expulsion. Stage 4: First 4 hours of postpartum stabilization.",
+        "icon": "pregnant_woman"
+      },
+      {
+        "title": "Postpartum Hemorrhage (PPH) Metrics",
+        "description": "PPH is defined as a blood loss of more than 500 mL following a vaginal delivery, or more than 1,000 mL following a cesarean delivery within 24 hours.",
+        "icon": "warning"
+      },
+      {
+        "title": "Naegele's Rule",
+        "description": "A formula to estimate the delivery date: Count backward 3 months from the first day of the woman's last menstrual period, then add 7 days.",
+        "icon": "calendar_month"
+      },
+      {
+        "title": "Normal Fetal Heart Rate",
+        "description": "A healthy, normal fetal heart rate ranges between 120 and 160 beats per minute.",
+        "icon": "favorite"
+      }
+    ],
+    "mindmapData": "- Maternity and Reproductive Health Nursing\n  - Reproductive Health and Family Planning\n    - Female Anatomy and Physiology (Ovaries, Fallopian Tubes, Uterus, External Structures)\n    - Menstrual Cycle (Proliferative Phase, Secretory Phase, Ischemic Phase)\n    - Menstrual Disorders (Dysmenorrhea, Menorrhagia, Metrorrhagia, Endometriosis)\n    - Subfertility (Male and Female Factors, Semen Analysis, Hormone Therapy, In Vitro Fertilization)\n    - Family Planning (Natural Methods, Hormonal Contraceptives, Barrier Methods, Surgical Sterilization)\n    - Sexually Transmitted Infections (Chlamydia, Gonorrhea, Syphilis, HPV, Herpes Simplex, HIV)\n  - Antepartum and Fetal Development\n    - Signs of Pregnancy (Presumptive, Probable, Positive Signs)\n    - Physiological Adaptations (Reproductive, Cardiovascular, Respiratory, Endocrine, Gastrointestinal Changes)\n    - Discomforts of Pregnancy (Nausea, Fatigue, Backache, Varicosities, Hemorrhoids, Frequent Urination)\n    - Fetal Development (Fertilization, Implantation, Embryonic Milestones, Placental Function, Umbilical Cord)\n    - Fetal Growth Assessment (McDonald's Rule, Quickening, Ultrasonography)\n    - Prenatal Diagnostics (Nonstress Test, Amniocentesis, Maternal Serum Alpha-Fetoprotein, Biophysical Profile)\n    - Obstetric History (GTPAL: Gravida, Term, Preterm, Abortions, Living Children)\n  - Intrapartum (Labor and Delivery)\n    - Stages of Labor (First Stage: Latent/Active/Transition, Second Stage, Third Stage, Fourth Stage)\n    - Fetal Heart Rate Monitoring (VEAL CHOP: Variable/Early Decelerations, Accelerations, Late Decelerations)\n    - Pain Management (Relaxation, Breathing Techniques, Epidural, Spinal Block, Pudendal Block, General Anesthesia)\n    - Labor Induction and Augmentation (Cervical Ripening, Oxytocin Infusion, Amniotomy, Amnioinfusion)\n    - Operative Deliveries (Cesarean Birth, Forceps-Assisted, Vacuum Extraction)\n  - Postpartum Care\n    - Physiological Involution (Uterine Contraction, Lochia Rubra/Serosa/Alba, Diuresis, Blood Volume Normalization)\n    - Psychological Adaptations (Taking-In Phase, Taking-Hold Phase, Letting-Go Phase)\n    - Breastfeeding (Prolactin/Oxytocin roles, Colostrum vs. Mature Milk, Engorgement Management, Latching)\n    - Discharge Preparation (Maternal Rest, Newborn Care Education, Follow-up Scheduling)\n  - Pregnancy and Labor Complications\n    - Early Pregnancy Bleeding (Threatened/Complete/Incomplete Abortion, Ectopic Pregnancy, Gestational Trophoblastic Disease)\n    - Late Pregnancy Bleeding (Placenta Previa, Abruptio Placentae, Vasa Previa)\n    - Hypertensive Disorders (Gestational Hypertension, Mild/Severe Preeclampsia, Eclampsia, HELLP Syndrome)\n    - Labor Complications (Shoulder Dystocia, Prolapsed Umbilical Cord, Uterine Rupture, Amniotic Fluid Embolism, Precipitate Labor)\n    - Postpartum Complications (Postpartum Hemorrhage, Uterine Atony, Retained Placental Fragments, Endometritis, Mastitis)\n    - Psychological Complications (Postpartum Blues, Postpartum Depression, Postpartum Psychosis)\n  - Newborn Care and Assessment\n    - Immediate Delivery Care (Airway Establishment, Apgar Scoring, Silverman and Andersen Index, Thermoregulation)\n    - Physical Profile (Normal Vital Signs, Weight, Length, Head and Chest Circumference)\n    - Newborn Reflexes (Blink, Rooting, Sucking, Palmar Grasp, Moro, Babinski, Tonic Neck)\n    - Appearance and Characteristics (Acrocyanosis, Vernix Caseosa, Lanugo, Milia, Fontanelles, Birthmarks)\n    - Developmental Milestones (Gross and Fine Motor Skills, Language Acquisition, Cognitive and Social Development)"
   }
 ]

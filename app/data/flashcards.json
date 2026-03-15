@@ -773,7 +773,7 @@
             {
                 "id": 45,
                 "front": "What is the recommended water heater temperature setting to prevent scalds when bathing an infant?",
-                "back": "The water heater should be set to 120\u00b0 F to prevent inadvertent scalding."
+                "back": "The water heater should be set to 120° F to prevent inadvertent scalding."
             }
         ]
     },
@@ -819,7 +819,7 @@
             },
             {
                 "id": 8,
-                "front": "What is the first stage of grief in the K\u00fcbler-Ross model?",
+                "front": "What is the first stage of grief in the Kübler-Ross model?",
                 "back": "\"Denial, where the person is unable to accept the diagnosis or prognosis.\""
             },
             {
@@ -829,7 +829,7 @@
             },
             {
                 "id": 10,
-                "front": "\"In the K\u00fcbler-Ross model",
+                "front": "\"In the Kübler-Ross model",
                 "back": "the stage where the person accepts the impending death and is ready to face it is called _____.\",Acceptance."
             },
             {
@@ -1318,8 +1318,134 @@
                 "id": 40,
                 "front": "Why is it necessary to control fecal and urinary incontinence for pressure injury prevention?",
                 "back": "To prevent deterioration of the tissue that can increase the risk of pressure injuries."
+            },
+            {
+                "id": 41,
+                "front": "Placenta Previa vs. Abruptio Placentae (Pain Profile)",
+                "back": "Abruptio placentae causes severe abdominal pain, vaginal bleeding, and a boardlike abdomen, whereas placenta previa is characterized by painless bright red vaginal bleeding."
+            },
+            {
+                "id": 42,
+                "front": "Classic Triad of Preeclampsia",
+                "back": "The classic triad of symptoms for preeclampsia includes hypertension, edema, and proteinuria occurring after 20 weeks gestation."
+            },
+            {
+                "id": 43,
+                "front": "HELLP Syndrome",
+                "back": "A severe variation of pregnancy-induced hypertension standing for Hemolysis, Elevated Liver enzymes, and Low Platelets."
+            },
+            {
+                "id": 44,
+                "front": "Magnesium Sulfate Toxicity Assessment",
+                "back": "When administering magnesium sulfate for preeclampsia or preterm labor, the nurse must closely monitor the patient's respiratory rate and deep tendon reflexes to detect magnesium toxicity."
+            },
+            {
+                "id": 45,
+                "front": "Postpartum Hemorrhage (PPH) Criteria",
+                "back": "PPH is defined as a blood loss of more than 500 mL following a normal vaginal delivery or more than 1,000 mL following a cesarean delivery within 24 hours."
+            },
+            {
+                "id": 46,
+                "front": "VEAL CHOP: Late Decelerations",
+                "back": "Late decelerations are caused by Placental insufficiency. Interventions include maternal repositioning (left lateral), IV hydration, oxygen administration, and discontinuing oxytocin."
+            },
+            {
+                "id": 47,
+                "front": "Uterine Atony Pharmacologic Management",
+                "back": "Methylergonovine (Methergine) or Oxytocin (Pitocin) are oxytocic agents used to treat postpartum hemorrhage caused by an uncontracted (boggy) uterus. Note: Methergine is contraindicated in hypertensive patients."
+            },
+            {
+                "id": 48,
+                "front": "Medical Management of Unruptured Ectopic Pregnancy",
+                "back": "Methotrexate, a folic acid antagonist and chemotherapeutic agent, is administered to destroy rapidly growing trophoblastic cells and preserve the fallopian tube."
+            },
+            {
+                "id": 49,
+                "front": "Clinical Signs of Hydatidiform Mole (GTD)",
+                "back": "A uterus expanding faster than normal, abnormally high serum hCG levels, and vaginal bleeding presenting with clear, fluid-filled, grape-like vesicles."
+            },
+            {
+                "id": 50,
+                "front": "Prolapsed Umbilical Cord Interventions",
+                "back": "Immediately place the woman in a Trendelenburg or knee-chest position and manually lift the fetal head off the cord through the vagina to relieve cord compression."
+            },
+            {
+                "id": 51,
+                "front": "Silverman and Andersen Index",
+                "back": "An assessment tool used to evaluate respiratory distress in a newborn. Unlike the Apgar score, a lower score indicates better respiratory status (0 = no distress, 7-10 = severe distress)."
+            },
+            {
+                "id": 52,
+                "front": "Apgar Score Parameters",
+                "back": "Evaluates five vital functions at 1 and 5 minutes after birth: Heart rate (Pulse), respiratory effort (Respiration), muscle tone (Activity), reflex irritability (Grimace), and color (Appearance)."
+            },
+            {
+                "id": 53,
+                "front": "Naegele's Rule Calculation",
+                "back": "To estimate the expected date of delivery, count backward 3 months from the first day of the last menstrual period (LMP) and add 7 days."
+            },
+            {
+                "id": 54,
+                "front": "Reactive Nonstress Test (NST)",
+                "back": "A positive indicator of fetal well-being where two or more fetal heart rate accelerations of at least 15 beats/minute above baseline occur within a 20-minute monitoring period."
+            },
+            {
+                "id": 55,
+                "front": "Neonatal Jaundice Assessment Technique",
+                "back": "Blanch the tip of the neonate's nose or the area just above the umbilicus under natural window light to check for underlying yellow discoloration."
+            },
+            {
+                "id": 56,
+                "front": "Bishop Score",
+                "back": "A prelabor scoring system used to determine cervical ripening. A score of 8 or greater indicates the cervix is ready for birth and will likely respond well to labor induction."
+            },
+            {
+                "id": 57,
+                "front": "Signs of Neonatal Hypoglycemia",
+                "back": "Clinical manifestations in the newborn include temperature instability, hypotonia, jitteriness, and seizures. Normal newborn blood glucose level is 45 to 90 mg/dl."
+            },
+            {
+                "id": 58,
+                "front": "GTPAL Obstetric History System",
+                "back": "An acronym representing Gravida (total pregnancies), Term (births 37+ weeks), Preterm (births 20-36 weeks), Abortions (losses before 20 weeks), and Living children."
+            },
+            {
+                "id": 59,
+                "front": "McRoberts Maneuver",
+                "back": "An emergency intervention for shoulder dystocia where the mother's thighs are sharply flexed against her abdomen to widen the pelvic outlet and facilitate delivery of the anterior shoulder."
+            },
+            {
+                "id": 60,
+                "front": "Rh Incompatibility Prophylaxis",
+                "back": "Rho(D) immune globulin (RhoGAM) is given to Rh-negative mothers at 28 weeks gestation and within 72 hours after delivering an Rh-positive infant to prevent maternal antibody formation against fetal red blood cells."
+            },
+            {
+                "id": 61,
+                "front": "Uterine Inversion Emergency Management",
+                "back": "Do not administer oxytocics initially as they make the uterus tense and hard to replace. Instead, administer a tocolytic (like nitroglycerin) to relax the uterus for manual replacement, followed by oxytocin to maintain tone."
+            },
+            {
+                "id": 62,
+                "front": "Oxytocin (Pitocin) Discontinuation Criteria",
+                "back": "Stop the infusion if contractions occur more often than every 2 minutes, last longer than 70-90 seconds, exceed 50 mmHg in strength, or if signs of fetal distress (e.g., late decelerations) occur."
+            },
+            {
+                "id": 63,
+                "front": "Fetal Station 0",
+                "back": "Indicates that the presenting part of the fetus has descended and is fully engaged exactly at the level of the maternal ischial spines."
+            },
+            {
+                "id": 64,
+                "front": "Amniotic Fluid Embolism Presentation",
+                "back": "A sudden, unpredictable, and highly fatal complication characterized by sharp chest pain, extreme dyspnea, pallor, cyanosis, and rapid circulatory collapse or shock."
+            },
+            {
+                "id": 65,
+                "front": "Oligohydramnios",
+                "back": "A condition characterized by less than 500 mL of amniotic fluid, frequently associated with postmaturity, intrauterine growth restriction (IUGR), and fetal renal/bladder anomalies (Potter's syndrome)."
             }
-        ]
+        ],
+        "totalCards": 65
     },
     {
         "episodeId": 7,
@@ -1860,11 +1986,11 @@
             {
                 "id": 13,
                 "front": "\"What autoimmune disorder of the peripheral nervous system causes ascending and descending paralysis",
-                "back": "and is often triggered by a viral infection?\",Guillain-Barr\u00e9 syndrome (GBS)"
+                "back": "and is often triggered by a viral infection?\",Guillain-Barré syndrome (GBS)"
             },
             {
                 "id": 14,
-                "front": "\"In Guillain-Barr\u00e9 syndrome",
+                "front": "\"In Guillain-Barré syndrome",
                 "back": "patients should be hospitalized for observation and may be placed on ventilator support if _____ becomes severely compromised.\",forced vital capacity"
             },
             {
@@ -2142,7 +2268,7 @@
             {
                 "id": 8,
                 "front": "What is the critical ANC threshold for Neutropenia?",
-                "back": "Below 500 cells/mm\u00b3."
+                "back": "Below 500 cells/mm³."
             },
             {
                 "id": 9,
@@ -3406,56 +3532,56 @@
         "title": "Maternity Flashcards",
         "description": "Biological Mechanics of Pregnancy and Birth Review",
         "cards": [
-  {
-    "id": 1,
-    "front": "What is organogenesis and when does it occur during pregnancy?",
-    "back": "Organogenesis is the development of fetal organs, which occurs during the first trimester, specifically days 14 to 56 of gestation."
-  },
-  {
-    "id": 2,
-    "front": "What is the timeline for implantation of the fertilized ovum?",
-    "back": "Implantation occurs when the cellular walls of the blastocyte implant into the endometrium, usually 6 to 10 days after ovum fertilization."
-  },
-  {
-    "id": 3,
-    "front": "What is the normal vascular composition of the umbilical cord?",
-    "back": "The umbilical cord normally contains two arteries and one vein, which transport oxygen, nutrients, and waste between the fetus and the placenta."
-  },
-  {
-    "id": 4,
-    "front": "What are the primary biological functions of amniotic fluid?",
-    "back": "It protects the fetus and umbilical cord from trauma and pressure, regulates fetal temperature, and aids in muscular development by allowing the fetus to move freely."
-  },
-  {
-    "id": 5,
-    "front": "What defines the third stage of labor?",
-    "back": "The third stage of labor begins immediately after the neonate's birth and ends with the expulsion of the placenta."
-  },
-  {
-    "id": 6,
-    "front": "What is \"lightening\" in the context of late pregnancy mechanics?",
-    "back": "Lightening is the settling of the fetal head into the brim of the pelvis prior to labor."
-  },
-  {
-    "id": 7,
-    "front": "How do true labor contractions differ mechanically from false labor?",
-    "back": "True labor produces regular rhythmic contractions leading to progressive descent of the fetus, bloody show, and progressive effacement and dilation of the cervix."
-  },
-  {
-    "id": 8,
-    "front": "What is the primary function of the placenta during fetal development?",
-    "back": "It functions as a fetal lung, allowing for the exchange of oxygen and carbon dioxide, and transports essential nutrients and hormones from the maternal blood supply to the fetus."
-  },
-  {
-    "id": 9,
-    "front": "What is the role of the corpus luteum in early pregnancy mechanics?",
-    "back": "The corpus luteum secretes large quantities of progesterone, which maintains the integrity of the pregnancy by inhibiting uterine motility and preventing the sloughing of the uterine lining."
-  },
-  {
-    "id": 10,
-    "front": "How much does the uterus grow in length to accommodate the fetus during a full-term pregnancy?",
-    "back": "The length of the uterus increases from approximately 2.5 inches (6.3 cm) before pregnancy to 12.5 inches (32 cm) at term."
-  }
-]
+            {
+                "id": 1,
+                "front": "What is organogenesis and when does it occur during pregnancy?",
+                "back": "Organogenesis is the development of fetal organs, which occurs during the first trimester, specifically days 14 to 56 of gestation."
+            },
+            {
+                "id": 2,
+                "front": "What is the timeline for implantation of the fertilized ovum?",
+                "back": "Implantation occurs when the cellular walls of the blastocyte implant into the endometrium, usually 6 to 10 days after ovum fertilization."
+            },
+            {
+                "id": 3,
+                "front": "What is the normal vascular composition of the umbilical cord?",
+                "back": "The umbilical cord normally contains two arteries and one vein, which transport oxygen, nutrients, and waste between the fetus and the placenta."
+            },
+            {
+                "id": 4,
+                "front": "What are the primary biological functions of amniotic fluid?",
+                "back": "It protects the fetus and umbilical cord from trauma and pressure, regulates fetal temperature, and aids in muscular development by allowing the fetus to move freely."
+            },
+            {
+                "id": 5,
+                "front": "What defines the third stage of labor?",
+                "back": "The third stage of labor begins immediately after the neonate's birth and ends with the expulsion of the placenta."
+            },
+            {
+                "id": 6,
+                "front": "What is \"lightening\" in the context of late pregnancy mechanics?",
+                "back": "Lightening is the settling of the fetal head into the brim of the pelvis prior to labor."
+            },
+            {
+                "id": 7,
+                "front": "How do true labor contractions differ mechanically from false labor?",
+                "back": "True labor produces regular rhythmic contractions leading to progressive descent of the fetus, bloody show, and progressive effacement and dilation of the cervix."
+            },
+            {
+                "id": 8,
+                "front": "What is the primary function of the placenta during fetal development?",
+                "back": "It functions as a fetal lung, allowing for the exchange of oxygen and carbon dioxide, and transports essential nutrients and hormones from the maternal blood supply to the fetus."
+            },
+            {
+                "id": 9,
+                "front": "What is the role of the corpus luteum in early pregnancy mechanics?",
+                "back": "The corpus luteum secretes large quantities of progesterone, which maintains the integrity of the pregnancy by inhibiting uterine motility and preventing the sloughing of the uterine lining."
+            },
+            {
+                "id": 10,
+                "front": "How much does the uterus grow in length to accommodate the fetus during a full-term pregnancy?",
+                "back": "The length of the uterus increases from approximately 2.5 inches (6.3 cm) before pregnancy to 12.5 inches (32 cm) at term."
+            }
+        ]
     }
 ]

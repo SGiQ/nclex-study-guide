@@ -17,17 +17,16 @@ export async function POST(request: Request) {
             return NextResponse.json({ error: 'Missing episodeId' }, { status: 400 });
         }
 
-        // Try to find the transcript file
-        // Pattern: episode-X-transcript.txt or episode-X-transcript.json
-        // files are in root
-        const transcriptPath = path.join(process.cwd(), `episode-${episodeId}-transcript.txt`);
-        const jsonPath = path.join(process.cwd(), `episode-${episodeId}-transcript.json`);
+        // Try to find the transcript file in multiple locations
+        const rootTranscriptPath = path.join(process.cwd(), `episode-${episodeId}-transcript.txt`);
+        const dataTranscriptPath = path.join(process.cwd(), 'app/data', `episode-${episodeId}-transcript.json`);
+        const altDataTranscriptPath = path.join(process.cwd(), 'app/data', `episode-${episodeId}-transcript.txt`);
 
         // Check API Key
         const apiKey = process.env.OPENAI_API_KEY;
         console.log('--- Generation Debug (OpenAI) ---');
         console.log('CWD:', process.cwd());
-        console.log('Transcript Path:', transcriptPath);
+        console.log('Transcript Path (Data):', dataTranscriptPath);
         console.log('API Key Present:', !!apiKey);
 
         if (!apiKey) {
@@ -37,17 +36,25 @@ export async function POST(request: Request) {
 
         let transcript = '';
         try {
-            transcript = await fs.readFile(transcriptPath, 'utf-8');
-            console.log('Transcript read success. Length:', transcript.length);
+            // Priority 1: app/data/*.json
+            const jsonData = await fs.readFile(dataTranscriptPath, 'utf-8');
+            const jsonObj = JSON.parse(jsonData);
+            transcript = jsonObj.content || jsonObj.transcript || JSON.stringify(jsonObj);
+            console.log('JSON Transcript loaded from app/data. Length:', transcript.length);
         } catch (e) {
             try {
-                const jsonData = await fs.readFile(jsonPath, 'utf-8');
-                const jsonObj = JSON.parse(jsonData);
-                transcript = jsonObj.content || jsonObj.transcript || JSON.stringify(jsonObj);
-                console.log('JSON Transcript read success. Length:', transcript.length);
-            } catch (jsonErr) {
-                console.error('Failed to read transcript file:', transcriptPath);
-                return NextResponse.json({ error: `Transcript not found for episode ${episodeId}` }, { status: 404 });
+                // Priority 2: app/data/*.txt
+                transcript = await fs.readFile(altDataTranscriptPath, 'utf-8');
+                console.log('TXT Transcript loaded from app/data. Length:', transcript.length);
+            } catch (e2) {
+                try {
+                    // Priority 3: root/*.txt
+                    transcript = await fs.readFile(rootTranscriptPath, 'utf-8');
+                    console.log('TXT Transcript loaded from root. Length:', transcript.length);
+                } catch (e3) {
+                    console.error('Failed to read transcript file in any location');
+                    return NextResponse.json({ error: `Transcript not found for episode ${episodeId}` }, { status: 404 });
+                }
             }
         }
 

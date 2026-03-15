@@ -39,7 +39,7 @@ export default function MindMapViewerPage({ params }: { params: Promise<{ id: st
         // Fetch specific mindmap directly
         // Add timeout to fail fast if DB is stuck
         const controller = new AbortController();
-        const timeoutId = setTimeout(() => controller.abort(), 2000); // 2 second timeout
+        const timeoutId = setTimeout(() => controller.abort(), 10000); // Increased to 10 seconds
 
         fetch(`/api/mindmaps/${id}`, { signal: controller.signal })
             .then(async res => {

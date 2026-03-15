@@ -8,7 +8,8 @@ interface Question {
     id: string;
     text: string;
     options: string[];
-    correctAnswer: number;
+    correctAnswer?: number;
+    correctAnswers?: number[];
     explanation: string;
     category: string;
     episodeId?: number;
@@ -16,7 +17,7 @@ interface Question {
 
 interface ExamState {
     questions: Question[];
-    answers: Record<number, number>;
+    answers: Record<number, number | number[]>;
     markedQuestions: Set<number>;
     currentQuestion: number;
     startTime: number;
@@ -120,9 +121,25 @@ export default function ExamPage() {
     const selectAnswer = (answerIndex: number) => {
         if (!examState) return;
 
+        const currentQ = examState.questions[examState.currentQuestion];
+        const isSata = currentQ.correctAnswers !== undefined;
+        
+        let newAnswer: number | number[];
+        
+        if (isSata) {
+            const currentAnswers = (examState.answers[examState.currentQuestion] as number[]) || [];
+            if (currentAnswers.includes(answerIndex)) {
+                newAnswer = currentAnswers.filter(a => a !== answerIndex);
+            } else {
+                newAnswer = [...currentAnswers, answerIndex];
+            }
+        } else {
+            newAnswer = answerIndex;
+        }
+
         const updated = {
             ...examState,
-            answers: { ...examState.answers, [examState.currentQuestion]: answerIndex }
+            answers: { ...examState.answers, [examState.currentQuestion]: newAnswer }
         };
 
         setExamState(updated);
@@ -175,8 +192,20 @@ export default function ExamPage() {
         // Calculate results
         let correct = 0;
         examState.questions.forEach((q, idx) => {
-            if (examState.answers[idx] === q.correctAnswer) {
-                correct++;
+            const answer = examState.answers[idx];
+            const isSata = q.correctAnswers !== undefined;
+            
+            if (isSata) {
+                const correctAnswers = q.correctAnswers || [];
+                const selectedAnswers = (answer as number[]) || [];
+                if (selectedAnswers.length === correctAnswers.length &&
+                    correctAnswers.every(a => selectedAnswers.includes(a))) {
+                    correct++;
+                }
+            } else {
+                if (answer === q.correctAnswer) {
+                    correct++;
+                }
             }
         });
 
@@ -250,31 +279,43 @@ export default function ExamPage() {
                 <div className="max-w-4xl mx-auto px-4 py-8">
                     {/* Question */}
                     <div className="mb-8">
-                        <div className="text-sm text-foreground/60 mb-2">{currentQ.category}</div>
+                        <div className="flex items-center gap-3 mb-2">
+                            <div className="text-sm text-foreground/60">{currentQ.category}</div>
+                            {currentQ.correctAnswers !== undefined && (
+                                <span className="text-[10px] font-bold uppercase tracking-widest text-indigo-400 bg-indigo-500/10 border border-indigo-500/20 px-2 py-0.5 rounded-md">Select all that apply</span>
+                            )}
+                        </div>
                         <h2 className="text-2xl font-bold leading-relaxed mb-6">{currentQ.text}</h2>
 
                         {/* Options */}
                         <div className="space-y-3">
-                            {currentQ.options.map((option, idx) => (
+                            {currentQ.options.map((option, idx) => {
+                                const isSata = currentQ.correctAnswers !== undefined;
+                                const isSelected = isSata 
+                                    ? ((selectedAnswer as number[]) || []).includes(idx)
+                                    : selectedAnswer === idx;
+
+                                return (
                                 <button
                                     key={idx}
                                     onClick={() => selectAnswer(idx)}
-                                    className={`w-full text-left p-4 rounded-lg border-2 transition-all ${selectedAnswer === idx
+                                    className={`w-full text-left p-4 rounded-lg border-2 transition-all ${isSelected
                                         ? 'border-indigo-500 bg-indigo-500/10'
                                         : 'border-card-border bg-card hover:border-indigo-500/50'
                                         }`}
                                 >
                                     <div className="flex items-start gap-3">
-                                        <div className={`flex-shrink-0 h-6 w-6 rounded-full border-2 flex items-center justify-center ${selectedAnswer === idx
+                                        <div className={`flex-shrink-0 h-6 w-6 ${isSata ? 'rounded-md' : 'rounded-full'} border-2 flex items-center justify-center ${isSelected
                                             ? 'border-indigo-500 bg-indigo-500'
                                             : 'border-foreground/30'
                                             }`}>
-                                            {selectedAnswer === idx && <div className="h-2 w-2 rounded-full bg-white" />}
+                                            {isSelected && <div className={`${isSata ? 'h-3 w-3' : 'h-2 w-2 rounded-full'} bg-white`} />}
                                         </div>
                                         <div className="flex-1">{option}</div>
                                     </div>
                                 </button>
-                            ))}
+                                );
+                            })}
                         </div>
                     </div>
                 </div>

@@ -4,7 +4,7 @@
         "episodeId": 2,
         "title": "Management Quiz",
         "description": "Patient Rights, Ethics, Care Coordination, Legal Regulations, Leadership",
-        "questionCount": 25,
+        "questionCount": 30,
         "color": "from-blue-600 to-indigo-800",
         "questions": [
             {
@@ -306,6 +306,91 @@
                 ],
                 "correctAnswer": 2,
                 "explanation": "Think about the very first action one must take before attempting to solve any problem."
+            },
+            {
+                "id": 26,
+                "text": "[SATA Challenge] A nurse is delegating tasks to an unlicensed assistive personnel (UAP). Which tasks are appropriate to delegate? Select all that apply.",
+                "options": [
+                    "Assessing a patient's pain level.",
+                    "Assisting a stable patient with feeding.",
+                    "Administering oral medications.",
+                    "Obtaining routine vital signs on a stable patient.",
+                    "Providing discharge instructions."
+                ],
+                "correctAnswers": [
+                    1,
+                    3
+                ],
+                "explanation": "UAPs can perform routine, stable tasks like feeding and vital signs. Assessment, medication administration, and teaching require nursing judgment."
+            },
+            {
+                "id": 27,
+                "text": "[SATA Challenge] Which of the following situations require the nurse to file an incident report? Select all that apply.",
+                "options": [
+                    "A patient falls while getting out of bed.",
+                    "A medication is administered 15 minutes late.",
+                    "A visitor expresses dissatisfaction with the cafeteria food.",
+                    "A nurse suffers a needlestick injury.",
+                    "A medication error occurs, but the patient is unharmed."
+                ],
+                "correctAnswers": [
+                    0,
+                    3,
+                    4
+                ],
+                "explanation": "Falls, staff injuries, and medication errors (even without harm) require incident reports for quality tracking."
+            },
+            {
+                "id": 28,
+                "text": "[SATA Challenge] Which of the following medications are considered high-alert medications and require at least independent double-checks before administration? Select all that apply.",
+                "options": [
+                    "Intravenous Insulin",
+                    "Oral Acetaminophen",
+                    "Intravenous Heparin",
+                    "Oral Multivitamins",
+                    "Intravenous Potassium Chloride"
+                ],
+                "correctAnswers": [
+                    0,
+                    2,
+                    4
+                ],
+                "explanation": "High-alert medications carry a high risk of causing significant patient harm if used in error. Examples include IV insulin, IV anticoagulants (heparin), and IV concentrated electrolytes (potassium chloride)."
+            },
+            {
+                "id": 29,
+                "text": "[SATA Challenge] Which of the following are classic signs of a myocardial infarction (MI)? Select all that apply.",
+                "options": [
+                    "Chest pain radiating to the left arm or jaw",
+                    "Relief of pain with rest and nitroglycerin",
+                    "Diaphoresis",
+                    "Shortness of breath",
+                    "Nausea and vomiting"
+                ],
+                "correctAnswers": [
+                    0,
+                    2,
+                    3,
+                    4
+                ],
+                "explanation": "Classic MI signs include radiating chest pain, diaphoresis, dyspnea, and nausea. Pain relieved by rest and nitroglycerin is characteristic of stable angina, not an MI."
+            },
+            {
+                "id": 30,
+                "text": "[SATA Challenge] A nurse assesses a client with hyperthyroidism. Which of the following manifestations are expected? Select all that apply.",
+                "options": [
+                    "Weight gain",
+                    "Heat intolerance",
+                    "Tachycardia",
+                    "Constipation",
+                    "Exophthalmos"
+                ],
+                "correctAnswers": [
+                    1,
+                    2,
+                    4
+                ],
+                "explanation": "Hyperthyroidism speeds up metabolism, leading to weight loss, heat intolerance, tachycardia, diarrhea, and exophthalmos (bulging eyes). Constipation and weight gain are seen in hypothyroidism."
             }
         ]
     },
@@ -314,7 +399,7 @@
         "episodeId": 2,
         "title": "Management Quiz - Part B",
         "description": "Advanced Management: Delegation, Prioritization, Leadership, Quality Improvement, Legal/Ethical Issues",
-        "questionCount": 55,
+        "questionCount": 60,
         "color": "from-blue-600 to-indigo-800",
         "questions": [
             {
@@ -976,6 +1061,91 @@
                 ],
                 "correctAnswer": 1,
                 "explanation": "Suspected child abuse, elder abuse, and certain communicable diseases require mandatory reporting to authorities by law to protect vulnerable populations."
+            },
+            {
+                "id": 56,
+                "text": "[SATA Challenge] Which actions demonstrate the ethical principle of beneficence? Select all that apply.",
+                "options": [
+                    "Administering pain medication promptly.",
+                    "Allowing a patient to refuse a life-saving blood transfusion.",
+                    "Holding a patient's hand during a painful procedure.",
+                    "Telling a patient the truth about their terminal diagnosis.",
+                    "Advocating for a patient's transition to hospice care."
+                ],
+                "correctAnswers": [
+                    0,
+                    2,
+                    4
+                ],
+                "explanation": "Beneficence is action that promotes good for others. Refusing treatment is autonomy; telling the truth is veracity."
+            },
+            {
+                "id": 57,
+                "text": "[SATA Challenge] A nurse is floating to a new unit. Which patients are appropriate to assign to the float nurse? Select all that apply.",
+                "options": [
+                    "A patient requiring discharge teaching for a new ostomy.",
+                    "A stable patient awaiting transfer to a skilled nursing facility.",
+                    "A patient admitted with acute diabetic ketoacidosis.",
+                    "A patient recovering from an uncomplicated appendectomy.",
+                    "A patient with unstable angina requiring frequent EKGs."
+                ],
+                "correctAnswers": [
+                    1,
+                    3
+                ],
+                "explanation": "Float nurses should receive stable patients with predictable outcomes, not those requiring specialized unit knowledge or teaching."
+            },
+            {
+                "id": 58,
+                "text": "[SATA Challenge] A nurse assesses a client with hyperthyroidism. Which of the following manifestations are expected? Select all that apply.",
+                "options": [
+                    "Weight gain",
+                    "Heat intolerance",
+                    "Tachycardia",
+                    "Constipation",
+                    "Exophthalmos"
+                ],
+                "correctAnswers": [
+                    1,
+                    2,
+                    4
+                ],
+                "explanation": "Hyperthyroidism speeds up metabolism, leading to weight loss, heat intolerance, tachycardia, diarrhea, and exophthalmos (bulging eyes). Constipation and weight gain are seen in hypothyroidism."
+            },
+            {
+                "id": 59,
+                "text": "[SATA Challenge] Which of the following tasks can a registered nurse (RN) appropriately delegate to an unlicensed assistive personnel (UAP)? Select all that apply.",
+                "options": [
+                    "Assessing a clients pain level",
+                    "Assisting a stable client with ambulation",
+                    "Emptying a Foley catheter drainage bag",
+                    "Administering oral medications",
+                    "Measuring vital signs on a stable client"
+                ],
+                "correctAnswers": [
+                    1,
+                    2,
+                    4
+                ],
+                "explanation": "UAPs can perform routine, stable tasks like ambulation, emptying drains, and taking vital signs. Assessment and medication administration require licensed nursing personnel."
+            },
+            {
+                "id": 60,
+                "text": "[SATA Challenge] A nurse is teaching a client with asthma about using a metered-dose inhaler (MDI). Which steps are correct? Select all that apply.",
+                "options": [
+                    "Shake the inhaler vigorously before use",
+                    "Inhale rapidly and deeply while pressing the canister",
+                    "Hold breath for 10 seconds after inhaling",
+                    "Wait 1 minute between puffs if multiple puffs are ordered",
+                    "Rinse the mouth with water after using a corticosteroid inhaler"
+                ],
+                "correctAnswers": [
+                    0,
+                    2,
+                    3,
+                    4
+                ],
+                "explanation": "Correct MDI use includes shaking the inhaler, inhaling *slowly* and deeply, holding the breath for 10 seconds, waiting 1 minute between puffs, and rinsing the mouth after corticosteroid use to prevent thrush."
             }
         ]
     },
@@ -984,7 +1154,7 @@
         "episodeId": 3,
         "title": "Safety & Infection Control",
         "description": "Patient Safety, Disaster Management, Hazardous Materials, Infection Control",
-        "questionCount": 25,
+        "questionCount": 30,
         "color": "from-emerald-600 to-teal-800",
         "questions": [
             {
@@ -1286,6 +1456,92 @@
                 ],
                 "correctAnswer": 1,
                 "explanation": "Hand hygiene is required: before/after patient contact, before/after glove use, after touching contaminated surfaces, between patients."
+            },
+            {
+                "id": 26,
+                "text": "[SATA Challenge] Which interventions are appropriate for a patient on standard airborne precautions? Select all that apply.",
+                "options": [
+                    "Negative pressure room.",
+                    "N95 respirator mask for staff.",
+                    "Surgical mask for the patient during transport.",
+                    "Gown and gloves required for all room entries.",
+                    "Keep the patient's room door open for ventilation."
+                ],
+                "correctAnswers": [
+                    0,
+                    1,
+                    2
+                ],
+                "explanation": "Airborne precautions require negative pressure, N95 respirators, and patient masking during transport. The door must remain closed."
+            },
+            {
+                "id": 27,
+                "text": "[SATA Challenge] A nurse is caring for a patient at risk for falls. Which actions are appropriate interventions? Select all that apply.",
+                "options": [
+                    "Keep the bed in the lowest position.",
+                    "Keep all four side rails up at all times.",
+                    "Ensure the call bell is within reach.",
+                    "Place a non-skid mat by the bed.",
+                    "Restrain the patient if they attempt to ambulate unassisted."
+                ],
+                "correctAnswers": [
+                    0,
+                    2,
+                    3
+                ],
+                "explanation": "Lowest bed, call bell, and non-skid mats prevent falls. Four side rails are considered a restraint, and chemical/physical restraints are a last resort."
+            },
+            {
+                "id": 28,
+                "text": "[SATA Challenge] Which of the following are appropriate nursing interventions for a client experiencing a tonic-clonic seizure? Select all that apply.",
+                "options": [
+                    "Insert a padded tongue blade into the clients mouth",
+                    "Turn the client to the side",
+                    "Restrain the clients extremities",
+                    "Loosen restrictive clothing",
+                    "Protect the clients head from injury"
+                ],
+                "correctAnswers": [
+                    1,
+                    3,
+                    4
+                ],
+                "explanation": "During a seizure, the nurse should turn the client to the side, loosen clothing, and protect the head. Inserting objects into the mouth and restraining the client can cause injury and are contraindicated."
+            },
+            {
+                "id": 29,
+                "text": "[SATA Challenge] Which of the following are classic signs of a myocardial infarction (MI)? Select all that apply.",
+                "options": [
+                    "Chest pain radiating to the left arm or jaw",
+                    "Relief of pain with rest and nitroglycerin",
+                    "Diaphoresis",
+                    "Shortness of breath",
+                    "Nausea and vomiting"
+                ],
+                "correctAnswers": [
+                    0,
+                    2,
+                    3,
+                    4
+                ],
+                "explanation": "Classic MI signs include radiating chest pain, diaphoresis, dyspnea, and nausea. Pain relieved by rest and nitroglycerin is characteristic of stable angina, not an MI."
+            },
+            {
+                "id": 30,
+                "text": "[SATA Challenge] A client is prescribed a broad-spectrum antibiotic. The nurse should monitor for which of the following superinfections? Select all that apply.",
+                "options": [
+                    "Oral candidiasis (thrush)",
+                    "Clostridioides difficile (C. diff) infection",
+                    "Vaginal yeast infection",
+                    "Methicillin-resistant Staphylococcus aureus (MRSA)",
+                    "Streptococcus pneumoniae"
+                ],
+                "correctAnswers": [
+                    0,
+                    1,
+                    2
+                ],
+                "explanation": "Broad-spectrum antibiotics can alter normal flora, leading to superinfections like oral candidiasis, C. diff, and vaginal yeast infections. MRSA and S. pneumoniae are not typically classified as superinfections in this context."
             }
         ]
     },
@@ -1294,7 +1550,7 @@
         "episodeId": 3,
         "title": "Safety & Infection Control - Part B",
         "description": "Advanced Safety: Triage, Hazmat, Isolation Precautions, Ergonomics",
-        "questionCount": 35,
+        "questionCount": 40,
         "color": "from-emerald-600 to-teal-800",
         "questions": [
             {
@@ -1717,6 +1973,92 @@
                 ],
                 "correctAnswer": 1,
                 "explanation": "Infection control plans must: 1) Decrease infection rates, 2) Evaluate how well measures work (e.g., hand hygiene compliance), 3) Quickly identify and manage outbreaks."
+            },
+            {
+                "id": 36,
+                "text": "[SATA Challenge] Which infections require contact precautions? Select all that apply.",
+                "options": [
+                    "Clostridium difficile (C. diff)",
+                    "Tuberculosis (TB)",
+                    "Methicillin-resistant Staphylococcus aureus (MRSA)",
+                    "Influenza",
+                    "Rotavirus"
+                ],
+                "correctAnswers": [
+                    0,
+                    2,
+                    4
+                ],
+                "explanation": "C. diff, MRSA, and Rotavirus require contact precautions. TB is airborne, and influenza is droplet."
+            },
+            {
+                "id": 37,
+                "text": "[SATA Challenge] When implementing seizure precautions, the nurse should include which of the following? Select all that apply.",
+                "options": [
+                    "Pad the side rails of the bed.",
+                    "Keep a padded tongue blade at the bedside.",
+                    "Have suction equipment readily available.",
+                    "Ensure oxygen setup is at the bedside.",
+                    "Restrain the patient's limbs during an active seizure."
+                ],
+                "correctAnswers": [
+                    0,
+                    2,
+                    3
+                ],
+                "explanation": "Padded rails, suction, and oxygen are essential. Tongue blades are contraindicated as they can cause injury. Limbs should never be restrained during a seizure."
+            },
+            {
+                "id": 38,
+                "text": "[SATA Challenge] Proper sterile technique includes which of the following practices? Select all that apply.",
+                "options": [
+                    "Considering the outer 1-inch border of a sterile field to be unsterile.",
+                    "Reaching across a sterile field to grab an item.",
+                    "Holding sterile objects above waist level.",
+                    "Turning your back to the sterile field to discard packaging.",
+                    "Discarding any item that becomes wet from a non-sterile liquid."
+                ],
+                "correctAnswers": [
+                    0,
+                    2,
+                    4
+                ],
+                "explanation": "Outer 1 inch is unsterile, items must remain above the waist, and moisture causes contamination via capillary action. Never turn your back on a sterile field."
+            },
+            {
+                "id": 39,
+                "text": "[SATA Challenge] A nurse assesses a client with hyperthyroidism. Which of the following manifestations are expected? Select all that apply.",
+                "options": [
+                    "Weight gain",
+                    "Heat intolerance",
+                    "Tachycardia",
+                    "Constipation",
+                    "Exophthalmos"
+                ],
+                "correctAnswers": [
+                    1,
+                    2,
+                    4
+                ],
+                "explanation": "Hyperthyroidism speeds up metabolism, leading to weight loss, heat intolerance, tachycardia, diarrhea, and exophthalmos (bulging eyes). Constipation and weight gain are seen in hypothyroidism."
+            },
+            {
+                "id": 40,
+                "text": "[SATA Challenge] Which of the following are classic signs of a myocardial infarction (MI)? Select all that apply.",
+                "options": [
+                    "Chest pain radiating to the left arm or jaw",
+                    "Relief of pain with rest and nitroglycerin",
+                    "Diaphoresis",
+                    "Shortness of breath",
+                    "Nausea and vomiting"
+                ],
+                "correctAnswers": [
+                    0,
+                    2,
+                    3,
+                    4
+                ],
+                "explanation": "Classic MI signs include radiating chest pain, diaphoresis, dyspnea, and nausea. Pain relieved by rest and nitroglycerin is characteristic of stable angina, not an MI."
             }
         ]
     },
@@ -1725,7 +2067,7 @@
         "episodeId": 4,
         "title": "Health Promotion & Maintenance - Part A",
         "description": "Pediatrics, Growth & Development, Immunizations, Newborn Care",
-        "questionCount": 30,
+        "questionCount": 35,
         "color": "from-orange-500 to-amber-700",
         "questions": [
             {
@@ -2087,6 +2429,92 @@
                 ],
                 "correctAnswer": 2,
                 "explanation": "Rectal temperature is most accurate for newborns and infants under 3 months. Axillary is acceptable for screening."
+            },
+            {
+                "id": 31,
+                "text": "[SATA Challenge] Which of the following are examples of secondary prevention? Select all that apply.",
+                "options": [
+                    "Administering a flu vaccine.",
+                    "Performing a mammogram.",
+                    "Checking blood pressure at a community fair.",
+                    "Teaching a diabetic patient how to inject insulin.",
+                    "Conducting a Pap smear."
+                ],
+                "correctAnswers": [
+                    1,
+                    2,
+                    4
+                ],
+                "explanation": "Secondary prevention focuses on early screening and detection (mammograms, BP checks, Pap smears). Vaccines are primary. Insulin teaching is tertiary."
+            },
+            {
+                "id": 32,
+                "text": "[SATA Challenge] When assessing a newborn, which findings are considered normal? Select all that apply.",
+                "options": [
+                    "Acrocyanosis",
+                    "Heart rate of 100 bpm",
+                    "Milia on the nose",
+                    "Anterior fontanel that is sunken",
+                    "Respiratory rate of 45 breaths per minute"
+                ],
+                "correctAnswers": [
+                    0,
+                    2,
+                    4
+                ],
+                "explanation": "Acrocyanosis, milia, and a RR of 30-60 are normal. Normal HR is 110-160. A sunken fontanel indicates dehydration."
+            },
+            {
+                "id": 33,
+                "text": "[SATA Challenge] Which of the following medications are considered high-alert medications and require at least independent double-checks before administration? Select all that apply.",
+                "options": [
+                    "Intravenous Insulin",
+                    "Oral Acetaminophen",
+                    "Intravenous Heparin",
+                    "Oral Multivitamins",
+                    "Intravenous Potassium Chloride"
+                ],
+                "correctAnswers": [
+                    0,
+                    2,
+                    4
+                ],
+                "explanation": "High-alert medications carry a high risk of causing significant patient harm if used in error. Examples include IV insulin, IV anticoagulants (heparin), and IV concentrated electrolytes (potassium chloride)."
+            },
+            {
+                "id": 34,
+                "text": "[SATA Challenge] Which of the following are classic signs of a myocardial infarction (MI)? Select all that apply.",
+                "options": [
+                    "Chest pain radiating to the left arm or jaw",
+                    "Relief of pain with rest and nitroglycerin",
+                    "Diaphoresis",
+                    "Shortness of breath",
+                    "Nausea and vomiting"
+                ],
+                "correctAnswers": [
+                    0,
+                    2,
+                    3,
+                    4
+                ],
+                "explanation": "Classic MI signs include radiating chest pain, diaphoresis, dyspnea, and nausea. Pain relieved by rest and nitroglycerin is characteristic of stable angina, not an MI."
+            },
+            {
+                "id": 35,
+                "text": "[SATA Challenge] A client is prescribed a broad-spectrum antibiotic. The nurse should monitor for which of the following superinfections? Select all that apply.",
+                "options": [
+                    "Oral candidiasis (thrush)",
+                    "Clostridioides difficile (C. diff) infection",
+                    "Vaginal yeast infection",
+                    "Methicillin-resistant Staphylococcus aureus (MRSA)",
+                    "Streptococcus pneumoniae"
+                ],
+                "correctAnswers": [
+                    0,
+                    1,
+                    2
+                ],
+                "explanation": "Broad-spectrum antibiotics can alter normal flora, leading to superinfections like oral candidiasis, C. diff, and vaginal yeast infections. MRSA and S. pneumoniae are not typically classified as superinfections in this context."
             }
         ]
     },
@@ -2095,7 +2523,7 @@
         "episodeId": 4,
         "title": "Health Promotion & Maintenance - Part B",
         "description": "Advanced Growth & Development and Safety",
-        "questionCount": 25,
+        "questionCount": 30,
         "color": "from-green-600 to-green-900",
         "questions": [
             {
@@ -2397,6 +2825,92 @@
                 ],
                 "correctAnswer": 1,
                 "explanation": "They play next to each other but do not share or cooperate yet."
+            },
+            {
+                "id": 26,
+                "text": "[SATA Challenge] Which immunizations are typically recommended for older adults (age 65+)? Select all that apply.",
+                "options": [
+                    "Annual influenza vaccine",
+                    "Pneumococcal vaccine",
+                    "Herpes zoster (shingles) vaccine",
+                    "HPV vaccine",
+                    "Meningococcal conjugate vaccine"
+                ],
+                "correctAnswers": [
+                    0,
+                    1,
+                    2
+                ],
+                "explanation": "Flu, pneumococcal, and shingles vaccines are recommended for older adults. HPV is for younger individuals, and meningococcal is situational/usually teens."
+            },
+            {
+                "id": 27,
+                "text": "[SATA Challenge] To reduce the risk of Sudden Infant Death Syndrome (SIDS), parents should be educated to: Select all that apply.",
+                "options": [
+                    "Place the infant on their back to sleep.",
+                    "Use a firm sleep surface.",
+                    "Keep soft objects and loose bedding away from the infant's sleep area.",
+                    "Share a bed with the infant for close monitoring.",
+                    "Maintain a warm room environment and heavily bundle the infant."
+                ],
+                "correctAnswers": [
+                    0,
+                    1,
+                    2
+                ],
+                "explanation": "Back sleeping, firm surfaces, and no loose bedding prevent SIDS. Bed-sharing and overheating are significant risk factors."
+            },
+            {
+                "id": 28,
+                "text": "[SATA Challenge] Which dietary modifications are appropriate for a patient with hypertension? Select all that apply.",
+                "options": [
+                    "Increase intake of fresh fruits and vegetables.",
+                    "Limit sodium intake to less than 2,300 mg per day.",
+                    "Consume high-fat dairy products.",
+                    "Increase intake of whole grains.",
+                    "Regularly consume processed meats for protein."
+                ],
+                "correctAnswers": [
+                    0,
+                    1,
+                    3
+                ],
+                "explanation": "The DASH diet recommends fruits, vegetables, whole grains, and sodium restriction. High-fat dairy and processed meats should be localized."
+            },
+            {
+                "id": 29,
+                "text": "[SATA Challenge] Which of the following are classic signs of a myocardial infarction (MI)? Select all that apply.",
+                "options": [
+                    "Chest pain radiating to the left arm or jaw",
+                    "Relief of pain with rest and nitroglycerin",
+                    "Diaphoresis",
+                    "Shortness of breath",
+                    "Nausea and vomiting"
+                ],
+                "correctAnswers": [
+                    0,
+                    2,
+                    3,
+                    4
+                ],
+                "explanation": "Classic MI signs include radiating chest pain, diaphoresis, dyspnea, and nausea. Pain relieved by rest and nitroglycerin is characteristic of stable angina, not an MI."
+            },
+            {
+                "id": 30,
+                "text": "[SATA Challenge] A nurse is caring for a client with liver cirrhosis. Which findings indicate the development of hepatic encephalopathy? Select all that apply.",
+                "options": [
+                    "Asterixis",
+                    "Jaundice",
+                    "Altered mental status",
+                    "Ascites",
+                    "Fetor hepaticus"
+                ],
+                "correctAnswers": [
+                    0,
+                    2,
+                    4
+                ],
+                "explanation": "Hepatic encephalopathy is characterized by neurological changes due to ammonia buildup, resulting in asterixis (flapping tremor), altered mental status, and fetor hepaticus (musty breath). Jaundice and ascites are signs of cirrhosis but not specific to encephalopathy."
             }
         ]
     },
@@ -2405,7 +2919,7 @@
         "episodeId": 5,
         "title": "Psychosocial Integrity - Part A",
         "description": "Therapeutic Communication, Abuse & Neglect Assessment, Family Dynamics",
-        "questionCount": 35,
+        "questionCount": 40,
         "color": "from-purple-600 to-indigo-800",
         "questions": [
             {
@@ -2461,12 +2975,12 @@
                 "text": "Why should you avoid saying 'Everything will be fine' to an anxious patient?",
                 "options": [
                     "It's unprofessional",
-                    "It's a meaningless clich\u00e9 that dismisses and invalidates their fear",
+                    "It's a meaningless cliché that dismisses and invalidates their fear",
                     "It makes promises you can't keep",
                     "It takes too long to say"
                 ],
                 "correctAnswer": 1,
-                "explanation": "Meaningless clich\u00e9s like 'Everything will be fine' are dismissive and invalidate the patient's legitimate concerns, destroying trust."
+                "explanation": "Meaningless clichés like 'Everything will be fine' are dismissive and invalidate the patient's legitimate concerns, destroying trust."
             },
             {
                 "id": 6,
@@ -2827,6 +3341,93 @@
                 ],
                 "correctAnswer": 1,
                 "explanation": "Restraints are ALWAYS a last resort, only after all other interventions fail, and require a physician's order."
+            },
+            {
+                "id": 36,
+                "text": "[SATA Challenge] A patient experiencing acute mania may exhibit which of the following behaviors? Select all that apply.",
+                "options": [
+                    "Pressured speech.",
+                    "Flight of ideas.",
+                    "Hypersomnia.",
+                    "Grandiosity.",
+                    "Social withdrawal."
+                ],
+                "correctAnswers": [
+                    0,
+                    1,
+                    3
+                ],
+                "explanation": "Mania involves pressured speech, flight of ideas, and grandiosity. Hypersomnia and withdrawal are typically seen in depression."
+            },
+            {
+                "id": 37,
+                "text": "[SATA Challenge] Which interventions are appropriate for a patient having a panic attack? Select all that apply.",
+                "options": [
+                    "Maintain a calm, non-threatening demeanor.",
+                    "Provide detailed, complex explanations to distract the patient.",
+                    "Stay with the patient.",
+                    "Move the patient to a quiet environment.",
+                    "Encourage the patient to express their fears extensively during the peak of the attack."
+                ],
+                "correctAnswers": [
+                    0,
+                    2,
+                    3
+                ],
+                "explanation": "Staying with the patient in a calm, quiet environment is crucial. Complex explanations or extensive discussions overwhelm the patient during acute panic."
+            },
+            {
+                "id": 38,
+                "text": "[SATA Challenge] Signs of potential physical abuse in a child include: Select all that apply.",
+                "options": [
+                    "Bruises in various stages of healing.",
+                    "Symmetrical burns on the lower extremities.",
+                    "Injuries whose descriptions do not match the developmental level of the child.",
+                    "A spiral fracture of the humerus.",
+                    "Scrapes on the knees and elbows."
+                ],
+                "correctAnswers": [
+                    0,
+                    1,
+                    2,
+                    3
+                ],
+                "explanation": "Multiple bruises across stages, symmetrical burns (immersion), mismatched injury stories, and spiral fractures strongly suggest abuse. Scrapes from playing are normal."
+            },
+            {
+                "id": 39,
+                "text": "[SATA Challenge] Which of the following are appropriate nursing interventions for a client experiencing a tonic-clonic seizure? Select all that apply.",
+                "options": [
+                    "Insert a padded tongue blade into the clients mouth",
+                    "Turn the client to the side",
+                    "Restrain the clients extremities",
+                    "Loosen restrictive clothing",
+                    "Protect the clients head from injury"
+                ],
+                "correctAnswers": [
+                    1,
+                    3,
+                    4
+                ],
+                "explanation": "During a seizure, the nurse should turn the client to the side, loosen clothing, and protect the head. Inserting objects into the mouth and restraining the client can cause injury and are contraindicated."
+            },
+            {
+                "id": 40,
+                "text": "[SATA Challenge] Which of the following are classic signs of a myocardial infarction (MI)? Select all that apply.",
+                "options": [
+                    "Chest pain radiating to the left arm or jaw",
+                    "Relief of pain with rest and nitroglycerin",
+                    "Diaphoresis",
+                    "Shortness of breath",
+                    "Nausea and vomiting"
+                ],
+                "correctAnswers": [
+                    0,
+                    2,
+                    3,
+                    4
+                ],
+                "explanation": "Classic MI signs include radiating chest pain, diaphoresis, dyspnea, and nausea. Pain relieved by rest and nitroglycerin is characteristic of stable angina, not an MI."
             }
         ]
     },
@@ -2835,7 +3436,7 @@
         "episodeId": 5,
         "title": "Psychosocial Integrity - Part B",
         "description": "Restraints, CBT, Trauma-Informed Care, Crisis Management",
-        "questionCount": 30,
+        "questionCount": 35,
         "color": "from-purple-600 to-indigo-800",
         "questions": [
             {
@@ -3197,6 +3798,94 @@
                 ],
                 "correctAnswer": 1,
                 "explanation": "TIC is a comprehensive framework that transforms the entire care approach, environment, and relationships - not just isolated techniques."
+            },
+            {
+                "id": 31,
+                "text": "[SATA Challenge] A nurse is caring for a patient with Alzheimer's disease who is wandering. Appropriate interventions include: Select all that apply.",
+                "options": [
+                    "Providing a safe, enclosed area for pacing.",
+                    "Using physical restraints during the night.",
+                    "Applying camouflaging to exit doors.",
+                    "Engaging the patient in simple, repetitive activities.",
+                    "Frequently reorienting the patient with loud verbal cues."
+                ],
+                "correctAnswers": [
+                    0,
+                    2,
+                    3
+                ],
+                "explanation": "Safe pacing areas, disguising exits, and simple activities manage wandering safely. Restraints are inappropriate, and loud frequent reorientation causes agitation."
+            },
+            {
+                "id": 32,
+                "text": "[SATA Challenge] Which symptoms are characteristic of post-traumatic stress disorder (PTSD)? Select all that apply.",
+                "options": [
+                    "Hypervigilance.",
+                    "Flashbacks to the traumatic event.",
+                    "Anhedonia.",
+                    "Avoidance of reminders of the trauma.",
+                    "Euphoria."
+                ],
+                "correctAnswers": [
+                    0,
+                    1,
+                    2,
+                    3
+                ],
+                "explanation": "PTSD involves hypervigilance, flashbacks, avoidance, and emotional numbing or anhedonia. Euphoria is not associated with PTSD."
+            },
+            {
+                "id": 33,
+                "text": "[SATA Challenge] A nurse is teaching a client with asthma about using a metered-dose inhaler (MDI). Which steps are correct? Select all that apply.",
+                "options": [
+                    "Shake the inhaler vigorously before use",
+                    "Inhale rapidly and deeply while pressing the canister",
+                    "Hold breath for 10 seconds after inhaling",
+                    "Wait 1 minute between puffs if multiple puffs are ordered",
+                    "Rinse the mouth with water after using a corticosteroid inhaler"
+                ],
+                "correctAnswers": [
+                    0,
+                    2,
+                    3,
+                    4
+                ],
+                "explanation": "Correct MDI use includes shaking the inhaler, inhaling *slowly* and deeply, holding the breath for 10 seconds, waiting 1 minute between puffs, and rinsing the mouth after corticosteroid use to prevent thrush."
+            },
+            {
+                "id": 34,
+                "text": "[SATA Challenge] Which of the following are classic signs of a myocardial infarction (MI)? Select all that apply.",
+                "options": [
+                    "Chest pain radiating to the left arm or jaw",
+                    "Relief of pain with rest and nitroglycerin",
+                    "Diaphoresis",
+                    "Shortness of breath",
+                    "Nausea and vomiting"
+                ],
+                "correctAnswers": [
+                    0,
+                    2,
+                    3,
+                    4
+                ],
+                "explanation": "Classic MI signs include radiating chest pain, diaphoresis, dyspnea, and nausea. Pain relieved by rest and nitroglycerin is characteristic of stable angina, not an MI."
+            },
+            {
+                "id": 35,
+                "text": "[SATA Challenge] Which of the following are appropriate nursing interventions for a client experiencing a tonic-clonic seizure? Select all that apply.",
+                "options": [
+                    "Insert a padded tongue blade into the clients mouth",
+                    "Turn the client to the side",
+                    "Restrain the clients extremities",
+                    "Loosen restrictive clothing",
+                    "Protect the clients head from injury"
+                ],
+                "correctAnswers": [
+                    1,
+                    3,
+                    4
+                ],
+                "explanation": "During a seizure, the nurse should turn the client to the side, loosen clothing, and protect the head. Inserting objects into the mouth and restraining the client can cause injury and are contraindicated."
             }
         ]
     },
@@ -3205,7 +3894,7 @@
         "episodeId": 6,
         "title": "Basic Care & Comfort - Part A",
         "description": "Mobility, Rehab Settings, Assistive Devices, Gait Patterns",
-        "questionCount": 30,
+        "questionCount": 35,
         "color": "from-teal-600 to-cyan-800",
         "questions": [
             {
@@ -3567,6 +4256,95 @@
                 ],
                 "correctAnswer": 1,
                 "explanation": "The nurse facilitates the process: preparing the body/room, explaining (simply) what they will see, and offering quiet support."
+            },
+            {
+                "id": 31,
+                "text": "[SATA Challenge] Which interventions help prevent pressure injuries in an immobile patient? Select all that apply.",
+                "options": [
+                    "Repositioning the patient every 2 hours.",
+                    "Massaging reddened bony prominences.",
+                    "Using a pressure-relieving mattress.",
+                    "Keeping the skin clean and dry.",
+                    "Elevating the head of the bed to 90 degrees continuously."
+                ],
+                "correctAnswers": [
+                    0,
+                    2,
+                    3
+                ],
+                "explanation": "Repositioning, specialized mattresses, and skin care prevent breakdown. Massaging reddened areas causes tissue damage, and 90-degree elevation increases shear force."
+            },
+            {
+                "id": 32,
+                "text": "[SATA Challenge] A patient is receiving enteral tube feedings. To prevent aspiration, the nurse should: Select all that apply.",
+                "options": [
+                    "Elevate the head of the bed 30 to 45 degrees during the feeding.",
+                    "Keep the head of the bed elevated for 30 to 60 minutes after feeding.",
+                    "Check gastric residual volumes regularly per facility policy.",
+                    "Administer the feeding rapidly via a bolus syringe.",
+                    "Verify tube placement before starting the feeding."
+                ],
+                "correctAnswers": [
+                    0,
+                    1,
+                    2,
+                    4
+                ],
+                "explanation": "Elevating the HOB, checking residuals, and verifying placement prevent aspiration. Rapid bolus feeding increases aspiration risk."
+            },
+            {
+                "id": 33,
+                "text": "[SATA Challenge] When performing post-mortem care, the nurse should: Select all that apply.",
+                "options": [
+                    "Remove all tubes and lines if an autopsy is scheduled.",
+                    "Place the body in a supine position.",
+                    "Elevate the head slightly on a pillow.",
+                    "Close the patient's eyes.",
+                    "Allow the family time to view the body in a clean environment."
+                ],
+                "correctAnswers": [
+                    1,
+                    2,
+                    3,
+                    4
+                ],
+                "explanation": "The body should be supine with the head elevated to prevent facial pooling. Eyes should be closed. Tubes must remain IN PLACE if an autopsy is planned."
+            },
+            {
+                "id": 34,
+                "text": "[SATA Challenge] A nurse is teaching a client with asthma about using a metered-dose inhaler (MDI). Which steps are correct? Select all that apply.",
+                "options": [
+                    "Shake the inhaler vigorously before use",
+                    "Inhale rapidly and deeply while pressing the canister",
+                    "Hold breath for 10 seconds after inhaling",
+                    "Wait 1 minute between puffs if multiple puffs are ordered",
+                    "Rinse the mouth with water after using a corticosteroid inhaler"
+                ],
+                "correctAnswers": [
+                    0,
+                    2,
+                    3,
+                    4
+                ],
+                "explanation": "Correct MDI use includes shaking the inhaler, inhaling *slowly* and deeply, holding the breath for 10 seconds, waiting 1 minute between puffs, and rinsing the mouth after corticosteroid use to prevent thrush."
+            },
+            {
+                "id": 35,
+                "text": "[SATA Challenge] Which of the following are classic signs of a myocardial infarction (MI)? Select all that apply.",
+                "options": [
+                    "Chest pain radiating to the left arm or jaw",
+                    "Relief of pain with rest and nitroglycerin",
+                    "Diaphoresis",
+                    "Shortness of breath",
+                    "Nausea and vomiting"
+                ],
+                "correctAnswers": [
+                    0,
+                    2,
+                    3,
+                    4
+                ],
+                "explanation": "Classic MI signs include radiating chest pain, diaphoresis, dyspnea, and nausea. Pain relieved by rest and nitroglycerin is characteristic of stable angina, not an MI."
             }
         ]
     },
@@ -3575,7 +4353,7 @@
         "episodeId": 6,
         "title": "Basic Care & Comfort - Part B",
         "description": "Skin Integrity, Pain Management, End of Life Care Scenarios",
-        "questionCount": 20,
+        "questionCount": 25,
         "color": "from-teal-600 to-cyan-800",
         "questions": [
             {
@@ -3817,6 +4595,93 @@
                 ],
                 "correctAnswer": 1,
                 "explanation": "Palliative care focuses on symptom relief at ANY stage of illness. Hospice is a specific Medicare benefit for the end of life (<6mo) without curative intent."
+            },
+            {
+                "id": 21,
+                "text": "[SATA Challenge] Appropriate non-pharmacological pain management techniques include: Select all that apply.",
+                "options": [
+                    "Guided imagery.",
+                    "Applying heat to an acute, unhealed surgical incision.",
+                    "Music therapy.",
+                    "Biofeedback.",
+                    "Progressive muscle relaxation."
+                ],
+                "correctAnswers": [
+                    0,
+                    2,
+                    3,
+                    4
+                ],
+                "explanation": "Guided imagery, music, biofeedback, and muscle relaxation are effective. Heat should not be applied to acute, unhealed surgical incisions as it increases bleeding."
+            },
+            {
+                "id": 22,
+                "text": "[SATA Challenge] A patient with a urinary catheter is at risk for a CAUTI. Prevention strategies include: Select all that apply.",
+                "options": [
+                    "Maintaining a closed drainage system.",
+                    "Keeping the drainage bag below the level of the bladder.",
+                    "Emptying the drainage bag only when it is completely full.",
+                    "Performing routine perineal care with soap and water.",
+                    "Securing the catheter to the patient's leg."
+                ],
+                "correctAnswers": [
+                    0,
+                    1,
+                    3,
+                    4
+                ],
+                "explanation": "Closed systems, bags below the bladder, standard perineal care, and securement prevent CAUTIs. Bags should be emptied regularly, not left to overfill."
+            },
+            {
+                "id": 23,
+                "text": "[SATA Challenge] A nurse is caring for a client with liver cirrhosis. Which findings indicate the development of hepatic encephalopathy? Select all that apply.",
+                "options": [
+                    "Asterixis",
+                    "Jaundice",
+                    "Altered mental status",
+                    "Ascites",
+                    "Fetor hepaticus"
+                ],
+                "correctAnswers": [
+                    0,
+                    2,
+                    4
+                ],
+                "explanation": "Hepatic encephalopathy is characterized by neurological changes due to ammonia buildup, resulting in asterixis (flapping tremor), altered mental status, and fetor hepaticus (musty breath). Jaundice and ascites are signs of cirrhosis but not specific to encephalopathy."
+            },
+            {
+                "id": 24,
+                "text": "[SATA Challenge] A client with chronic kidney disease (CKD) is receiving hemodialysis. Which dietary instructions should the nurse provide? Select all that apply.",
+                "options": [
+                    "Increase potassium intake",
+                    "Restrict fluid intake",
+                    "Limit sodium consumption",
+                    "Consume a high-protein diet",
+                    "Limit phosphorus-rich foods"
+                ],
+                "correctAnswers": [
+                    1,
+                    2,
+                    4
+                ],
+                "explanation": "Clients on hemodialysis should restrict fluids, sodium, potassium, and phosphorus. Protein intake is usually individualized but often needs to be adequate (not excessively high or low) to replace losses during dialysis, but limiting phosphorus and sodium is key."
+            },
+            {
+                "id": 25,
+                "text": "[SATA Challenge] Which of the following tasks can a registered nurse (RN) appropriately delegate to an unlicensed assistive personnel (UAP)? Select all that apply.",
+                "options": [
+                    "Assessing a clients pain level",
+                    "Assisting a stable client with ambulation",
+                    "Emptying a Foley catheter drainage bag",
+                    "Administering oral medications",
+                    "Measuring vital signs on a stable client"
+                ],
+                "correctAnswers": [
+                    1,
+                    2,
+                    4
+                ],
+                "explanation": "UAPs can perform routine, stable tasks like ambulation, emptying drains, and taking vital signs. Assessment and medication administration require licensed nursing personnel."
             }
         ]
     },
@@ -3825,7 +4690,7 @@
         "episodeId": 7,
         "title": "Pharmacology Part A: Foundations & Cardiovascular",
         "description": "PK/PD, Medication Safety, Diuretics, Digoxin, Anticoagulants",
-        "questionCount": 30,
+        "questionCount": 35,
         "color": "from-blue-600 to-indigo-900",
         "questions": [
             {
@@ -4187,6 +5052,92 @@
                 ],
                 "correctAnswer": 1,
                 "explanation": "Because the liver destroys a % of the drug right away, oral doses must be high enough to ensure enough 'survives' to reach the body."
+            },
+            {
+                "id": 31,
+                "text": "[SATA Challenge] A patient is prescribed digoxin for heart failure. Which signs indicate potential digoxin toxicity? Select all that apply.",
+                "options": [
+                    "Nausea and vomiting.",
+                    "Visual disturbances (yellow-green halos).",
+                    "Bradycardia.",
+                    "Hyperkalemia.",
+                    "Tachycardia."
+                ],
+                "correctAnswers": [
+                    0,
+                    1,
+                    2
+                ],
+                "explanation": "Digoxin toxicity presents with GI upset, vision changes, and bradycardia. Hypokalemia (not hyperkalemia) increases the risk of toxicity."
+            },
+            {
+                "id": 32,
+                "text": "[SATA Challenge] When administering insulin, which actions are correct? Select all that apply.",
+                "options": [
+                    "Roll NPH insulin vials between the palms to mix.",
+                    "Draw up NPH insulin before regular insulin when mixing.",
+                    "Rotate injection sites to prevent lipohypertrophy.",
+                    "Administer regular insulin via IV route if required.",
+                    "Store unopened insulin vials in the freezer."
+                ],
+                "correctAnswers": [
+                    0,
+                    2,
+                    3
+                ],
+                "explanation": "Roll cloudy (NPH) insulin, rotate sites, and only regular insulin can be given IV. When mixing, draw clear (regular) before cloudy (NPH). Never freeze insulin."
+            },
+            {
+                "id": 33,
+                "text": "[SATA Challenge] A patient on warfarin should be instructed to do which of the following? Select all that apply.",
+                "options": [
+                    "Use a soft-bristle toothbrush.",
+                    "Increase daily intake of dark leafy green vegetables.",
+                    "Report any unusual bleeding or bruising.",
+                    "Avoid taking aspirin and NSAIDs.",
+                    "Use an electric razor instead of a manual one."
+                ],
+                "correctAnswers": [
+                    0,
+                    2,
+                    3,
+                    4
+                ],
+                "explanation": "Bleeding precautions are essential. Patients should maintain a consistent intake of Vitamin K (green leafy vegetables), not actively increase it."
+            },
+            {
+                "id": 34,
+                "text": "[SATA Challenge] A client is prescribed a broad-spectrum antibiotic. The nurse should monitor for which of the following superinfections? Select all that apply.",
+                "options": [
+                    "Oral candidiasis (thrush)",
+                    "Clostridioides difficile (C. diff) infection",
+                    "Vaginal yeast infection",
+                    "Methicillin-resistant Staphylococcus aureus (MRSA)",
+                    "Streptococcus pneumoniae"
+                ],
+                "correctAnswers": [
+                    0,
+                    1,
+                    2
+                ],
+                "explanation": "Broad-spectrum antibiotics can alter normal flora, leading to superinfections like oral candidiasis, C. diff, and vaginal yeast infections. MRSA and S. pneumoniae are not typically classified as superinfections in this context."
+            },
+            {
+                "id": 35,
+                "text": "[SATA Challenge] A nurse is caring for a client with liver cirrhosis. Which findings indicate the development of hepatic encephalopathy? Select all that apply.",
+                "options": [
+                    "Asterixis",
+                    "Jaundice",
+                    "Altered mental status",
+                    "Ascites",
+                    "Fetor hepaticus"
+                ],
+                "correctAnswers": [
+                    0,
+                    2,
+                    4
+                ],
+                "explanation": "Hepatic encephalopathy is characterized by neurological changes due to ammonia buildup, resulting in asterixis (flapping tremor), altered mental status, and fetor hepaticus (musty breath). Jaundice and ascites are signs of cirrhosis but not specific to encephalopathy."
             }
         ]
     },
@@ -4195,7 +5146,7 @@
         "episodeId": 7,
         "title": "Pharmacology Part B: Systems & Safety",
         "description": "Endocrine (Insulin), Respiratory, Immunologic, Chemo, Herbal Safety",
-        "questionCount": 25,
+        "questionCount": 30,
         "color": "from-blue-600 to-indigo-900",
         "questions": [
             {
@@ -4497,6 +5448,93 @@
                 ],
                 "correctAnswer": 1,
                 "explanation": "The liver makes the most cholesterol while we sleep, so HMG-CoA reductase inhibitors work best then."
+            },
+            {
+                "id": 26,
+                "text": "[SATA Challenge] Which adverse effects are associated with ACE inhibitors (e.g., lisinopril)? Select all that apply.",
+                "options": [
+                    "Dry, persistent cough.",
+                    "Hypokalemia.",
+                    "Angioedema.",
+                    "Hyperkalemia.",
+                    "Bradycardia."
+                ],
+                "correctAnswers": [
+                    0,
+                    2,
+                    3
+                ],
+                "explanation": "ACE inhibitors cause a dry cough, angioedema, and hyperkalemia. They do not typically cause hypokalemia or significantly affect heart rate."
+            },
+            {
+                "id": 27,
+                "text": "[SATA Challenge] Before administering a beta-blocker (e.g., metoprolol), the nurse should: Select all that apply.",
+                "options": [
+                    "Assess the patient's apical pulse.",
+                    "Check the patient's blood pressure.",
+                    "Monitor for signs of bronchospasm, especially in patients with asthma.",
+                    "Assess the patient's respiratory rate for tachypnea.",
+                    "Verify the patient's potassium level."
+                ],
+                "correctAnswers": [
+                    0,
+                    1,
+                    2
+                ],
+                "explanation": "Beta-blockers lower HR and BP, and non-selective ones can cause bronchospasm. They do not typically affect respiratory rate primarily or potassium levels."
+            },
+            {
+                "id": 28,
+                "text": "[SATA Challenge] A nurse is teaching a client with asthma about using a metered-dose inhaler (MDI). Which steps are correct? Select all that apply.",
+                "options": [
+                    "Shake the inhaler vigorously before use",
+                    "Inhale rapidly and deeply while pressing the canister",
+                    "Hold breath for 10 seconds after inhaling",
+                    "Wait 1 minute between puffs if multiple puffs are ordered",
+                    "Rinse the mouth with water after using a corticosteroid inhaler"
+                ],
+                "correctAnswers": [
+                    0,
+                    2,
+                    3,
+                    4
+                ],
+                "explanation": "Correct MDI use includes shaking the inhaler, inhaling *slowly* and deeply, holding the breath for 10 seconds, waiting 1 minute between puffs, and rinsing the mouth after corticosteroid use to prevent thrush."
+            },
+            {
+                "id": 29,
+                "text": "[SATA Challenge] Which of the following medications are considered high-alert medications and require at least independent double-checks before administration? Select all that apply.",
+                "options": [
+                    "Intravenous Insulin",
+                    "Oral Acetaminophen",
+                    "Intravenous Heparin",
+                    "Oral Multivitamins",
+                    "Intravenous Potassium Chloride"
+                ],
+                "correctAnswers": [
+                    0,
+                    2,
+                    4
+                ],
+                "explanation": "High-alert medications carry a high risk of causing significant patient harm if used in error. Examples include IV insulin, IV anticoagulants (heparin), and IV concentrated electrolytes (potassium chloride)."
+            },
+            {
+                "id": 30,
+                "text": "[SATA Challenge] The nurse is caring for a client with a deep vein thrombosis (DVT) receiving a heparin infusion. Which actions are appropriate? Select all that apply.",
+                "options": [
+                    "Massage the affected leg to promote circulation",
+                    "Monitor activated partial thromboplastin time (aPTT)",
+                    "Elevate the affected extremity",
+                    "Assess for signs of bleeding",
+                    "Apply a warm, moist compress to the affected area"
+                ],
+                "correctAnswers": [
+                    1,
+                    2,
+                    3,
+                    4
+                ],
+                "explanation": "For a DVT, the nurse should monitor aPTT, elevate the leg, assess for bleeding, and apply a warm compress. Massaging the leg is contraindicated as it can dislodge the clot."
             }
         ]
     },
@@ -4505,7 +5543,7 @@
         "episodeId": 8,
         "title": "Pharmacology Part A: GI & Pain Management",
         "description": "GI Meds (H2, PPIs, Laxatives) & Pain (NSAIDs, Opioids, Adjuvants)",
-        "questionCount": 30,
+        "questionCount": 35,
         "color": "from-purple-600 to-indigo-900",
         "questions": [
             {
@@ -4867,6 +5905,92 @@
                 ],
                 "correctAnswer": 1,
                 "explanation": "Niacin causes vasodilation in the skin -> Flushing. Aspirin can help reduce this."
+            },
+            {
+                "id": 31,
+                "text": "[SATA Challenge] A patient is taking a loop diuretic (e.g., furosemide). The nurse should monitor for which electrolyte imbalances? Select all that apply.",
+                "options": [
+                    "Hypokalemia.",
+                    "Hyponatremia.",
+                    "Hypercalcemia.",
+                    "Hyperkalemia.",
+                    "Hypomagnesemia."
+                ],
+                "correctAnswers": [
+                    0,
+                    1,
+                    4
+                ],
+                "explanation": "Loop diuretics cause the excretion of potassium, sodium, and magnesium, leading to hypo- states."
+            },
+            {
+                "id": 32,
+                "text": "[SATA Challenge] Which instructions should a nurse provide a patient taking a proton pump inhibitor (PPI)? Select all that apply.",
+                "options": [
+                    "Take the medication 30 minutes before the first meal of the day.",
+                    "Crush the capsule if you have difficulty swallowing.",
+                    "Long-term use may increase the risk of bone fractures.",
+                    "Long-term use may increase the risk of C. difficile infections.",
+                    "Take the medication immediately after dinner."
+                ],
+                "correctAnswers": [
+                    0,
+                    2,
+                    3
+                ],
+                "explanation": "PPIs should be taken before meals. Long-term use lowers stomach acid, increasing risk for osteoporosis and enteric infections like C. diff. They should not be crushed."
+            },
+            {
+                "id": 33,
+                "text": "[SATA Challenge] A patient is prescribed an SSRI for depression. Which statements about SSRI therapy are accurate? Select all that apply.",
+                "options": [
+                    "The patient may experience sexual dysfunction.",
+                    "Therapeutic effects may take 4 to 6 weeks to appear.",
+                    "The medication must be tapered off gradually to avoid withdrawal syndrome.",
+                    "The patient should avoid foods high in tyramine.",
+                    "Weight gain is a possible side effect."
+                ],
+                "correctAnswers": [
+                    0,
+                    1,
+                    2,
+                    4
+                ],
+                "explanation": "SSRIs cause sexual dysfunction, weight changes, take weeks to work, and require tapering. Tyramine restrictions apply to MAOIs, not SSRIs."
+            },
+            {
+                "id": 34,
+                "text": "[SATA Challenge] Which of the following medications are considered high-alert medications and require at least independent double-checks before administration? Select all that apply.",
+                "options": [
+                    "Intravenous Insulin",
+                    "Oral Acetaminophen",
+                    "Intravenous Heparin",
+                    "Oral Multivitamins",
+                    "Intravenous Potassium Chloride"
+                ],
+                "correctAnswers": [
+                    0,
+                    2,
+                    4
+                ],
+                "explanation": "High-alert medications carry a high risk of causing significant patient harm if used in error. Examples include IV insulin, IV anticoagulants (heparin), and IV concentrated electrolytes (potassium chloride)."
+            },
+            {
+                "id": 35,
+                "text": "[SATA Challenge] A nurse assesses a client with hyperthyroidism. Which of the following manifestations are expected? Select all that apply.",
+                "options": [
+                    "Weight gain",
+                    "Heat intolerance",
+                    "Tachycardia",
+                    "Constipation",
+                    "Exophthalmos"
+                ],
+                "correctAnswers": [
+                    1,
+                    2,
+                    4
+                ],
+                "explanation": "Hyperthyroidism speeds up metabolism, leading to weight loss, heat intolerance, tachycardia, diarrhea, and exophthalmos (bulging eyes). Constipation and weight gain are seen in hypothyroidism."
             }
         ]
     },
@@ -4875,7 +5999,7 @@
         "episodeId": 8,
         "title": "Pharmacology Part B: Psych & Geriatrics",
         "description": "Antipsychotics, Antidepressants, Beers Criteria, Polypharmacy",
-        "questionCount": 25,
+        "questionCount": 30,
         "color": "from-purple-600 to-indigo-900",
         "questions": [
             {
@@ -5177,6 +6301,94 @@
                 ],
                 "correctAnswer": 1,
                 "explanation": "Life-threatening. Lead-pipe rigidity and soaring temp. Stop the med immediately."
+            },
+            {
+                "id": 26,
+                "text": "[SATA Challenge] Signs of lithium toxicity include: Select all that apply.",
+                "options": [
+                    "Coarse hand tremors.",
+                    "Confusion.",
+                    "Constipation.",
+                    "Severe diarrhea.",
+                    "Ataxia."
+                ],
+                "correctAnswers": [
+                    0,
+                    1,
+                    3,
+                    4
+                ],
+                "explanation": "Lithium toxicity presents with neuro signs (coarse tremors, confusion, ataxia) and severe GI distress (diarrhea, vomiting). Fine tremors are an expected side effect."
+            },
+            {
+                "id": 27,
+                "text": "[SATA Challenge] A patient is receiving PCA (Patient-Controlled Analgesia) with morphine. The nurse's responsibilities include: Select all that apply.",
+                "options": [
+                    "Instructing the patient's family to press the button for the patient while they sleep.",
+                    "Monitoring the patient's respiratory rate and oxygen saturation.",
+                    "Having naloxone readily available.",
+                    "Assessing the patient's pain level regularly.",
+                    "Evaluating the IV insertion site for patency."
+                ],
+                "correctAnswers": [
+                    1,
+                    2,
+                    3,
+                    4
+                ],
+                "explanation": "Monitoring respiratory status, having the antidote (naloxone), and assessing the IV are critical. Family members MUST NOT press the button (PCA by proxy is unsafe)."
+            },
+            {
+                "id": 28,
+                "text": "[SATA Challenge] Which of the following medications are considered high-alert medications and require at least independent double-checks before administration? Select all that apply.",
+                "options": [
+                    "Intravenous Insulin",
+                    "Oral Acetaminophen",
+                    "Intravenous Heparin",
+                    "Oral Multivitamins",
+                    "Intravenous Potassium Chloride"
+                ],
+                "correctAnswers": [
+                    0,
+                    2,
+                    4
+                ],
+                "explanation": "High-alert medications carry a high risk of causing significant patient harm if used in error. Examples include IV insulin, IV anticoagulants (heparin), and IV concentrated electrolytes (potassium chloride)."
+            },
+            {
+                "id": 29,
+                "text": "[SATA Challenge] A nurse is teaching a client with asthma about using a metered-dose inhaler (MDI). Which steps are correct? Select all that apply.",
+                "options": [
+                    "Shake the inhaler vigorously before use",
+                    "Inhale rapidly and deeply while pressing the canister",
+                    "Hold breath for 10 seconds after inhaling",
+                    "Wait 1 minute between puffs if multiple puffs are ordered",
+                    "Rinse the mouth with water after using a corticosteroid inhaler"
+                ],
+                "correctAnswers": [
+                    0,
+                    2,
+                    3,
+                    4
+                ],
+                "explanation": "Correct MDI use includes shaking the inhaler, inhaling *slowly* and deeply, holding the breath for 10 seconds, waiting 1 minute between puffs, and rinsing the mouth after corticosteroid use to prevent thrush."
+            },
+            {
+                "id": 30,
+                "text": "[SATA Challenge] A client with chronic kidney disease (CKD) is receiving hemodialysis. Which dietary instructions should the nurse provide? Select all that apply.",
+                "options": [
+                    "Increase potassium intake",
+                    "Restrict fluid intake",
+                    "Limit sodium consumption",
+                    "Consume a high-protein diet",
+                    "Limit phosphorus-rich foods"
+                ],
+                "correctAnswers": [
+                    1,
+                    2,
+                    4
+                ],
+                "explanation": "Clients on hemodialysis should restrict fluids, sodium, potassium, and phosphorus. Protein intake is usually individualized but often needs to be adequate (not excessively high or low) to replace losses during dialysis, but limiting phosphorus and sodium is key."
             }
         ]
     },
@@ -5185,7 +6397,7 @@
         "episodeId": 9,
         "title": "CV Diagnostics & Dysrhythmias - Part A",
         "description": "Lab Values, EKG Interpretation, Dysrhythmias (Afib, VT, VF)",
-        "questionCount": 30,
+        "questionCount": 35,
         "color": "from-red-600 to-red-900",
         "questions": [
             {
@@ -5547,6 +6759,92 @@
                 ],
                 "correctAnswer": 1,
                 "explanation": "Contrast dye can cause Kidney Failure. Flush it out."
+            },
+            {
+                "id": 31,
+                "text": "[SATA Challenge] A patient presents with a suspected myocardial infarction. Which diagnostic markers are most critical to evaluate? Select all that apply.",
+                "options": [
+                    "Troponin I",
+                    "Troponin T",
+                    "BNP (B-type Natriuretic Peptide)",
+                    "Creatine Kinase-MB (CK-MB)",
+                    "Amylase"
+                ],
+                "correctAnswers": [
+                    0,
+                    1,
+                    3
+                ],
+                "explanation": "Troponins and CK-MB are markers for cardiac muscle injury. BNP relates to heart failure, and amylase relates to pancreatitis."
+            },
+            {
+                "id": 32,
+                "text": "[SATA Challenge] Which interventions are appropriate for a patient experiencing an acute episode of angina? Select all that apply.",
+                "options": [
+                    "Administer nitroglycerin sublingually.",
+                    "Instruct the patient to ambulate to relieve pain.",
+                    "Provide supplemental oxygen.",
+                    "Instruct the patient to rest.",
+                    "Administer aspirin as prescribed."
+                ],
+                "correctAnswers": [
+                    0,
+                    2,
+                    3,
+                    4
+                ],
+                "explanation": "Rest, oxygen, nitroglycerin, and aspirin are standard treatments for acute angina (MONA protocol components). Ambulation increases cardiac demand."
+            },
+            {
+                "id": 33,
+                "text": "[SATA Challenge] Signs of left-sided heart failure include: Select all that apply.",
+                "options": [
+                    "Peripheral edema.",
+                    "Crackles in the lungs.",
+                    "Jugular venous distention (JVD).",
+                    "Dyspnea and orthopnea.",
+                    "Hepatomegaly."
+                ],
+                "correctAnswers": [
+                    1,
+                    3
+                ],
+                "explanation": "Left-sided HF causes pulmonary symptoms (crackles, dyspnea). Right-sided HF causes systemic symptoms (edema, JVD, hepatomegaly)."
+            },
+            {
+                "id": 34,
+                "text": "[SATA Challenge] A client with chronic kidney disease (CKD) is receiving hemodialysis. Which dietary instructions should the nurse provide? Select all that apply.",
+                "options": [
+                    "Increase potassium intake",
+                    "Restrict fluid intake",
+                    "Limit sodium consumption",
+                    "Consume a high-protein diet",
+                    "Limit phosphorus-rich foods"
+                ],
+                "correctAnswers": [
+                    1,
+                    2,
+                    4
+                ],
+                "explanation": "Clients on hemodialysis should restrict fluids, sodium, potassium, and phosphorus. Protein intake is usually individualized but often needs to be adequate (not excessively high or low) to replace losses during dialysis, but limiting phosphorus and sodium is key."
+            },
+            {
+                "id": 35,
+                "text": "[SATA Challenge] A nurse is teaching a client with asthma about using a metered-dose inhaler (MDI). Which steps are correct? Select all that apply.",
+                "options": [
+                    "Shake the inhaler vigorously before use",
+                    "Inhale rapidly and deeply while pressing the canister",
+                    "Hold breath for 10 seconds after inhaling",
+                    "Wait 1 minute between puffs if multiple puffs are ordered",
+                    "Rinse the mouth with water after using a corticosteroid inhaler"
+                ],
+                "correctAnswers": [
+                    0,
+                    2,
+                    3,
+                    4
+                ],
+                "explanation": "Correct MDI use includes shaking the inhaler, inhaling *slowly* and deeply, holding the breath for 10 seconds, waiting 1 minute between puffs, and rinsing the mouth after corticosteroid use to prevent thrush."
             }
         ]
     },
@@ -5555,7 +6853,7 @@
         "episodeId": 9,
         "title": "CV Pathologies & Procedures - Part B",
         "description": "ACS, Heart Failure, Hypertensive Crisis, PAD, DVT",
-        "questionCount": 25,
+        "questionCount": 30,
         "color": "from-red-600 to-red-900",
         "questions": [
             {
@@ -5857,6 +7155,90 @@
                 ],
                 "correctAnswer": 1,
                 "explanation": "Gravity helps drain blood from legs back to the heart/brain."
+            },
+            {
+                "id": 26,
+                "text": "[SATA Challenge] A nurse is analyzing an ECG strip and notes an irregular rhythm with absent P waves and a normal QRS complex. This rhythm indicates:",
+                "options": [
+                    "Ventricular tachycardia.",
+                    "Atrial fibrillation.",
+                    "Sinus bradycardia.",
+                    "First-degree AV block.",
+                    "Normal sinus rhythm."
+                ],
+                "correctAnswers": [
+                    1
+                ],
+                "explanation": "Atrial fibrillation is characterized by an irregular rhythm and absent P waves (replaced by fibrillatory waves)."
+            },
+            {
+                "id": 27,
+                "text": "[SATA Challenge] Which findings in an arterial blood gas (ABG) indicate respiratory acidosis? Select all that apply.",
+                "options": [
+                    "pH of 7.25",
+                    "pH of 7.50",
+                    "PaCO2 of 55 mm Hg",
+                    "PaCO2 of 30 mm Hg",
+                    "HCO3 of 24 mEq/L (Normal)"
+                ],
+                "correctAnswers": [
+                    0,
+                    2,
+                    4
+                ],
+                "explanation": "Respiratory acidosis is defined by a low pH (<7.35) and a high PaCO2 (>45 mm Hg), with normal or elevated HCO3 if compensating."
+            },
+            {
+                "id": 28,
+                "text": "[SATA Challenge] Which of the following medications are considered high-alert medications and require at least independent double-checks before administration? Select all that apply.",
+                "options": [
+                    "Intravenous Insulin",
+                    "Oral Acetaminophen",
+                    "Intravenous Heparin",
+                    "Oral Multivitamins",
+                    "Intravenous Potassium Chloride"
+                ],
+                "correctAnswers": [
+                    0,
+                    2,
+                    4
+                ],
+                "explanation": "High-alert medications carry a high risk of causing significant patient harm if used in error. Examples include IV insulin, IV anticoagulants (heparin), and IV concentrated electrolytes (potassium chloride)."
+            },
+            {
+                "id": 29,
+                "text": "[SATA Challenge] A client is prescribed a broad-spectrum antibiotic. The nurse should monitor for which of the following superinfections? Select all that apply.",
+                "options": [
+                    "Oral candidiasis (thrush)",
+                    "Clostridioides difficile (C. diff) infection",
+                    "Vaginal yeast infection",
+                    "Methicillin-resistant Staphylococcus aureus (MRSA)",
+                    "Streptococcus pneumoniae"
+                ],
+                "correctAnswers": [
+                    0,
+                    1,
+                    2
+                ],
+                "explanation": "Broad-spectrum antibiotics can alter normal flora, leading to superinfections like oral candidiasis, C. diff, and vaginal yeast infections. MRSA and S. pneumoniae are not typically classified as superinfections in this context."
+            },
+            {
+                "id": 30,
+                "text": "[SATA Challenge] The nurse is caring for a client with a deep vein thrombosis (DVT) receiving a heparin infusion. Which actions are appropriate? Select all that apply.",
+                "options": [
+                    "Massage the affected leg to promote circulation",
+                    "Monitor activated partial thromboplastin time (aPTT)",
+                    "Elevate the affected extremity",
+                    "Assess for signs of bleeding",
+                    "Apply a warm, moist compress to the affected area"
+                ],
+                "correctAnswers": [
+                    1,
+                    2,
+                    3,
+                    4
+                ],
+                "explanation": "For a DVT, the nurse should monitor aPTT, elevate the leg, assess for bleeding, and apply a warm compress. Massaging the leg is contraindicated as it can dislodge the clot."
             }
         ]
     },
@@ -5865,7 +7247,7 @@
         "episodeId": 10,
         "title": "Respiratory & Neurological - Part A",
         "description": "COPD, Asthma, Pneumonia, Delirium, Dementia, Stroke, Seizures",
-        "questionCount": 35,
+        "questionCount": 40,
         "color": "from-red-600 to-red-900",
         "questions": [
             {
@@ -6287,6 +7669,95 @@
                 ],
                 "correctAnswer": 1,
                 "explanation": "The core principle is to immediately identify and treat the underlying cause, whether infection, obstruction, or other pathology."
+            },
+            {
+                "id": 36,
+                "text": "[SATA Challenge] A patient is experiencing an acute asthma exacerbation. Expected assessment findings include: Select all that apply.",
+                "options": [
+                    "Expiratory wheezing.",
+                    "Use of accessory respiratory muscles.",
+                    "Tachypnea.",
+                    "Bradycardia.",
+                    "Chest tightness."
+                ],
+                "correctAnswers": [
+                    0,
+                    1,
+                    2,
+                    4
+                ],
+                "explanation": "Asthma exacerbation features wheezing, tachypnea, chest tightness, and accessory muscle use. Tachycardia (not bradycardia) occurs due to distress and albuterol use."
+            },
+            {
+                "id": 37,
+                "text": "[SATA Challenge] Which interventions are essential in the acute management of ischemic stroke? Select all that apply.",
+                "options": [
+                    "Obtaining a stat CT scan of the head.",
+                    "Administering tPA within a 3 to 4.5 hour window if indicated.",
+                    "Targeting a systolic blood pressure below 110 mm Hg.",
+                    "Performing a rapid neurological assessment (e.g., NIHSS).",
+                    "Keeping the patient NPO until a swallow screen is performed."
+                ],
+                "correctAnswers": [
+                    0,
+                    1,
+                    3,
+                    4
+                ],
+                "explanation": "CT scan, tPA protocol, NIHSS, and NPO status are critical. Extreme lowering of BP decreases cerebral perfusion; permissive hypertension is often allowed initially."
+            },
+            {
+                "id": 38,
+                "text": "[SATA Challenge] Classic signs of Diabetic Ketoacidosis (DKA) include: Select all that apply.",
+                "options": [
+                    "Kussmaul respirations.",
+                    "Fruity breath odor.",
+                    "Hypoglycemia.",
+                    "Profound dehydration.",
+                    "Elevated blood ketones."
+                ],
+                "correctAnswers": [
+                    0,
+                    1,
+                    3,
+                    4
+                ],
+                "explanation": "DKA presents with hyperglycemia (not hypo-), Kussmaul respirations, fruity breath, ketones, and severe dehydration."
+            },
+            {
+                "id": 39,
+                "text": "[SATA Challenge] Which of the following medications are considered high-alert medications and require at least independent double-checks before administration? Select all that apply.",
+                "options": [
+                    "Intravenous Insulin",
+                    "Oral Acetaminophen",
+                    "Intravenous Heparin",
+                    "Oral Multivitamins",
+                    "Intravenous Potassium Chloride"
+                ],
+                "correctAnswers": [
+                    0,
+                    2,
+                    4
+                ],
+                "explanation": "High-alert medications carry a high risk of causing significant patient harm if used in error. Examples include IV insulin, IV anticoagulants (heparin), and IV concentrated electrolytes (potassium chloride)."
+            },
+            {
+                "id": 40,
+                "text": "[SATA Challenge] A nurse is teaching a client with asthma about using a metered-dose inhaler (MDI). Which steps are correct? Select all that apply.",
+                "options": [
+                    "Shake the inhaler vigorously before use",
+                    "Inhale rapidly and deeply while pressing the canister",
+                    "Hold breath for 10 seconds after inhaling",
+                    "Wait 1 minute between puffs if multiple puffs are ordered",
+                    "Rinse the mouth with water after using a corticosteroid inhaler"
+                ],
+                "correctAnswers": [
+                    0,
+                    2,
+                    3,
+                    4
+                ],
+                "explanation": "Correct MDI use includes shaking the inhaler, inhaling *slowly* and deeply, holding the breath for 10 seconds, waiting 1 minute between puffs, and rinsing the mouth after corticosteroid use to prevent thrush."
             }
         ]
     },
@@ -6295,7 +7766,7 @@
         "episodeId": 10,
         "title": "Endocrine & Critical Care - Part B",
         "description": "Diabetes, DKA, HHNS, Critical Assessment, Interventions",
-        "questionCount": 30,
+        "questionCount": 35,
         "color": "from-red-600 to-red-900",
         "questions": [
             {
@@ -6657,6 +8128,93 @@
                 ],
                 "correctAnswer": 1,
                 "explanation": "Understanding how systems interact transforms isolated facts into an actionable clinical roadmap for managing complex, multi-system emergencies."
+            },
+            {
+                "id": 31,
+                "text": "[SATA Challenge] A patient with COPD is admitted with increased dyspnea. The nurse should: Select all that apply.",
+                "options": [
+                    "Keep oxygen saturation strictly above 98%.",
+                    "Advise the patient to use pursed-lip breathing.",
+                    "Position the patient in a High-Fowler's position.",
+                    "Administer prescribed bronchodilators.",
+                    "Encourage rapid, shallow breathing."
+                ],
+                "correctAnswers": [
+                    1,
+                    2,
+                    3
+                ],
+                "explanation": "Positioning, bronchodilators, and pursed-lip breathing are correct. Target SpO2 for COPD is usually 88-92% to prevent blunting the hypoxic drive. Shallow breathing is ineffective."
+            },
+            {
+                "id": 32,
+                "text": "[SATA Challenge] Signs of increased intracranial pressure (ICP) in an adult include: Select all that apply.",
+                "options": [
+                    "Change in level of consciousness.",
+                    "Cushing's triad (hypertension, bradycardia, irregular respirations).",
+                    "Pupillary changes.",
+                    "Bulging fontanelles.",
+                    "Vomiting without nausea."
+                ],
+                "correctAnswers": [
+                    0,
+                    1,
+                    2,
+                    4
+                ],
+                "explanation": "LOC changes, Cushing's triad, pupil changes, and projectile vomiting indicate increased ICP. Bulging fontanelles only occur in infants whose skull sutures haven't fused."
+            },
+            {
+                "id": 33,
+                "text": "[SATA Challenge] A client with chronic kidney disease (CKD) is receiving hemodialysis. Which dietary instructions should the nurse provide? Select all that apply.",
+                "options": [
+                    "Increase potassium intake",
+                    "Restrict fluid intake",
+                    "Limit sodium consumption",
+                    "Consume a high-protein diet",
+                    "Limit phosphorus-rich foods"
+                ],
+                "correctAnswers": [
+                    1,
+                    2,
+                    4
+                ],
+                "explanation": "Clients on hemodialysis should restrict fluids, sodium, potassium, and phosphorus. Protein intake is usually individualized but often needs to be adequate (not excessively high or low) to replace losses during dialysis, but limiting phosphorus and sodium is key."
+            },
+            {
+                "id": 34,
+                "text": "[SATA Challenge] A nurse is teaching a client with asthma about using a metered-dose inhaler (MDI). Which steps are correct? Select all that apply.",
+                "options": [
+                    "Shake the inhaler vigorously before use",
+                    "Inhale rapidly and deeply while pressing the canister",
+                    "Hold breath for 10 seconds after inhaling",
+                    "Wait 1 minute between puffs if multiple puffs are ordered",
+                    "Rinse the mouth with water after using a corticosteroid inhaler"
+                ],
+                "correctAnswers": [
+                    0,
+                    2,
+                    3,
+                    4
+                ],
+                "explanation": "Correct MDI use includes shaking the inhaler, inhaling *slowly* and deeply, holding the breath for 10 seconds, waiting 1 minute between puffs, and rinsing the mouth after corticosteroid use to prevent thrush."
+            },
+            {
+                "id": 35,
+                "text": "[SATA Challenge] A client is prescribed a broad-spectrum antibiotic. The nurse should monitor for which of the following superinfections? Select all that apply.",
+                "options": [
+                    "Oral candidiasis (thrush)",
+                    "Clostridioides difficile (C. diff) infection",
+                    "Vaginal yeast infection",
+                    "Methicillin-resistant Staphylococcus aureus (MRSA)",
+                    "Streptococcus pneumoniae"
+                ],
+                "correctAnswers": [
+                    0,
+                    1,
+                    2
+                ],
+                "explanation": "Broad-spectrum antibiotics can alter normal flora, leading to superinfections like oral candidiasis, C. diff, and vaginal yeast infections. MRSA and S. pneumoniae are not typically classified as superinfections in this context."
             }
         ]
     },
@@ -6665,7 +8223,7 @@
         "episodeId": 11,
         "title": "Heme & GI Pathologies - Part A",
         "description": "Anemia, Sickle Cell, Coagulation Disorders (DIC, HIT, Hemophilia)",
-        "questionCount": 30,
+        "questionCount": 35,
         "color": "from-red-600 to-red-900",
         "questions": [
             {
@@ -7027,6 +8585,93 @@
                 ],
                 "correctAnswer": 1,
                 "explanation": "Acidic environment increases Iron absorption."
+            },
+            {
+                "id": 31,
+                "text": "[SATA Challenge] During a blood transfusion, a patient experiences acute back pain, chills, and fever. The nurse suspects a hemolytic reaction. The immediate nursing actions should be: Select all that apply.",
+                "options": [
+                    "Stop the transfusion immediately.",
+                    "Flush the IV line with the remaining blood to ensure no medication is wasted.",
+                    "Maintain patent IV access with normal saline using new tubing.",
+                    "Notify the blood bank and healthcare provider.",
+                    "Collect a urine sample to check for hemoglobinuria."
+                ],
+                "correctAnswers": [
+                    0,
+                    2,
+                    3,
+                    4
+                ],
+                "explanation": "Stop the blood immediately, run NS with new tubing, notify the provider/blood bank, and collect labs/urine. Do not flush the remaining blood into the patient."
+            },
+            {
+                "id": 32,
+                "text": "[SATA Challenge] A patient has severe liver cirrhosis. The nurse should monitor for which complications? Select all that apply.",
+                "options": [
+                    "Ascites.",
+                    "Esophageal varices.",
+                    "Hepatic encephalopathy.",
+                    "Thrombocytosis (high platelets).",
+                    "Coagulopathy (increased bleeding risk)."
+                ],
+                "correctAnswers": [
+                    0,
+                    1,
+                    2,
+                    4
+                ],
+                "explanation": "Cirrhosis causes portal hypertension (ascites, varices), toxin buildup (encephalopathy), and liver dysfunction leading to low platelets and coagulopathy."
+            },
+            {
+                "id": 33,
+                "text": "[SATA Challenge] Which dietary modifications are recommended for a patient with inflammatory bowel disease (Crohn's or Ulcerative Colitis) during an acute exacerbation? Select all that apply.",
+                "options": [
+                    "High-fiber diets.",
+                    "Low-residue (low-fiber) diets.",
+                    "High-protein, high-calorie foods.",
+                    "Raw fruits and vegetables.",
+                    "Spicy foods."
+                ],
+                "correctAnswers": [
+                    1,
+                    2
+                ],
+                "explanation": "During flares, the bowel needs rest: low-residue, high-protein, and high-calorie diets are best. Fiber, raw fruits, and spices irritate the bowel."
+            },
+            {
+                "id": 34,
+                "text": "[SATA Challenge] Which of the following are appropriate nursing interventions for a client experiencing a tonic-clonic seizure? Select all that apply.",
+                "options": [
+                    "Insert a padded tongue blade into the clients mouth",
+                    "Turn the client to the side",
+                    "Restrain the clients extremities",
+                    "Loosen restrictive clothing",
+                    "Protect the clients head from injury"
+                ],
+                "correctAnswers": [
+                    1,
+                    3,
+                    4
+                ],
+                "explanation": "During a seizure, the nurse should turn the client to the side, loosen clothing, and protect the head. Inserting objects into the mouth and restraining the client can cause injury and are contraindicated."
+            },
+            {
+                "id": 35,
+                "text": "[SATA Challenge] The nurse is caring for a client with a deep vein thrombosis (DVT) receiving a heparin infusion. Which actions are appropriate? Select all that apply.",
+                "options": [
+                    "Massage the affected leg to promote circulation",
+                    "Monitor activated partial thromboplastin time (aPTT)",
+                    "Elevate the affected extremity",
+                    "Assess for signs of bleeding",
+                    "Apply a warm, moist compress to the affected area"
+                ],
+                "correctAnswers": [
+                    1,
+                    2,
+                    3,
+                    4
+                ],
+                "explanation": "For a DVT, the nurse should monitor aPTT, elevate the leg, assess for bleeding, and apply a warm compress. Massaging the leg is contraindicated as it can dislodge the clot."
             }
         ]
     },
@@ -7035,7 +8680,7 @@
         "episodeId": 11,
         "title": "GI & Hepatic Pathologies - Part B",
         "description": "IBD (UC vs Crohn's), Liver Cirrhosis, Biliary Atresia, Peritonitis",
-        "questionCount": 25,
+        "questionCount": 30,
         "color": "from-yellow-600 to-yellow-900",
         "questions": [
             {
@@ -7337,6 +8982,92 @@
                 ],
                 "correctAnswer": 1,
                 "explanation": "No nerves = No peristalsis = Blockage."
+            },
+            {
+                "id": 26,
+                "text": "[SATA Challenge] A patient with sickle cell crisis requires prioritizing which interventions? Select all that apply.",
+                "options": [
+                    "Aggressive IV hydration.",
+                    "Vigorous exercise to improve circulation.",
+                    "Administering oxygen if hypoxic.",
+                    "Effective pain management with opioids.",
+                    "Applying cold compresses to painful joints."
+                ],
+                "correctAnswers": [
+                    0,
+                    2,
+                    3
+                ],
+                "explanation": "Hydration, oxygen, and pain relief are the priorities (HOP to it: Hydration, Oxygenation, Pain relief). Cold compresses cause further vasoconstriction."
+            },
+            {
+                "id": 27,
+                "text": "[SATA Challenge] Symptoms of a severe upper gastrointestinal (GI) bleed include: Select all that apply.",
+                "options": [
+                    "Hematemesis (vomiting blood).",
+                    "Melena (black, tarry stools).",
+                    "Hematochezia (bright red blood in stool, typical of lower GI).",
+                    "Hypotension and tachycardia.",
+                    "Signs of hypovolemic shock."
+                ],
+                "correctAnswers": [
+                    0,
+                    1,
+                    3,
+                    4
+                ],
+                "explanation": "Upper GI bleeds cause hematemesis and melena, leading to shock (hypotension, tachycardia). Hematochezia is primarily seen in lower GI bleeds or massive, rapid upper bleeds."
+            },
+            {
+                "id": 28,
+                "text": "[SATA Challenge] Which of the following are appropriate nursing interventions for a client experiencing a tonic-clonic seizure? Select all that apply.",
+                "options": [
+                    "Insert a padded tongue blade into the clients mouth",
+                    "Turn the client to the side",
+                    "Restrain the clients extremities",
+                    "Loosen restrictive clothing",
+                    "Protect the clients head from injury"
+                ],
+                "correctAnswers": [
+                    1,
+                    3,
+                    4
+                ],
+                "explanation": "During a seizure, the nurse should turn the client to the side, loosen clothing, and protect the head. Inserting objects into the mouth and restraining the client can cause injury and are contraindicated."
+            },
+            {
+                "id": 29,
+                "text": "[SATA Challenge] A nurse is caring for a client with liver cirrhosis. Which findings indicate the development of hepatic encephalopathy? Select all that apply.",
+                "options": [
+                    "Asterixis",
+                    "Jaundice",
+                    "Altered mental status",
+                    "Ascites",
+                    "Fetor hepaticus"
+                ],
+                "correctAnswers": [
+                    0,
+                    2,
+                    4
+                ],
+                "explanation": "Hepatic encephalopathy is characterized by neurological changes due to ammonia buildup, resulting in asterixis (flapping tremor), altered mental status, and fetor hepaticus (musty breath). Jaundice and ascites are signs of cirrhosis but not specific to encephalopathy."
+            },
+            {
+                "id": 30,
+                "text": "[SATA Challenge] Which of the following medications are considered high-alert medications and require at least independent double-checks before administration? Select all that apply.",
+                "options": [
+                    "Intravenous Insulin",
+                    "Oral Acetaminophen",
+                    "Intravenous Heparin",
+                    "Oral Multivitamins",
+                    "Intravenous Potassium Chloride"
+                ],
+                "correctAnswers": [
+                    0,
+                    2,
+                    4
+                ],
+                "explanation": "High-alert medications carry a high risk of causing significant patient harm if used in error. Examples include IV insulin, IV anticoagulants (heparin), and IV concentrated electrolytes (potassium chloride)."
             }
         ]
     },
@@ -7345,7 +9076,7 @@
         "episodeId": 12,
         "title": "Renal Pathophysiology - Part A",
         "description": "AKI vs CKD, Pyelonephritis, Dialysis (Hemo vs Peritoneal)",
-        "questionCount": 25,
+        "questionCount": 30,
         "color": "from-blue-600 to-blue-900",
         "questions": [
             {
@@ -7647,6 +9378,92 @@
                 ],
                 "correctAnswer": 1,
                 "explanation": "The kidneys can't filter the byproducts of these."
+            },
+            {
+                "id": 26,
+                "text": "[SATA Challenge] A patient with Acute Kidney Injury (AKI) exhibits oliguria. The nurse should monitor for which electrolyte imbalances? Select all that apply.",
+                "options": [
+                    "Hyperkalemia.",
+                    "Hypocalcemia.",
+                    "Hyperphosphatemia.",
+                    "Hypernatremia.",
+                    "Hypercalcemia."
+                ],
+                "correctAnswers": [
+                    0,
+                    1,
+                    2
+                ],
+                "explanation": "Kidneys fail to excrete potassium and phosphorus, leading to high levels. High phosphorus binds calcium, causing hypocalcemia."
+            },
+            {
+                "id": 27,
+                "text": "[SATA Challenge] Which signs indicate compartment syndrome in a patient with a fractured tibia in a cast? Select all that apply.",
+                "options": [
+                    "Severe pain unrelieved by narcotics.",
+                    "Pink, warm toes.",
+                    "Pallor and pulselessness of the foot.",
+                    "Paresthesia (numbness and tingling).",
+                    "Pain with passive stretch of the toes."
+                ],
+                "correctAnswers": [
+                    0,
+                    2,
+                    3,
+                    4
+                ],
+                "explanation": "The 6 Ps of compartment syndrome: Pain (out of proportion/passive stretch), Pallor, Pulselessness, Paresthesia, Paralysis, Poikilothermia."
+            },
+            {
+                "id": 28,
+                "text": "[SATA Challenge] A patient is undergoing peritoneal dialysis. The nurse notes the effluent drainage is cloudy. This indicates: Select all that apply.",
+                "options": [
+                    "A normal finding during the first few exchanges.",
+                    "A sign of possible peritonitis.",
+                    "The need to obtain a sample for culture and sensitivity.",
+                    "The need to administer broad-spectrum antibiotics as ordered after sampling.",
+                    "An indication to rapidly cool the dialysate."
+                ],
+                "correctAnswers": [
+                    1,
+                    2,
+                    3
+                ],
+                "explanation": "Cloudy effluent indicates peritonitis, requiring culture and antibiotics. Normal drainage should be clear/straw-colored. Dialysate is warmed, never cooled."
+            },
+            {
+                "id": 29,
+                "text": "[SATA Challenge] A nurse assesses a client with hyperthyroidism. Which of the following manifestations are expected? Select all that apply.",
+                "options": [
+                    "Weight gain",
+                    "Heat intolerance",
+                    "Tachycardia",
+                    "Constipation",
+                    "Exophthalmos"
+                ],
+                "correctAnswers": [
+                    1,
+                    2,
+                    4
+                ],
+                "explanation": "Hyperthyroidism speeds up metabolism, leading to weight loss, heat intolerance, tachycardia, diarrhea, and exophthalmos (bulging eyes). Constipation and weight gain are seen in hypothyroidism."
+            },
+            {
+                "id": 30,
+                "text": "[SATA Challenge] Which of the following are appropriate nursing interventions for a client experiencing a tonic-clonic seizure? Select all that apply.",
+                "options": [
+                    "Insert a padded tongue blade into the clients mouth",
+                    "Turn the client to the side",
+                    "Restrain the clients extremities",
+                    "Loosen restrictive clothing",
+                    "Protect the clients head from injury"
+                ],
+                "correctAnswers": [
+                    1,
+                    3,
+                    4
+                ],
+                "explanation": "During a seizure, the nurse should turn the client to the side, loosen clothing, and protect the head. Inserting objects into the mouth and restraining the client can cause injury and are contraindicated."
             }
         ]
     },
@@ -7655,7 +9472,7 @@
         "episodeId": 12,
         "title": "Musculoskeletal & Trauma - Part B",
         "description": "Fractures, Compartment Syndrome, Fat Embolism, Amputation Care",
-        "questionCount": 25,
+        "questionCount": 30,
         "color": "from-orange-600 to-orange-900",
         "questions": [
             {
@@ -7957,6 +9774,91 @@
                 ],
                 "correctAnswer": 1,
                 "explanation": "Prevent permanent paralysis."
+            },
+            {
+                "id": 26,
+                "text": "[SATA Challenge] Which interventions are appropriate for a patient post-total hip arthroplasty to prevent dislocation? Select all that apply.",
+                "options": [
+                    "Use an abduction pillow between the legs.",
+                    "Instruct the patient not to cross their legs.",
+                    "Encourage the patient to bend past 90 degrees at the waist to tie shoes.",
+                    "Use an elevated toilet seat.",
+                    "Keep the hip internally rotated."
+                ],
+                "correctAnswers": [
+                    0,
+                    1,
+                    3
+                ],
+                "explanation": "Abduction, avoiding crossing legs, and using elevated seats prevent dislocation. Flexion past 90 degrees and internal rotation cause dislocation."
+            },
+            {
+                "id": 27,
+                "text": "[SATA Challenge] A patient develops a fat embolism syndrome after a femur fracture. Assessment findings include: Select all that apply.",
+                "options": [
+                    "Petechiae on the chest and neck.",
+                    "Sudden onset of dyspnea and hypoxia.",
+                    "Altered mental status.",
+                    "Bradycardia.",
+                    "Hypertension."
+                ],
+                "correctAnswers": [
+                    0,
+                    1,
+                    2
+                ],
+                "explanation": "Classic triad of FES: Hypoxemia (dyspnea), Neurologic abnormalities (altered MS), and a Petechial rash. Tachycardia and hypotension usually occur."
+            },
+            {
+                "id": 28,
+                "text": "[SATA Challenge] A nurse assesses a client with hyperthyroidism. Which of the following manifestations are expected? Select all that apply.",
+                "options": [
+                    "Weight gain",
+                    "Heat intolerance",
+                    "Tachycardia",
+                    "Constipation",
+                    "Exophthalmos"
+                ],
+                "correctAnswers": [
+                    1,
+                    2,
+                    4
+                ],
+                "explanation": "Hyperthyroidism speeds up metabolism, leading to weight loss, heat intolerance, tachycardia, diarrhea, and exophthalmos (bulging eyes). Constipation and weight gain are seen in hypothyroidism."
+            },
+            {
+                "id": 29,
+                "text": "[SATA Challenge] Which of the following tasks can a registered nurse (RN) appropriately delegate to an unlicensed assistive personnel (UAP)? Select all that apply.",
+                "options": [
+                    "Assessing a clients pain level",
+                    "Assisting a stable client with ambulation",
+                    "Emptying a Foley catheter drainage bag",
+                    "Administering oral medications",
+                    "Measuring vital signs on a stable client"
+                ],
+                "correctAnswers": [
+                    1,
+                    2,
+                    4
+                ],
+                "explanation": "UAPs can perform routine, stable tasks like ambulation, emptying drains, and taking vital signs. Assessment and medication administration require licensed nursing personnel."
+            },
+            {
+                "id": 30,
+                "text": "[SATA Challenge] A client with chronic kidney disease (CKD) is receiving hemodialysis. Which dietary instructions should the nurse provide? Select all that apply.",
+                "options": [
+                    "Increase potassium intake",
+                    "Restrict fluid intake",
+                    "Limit sodium consumption",
+                    "Consume a high-protein diet",
+                    "Limit phosphorus-rich foods"
+                ],
+                "correctAnswers": [
+                    1,
+                    2,
+                    4
+                ],
+                "explanation": "Clients on hemodialysis should restrict fluids, sodium, potassium, and phosphorus. Protein intake is usually individualized but often needs to be adequate (not excessively high or low) to replace losses during dialysis, but limiting phosphorus and sodium is key."
             }
         ]
     },
@@ -7965,7 +9867,7 @@
         "episodeId": 13,
         "title": "Metabolic & Electrolytes - Part A",
         "description": "Acid-Base Balance (ABGs), Electrolyte Imbalances (Na, K, Ca, Mg)",
-        "questionCount": 25,
+        "questionCount": 30,
         "color": "from-teal-600 to-teal-900",
         "questions": [
             {
@@ -8267,6 +10169,94 @@
                 ],
                 "correctAnswer": 1,
                 "explanation": "Dilutes the sodium."
+            },
+            {
+                "id": 26,
+                "text": "[SATA Challenge] A patient with severe burns over 40% of their body is admitted. During the emergent (resuscitation) phase, the nurse expects which fluid and electrolyte shifts? Select all that apply.",
+                "options": [
+                    "Hyponatremia.",
+                    "Hyperkalemia.",
+                    "Increased capillary permeability.",
+                    "Hypotension.",
+                    "Extreme polyuria."
+                ],
+                "correctAnswers": [
+                    0,
+                    1,
+                    2,
+                    3
+                ],
+                "explanation": "Capillary leak causes weeping of fluid (hyponatremia, hypotension), and cell destruction releases potassium (hyperkalemia). Urine output drops (oliguria), not polyuria."
+            },
+            {
+                "id": 27,
+                "text": "[SATA Challenge] Which clinical manifestations are associated with Meniere's disease? Select all that apply.",
+                "options": [
+                    "Episodic vertigo.",
+                    "Tinnitus.",
+                    "Sensorineural hearing loss.",
+                    "Purulent ear discharge.",
+                    "Feeling of fullness in the affected ear."
+                ],
+                "correctAnswers": [
+                    0,
+                    1,
+                    2,
+                    4
+                ],
+                "explanation": "Meniere's triad includes vertigo, tinnitus, and hearing loss, along with aural fullness. Purulent discharge indicates infection."
+            },
+            {
+                "id": 28,
+                "text": "[SATA Challenge] A patient presents with acute angle-closure glaucoma. The nurse recognizes this as a medical emergency characterized by: Select all that apply.",
+                "options": [
+                    "Gradual loss of peripheral vision over years.",
+                    "Sudden, severe eye pain.",
+                    "Nausea and vomiting.",
+                    "Halos around lights.",
+                    "A cloudy, red eye."
+                ],
+                "correctAnswers": [
+                    1,
+                    2,
+                    3,
+                    4
+                ],
+                "explanation": "Acute glaucoma causes sudden, severe pain, halos, redness, and N/V. Gradual peripheral visual loss occurs in chronic open-angle glaucoma."
+            },
+            {
+                "id": 29,
+                "text": "[SATA Challenge] A nurse is caring for a client with liver cirrhosis. Which findings indicate the development of hepatic encephalopathy? Select all that apply.",
+                "options": [
+                    "Asterixis",
+                    "Jaundice",
+                    "Altered mental status",
+                    "Ascites",
+                    "Fetor hepaticus"
+                ],
+                "correctAnswers": [
+                    0,
+                    2,
+                    4
+                ],
+                "explanation": "Hepatic encephalopathy is characterized by neurological changes due to ammonia buildup, resulting in asterixis (flapping tremor), altered mental status, and fetor hepaticus (musty breath). Jaundice and ascites are signs of cirrhosis but not specific to encephalopathy."
+            },
+            {
+                "id": 30,
+                "text": "[SATA Challenge] A nurse assesses a client with hyperthyroidism. Which of the following manifestations are expected? Select all that apply.",
+                "options": [
+                    "Weight gain",
+                    "Heat intolerance",
+                    "Tachycardia",
+                    "Constipation",
+                    "Exophthalmos"
+                ],
+                "correctAnswers": [
+                    1,
+                    2,
+                    4
+                ],
+                "explanation": "Hyperthyroidism speeds up metabolism, leading to weight loss, heat intolerance, tachycardia, diarrhea, and exophthalmos (bulging eyes). Constipation and weight gain are seen in hypothyroidism."
             }
         ]
     },
@@ -8275,7 +10265,7 @@
         "episodeId": 13,
         "title": "Integumentary, Sensory & Neuro - Part B",
         "description": "Burns, Necrotizing Fasciitis, Meniere's, Temporal Arteritis",
-        "questionCount": 25,
+        "questionCount": 30,
         "color": "from-rose-600 to-rose-900",
         "questions": [
             {
@@ -8288,7 +10278,7 @@
                     "Apply lotion"
                 ],
                 "correctAnswer": 1,
-                "explanation": "Limit the amount of toxic drug entering the tissue. Don't remove the catheter instantly\u2014you might need it to inject an antidote."
+                "explanation": "Limit the amount of toxic drug entering the tissue. Don't remove the catheter instantly—you might need it to inject an antidote."
             },
             {
                 "id": 2,
@@ -8577,6 +10567,95 @@
                 ],
                 "correctAnswer": 1,
                 "explanation": "Dynamic uses a pump."
+            },
+            {
+                "id": 26,
+                "text": "[SATA Challenge] A patient has a suspected diagnosis of temporal arteritis. The nurse anticipates which findings or interventions? Select all that apply.",
+                "options": [
+                    "Severe unilateral headache.",
+                    "Jaw claudication.",
+                    "Administration of high-dose corticosteroids.",
+                    "Checking erythrocyte sedimentation rate (ESR).",
+                    "Providing cold packs to the forehead for vasodilation."
+                ],
+                "correctAnswers": [
+                    0,
+                    1,
+                    2,
+                    3
+                ],
+                "explanation": "Temporal arteritis features temporal headaches, jaw pain, elevated markers (ESR), and requires immediate steroids to prevent blindness."
+            },
+            {
+                "id": 27,
+                "text": "[SATA Challenge] When caring for a patient with a negative pressure wound therapy (wound vac) device, the nurse should: Select all that apply.",
+                "options": [
+                    "Ensure the foam dressing is collapsed and firm.",
+                    "Monitor for continuous bubbling or hissing, indicating an air leak.",
+                    "Turn off the machine for 4 hours daily to let the wound breathe.",
+                    "Assess the drainage canister for amount and color of exudate.",
+                    "Notify the provider if bright red bleeding suddenly appears."
+                ],
+                "correctAnswers": [
+                    0,
+                    1,
+                    3,
+                    4
+                ],
+                "explanation": "The dressing should shrink under vacuum, leaks must be fixed, and drainage monitored. The vac should NOT be turned off for extended periods."
+            },
+            {
+                "id": 28,
+                "text": "[SATA Challenge] A client is prescribed a broad-spectrum antibiotic. The nurse should monitor for which of the following superinfections? Select all that apply.",
+                "options": [
+                    "Oral candidiasis (thrush)",
+                    "Clostridioides difficile (C. diff) infection",
+                    "Vaginal yeast infection",
+                    "Methicillin-resistant Staphylococcus aureus (MRSA)",
+                    "Streptococcus pneumoniae"
+                ],
+                "correctAnswers": [
+                    0,
+                    1,
+                    2
+                ],
+                "explanation": "Broad-spectrum antibiotics can alter normal flora, leading to superinfections like oral candidiasis, C. diff, and vaginal yeast infections. MRSA and S. pneumoniae are not typically classified as superinfections in this context."
+            },
+            {
+                "id": 29,
+                "text": "[SATA Challenge] A nurse is teaching a client with asthma about using a metered-dose inhaler (MDI). Which steps are correct? Select all that apply.",
+                "options": [
+                    "Shake the inhaler vigorously before use",
+                    "Inhale rapidly and deeply while pressing the canister",
+                    "Hold breath for 10 seconds after inhaling",
+                    "Wait 1 minute between puffs if multiple puffs are ordered",
+                    "Rinse the mouth with water after using a corticosteroid inhaler"
+                ],
+                "correctAnswers": [
+                    0,
+                    2,
+                    3,
+                    4
+                ],
+                "explanation": "Correct MDI use includes shaking the inhaler, inhaling *slowly* and deeply, holding the breath for 10 seconds, waiting 1 minute between puffs, and rinsing the mouth after corticosteroid use to prevent thrush."
+            },
+            {
+                "id": 30,
+                "text": "[SATA Challenge] Which of the following are classic signs of a myocardial infarction (MI)? Select all that apply.",
+                "options": [
+                    "Chest pain radiating to the left arm or jaw",
+                    "Relief of pain with rest and nitroglycerin",
+                    "Diaphoresis",
+                    "Shortness of breath",
+                    "Nausea and vomiting"
+                ],
+                "correctAnswers": [
+                    0,
+                    2,
+                    3,
+                    4
+                ],
+                "explanation": "Classic MI signs include radiating chest pain, diaphoresis, dyspnea, and nausea. Pain relieved by rest and nitroglycerin is characteristic of stable angina, not an MI."
             }
         ]
     },
@@ -8585,7 +10664,7 @@
         "episodeId": 14,
         "title": "Sepsis & Multi-System Emergencies - Part A",
         "description": "SIRS, Septic Shock, DIC, Geriatric Atypical Presentation",
-        "questionCount": 25,
+        "questionCount": 30,
         "color": "from-red-600 to-red-900",
         "questions": [
             {
@@ -8593,7 +10672,7 @@
                 "text": "SIRS (Systemic Inflammatory Response Syndrome) requires at least 2 criteria. Which of the following is a criterion?",
                 "options": [
                     "Blood Pressure > 120/80",
-                    "Temperature > 38\u00b0C (100.4\u00b0F) or < 36\u00b0C (96.8\u00b0F)",
+                    "Temperature > 38°C (100.4°F) or < 36°C (96.8°F)",
                     "Heart Rate < 60",
                     "Respiratory Rate < 12"
                 ],
@@ -8887,6 +10966,94 @@
                 ],
                 "correctAnswer": 1,
                 "explanation": "Every hour of hypotension increases mortality."
+            },
+            {
+                "id": 26,
+                "text": "[SATA Challenge] A patient is presenting with Systemic Inflammatory Response Syndrome (SIRS). Which criteria confirm SIRS? Select all that apply.",
+                "options": [
+                    "Temperature < 36°C or > 38°C.",
+                    "Heart rate > 90 beats/minute.",
+                    "Respiratory rate > 20 breaths/minute or PaCO2 < 32 mm Hg.",
+                    "WBC count < 4,000 or > 12,000 cells/mm3.",
+                    "A documented positive blood culture."
+                ],
+                "correctAnswers": [
+                    0,
+                    1,
+                    2,
+                    3
+                ],
+                "explanation": "SIRS criteria involve abnormal temp, HR, RR, and WBC. A positive culture with SIRS moves the diagnosis to Sepsis."
+            },
+            {
+                "id": 27,
+                "text": "[SATA Challenge] In the management of septic shock, the '1-Hour Bundle' includes which actions? Select all that apply.",
+                "options": [
+                    "Measure serum lactate levels.",
+                    "Obtain blood cultures before administering antibiotics.",
+                    "Administer broad-spectrum antibiotics.",
+                    "Begin rapid administration of 30 mL/kg crystalloid for hypotension.",
+                    "Administer prophylactic blood transfusions."
+                ],
+                "correctAnswers": [
+                    0,
+                    1,
+                    2,
+                    3
+                ],
+                "explanation": "The bundle requires lactate, cultures prior to antibiotics, broad-spectrum antibiotics, and fluid resuscitation. Transfusions are not standard initial prophylaxis."
+            },
+            {
+                "id": 28,
+                "text": "[SATA Challenge] An older adult patient with no history of dementia is suddenly confused and agitated. The nurse suspects delirium over dementia because delirium: Select all that apply.",
+                "options": [
+                    "Has an abrupt, acute onset.",
+                    "Is often accompanied by a fluctuating level of consciousness.",
+                    "Is usually permanent and progressive.",
+                    "Can be caused by an underlying infection, such as a UTI.",
+                    "Is characterized by a slow, insidious decline in memory over years."
+                ],
+                "correctAnswers": [
+                    0,
+                    1,
+                    3
+                ],
+                "explanation": "Delirium is acute, fluctuating, and often linked to physical illness (like a UTI). Dementia is slow, insidious, and progressive."
+            },
+            {
+                "id": 29,
+                "text": "[SATA Challenge] A client is prescribed a broad-spectrum antibiotic. The nurse should monitor for which of the following superinfections? Select all that apply.",
+                "options": [
+                    "Oral candidiasis (thrush)",
+                    "Clostridioides difficile (C. diff) infection",
+                    "Vaginal yeast infection",
+                    "Methicillin-resistant Staphylococcus aureus (MRSA)",
+                    "Streptococcus pneumoniae"
+                ],
+                "correctAnswers": [
+                    0,
+                    1,
+                    2
+                ],
+                "explanation": "Broad-spectrum antibiotics can alter normal flora, leading to superinfections like oral candidiasis, C. diff, and vaginal yeast infections. MRSA and S. pneumoniae are not typically classified as superinfections in this context."
+            },
+            {
+                "id": 30,
+                "text": "[SATA Challenge] The nurse is caring for a client with a deep vein thrombosis (DVT) receiving a heparin infusion. Which actions are appropriate? Select all that apply.",
+                "options": [
+                    "Massage the affected leg to promote circulation",
+                    "Monitor activated partial thromboplastin time (aPTT)",
+                    "Elevate the affected extremity",
+                    "Assess for signs of bleeding",
+                    "Apply a warm, moist compress to the affected area"
+                ],
+                "correctAnswers": [
+                    1,
+                    2,
+                    3,
+                    4
+                ],
+                "explanation": "For a DVT, the nurse should monitor aPTT, elevate the leg, assess for bleeding, and apply a warm compress. Massaging the leg is contraindicated as it can dislodge the clot."
             }
         ]
     },
@@ -8895,7 +11062,7 @@
         "episodeId": 14,
         "title": "Maternal & OB Emergencies - Part B",
         "description": "Bleeding Disorders (Abruptio, Previa), PPH, Preeclampsia",
-        "questionCount": 25,
+        "questionCount": 30,
         "color": "from-pink-600 to-pink-900",
         "questions": [
             {
@@ -9197,6 +11364,93 @@
                 ],
                 "correctAnswer": 0,
                 "explanation": "VEAL CHOP: Variable = Cord."
+            },
+            {
+                "id": 26,
+                "text": "[SATA Challenge] A pregnant patient with preeclampsia begins experiencing a tonic-clonic seizure. The nurse's immediate actions include: Select all that apply.",
+                "options": [
+                    "Protecting the patient from injury.",
+                    "Turning the patient on her side to prevent aspiration.",
+                    "Inserting a padded tongue blade.",
+                    "Administering IV magnesium sulfate post-seizure as prescribed.",
+                    "Monitoring the fetal heart rate immediately after the seizure stabilizes."
+                ],
+                "correctAnswers": [
+                    0,
+                    1,
+                    3,
+                    4
+                ],
+                "explanation": "Protecting the airway and preventing injury are paramount. Mag sulfate prevents future seizures, and FHR must be checked. Tongue blades are contraindicated."
+            },
+            {
+                "id": 27,
+                "text": "[SATA Challenge] Which findings suggest Disseminated Intravascular Coagulation (DIC)? Select all that apply.",
+                "options": [
+                    "Bleeding from venipuncture sites.",
+                    "Elevated fibrin degradation products (FDPs) and D-dimer.",
+                    "Decreased platelet count.",
+                    "Prolonged PT and aPTT.",
+                    "Shortened bleeding time."
+                ],
+                "correctAnswers": [
+                    0,
+                    1,
+                    2,
+                    3
+                ],
+                "explanation": "DIC causes widespread clotting leading to consumption of platelets and clotting factors, resulting in bleeding, low platelets, long PT/aPTT, and high D-dimer."
+            },
+            {
+                "id": 28,
+                "text": "[SATA Challenge] Which of the following medications are considered high-alert medications and require at least independent double-checks before administration? Select all that apply.",
+                "options": [
+                    "Intravenous Insulin",
+                    "Oral Acetaminophen",
+                    "Intravenous Heparin",
+                    "Oral Multivitamins",
+                    "Intravenous Potassium Chloride"
+                ],
+                "correctAnswers": [
+                    0,
+                    2,
+                    4
+                ],
+                "explanation": "High-alert medications carry a high risk of causing significant patient harm if used in error. Examples include IV insulin, IV anticoagulants (heparin), and IV concentrated electrolytes (potassium chloride)."
+            },
+            {
+                "id": 29,
+                "text": "[SATA Challenge] A client is prescribed a broad-spectrum antibiotic. The nurse should monitor for which of the following superinfections? Select all that apply.",
+                "options": [
+                    "Oral candidiasis (thrush)",
+                    "Clostridioides difficile (C. diff) infection",
+                    "Vaginal yeast infection",
+                    "Methicillin-resistant Staphylococcus aureus (MRSA)",
+                    "Streptococcus pneumoniae"
+                ],
+                "correctAnswers": [
+                    0,
+                    1,
+                    2
+                ],
+                "explanation": "Broad-spectrum antibiotics can alter normal flora, leading to superinfections like oral candidiasis, C. diff, and vaginal yeast infections. MRSA and S. pneumoniae are not typically classified as superinfections in this context."
+            },
+            {
+                "id": 30,
+                "text": "[SATA Challenge] A nurse assesses a client with hyperthyroidism. Which of the following manifestations are expected? Select all that apply.",
+                "options": [
+                    "Weight gain",
+                    "Heat intolerance",
+                    "Tachycardia",
+                    "Constipation",
+                    "Exophthalmos"
+                ],
+                "correctAnswers": [
+                    1,
+                    2,
+                    4
+                ],
+                "explanation": "Hyperthyroidism speeds up metabolism, leading to weight loss, heat intolerance, tachycardia, diarrhea, and exophthalmos (bulging eyes). Constipation and weight gain are seen in hypothyroidism."
             }
         ]
     },
@@ -9204,7 +11458,7 @@
         "id": 55,
         "title": "Maternity & OB Nursing",
         "description": "Maternity: Antepartum, Intrapartum, Postpartum, Newborn Care",
-        "questionCount": 35,
+        "questionCount": 40,
         "color": "from-pink-600 to-rose-800",
         "questions": [
             {
@@ -9509,7 +11763,7 @@
             },
             {
                 "id": 26,
-                "text": "A newborn's axillary temperature is 97.2\u00b0F (36.2\u00b0C). What is the priority action?",
+                "text": "A newborn's axillary temperature is 97.2°F (36.2°C). What is the priority action?",
                 "options": [
                     "Document as normal",
                     "Place under radiant warmer and reassess",
@@ -9517,7 +11771,7 @@
                     "Administer antibiotics"
                 ],
                 "correctAnswer": 1,
-                "explanation": "Normal newborn temperature is 97.7-99.5\u00b0F (36.5-37.5\u00b0C). Temperature of 97.2\u00b0F indicates hypothermia requiring warming and reassessment."
+                "explanation": "Normal newborn temperature is 97.7-99.5°F (36.5-37.5°C). Temperature of 97.2°F indicates hypothermia requiring warming and reassessment."
             },
             {
                 "id": 27,
@@ -9561,11 +11815,11 @@
                 "options": [
                     "Sneezing occasionally",
                     "Sleeping 16 hours per day",
-                    "Temperature of 100.4\u00b0F (38\u00b0C) or higher",
+                    "Temperature of 100.4°F (38°C) or higher",
                     "Hiccups after feeding"
                 ],
                 "correctAnswer": 2,
-                "explanation": "Fever (\u2265100.4\u00b0F/38\u00b0C) in a newborn may indicate serious infection and requires immediate medical evaluation."
+                "explanation": "Fever (≥100.4°F/38°C) in a newborn may indicate serious infection and requires immediate medical evaluation."
             },
             {
                 "id": 31,
@@ -9626,16 +11880,101 @@
                 ],
                 "correctAnswer": 1,
                 "explanation": "Apply petroleum jelly to prevent diaper from sticking to healing site. Yellow exudate is normal granulation tissue. Avoid tub baths until healed."
+            },
+            {
+                "id": 36,
+                "text": "[SATA Challenge] A nurse is assessing a client in the first trimester of pregnancy. Which of the following are considered presumptive signs of pregnancy? Select all that apply.",
+                "options": [
+                    "Amenorrhea",
+                    "Fetal heart tones",
+                    "Breast tenderness",
+                    "Nausea and vomiting",
+                    "Positive pregnancy test"
+                ],
+                "correctAnswers": [
+                    0,
+                    2,
+                    3
+                ],
+                "explanation": "Presumptive signs are subjective changes felt by the client, such as amenorrhea, breast tenderness, and nausea/vomiting. Fetal heart tones are a positive sign, and a positive pregnancy test is a probable sign."
+            },
+            {
+                "id": 38,
+                "text": "[SATA Challenge] Which of the following instructions should a nurse include when teaching a pregnant client about alleviating nausea and vomiting? Select all that apply.",
+                "options": [
+                    "Eat dry crackers before getting out of bed",
+                    "Consume a high-fat diet",
+                    "Drink fluids separately from meals",
+                    "Avoid spicy and greasy foods",
+                    "Eat three large meals a day"
+                ],
+                "correctAnswers": [
+                    0,
+                    2,
+                    3
+                ],
+                "explanation": "To alleviate nausea, clients should eat dry carbohydrates before rising, separate fluids from meals, and avoid spicy/greasy foods. Small, frequent meals are preferred over three large ones."
+            },
+            {
+                "id": 39,
+                "text": "[SATA Challenge] A client with chronic kidney disease (CKD) is receiving hemodialysis. Which dietary instructions should the nurse provide? Select all that apply.",
+                "options": [
+                    "Increase potassium intake",
+                    "Restrict fluid intake",
+                    "Limit sodium consumption",
+                    "Consume a high-protein diet",
+                    "Limit phosphorus-rich foods"
+                ],
+                "correctAnswers": [
+                    1,
+                    2,
+                    4
+                ],
+                "explanation": "Clients on hemodialysis should restrict fluids, sodium, potassium, and phosphorus. Protein intake is usually individualized but often needs to be adequate (not excessively high or low) to replace losses during dialysis, but limiting phosphorus and sodium is key."
+            },
+            {
+                "id": 40,
+                "text": "[SATA Challenge] Which of the following medications are considered high-alert medications and require at least independent double-checks before administration? Select all that apply.",
+                "options": [
+                    "Intravenous Insulin",
+                    "Oral Acetaminophen",
+                    "Intravenous Heparin",
+                    "Oral Multivitamins",
+                    "Intravenous Potassium Chloride"
+                ],
+                "correctAnswers": [
+                    0,
+                    2,
+                    4
+                ],
+                "explanation": "High-alert medications carry a high risk of causing significant patient harm if used in error. Examples include IV insulin, IV anticoagulants (heparin), and IV concentrated electrolytes (potassium chloride)."
+            },
+            {
+                "id": 41,
+                "text": "[SATA Challenge] Which of the following tasks can a registered nurse (RN) appropriately delegate to an unlicensed assistive personnel (UAP)? Select all that apply.",
+                "options": [
+                    "Assessing a clients pain level",
+                    "Assisting a stable client with ambulation",
+                    "Emptying a Foley catheter drainage bag",
+                    "Administering oral medications",
+                    "Measuring vital signs on a stable client"
+                ],
+                "correctAnswers": [
+                    1,
+                    2,
+                    4
+                ],
+                "explanation": "UAPs can perform routine, stable tasks like ambulation, emptying drains, and taking vital signs. Assessment and medication administration require licensed nursing personnel."
             }
         ],
-        "episodeId": 5
+        "episodeId": 16
     },
     {
         "id": 15,
         "episodeId": null,
         "title": "Practice Test #1",
         "description": "Comprehensive Mixed Review - All NCLEX Categories",
-        "questionCount": 20,
+        "questionCount": 25,
         "color": "from-violet-600 to-purple-900",
         "questions": [
             {
@@ -9693,7 +12032,7 @@
                     "Massage injection site after administration",
                     "Aspirate before injecting",
                     "Rotate injection sites",
-                    "Inject at 90\u00b0 angle in deltoid"
+                    "Inject at 90° angle in deltoid"
                 ],
                 "correctAnswer": 2,
                 "explanation": "Rotate injection sites to prevent lipodystrophy. Don't massage (affects absorption), don't aspirate (not needed for SubQ), use abdomen/thigh (not deltoid for insulin)."
@@ -9877,6 +12216,92 @@
                 ],
                 "correctAnswer": 0,
                 "explanation": "Blood administration: 18-20 gauge needle, two-nurse verification, start within 30 min of receiving, infuse over 2-4 hours max. Never microwave. Monitor for reactions."
+            },
+            {
+                "id": 21,
+                "text": "[SATA Challenge] A nurse is caring for a client with heart failure. Which findings indicate the client is experiencing left-sided heart failure? Select all that apply.",
+                "options": [
+                    "Jugular vein distention (JVD)",
+                    "Crackles in the lungs",
+                    "Dyspnea",
+                    "Peripheral edema",
+                    "Orthopnea"
+                ],
+                "correctAnswers": [
+                    1,
+                    2,
+                    4
+                ],
+                "explanation": "Left-sided heart failure primarily affects the pulmonary system, causing crackles, dyspnea, and orthopnea. Right-sided heart failure causes systemic congestion like JVD and peripheral edema."
+            },
+            {
+                "id": 23,
+                "text": "[SATA Challenge] The nurse is preparing to administer blood to a client. What actions must the nurse take prior to starting the infusion? Select all that apply.",
+                "options": [
+                    "Verify the prescription for the blood product",
+                    "Ensure signed informed consent is in the chart",
+                    "Administer immediately after taking from the refrigerator without matching",
+                    "Verify the clients identity with a second registered nurse",
+                    "Prime the IV tubing with Dextrose 5% in Water (D5W)"
+                ],
+                "correctAnswers": [
+                    0,
+                    1,
+                    3
+                ],
+                "explanation": "Before giving blood, the nurse must verify the order, check for informed consent, and verify identity and blood compatibility with another RN. Blood is primed only with normal saline, not D5W."
+            },
+            {
+                "id": 24,
+                "text": "[SATA Challenge] A nurse is caring for a client with liver cirrhosis. Which findings indicate the development of hepatic encephalopathy? Select all that apply.",
+                "options": [
+                    "Asterixis",
+                    "Jaundice",
+                    "Altered mental status",
+                    "Ascites",
+                    "Fetor hepaticus"
+                ],
+                "correctAnswers": [
+                    0,
+                    2,
+                    4
+                ],
+                "explanation": "Hepatic encephalopathy is characterized by neurological changes due to ammonia buildup, resulting in asterixis (flapping tremor), altered mental status, and fetor hepaticus (musty breath). Jaundice and ascites are signs of cirrhosis but not specific to encephalopathy."
+            },
+            {
+                "id": 25,
+                "text": "[SATA Challenge] Which of the following tasks can a registered nurse (RN) appropriately delegate to an unlicensed assistive personnel (UAP)? Select all that apply.",
+                "options": [
+                    "Assessing a clients pain level",
+                    "Assisting a stable client with ambulation",
+                    "Emptying a Foley catheter drainage bag",
+                    "Administering oral medications",
+                    "Measuring vital signs on a stable client"
+                ],
+                "correctAnswers": [
+                    1,
+                    2,
+                    4
+                ],
+                "explanation": "UAPs can perform routine, stable tasks like ambulation, emptying drains, and taking vital signs. Assessment and medication administration require licensed nursing personnel."
+            },
+            {
+                "id": 26,
+                "text": "[SATA Challenge] A nurse is teaching a client with asthma about using a metered-dose inhaler (MDI). Which steps are correct? Select all that apply.",
+                "options": [
+                    "Shake the inhaler vigorously before use",
+                    "Inhale rapidly and deeply while pressing the canister",
+                    "Hold breath for 10 seconds after inhaling",
+                    "Wait 1 minute between puffs if multiple puffs are ordered",
+                    "Rinse the mouth with water after using a corticosteroid inhaler"
+                ],
+                "correctAnswers": [
+                    0,
+                    2,
+                    3,
+                    4
+                ],
+                "explanation": "Correct MDI use includes shaking the inhaler, inhaling *slowly* and deeply, holding the breath for 10 seconds, waiting 1 minute between puffs, and rinsing the mouth after corticosteroid use to prevent thrush."
             }
         ]
     },
@@ -9884,7 +12309,7 @@
         "id": 16,
         "title": "Final Prep Review",
         "description": "Test Anxiety & Final Concept Checks",
-        "questionCount": 10,
+        "questionCount": 6,
         "color": "from-fuchsia-600 to-pink-900",
         "questions": [
             {
@@ -9898,77 +12323,252 @@
                 ],
                 "correctAnswer": 0,
                 "explanation": "Explanation."
+            },
+            {
+                "id": 2,
+                "text": "[SATA Challenge] A client with diabetes mellitus is receiving regular insulin. Which of the following are signs of hypoglycemia that the nurse should monitor for? Select all that apply.",
+                "options": [
+                    "Diaphoresis",
+                    "Fruity breath odor",
+                    "Tremors",
+                    "Tachycardia",
+                    "Deep, rapid respirations (Kussmaul)"
+                ],
+                "correctAnswers": [
+                    0,
+                    2,
+                    3
+                ],
+                "explanation": "Signs of hypoglycemia include sweating (diaphoresis), tremors, tachycardia, palpitations, and confusion. Fruity breath and Kussmaul respirations are signs of hyperglycemia (DKA)."
+            },
+            {
+                "id": 4,
+                "text": "[SATA Challenge] A nurse is providing isolation precautions for a client with active tuberculosis. Which of the following are appropriate interventions? Select all that apply.",
+                "options": [
+                    "Place the client in a negative-pressure room",
+                    "Wear a surgical mask when entering the room",
+                    "Require the client to wear a surgical mask during transport",
+                    "Keep the clients door closed at all times",
+                    "Wear an N95 or higher particulate respirator"
+                ],
+                "correctAnswers": [
+                    0,
+                    2,
+                    3,
+                    4
+                ],
+                "explanation": "TB requires airborne precautions: negative air pressure room, keeping the door closed, and staff wearing N95 respirators. The client should wear a standard surgical mask if transport is absolutely necessary."
+            },
+            {
+                "id": 5,
+                "text": "[SATA Challenge] Which of the following medications are considered high-alert medications and require at least independent double-checks before administration? Select all that apply.",
+                "options": [
+                    "Intravenous Insulin",
+                    "Oral Acetaminophen",
+                    "Intravenous Heparin",
+                    "Oral Multivitamins",
+                    "Intravenous Potassium Chloride"
+                ],
+                "correctAnswers": [
+                    0,
+                    2,
+                    4
+                ],
+                "explanation": "High-alert medications carry a high risk of causing significant patient harm if used in error. Examples include IV insulin, IV anticoagulants (heparin), and IV concentrated electrolytes (potassium chloride)."
+            },
+            {
+                "id": 6,
+                "text": "[SATA Challenge] Which of the following are appropriate nursing interventions for a client experiencing a tonic-clonic seizure? Select all that apply.",
+                "options": [
+                    "Insert a padded tongue blade into the clients mouth",
+                    "Turn the client to the side",
+                    "Restrain the clients extremities",
+                    "Loosen restrictive clothing",
+                    "Protect the clients head from injury"
+                ],
+                "correctAnswers": [
+                    1,
+                    3,
+                    4
+                ],
+                "explanation": "During a seizure, the nurse should turn the client to the side, loosen clothing, and protect the head. Inserting objects into the mouth and restraining the client can cause injury and are contraindicated."
+            },
+            {
+                "id": 7,
+                "text": "[SATA Challenge] The nurse is caring for a client with a deep vein thrombosis (DVT) receiving a heparin infusion. Which actions are appropriate? Select all that apply.",
+                "options": [
+                    "Massage the affected leg to promote circulation",
+                    "Monitor activated partial thromboplastin time (aPTT)",
+                    "Elevate the affected extremity",
+                    "Assess for signs of bleeding",
+                    "Apply a warm, moist compress to the affected area"
+                ],
+                "correctAnswers": [
+                    1,
+                    2,
+                    3,
+                    4
+                ],
+                "explanation": "For a DVT, the nurse should monitor aPTT, elevate the leg, assess for bleeding, and apply a warm compress. Massaging the leg is contraindicated as it can dislodge the clot."
             }
-        ]
+        ],
+        "episodeId": 17
     },
     {
         "id": 17,
-        "episodeId": 17,
+        "episodeId": 16,
         "title": "Maternity Quiz",
         "description": "Biological Mechanics of Pregnancy and Birth Review",
-        "questionCount": 5,
+        "questionCount": 10,
         "color": "from-teal-600 to-emerald-900",
         "questions": [
-  {
-    "id": 1,
-    "text": "What are the three distinct phases of a uterine contraction during labor?",
-    "options": [
-      "Increment, acme, and decrement",
-      "Onset, peak, and baseline",
-      "Acceleration, plateau, and deceleration",
-      "Systole, diastole, and resting phase"
-    ],
-    "correctAnswer": 0,
-    "explanation": "The three phases of a uterine contraction are increment, acme, and decrement."
-  },
-  {
-    "id": 2,
-    "text": "During the mechanics of delivery, what is the correct sequence of movements the fetus typically undergoes?",
-    "options": [
-      "Descent, extension, internal rotation, flexion, external rotation, expulsion",
-      "Engagement, descent and flexion, internal rotation, extension, external rotation, restitution, and expulsion",
-      "Flexion, engagement, internal rotation, restitution, extension, external rotation",
-      "Engagement, external rotation, descent, restitution, internal rotation, expulsion"
-    ],
-    "correctAnswer": 1,
-    "explanation": "The mechanics of delivery follow the sequence of engagement, descent and flexion, internal rotation, extension, external rotation, restitution, and expulsion."
-  },
-  {
-    "id": 3,
-    "text": "When assessing the degree of fetal descent during labor, what does a fetal station of 0 indicate?",
-    "options": [
-      "The presenting part is freely movable above the pelvic inlet",
-      "The presenting part is at the pelvic inlet",
-      "The presenting part is at the level of the ischial spine",
-      "The presenting part has passed through the pelvic outlet"
-    ],
-    "correctAnswer": 2,
-    "explanation": "Fetal stations indicate the location of the presenting part in relation to the ischial spine, with station 0 being exactly at the level of the ischial spine."
-  },
-  {
-    "id": 4,
-    "text": "Which anatomical landmark is used to estimate the smallest outlet measurement of the pelvis (the intertuberous diameter)?",
-    "options": [
-      "The distance between the ischial spines",
-      "The distance between the symphysis pubis and the sacral promontory",
-      "The transverse diameter between the ischial tuberosities",
-      "The distance between the iliac crests"
-    ],
-    "correctAnswer": 2,
-    "explanation": "The smallest outlet measurement of the pelvis is the intertuberous diameter, which is the transverse diameter between the ischial tuberosities."
-  },
-  {
-    "id": 5,
-    "text": "What is the primary physiological cause of early decelerations in the fetal heart rate during labor contractions?",
-    "options": [
-      "Umbilical cord compression",
-      "Placental insufficiency",
-      "Maternal hypotension",
-      "Fetal head compression"
-    ],
-    "correctAnswer": 3,
-    "explanation": "Early decelerations are gradual and temporary drops in the fetal heart rate caused by compression of the fetal head during labor contractions."
-  }
-]
+            {
+                "id": 1,
+                "text": "What are the three distinct phases of a uterine contraction during labor?",
+                "options": [
+                    "Increment, acme, and decrement",
+                    "Onset, peak, and baseline",
+                    "Acceleration, plateau, and deceleration",
+                    "Systole, diastole, and resting phase"
+                ],
+                "correctAnswer": 0,
+                "explanation": "The three phases of a uterine contraction are increment, acme, and decrement."
+            },
+            {
+                "id": 2,
+                "text": "During the mechanics of delivery, what is the correct sequence of movements the fetus typically undergoes?",
+                "options": [
+                    "Descent, extension, internal rotation, flexion, external rotation, expulsion",
+                    "Engagement, descent and flexion, internal rotation, extension, external rotation, restitution, and expulsion",
+                    "Flexion, engagement, internal rotation, restitution, extension, external rotation",
+                    "Engagement, external rotation, descent, restitution, internal rotation, expulsion"
+                ],
+                "correctAnswer": 1,
+                "explanation": "The mechanics of delivery follow the sequence of engagement, descent and flexion, internal rotation, extension, external rotation, restitution, and expulsion."
+            },
+            {
+                "id": 3,
+                "text": "When assessing the degree of fetal descent during labor, what does a fetal station of 0 indicate?",
+                "options": [
+                    "The presenting part is freely movable above the pelvic inlet",
+                    "The presenting part is at the pelvic inlet",
+                    "The presenting part is at the level of the ischial spine",
+                    "The presenting part has passed through the pelvic outlet"
+                ],
+                "correctAnswer": 2,
+                "explanation": "Fetal stations indicate the location of the presenting part in relation to the ischial spine, with station 0 being exactly at the level of the ischial spine."
+            },
+            {
+                "id": 4,
+                "text": "Which anatomical landmark is used to estimate the smallest outlet measurement of the pelvis (the intertuberous diameter)?",
+                "options": [
+                    "The distance between the ischial spines",
+                    "The distance between the symphysis pubis and the sacral promontory",
+                    "The transverse diameter between the ischial tuberosities",
+                    "The distance between the iliac crests"
+                ],
+                "correctAnswer": 2,
+                "explanation": "The smallest outlet measurement of the pelvis is the intertuberous diameter, which is the transverse diameter between the ischial tuberosities."
+            },
+            {
+                "id": 5,
+                "text": "What is the primary physiological cause of early decelerations in the fetal heart rate during labor contractions?",
+                "options": [
+                    "Umbilical cord compression",
+                    "Placental insufficiency",
+                    "Maternal hypotension",
+                    "Fetal head compression"
+                ],
+                "correctAnswer": 3,
+                "explanation": "Early decelerations are gradual and temporary drops in the fetal heart rate caused by compression of the fetal head during labor contractions."
+            },
+            {
+                "id": 6,
+                "text": "[SATA Challenge] A nurse is monitoring a client receiving oxytocin for labor induction. Which findings should prompt the nurse to discontinue the infusion? Select all that apply.",
+                "options": [
+                    "Contractions lasting 60 seconds",
+                    "Contractions occurring every 90 seconds",
+                    "Uterine resting tone of 25 mm Hg",
+                    "Fetal heart rate of 140 bpm",
+                    "Late decelerations on the fetal monitor"
+                ],
+                "correctAnswers": [
+                    1,
+                    2,
+                    4
+                ],
+                "explanation": "Oxytocin should be stopped for signs of uterine hyperstimulation (contractions more frequent than every 2 mins or resting tone >20 mm Hg) and non-reassuring fetal heart patterns like late decelerations."
+            },
+            {
+                "id": 8,
+                "text": "[SATA Challenge] A postpartum client asks the nurse about signs of postpartum infection she should report after discharge. What should the nurse include in the teaching? Select all that apply.",
+                "options": [
+                    "Lochia that returns to bright red rubbing",
+                    "Fever greater than 100.4°F (38°C)",
+                    "Foul-smelling lochia",
+                    "Mild breast engorgement",
+                    "Calf pain, swelling, and redness"
+                ],
+                "correctAnswers": [
+                    0,
+                    1,
+                    2,
+                    4
+                ],
+                "explanation": "Signs of complications to report include fever, foul-smelling lochia, lochia returning to bright red (signs of hemorrhage or subinvolution), and calf pain/swelling (DVT). Mild engorgement is a normal finding."
+            },
+            {
+                "id": 9,
+                "text": "[SATA Challenge] A client is prescribed a broad-spectrum antibiotic. The nurse should monitor for which of the following superinfections? Select all that apply.",
+                "options": [
+                    "Oral candidiasis (thrush)",
+                    "Clostridioides difficile (C. diff) infection",
+                    "Vaginal yeast infection",
+                    "Methicillin-resistant Staphylococcus aureus (MRSA)",
+                    "Streptococcus pneumoniae"
+                ],
+                "correctAnswers": [
+                    0,
+                    1,
+                    2
+                ],
+                "explanation": "Broad-spectrum antibiotics can alter normal flora, leading to superinfections like oral candidiasis, C. diff, and vaginal yeast infections. MRSA and S. pneumoniae are not typically classified as superinfections in this context."
+            },
+            {
+                "id": 10,
+                "text": "[SATA Challenge] A nurse is caring for a client with liver cirrhosis. Which findings indicate the development of hepatic encephalopathy? Select all that apply.",
+                "options": [
+                    "Asterixis",
+                    "Jaundice",
+                    "Altered mental status",
+                    "Ascites",
+                    "Fetor hepaticus"
+                ],
+                "correctAnswers": [
+                    0,
+                    2,
+                    4
+                ],
+                "explanation": "Hepatic encephalopathy is characterized by neurological changes due to ammonia buildup, resulting in asterixis (flapping tremor), altered mental status, and fetor hepaticus (musty breath). Jaundice and ascites are signs of cirrhosis but not specific to encephalopathy."
+            },
+            {
+                "id": 11,
+                "text": "[SATA Challenge] A nurse is teaching a client with asthma about using a metered-dose inhaler (MDI). Which steps are correct? Select all that apply.",
+                "options": [
+                    "Shake the inhaler vigorously before use",
+                    "Inhale rapidly and deeply while pressing the canister",
+                    "Hold breath for 10 seconds after inhaling",
+                    "Wait 1 minute between puffs if multiple puffs are ordered",
+                    "Rinse the mouth with water after using a corticosteroid inhaler"
+                ],
+                "correctAnswers": [
+                    0,
+                    2,
+                    3,
+                    4
+                ],
+                "explanation": "Correct MDI use includes shaking the inhaler, inhaling *slowly* and deeply, holding the breath for 10 seconds, waiting 1 minute between puffs, and rinsing the mouth after corticosteroid use to prevent thrush."
+            }
+        ]
     }
 ]

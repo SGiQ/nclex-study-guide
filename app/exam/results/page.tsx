@@ -13,7 +13,7 @@ interface ExamResults {
     passed: boolean;
     timeTaken: number;
     questions: any[];
-    answers: Record<number, number>;
+    answers: Record<number, number | number[]>;
     examMode: 'realistic' | 'practice';
     startTime?: number; // Added to assume uniqueness
     savedToStats?: boolean;
@@ -96,7 +96,21 @@ export default function ExamResultsPage() {
             categoryPerformance[q.category] = { correct: 0, total: 0 };
         }
         categoryPerformance[q.category].total++;
-        if (results.answers[idx] === q.correctAnswer) {
+        
+        const answer = results.answers[idx];
+        const isSata = q.correctAnswers !== undefined;
+        
+        let isCorrect = false;
+        if (isSata) {
+            const correctAnswers = q.correctAnswers || [];
+            const selectedAnswers = (answer as number[]) || [];
+            isCorrect = selectedAnswers.length === correctAnswers.length &&
+                        correctAnswers.every((a: number) => selectedAnswers.includes(a));
+        } else {
+            isCorrect = answer === q.correctAnswer;
+        }
+
+        if (isCorrect) {
             categoryPerformance[q.category].correct++;
         }
     });
@@ -111,7 +125,17 @@ export default function ExamResultsPage() {
     if (showReview) {
         const q = results.questions[reviewQuestion];
         const userAnswer = results.answers[reviewQuestion];
-        const isCorrect = userAnswer === q.correctAnswer;
+        const isSata = q.correctAnswers !== undefined;
+        
+        let isCorrect = false;
+        if (isSata) {
+            const correctAnswers = q.correctAnswers || [];
+            const selectedAnswers = (userAnswer as number[]) || [];
+            isCorrect = selectedAnswers.length === correctAnswers.length &&
+                        correctAnswers.every((a: number) => selectedAnswers.includes(a));
+        } else {
+            isCorrect = userAnswer === q.correctAnswer;
+        }
 
         return (
             <div className="min-h-screen bg-background text-foreground pb-[180px]">
@@ -138,13 +162,17 @@ export default function ExamResultsPage() {
                         {/* Options with feedback */}
                         <div className="space-y-3 mb-6">
                             {q.options.map((option: string, idx: number) => {
-                                const isUserAnswer = userAnswer === idx;
-                                const isCorrectAnswer = q.correctAnswer === idx;
+                                const isUserAnswer = isSata 
+                                    ? ((userAnswer as number[]) || []).includes(idx)
+                                    : userAnswer === idx;
+                                const isCorrectAnswer = isSata 
+                                    ? (q.correctAnswers || []).includes(idx)
+                                    : q.correctAnswer === idx;
 
                                 let className = 'w-full text-left p-4 rounded-lg border-2 ';
                                 if (isCorrectAnswer) {
                                     className += 'border-green-500 bg-green-500/10';
-                                } else if (isUserAnswer && !isCorrect) {
+                                } else if (isUserAnswer && !isCorrectAnswer) {
                                     className += 'border-red-500 bg-red-500/10';
                                 } else {
                                     className += 'border-card-border bg-card';
@@ -153,9 +181,9 @@ export default function ExamResultsPage() {
                                 return (
                                     <div key={idx} className={className}>
                                         <div className="flex items-start gap-3">
-                                            <div className="flex-shrink-0">
-                                                {isCorrectAnswer && <span className="text-green-500">✓</span>}
-                                                {isUserAnswer && !isCorrect && <span className="text-red-500">✗</span>}
+                                            <div className="flex-shrink-0 mt-0.5">
+                                                {isCorrectAnswer && <span className="text-green-500 font-bold">✓</span>}
+                                                {isUserAnswer && !isCorrectAnswer && <span className="text-red-500 font-bold">✗</span>}
                                             </div>
                                             <div className="flex-1">{option}</div>
                                             {isUserAnswer && <span className="text-xs text-foreground/60">(Your answer)</span>}

@@ -223,7 +223,7 @@ export default function TutorChat() {
                                     <h3 className="font-bold text-sm text-black dark:text-white">NCLEX Tutor</h3>
                                     <p className="text-[10px] text-gray-500 dark:text-gray-400 flex items-center gap-1">
                                         <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
-                                        Gemini 1.5 Pro
+                                        Online
                                     </p>
                                 </div>
                             </div>

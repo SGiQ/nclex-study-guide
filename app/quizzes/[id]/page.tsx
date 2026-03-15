@@ -13,7 +13,8 @@ interface Question {
     text: string;
     explanation: string;
     options: string[];
-    correctAnswer: number;
+    correctAnswer?: number;
+    correctAnswers?: number[];
 }
 
 interface Quiz {
@@ -77,7 +78,7 @@ export default function QuizRunnerPage({ params }: { params: Promise<{ id: strin
     const [showResumePrompt, setShowResumePrompt] = useState(hasSavedProgress);
     const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
     const [score, setScore] = useState(0);
-    const [selectedOption, setSelectedOption] = useState<number | null>(null);
+    const [selectedOptions, setSelectedOptions] = useState<number[]>([]);
     const [isAnswered, setIsAnswered] = useState(false);
     const [showExplanation, setShowExplanation] = useState(false);
     const [showHint, setShowHint] = useState(false);
@@ -157,7 +158,7 @@ export default function QuizRunnerPage({ params }: { params: Promise<{ id: strin
         if (savedProgress) {
             setCurrentQuestionIndex(savedProgress.currentQuestionIndex);
             setScore(savedProgress.score);
-            setSelectedOption(null);
+            setSelectedOptions([]);
             setIsAnswered(false);
             setShowExplanation(false);
             setShowHint(false);
@@ -169,7 +170,7 @@ export default function QuizRunnerPage({ params }: { params: Promise<{ id: strin
         localStorage.removeItem(`quiz_progress_${quizId}`);
         setCurrentQuestionIndex(0);
         setScore(0);
-        setSelectedOption(null);
+        setSelectedOptions([]);
         setIsAnswered(false);
         setShowExplanation(false);
         setShowHint(false);
@@ -178,16 +179,40 @@ export default function QuizRunnerPage({ params }: { params: Promise<{ id: strin
 
     const handleOptionClick = (index: number) => {
         if (isAnswered) return;
-        setSelectedOption(index);
+        
+        const isSata = currentQuestion.correctAnswers !== undefined;
+
+        if (isSata) {
+            setSelectedOptions((prev) => 
+                prev.includes(index) ? prev.filter((i) => i !== index) : [...prev, index]
+            );
+        } else {
+            setSelectedOptions([index]);
+        }
     };
 
     const checkAnswer = () => {
-        if (selectedOption === null) return;
+        if (selectedOptions.length === 0) return;
 
         setIsAnswered(true);
         setShowExplanation(true);
 
-        if (selectedOption === currentQuestion.correctAnswer) {
+        const isSata = currentQuestion.correctAnswers !== undefined;
+        let isCorrect = false;
+
+        if (isSata) {
+            const correctAnswers = currentQuestion.correctAnswers || [];
+            if (correctAnswers.length === selectedOptions.length && 
+                correctAnswers.every((ans) => selectedOptions.includes(ans))) {
+                isCorrect = true;
+            }
+        } else {
+            if (selectedOptions[0] === currentQuestion.correctAnswer) {
+                isCorrect = true;
+            }
+        }
+
+        if (isCorrect) {
             setScore((prev) => prev + 1);
         }
     };
@@ -195,7 +220,7 @@ export default function QuizRunnerPage({ params }: { params: Promise<{ id: strin
     const nextQuestion = () => {
         if (currentQuestionIndex < quiz.questions.length - 1) {
             setCurrentQuestionIndex((prev) => prev + 1);
-            setSelectedOption(null);
+            setSelectedOptions([]);
             setIsAnswered(false);
             setShowExplanation(false);
             setShowHint(false);
@@ -341,6 +366,9 @@ export default function QuizRunnerPage({ params }: { params: Promise<{ id: strin
                 <div className="flex-1 flex flex-col justify-start pt-4">
                     <div className="flex justify-between items-center mb-6">
                         <span className="text-emerald-500 font-black text-[10px] tracking-[0.2em] uppercase">QUESTION {currentQuestionIndex + 1} OF {quiz.questions.length}</span>
+                        {currentQuestion.correctAnswers !== undefined && (
+                            <span className="text-[10px] font-bold uppercase tracking-widest text-primary bg-primary/10 border border-primary/20 px-2 py-1 rounded-md">Select all that apply</span>
+                        )}
                     </div>
                     <h2 className="text-2xl sm:text-3xl font-black uppercase tracking-tight leading-tight mb-8 text-slate-100">
                         {currentQuestion.text}
@@ -372,16 +400,26 @@ export default function QuizRunnerPage({ params }: { params: Promise<{ id: strin
 
                     <div className="grid gap-3">
                         {currentQuestion.options.map((option: string, index: number) => {
+                            const isSata = currentQuestion.correctAnswers !== undefined;
+                            const isSelected = selectedOptions.includes(index);
+                            
+                            let isCorrectAnswer = false;
+                            if (isSata) {
+                                isCorrectAnswer = currentQuestion.correctAnswers!.includes(index);
+                            } else {
+                                isCorrectAnswer = index === currentQuestion.correctAnswer;
+                            }
+
                             let stateStyle = "glass border border-white/5 hover:border-white/20 text-slate-300";
 
-                            if (selectedOption === index) {
+                            if (isSelected) {
                                 stateStyle = "bg-primary/10 border border-primary text-white ring-1 ring-primary/50 shadow-[0_0_15px_rgba(37,123,244,0.1)]";
                             }
 
                             if (isAnswered) {
-                                if (index === currentQuestion.correctAnswer) {
+                                if (isCorrectAnswer) {
                                     stateStyle = "bg-emerald-500/10 border border-emerald-500 text-white ring-1 ring-emerald-500/50";
-                                } else if (index === selectedOption && selectedOption !== currentQuestion.correctAnswer) {
+                                } else if (isSelected && !isCorrectAnswer) {
                                     stateStyle = "bg-red-500/10 border border-red-500/50 text-slate-400 opacity-70";
                                 } else {
                                     stateStyle = "bg-black/20 border border-white/5 text-slate-500 opacity-50";
@@ -395,14 +433,14 @@ export default function QuizRunnerPage({ params }: { params: Promise<{ id: strin
                                     disabled={isAnswered}
                                     className={`text-left p-5 rounded-2xl transition-all duration-300 text-sm sm:text-base font-medium leading-relaxed items-center flex gap-4 ${stateStyle}`}
                                 >
-                                    <div className={`w-8 h-8 rounded-full border-2 flex items-center justify-center flex-shrink-0 transition-colors
-                           ${selectedOption === index ? 'border-primary text-primary bg-primary/20' : 'border-slate-700 text-transparent'}
-                           ${isAnswered && index === currentQuestion.correctAnswer ? '!border-emerald-500 !bg-emerald-500 !text-black' : ''}
-                           ${isAnswered && index === selectedOption && index !== currentQuestion.correctAnswer ? '!border-red-500 !bg-red-500/20 !text-red-400' : ''}
+                                    <div className={`w-8 h-8 ${isSata ? 'rounded-md' : 'rounded-full'} border-2 flex items-center justify-center flex-shrink-0 transition-colors
+                           ${isSelected ? 'border-primary text-primary bg-primary/20' : 'border-slate-700 text-transparent'}
+                           ${isAnswered && isCorrectAnswer ? '!border-emerald-500 !bg-emerald-500 !text-black' : ''}
+                           ${isAnswered && isSelected && !isCorrectAnswer ? '!border-red-500 !bg-red-500/20 !text-red-400' : ''}
                         `}>
-                                        {isAnswered && index === currentQuestion.correctAnswer ? (
+                                        {isAnswered && isCorrectAnswer ? (
                                             <span className="material-symbols-outlined text-sm font-bold">check</span>
-                                        ) : isAnswered && index === selectedOption && index !== currentQuestion.correctAnswer ? (
+                                        ) : isAnswered && isSelected && !isCorrectAnswer ? (
                                             <span className="material-symbols-outlined text-sm font-bold">close</span>
                                         ) : (
                                             <span className="text-[10px] font-black">{String.fromCharCode(65 + index)}</span>
@@ -419,7 +457,7 @@ export default function QuizRunnerPage({ params }: { params: Promise<{ id: strin
                         {!isAnswered ? (
                             <button
                                 onClick={checkAnswer}
-                                disabled={selectedOption === null}
+                                disabled={selectedOptions.length === 0}
                                 className="w-full py-5 rounded-2xl bg-white text-black font-black uppercase tracking-widest text-xs disabled:opacity-20 disabled:cursor-not-allowed hover:scale-[1.01] active:scale-[0.99] transition-all shadow-xl"
                             >
                                 Check Answer
@@ -427,21 +465,35 @@ export default function QuizRunnerPage({ params }: { params: Promise<{ id: strin
                         ) : (
                             // Feedback Mode
                             <div className="animate-in slide-in-from-bottom-5 fade-in duration-300">
-                                <div className={`p-6 rounded-3xl mb-6 border glass shadow-2xl ${selectedOption === currentQuestion.correctAnswer
-                                    ? 'bg-emerald-500/5 border-emerald-500/20'
-                                    : 'bg-red-500/5 border-red-500/20'
-                                    }`}>
-                                    <div className="flex items-center gap-2 mb-3">
-                                        {selectedOption === currentQuestion.correctAnswer ? (
-                                            <span className="text-emerald-400 font-black uppercase tracking-widest text-xs flex items-center gap-2"><span className="material-symbols-outlined text-lg">check_circle</span> Correct! Good job.</span>
-                                        ) : (
-                                            <span className="text-red-400 font-black uppercase tracking-widest text-xs flex items-center gap-2"><span className="material-symbols-outlined text-lg">cancel</span> Incorrect</span>
-                                        )}
-                                    </div>
-                                    <p className="text-sm text-slate-300 leading-relaxed font-medium">
-                                        {currentQuestion.explanation}
-                                    </p>
-                                </div>
+                                {(() => {
+                                    const isSata = currentQuestion.correctAnswers !== undefined;
+                                    let isCorrect = false;
+                                    
+                                    if (isSata) {
+                                        const correctAnswers = currentQuestion.correctAnswers || [];
+                                        isCorrect = correctAnswers.length === selectedOptions.length && correctAnswers.every(ans => selectedOptions.includes(ans));
+                                    } else {
+                                        isCorrect = selectedOptions[0] === currentQuestion.correctAnswer;
+                                    }
+
+                                    return (
+                                        <div className={`p-6 rounded-3xl mb-6 border glass shadow-2xl ${isCorrect
+                                            ? 'bg-emerald-500/5 border-emerald-500/20'
+                                            : 'bg-red-500/5 border-red-500/20'
+                                            }`}>
+                                            <div className="flex items-center gap-2 mb-3">
+                                                {isCorrect ? (
+                                                    <span className="text-emerald-400 font-black uppercase tracking-widest text-xs flex items-center gap-2"><span className="material-symbols-outlined text-lg">check_circle</span> Correct! Good job.</span>
+                                                ) : (
+                                                    <span className="text-red-400 font-black uppercase tracking-widest text-xs flex items-center gap-2"><span className="material-symbols-outlined text-lg">cancel</span> Incorrect</span>
+                                                )}
+                                            </div>
+                                            <p className="text-sm text-slate-300 leading-relaxed font-medium">
+                                                {currentQuestion.explanation}
+                                            </p>
+                                        </div>
+                                    );
+                                })()}
 
                                 <button
                                     onClick={nextQuestion}

@@ -1,130 +1,138 @@
 [
     {
-        "id": 1,
-        "episodeId": 1,
-        "title": "Test-Taking Strategy Mind Map",
-        "fileName": "icon-512.png",
-        "url": "/icon-512.png",
-        "uploadedAt": "2026-01-06T04:45:39.996Z"
-    },
-    {
-        "id": 2,
-        "episodeId": 2,
-        "title": "Coordinated Care Mind Map",
-        "fileName": "icon-512.png",
-        "url": "/icon-512.png",
-        "uploadedAt": "2026-01-06T04:45:39.996Z"
-    },
-    {
-        "id": 3,
-        "episodeId": 3,
-        "title": "Safety & Infection Control Mind Map",
-        "fileName": "icon-512.png",
-        "url": "/icon-512.png",
-        "uploadedAt": "2026-01-06T04:45:39.996Z"
-    },
-    {
-        "id": 4,
-        "episodeId": 4,
-        "title": "Health Promotion Mind Map",
-        "fileName": "icon-512.png",
-        "url": "/icon-512.png",
-        "uploadedAt": "2026-01-06T04:45:39.996Z"
-    },
-    {
-        "id": 5,
-        "episodeId": 5,
-        "title": "Psychosocial Integrity Mind Map",
-        "fileName": "icon-512.png",
-        "url": "/icon-512.png",
-        "uploadedAt": "2026-01-06T04:45:39.996Z"
-    },
-    {
-        "id": 6,
-        "episodeId": 6,
-        "title": "Basic Care Mind Map",
-        "fileName": "icon-512.png",
-        "url": "/icon-512.png",
-        "uploadedAt": "2026-01-06T04:45:39.996Z"
-    },
-    {
-        "id": 7,
-        "episodeId": 7,
-        "title": "Pharmacology I Mind Map",
-        "fileName": "icon-512.png",
-        "url": "/icon-512.png",
-        "uploadedAt": "2026-01-06T04:45:39.996Z"
-    },
-    {
         "id": 8,
-        "episodeId": 8,
-        "title": "Pharmacology II Mind Map",
-        "fileName": "icon-512.png",
-        "url": "/icon-512.png",
-        "uploadedAt": "2026-01-06T04:45:39.996Z"
+        "episodeId": 1,
+        "title": "Test-Taking Strategies & Study Foundation Mind Map",
+        "fileName": "Test-Taking Strategies & Study Foundation.png",
+        "url": "/api/mindmaps/8/image",
+        "uploadedAt": "2026-03-15T21:32:28.993Z"
     },
     {
         "id": 9,
-        "episodeId": 9,
-        "title": "Risk Reduction I Mind Map",
-        "fileName": "icon-512.png",
-        "url": "/icon-512.png",
-        "uploadedAt": "2026-01-06T04:45:39.996Z"
+        "episodeId": 2,
+        "title": "Coordinated Care Mind Map",
+        "fileName": "Coordinated Care.png",
+        "url": "/api/mindmaps/9/image",
+        "uploadedAt": "2026-03-15T21:32:28.994Z"
     },
     {
         "id": 10,
-        "episodeId": 10,
-        "title": "Risk Reduction II Mind Map",
-        "fileName": "icon-512.png",
-        "url": "/icon-512.png",
-        "uploadedAt": "2026-01-06T04:45:39.996Z"
+        "episodeId": 3,
+        "title": "Safety & Infection Control Mind Map",
+        "fileName": "Safety & Infection Control.png",
+        "url": "/api/mindmaps/10/image",
+        "uploadedAt": "2026-03-15T21:32:28.994Z"
     },
     {
         "id": 11,
-        "episodeId": 11,
-        "title": "Physiological Adaptation I Mind Map",
-        "fileName": "icon-512.png",
-        "url": "/icon-512.png",
-        "uploadedAt": "2026-01-06T04:45:39.996Z"
+        "episodeId": 4,
+        "title": "Health Promotion & Maintenance Mind Map",
+        "fileName": "Health Promotion & Maintenance.png",
+        "url": "/api/mindmaps/11/image",
+        "uploadedAt": "2026-03-15T21:32:28.994Z"
     },
     {
         "id": 12,
-        "episodeId": 12,
-        "title": "Physiological Adaptation II Mind Map",
-        "fileName": "icon-512.png",
-        "url": "/icon-512.png",
-        "uploadedAt": "2026-01-06T04:45:39.996Z"
+        "episodeId": 5,
+        "title": "Psychosocial Integrity Mind Map",
+        "fileName": "Psychosocial Integrity.png",
+        "url": "/api/mindmaps/12/image",
+        "uploadedAt": "2026-03-15T21:32:28.994Z"
     },
     {
         "id": 13,
-        "episodeId": 13,
-        "title": "Physiological Adaptation III Mind Map",
-        "fileName": "icon-512.png",
-        "url": "/icon-512.png",
-        "uploadedAt": "2026-01-06T04:45:39.996Z"
+        "episodeId": 6,
+        "title": "Basic Care & Comfort Mind Map",
+        "fileName": "Basic Care & Comfort.png",
+        "url": "/api/mindmaps/13/image",
+        "uploadedAt": "2026-03-15T21:32:28.994Z"
     },
     {
         "id": 14,
-        "episodeId": 14,
-        "title": "Complex Care Mind Map",
-        "fileName": "icon-512.png",
-        "url": "/icon-512.png",
-        "uploadedAt": "2026-01-06T04:45:39.996Z"
+        "episodeId": 7,
+        "title": "Pharmacological & Parenteral Therapies Mind Map",
+        "fileName": "Pharmacological & Parenteral Therapies.png",
+        "url": "/api/mindmaps/14/image",
+        "uploadedAt": "2026-03-15T21:32:28.994Z"
     },
     {
         "id": 15,
-        "episodeId": 15,
-        "title": "Practice Test Mind Map",
-        "fileName": "icon-512.png",
-        "url": "/icon-512.png",
-        "uploadedAt": "2026-01-06T04:45:39.996Z"
+        "episodeId": 8,
+        "title": "Pharmacological Therapies Part 2 Mind Map",
+        "fileName": "Pharmacological Therapies Part 2.png",
+        "url": "/api/mindmaps/15/image",
+        "uploadedAt": "2026-03-15T21:32:28.994Z"
     },
     {
         "id": 16,
+        "episodeId": 9,
+        "title": "Reduction of Risk: Cardiovascular & Diagnostics Mind Map",
+        "fileName": "Reduction of Risk: Cardiovascular & Diagnostics.png",
+        "url": "/api/mindmaps/16/image",
+        "uploadedAt": "2026-03-15T21:32:28.994Z"
+    },
+    {
+        "id": 17,
+        "episodeId": 10,
+        "title": "Reduction of Risk Potential Part 1 Mind Map",
+        "fileName": "Reduction of Risk Potential Part 1.png",
+        "url": "/api/mindmaps/17/image",
+        "uploadedAt": "2026-03-15T21:32:28.994Z"
+    },
+    {
+        "id": 18,
+        "episodeId": 11,
+        "title": "Physiological Adaptation: Hematology & GI Mind Map",
+        "fileName": "Physiological Adaptation: Hematology & GI.png",
+        "url": "/api/mindmaps/18/image",
+        "uploadedAt": "2026-03-15T21:32:28.994Z"
+    },
+    {
+        "id": 19,
+        "episodeId": 12,
+        "title": "Physiological Adaptation: Renal & Musculoskeletal Mind Map",
+        "fileName": "Physiological Adaptation: Renal & Musculoskeletal.png",
+        "url": "/api/mindmaps/19/image",
+        "uploadedAt": "2026-03-15T21:32:28.994Z"
+    },
+    {
+        "id": 20,
+        "episodeId": 13,
+        "title": "Physiological Adaptation: Metabolic & Integumentary Mind Map",
+        "fileName": "Physiological Adaptation: Metabolic & Integumentary.png",
+        "url": "/api/mindmaps/20/image",
+        "uploadedAt": "2026-03-15T21:32:28.994Z"
+    },
+    {
+        "id": 21,
+        "episodeId": 14,
+        "title": "Complex Care & Emergencies Mind Map",
+        "fileName": "Complex Care & Emergencies.png",
+        "url": "/api/mindmaps/21/image",
+        "uploadedAt": "2026-03-15T21:32:28.994Z"
+    },
+    {
+        "id": 22,
+        "episodeId": 15,
+        "title": "Practice Test Strategy Mind Map",
+        "fileName": "Practice Test Strategy.png",
+        "url": "/api/mindmaps/22/image",
+        "uploadedAt": "2026-03-15T21:32:28.994Z"
+    },
+    {
+        "id": 24,
         "episodeId": 16,
-        "title": "Final Prep Mind Map",
-        "fileName": "icon-512.png",
-        "url": "/icon-512.png",
-        "uploadedAt": "2026-01-06T04:45:39.996Z"
+        "title": "Biological Mechanics of Pregnancy and Birth Mind Map",
+        "fileName": "Biological Mechanics of Pregnancy and Birth.png",
+        "url": "/api/mindmaps/24/image",
+        "uploadedAt": "2026-03-15T21:32:28.994Z"
+    },
+    {
+        "id": 23,
+        "episodeId": 17,
+        "title": "Final Readiness & Mental Strategy Mind Map",
+        "fileName": "Final Readiness & Mental Strategy.png",
+        "url": "/api/mindmaps/23/image",
+        "uploadedAt": "2026-03-15T21:32:28.994Z"
     }
 ]

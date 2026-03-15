@@ -24,12 +24,37 @@ export default function MindMapViewerPage({ params }: { params: Promise<{ id: st
         return null;
     };
 
-    // Save to LocalStorage helper
+    // Save to LocalStorage helper with cleanup logic
     const saveLocal = (mapId: string, data: any) => {
+        const key = `mindmap_offline_${mapId}`;
+        const serialized = JSON.stringify(data);
+        
         try {
-            localStorage.setItem(`mindmap_offline_${mapId}`, JSON.stringify(data));
-        } catch (e) {
-            console.error("Failed to save local mindmap:", e);
+            localStorage.setItem(key, serialized);
+        } catch (e: any) {
+            // Handle QuotaExceededError
+            if (e.name === 'QuotaExceededError' || e.name === 'NS_ERROR_DOM_QUOTA_REACHED') {
+                console.warn("LocalStorage full, cleaning up old mind maps...");
+                try {
+                    // Simple cleanup: remove all mindmap_offline_ keys
+                    const keysToRemove = [];
+                    for (let i = 0; i < localStorage.length; i++) {
+                        const k = localStorage.key(i);
+                        if (k && k.startsWith('mindmap_offline_')) {
+                            keysToRemove.push(k);
+                        }
+                    }
+                    keysToRemove.forEach(k => localStorage.removeItem(k));
+                    
+                    // Try saving again
+                    localStorage.setItem(key, serialized);
+                    console.log("Save successful after cleanup.");
+                } catch (retryError) {
+                    console.error("Failed to save even after cleanup:", retryError);
+                }
+            } else {
+                console.error("Failed to save local mindmap:", e);
+            }
         }
     };
 

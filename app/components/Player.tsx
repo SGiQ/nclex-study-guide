@@ -44,7 +44,8 @@ export default function Player() {
                 const AudioContextClass = window.AudioContext || (window as any).webkitAudioContext;
                 const audioCtx = new AudioContextClass();
                 const analyserNode = audioCtx.createAnalyser();
-                analyserNode.fftSize = 64;
+                analyserNode.fftSize = 256;
+                analyserNode.smoothingTimeConstant = 0.85;
                 
                 // Connect the media element to the analyser
                 const source = audioCtx.createMediaElementSource(audioRef.current);

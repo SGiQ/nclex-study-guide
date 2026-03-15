@@ -21,19 +21,32 @@ export function useAudioVisualizer(analyser: AnalyserNode | null, isPlaying: boo
             analyser.getByteFrequencyData(dataArray);
             
             const step = Math.floor(dataArray.length / barCount);
-            const newData = [];
             
-            for (let i = 0; i < barCount; i++) {
-                let sum = 0;
-                for (let j = 0; j < step; j++) {
-                    sum += dataArray[i * step + j];
+            setAudioData(prev => {
+                const newData = [];
+                for (let i = 0; i < barCount; i++) {
+                    let sum = 0;
+                    // Focus on the lower-to-mid range for voice impact
+                    for (let j = 0; j < step; j++) {
+                        sum += dataArray[i * step + j];
+                    }
+                    const average = sum / step;
+                    
+                    // Boost sensitivity for voice frequencies
+                    // Using a slight exponent to make quieter sounds more visible
+                    const targetHeight = Math.max(15, Math.pow(average / 255, 0.7) * 100);
+                    
+                    // Smooth decay: if new height is lower, drop slowly. If higher, jump up.
+                    const prevHeight = prev[i] || 15;
+                    if (targetHeight > prevHeight) {
+                        newData.push(targetHeight); // Quick response to volume increase
+                    } else {
+                        newData.push(prevHeight * 0.85 + targetHeight * 0.15); // Slow decay
+                    }
                 }
-                const average = sum / step;
-                // Normalize 0-255 to percentage, ensure at least 15% height
-                newData.push(Math.max(15, (average / 255) * 100));
-            }
+                return newData;
+            });
             
-            setAudioData(newData);
             requestRef.current = requestAnimationFrame(update);
         };
 

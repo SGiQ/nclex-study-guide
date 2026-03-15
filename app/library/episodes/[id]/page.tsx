@@ -130,7 +130,7 @@ export default function EpisodeDetailPage() {
                                     analyser={isActuallyPlaying ? analyser : null} 
                                     isPlaying={isActuallyPlaying} 
                                     barCount={15}
-                                    className="flex items-end gap-1.5 h-16 w-full max-w-[200px] opacity-90"
+                                    className="flex items-end gap-1.5 h-8 md:h-16 w-full max-w-[200px] opacity-90"
                                     barClassName="flex-1 rounded-t-lg bg-primary"
                                     sensitivity={0.5}
                                 />

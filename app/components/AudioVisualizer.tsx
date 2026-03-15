@@ -58,37 +58,53 @@ export default function AudioVisualizer({
     }
 
     const dataArray = new Uint8Array(analyser.frequencyBinCount);
-    const step = Math.floor(dataArray.length / barCount);
+    // Focus frequencies: voice is typically 80Hz - 8kHz. 
+    // Analyser covers 0Hz to SampleRate/2 (e.g., 22k if SR is 44k).
+    // We'll focus on the first 40% of the frequency bin count to cover voice well.
+    const focusedCount = Math.floor(dataArray.length * 0.4);
+    const step = Math.floor(focusedCount / barCount);
+    const rollingPeakRef = { current: 150 }; // Tracks recent volume peaks
 
     const update = () => {
       analyser.getByteFrequencyData(dataArray);
+
+      // 1. Calculate the current peak in the focused range for AGC
+      let currentFramePeak = 50; // floor for peaks
+      for (let i = 0; i < focusedCount; i++) {
+        if (dataArray[i] > currentFramePeak) currentFramePeak = dataArray[i];
+      }
+      
+      // Gradually adjust the rolling peak (AGC)
+      rollingPeakRef.current = rollingPeakRef.current * 0.98 + currentFramePeak * 0.02;
+      const gainFactor = 255 / Math.max(50, rollingPeakRef.current);
 
       for (let i = 0; i < barCount; i++) {
         const bar = barsRef.current[i];
         if (!bar) continue;
 
         let sum = 0;
-        // Focus on low-mid frequencies for voice clarity
+        // Group frequency bins for this bar
         for (let j = 0; j < step; j++) {
           sum += dataArray[i * step + j];
         }
         const average = sum / step;
 
-        // Non-linear sensitivity (exponent 0.5 makes quiet parts more visible)
-        // Boost factor (115) ensures bars reach top nicely
-        const rawTarget = (average / 255);
-        const targetHeight = Math.max(15, Math.pow(rawTarget, sensitivity) * 115);
+        // Apply Gain (AGC) and non-linear sensitivity
+        // We use (1 - sensitivity) so that a high sensitivity prop = more movement
+        const rawNormalized = (average * gainFactor) / 255;
+        const reactiveExponent = 1.2 - (sensitivity * 0.8); // Range: 1.2 to 0.4
+        const targetHeight = Math.max(15, Math.pow(rawNormalized, reactiveExponent) * 110);
 
         // LERP (Linear Interpolation) for butter-smooth movement
         const prevHeight = currentHeightsRef.current[i];
         let nextHeight;
 
         if (targetHeight > prevHeight) {
-          // Fast rise: reach 70% of distance immediately
-          nextHeight = prevHeight * 0.3 + targetHeight * 0.7;
+          // Fast rise: 60% transition
+          nextHeight = prevHeight * 0.4 + targetHeight * 0.6;
         } else {
-          // Slow decay: reach 10% of distance (90% retention)
-          nextHeight = prevHeight * 0.9 + targetHeight * 0.1;
+          // Constant decay: looks more natural than proportional decay
+          nextHeight = Math.max(targetHeight, prevHeight - 2.5);
         }
 
         currentHeightsRef.current[i] = nextHeight;

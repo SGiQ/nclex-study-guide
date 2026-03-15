@@ -124,7 +124,7 @@ export default function AudioParams() {
                                             analyser={isPlaying ? analyser : null} 
                                             isPlaying={isPlaying} 
                                             barCount={15}
-                                            className="flex items-end gap-1 h-20 mt-auto opacity-90"
+                                            className="flex items-end gap-1 h-10 md:h-20 mt-auto opacity-90"
                                             barClassName="flex-1 bg-primary rounded-t-sm"
                                             sensitivity={0.5}
                                         />

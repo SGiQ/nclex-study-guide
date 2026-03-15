@@ -393,7 +393,7 @@ export default function Player() {
                                 </div>
                                 
                                 {/* High Performance Audio Waveform Overlay */}
-                                <div className="absolute bottom-0 left-0 right-0 h-16 flex items-end justify-center px-6 pb-2 pointer-events-none">
+                                <div className="absolute bottom-0 left-0 right-0 h-8 md:h-16 flex items-end justify-center px-6 pb-2 pointer-events-none">
                                     <AudioVisualizer 
                                         analyser={isPlaying ? analyser : null} 
                                         isPlaying={isPlaying} 

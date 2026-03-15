@@ -25,6 +25,12 @@ export default function EpisodeDetailPage() {
     const episode = episodesData.find(e => e.id === episodeId);
     const isActuallyPlaying = isPlaying && currentEpisode?.id === episodeId;
     
+    const [isMounted, setIsMounted] = useState(false);
+
+    useEffect(() => {
+        setIsMounted(true);
+    }, []);
+
     // progress
 
 
@@ -105,7 +111,7 @@ export default function EpisodeDetailPage() {
                                     <span className="px-3 py-1 bg-primary/20 text-primary border border-primary/20 rounded-full text-[9px] font-black uppercase tracking-widest">
                                         {episode.category}
                                     </span>
-                                    {isCompleted && (
+                                    {isMounted && isCompleted && (
                                         <span className="px-3 py-1 bg-emerald-500/20 text-emerald-400 border border-emerald-500/20 rounded-full text-[9px] font-black uppercase tracking-widest flex items-center gap-1">
                                             <span className="material-symbols-outlined text-[12px] fill-1">check_circle</span> DONE
                                         </span>
@@ -145,7 +151,7 @@ export default function EpisodeDetailPage() {
                                     <div className="p-4 bg-blue-500/10 rounded-2xl border border-blue-500/20 text-blue-400">
                                         <span className="material-symbols-outlined text-3xl group-hover:rotate-12 transition-transform">quiz</span>
                                     </div>
-                                    {quizResult && (
+                                    {isMounted && quizResult && (
                                         <div className="text-right">
                                             <p className="text-[9px] text-slate-500 font-black uppercase tracking-widest mb-1">BEST</p>
                                             <p className="text-emerald-400 font-black text-lg">{Math.round((quizResult.score / quizResult.total) * 100)}%</p>

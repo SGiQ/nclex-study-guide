@@ -32,33 +32,28 @@ interface ProgressContextType {
 const ProgressContext = createContext<ProgressContextType | undefined>(undefined);
 
 export function ProgressProvider({ children }: { children: React.ReactNode }) {
-    const [quizResults, setQuizResults] = useState<Record<number, QuizResult>>(() => {
-        if (typeof window !== 'undefined') {
-            const saved = localStorage.getItem('quiz_results');
-            if (saved) {
-                try {
-                    return JSON.parse(saved);
-                } catch (e) {
-                    return {};
-                }
-            }
-        }
-        return {};
-    });
-    const [audioProgress, setAudioProgress] = useState<Record<number, AudioResult>>(() => {
-        if (typeof window !== 'undefined') {
-            const saved = localStorage.getItem('audio_progress');
-            if (saved) {
-                try {
-                    return JSON.parse(saved);
-                } catch (e) {
-                    return {};
-                }
-            }
-        }
-        return {};
-    });
+    const [quizResults, setQuizResults] = useState<Record<number, QuizResult>>({});
+    const [audioProgress, setAudioProgress] = useState<Record<number, AudioResult>>({});
     const [isLoading, setIsLoading] = useState(true);
+
+    // Initial load from localStorage (Client-side only)
+    useEffect(() => {
+        if (typeof window !== 'undefined') {
+            const savedQuizzes = localStorage.getItem('quiz_results');
+            if (savedQuizzes) {
+                try {
+                    setQuizResults(JSON.parse(savedQuizzes));
+                } catch (e) { /* ignore */ }
+            }
+
+            const savedAudio = localStorage.getItem('audio_progress');
+            if (savedAudio) {
+                try {
+                    setAudioProgress(JSON.parse(savedAudio));
+                } catch (e) { /* ignore */ }
+            }
+        }
+    }, []);
 
     const { user } = useAuth();
     const resultsRef = React.useRef(quizResults);

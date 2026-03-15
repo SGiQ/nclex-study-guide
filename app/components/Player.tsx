@@ -96,6 +96,11 @@ export default function Player() {
         }
     }, [currentEpisode?.id]);
 
+    // Close expanded player on navigation
+    useEffect(() => {
+        setIsExpanded(false);
+    }, [pathname]);
+
     const handleTimeUpdate = () => {
         if (audioRef.current) {
             const current = audioRef.current.currentTime;
@@ -423,9 +428,7 @@ export default function Player() {
                     {/* Top Bar */}
                     <div className="flex-none flex items-center justify-between mb-4 mt-2">
                         <button onClick={() => setIsExpanded(false)} className="p-2 -ml-2 text-white/80 hover:text-white">
-                            <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                            </svg>
+                            <span className="material-symbols-outlined text-3xl">close</span>
                         </button>
                         <div className="text-center opacity-80">
                             <span className="text-[10px] uppercase tracking-widest block">Now Playing</span>

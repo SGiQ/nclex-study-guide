@@ -21,7 +21,7 @@ export default function GlobalNavigation() {
     ];
 
     return (
-        <nav className="fixed bottom-6 left-1/2 -translate-x-1/2 w-[95%] max-w-lg glass rounded-2xl px-2 py-2 flex items-center justify-around z-[100] shadow-2xl transition-all duration-300 border border-white/10 backdrop-blur-xl">
+        <nav className="fixed bottom-[5px] left-1/2 -translate-x-1/2 w-[calc(100%-1rem)] max-w-2xl glass rounded-2xl px-2 py-2 flex items-center justify-around z-[100] shadow-2xl transition-all duration-300 border border-white/10 backdrop-blur-xl">
             {navItems.map((item) => {
                 const isActive = pathname === item.path || (item.path !== '/dashboard' && pathname.startsWith(item.path));
                 return (

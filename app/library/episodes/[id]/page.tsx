@@ -182,7 +182,7 @@ export default function EpisodeDetailPage() {
 
                         {/* Mind Map Section */}
                         <div className={`relative ${mindmap ? '' : 'opacity-50 grayscale pointer-events-none'}`}>
-                            <div className="glass-card border border-white/5 rounded-3xl p-6 hover:bg-white/5 transition-all group cursor-pointer">
+                            <div className="glass-card border border-white/5 rounded-3xl p-6 hover:bg-white/5 transition-all group cursor-pointer" onClick={() => mindmap && router.push(`/mindmaps/${mindmap.id}`)}>
                                 <div className="flex justify-between items-start mb-8">
                                     <div className="p-4 bg-purple-500/10 rounded-2xl border border-purple-500/20 text-purple-400">
                                         <span className="material-symbols-outlined text-3xl group-hover:translate-y-[-2px] transition-transform">account_tree</span>
@@ -195,7 +195,7 @@ export default function EpisodeDetailPage() {
 
                         {/* Slides Section */}
                         <div className={`relative ${slides ? '' : 'opacity-50 grayscale pointer-events-none'}`}>
-                            <div className="glass-card border border-white/5 rounded-3xl p-6 hover:bg-white/5 transition-all group cursor-pointer">
+                            <div className="glass-card border border-white/5 rounded-3xl p-6 hover:bg-white/5 transition-all group cursor-pointer" onClick={() => slides && router.push(`/slides/${slides.id}`)}>
                                 <div className="flex justify-between items-start mb-8">
                                     <div className="p-4 bg-emerald-500/10 rounded-2xl border border-emerald-500/20 text-emerald-400">
                                         <span className="material-symbols-outlined text-3xl group-hover:scale-110 transition-transform">slideshow</span>

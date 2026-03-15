@@ -167,8 +167,11 @@ export default function LibraryPage() {
                         </div>
                     </div>
 
-                    {/* Mind Maps Card (Mock/Inactive) */}
-                    <div className="bg-gradient-to-br from-[#8b5cf6]/20 to-[#8b5cf6]/5 border border-[#8b5cf6]/20 rounded-3xl p-6 relative overflow-hidden group hover:scale-[1.01] hover:border-[#8b5cf6]/40 transition-all opacity-70">
+                    {/* Mind Maps Card */}
+                    <div 
+                        onClick={() => router.push('/mindmaps')}
+                        className="bg-gradient-to-br from-[#8b5cf6]/20 to-[#8b5cf6]/5 border border-[#8b5cf6]/20 rounded-3xl p-6 relative overflow-hidden group cursor-pointer hover:scale-[1.01] hover:border-[#8b5cf6]/40 transition-all"
+                    >
                         <div className="flex justify-between items-start mb-10">
                             <div className="p-3 bg-purple-500/20 rounded-2xl border border-purple-500/20">
                                 <span className="material-symbols-outlined text-purple-400 text-3xl group-hover:scale-110 transition-transform">account_tree</span>
@@ -185,13 +188,13 @@ export default function LibraryPage() {
                                 <div className="bg-purple-500 h-full rounded-full w-full origin-left transition-transform duration-1000" style={{ transform: `scaleX(${stats.maps.perc / 100})` }}></div>
                             </div>
                         </div>
-                        <div className="absolute inset-0 bg-background/50 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity backdrop-blur-sm cursor-not-allowed">
-                            <span className="bg-black/50 px-4 py-2 rounded-xl text-[10px] font-black uppercase tracking-widest text-white border border-white/10">Coming Soon</span>
-                        </div>
                     </div>
 
-                    {/* Infographics Card (Mock/Inactive) */}
-                    <div className="bg-gradient-to-br from-[#ec4899]/20 to-[#ec4899]/5 border border-[#ec4899]/20 rounded-3xl p-6 relative overflow-hidden group hover:scale-[1.01] hover:border-[#ec4899]/40 transition-all opacity-70">
+                    {/* Infographics Card */}
+                    <div 
+                        onClick={() => router.push('/infographics')}
+                        className="bg-gradient-to-br from-[#ec4899]/20 to-[#ec4899]/5 border border-[#ec4899]/20 rounded-3xl p-6 relative overflow-hidden group cursor-pointer hover:scale-[1.01] hover:border-[#ec4899]/40 transition-all"
+                    >
                         <div className="flex justify-between items-start mb-10">
                             <div className="p-3 bg-pink-500/20 rounded-2xl border border-pink-500/20">
                                 <span className="material-symbols-outlined text-pink-400 text-3xl group-hover:scale-110 transition-transform">monitoring</span>
@@ -208,13 +211,13 @@ export default function LibraryPage() {
                                 <div className="bg-pink-500 h-full rounded-full w-full origin-left transition-transform duration-1000" style={{ transform: `scaleX(${stats.info.perc / 100})` }}></div>
                             </div>
                         </div>
-                        <div className="absolute inset-0 bg-background/50 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity backdrop-blur-sm cursor-not-allowed">
-                            <span className="bg-black/50 px-4 py-2 rounded-xl text-[10px] font-black uppercase tracking-widest text-white border border-white/10">Coming Soon</span>
-                        </div>
                     </div>
 
-                    {/* Slide Decks Card (Mock/Inactive) */}
-                    <div className="bg-gradient-to-br from-[#10b981]/20 to-[#10b981]/5 border border-[#10b981]/20 rounded-3xl p-6 relative overflow-hidden group hover:scale-[1.01] hover:border-[#10b981]/40 transition-all opacity-70">
+                    {/* Slide Decks Card */}
+                    <div 
+                        onClick={() => router.push('/slides')}
+                        className="bg-gradient-to-br from-[#10b981]/20 to-[#10b981]/5 border border-[#10b981]/20 rounded-3xl p-6 relative overflow-hidden group cursor-pointer hover:scale-[1.01] hover:border-[#10b981]/40 transition-all"
+                    >
                         <div className="flex justify-between items-start mb-10">
                             <div className="p-3 bg-emerald-500/20 rounded-2xl border border-emerald-500/20 max-w-[50px] overflow-hidden flex items-center justify-center">
                                 <span className="material-symbols-outlined text-emerald-400 text-3xl group-hover:scale-110 transition-transform">drive_presentation</span>
@@ -230,9 +233,6 @@ export default function LibraryPage() {
                             <div className="w-full bg-slate-900/80 h-1.5 rounded-full overflow-hidden border border-white/5">
                                 <div className="bg-emerald-500 h-full rounded-full w-full origin-left transition-transform duration-1000" style={{ transform: `scaleX(${stats.slides.perc / 100})` }}></div>
                             </div>
-                        </div>
-                         <div className="absolute inset-0 bg-background/50 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity backdrop-blur-sm cursor-not-allowed">
-                            <span className="bg-black/50 px-4 py-2 rounded-xl text-[10px] font-black uppercase tracking-widest text-white border border-white/10">Coming Soon</span>
                         </div>
                     </div>
                 </div>

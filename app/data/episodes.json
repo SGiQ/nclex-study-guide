@@ -174,5 +174,16 @@
     "audioUrl": "https://pub-2b82d106a2e24d02864c89dc4b308d5c.r2.dev/uploads/episode-16.mp3",
     "category": "Review",
     "order": 16
+  },
+  {
+    "id": 17,
+    "title": "Biological Mechanics of Pregnancy and Birth",
+    "description": "Comprehensive Guide to Maternity and Reproductive Health Nursing overview.",
+    "content": "The biological mechanics of pregnancy begin with fertilization, which occurs when a mature ovum and a spermatozoon unite in the fallopian tube to form a zygote containing 46 chromosomes. This zygote undergoes rapid cellular division as it travels toward the uterus, transforming into a blastocyst that implants into the uterine endometrium approximately 8 to 10 days after fertilization. To sustain the developing embryo, the placenta forms from trophoblast tissues to facilitate the transport of oxygen, nutrients, and waste, while also secreting essential pregnancy hormones such as human chorionic gonadotropin, estrogen, and progesterone. Organogenesis takes place during the first trimester, and the fetus continues to mature within the amniotic sac, which regulates temperature and provides protection against physical trauma.\n\nTo support fetal growth and prepare for delivery, the maternal body undergoes profound physiological adaptations. The uterus expands significantly to accommodate the fetus, while the breasts enlarge, become more vascular, and begin producing colostrum under the influence of changing hormones. Cardiovascular mechanics shift dramatically, featuring a 25 to 50 percent increase in cardiac output, an elevated heart rate, and an expansion of maternal blood volume up to 5,250 mL to ensure effective placental exchange. Furthermore, endocrine changes involving relaxin and progesterone inhibit uterine motility during gestation while softening the cervix and relaxing the cartilage of the pelvic joints and symphysis pubis to facilitate the eventual passage of the fetus.\n\nThe biological mechanics of birth, or labor, are driven by rhythmic uterine contractions that cause the progressive effacement and dilation of the cervix. The physical mechanics of delivery require the fetus to navigate the pelvic canal through a specific sequence of positional changes: engagement, descent and flexion, internal rotation, extension, external rotation, restitution, and expulsion. This birth process is divided into distinct stages, starting with true labor contractions and full cervical dilation up to 10 centimeters in the first stage, followed by the second stage where maternal abdominal muscles assist involuntary uterine contractions to push and deliver the neonate. The third stage concludes the mechanics of childbirth with the separation and expulsion of the placenta, aided by the hormone oxytocin, which stimulates continued uterine contractions to prevent postpartum bleeding.",
+    "pages": "Maternity-1",
+    "duration": 600,
+    "audioUrl": "/uploads/episode-maternity.mp3",
+    "category": "Maternity",
+    "order": 17
   }
 ]

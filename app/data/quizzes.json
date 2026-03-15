@@ -9900,5 +9900,75 @@
                 "explanation": "Explanation."
             }
         ]
+    },
+    {
+        "id": 17,
+        "episodeId": 17,
+        "title": "Maternity Quiz",
+        "description": "Biological Mechanics of Pregnancy and Birth Review",
+        "questionCount": 5,
+        "color": "from-teal-600 to-emerald-900",
+        "questions": [
+  {
+    "id": 1,
+    "text": "What are the three distinct phases of a uterine contraction during labor?",
+    "options": [
+      "Increment, acme, and decrement",
+      "Onset, peak, and baseline",
+      "Acceleration, plateau, and deceleration",
+      "Systole, diastole, and resting phase"
+    ],
+    "correctAnswer": 0,
+    "explanation": "The three phases of a uterine contraction are increment, acme, and decrement."
+  },
+  {
+    "id": 2,
+    "text": "During the mechanics of delivery, what is the correct sequence of movements the fetus typically undergoes?",
+    "options": [
+      "Descent, extension, internal rotation, flexion, external rotation, expulsion",
+      "Engagement, descent and flexion, internal rotation, extension, external rotation, restitution, and expulsion",
+      "Flexion, engagement, internal rotation, restitution, extension, external rotation",
+      "Engagement, external rotation, descent, restitution, internal rotation, expulsion"
+    ],
+    "correctAnswer": 1,
+    "explanation": "The mechanics of delivery follow the sequence of engagement, descent and flexion, internal rotation, extension, external rotation, restitution, and expulsion."
+  },
+  {
+    "id": 3,
+    "text": "When assessing the degree of fetal descent during labor, what does a fetal station of 0 indicate?",
+    "options": [
+      "The presenting part is freely movable above the pelvic inlet",
+      "The presenting part is at the pelvic inlet",
+      "The presenting part is at the level of the ischial spine",
+      "The presenting part has passed through the pelvic outlet"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Fetal stations indicate the location of the presenting part in relation to the ischial spine, with station 0 being exactly at the level of the ischial spine."
+  },
+  {
+    "id": 4,
+    "text": "Which anatomical landmark is used to estimate the smallest outlet measurement of the pelvis (the intertuberous diameter)?",
+    "options": [
+      "The distance between the ischial spines",
+      "The distance between the symphysis pubis and the sacral promontory",
+      "The transverse diameter between the ischial tuberosities",
+      "The distance between the iliac crests"
+    ],
+    "correctAnswer": 2,
+    "explanation": "The smallest outlet measurement of the pelvis is the intertuberous diameter, which is the transverse diameter between the ischial tuberosities."
+  },
+  {
+    "id": 5,
+    "text": "What is the primary physiological cause of early decelerations in the fetal heart rate during labor contractions?",
+    "options": [
+      "Umbilical cord compression",
+      "Placental insufficiency",
+      "Maternal hypotension",
+      "Fetal head compression"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Early decelerations are gradual and temporary drops in the fetal heart rate caused by compression of the fetal head during labor contractions."
+  }
+]
     }
 ]

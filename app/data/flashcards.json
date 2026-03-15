@@ -3396,9 +3396,66 @@
             },
             {
                 "id": 54,
-                "front": "\"If you are unsure of an answer on a test",
-                "back": "what should you do?\",Make your best guess and move on; you can come back later if you have time."
+                "front": "If you are unsure of an answer on a test, what should you do?",
+                "back": "Make your best guess and move on; you can come back later if you have time."
             }
         ]
+    },
+    {
+        "episodeId": 17,
+        "title": "Maternity Flashcards",
+        "description": "Biological Mechanics of Pregnancy and Birth Review",
+        "cards": [
+  {
+    "id": 1,
+    "front": "What is organogenesis and when does it occur during pregnancy?",
+    "back": "Organogenesis is the development of fetal organs, which occurs during the first trimester, specifically days 14 to 56 of gestation."
+  },
+  {
+    "id": 2,
+    "front": "What is the timeline for implantation of the fertilized ovum?",
+    "back": "Implantation occurs when the cellular walls of the blastocyte implant into the endometrium, usually 6 to 10 days after ovum fertilization."
+  },
+  {
+    "id": 3,
+    "front": "What is the normal vascular composition of the umbilical cord?",
+    "back": "The umbilical cord normally contains two arteries and one vein, which transport oxygen, nutrients, and waste between the fetus and the placenta."
+  },
+  {
+    "id": 4,
+    "front": "What are the primary biological functions of amniotic fluid?",
+    "back": "It protects the fetus and umbilical cord from trauma and pressure, regulates fetal temperature, and aids in muscular development by allowing the fetus to move freely."
+  },
+  {
+    "id": 5,
+    "front": "What defines the third stage of labor?",
+    "back": "The third stage of labor begins immediately after the neonate's birth and ends with the expulsion of the placenta."
+  },
+  {
+    "id": 6,
+    "front": "What is \"lightening\" in the context of late pregnancy mechanics?",
+    "back": "Lightening is the settling of the fetal head into the brim of the pelvis prior to labor."
+  },
+  {
+    "id": 7,
+    "front": "How do true labor contractions differ mechanically from false labor?",
+    "back": "True labor produces regular rhythmic contractions leading to progressive descent of the fetus, bloody show, and progressive effacement and dilation of the cervix."
+  },
+  {
+    "id": 8,
+    "front": "What is the primary function of the placenta during fetal development?",
+    "back": "It functions as a fetal lung, allowing for the exchange of oxygen and carbon dioxide, and transports essential nutrients and hormones from the maternal blood supply to the fetus."
+  },
+  {
+    "id": 9,
+    "front": "What is the role of the corpus luteum in early pregnancy mechanics?",
+    "back": "The corpus luteum secretes large quantities of progesterone, which maintains the integrity of the pregnancy by inhibiting uterine motility and preventing the sloughing of the uterine lining."
+  },
+  {
+    "id": 10,
+    "front": "How much does the uterus grow in length to accommodate the fetus during a full-term pregnancy?",
+    "back": "The length of the uterus increases from approximately 2.5 inches (6.3 cm) before pregnancy to 12.5 inches (32 cm) at term."
+  }
+]
     }
 ]

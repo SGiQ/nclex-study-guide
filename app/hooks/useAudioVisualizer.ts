@@ -32,16 +32,18 @@ export function useAudioVisualizer(analyser: AnalyserNode | null, isPlaying: boo
                     }
                     const average = sum / step;
                     
-                    // Boost sensitivity for voice frequencies
-                    // Using a slight exponent to make quieter sounds more visible
-                    const targetHeight = Math.max(15, Math.pow(average / 255, 0.7) * 100);
+                    // Boost sensitivity aggressively for voice frequencies
+                    // Using 0.5 exponent to pull up quieter speech sounds
+                    const targetHeight = Math.max(15, Math.pow(average / 255, 0.5) * 115);
                     
-                    // Smooth decay: if new height is lower, drop slowly. If higher, jump up.
+                    // Very smooth decay: drop slowly to maintain a 'full' wave look
                     const prevHeight = prev[i] || 15;
                     if (targetHeight > prevHeight) {
-                        newData.push(targetHeight); // Quick response to volume increase
+                        // Quick rise but with slight smoothing to prevent sharp jumps
+                        newData.push(prevHeight * 0.3 + targetHeight * 0.7);
                     } else {
-                        newData.push(prevHeight * 0.85 + targetHeight * 0.15); // Slow decay
+                        // Slow decay (90% retention) creates a fluid 'falling' effect
+                        newData.push(prevHeight * 0.9 + targetHeight * 0.1);
                     }
                 }
                 return newData;

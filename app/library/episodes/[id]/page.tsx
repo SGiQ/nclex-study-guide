@@ -11,19 +11,22 @@ import slidesData from '@/app/data/slides.json';
 import { usePlayer } from '@/app/context/PlayerContext';
 import { useProgress } from '@/app/context/ProgressContext';
 import { useProgram } from '@/app/context/ProgramContext';
+import { useAudioVisualizer } from '@/app/hooks/useAudioVisualizer';
 
 export default function EpisodeDetailPage() {
     const params = useParams();
     const router = useRouter();
-    const { playEpisode, currentEpisode, isPlaying } = usePlayer();
+    const { playEpisode, currentEpisode, isPlaying, analyser } = usePlayer();
     const { audioProgress, quizResults } = useProgress();
     const { activeProgram } = useProgram();
     
-
+    // Check if THIS specific episode is the one currently playing in the global player
     const episodeId = parseInt(params.id as string);
     const episode = episodesData.find(e => e.id === episodeId);
-    
     const isActuallyPlaying = isPlaying && currentEpisode?.id === episodeId;
+    
+    // Drive the visualizer with real audio data if this episode is playing
+    const audioData = useAudioVisualizer(isActuallyPlaying ? analyser : null, isActuallyPlaying);
 
 
 
@@ -117,17 +120,15 @@ export default function EpisodeDetailPage() {
                                     {episode.description}
                                 </p>
                                 
-                                {/* CSS Animated Audio Waveform */}
+                                {/* React Animated Audio Waveform */}
                                 <div className="flex items-end gap-1.5 h-16 w-full max-w-[200px] opacity-80">
-                                    {[0.4, 0.7, 0.5, 0.9, 0.6, 0.8, 0.5, 1.0, 0.7, 0.4].map((scale, i) => (
+                                    {audioData.map((heightPrec, i) => (
                                         <div
                                             key={i}
-                                            className="waveform-bar w-full rounded-t-lg bg-primary"
+                                            className="waveform-bar w-full rounded-t-lg bg-primary transition-all duration-75"
                                             style={{
-                                                height: isActuallyPlaying ? `${scale * 80 + 10}%` : '15%',
+                                                height: `${heightPrec}%`,
                                                 opacity: isActuallyPlaying ? 1 : 0.2,
-                                                animation: isActuallyPlaying ? `waveform-bounce ${0.6 + i * 0.1}s ease-in-out infinite alternate` : 'none',
-                                                animationDelay: `${i * 60}ms`,
                                             }}
                                         />
                                     ))}

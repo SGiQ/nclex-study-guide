@@ -15,14 +15,17 @@ interface Episode {
 }
 
 import { useProgram } from '@/app/context/ProgramContext';
+import { useAudioVisualizer } from '@/app/hooks/useAudioVisualizer';
 
 export default function AudioParams() {
     const router = useRouter();
-    const { playEpisode, loadEpisode, currentEpisode, isPlaying } = usePlayer();
+    const { playEpisode, loadEpisode, currentEpisode, isPlaying, analyser } = usePlayer();
     const { activeProgram } = useProgram();
     const [episodes, setEpisodes] = useState<Episode[]>([]);
     const [filteredEpisodes, setFilteredEpisodes] = useState<Episode[]>([]);
     const [searchTerm, setSearchTerm] = useState('');
+    
+    const audioData = useAudioVisualizer(isPlaying ? analyser : null, isPlaying);
 
     useEffect(() => {
         fetch(`/api/episodes?program=${activeProgram.slug}`)
@@ -118,17 +121,15 @@ export default function AudioParams() {
                                             </div>
                                         </div>
                                         
-                                        {/* Live Audio Waveform - CSS animated */}
+                                        {/* Live Audio Waveform - React animated */}
                                         <div className="flex items-end gap-1 h-20 mt-auto opacity-80">
-                                            {[0.4, 0.7, 0.5, 0.9, 0.6, 0.8, 0.5, 1.0, 0.7, 0.4].map((scale, i) => (
+                                            {audioData.map((heightPrec, i) => (
                                                 <div
                                                     key={i}
-                                                    className="waveform-bar w-full max-w-[8px] rounded-t-sm"
+                                                    className="waveform-bar w-full max-w-[8px] rounded-t-sm transition-all duration-75"
                                                     style={{
-                                                        height: isPlaying ? `${scale * 80 + 10}%` : '15%',
+                                                        height: `${heightPrec}%`,
                                                         opacity: isPlaying ? 1 : 0.3,
-                                                        animation: isPlaying ? `waveform-bounce ${0.6 + i * 0.1}s ease-in-out infinite alternate` : 'none',
-                                                        animationDelay: `${i * 60}ms`,
                                                     }}
                                                 />
                                             ))}

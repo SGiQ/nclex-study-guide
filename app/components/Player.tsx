@@ -16,7 +16,7 @@ import episodesRN from '@/app/data/episodes-rn.json';
 export default function Player() {
     const pathname = usePathname();
     const router = useRouter();
-    const { currentEpisode, isPlaying, isDismissed, setIsPlaying, togglePlay, closePlayer, setCurrentTime, playNextEpisode, signalEpisodeEnded } = usePlayer();
+    const { currentEpisode, isPlaying, isDismissed, setIsPlaying, togglePlay, closePlayer, setCurrentTime, playNextEpisode, signalEpisodeEnded, analyser, setAnalyser } = usePlayer();
     const { saveItem, removeItem, isSaved } = useLibrary();
     const { user } = useAuth();
     const { saveAudioProgress } = useProgress();
@@ -38,13 +38,36 @@ export default function Player() {
     useEffect(() => {
         if (!audioRef.current) return;
 
+        // Initialize Web Audio API Analyser
+        if (!analyser && window.AudioContext) {
+            try {
+                const audioCtx = new (window.AudioContext || (window as any).webkitAudioContext)();
+                const analyserNode = audioCtx.createAnalyser();
+                analyserNode.fftSize = 64; // lower for chunkier bars
+                
+                // Cross-browser AudioContext unlocking
+                const source = audioCtx.createMediaElementSource(audioRef.current);
+                source.connect(analyserNode);
+                analyserNode.connect(audioCtx.destination);
+                
+                setAnalyser(analyserNode);
+            } catch (e) {
+                console.warn("Failed to initialize AudioContext:", e);
+            }
+        }
+
         if (isPlaying) {
             if (audioRef.current.readyState === 0) {
                 pendingPlayRef.current = true;
                 audioRef.current.load();
             } else {
                 pendingPlayRef.current = false;
-                audioRef.current.play().catch((e) => {
+                audioRef.current.play().then(() => {
+                    // Resume audio context if the browser suspended it
+                    if (analyser && analyser.context.state === 'suspended') {
+                        (analyser.context as AudioContext).resume();
+                    }
+                }).catch((e) => {
                     console.warn("Playback prevented:", e);
                     setIsPlaying(false);
                 });
@@ -53,7 +76,7 @@ export default function Player() {
             pendingPlayRef.current = false;
             audioRef.current.pause();
         }
-    }, [isPlaying, currentEpisode?.id, setIsPlaying]);
+    }, [isPlaying, currentEpisode?.id, setIsPlaying, analyser, setAnalyser]);
 
     useEffect(() => {
         if (audioRef.current) {

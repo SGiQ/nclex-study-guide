@@ -32,7 +32,10 @@ export default function Player() {
     const [playbackRate, setPlaybackRate] = useState(1);
     const [error, setError] = useState<string | null>(null);
     const [showEndModal, setShowEndModal] = useState(false);
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [activeView, setActiveView] = useState<'player' | 'transcript'>('player');
     const pendingPlayRef = useRef(false);
+    const menuRef = useRef<HTMLDivElement>(null);
 
     const isEpisodeSaved = currentEpisode ? isSaved(currentEpisode.id, 'episode') : false;
 
@@ -60,11 +63,6 @@ export default function Player() {
         }
 
         if (isPlaying) {
-            // Ensure context is resumed before playing
-            if (analyser && analyser.context.state === 'suspended') {
-                (analyser.context as AudioContext).resume();
-            }
-
             if (audioRef.current.readyState === 0) {
                 pendingPlayRef.current = true;
                 audioRef.current.load();
@@ -190,6 +188,12 @@ export default function Player() {
     };
 
     const handleTogglePlay = () => {
+        // RESUME AUDIO CONTEXT - CRITICAL FOR MOBILE
+        if (analyser && analyser.context.state === 'suspended') {
+            (analyser.context as AudioContext).resume().then(() => {
+                console.log("AudioContext resumed successfully");
+            });
+        }
         togglePlay();
     };
 
@@ -283,6 +287,22 @@ export default function Player() {
                                 </button>
                             )}
 
+                            {/* Replay */}
+                            <button
+                                onClick={() => {
+                                    if (audioRef.current) {
+                                        audioRef.current.currentTime = 0;
+                                        audioRef.current.play().catch(console.error);
+                                        setIsPlaying(true);
+                                    }
+                                    setShowEndModal(false);
+                                }}
+                                className="w-full py-3.5 rounded-[9px] bg-white/10 hover:bg-white/15 text-white font-black uppercase tracking-widest text-[10px] transition-all flex items-center justify-center gap-2"
+                            >
+                                <span className="material-symbols-outlined text-sm">replay</span>
+                                Replay Episode
+                            </button>
+
                             {/* Dismiss */}
                             <button
                                 onClick={() => setShowEndModal(false)}
@@ -358,14 +378,30 @@ export default function Player() {
                 </div>
             )}
 
-            {/* Full Screen Player Overlay */}
-            <div className={`fixed inset-0 z-50 bg-[#0A0A0F] text-white flex flex-col transition-transform duration-300 ${isExpanded ? 'translate-y-0' : 'translate-y-full'}`}>
+            {/* Full Screen Player Overlay - Lowered Z-Index to allow GlobalNav (z-100) to stay on top */}
+            <div className={`fixed inset-0 z-[80] bg-[#0A0A0F] text-white flex flex-col transition-transform duration-300 ${isExpanded ? 'translate-y-0' : 'translate-y-full'}`}>
 
                 {/* Background Gradient */}
-                <div className="absolute inset-0 bg-gradient-to-b from-red-800 via-[#8B1A1A] to-black opacity-90 pointer-events-none" />
+                {/* Dynamic Premium Background */}
+                <div className="absolute inset-0 bg-[#060609] overflow-hidden">
+                    {/* Ambient Glows */}
+                    <div className={`absolute top-[-10%] left-[-20%] w-[70%] h-[70%] rounded-full blur-[120px] transition-colors duration-1000 ${
+                        currentEpisode.category?.includes('Pharmacology') ? 'bg-pink-600/10' :
+                        currentEpisode.category?.includes('Psychosocial') ? 'bg-purple-600/10' :
+                        currentEpisode.category?.includes('Risk') ? 'bg-cyan-600/10' :
+                        currentEpisode.category?.includes('Physiological') ? 'bg-orange-600/10' :
+                        currentEpisode.category?.includes('Maternity') ? 'bg-rose-600/10' :
+                        'bg-primary/10'
+                    }`} />
+                    <div className={`absolute bottom-[-10%] right-[-20%] w-[60%] h-[60%] rounded-full blur-[100px] transition-colors duration-1000 ${
+                        currentEpisode.category?.includes('Pharmacology') ? 'bg-pink-900/10' :
+                        currentEpisode.category?.includes('Risk') ? 'bg-cyan-900/10' :
+                        'bg-primary/5'
+                    }`} />
+                </div>
 
-                {/* Improved Vertical Layout: Using flex-col with overflow handling */}
-                <div className="relative z-10 flex flex-col h-full w-full max-w-md mx-auto p-4 overflow-y-auto no-scrollbar">
+                {/* Improved Vertical Layout: Increased top padding for breathing room */}
+                <div className="relative z-10 flex flex-col h-full w-full max-w-md mx-auto pt-10 px-4 pb-32 overflow-hidden">
 
                     {/* Top Bar */}
                     <div className="flex-none flex items-center justify-between mb-4 mt-2">
@@ -378,151 +414,236 @@ export default function Player() {
                             <span className="text-[10px] uppercase tracking-widest block">Now Playing</span>
                             <span className="text-xs font-bold">NCLEX Prep</span>
                         </div>
-                        <button className="p-2 -mr-2 text-white/80 hover:text-white">
-                            <span className="text-xl">⋮</span>
-                        </button>
+                        <div className="relative z-[220]">
+                            <button 
+                                onClick={() => setIsMenuOpen(!isMenuOpen)}
+                                className="p-2 -mr-2 text-white/80 hover:text-white transition-colors relative z-[220]"
+                            >
+                                <span className="material-symbols-outlined text-2xl">more_vert</span>
+                            </button>
+
+                            {/* Options Menu Dropdown - FIXED POSITIONING FOR STABILITY */}
+                            {isMenuOpen && (
+                                <>
+                                    <div 
+                                        className="fixed inset-0 z-[230] bg-black/20 backdrop-blur-[2px]" 
+                                        onClick={() => setIsMenuOpen(false)} 
+                                    />
+                                    <div 
+                                        ref={menuRef}
+                                        className="fixed right-4 top-16 w-56 bg-[#1A1A23] border border-white/10 rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.5)] py-2 z-[240] animate-in fade-in zoom-in-95 duration-200"
+                                    >
+                                        <div className="px-4 py-2 mb-1 border-b border-white/5">
+                                            <p className="text-[10px] font-black uppercase tracking-widest text-slate-500">Episode Options</p>
+                                        </div>
+                                        <button 
+                                            onClick={() => {
+                                                setActiveView('transcript');
+                                                setIsMenuOpen(false);
+                                            }}
+                                            className="w-full px-4 py-3.5 flex items-center gap-3 text-sm font-bold text-white/80 hover:text-white hover:bg-white/5 transition-colors"
+                                        >
+                                            <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+                                                <span className="material-symbols-outlined text-xl">description</span>
+                                            </div>
+                                            <span>Show Transcript</span>
+                                        </button>
+                                        <div className="h-[1px] bg-white/5 mx-2 my-1" />
+                                        <button 
+                                            onClick={() => {
+                                                setIsExpanded(false);
+                                                setIsMenuOpen(false);
+                                            }}
+                                            className="w-full px-4 py-3.5 flex items-center gap-3 text-sm font-bold text-red-400 hover:bg-red-500/10 transition-colors"
+                                        >
+                                            <div className="w-8 h-8 rounded-lg bg-red-400/10 flex items-center justify-center">
+                                                <span className="material-symbols-outlined text-xl">close</span>
+                                            </div>
+                                            <span>Close Player</span>
+                                        </button>
+                                    </div>
+                                </>
+                            )}
+                        </div>
                     </div>
 
-                    {/* Flexible Album Art Container - Fix Overlap */}
-                    <div className="flex-1 min-h-0 flex items-center justify-center py-2 mb-4">
-                        <div className="aspect-square h-full max-h-[35vh] w-auto rounded-lg bg-gradient-to-br from-red-500 to-orange-600 shadow-2xl flex items-center justify-center relative overflow-hidden ring-1 ring-white/10">
-                            <div className="text-center p-6 w-full">
-                                <h2 className="text-2xl sm:text-3xl font-black leading-tight tracking-tight mb-2 text-white drop-shadow-md break-words">
-                                    {currentEpisode.title}
-                                </h2>
+                    {/* Modern Glass Art Container / Transcript View */}
+                    <div className="flex-1 min-h-0 flex flex-col items-center justify-center py-4 mb-6 relative">
+                        {activeView === 'player' ? (
+                            <>
+                                {/* Glow Behind Card */}
+                                <div className={`absolute w-32 h-32 blur-[80px] opacity-20 transition-colors duration-1000 ${
+                                    currentEpisode.category?.includes('Pharmacology') ? 'bg-pink-500' :
+                                    currentEpisode.category?.includes('Risk') ? 'bg-cyan-500' :
+                                    'bg-primary'
+                                }`} />
+
+                                <div className="w-full h-auto aspect-square max-h-[42vh] min-h-[260px] rounded-3xl bg-white/[0.03] backdrop-blur-2xl shadow-[0_32px_64px_-16px_rgba(0,0,0,0.6)] flex items-center justify-center relative overflow-hidden border border-white/10 group">
+                                    {/* Inner Accent Line */}
+                                    <div className={`absolute inset-0 border-t border-l border-white/10 rounded-3xl pointer-events-none`} />
+                                    
+                                    <div className="text-center p-6 w-full z-10">
+                                        <span className={`text-[10px] font-black uppercase tracking-[0.3em] mb-2 block transition-colors duration-1000 ${
+                                            currentEpisode.category?.includes('Pharmacology') ? 'text-pink-400' :
+                                            currentEpisode.category?.includes('Risk') ? 'text-cyan-400' :
+                                            'text-primary'
+                                        }`}>
+                                            Episode {currentEpisode.order}
+                                        </span>
+                                        <h2 className="text-lg sm:text-xl font-black leading-tight tracking-tight text-white mb-2 drop-shadow-2xl px-6 break-words">
+                                            {currentEpisode.title}
+                                        </h2>
+                                        <div className="h-0.5 w-8 mx-auto rounded-full bg-white/10 mt-3" />
+                                    </div>
+                                    
+                                    {/* High Performance Audio Waveform Overlay */}
+                                    <div className="absolute bottom-0 left-0 right-0 h-20 md:h-28 flex items-end justify-center px-8 pb-6 pointer-events-none">
+                                        <AudioVisualizer 
+                                            analyser={isPlaying ? analyser : null} 
+                                            isPlaying={isPlaying} 
+                                            barCount={24}
+                                            className="flex items-end gap-1.5 h-full w-full opacity-100"
+                                            barClassName={`flex-1 rounded-t-lg shadow-[0_0_20px_rgba(255,255,255,0.4)] transition-colors duration-1000 ${
+                                                currentEpisode.category?.includes('Pharmacology') ? 'bg-pink-500' :
+                                                currentEpisode.category?.includes('Risk') ? 'bg-cyan-500' :
+                                                currentEpisode.category?.includes('Psychosocial') ? 'bg-purple-500' :
+                                                'bg-primary'
+                                            }`}
+                                            sensitivity={0.5}
+                                        />
+                                    </div>
                                 </div>
-                                
-                                {/* High Performance Audio Waveform Overlay */}
-                                <div className="absolute bottom-0 left-0 right-0 h-8 md:h-16 flex items-end justify-center px-6 pb-2 pointer-events-none">
-                                    <AudioVisualizer 
-                                        analyser={isPlaying ? analyser : null} 
-                                        isPlaying={isPlaying} 
-                                        barCount={20}
-                                        className="flex items-end gap-0.5 h-full w-full opacity-60"
-                                        barClassName="flex-1 bg-white rounded-t-sm shadow-[0_0_10px_rgba(255,255,255,0.4)]"
-                                        sensitivity={0.5}
+                            </>
+                        ) : (
+                            <div className="w-full h-full max-h-[60vh] flex flex-col bg-white/[0.03] backdrop-blur-3xl rounded-3xl border border-white/10 overflow-hidden shadow-2xl animate-in fade-in slide-in-from-bottom-4 duration-500">
+                                <div className="flex-none p-4 border-b border-white/10 flex items-center justify-between">
+                                    <h3 className="text-sm font-black uppercase tracking-widest text-white/50">Transcript</h3>
+                                    <button 
+                                        onClick={() => setActiveView('player')}
+                                        className="flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-primary hover:text-white transition-colors"
+                                    >
+                                        <span className="material-symbols-outlined text-sm">arrow_back</span>
+                                        Back to Player
+                                    </button>
+                                </div>
+                                <div className="flex-1 overflow-hidden">
+                                    <TranscriptViewer 
+                                        segments={getTranscript(currentEpisode.id)} 
+                                        currentTime={audioRef.current?.currentTime || 0}
+                                        onSeek={(time) => {
+                                            if (audioRef.current) {
+                                                audioRef.current.currentTime = time;
+                                            }
+                                        }}
                                     />
                                 </div>
                             </div>
-                        </div>
-
-                    {/* Track Info */}
-                    <div className="flex-none mb-6 px-1 z-20">
-                        <div className="flex items-start justify-between">
-                            <div className="min-w-0 pr-4">
-                                <h2 className="text-xl sm:text-2xl font-bold truncate leading-tight">{currentEpisode.title}</h2>
-                                <p className="text-white/70 text-sm truncate mt-1">{currentEpisode.description}</p>
-                            </div>
-                            <button className="text-2xl opacity-70 hover:opacity-100 flex-shrink-0">⊕</button>
-                        </div>
-                    </div>
-
-                    {/* Progress Bar */}
-                    <div className="flex-none mb-4 group px-1">
-                        <input
-                            type="range"
-                            min="0"
-                            max="100"
-                            value={progress || 0}
-                            onChange={handleSeek}
-                            className="w-full h-1 bg-white/20 rounded-lg appearance-none cursor-pointer [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-3 [&::-webkit-slider-thumb]:h-3 [&::-webkit-slider-thumb]:bg-white [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:opacity-0 group-hover:[&::-webkit-slider-thumb]:opacity-100 transition-all"
-                            style={{
-                                background: `linear-gradient(to right, white ${progress}%, rgba(255,255,255,0.2) ${progress}%)`
-                            }}
-                        />
-                        <div className="flex justify-between text-xs font-medium text-white/50 mt-2">
-                            <span>{formatTime(audioRef.current?.currentTime || 0)}</span>
-                            <span>{formatTime(duration)}</span>
-                        </div>
-                    </div>
-
-                    {/* Main Controls - Always visible at bottom */}
-                    <div className="flex-none mt-auto mb-6">
-                        <div className="flex items-center justify-between px-2">
-                            {/* Speed */}
-                            <button
-                                onClick={toggleSpeed}
-                                className="text-xs font-bold text-white/80 w-12 text-left hover:text-white"
-                            >
-                                {playbackRate}x
-                            </button>
-
-                            {/* Center Controls */}
-                            <div className="flex items-center gap-8">
-                                {/* Skip Back 15s */}
-                                <button onClick={() => skipRequest(-15)} className="text-white hover:scale-110 transition-transform p-2 group">
-                                    <svg className="w-8 h-8 fill-current" viewBox="0 0 24 24">
-                                        <path d="M12 5V1L7 6l5 5V7c3.31 0 6 2.69 6 6s-2.69 6-6 6-6-2.69-6-6H4c0 4.42 3.58 8 8 8s8-3.58 8-8-3.58-8-8-8z" />
-                                        <text x="12" y="14" fontSize="5" textAnchor="middle" fill="currentColor" fontWeight="bold" stroke="none">15</text>
-                                    </svg>
-                                </button>
-
-                                <button
-                                    onClick={handleTogglePlay}
-                                    className="h-16 w-16 flex items-center justify-center rounded-full bg-white text-black hover:scale-105 active:scale-95 transition-all shadow-lg"
-                                >
-                                    {isPlaying ? (
-                                        <svg className="w-8 h-8 fill-current" viewBox="0 0 24 24"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z" /></svg>
-                                    ) : (
-                                        <svg className="w-8 h-8 fill-current ml-1" viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg>
-                                    )}
-                                </button>
-
-                                {/* Skip Forward 15s */}
-                                <button onClick={() => skipRequest(15)} className="text-white hover:scale-110 transition-transform p-2 group">
-                                    <svg className="w-8 h-8 fill-current" viewBox="0 0 24 24">
-                                        <path d="M12 5V1l5 5-5 5V7c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6h2c0 4.42-3.58 8-8 8s-8-3.58-8-8 3.58-8 8-8z" />
-                                        <text x="12" y="14" fontSize="5" textAnchor="middle" fill="currentColor" fontWeight="bold" stroke="none">15</text>
-                                    </svg>
-                                </button>
-                            </div>
-
-                            {/* Menu/More -> now Save Button */}
-                            <button
-                                onClick={toggleSave}
-                                className={`w-12 text-right transition-colors ${isEpisodeSaved ? 'text-indigo-400' : 'text-white/80 hover:text-white'}`}
-                            >
-                                {isEpisodeSaved ? (
-                                    <svg className="w-6 h-6 inline-block" fill="currentColor" viewBox="0 0 24 24">
-                                        <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
-                                    </svg>
-                                ) : (
-                                    <svg className="w-6 h-6 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z" />
-                                    </svg>
-                                )}
-                            </button>
-                        </div>
-                    </div>
-
-
-
-                    {/* Bottom Icons (Connect/Share) */}
-                    <div className="flex-none flex items-center justify-between px-4 pb-2">
-                        <button className="text-white/60 hover:text-white">
-                            <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                            </svg>
-                        </button>
-
-                        {/* Quiz Link for current episode */}
-                        {currentEpisode.id >= 2 && (
-                            <Link
-                                href={`/quizzes/${currentEpisode.id}`}
-                                className="px-4 py-1.5 rounded-full bg-white/10 hover:bg-white/20 border border-white/10 text-xs font-bold uppercase tracking-wider transition-colors flex items-center gap-2"
-                            >
-                                <span>Take Quiz</span>
-                                <span>→</span>
-                            </Link>
                         )}
-
-                        <button className="text-white/60 hover:text-white">
-                            <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z" />
-                            </svg>
-                        </button>
                     </div>
 
+                    {/* Bottom Controls Section */}
+                    <div className="mt-auto pb-12">
+                        {/* Track Info & Actions */}
+                        <div className="flex-none mb-6 px-2 z-20">
+                            <div className="flex items-center justify-between">
+                                <div className="min-w-0 pr-4">
+                                    <h2 className="text-base sm:text-lg font-black tracking-tight text-white mb-1 leading-tight">{currentEpisode.title}</h2>
+                                    <p className="text-slate-400 text-[10px] font-bold uppercase tracking-widest leading-normal">
+                                        {currentEpisode.category} • NCLEX High-Yield
+                                    </p>
+                                </div>
+                                <div className="flex gap-2">
+                                    <button 
+                                        onClick={toggleSave}
+                                        className={`w-10 h-10 rounded-full flex items-center justify-center border transition-all ${
+                                            isEpisodeSaved 
+                                            ? 'bg-primary/20 border-primary/30 text-primary' 
+                                            : 'bg-white/5 border-white/5 text-slate-400 hover:text-white'
+                                        }`}
+                                    >
+                                        <span className="material-symbols-outlined text-xl">{isEpisodeSaved ? 'bookmark_added' : 'bookmark'}</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Progress Bar */}
+                        <div className="flex-none mb-6 group px-1">
+                            <input
+                                type="range"
+                                min="0"
+                                max="100"
+                                value={progress || 0}
+                                onChange={handleSeek}
+                                className={`w-full h-1.5 rounded-full appearance-none cursor-pointer transition-all bg-white/10 group-hover:h-2`}
+                                style={{
+                                    background: `linear-gradient(to right, ${
+                                        currentEpisode.category?.includes('Pharmacology') ? '#ec4899' :
+                                        currentEpisode.category?.includes('Risk') ? '#22d3ee' :
+                                        currentEpisode.category?.includes('Psychosocial') ? '#a855f7' :
+                                        '#257bf4'
+                                    } ${progress}%, transparent ${progress}%)`
+                                }}
+                            />
+                            <div className="flex justify-between text-xs font-medium text-white/50 mt-2">
+                                <span>{formatTime(audioRef.current?.currentTime || 0)}</span>
+                                <span>{formatTime(duration)}</span>
+                            </div>
+                        </div>
+
+                        {/* Main Playback Controls */}
+                        <div className="flex-none mb-8">
+                            <div className="flex items-center justify-between px-2">
+                                <button onClick={toggleSpeed} className="text-xs font-bold text-white/80 w-12 text-left hover:text-white">{playbackRate}x</button>
+                                <div className="flex items-center gap-8">
+                                    <button onClick={() => skipRequest(-15)} className="text-white hover:scale-110 transition-transform p-1">
+                                        <svg className="w-8 h-8 fill-current" viewBox="0 0 24 24">
+                                            <path d="M12 5V1L7 6l5 5V7c3.31 0 6 2.69 6 6s-2.69 6-6 6-6-2.69-6-6H4c0 4.42 3.58 8 8 8s8-3.58 8-8-3.58-8-8-8z" />
+                                            <text x="12" y="14" fontSize="5" textAnchor="middle" fill="currentColor" fontWeight="bold">15</text>
+                                        </svg>
+                                    </button>
+                                    <button onClick={handleTogglePlay} className="h-16 w-16 flex items-center justify-center rounded-full bg-white text-black hover:scale-105 active:scale-95 transition-all shadow-lg">
+                                        <svg className="w-8 h-8 fill-current" viewBox="0 0 24 24">
+                                            {isPlaying ? <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z" /> : <path d="M8 5v14l11-7z" />}
+                                        </svg>
+                                    </button>
+                                    <button onClick={() => skipRequest(15)} className="text-white hover:scale-110 transition-transform p-1">
+                                        <svg className="w-8 h-8 fill-current" viewBox="0 0 24 24">
+                                            <path d="M12 5V1l5 5-5 5V7c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6h2c0 4.42-3.58 8-8 8s-8-3.58-8-8 3.58-8 8-8z" />
+                                            <text x="12" y="14" fontSize="5" textAnchor="middle" fill="currentColor" fontWeight="bold">15</text>
+                                        </svg>
+                                    </button>
+                                </div>
+                                <div className="w-12" />
+                            </div>
+                        </div>
+
+                        {/* Bottom Actions Block */}
+                        <div className="flex-none flex items-center justify-between px-2">
+                            <button className="w-11 h-11 rounded-full bg-white/5 flex items-center justify-center text-slate-400 hover:text-white transition-colors">
+                                <span className="material-symbols-outlined">share</span>
+                            </button>
+
+                            {/* Quiz Link */}
+                            {currentEpisode.id >= 2 && (
+                                <Link
+                                    href={`/quizzes/${currentEpisode.id}`}
+                                    className={`px-8 py-3.5 rounded-2xl font-black uppercase tracking-[0.2em] text-[10px] transition-all flex items-center gap-3 shadow-[0_10px_30px_-10px_rgba(0,0,0,0.5)] ${
+                                        currentEpisode.category?.includes('Pharmacology') ? 'bg-pink-500/20 text-pink-400 border border-pink-500/30' :
+                                        currentEpisode.category?.includes('Risk') ? 'bg-cyan-500/20 text-cyan-400 border border-cyan-500/30' :
+                                        'bg-primary/20 text-primary border border-primary/30'
+                                    } hover:scale-[1.02] active:scale-95`}
+                                >
+                                    <span className="material-symbols-outlined text-lg">quiz</span>
+                                    <span>Take Quiz</span>
+                                </Link>
+                            )}
+
+                            <button className="w-11 h-11 rounded-full bg-white/5 flex items-center justify-center text-slate-400 hover:text-white transition-colors">
+                                <span className="material-symbols-outlined">playlist_add</span>
+                            </button>
+                        </div>
+                    </div>
                 </div>
 
                 <audio

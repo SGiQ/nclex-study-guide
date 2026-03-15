@@ -113,7 +113,7 @@ export default function AudioParams() {
                                                 <p className="text-xs font-black text-primary uppercase tracking-widest truncate mb-2">
                                                     {activeProgram.name} • EP {currentEpisode.order}
                                                 </p>
-                                                <h3 className="text-3xl font-black leading-tight uppercase tracking-tight line-clamp-2">
+                                                <h3 className="text-xl sm:text-2xl font-black leading-tight uppercase tracking-tight">
                                                     {currentEpisode.title}
                                                 </h3>
                                             </div>

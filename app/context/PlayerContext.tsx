@@ -9,6 +9,7 @@ interface Episode {
     duration: number;
     audioUrl: string;
     order: number;
+    category?: string;
 }
 
 interface PlayerContextType {

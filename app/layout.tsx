@@ -20,6 +20,7 @@ import QuickActionsFAB from '@/app/components/QuickActionsFAB';
 import AchievementNotificationWrapper from '@/app/components/AchievementNotificationWrapper';
 import { TutorProvider } from '@/app/context/TutorContext';
 import { ProgramProvider } from '@/app/context/ProgramContext';
+import { Analytics } from "@vercel/analytics/react"
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -86,6 +87,7 @@ export default function RootLayout({
             </SRSProvider>
           </AuthProvider>
         </ThemeProvider>
+        <Analytics />
       </body>
     </html>
   );

@@ -57,6 +57,7 @@ export default function MindMapViewerPage({ params }: { params: Promise<{ id: st
                 setLoading(false);
             })
             .catch((e) => {
+                if (e.name === 'AbortError') return;
                 console.error("Error loading mindmap, trying local fallback:", e);
 
                 // Try LocalStorage first
@@ -102,7 +103,7 @@ export default function MindMapViewerPage({ params }: { params: Promise<{ id: st
             try {
                 // Add timeout for save operation too
                 const saveController = new AbortController();
-                const saveTimeoutId = setTimeout(() => saveController.abort(), 3000); // 3 second max wait for save
+                const saveTimeoutId = setTimeout(() => saveController.abort(), 15000); // Increased to 15 seconds
 
                 const saveRes = await fetch(`/api/mindmaps/${mindmap.id}`, {
                     method: 'PATCH',

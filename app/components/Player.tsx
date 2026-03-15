@@ -38,14 +38,15 @@ export default function Player() {
     useEffect(() => {
         if (!audioRef.current) return;
 
-        // Initialize Web Audio API Analyser
-        if (!analyser && window.AudioContext) {
+        // Initialize Web Audio API Analyser once
+        if (!analyser && typeof window !== 'undefined' && (window.AudioContext || (window as any).webkitAudioContext)) {
             try {
-                const audioCtx = new (window.AudioContext || (window as any).webkitAudioContext)();
+                const AudioContextClass = window.AudioContext || (window as any).webkitAudioContext;
+                const audioCtx = new AudioContextClass();
                 const analyserNode = audioCtx.createAnalyser();
-                analyserNode.fftSize = 64; // lower for chunkier bars
+                analyserNode.fftSize = 64;
                 
-                // Cross-browser AudioContext unlocking
+                // Connect the media element to the analyser
                 const source = audioCtx.createMediaElementSource(audioRef.current);
                 source.connect(analyserNode);
                 analyserNode.connect(audioCtx.destination);
@@ -57,20 +58,23 @@ export default function Player() {
         }
 
         if (isPlaying) {
+            // Ensure context is resumed before playing
+            if (analyser && analyser.context.state === 'suspended') {
+                (analyser.context as AudioContext).resume();
+            }
+
             if (audioRef.current.readyState === 0) {
                 pendingPlayRef.current = true;
                 audioRef.current.load();
             } else {
                 pendingPlayRef.current = false;
-                audioRef.current.play().then(() => {
-                    // Resume audio context if the browser suspended it
-                    if (analyser && analyser.context.state === 'suspended') {
-                        (analyser.context as AudioContext).resume();
-                    }
-                }).catch((e) => {
-                    console.warn("Playback prevented:", e);
-                    setIsPlaying(false);
-                });
+                const playPromise = audioRef.current.play();
+                if (playPromise !== undefined) {
+                    playPromise.catch((e) => {
+                        console.warn("Playback prevented:", e);
+                        setIsPlaying(false);
+                    });
+                }
             }
         } else {
             pendingPlayRef.current = false;
@@ -511,12 +515,18 @@ export default function Player() {
                 </div>
 
                 <audio
-                    key={currentEpisode.id}
                     ref={audioRef}
                     src={currentEpisode.audioUrl}
+                    crossOrigin="anonymous"
                     onCanPlay={() => {
                         if (pendingPlayRef.current && audioRef.current) {
                             pendingPlayRef.current = false;
+                            
+                            // Re-resume context for safe measure
+                            if (analyser && analyser.context.state === 'suspended') {
+                                (analyser.context as AudioContext).resume();
+                            }
+
                             audioRef.current.play().catch((e) => {
                                 console.warn("Deferred playback prevented:", e);
                                 setIsPlaying(false);

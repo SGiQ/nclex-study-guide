@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
+import AudioVisualizer from './AudioVisualizer';
 import { usePlayer } from '@/app/context/PlayerContext';
 import { useLibrary } from '@/app/context/LibraryContext';
 import { useAuth } from '@/app/context/AuthContext';
@@ -389,12 +390,21 @@ export default function Player() {
                                 <h2 className="text-2xl sm:text-3xl font-black leading-tight tracking-tight mb-2 text-white drop-shadow-md break-words">
                                     {currentEpisode.title}
                                 </h2>
-                                <div className="absolute bottom-4 left-5 opacity-70">
-                                    <span className="font-bold text-black/40 text-sm sm:text-lg uppercase tracking-widest">NCLEX</span>
+                                </div>
+                                
+                                {/* High Performance Audio Waveform Overlay */}
+                                <div className="absolute bottom-0 left-0 right-0 h-16 flex items-end justify-center px-6 pb-2 pointer-events-none">
+                                    <AudioVisualizer 
+                                        analyser={isPlaying ? analyser : null} 
+                                        isPlaying={isPlaying} 
+                                        barCount={20}
+                                        className="flex items-end gap-0.5 h-full w-full opacity-60"
+                                        barClassName="flex-1 bg-white rounded-t-sm shadow-[0_0_10px_rgba(255,255,255,0.4)]"
+                                        sensitivity={0.5}
+                                    />
                                 </div>
                             </div>
                         </div>
-                    </div>
 
                     {/* Track Info */}
                     <div className="flex-none mb-6 px-1 z-20">

@@ -11,7 +11,7 @@ import slidesData from '@/app/data/slides.json';
 import { usePlayer } from '@/app/context/PlayerContext';
 import { useProgress } from '@/app/context/ProgressContext';
 import { useProgram } from '@/app/context/ProgramContext';
-import { useAudioVisualizer } from '@/app/hooks/useAudioVisualizer';
+import AudioVisualizer from '@/app/components/AudioVisualizer';
 
 export default function EpisodeDetailPage() {
     const params = useParams();
@@ -25,8 +25,7 @@ export default function EpisodeDetailPage() {
     const episode = episodesData.find(e => e.id === episodeId);
     const isActuallyPlaying = isPlaying && currentEpisode?.id === episodeId;
     
-    // Drive the visualizer with real audio data if this episode is playing
-    const audioData = useAudioVisualizer(isActuallyPlaying ? analyser : null, isActuallyPlaying);
+    // progress
 
 
 
@@ -120,19 +119,15 @@ export default function EpisodeDetailPage() {
                                     {episode.description}
                                 </p>
                                 
-                                {/* React Animated Audio Waveform */}
-                                <div className="flex items-end gap-1.5 h-16 w-full max-w-[200px] opacity-80">
-                                    {audioData.map((heightPrec, i) => (
-                                        <div
-                                            key={i}
-                                            className="waveform-bar w-full rounded-t-lg bg-primary transition-all duration-75"
-                                            style={{
-                                                height: `${heightPrec}%`,
-                                                opacity: isActuallyPlaying ? 1 : 0.2,
-                                            }}
-                                        />
-                                    ))}
-                                </div>
+                                {/* High Performance Audio Waveform */}
+                                <AudioVisualizer 
+                                    analyser={isActuallyPlaying ? analyser : null} 
+                                    isPlaying={isActuallyPlaying} 
+                                    barCount={15}
+                                    className="flex items-end gap-1.5 h-16 w-full max-w-[200px] opacity-90"
+                                    barClassName="flex-1 rounded-t-lg bg-primary"
+                                    sensitivity={0.5}
+                                />
                             </div>
                         </div>
                     </div>

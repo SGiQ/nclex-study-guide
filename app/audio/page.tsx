@@ -15,7 +15,7 @@ interface Episode {
 }
 
 import { useProgram } from '@/app/context/ProgramContext';
-import { useAudioVisualizer } from '@/app/hooks/useAudioVisualizer';
+import AudioVisualizer from '@/app/components/AudioVisualizer';
 
 export default function AudioParams() {
     const router = useRouter();
@@ -24,8 +24,6 @@ export default function AudioParams() {
     const [episodes, setEpisodes] = useState<Episode[]>([]);
     const [filteredEpisodes, setFilteredEpisodes] = useState<Episode[]>([]);
     const [searchTerm, setSearchTerm] = useState('');
-    
-    const audioData = useAudioVisualizer(isPlaying ? analyser : null, isPlaying);
 
     useEffect(() => {
         fetch(`/api/episodes?program=${activeProgram.slug}`)
@@ -121,19 +119,15 @@ export default function AudioParams() {
                                             </div>
                                         </div>
                                         
-                                        {/* Live Audio Waveform - React animated */}
-                                        <div className="flex items-end gap-1 h-20 mt-auto opacity-80">
-                                            {audioData.map((heightPrec, i) => (
-                                                <div
-                                                    key={i}
-                                                    className="waveform-bar w-full max-w-[8px] rounded-t-sm transition-all duration-75"
-                                                    style={{
-                                                        height: `${heightPrec}%`,
-                                                        opacity: isPlaying ? 1 : 0.3,
-                                                    }}
-                                                />
-                                            ))}
-                                        </div>
+                                        {/* Live Audio Waveform - High Performance */}
+                                        <AudioVisualizer 
+                                            analyser={isPlaying ? analyser : null} 
+                                            isPlaying={isPlaying} 
+                                            barCount={15}
+                                            className="flex items-end gap-1 h-20 mt-auto opacity-90"
+                                            barClassName="flex-1 bg-primary rounded-t-sm"
+                                            sensitivity={0.5}
+                                        />
                                     </div>
                                 </div>
                             ) : (

@@ -11967,14 +11967,14 @@
                 "explanation": "UAPs can perform routine, stable tasks like ambulation, emptying drains, and taking vital signs. Assessment and medication administration require licensed nursing personnel."
             }
         ],
-        "episodeId": 16
+        "episodeId": 15
     },
     {
         "id": 15,
-        "episodeId": 15,
+        "episodeId": 16,
         "title": "Practice Test #1",
         "description": "Comprehensive Mixed Review - All NCLEX Categories",
-        "questionCount": 25,
+        "questionCount": 31,
         "color": "from-violet-600 to-purple-900",
         "questions": [
             {
@@ -12051,15 +12051,21 @@
             },
             {
                 "id": 7,
-                "text": "A nurse is delegating tasks. Which can be delegated to unlicensed assistive personnel (UAP)?",
+                "text": "[SATA Challenge] A nurse is delegating tasks to unlicensed assistive personnel (UAP). Which tasks are appropriate for the RN to delegate? Select all that apply.",
                 "options": [
-                    "Assessing breath sounds",
-                    "Measuring vital signs on stable client",
-                    "Teaching diabetic diet",
-                    "Administering medications"
+                    "Measuring vital signs on a stable client",
+                    "Assessing a client's response to pain medication",
+                    "Assisting a client with ambulation",
+                    "Feeding a client who is at risk for aspiration",
+                    "Performing a simple dressing change",
+                    "Measuring intake and output"
                 ],
-                "correctAnswer": 1,
-                "explanation": "UAP can do: vital signs, ADLs, ambulation, I&O on stable clients. Cannot: assess, teach, give meds, care for unstable clients. Nurses retain accountability."
+                "correctAnswers": [
+                    0,
+                    2,
+                    5
+                ],
+                "explanation": "UAP can perform routine tasks on stable clients (vitals, ambulation, I&O). Assessment, feeding high-risk clients, and complex procedures require nursing judgment."
             },
             {
                 "id": 8,
@@ -12135,15 +12141,20 @@
             },
             {
                 "id": 14,
-                "text": "A client with cirrhosis has asterixis. This indicates:",
+                "text": "[SATA Challenge] A nurse is assessing a client with cirrhosis. Which of the following findings would indicate the development of hepatic encephalopathy? Select all that apply.",
                 "options": [
-                    "Improved liver function",
-                    "Hepatic encephalopathy",
-                    "Ascites",
-                    "Esophageal varices"
+                    "Asterixis (flapping tremor)",
+                    "Altered mental status",
+                    "Fetor hepaticus (musty breath odor)",
+                    "Spider angiomas",
+                    "Ascites"
                 ],
-                "correctAnswer": 1,
-                "explanation": "Asterixis (flapping tremor) indicates hepatic encephalopathy from elevated ammonia. Give lactulose, restrict protein, monitor mental status."
+                "correctAnswers": [
+                    0,
+                    1,
+                    2
+                ],
+                "explanation": "Hepatic encephalopathy signs include asterixis, mental status changes, and fetor hepaticus due to ammonia buildup. Spider angiomas and ascites are signs of cirrhosis but not specific to encephalopathy."
             },
             {
                 "id": 15,
@@ -12302,6 +12313,82 @@
                     4
                 ],
                 "explanation": "Correct MDI use includes shaking the inhaler, inhaling *slowly* and deeply, holding the breath for 10 seconds, waiting 1 minute between puffs, and rinsing the mouth after corticosteroid use to prevent thrush."
+            },
+            {
+                "id": 27,
+                "text": "A nurse is calculating a GTPAL for a client who is currently 10 weeks pregnant. She has a 3-year-old born at 39 weeks, 5-year-old twins born at 34 weeks, and had a miscarriage at 8 weeks. What is the correct GTPAL?",
+                "options": [
+                    "G4, T1, P1, A1, L3",
+                    "G5, T1, P1, A1, L3",
+                    "G4, T2, P1, A1, L2",
+                    "G5, T2, P1, A1, L3"
+                ],
+                "correctAnswer": 0,
+                "explanation": "G: 4 (current + 3yo + twins + miscarriage). T: 1 (3yo). P: 1 (twins count as 1 preterm birth event). A: 1 (miscarriage). L: 3 (3yo + twins)."
+            },
+            {
+                "id": 28,
+                "text": "[SATA Challenge] A nurse is assessing a newborn at 1 minute of life. Which findings would contribute to an APGAR score calculation? Select all that apply.",
+                "options": [
+                    "Heart rate 110 bpm",
+                    "Weak cry and slow respirations",
+                    "Weight 3500 grams",
+                    "Some flexion of extremities",
+                    "Body pink, extremities blue"
+                ],
+                "correctAnswers": [
+                    0,
+                    1,
+                    3,
+                    4
+                ],
+                "explanation": "APGAR components are: Activity (muscle tone/flexion), Pulse (heart rate), Grimace (reflex irritability), Appearance (color), and Respiration. Weight is not part of the score."
+            },
+            {
+                "id": 29,
+                "text": "A client is in the first stage of labor, active phase. Which nursing intervention is most appropriate?",
+                "options": [
+                    "Encourage the client to push",
+                    "Maintain the client in a supine position",
+                    "Encourage frequent voiding",
+                    "Perform a vaginal exam every 30 minutes"
+                ],
+                "correctAnswer": 2,
+                "explanation": "A full bladder can impede fetal descent and increase discomfort. Encourage frequent voiding. Pushing is for second stage. Supine position can cause hypotension. Exams are minimized to prevent infection."
+            },
+            {
+                "id": 30,
+                "text": "[SATA Challenge] A nurse is caring for a client with a prescription for Contact Precautions. Which of the following conditions or organisms require these precautions? Select all that apply.",
+                "options": [
+                    "Vancomycin-resistant Enterococci (VRE)",
+                    "Clostridioides difficile (C. diff)",
+                    "Methicillin-resistant Staphylococcus aureus (MRSA)",
+                    "Influenza",
+                    "Neisseria meningitidis"
+                ],
+                "correctAnswers": [
+                    0,
+                    1,
+                    2
+                ],
+                "explanation": "Contact precautions are for VRE, C. diff, MRSA, scabies, etc. Influenza requires Droplet precautions. N. meningitidis requires Droplet precautions."
+            },
+            {
+                "id": 31,
+                "text": "[SATA Challenge] A nurse is monitoring a client with hypokalemia. Which of the following are potential causes of this electrolyte imbalance? Select all that apply.",
+                "options": [
+                    "Prolonged nasogastric suctioning",
+                    "Renal failure",
+                    "Excessive use of loop diuretics",
+                    "Addison's disease",
+                    "Severe diarrhea"
+                ],
+                "correctAnswers": [
+                    0,
+                    2,
+                    4
+                ],
+                "explanation": "Hypokalemia (<3.5 mEq/L) can be caused by gastric suctioning, loop diuretics (furosemide), and diarrhea. Renal failure and Addison's disease typically cause hyperkalemia."
             }
         ]
     },
@@ -12411,12 +12498,11 @@
                 ],
                 "explanation": "For a DVT, the nurse should monitor aPTT, elevate the leg, assess for bleeding, and apply a warm compress. Massaging the leg is contraindicated as it can dislodge the clot."
             }
-        ],
-        "episodeId": 17
+        ]
     },
     {
         "id": 17,
-        "episodeId": 16,
+        "episodeId": 15,
         "title": "Maternity Quiz",
         "description": "Biological Mechanics of Pregnancy and Birth Review",
         "questionCount": 10,
@@ -12500,10 +12586,22 @@
                 "explanation": "Oxytocin should be stopped for signs of uterine hyperstimulation (contractions more frequent than every 2 mins or resting tone >20 mm Hg) and non-reassuring fetal heart patterns like late decelerations."
             },
             {
+                "id": 7,
+                "text": "A client is in the first stage of labor, active phase. Which nursing intervention is most appropriate?",
+                "options": [
+                    "Encourage the client to push",
+                    "Maintain the client in a supine position",
+                    "Encourage frequent voiding",
+                    "Perform a vaginal exam every 30 minutes"
+                ],
+                "correctAnswer": 2,
+                "explanation": "A full bladder can impede fetal descent and increase discomfort. Encourage frequent voiding. Pushing is for second stage. Supine position can cause hypotension. Exams are minimized to prevent infection."
+            },
+            {
                 "id": 8,
                 "text": "[SATA Challenge] A postpartum client asks the nurse about signs of postpartum infection she should report after discharge. What should the nurse include in the teaching? Select all that apply.",
                 "options": [
-                    "Lochia that returns to bright red rubbing",
+                    "Lochia that returns to bright red color",
                     "Fever greater than 100.4°F (38°C)",
                     "Foul-smelling lochia",
                     "Mild breast engorgement",
@@ -12532,7 +12630,7 @@
                     1,
                     2
                 ],
-                "explanation": "Broad-spectrum antibiotics can alter normal flora, leading to superinfections like oral candidiasis, C. diff, and vaginal yeast infections. MRSA and S. pneumoniae are not typically classified as superinfections in this context."
+                "explanation": "Broad-spectrum antibiotics can alter normal flora, leading to superinfections like oral candidiasis, C. diff, and vaginal yeast infections."
             },
             {
                 "id": 10,
@@ -12549,17 +12647,387 @@
                     2,
                     4
                 ],
-                "explanation": "Hepatic encephalopathy is characterized by neurological changes due to ammonia buildup, resulting in asterixis (flapping tremor), altered mental status, and fetor hepaticus (musty breath). Jaundice and ascites are signs of cirrhosis but not specific to encephalopathy."
+                "explanation": "Hepatic encephalopathy is characterized by neurological changes due to ammonia buildup, resulting in asterixis (flapping tremor), altered mental status, and fetor hepaticus (musty breath)."
+            }
+        ]
+    },
+    {
+        "id": 18,
+        "episodeId": 18,
+        "title": "Practice Test #2",
+        "description": "Advanced Medical-Surgical, Pharmacology, and Critical Care Review",
+        "questionCount": 30,
+        "color": "from-indigo-600 to-blue-900",
+        "questions": [
+            {
+                "id": 1,
+                "text": "A client is admitted with deep vein thrombosis (DVT) and started on a heparin infusion. Which laboratory value should the nurse monitor to adjust the heparin dose?",
+                "options": [
+                    "Prothrombin time (PT)",
+                    "International Normalized Ratio (INR)",
+                    "Activated partial thromboplastin time (aPTT)",
+                    "Platelet count"
+                ],
+                "correctAnswer": 2,
+                "explanation": "aPTT is used to monitor heparin therapy. PT/INR are used for warfarin. Platelets are monitored for heparin-induced thrombocytopenia (HIT)."
+            },
+            {
+                "id": 2,
+                "text": "[SATA Challenge] A nurse is caring for a client with hypomagnesemia. Which findings should the nurse expect to see? Select all that apply.",
+                "options": [
+                    "Positive Chvostek's sign",
+                    "Hyperactive deep tendon reflexes",
+                    "Bradycardia",
+                    "Torsades de pointes",
+                    "Drowsiness"
+                ],
+                "correctAnswers": [
+                    0,
+                    1,
+                    3
+                ],
+                "explanation": "Hypomagnesemia signs include neuromuscular irritability (Chvostek's sign, hyper-reflexia, tremors) and cardiac arrhythmias like Torsades de pointes. Bradycardia and drowsiness are signs of hypermagnesemia."
+            },
+            {
+                "id": 3,
+                "text": "The nurse is preparing to administer digoxin to a client with heart failure. Which action is the priority?",
+                "options": [
+                    "Check the client's blood pressure",
+                    "Monitor the client's potassium level",
+                    "Assess the apical pulse for one full minute",
+                    "Review the client's recent weight trend"
+                ],
+                "correctAnswer": 2,
+                "explanation": "While potassium and weight are important, the priority before giving digoxin is to assess the apical pulse for one minute. Hold for HR <60 bpm in adults."
+            },
+            {
+                "id": 4,
+                "text": "[SATA Challenge] A client with Type 1 Diabetes is experiencing Diabetic Ketoacidosis (DKA). Which interventions should the nurse anticipate? Select all that apply.",
+                "options": [
+                    "Rapid infusion of 0.9% Normal Saline",
+                    "Intravenous bolus of glargine insulin",
+                    "Continuous infusion of regular insulin",
+                    "Monitoring of potassium levels every 2-4 hours",
+                    "Administration of sodium bicarbonate for pH of 7.2"
+                ],
+                "correctAnswers": [
+                    0,
+                    2,
+                    3
+                ],
+                "explanation": "DKA management includes rapid rehydration with 0.9% NS, continuous regular insulin infusion, and frequent potassium monitoring (as insulin shifts K+ into cells). Bicarbonate is only for severe acidosis (pH <7.0)."
+            },
+            {
+                "id": 5,
+                "text": "A client is 24 hours post-thyroidectomy. The nurse notes the client has a positive Trousseau's sign. Which medication should the nurse have available?",
+                "options": [
+                    "Potassium chloride",
+                    "Calcium gluconate",
+                    "Magnesium sulfate",
+                    "Sodium phosphate"
+                ],
+                "correctAnswer": 1,
+                "explanation": "A positive Trousseau's sign indicates hypocalcemia, a risk after thyroidectomy if parathyroid glands are damaged. Calcium gluconate is the antidote."
+            },
+            {
+                "id": 6,
+                "text": "[SATA Challenge] Which of the following clients should the nurse prioritize seeing first? Select all that apply.",
+                "options": [
+                    "A client with COPD and an SpO2 of 89%",
+                    "A client 2 hours post-appendectomy with bright red dressing",
+                    "A client with a new-onset headache and 'the worst pain of my life'",
+                    "A client whose tracheostomy tube has just become dislodged",
+                    "A client with a fractured hip reporting pain 8/10"
+                ],
+                "correctAnswers": [
+                    2,
+                    3
+                ],
+                "explanation": "The client with 'the worst headache' (possible subarachnoid hemorrhage) and the dislodged tracheostomy (airway emergency) are the highest priorities. SpO2 of 89% can be normal for COPD."
+            },
+            {
+                "id": 7,
+                "text": "A client is prescribed lithium for bipolar disorder. Which instruction is most important for the nurse to include in the discharge teaching?",
+                "options": [
+                    "Restrict sodium intake to prevent edema",
+                    "Maintain a consistent intake of salt and fluids",
+                    "Take the medication on an empty stomach",
+                    "Expect a weight loss of 5-10 pounds"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Lithium is a salt. Low sodium levels or dehydration can lead to lithium toxicity because the kidneys conserve lithium when sodium is low."
+            },
+            {
+                "id": 8,
+                "text": "[SATA Challenge] The nurse is caring for a client with a chest tube. Which findings require immediate intervention? Select all that apply.",
+                "options": [
+                    "Continuous bubbling in the water seal chamber",
+                    "Intermittent bubbling in the suction control chamber",
+                    "Vigorous bubbling in the suction control chamber",
+                    "Tidaling in the water seal chamber with respirations",
+                    "Drainage of 150 mL in the last hour"
+                ],
+                "correctAnswers": [
+                    0,
+                    2,
+                    4
+                ],
+                "explanation": "Continuous bubbling in the water seal indicates an air leak. Vigorous bubbling in the suction chamber (if dry suction) or excessive suction (if wet) is inappropriate. Drainage >100 mL/hr is a sign of hemorrhage."
+            },
+            {
+                "id": 9,
+                "text": "A nurse is teaching a client about warfarin therapy. Which food should the nurse instruct the client to consume in consistent amounts?",
+                "options": [
+                    "Bananas",
+                    "Spinach",
+                    "Red meat",
+                    "Dairy products"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Warfarin works by antagonizing Vitamin K. Green leafy vegetables like spinach are high in Vitamin K and can decrease the effectiveness of warfarin if intake fluctuates."
+            },
+            {
+                "id": 10,
+                "text": "[SATA Challenge] A client is admitted with suspected meningitis. Which precautions should the nurse implement? Select all that apply.",
+                "options": [
+                    "Private room",
+                    "Negative pressure room",
+                    "Surgical mask within 3 feet",
+                    "N95 respirator mask",
+                    "Gown and gloves for all contact"
+                ],
+                "correctAnswers": [
+                    0,
+                    2
+                ],
+                "explanation": "Meningitis (Neisseria meningitidis or Haemophilus influenzae) requires Droplet precautions: private room and surgical mask. Negative pressure and N95 are for Airborne precautions."
             },
             {
                 "id": 11,
-                "text": "[SATA Challenge] A nurse is teaching a client with asthma about using a metered-dose inhaler (MDI). Which steps are correct? Select all that apply.",
+                "text": "A nurse is caring for a client with a suspected spinal cord injury. Which action is the priority?",
                 "options": [
-                    "Shake the inhaler vigorously before use",
-                    "Inhale rapidly and deeply while pressing the canister",
-                    "Hold breath for 10 seconds after inhaling",
-                    "Wait 1 minute between puffs if multiple puffs are ordered",
-                    "Rinse the mouth with water after using a corticosteroid inhaler"
+                    "Assess the client's sensory and motor function",
+                    "Stabilize the cervical spine with a cervical collar",
+                    "Administer high-dose corticosteroids",
+                    "Obtain a stat CT scan of the spine"
+                ],
+                "correctAnswer": 1,
+                "explanation": "The priority in a suspected spinal cord injury is always stabilization (C-spine) to prevent further injury. Airway and breathing follow."
+            },
+            {
+                "id": 12,
+                "text": "[SATA Challenge] A client with cirrhosis has developed ascites. Which interventions are appropriate? Select all that apply.",
+                "options": [
+                    "Administer spironolactone as prescribed",
+                    "Encourage a high-sodium diet",
+                    "Measure abdominal girth daily",
+                    "Monitor serum albumin levels",
+                    "Maintain the client in a supine position"
+                ],
+                "correctAnswers": [
+                    0,
+                    2,
+                    3
+                ],
+                "explanation": "Ascites management includes diuretics (spironolactone), sodium restriction, daily weights/girth, and albumin monitoring. Supine position can increase respiratory distress."
+            },
+            {
+                "id": 13,
+                "text": "A client is receiving a nitroprusside infusion for a hypertensive crisis. Which assessment finding is most concerning?",
+                "options": [
+                    "Blood pressure 140/90 mm Hg",
+                    "Nausea and headache",
+                    "Confusion and almond-scented breath",
+                    "Flushing of the skin"
+                ],
+                "correctAnswer": 2,
+                "explanation": "Nitroprusside can cause cyanide toxicity. Signs include confusion, agitation, and almond-scented breath. This is a medical emergency."
+            },
+            {
+                "id": 14,
+                "text": "[SATA Challenge] A nurse is teaching a client about a heart-healthy diet. Which choices indicate understanding? Select all that apply.",
+                "options": [
+                    "Using olive oil instead of butter",
+                    "Choosing whole-grain bread over white bread",
+                    "Limiting fish consumption to once a month",
+                    "Eating fresh fruits instead of canned fruits in syrup",
+                    "Adding salt to food at the table for flavor"
+                ],
+                "correctAnswers": [
+                    0,
+                    1,
+                    3
+                ],
+                "explanation": "Heart-healthy diets emphasize unsaturated fats (olive oil), whole grains, fiber, and low sodium/sugar. Fish (Omega-3) should be eaten twice a week, not once a month."
+            },
+            {
+                "id": 15,
+                "text": "The nurse is monitoring a client's EKG and notes peaked T-waves and a widened QRS complex. Which electrolyte imbalance does this represent?",
+                "options": [
+                    "Hypokalemia",
+                    "Hyperkalemia",
+                    "Hypocalcemia",
+                    "Hypercalcemia"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Hyperkalemia (K+ >5.0) causes peaked T-waves, prolonged PR interval, and widened QRS. If severe, it can lead to V-fib or asystole."
+            },
+            {
+                "id": 16,
+                "text": "[SATA Challenge] A nurse is caring for a client postpartum who is experiencing a hemorrhage. Which medications should the nurse prepare? Select all that apply.",
+                "options": [
+                    "Oxytocin",
+                    "Methylergonovine",
+                    "Misoprostol",
+                    "Magnesium sulfate",
+                    "Terbutaline"
+                ],
+                "correctAnswers": [
+                    0,
+                    1,
+                    2
+                ],
+                "explanation": "Uterotonics like oxytocin, methylergonovine, and misoprostol are used to contract the uterus. Magnesium and terbutaline are tocolytics used to *relax* the uterus."
+            },
+            {
+                "id": 17,
+                "text": "A client is diagnosed with a pheochromocytoma. Which assessment is the priority?",
+                "options": [
+                    "Heart rate",
+                    "Blood pressure",
+                    "Blood glucose",
+                    "Urine output"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Pheochromocytoma is a catecholamine-secreting tumor causing severe hypertension. Monitoring for hypertensive crisis is the priority."
+            },
+            {
+                "id": 18,
+                "text": "[SATA Challenge] A nurse is preparing to administer TPN through a central line. Which actions are correct? Select all that apply.",
+                "options": [
+                    "Change the TPN tubing every 72 hours",
+                    "Verify the TPN bag with a second nurse",
+                    "Use a micron filter during administration",
+                    "Check blood glucose levels every 4-6 hours",
+                    "Hang 10% dextrose if the next bag is delayed"
+                ],
+                "correctAnswers": [
+                    1,
+                    2,
+                    3,
+                    4
+                ],
+                "explanation": "TPN management: tubings are changed every 24 hours (due to lipids/sugar risk), double-check orders, use filters, monitor glucose for rebound hypoglycemia if stopped/delayed."
+            },
+            {
+                "id": 19,
+                "text": "A client with an acute exacerbation of ulcerative colitis. Which diet is most appropriate?",
+                "options": [
+                    "High-fiber, high-protein",
+                    "Low-residue, high-protein",
+                    "High-fat, low-carbohydrate",
+                    "Clear liquid only"
+                ],
+                "correctAnswer": 1,
+                "explanation": "During an UC flare, a low-residue (low fiber) diet minimizes bowel stimulation, while high protein/calories support healing."
+            },
+            {
+                "id": 20,
+                "text": "[SATA Challenge] Which findings are consistent with Cushing's Syndrome? Select all that apply.",
+                "options": [
+                    "Moon face and buffalo hump",
+                    "Hyperglycemia",
+                    "Hyperkalemia",
+                    "Purple striae on the abdomen",
+                    "Hypotension"
+                ],
+                "correctAnswers": [
+                    0,
+                    1,
+                    3
+                ],
+                "explanation": "Cushing's (excess cortisol) causes moon face, hyperglycemia, striae, and *hypertension*. It typically causes hypokalemia, not hyperkalemia."
+            },
+            {
+                "id": 21,
+                "text": "A client with a head injury has a Glascow Coma Scale (GCS) score of 7. What is the priority nursing intervention?",
+                "options": [
+                    "Assess pupil reactivity",
+                    "Prepare for endotracheal intubation",
+                    "Administer IV mannitol",
+                    "Monitor intracranial pressure"
+                ],
+                "correctAnswer": 1,
+                "explanation": "GCS <8 = Intubate. Protecting the airway is the priority when the client cannot maintain their own due to decreased consciousness."
+            },
+            {
+                "id": 22,
+                "text": "[SATA Challenge] A nurse is assessing a client with Right-sided heart failure. Which findings are expected? Select all that apply.",
+                "options": [
+                    "Dependent peripheral edema",
+                    "Crackles in the lungs",
+                    "Jugular venous distention (JVD)",
+                    "Ascites",
+                    "Frothy, pink-tinged sputum"
+                ],
+                "correctAnswers": [
+                    0,
+                    2,
+                    3
+                ],
+                "explanation": "Right-sided failure causes systemic congestion (edema, JVD, splenomegaly/ascites). Crackles and pink sputum are signs of pulmonary congestion (Left-sided failure)."
+            },
+            {
+                "id": 23,
+                "text": "A nurse is teaching a client about a new prescription for phenelzine (an MAOI). Which food should the client be taught to avoid?",
+                "options": [
+                    "Fresh chicken",
+                    "Aged cheddar cheese",
+                    "Apples",
+                    "Whole wheat bread"
+                ],
+                "correctAnswer": 1,
+                "explanation": "MAOIs interact with tyramine-rich foods (aged cheese, wine, cured meats) causing a hypertensive crisis."
+            },
+            {
+                "id": 24,
+                "text": "[SATA Challenge] A nurse is evaluating a client for Neuroleptic Malignant Syndrome (NMS). Which findings are characteristic of NMS? Select all that apply.",
+                "options": [
+                    "Extreme fever (hyperpyrexia)",
+                    "Muscle rigidity",
+                    "Diarrhea and hyperreflexia",
+                    "Altered mental status",
+                    "Autonomic instability (tachycardia, BP fluctuations)"
+                ],
+                "correctAnswers": [
+                    0,
+                    1,
+                    3,
+                    4
+                ],
+                "explanation": "NMS (antipsychotic reaction) involves 'Lead pipe' rigidity, high fever, and mental check status. Diarrhea/hyperreflexia are signs of Serotonin Syndrome."
+            },
+            {
+                "id": 25,
+                "text": "A client is admitted with pancreatitis. Which laboratory result would the nurse expect to be elevated?",
+                "options": [
+                    "Amylase and Lipase",
+                    "Bilirubin and ALT",
+                    "Creatinine and BUN",
+                    "WBC and Hgb"
+                ],
+                "correctAnswer": 0,
+                "explanation": "Amylase and Lipase are the primary diagnostic enzymes for pancreatitis. Lipase is more specific."
+            },
+            {
+                "id": 26,
+                "text": "[SATA Challenge] The nurse is providing discharge teaching for a client with a permanent pacemaker. Which statements are correct? Select all that apply.",
+                "options": [
+                    "Avoid lifting the arm on the pacemaker side for 1-2 weeks",
+                    "Microwaves are unsafe to use",
+                    "Keep cell phones away from the pacemaker site",
+                    "Inform airport security about the device",
+                    "Take pulse daily and report if lower than setting"
                 ],
                 "correctAnswers": [
                     0,
@@ -12567,7 +13035,66 @@
                     3,
                     4
                 ],
-                "explanation": "Correct MDI use includes shaking the inhaler, inhaling *slowly* and deeply, holding the breath for 10 seconds, waiting 1 minute between puffs, and rinsing the mouth after corticosteroid use to prevent thrush."
+                "explanation": "Pacemaker care: Immobilize arm initially, avoid magnets/MRI, keep electronics/phones 6 inches away. Microwaves are fine."
+            },
+            {
+                "id": 27,
+                "text": "A child is brought to the ED with suspected epiglottitis. Which action is contraindicated?",
+                "options": [
+                    "Placing the child in a tripod position",
+                    "Using a tongue blade to visualize the throat",
+                    "Administering humidified oxygen",
+                    "Having emergency intubation equipment ready"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Never use a tongue blade or swab the throat in suspected epiglottitis as it can cause complete airway obstruction."
+            },
+            {
+                "id": 28,
+                "text": "[SATA Challenge] A client with a head injury and increased intracranial pressure (ICP) is being monitored. Which interventions help maintain a low ICP? Select all that apply.",
+                "options": [
+                    "Suction the client every hour",
+                    "Maintain the head of the bed at 30 degrees",
+                    "Keep the client's neck in a neutral, midline position",
+                    "Provide a cluster of nursing care to save time",
+                    "Minimize environmental stimuli"
+                ],
+                "correctAnswers": [
+                    1,
+                    2,
+                    4
+                ],
+                "explanation": "ICP management: HOB 30 (not higher, as it can decrease MAP), midline neck, minimize suctioning, and *avoid* clustering care (spread it out to prevent spikes in ICP)."
+            },
+            {
+                "id": 29,
+                "text": "The nurse is preparing to administer Adenosine for Supraventricular Tachycardia (SVT). What is the correct administration technique?",
+                "options": [
+                    "Slow IV push over 2 minutes",
+                    "Rapid 1-2 second IV push followed by a saline flush",
+                    "Continuous IV infusion via a syringe pump",
+                    "Intramuscular injection in the deltoid"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Adenosine has a very short half-life (<10 sec). It must be given via rapid IV push near the heart followed immediately by a rapid flush."
+            },
+            {
+                "id": 30,
+                "text": "[SATA Challenge] A postpartum client has been diagnosed with Preeclampsia. Which assessment findings should the nurse report to the provider? Select all that apply.",
+                "options": [
+                    "Epigastric pain",
+                    "Severe, persistent headache",
+                    "Vision changes or blurriness",
+                    "Platelet count of 150,000",
+                    "Urine output of 20 mL/hr"
+                ],
+                "correctAnswers": [
+                    0,
+                    1,
+                    2,
+                    4
+                ],
+                "explanation": "Signs of worsening preeclampsia (HELLP or eclampsia risk) include epigastric pain (liver), headache/vision issues (CNS), and low urine output (kidneys). 150,000 platelets is normal."
             }
         ]
     }

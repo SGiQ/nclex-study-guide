@@ -57,14 +57,19 @@ export default function DashboardPage() {
 
         const currentProgramEpisodeIds = new Set(episodes.map(e => e.id));
 
-        // 3 points per episode for listening to completion
+        // 3 points per episode for listening to completion or partial progress
         const AUDIO_POINTS_PER_EP = 3;
-        const completedAudioIds = new Set(
-            Object.values(audioProgress || {})
-                .filter(a => currentProgramEpisodeIds.has(a.episodeId) && a.completed)
-                .map(a => a.episodeId)
-        );
-        const audioPoints = completedAudioIds.size * AUDIO_POINTS_PER_EP;
+        let audioPoints = 0;
+        Object.values(audioProgress || {}).forEach(a => {
+            if (!currentProgramEpisodeIds.has(a.episodeId)) return;
+            if (a.completed) {
+                audioPoints += AUDIO_POINTS_PER_EP;
+            } else if (a.metadata?.currentTime && a.metadata?.duration) {
+                // Award partial points based on listening progress
+                const pct = Math.min(a.metadata.currentTime / a.metadata.duration, 1);
+                audioPoints += AUDIO_POINTS_PER_EP * pct;
+            }
+        });
 
         // 3 points per episode for quiz, scaled by best score percentage
         const QUIZ_POINTS_PER_EP = 3;

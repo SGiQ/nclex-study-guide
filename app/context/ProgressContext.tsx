@@ -23,6 +23,7 @@ interface ProgressContextType {
     quizResults: Record<number, QuizResult>;
     audioProgress: Record<number, AudioResult>;
     saveQuizResult: (episodeId: number, score: number, total: number) => Promise<void>;
+    savePartialQuizProgress: (quizId: number, currentQuestionIndex: number, score: number) => Promise<void>;
     saveAudioProgress: (episodeId: number, completed: boolean, metadata?: any) => Promise<void>;
     getQuizResult: (episodeId: number) => QuizResult | undefined;
     getAudioProgress: (episodeId: number) => AudioResult | undefined;
@@ -164,6 +165,18 @@ export function ProgressProvider({ children }: { children: React.ReactNode }) {
                 data.progress.forEach((p: any) => {
                     const parsedId = parseInt(p.content_id);
                     if (p.content_type === 'quiz') {
+                        if (p.metadata?.isPartial) {
+                            // Restore partial progress to localStorage so the quiz runner can find it
+                            if (typeof window !== 'undefined') {
+                                const partialData = {
+                                    currentQuestionIndex: p.metadata.currentQuestionIndex || 0,
+                                    score: p.score || 0,
+                                    answeredQuestions: [] // Optional: could be synced too if needed
+                                };
+                                localStorage.setItem(`quiz_progress_${parsedId}`, JSON.stringify(partialData));
+                            }
+                        }
+                        
                         quizProgress[parsedId] = {
                             episodeId: parsedId,
                             score: p.score || 0,
@@ -244,6 +257,34 @@ export function ProgressProvider({ children }: { children: React.ReactNode }) {
         }
     };
 
+    const savePartialQuizProgress = async (quizId: number, currentQuestionIndex: number, score: number) => {
+        const token = getAuthToken();
+        if (!token) return;
+
+        try {
+            await fetch('/api/progress', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': `Bearer ${token}`
+                },
+                body: JSON.stringify({
+                    contentType: 'quiz',
+                    contentId: quizId.toString(),
+                    completed: false,
+                    score,
+                    metadata: { 
+                        currentQuestionIndex, 
+                        isPartial: true,
+                        lastUpdated: new Date().toISOString()
+                    }
+                })
+            });
+        } catch (error) {
+            console.error('Failed to save partial quiz progress:', error);
+        }
+    };
+
     const saveAudioProgress = async (episodeId: number, completed: boolean, metadata?: any) => {
         // Never downgrade: once completed, always completed regardless of re-listening
         const existing = audioRef.current[episodeId];
@@ -292,7 +333,7 @@ export function ProgressProvider({ children }: { children: React.ReactNode }) {
     };
 
     return (
-        <ProgressContext.Provider value={{ quizResults, audioProgress, saveQuizResult, saveAudioProgress, getQuizResult, getAudioProgress, isLoading }}>
+        <ProgressContext.Provider value={{ quizResults, audioProgress, saveQuizResult, savePartialQuizProgress, saveAudioProgress, getQuizResult, getAudioProgress, isLoading }}>
             {children}
         </ProgressContext.Provider>
     );

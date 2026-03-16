@@ -86,7 +86,7 @@ export default function QuizRunnerPage({ params }: { params: Promise<{ id: strin
     const [attemptNumber, setAttemptNumber] = useState(1);
     const [bestScore, setBestScore] = useState(0);
     const [quizStartTime] = useState(Date.now());
-    const { saveQuizResult, getQuizResult } = useProgress();
+    const { saveQuizResult, getQuizResult, savePartialQuizProgress } = useProgress();
     const { updateStats, checkAndUnlockBadges } = useAchievements();
 
     // Get current quiz result for attempt number and best score
@@ -338,9 +338,30 @@ export default function QuizRunnerPage({ params }: { params: Promise<{ id: strin
 
             {/* Top Bar */}
             <div className="px-6 py-6 flex items-center justify-between border-b border-white/5 glass">
-                <Link href="/quizzes" className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-slate-500 hover:text-white transition-colors">
-                    <span className="material-symbols-outlined text-sm">close</span> Quit
-                </Link>
+                <div className="flex items-center gap-4">
+                    <Link href="/quizzes" className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-slate-500 hover:text-white transition-colors">
+                        <span className="material-symbols-outlined text-sm">close</span> Quit
+                    </Link>
+                    
+                    {!quizCompleted && (
+                        <button 
+                            onClick={async () => {
+                                try {
+                                    // Save partial progress to cloud
+                                    await savePartialQuizProgress(quizId, currentQuestionIndex, score);
+                                    // Local storage is already updated by the useEffect
+                                    window.location.href = '/quizzes';
+                                } catch (e) {
+                                    console.error('Failed to save & continue later:', e);
+                                    window.location.href = '/quizzes';
+                                }
+                            }}
+                            className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-primary hover:text-primary-light transition-colors"
+                        >
+                            <span className="material-symbols-outlined text-sm">save</span> Save & Continue Later
+                        </button>
+                    )}
+                </div>
                 <div className="flex items-center gap-4">
                     {currentAttemptCount > 0 && (
                         <div className="text-[9px] font-bold uppercase tracking-[0.2em] text-slate-500 bg-white/5 px-2 py-1 rounded-md">

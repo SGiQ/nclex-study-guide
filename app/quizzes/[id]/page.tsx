@@ -86,8 +86,29 @@ export default function QuizRunnerPage({ params }: { params: Promise<{ id: strin
     const [attemptNumber, setAttemptNumber] = useState(1);
     const [bestScore, setBestScore] = useState(0);
     const [quizStartTime] = useState(Date.now());
-    const { saveQuizResult, getQuizResult, savePartialQuizProgress } = useProgress();
+    const [showOutOfOrderWarning, setShowOutOfOrderWarning] = useState(false);
+    const { saveQuizResult, getQuizResult, savePartialQuizProgress, quizResults } = useProgress();
     const { updateStats, checkAndUnlockBadges } = useAchievements();
+
+    // Check for sequential progress
+    useEffect(() => {
+        if (quiz && quizId > 1 && quizId < 50) { // Only check for regular episode quizzes
+            const prevQuizId = quizId - 1;
+            const prevResult = quizResults[prevQuizId];
+            
+            // If previous quiz exists in data but not completed by user
+            if (prevQuizId >= 1 && (!prevResult || prevResult.score === 0)) {
+                // Check if the previous quiz ID actually exists in the system (avoid false positives)
+                fetch(`/api/quizzes?id=${prevQuizId}`)
+                    .then(res => {
+                        if (res.ok) {
+                            setShowOutOfOrderWarning(true);
+                        }
+                    })
+                    .catch(() => { /* ignore */ });
+            }
+        }
+    }, [quiz, quizId, quizResults]);
 
     // Get current quiz result for attempt number and best score
     const currentResult = getQuizResult(quizId);
@@ -228,6 +249,38 @@ export default function QuizRunnerPage({ params }: { params: Promise<{ id: strin
             setQuizCompleted(true);
         }
     };
+
+    // Show Out of Order warning if user skipped previous quiz
+    if (showOutOfOrderWarning && !showResumePrompt) {
+        return (
+            <div className="min-h-dvh bg-background text-foreground flex items-center justify-center p-6 relative z-[60] pb-mini-player">
+                <div className="max-w-xl w-full glass rounded-3xl p-8 border border-yellow-500/20 shadow-2xl">
+                    <div className="w-16 h-16 bg-yellow-500/10 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                        <span className="material-symbols-outlined text-3xl text-yellow-500">warning</span>
+                    </div>
+                    <h1 className="text-xl font-black uppercase tracking-tight mb-3 text-center text-slate-100">Wait a minute!</h1>
+                    <p className="text-[10px] font-bold uppercase tracking-widest text-slate-400 mb-8 text-center leading-relaxed">
+                        It looks like you haven't finished the quiz for the previous episode yet. It's recommended to follow the study foundation in order.
+                    </p>
+
+                    <div className="flex flex-col gap-3">
+                        <Link
+                            href={`/quizzes/${quizId - 1}`}
+                            className="w-full py-4 bg-yellow-500 text-black font-black uppercase tracking-widest text-xs rounded-xl hover:bg-yellow-400 hover:scale-[1.02] active:scale-[0.98] transition-all"
+                        >
+                            Go to Previous Quiz
+                        </Link>
+                        <button
+                            onClick={() => setShowOutOfOrderWarning(false)}
+                            className="w-full py-4 glass text-slate-300 font-bold uppercase tracking-widest text-xs rounded-xl hover:bg-white/10 hover:text-white transition-all border border-white/5"
+                        >
+                            Continue Anyway
+                        </button>
+                    </div>
+                </div>
+            </div>
+        );
+    }
 
     // Show resume prompt if saved progress exists
     if (showResumePrompt) {

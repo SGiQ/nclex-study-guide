@@ -12394,9 +12394,10 @@
     },
     {
         "id": 16,
+        "episodeId": 17,
         "title": "Final Prep Review",
         "description": "Test Anxiety & Final Concept Checks",
-        "questionCount": 6,
+        "questionCount": 16,
         "color": "from-fuchsia-600 to-pink-900",
         "questions": [
             {
@@ -12497,6 +12498,137 @@
                     4
                 ],
                 "explanation": "For a DVT, the nurse should monitor aPTT, elevate the leg, assess for bleeding, and apply a warm compress. Massaging the leg is contraindicated as it can dislodge the clot."
+            },
+            {
+                "id": 8,
+                "text": "The nurse is preparing to administer an intramuscular injection to an infant. Which site is the most appropriate?",
+                "options": [
+                    "Dorsogluteal",
+                    "Vastus lateralis",
+                    "Deltoid",
+                    "Ventrogluteal"
+                ],
+                "correctAnswer": 1,
+                "explanation": "The vastus lateralis is the preferred IM injection site for infants because it is the most developed muscle at birth."
+            },
+            {
+                "id": 9,
+                "text": "[SATA Challenge] A nurse is caring for a client with peritonitis. Which assessment findings should the nurse expect? Select all that apply.",
+                "options": [
+                    "Rigid, board-like abdomen",
+                    "Rebound tenderness",
+                    "Hyperactive bowel sounds",
+                    "Fever and tachycardia",
+                    "Nausea and vomiting"
+                ],
+                "correctAnswers": [
+                    0,
+                    1,
+                    3,
+                    4
+                ],
+                "explanation": "Peritonitis signs include a rigid/board-like abdomen, rebound tenderness, fever, tachycardia, and GI distress (N/V). Bowel sounds are typically absent or diminished, not hyperactive."
+            },
+            {
+                "id": 10,
+                "text": "The nurse is caring for a client with a suspected pulmonary embolism. Which action should the nurse take first?",
+                "options": [
+                    "Start an IV infusion of Normal Saline",
+                    "Administer oxygen via nasal cannula",
+                    "Obtain a stat 12-lead EKG",
+                    "Prepare the client for a V/Q scan"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Priority management for a suspected PE is oxygenation to maintain SpO2 and reduce respiratory distress."
+            },
+            {
+                "id": 11,
+                "text": "[SATA Challenge] A nurse is teaching a client about the prevention of autonomic dysreflexia. Which triggers should be included? Select all that apply.",
+                "options": [
+                    "Distended bladder",
+                    "Fecal impaction",
+                    "Tight-fitting clothing",
+                    "Exposure to cold temperatures",
+                    "Sunburn or skin pressure"
+                ],
+                "correctAnswers": [
+                    0,
+                    1,
+                    2,
+                    4
+                ],
+                "explanation": "Autonomic dysreflexia (T6 or higher injuries) is triggered by noxious stimuli below the level of injury, most commonly bladder/bowel distension, but also tight clothes, skin pressure, or ingrown toenails."
+            },
+            {
+                "id": 12,
+                "text": "Which medication is the designated antidote for magnesium sulfate toxicity?",
+                "options": [
+                    "Naloxone",
+                    "Vitamin K",
+                    "Calcium gluconate",
+                    "Protamine sulfate"
+                ],
+                "correctAnswer": 2,
+                "explanation": "Calcium gluconate is the antidote for magnesium toxicity. Naloxone is for opioids, Vitamin K for warfarin, and Protamine for heparin."
+            },
+            {
+                "id": 13,
+                "text": "[SATA Challenge] A nurse is reinforcing teaching for a client with a newly diagnosed hiatal hernia. Which instructions should be included? Select all that apply.",
+                "options": [
+                    "Eat small, frequent meals",
+                    "Lie down immediately after eating",
+                    "Avoid caffeine and spicy foods",
+                    "Sleep with the head of the bed elevated",
+                    "Wear loose-fitting clothing around the waist"
+                ],
+                "correctAnswers": [
+                    0,
+                    2,
+                    3,
+                    4
+                ],
+                "explanation": "Hiatal hernia management is similar to GERD: small meals, avoiding triggers (caffeine), elevating HOB, and not lying down for 2-3 hours after eating."
+            },
+            {
+                "id": 14,
+                "text": "A client is admitted with an acute asthma attack. Which medication should the nurse administer first?",
+                "options": [
+                    "Salmeterol",
+                    "Albuterol",
+                    "Fluticasone",
+                    "Theophylline"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Albuterol is a short-acting beta agonist (SABA) used as a rescue medication for acute bronchospasm. Salmeterol and Fluticasone are for long-term control."
+            },
+            {
+                "id": 15,
+                "text": "[SATA Challenge] A nurse is assessing a client with a fractured femur who has developed fat embolism syndrome. Which findings are expected? Select all that apply.",
+                "options": [
+                    "Petechiae over the chest and neck",
+                    "Dyspnea and tachypnea",
+                    "Hypotension",
+                    "Altered mental status (confusion)",
+                    "Hypertension"
+                ],
+                "correctAnswers": [
+                    0,
+                    1,
+                    3
+                ],
+                "explanation": "Fat embolism syndrome is characterized by the triad of hypoxemia/respiratory distress, neurological changes (confusion), and a petechial rash (typically on the upper body)."
+            },
+            {
+                "id": 16,
+                "text": "The nurse is caring for a client with chronic kidney disease (CKD). Which laboratory value is the most sensitive indicator of renal function?",
+                "options": [
+                    "Blood urea nitrogen (BUN)",
+                    "Serum creatinine",
+                    "Glomerular filtration rate (GFR)",
+                    "Urine specific gravity"
+                ],
+                "correctAnswer": 2,
+                "explanation": "GFR is the most sensitive and accurate indicator of overall renal function and is used to stage CKD."
             }
         ]
     },
@@ -12653,7 +12785,7 @@
     },
     {
         "id": 18,
-        "episodeId": 18,
+        "episodeId": 16,
         "title": "Practice Test #2",
         "description": "Advanced Medical-Surgical, Pharmacology, and Critical Care Review",
         "questionCount": 30,

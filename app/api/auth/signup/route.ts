@@ -38,8 +38,8 @@ export async function POST(request: Request) {
     } catch (error: any) {
         return NextResponse.json({ 
             error: 'Failed to create account', 
-            details: error.message,
-            stack: error.stack 
+            details: String(error),
+            stack: error?.stack || ''
         }, { status: 500 });
     }
 }

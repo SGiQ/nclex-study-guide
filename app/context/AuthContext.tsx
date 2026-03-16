@@ -123,6 +123,9 @@ export function AuthProvider({ children }: { children: ReactNode }) {
             localStorage.removeItem('quiz_results');
             localStorage.removeItem('audio_progress');
             
+            // Clear streak data managed by StreakContext
+            localStorage.removeItem('studyStreak');
+
             // Clear audio state managed by PlayerContext & Player
             localStorage.removeItem('nclex_last_episode');
             

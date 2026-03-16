@@ -104,33 +104,33 @@ export default function AudioParams() {
                         <h2 className="text-[10px] font-black uppercase tracking-[0.2em] text-primary mb-4">Currently Studying</h2>
                         {/* Always show the full-height card — empty state uses same dimensions */}
                     <div className={`neon-border-wrapper rounded-[1.5rem] ${playbackEpisode && isPlaying ? 'is-playing shadow-[0_0_80px_-15px_rgba(37,123,244,0.5)]' : ''}`}>
-                        <div className="glass-card rounded-[calc(1.5rem-2px)] p-5 relative overflow-hidden group border border-transparent min-h-[160px] flex flex-col justify-center z-10 w-full h-full bg-[#0A0A0F]">
+                        <div className="glass-card rounded-[calc(1.5rem-2px)] p-8 relative overflow-hidden group border border-transparent min-h-[300px] flex flex-col justify-center z-10 w-full h-full bg-[#0A0A0F]">
 
-                            <div className="absolute -right-10 -top-10 w-48 h-48 bg-primary/20 blur-3xl rounded-full"></div>
+                            <div className="absolute -right-10 -top-10 w-64 h-64 bg-primary/20 blur-3xl rounded-full"></div>
                             
                             {playbackEpisode ? (
-                                <div className="flex gap-4 items-center relative z-20">
+                                <div className="flex gap-8 items-center relative z-20">
                                     <div className="relative flex-shrink-0">
-                                        <div className="w-24 h-24 rounded-2xl bg-slate-900 flex items-center justify-center overflow-hidden border border-white/5 shadow-inner">
-                                            <span className="text-2xl font-black text-primary/60 tracking-tighter">EP{playbackEpisode.order}</span>
+                                        <div className="w-40 h-40 rounded-2xl bg-slate-900 flex items-center justify-center overflow-hidden border border-white/5 shadow-inner">
+                                            <span className="text-4xl font-black text-primary/60 tracking-tighter">EP{playbackEpisode.order}</span>
                                         </div>
                                         <button 
                                             onClick={() => playEpisode(playbackEpisode)}
-                                            className="absolute -bottom-3 -right-3 w-12 h-12 rounded-full bg-gradient-to-br from-primary to-indigo-600 flex items-center justify-center shadow-xl shadow-primary/40 hover:scale-105 transition-transform"
+                                            className="absolute -bottom-4 -right-4 w-16 h-16 rounded-full bg-gradient-to-br from-primary to-indigo-600 flex items-center justify-center shadow-xl shadow-primary/40 hover:scale-105 transition-transform"
                                         >
-                                            <span className="material-symbols-outlined text-white text-2xl">
+                                            <span className="material-symbols-outlined text-white text-3xl">
                                                 {currentEpisode?.id === playbackEpisode.id && isPlaying ? 'pause' : 'play_arrow'}
                                             </span>
                                         </button>
                                     </div>
                                     
-                                    <div className="flex-1 min-w-0 flex flex-col h-24">
-                                        <div className="flex justify-between items-start mb-1">
+                                    <div className="flex-1 min-w-0 flex flex-col h-40">
+                                        <div className="flex justify-between items-start mb-2">
                                             <div className="min-w-0">
-                                                <p className="text-[10px] font-black text-primary uppercase tracking-widest truncate mb-1">
+                                                <p className="text-xs font-black text-primary uppercase tracking-widest truncate mb-2">
                                                     {activeProgram.name} • EP {playbackEpisode.order}
                                                 </p>
-                                                <h3 className="text-lg font-black leading-tight uppercase tracking-tight line-clamp-2">
+                                                <h3 className="text-xl sm:text-2xl font-black leading-tight uppercase tracking-tight line-clamp-2">
                                                     {playbackEpisode.title}
                                                 </h3>
                                             </div>
@@ -141,7 +141,7 @@ export default function AudioParams() {
                                             analyser={currentEpisode?.id === playbackEpisode.id && isPlaying ? analyser : null} 
                                             isPlaying={currentEpisode?.id === playbackEpisode.id && isPlaying} 
                                             barCount={15}
-                                            className="flex items-end gap-1 h-6 mt-auto opacity-90"
+                                            className="flex items-end gap-1 h-12 md:h-20 mt-auto opacity-90"
                                             barClassName="flex-1 bg-primary rounded-t-sm"
                                             sensitivity={0.5}
                                         />
@@ -149,18 +149,18 @@ export default function AudioParams() {
                                 </div>
                             ) : (
                                 /* Empty state — same height, placeholder layout */
-                                <div className="flex gap-4 items-center relative z-20">
+                                <div className="flex gap-8 items-center relative z-20">
                                     <div className="relative flex-shrink-0">
-                                        <div className="w-24 h-24 rounded-2xl bg-slate-900/60 flex items-center justify-center overflow-hidden border border-white/5 shadow-inner">
-                                            <span className="material-symbols-outlined text-4xl text-slate-700">headphones</span>
+                                        <div className="w-40 h-40 rounded-2xl bg-slate-900/60 flex items-center justify-center overflow-hidden border border-white/5 shadow-inner">
+                                            <span className="material-symbols-outlined text-5xl text-slate-700">headphones</span>
                                         </div>
                                     </div>
-                                    <div className="flex-1 min-w-0 flex flex-col h-24 justify-center">
-                                        <p className="text-[10px] font-black text-slate-600 uppercase tracking-widest mb-1">Audio Lessons</p>
-                                        <h3 className="text-lg font-black leading-tight uppercase tracking-tight text-slate-500 line-clamp-2">
+                                    <div className="flex-1 min-w-0 flex flex-col h-40 justify-center">
+                                        <p className="text-xs font-black text-slate-600 uppercase tracking-widest mb-3">Audio Lessons</p>
+                                        <h3 className="text-2xl font-black leading-tight uppercase tracking-tight text-slate-500 line-clamp-2">
                                             No Episode Selected
                                         </h3>
-                                        <p className="text-[9px] font-bold uppercase tracking-widest text-slate-600 mt-2">
+                                        <p className="text-[10px] font-bold uppercase tracking-widest text-slate-600 mt-3">
                                             Tap an episode below to start
                                         </p>
                                     </div>

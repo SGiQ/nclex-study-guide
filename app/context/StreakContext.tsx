@@ -84,8 +84,14 @@ export function StreakProvider({ children }: { children: ReactNode }) {
             }
         };
 
-        if (user) loadStreakSync();
-    }, [user, currentStreak]);
+        if (user) {
+            loadStreakSync();
+        } else {
+            // Reset state on logout
+            setCurrentStreak(0);
+            setHasCheckedInToday(false);
+        }
+    }, [user]); // Removed currentStreak from deps to avoid infinite loop or strange syncs
 
     // Save to cloud on change
     useEffect(() => {

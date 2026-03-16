@@ -340,7 +340,7 @@ export default function Player() {
             {/* Mini Player */}
             {!isExpanded && (
                 <div
-                    className="fixed bottom-[54px] left-0 right-0 mx-auto w-[calc(100%-1rem)] max-w-2xl z-[90] bg-[rgba(28,28,30,0.3)] backdrop-blur-xl border border-white/10 rounded-lg py-3 px-3 shadow-lg hover:bg-[rgba(44,44,46,0.5)] transition-colors"
+                    className="fixed bottom-[54px] left-0 right-0 mx-auto w-[calc(100%-1rem)] max-w-2xl z-[120] bg-[rgba(28,28,30,0.3)] backdrop-blur-xl border border-white/10 rounded-lg py-3 px-3 shadow-lg hover:bg-[rgba(44,44,46,0.5)] transition-colors"
                 >
                     <div className="flex items-center gap-3">
                         {/* Thumbnail / Number */}
@@ -400,8 +400,8 @@ export default function Player() {
                 </div>
             )}
 
-            {/* Full Screen Player Overlay - Lowered Z-Index to allow GlobalNav (z-100) to stay on top */}
-            <div className={`fixed inset-0 z-[80] bg-[#0A0A0F] text-white flex flex-col transition-transform duration-300 ${isExpanded ? 'translate-y-0' : 'translate-y-full'}`}>
+            {/* Full Screen Player Overlay - Higher z-index to stay above nav */}
+            <div className={`fixed inset-0 z-[200] bg-[#0A0A0F] text-white flex flex-col transition-transform duration-300 ${isExpanded ? 'translate-y-0' : 'translate-y-full'}`}>
 
                 {/* Background Gradient */}
                 {/* Dynamic Premium Background */}
@@ -423,10 +423,10 @@ export default function Player() {
                 </div>
 
                 {/* Improved Vertical Layout: Increased top padding for breathing room */}
-                <div className="relative z-10 flex flex-col h-full w-full max-w-md mx-auto pt-10 px-4 pb-32 overflow-hidden">
+                <div className="relative z-10 flex flex-col h-full w-full max-w-md mx-auto pt-16 px-4 pb-32 overflow-hidden">
 
                     {/* Top Bar */}
-                    <div className="flex-none flex items-center justify-between mb-4 mt-2">
+                    <div className="flex-none flex items-center justify-between mb-4 mt-4">
                         <button onClick={() => setIsExpanded(false)} className="p-2 -ml-2 text-white/80 hover:text-white">
                             <span className="material-symbols-outlined text-3xl">close</span>
                         </button>

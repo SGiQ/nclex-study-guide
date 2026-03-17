@@ -1,7 +1,7 @@
 'use client';
 
-import React from 'react';
-import { useAuth } from '@/app/context/AuthContext';
+import React, { useState } from 'react';
+import { useAuth, getAuthToken } from '@/app/context/AuthContext';
 import { useProgress } from '@/app/context/ProgressContext';
 import { useStreak } from '@/app/context/StreakContext';
 import { useRouter } from 'next/navigation';
@@ -45,6 +45,39 @@ export default function ProfilePage() {
         logout();
         router.push('/landing');
     };
+
+    // Password change state
+    const [showPwModal, setShowPwModal] = useState(false);
+    const [currentPw, setCurrentPw] = useState('');
+    const [newPw, setNewPw] = useState('');
+    const [confirmPw, setConfirmPw] = useState('');
+    const [pwLoading, setPwLoading] = useState(false);
+    const [pwError, setPwError] = useState('');
+    const [pwSuccess, setPwSuccess] = useState(false);
+
+    async function handleChangePassword() {
+        setPwError('');
+        if (newPw !== confirmPw) { setPwError('New passwords do not match'); return; }
+        if (newPw.length < 8) { setPwError('New password must be at least 8 characters'); return; }
+        setPwLoading(true);
+        try {
+            const token = getAuthToken();
+            const res = await fetch('/api/auth/change-password', {
+                method: 'PUT',
+                headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${token}` },
+                body: JSON.stringify({ currentPassword: currentPw, newPassword: newPw })
+            });
+            const data = await res.json();
+            if (!res.ok) { setPwError(data.error || 'Failed to change password'); return; }
+            setPwSuccess(true);
+            setCurrentPw(''); setNewPw(''); setConfirmPw('');
+            setTimeout(() => { setShowPwModal(false); setPwSuccess(false); }, 1500);
+        } catch {
+            setPwError('Something went wrong');
+        } finally {
+            setPwLoading(false);
+        }
+    }
 
     return (
         <div className="min-h-screen bg-background text-foreground pb-32 flex flex-col items-center">
@@ -109,10 +142,13 @@ export default function ProfilePage() {
                             </div>
                             <span className="material-symbols-outlined text-slate-700">chevron_right</span>
                         </button>
-                        <button className="w-full px-6 py-4 flex items-center justify-between hover:bg-white/5 transition-colors group">
+                        <button
+                            onClick={() => { setShowPwModal(true); setPwError(''); setPwSuccess(false); }}
+                            className="w-full px-6 py-4 flex items-center justify-between hover:bg-white/5 transition-colors group"
+                        >
                             <div className="flex items-center gap-4">
                                 <span className="material-symbols-outlined text-slate-500 group-hover:text-primary transition-colors">lock</span>
-                                <span className="text-[11px] font-bold uppercase tracking-widest">Privacy & Security</span>
+                                <span className="text-[11px] font-bold uppercase tracking-widest">Change Password</span>
                             </div>
                             <span className="material-symbols-outlined text-slate-700">chevron_right</span>
                         </button>
@@ -152,6 +188,84 @@ export default function ProfilePage() {
                     <p className="text-[8px] font-black uppercase tracking-widest">NCLEX Study Guide v1.0.4</p>
                 </div>
             </main>
+
+            {/* Change Password Modal */}
+            {showPwModal && (
+                <div className="fixed inset-0 z-[200] flex items-end justify-center p-4 pb-8">
+                    <div className="absolute inset-0 bg-black/70 backdrop-blur-md" onClick={() => setShowPwModal(false)} />
+                    <div className="relative w-full max-w-md bg-[#0F0F14] border border-white/10 rounded-2xl p-6 shadow-2xl flex flex-col gap-4 animate-in slide-in-from-bottom-4 duration-300">
+                        <div className="flex items-center justify-between">
+                            <h3 className="text-sm font-black uppercase tracking-widest text-white">Change Password</h3>
+                            <button onClick={() => setShowPwModal(false)} className="text-white/30 hover:text-white transition-colors">
+                                <span className="material-symbols-outlined">close</span>
+                            </button>
+                        </div>
+
+                        {pwSuccess ? (
+                            <div className="flex flex-col items-center gap-3 py-6">
+                                <span className="material-symbols-outlined text-4xl text-emerald-400">check_circle</span>
+                                <p className="text-sm font-black text-emerald-400 uppercase tracking-widest">Password Updated!</p>
+                            </div>
+                        ) : (
+                            <>
+                                {pwError && (
+                                    <div className="bg-red-500/10 border border-red-500/20 rounded-xl px-4 py-3 text-xs text-red-400 font-bold">
+                                        {pwError}
+                                    </div>
+                                )}
+                                <div className="flex flex-col gap-3">
+                                    <div>
+                                        <p className="text-[9px] font-black uppercase tracking-widest text-white/40 mb-1.5">Current Password</p>
+                                        <input
+                                            type="password"
+                                            value={currentPw}
+                                            onChange={e => setCurrentPw(e.target.value)}
+                                            placeholder="Enter current password"
+                                            className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm text-white placeholder-white/20 focus:outline-none focus:border-primary/50"
+                                        />
+                                    </div>
+                                    <div>
+                                        <p className="text-[9px] font-black uppercase tracking-widest text-white/40 mb-1.5">New Password</p>
+                                        <input
+                                            type="password"
+                                            value={newPw}
+                                            onChange={e => setNewPw(e.target.value)}
+                                            placeholder="At least 8 characters"
+                                            className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm text-white placeholder-white/20 focus:outline-none focus:border-primary/50"
+                                        />
+                                    </div>
+                                    <div>
+                                        <p className="text-[9px] font-black uppercase tracking-widest text-white/40 mb-1.5">Confirm New Password</p>
+                                        <input
+                                            type="password"
+                                            value={confirmPw}
+                                            onChange={e => setConfirmPw(e.target.value)}
+                                            onKeyDown={e => e.key === 'Enter' && handleChangePassword()}
+                                            placeholder="Repeat new password"
+                                            className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm text-white placeholder-white/20 focus:outline-none focus:border-primary/50"
+                                        />
+                                    </div>
+                                </div>
+                                <div className="flex gap-3 mt-1">
+                                    <button
+                                        onClick={() => setShowPwModal(false)}
+                                        className="flex-1 py-3 rounded-xl bg-white/5 text-xs font-black uppercase tracking-widest text-white/60"
+                                    >
+                                        Cancel
+                                    </button>
+                                    <button
+                                        onClick={handleChangePassword}
+                                        disabled={pwLoading}
+                                        className="flex-1 py-3 rounded-xl bg-primary text-white text-xs font-black uppercase tracking-widest hover:bg-primary/90 transition-colors disabled:opacity-50"
+                                    >
+                                        {pwLoading ? 'Updating...' : 'Update Password'}
+                                    </button>
+                                </div>
+                            </>
+                        )}
+                    </div>
+                </div>
+            )}
         </div>
     );
 }

@@ -3,12 +3,12 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useNotes } from '@/app/context/NotesContext';
-import { useTheme } from '@/app/context/ThemeContext';
+
 
 export default function GlobalNavigation() {
     const pathname = usePathname();
     const { toggleNotes } = useNotes();
-    const { theme, toggleTheme } = useTheme();
+
 
     if (pathname === '/landing' || pathname === '/exam') return null;
 
@@ -16,6 +16,7 @@ export default function GlobalNavigation() {
         { label: 'Home', path: '/dashboard', icon: 'home' },
         { label: 'Library', path: '/library', icon: 'library_books' },
         { label: 'Groups', path: '/groups', icon: 'group' },
+        { label: 'Audio', path: '/audio', icon: 'headphones' },
         { label: 'Exam', path: '/quizzes', icon: 'quiz' },
         { label: 'Profile', path: '/profile', icon: 'person' },
     ];
@@ -37,18 +38,6 @@ export default function GlobalNavigation() {
                 );
             })}
 
-            <div className="w-[1px] h-6 bg-white/10 mx-1"></div>
-
-            {/* Theme Toggle */}
-            <button
-                onClick={toggleTheme}
-                className="flex flex-col items-center justify-center size-12 rounded-xl text-slate-500 hover:text-white hover:bg-white/5 transition-all"
-                title="Toggle Theme"
-            >
-                <span className="material-symbols-outlined text-2xl">
-                    {theme === 'dark' ? 'light_mode' : 'dark_mode'}
-                </span>
-            </button>
         </nav>
     );
 }

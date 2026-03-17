@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import { useRouter, useParams } from 'next/navigation';
-import { useAuth } from '@/app/context/AuthContext';
+import { useAuth, getAuthToken } from '@/app/context/AuthContext';
 
 interface ChallengeResult {
     user_id: number;
@@ -27,7 +27,8 @@ export default function ChallengeDetailPage() {
     const params = useParams();
     const groupId = params.id as string;
     const challengeId = params.challengeId as string;
-    const { token } = useAuth();
+    useAuth();
+    const token = getAuthToken();
     const router = useRouter();
 
     const [challenge, setChallenge] = useState<Challenge | null>(null);

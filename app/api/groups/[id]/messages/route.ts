@@ -11,12 +11,13 @@ async function assertMember(groupId: number, userId: number) {
 }
 
 // GET /api/groups/[id]/messages — last 50 messages
-export async function GET(request: NextRequest, { params }: { params: { id: string } }) {
+export async function GET(request: NextRequest, { params }: { params: Promise<{ id: string }> }) {
     const token = extractTokenFromHeader(request.headers.get('Authorization'));
     const payload = token ? verifyToken(token) : null;
     if (!payload) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
 
-    const groupId = parseInt(params.id);
+    const { id } = await params;
+    const groupId = parseInt(id);
     if (!await assertMember(groupId, payload.userId)) {
         return NextResponse.json({ error: 'Not a member of this group' }, { status: 403 });
     }
@@ -34,12 +35,13 @@ export async function GET(request: NextRequest, { params }: { params: { id: stri
 }
 
 // POST /api/groups/[id]/messages — send a message
-export async function POST(request: NextRequest, { params }: { params: { id: string } }) {
+export async function POST(request: NextRequest, { params }: { params: Promise<{ id: string }> }) {
     const token = extractTokenFromHeader(request.headers.get('Authorization'));
     const payload = token ? verifyToken(token) : null;
     if (!payload) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
 
-    const groupId = parseInt(params.id);
+    const { id: msgId } = await params;
+    const groupId = parseInt(msgId);
     if (!await assertMember(groupId, payload.userId)) {
         return NextResponse.json({ error: 'Not a member of this group' }, { status: 403 });
     }

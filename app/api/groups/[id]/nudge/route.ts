@@ -3,12 +3,13 @@ import { pool } from '@/lib/db';
 import { verifyToken, extractTokenFromHeader } from '@/lib/auth';
 
 // POST /api/groups/[id]/nudge — log a nudge_received for a target user
-export async function POST(request: NextRequest, { params }: { params: { id: string } }) {
+export async function POST(request: NextRequest, { params }: { params: Promise<{ id: string }> }) {
     const token = extractTokenFromHeader(request.headers.get('Authorization'));
     const payload = token ? verifyToken(token) : null;
     if (!payload) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
 
-    const groupId = parseInt(params.id);
+    const { id } = await params;
+    const groupId = parseInt(id);
     const { target_user_id } = await request.json();
     if (!target_user_id) return NextResponse.json({ error: 'target_user_id is required' }, { status: 400 });
 

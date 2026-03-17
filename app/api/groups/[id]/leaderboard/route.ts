@@ -3,12 +3,13 @@ import { pool } from '@/lib/db';
 import { verifyToken, extractTokenFromHeader } from '@/lib/auth';
 
 // GET /api/groups/[id]/leaderboard — members ranked by readiness score, streak, quizzes completed
-export async function GET(request: NextRequest, { params }: { params: { id: string } }) {
+export async function GET(request: NextRequest, { params }: { params: Promise<{ id: string }> }) {
     const token = extractTokenFromHeader(request.headers.get('Authorization'));
     const payload = token ? verifyToken(token) : null;
     if (!payload) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
 
-    const groupId = parseInt(params.id);
+    const { id } = await params;
+    const groupId = parseInt(id);
 
     const memberCheck = await pool.query(
         'SELECT id FROM group_members WHERE group_id = $1 AND user_id = $2',

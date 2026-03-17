@@ -5,14 +5,15 @@ import { verifyToken, extractTokenFromHeader } from '@/lib/auth';
 // GET /api/groups/[id]/challenges/[challengeId]/results
 export async function GET(
     request: NextRequest,
-    { params }: { params: { id: string; challengeId: string } }
+    { params }: { params: Promise<{ id: string; challengeId: string }> }
 ) {
     const token = extractTokenFromHeader(request.headers.get('Authorization'));
     const payload = token ? verifyToken(token) : null;
     if (!payload) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
 
-    const groupId = parseInt(params.id);
-    const challengeId = parseInt(params.challengeId);
+    const { id, challengeId: cId } = await params;
+    const groupId = parseInt(id);
+    const challengeId = parseInt(cId);
 
     // Verify member
     const memberCheck = await pool.query(
@@ -38,14 +39,15 @@ export async function GET(
 // POST /api/groups/[id]/challenges/[challengeId]/results — submit a result
 export async function POST(
     request: NextRequest,
-    { params }: { params: { id: string; challengeId: string } }
+    { params }: { params: Promise<{ id: string; challengeId: string }> }
 ) {
     const token = extractTokenFromHeader(request.headers.get('Authorization'));
     const payload = token ? verifyToken(token) : null;
     if (!payload) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
 
-    const groupId = parseInt(params.id);
-    const challengeId = parseInt(params.challengeId);
+    const { id: rId, challengeId: rcId } = await params;
+    const groupId = parseInt(rId);
+    const challengeId = parseInt(rcId);
 
     const memberCheck = await pool.query(
         'SELECT id FROM group_members WHERE group_id = $1 AND user_id = $2',

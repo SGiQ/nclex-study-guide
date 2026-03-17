@@ -97,6 +97,12 @@ export async function POST(request: Request) {
             );
 
             await updateStreak(payload.userId);
+            await broadcastGroupActivity(payload.userId, 'quiz_completed', {
+                quiz_id: contentId,
+                score,
+                total,
+                title: metadata?.title || `Quiz #${contentId}`
+            });
 
             return NextResponse.json({
                 success: true,
@@ -129,6 +135,13 @@ export async function POST(request: Request) {
 
             if (completed) {
                 await updateStreak(payload.userId);
+                const actType = contentType === 'episode' ? 'episode_completed'
+                    : contentType === 'badge' ? 'badge_unlocked'
+                    : 'progress_updated';
+                await broadcastGroupActivity(payload.userId, actType, {
+                    content_id: contentId,
+                    title: metadata?.title || `${contentType} #${contentId}`
+                });
             }
 
             return NextResponse.json({
@@ -192,6 +205,28 @@ export async function GET(request: Request) {
             { error: 'Failed to fetch progress' },
             { status: 500 }
         );
+    }
+}
+
+/**
+ * Broadcast an activity event to all groups the user belongs to
+ */
+async function broadcastGroupActivity(userId: number, activityType: string, metadata: object) {
+    try {
+        const groups = await pool.query(
+            'SELECT group_id FROM group_members WHERE user_id = $1',
+            [userId]
+        );
+        for (const row of groups.rows) {
+            await pool.query(
+                `INSERT INTO group_activity (group_id, user_id, activity_type, metadata)
+                 VALUES ($1, $2, $3, $4)`,
+                [row.group_id, userId, activityType, JSON.stringify(metadata)]
+            );
+        }
+    } catch (err) {
+        // Non-fatal: log but don't break the progress save
+        console.warn('broadcastGroupActivity failed:', err);
     }
 }
 

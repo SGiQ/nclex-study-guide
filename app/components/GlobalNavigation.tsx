@@ -15,7 +15,7 @@ export default function GlobalNavigation() {
     const navItems = [
         { label: 'Home', path: '/dashboard', icon: 'home' },
         { label: 'Library', path: '/library', icon: 'library_books' },
-        { label: 'Notes', path: '/notes', icon: 'description' },
+        { label: 'Groups', path: '/groups', icon: 'group' },
         { label: 'Exam', path: '/quizzes', icon: 'quiz' },
         { label: 'Profile', path: '/profile', icon: 'person' },
     ];

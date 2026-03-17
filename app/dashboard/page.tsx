@@ -131,10 +131,14 @@ export default function DashboardPage() {
                     <p className="text-[10px] font-bold opacity-40 uppercase tracking-[0.2em] mt-1">Ready for the NCLEX</p>
                 </div>
                 <div className="flex gap-3">
-                    <button className="h-12 w-12 rounded-xl glass border border-white/5 flex items-center justify-center text-primary">
+                    <button 
+                        onClick={() => router.push('/analytics')}
+                        className="h-12 w-12 rounded-xl glass border border-white/5 flex items-center justify-center text-primary">
                         <span className="material-symbols-outlined">notifications</span>
                     </button>
-                    <button className="h-12 w-12 rounded-xl glass border border-white/5 flex items-center justify-center text-white/40">
+                    <button 
+                        onClick={() => router.push('/profile')}
+                        className="h-12 w-12 rounded-xl glass border border-white/5 flex items-center justify-center text-white/40">
                         <span className="material-symbols-outlined">settings</span>
                     </button>
                 </div>
@@ -305,7 +309,9 @@ export default function DashboardPage() {
                 <section className="flex flex-col gap-6">
                     <div className="flex items-center justify-between px-2">
                         <h2 className="text-[10px] font-black uppercase tracking-[0.3em] text-primary">Needs Review</h2>
-                        <button className="text-[10px] font-black uppercase tracking-widest opacity-40 hover:opacity-100 transition-opacity">View All</button>
+                        <button 
+                            onClick={() => router.push('/analytics')}
+                            className="text-[10px] font-black uppercase tracking-widest opacity-40 hover:opacity-100 transition-opacity">View All</button>
                     </div>
                     <div className="flex gap-4 overflow-x-auto no-scrollbar pb-4 -mx-6 px-6 snap-x snap-mandatory">
                         {weakEpisodes.length > 0 ? weakEpisodes.map((ep, i) => (
